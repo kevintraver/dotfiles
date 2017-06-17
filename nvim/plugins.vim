@@ -52,6 +52,7 @@ Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
 
 " window / buffer managemenet
+Plug 'gcmt/taboo.vim'
 Plug 'breuckelen/vim-resize'
 Plug 'zhaocai/GoldenView.Vim'
 Plug 'wesQ3/vim-windowswap'
