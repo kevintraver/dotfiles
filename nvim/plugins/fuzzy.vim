@@ -1,1 +1,1 @@
-nnoremap <M-f> :FuzzyGrep<CR>
+nnoremap <M-e> :FuzzyGrep<CR>
