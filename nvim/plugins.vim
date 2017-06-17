@@ -32,6 +32,12 @@ Plug 'kshenoy/vim-signature'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'takac/vim-hardtime'
 
+" motions
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-entire'
+Plug 'zandrmartin/vim-textobj-blanklines'
+
 Plug 'nhooyr/neoman.vim'
 
 " vim utilities
