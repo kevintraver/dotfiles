@@ -80,6 +80,16 @@ noremap <Space>7 7gt
 noremap <Space>8 8gt
 noremap <Space>9 9gt
 
+" noremap <M-1> 1gt
+" noremap <M-2> 2gt
+" noremap <M-3> 3gt
+" noremap <M-4> 4gt
+" noremap <M-5> 5gt
+" noremap <M-6> 6gt
+" noremap <M-7> 7gt
+" noremap <M-8> 8gt
+" noremap <M-9> 9gt
+
 " easier mark jump
 noremap <Space>j `
 
