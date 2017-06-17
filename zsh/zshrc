@@ -59,8 +59,6 @@ export EDITOR="nvr-tmux"
 export SUDO_EDITOR="nvr-tmux"
 export VISUAL="nvr-tmux"
 
-export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
-
 export KEYTIMEOUT=1
 export ESCDELAY=1
 export CLICOLOR=1
