@@ -13,6 +13,7 @@ augroup END " }
 
 " open new terminal buffer in horizontal split
 nnoremap <M-\> :botright vsplit +TerminusOpen<cr>
+nnoremap <Space>\ :TerminusOpen<cr>
 
 tmap <M-\> <Plug>TerminusEditCommand
 tmap <M-]> <C-\><C-n>
