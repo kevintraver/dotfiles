@@ -22,8 +22,9 @@ tmap <C-]> <C-\><C-n>
 autocmd FileType editcommand map <silent><buffer> <M-\> <esc>:wq!<cr>
 autocmd FileType editcommand imap <silent><buffer> <M-\> <esc>:wq!<cr>
 
-autocmd FileType editcommand map <silent><buffer> <M-w> <esc>:q<cr>
-autocmd FileType editcommand imap <silent><buffer> <M-w> <ESC><C-\><C-n>:q<cr>
+autocmd FileType editcommand map <silent><buffer> <M-w> <esc>:wq!<cr>
+autocmd FileType editcommand imap <silent><buffer> <M-w> <ESC><C-\><C-n>:wq!<cr>
+autocmd FileType editcommand imap <silent><buffer> <Enter> <ESC><C-\><C-n>:wq!<cr>
 
 autocmd FileType terminus stopinsert
 autocmd FileType terminus inoremap <silent><buffer> <Enter> <esc>:bdelete<cr>
