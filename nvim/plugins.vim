@@ -7,7 +7,6 @@ Plug 'icymind/NeoSolarized'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'cloudhead/neovim-fuzzy'
 Plug 'srstevenson/vim-picker'
 
 " vim settings

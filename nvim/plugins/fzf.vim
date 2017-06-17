@@ -8,6 +8,7 @@ nnoremap <Space>gY :Commits<CR>
 nnoremap <M-y> :History<CR>
 nnoremap <M-b> :BTags<CR>
 nnoremap <M-B> :Tags<CR>
+nnoremap <M-e> :Rg<CR>
 
 nnoremap <Space><Space> :Buffers<CR>
 
@@ -64,3 +65,10 @@ nnoremap <Space><Space> :Buffers<CR>
 "       \ 'options': '-m',
 "       \ 'down': 12
 "       \ })
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
