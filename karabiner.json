@@ -1,0 +1,19 @@
+{
+    "profiles": [
+        {
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": {
+                "caps_lock": "left_control"
+            },
+            "standalone_keys": {
+                "caps_lock": "escape"
+            },
+            "virtual_hid_keyboard": {
+                "caps_lock_delay_milliseconds": 100,
+                "keyboard_type": "ansi",
+                "standalone_keys_delay_milliseconds": 100
+            }
+        }
+    ]
+}

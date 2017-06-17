@@ -1,0 +1,12 @@
+#!/bin/zsh
+set -e
+if [ -n "$TMUX" ]; then
+  nvimsocket="/tmp/nvimsocket$TMUX_PANE"
+  if test -n "$nvimsocket"; then
+    nvr --servername $nvimsocket --remote-silent $@
+  else
+    NVIM_LISTEN_ADDRESS=$nvimsocket nvim $@
+  fi
+else
+  nvim $@
+fi

@@ -1,0 +1,146 @@
+# uncomment to profile
+# zmodload zsh/zprof
+
+# *****************************************************************************
+# Completion
+# *****************************************************************************
+
+autoload -Uz compinit
+re_initialize=0
+for match in $zcompdump*(.Nmh+24); do
+   re_initialize=1
+   break
+done
+
+if [ "$re_initialized" -eq "1" ]; then
+   compinit
+else
+  # omit the check for new functions since we updated today
+  compinit -C
+fi
+
+source ~/.dotfiles/zsh/completion.zsh
+
+# *****************************************************************************
+# Plugins
+# *****************************************************************************
+
+source <(antibody init)
+
+source ~/.zsh/plugins/oh-my-zsh/lib/history.zsh
+source ~/.zsh/plugins/oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
+source ~/.zsh/plugins/oh-my-zsh/plugins/git/git.plugin.zsh
+source ~/.zsh/plugins/oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+
+source ~/.zsh/plugins/prezto/modules/completion/init.zsh
+source ~/.zsh/plugins/prezto/modules/directory/init.zsh
+source ~/.zsh/plugins/prezto/modules/utility/init.zsh
+
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-completions
+
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
+
+antibody bundle changyuheng/zsh-interactive-cd
+antibody bundle b4b4r07/enhancd
+antibody bundle djui/alias-tips
+
+antibody bundle hlissner/zsh-autopair
+
+# *****************************************************************************
+# General Settings
+# *****************************************************************************
+
+alias e="nvr-tmux"
+
+export EDITOR="nvr-tmux"
+export SUDO_EDITOR="nvr-tmux"
+export VISUAL="nvr-tmux"
+
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+
+export KEYTIMEOUT=1
+export ESCDELAY=1
+export CLICOLOR=1
+export MANPAGER="nvim -c 'set ft=neoman' -"
+
+export NEOMAN=~/.config/nvim/plugged/neoman.vim/scripts/nman.zsh
+test -e "$NEOMAN" && source "$NEOMAN"
+
+# *****************************************************************************
+# History
+# *****************************************************************************
+
+export HISTORY_IGNORE="*production*"
+
+# *****************************************************************************
+# Key Mappings
+# *****************************************************************************
+
+# exit
+exit_zsh() { exit 0 }
+zle -N exit_zsh
+bindkey '^[w' exit_zsh
+bindkey -M vicmd '^[w' exit_zsh
+
+vi-esc-fix() {
+zle vi-cmd-mode
+zle forward-char
+}
+
+zle -N vi-esc-fix
+bindkey -r '^['
+bindkey -M viins '^[' vi-esc-fix
+bindkey -M vicmd '^[' vi-insert
+
+# vimode edit commaned
+bindkey -r '^[\'
+bindkey -M vicmd -r 'v'
+bindkey '^[\' edit-command-line
+bindkey -M vicmd '^[\' edit-command-line
+
+# *****************************************************************************
+# Plugins
+# *****************************************************************************
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.dotfiles/zsh/fzf.zsh
+
+# enhancd
+export ENHANCD_FILTER=fzf
+export ENHANCD_DISABLE_DOT=1
+
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+
+# *****************************************************************************
+# Local Settings
+# *****************************************************************************
+
+source ~/.dotfiles/zsh/aliases.zsh
+source ~/.zshrc.local
+
+function zle-keymap-select zle-line-init
+{
+    # change cursor shape in iTerm2
+    case $KEYMAP in
+        vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
+        viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
+    esac
+
+    zle reset-prompt
+    zle -R
+}
+
+function zle-line-finish
+{
+    print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
