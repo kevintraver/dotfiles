@@ -3,7 +3,11 @@ set -e
 if [ -n "$TMUX" ]; then
   nvimsocket="/tmp/nvimsocket$TMUX_PANE"
   if test -n "$nvimsocket"; then
-    nvr --servername $nvimsocket --remote-silent $@
+    if [ -z $1 ]; then
+      nvr --servername $nvimsocket --remote-silent +enew
+    else
+      nvr --servername $nvimsocket --remote-silent $@
+    fi
   else
     NVIM_LISTEN_ADDRESS=$nvimsocket nvim $@
   fi
