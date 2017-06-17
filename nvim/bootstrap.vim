@@ -193,8 +193,4 @@ vmap > >gv
 
 autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
 
-if has('nvim')
-  let $NVIM_TERMINAL = 1
-endif
-
 noremap <silent> <Space>st :!stree<CR>

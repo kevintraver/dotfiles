@@ -39,3 +39,7 @@ tmap <M-w> <C-\><C-n>:Sayonara<CR>
 tmap <M-W> <C-\><C-n>:Sayonara!<CR>
 tmap <M-q> <C-\><C-n>:confirm qall<CR>
 tmap <M-Q> <C-\><C-n>:qall!<CR>
+
+if has('nvim')
+  let $NVIM_TERMINAL = 1
+endif
