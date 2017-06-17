@@ -53,6 +53,7 @@ antibody bundle hlissner/zsh-autopair
 # *****************************************************************************
 
 alias e="nvr-tmux"
+alias nvim="nvr-tmux"
 
 export EDITOR="nvr-tmux"
 export SUDO_EDITOR="nvr-tmux"
