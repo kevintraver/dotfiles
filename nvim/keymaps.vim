@@ -48,6 +48,9 @@ nnoremap <M-S> <Esc>:write!<CR>
 " New
 nnoremap <M-n> <Esc>:enew<CR>
 
+" New tab
+nnoremap <M-t> <Esc>:tabnew<CR>
+
 "" Quick navigate to alternate file
 nnoremap <Space>a :A<CR>
 
