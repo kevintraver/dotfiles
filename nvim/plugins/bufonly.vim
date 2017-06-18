@@ -1,2 +1,2 @@
-nnoremap <Space>dd :BufOnly<CR>
-nnoremap <Space>dD :BufOnly!<CR>
+nnoremap <Space>x :BufOnly<CR>
+nnoremap <Space>X :BufOnly!<CR>
