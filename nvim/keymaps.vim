@@ -16,8 +16,8 @@ nnoremap <Leader>ek :e ~/.dotfiles/nvim/keymaps.vim<CR>
 nnoremap <Leader>eb :e ~/.dotfiles/nvim/bootstrap.vim<CR>
 nnoremap <Leader>ez :e ~/.dotfiles/zsh/zshrc<CR>
 nnoremap <Leader>ea :e ~/.dotfiles/zsh/aliases.zsh<CR>
-nnoremap <Leader>et :e ~/.dotfiles/tmux.conf<CR>
-nnoremap <Leader>en :e ~/.dotfiles/nvim/terminal.vim<CR>
+nnoremap <Leader>em :e ~/.dotfiles/tmux.conf<CR>
+nnoremap <Leader>et :e ~/.dotfiles/nvim/terminal.vim<CR>
 nnoremap <Leader>eP :e ~/.config/nvim/plugged<CR>
 nnoremap <Leader>el :e ~/.zshrc.local<CR>
 
