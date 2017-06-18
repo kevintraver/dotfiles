@@ -31,6 +31,7 @@ source ~/.zsh/plugins/oh-my-zsh/lib/history.zsh
 source ~/.zsh/plugins/oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
 source ~/.zsh/plugins/oh-my-zsh/plugins/git/git.plugin.zsh
 source ~/.zsh/plugins/oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+source ~/.zsh/plugins/oh-my-zsh/plugins/globalias/globalias.plugin.zsh
 
 source ~/.zsh/plugins/prezto/modules/completion/init.zsh
 source ~/.zsh/plugins/prezto/modules/directory/init.zsh
@@ -45,6 +46,7 @@ antibody bundle sindresorhus/pure
 antibody bundle changyuheng/zsh-interactive-cd
 antibody bundle b4b4r07/enhancd
 antibody bundle djui/alias-tips
+antibody bundle momo-lab/zsh-abbrev-alias
 
 antibody bundle hlissner/zsh-autopair
 
@@ -121,6 +123,7 @@ source /usr/local/share/chruby/auto.sh
 # *****************************************************************************
 
 source ~/.dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/abbreviations.zsh
 source ~/.zshrc.local
 
 function zle-keymap-select zle-line-init
