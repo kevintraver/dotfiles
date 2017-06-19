@@ -60,3 +60,6 @@ alias docker-ubuntu="docker run -i -t ubuntu /bin/bash"
 
 # copy without newline
 alias cpwd="pwd | tr -d '\n' | pbcopy"
+
+# Rails
+alias swagger="bundle exec rake rswag:specs:swaggerize"
