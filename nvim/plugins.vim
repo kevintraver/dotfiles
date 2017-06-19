@@ -118,6 +118,7 @@ Plug 'idanarye/vim-merginal'
 
 " text manipulation
 Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'AndrewRadev/switch.vim'
