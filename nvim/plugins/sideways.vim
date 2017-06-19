@@ -1,4 +1,4 @@
-nnoremap H :SidewaysJumpLeft<CR>
-nnoremap L :SidewaysJumpRight<CR>
-nmap <S-M-H> <Plug>SidewaysLeft
-nmap <S-M-L> <Plug>SidewaysRight
+nnoremap <silent> H :SidewaysJumpLeft<CR>
+nnoremap <silent> L :SidewaysJumpRight<CR>
+nmap <silent> <S-M-H> <Plug>SidewaysLeft
+nmap <silent> <S-M-L> <Plug>SidewaysRight
