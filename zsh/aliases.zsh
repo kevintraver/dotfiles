@@ -1,6 +1,5 @@
 # https://github.com/jingweno/ccat
 alias cat=ccat
-alias st=stree
 
 # https://github.com/nicolargo/glances
 alias top=glances
@@ -63,3 +62,6 @@ alias cpwd="pwd | tr -d '\n' | pbcopy"
 
 # Rails
 alias swagger="bundle exec rake rswag:specs:swaggerize"
+
+# Gittower
+alias gt="gittower"
