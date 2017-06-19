@@ -44,8 +44,7 @@ alias cdr='cd $(git rev-parse --show-cdup)'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip_wifi="ipconfig getifaddr en0"
-alias localip_display="ipconfig getifaddr en2"
+alias ipwifi="ipconfig getifaddr en0"
 
 # folders
 alias dot="cd ~/.dotfiles"
