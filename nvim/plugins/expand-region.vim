@@ -10,6 +10,7 @@ let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
                   \ 'is'  :0,
                   \ 'ib'  :1,
                   \ 'iB'  :1,
+                  \ 'it'  :1,
                   \ 'ip'  :0,
                   \ 'ie'  :0,
                   \})
