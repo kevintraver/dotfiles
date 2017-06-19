@@ -1,1 +1,1 @@
-let g:numbers_exclude = ['terminal', 'fzf', 'picker', 'undotree', 'tagbar', 'neoman']
+let g:numbers_exclude = ['terminal', 'fzf', 'picker', 'undotree', 'tagbar', 'neoman', 'agit', 'agit_stat']
