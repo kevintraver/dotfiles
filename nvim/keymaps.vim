@@ -100,3 +100,5 @@ vmap > >gv
 autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
 
 noremap <silent> <Space>st :!stree<CR>
+
+nnoremap <Leader>frb :set ft=ruby<CR>
