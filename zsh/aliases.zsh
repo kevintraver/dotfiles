@@ -55,7 +55,7 @@ alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # docker
-alias docker-ubuntu="docker run -i -t ubuntu /bin/bash"
+alias docker-ubuntu="docker run --name ubuntu --rm -i -t ubuntu /bin/bash"
 
 # copy without newline
 alias cpwd="pwd | tr -d '\n' | pbcopy"
