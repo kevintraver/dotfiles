@@ -26,6 +26,7 @@ alias j=wd
 
 # git
 alias gs='git status'
+alias gl='git-foresta'
 alias gds='git diff --staged'
 
 # time
