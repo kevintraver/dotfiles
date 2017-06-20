@@ -5,7 +5,7 @@ function! g:committia_hooks.edit_open(info)
     setlocal spell
 
     " Turn off numbers
-    set nonumber
+    set nonumber norelativenumber
 
     " If no commit message, start with insert mode
     if a:info.vcs ==# 'git' && getline(1) ==# ''
