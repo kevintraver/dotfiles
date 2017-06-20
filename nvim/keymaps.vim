@@ -100,3 +100,4 @@ noremap <silent> <Space>st :!stree<CR>
 
 nnoremap <Leader>frb :set ft=ruby<CR>
 nnoremap <Leader>fsql :set ft=sql<CR>
+nnoremap <Leader>fht :set ft=html<CR>
