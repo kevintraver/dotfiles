@@ -5,7 +5,7 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
 augroup term " {
-  autocmd TermOpen * | setlocal nonumber | setlocal path+=**
+  autocmd TermOpen * | setlocal nonumber norelativenumber path+=**
   autocmd BufWinEnter,BufEnter,WinEnter * if &buftype ==# "terminal" |
         \ startinsert | endif
   autocmd TermClose * call feedkeys('<cr>')
