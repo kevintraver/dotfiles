@@ -17,5 +17,5 @@ nnoremap <Space>go :Gbrowse<CR>
 augroup COMMIT_EDITMSG
   au!
   autocmd FileType gitcommit map <buffer> <silent> <Esc> :<C-U>bdelete<CR>
-  autocmd FileType gitcommit setlocal nonumber
+  autocmd FileType gitcommit setlocal nonumber norelativenumber
 augroup END

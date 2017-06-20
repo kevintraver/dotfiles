@@ -1,5 +1,5 @@
 autocmd FileType fzf tnoremap <silent> <Esc> <Esc>
-autocmd FileType fzf set nonumber
+autocmd FileType fzf set nonumber norelativenumber
 
 nnoremap <M-f> :Lines<CR>
 nnoremap <M-g> :GFiles?<CR>
