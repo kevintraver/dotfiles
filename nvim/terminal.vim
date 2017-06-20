@@ -9,6 +9,8 @@ augroup term " {
   autocmd BufWinEnter,BufEnter,WinEnter * if &buftype ==# "terminal" |
         \ startinsert | endif
   autocmd TermClose * call feedkeys('<cr>')
+  autocmd TermOpen * if &buftype ==# 'terminal' | nnoremap <buffer> <silent> <M-]> i|
+        \ nnoremap <buffer> <silent> <M-[> i| endif
 augroup END " }
 
 " open new terminal buffer in horizontal split
