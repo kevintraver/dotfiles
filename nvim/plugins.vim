@@ -101,6 +101,7 @@ Plug 'jreybert/vimagit'
 
 " highlighting / search 
 Plug 'inside/vim-search-pulse'
+Plug 'luochen1990/rainbow'
 Plug 'itchyny/vim-parenmatch'
 Plug 'haya14busa/incsearch.vim'
 Plug 'itchyny/vim-cursorword'
