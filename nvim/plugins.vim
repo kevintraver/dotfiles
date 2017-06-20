@@ -183,5 +183,7 @@ Plug 'tweekmonster/exception.vim'
 " utilities
 Plug 'tpope/vim-eunuch'
 
+Plug 'mhinz/vim-randomtag'
+
 
 call plug#end()
