@@ -31,6 +31,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'wellle/targets.vim'
 Plug 'myusuf3/numbers.vim'
 Plug 'kshenoy/vim-signature'
+" Plug 'iago-lito/vim-visualMarks'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'takac/vim-hardtime'
 
