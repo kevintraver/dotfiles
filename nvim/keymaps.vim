@@ -98,6 +98,6 @@ autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
 
 noremap <silent> <Space>st :!stree<CR>
 
-nnoremap <Leader>frb :set ft=ruby<CR>
-nnoremap <Leader>fsql :set ft=sql<CR>
-nnoremap <Leader>fht :set ft=html<CR>
+nnoremap <Leader>ftrb :set ft=ruby<CR>
+nnoremap <Leader>ftsql :set ft=sql<CR>
+nnoremap <Leader>fthtml :set ft=html<CR>
