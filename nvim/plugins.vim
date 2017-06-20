@@ -46,6 +46,9 @@ Plug 'zandrmartin/vim-textobj-blanklines'
 
 Plug 'nhooyr/neoman.vim'
 
+" html
+Plug 'mattn/emmet-vim/'
+
 " vim utilities
 Plug 'mtth/scratch.vim'
 
