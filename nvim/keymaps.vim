@@ -66,9 +66,6 @@ nnoremap <Right> :bnext<CR>
 " easy tab switching
 let g:lasttab = tabpagenr()
 au TabLeave * let g:lasttab = tabpagenr()
-nnoremap <silent> <M-Space> :exe "tabn ".g:lasttab<cr>
-vnoremap <silent> <M-Space> :exe "tabn ".g:lasttab<cr>
-tmap <silent> <M-Space> <C-\><C-n> <esc> :exe "tabn ".g:lasttab<cr>
 
 noremap <Space>1 1gt
 noremap <Space>2 2gt
