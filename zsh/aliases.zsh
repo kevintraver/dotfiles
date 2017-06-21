@@ -65,3 +65,6 @@ alias swagger="bundle exec rake rswag:specs:swaggerize"
 
 # Gittower
 alias gt="gittower"
+
+# SourceTree
+alias st="stree"
