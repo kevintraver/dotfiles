@@ -1,1 +1,4 @@
 abbrev-alias -g kmg="kevintraver@gmail.com"
+abbrev-alias -g lh="http://localhost"
+abbrev-alias -g lh3000="http://localhost:3000"
+abbrev-alias -g lh4200="http://localhost:4200"
