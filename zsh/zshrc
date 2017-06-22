@@ -100,6 +100,9 @@ bindkey -r '^[\'
 bindkey -M vicmd -r 'v'
 bindkey '^[\' edit-command-line
 bindkey -M vicmd '^[\' edit-command-line
+bindkey -M vicmd '^x' edit-command-line
+
+bindkey '^x' edit-command-line
 
 # *****************************************************************************
 # Plugins
