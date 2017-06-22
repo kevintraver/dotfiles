@@ -69,6 +69,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " window / buffer managemenet
 Plug 'gcmt/taboo.vim'
 Plug 'breuckelen/vim-resize'
+Plug 'simeji/winresizer'
 Plug 'zhaocai/GoldenView.Vim'
 Plug 'dhruvasagar/vim-zoom'
 Plug 'wesQ3/vim-windowswap'
