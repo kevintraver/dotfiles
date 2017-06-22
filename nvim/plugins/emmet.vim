@@ -1,4 +1,4 @@
-let g:user_emmet_leader_key = '<M-Space>'
+let g:user_emmet_leader_key = '<M-l>'
 
 let g:user_emmet_expandabbr_key = '<M-,>'
 let g:user_emmet_expandword_key = '<M-,>'
