@@ -87,9 +87,6 @@ noremap <Space>9 9gt
 " noremap <M-8> 8gt
 " noremap <M-9> 9gt
 
-" easier mark jump
-noremap <Space>j `
-
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
 vmap > >gv
