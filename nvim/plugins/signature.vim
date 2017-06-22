@@ -1,1 +1,1 @@
-let g:SignatureMap = { 'Leader' : "<Space>m" }
+let g:SignatureMap = { 'Leader' : "<M-m>" }
