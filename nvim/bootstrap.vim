@@ -63,6 +63,8 @@ set noerrorbells visualbell t_vb=
 "" Copy/Paste/Cut
 set clipboard=unnamed,unnamedplus
 
+au CmdwinEnter : startinsert
+
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
