@@ -185,6 +185,11 @@ Plug 'AndrewRadev/ember_tools.vim'
 Plug 'tweekmonster/startuptime.vim'
 Plug 'tweekmonster/exception.vim'
 
+" writing
+Plug 'reedes/vim-litecorrect'
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-pencil'
+
 " utilities
 Plug 'tpope/vim-eunuch'
 
