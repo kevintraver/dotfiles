@@ -175,6 +175,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/es.next.syntax.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'tpope/vim-markdown'
 
 " Project navigation
 Plug 'tpope/vim-projectionist'
