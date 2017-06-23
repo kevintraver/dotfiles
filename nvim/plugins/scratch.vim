@@ -5,5 +5,7 @@ let g:scratch_no_mappings = 1
 nmap <M-'> :Scratch<CR>
 xmap <M-'> <plug>(scratch-selection-reuse)
 
+autocmd FileType scratch map <silent><buffer> <M-'> :hide<CR>
+autocmd FileType scratch map <silent><buffer> <M-w> :hide<CR>
 autocmd FileType scratch map <silent><buffer> q :hide<CR>
 autocmd FileType scratch map <silent><buffer> <Esc> :hide<CR>
