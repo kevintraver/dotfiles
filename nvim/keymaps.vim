@@ -2,7 +2,6 @@
 "" Key Mappings
 "*****************************************************************************
 
-nnoremap : q:
 nnoremap <M-;> q:
 nnoremap ; :
 vnoremap ; :
