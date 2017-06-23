@@ -25,28 +25,26 @@ source ~/.dotfiles/zsh/completion.zsh
 # Plugins
 # *****************************************************************************
 
+export OH_MY_ZSH=~/.zsh/oh-my-zsh
+source $OH_MY_ZSH/lib/history.zsh
+source $OH_MY_ZSH/plugins/git/git.plugin.zsh
+source $OH_MY_ZSH/plugins/globalias/globalias.plugin.zsh
+source $OH_MY_ZSH/plugins/tmux/tmux.plugin.zsh
+source $OH_MY_ZSH/plugins/vi-mode/vi-mode.plugin.zsh
+
+export ZPREZTO=~/.zsh/prezto
+source $ZPREZTO/modules/completion/init.zsh
+source $ZPREZTO/modules/directory/init.zsh
+
 source <(antibody init)
-
-source ~/.zsh/plugins/oh-my-zsh/lib/history.zsh
-source ~/.zsh/plugins/oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
-source ~/.zsh/plugins/oh-my-zsh/plugins/git/git.plugin.zsh
-source ~/.zsh/plugins/oh-my-zsh/plugins/tmux/tmux.plugin.zsh
-source ~/.zsh/plugins/oh-my-zsh/plugins/globalias/globalias.plugin.zsh
-
-source ~/.zsh/plugins/prezto/modules/completion/init.zsh
-source ~/.zsh/plugins/prezto/modules/directory/init.zsh
-
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-completions
-
 antibody bundle mafredri/zsh-async
 antibody bundle sindresorhus/pure
-
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-completions
 antibody bundle changyuheng/zsh-interactive-cd
 antibody bundle b4b4r07/enhancd
 antibody bundle djui/alias-tips
 antibody bundle momo-lab/zsh-abbrev-alias
-
 antibody bundle hlissner/zsh-autopair
 
 # *****************************************************************************
