@@ -31,6 +31,7 @@ source $OH_MY_ZSH/plugins/git/git.plugin.zsh
 source $OH_MY_ZSH/plugins/globalias/globalias.plugin.zsh
 source $OH_MY_ZSH/plugins/tmux/tmux.plugin.zsh
 source $OH_MY_ZSH/plugins/vi-mode/vi-mode.plugin.zsh
+source $OH_MY_ZSH/plugins/wd/wd.plugin.zsh
 
 export ZPREZTO=~/.zsh/prezto
 source $ZPREZTO/modules/completion/init.zsh
