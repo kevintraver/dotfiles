@@ -1,4 +1,4 @@
-let g:scratch_persistence_file = '~/.scratch.vim'
+let g:scratch_persistence_file = expand( '$HOME/.scratch.vim' )
 
 let g:scratch_no_mappings = 1
 
