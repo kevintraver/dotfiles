@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'floobits/floobits-neovim'
+" Plug 'floobits/floobits-neovim'
 
 " colorscheme
 Plug 'icymind/NeoSolarized'
