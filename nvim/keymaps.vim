@@ -57,7 +57,7 @@ nnoremap <Space>a :A<CR>
 nnoremap <M-h> :Dirvish %:p<CR>
 
 " ignore q
-noremap q <Nop>
+" noremap q <Nop>
 
 "" arrow keys switch buffers
 nnoremap <Left> :bprev<CR>
