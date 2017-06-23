@@ -35,7 +35,6 @@ source ~/.zsh/plugins/oh-my-zsh/plugins/globalias/globalias.plugin.zsh
 
 source ~/.zsh/plugins/prezto/modules/completion/init.zsh
 source ~/.zsh/plugins/prezto/modules/directory/init.zsh
-source ~/.zsh/plugins/prezto/modules/utility/init.zsh
 
 antibody bundle zsh-users/zsh-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
