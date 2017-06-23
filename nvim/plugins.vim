@@ -43,7 +43,6 @@ Plug 'reedes/vim-textobj-sentence'
 Plug 'saaguero/vim-textobj-pastedtext'
 Plug 'glts/vim-textobj-comment'
 Plug 'jceb/vim-textobj-uri'
-Plug 'zandrmartin/vim-textobj-blanklines'
 
 Plug 'nhooyr/neoman.vim'
 
