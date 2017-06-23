@@ -38,7 +38,6 @@ Plug 'takac/vim-hardtime'
 " motions
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
-Plug 'kana/vim-textobj-entire'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'glts/vim-textobj-comment'
 Plug 'jceb/vim-textobj-uri'
