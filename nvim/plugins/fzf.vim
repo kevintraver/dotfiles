@@ -3,8 +3,7 @@ autocmd FileType fzf set nonumber norelativenumber
 
 nnoremap <M-f> :Lines<CR>
 nnoremap <M-g> :GFiles?<CR>
-nnoremap <Space>gy :BCommits<CR>
-nnoremap <Space>gY :Commits<CR>
+nnoremap <Space>gy :Commits<CR>
 nnoremap <M-y> :History<CR>
 nnoremap <M-b> :BTags<CR>
 nnoremap <M-B> :Tags<CR>
