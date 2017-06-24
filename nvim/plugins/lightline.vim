@@ -11,13 +11,20 @@ let g:lightline = {
 let g:lightline.active = {
       \ 'left': [ [ 'mode', 'paste' ],
       \           [ 'gitbranch', 'filename', 'modified' ] ],
-      \ 'right': [ [ 'lineinfo' ],
+      \ 'right': [ [ '' ],
       \            [ 'percent' ],
-      \            [ 'fileformat', 'filetype' ] ] }
+      \            [ 'filetype' ] ] }
+
+
+let g:lightline.inactive = {
+      \ 'left': [ [ 'filename' ] ],
+      \ 'right': [ [ 'percent' ],
+      \            [ 'filetype' ] ] }
+
 
 let g:lightline.tabline = {
-    \ 'left': [ [ 'tabs' ] ],
-    \ 'right': [ ] }
+      \ 'left': [ [ 'tabs' ] ],
+      \ 'right': [ ] }
 
 function! FileType()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
