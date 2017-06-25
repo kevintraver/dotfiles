@@ -137,6 +137,7 @@ Plug 'triglav/vim-visual-increment'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'sk1418/Join'
 Plug 'itchyny/vim-cmdline-ranges'
+Plug 'machakann/vim-swap'
 
 " formatting
 Plug 'tpope/vim-sleuth'
