@@ -9,8 +9,6 @@ nnoremap <M-b> :BTags<CR>
 nnoremap <M-B> :Tags<CR>
 nnoremap <M-e> :Rg<CR>
 
-nnoremap <Space><Space> :Buffers<CR>
-
 " nnoremap <M-o> :Files<CR>
 " nnoremap <M-f> :Lines<CR>
 " nnoremap <M-F> :Rg<CR>

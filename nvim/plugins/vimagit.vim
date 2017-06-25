@@ -1,1 +1,1 @@
-nnoremap <Space>gs :Magit<CR>
+nnoremap <Space>c :Magit<CR>
