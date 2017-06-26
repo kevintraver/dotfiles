@@ -1,0 +1,1 @@
+nnoremap _ :Join<CR>
