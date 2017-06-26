@@ -162,7 +162,7 @@ Plug 'majutsushi/tagbar'
 Plug 'metakirby5/codi.vim'
 
 " language formatting
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'vim-ruby/vim-ruby'
 Plug 'ck3g/vim-change-hash-syntax'
 Plug 'chrisbra/csv.vim'
