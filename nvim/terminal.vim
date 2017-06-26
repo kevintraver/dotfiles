@@ -8,6 +8,8 @@ augroup term " {
   autocmd TermOpen * | setlocal nonumber norelativenumber path+=**
   autocmd BufWinEnter,BufEnter,WinEnter * if &buftype ==# "terminal" |
         \ startinsert | endif
+  autocmd BufWinLeave,BufWInLeave,WinLeave * if &buftype ==# "terminal" |
+        \ stopinsert | endif
   autocmd TermClose * call feedkeys('<cr>')
   autocmd TermOpen * if &buftype ==# 'terminal' | nnoremap <buffer> <silent> <M-]> i|
         \ nnoremap <buffer> <silent> <M-[> i| endif
