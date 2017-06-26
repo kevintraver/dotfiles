@@ -98,3 +98,4 @@ noremap <silent> <Space>st :!stree<CR>
 nnoremap <Leader>ftrb :set ft=ruby<CR>
 nnoremap <Leader>ftsql :set ft=sql<CR>
 nnoremap <Leader>fthtml :set ft=html<CR>
+nnoremap <Leader>ftzsh :set ft=zsh<CR>
