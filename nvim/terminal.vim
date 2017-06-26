@@ -24,17 +24,21 @@ tmap <M-]> <C-\><C-n>
 tmap <M-[> <C-\><C-n>
 tmap <C-]> <C-\><C-n>
 
-autocmd FileType editcommand map <silent><buffer> <M-\> <esc>:wq!<cr>
-autocmd FileType editcommand imap <silent><buffer> <M-\> <esc>:wq!<cr>
+augroup editcommand
+  autocmd FileType editcommand map <silent><buffer> <M-\> <esc>:wq!<cr>
+  autocmd FileType editcommand imap <silent><buffer> <M-\> <esc>:wq!<cr>
 
-autocmd FileType editcommand map <silent><buffer> <M-w> <esc>:wq!<cr>
-autocmd FileType editcommand imap <silent><buffer> <M-w> <ESC><C-\><C-n>:wq!<cr>
-autocmd FileType editcommand imap <silent><buffer> <Enter> <ESC><C-\><C-n>:wq!<cr>
+  autocmd FileType editcommand map <silent><buffer> <M-w> <esc>:wq!<cr>
+  autocmd FileType editcommand imap <silent><buffer> <M-w> <ESC><C-\><C-n>:wq!<cr>
+  autocmd FileType editcommand imap <silent><buffer> <Enter> <ESC><C-\><C-n>:wq!<cr>
+augroup END
 
-autocmd FileType terminus stopinsert
-autocmd FileType terminus inoremap <silent><buffer> <Enter> <esc>:bdelete<cr>
-autocmd FileType terminus inoremap <silent><buffer> <M-\> <esc>:bdelete<cr>
-autocmd FileType terminus nnoremap <silent><buffer> <M-\> <esc>:bdelete<cr>
+augroup terminus
+  autocmd FileType terminus stopinsert
+  autocmd FileType terminus inoremap <silent><buffer> <Enter> <esc>:bdelete<cr>
+  autocmd FileType terminus inoremap <silent><buffer> <M-\> <esc>:bdelete<cr>
+  autocmd FileType terminus nnoremap <silent><buffer> <M-\> <esc>:bdelete<cr>
+augroup END
 
 let g:terminus_default_prompt = '❯'
 let g:terminus_default_mappings = 0
