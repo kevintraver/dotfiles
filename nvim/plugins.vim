@@ -197,6 +197,7 @@ Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-pencil'
 
 " utilities
+Plug 'tyru/capture.vim'
 Plug 'tpope/vim-eunuch'
 
 Plug 'mhinz/vim-randomtag'
