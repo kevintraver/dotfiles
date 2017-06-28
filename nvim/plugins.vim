@@ -70,6 +70,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " window / buffer managemenet
 Plug 'gcmt/taboo.vim'
+Plug 'taohex/lightline-buffer'
 Plug 'breuckelen/vim-resize'
 Plug 'simeji/winresizer'
 Plug 'zhaocai/GoldenView.Vim'
