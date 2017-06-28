@@ -198,6 +198,7 @@ Plug 'reedes/vim-pencil'
 
 " utilities
 Plug 'tyru/capture.vim'
+Plug 'bogado/file-line'
 Plug 'tpope/vim-eunuch'
 
 Plug 'mhinz/vim-randomtag'
