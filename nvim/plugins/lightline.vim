@@ -45,3 +45,5 @@ endfunction
 function! LightlineReadonly()
   return &readonly && &filetype !=# 'help' ? 'RO' : ''
 endfunction
+
+let g:lightline_buffer_excludes = ['neoterm', 'zsh']
