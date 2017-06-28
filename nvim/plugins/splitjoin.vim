@@ -1,1 +1,1 @@
-nnoremap L gJ
+nnoremap _ gJ
