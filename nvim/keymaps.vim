@@ -92,6 +92,8 @@ noremap <Space>9 9gt
 vmap < <gv
 vmap > >gv
 
+nnoremap <M-k> K
+
 autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
 
 noremap <silent> <Space>st :!stree<CR>
