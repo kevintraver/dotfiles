@@ -44,6 +44,8 @@ Plug 'saaguero/vim-textobj-pastedtext'
 Plug 'glts/vim-textobj-comment'
 Plug 'jceb/vim-textobj-uri'
 
+Plug 'terryma/vim-multiple-cursors'
+
 Plug 'nhooyr/neoman.vim'
 
 " html
