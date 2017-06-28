@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'lightline_solarized',
       \ 'component_function': {
       \   'filetype': 'FileType',
       \   'fileformat': 'FileFormat',
