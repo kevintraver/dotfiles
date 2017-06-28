@@ -4,6 +4,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " colorscheme
 Plug 'icymind/NeoSolarized'
+Plug 'taohex/lightline-solarized'
+
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
