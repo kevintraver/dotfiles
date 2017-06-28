@@ -20,6 +20,7 @@ nnoremap <Leader>em :e ~/.dotfiles/tmux.conf<CR>
 nnoremap <Leader>et :e ~/.dotfiles/nvim/terminal.vim<CR>
 nnoremap <Leader>eP :e ~/.config/nvim/plugged<CR>
 nnoremap <Leader>el :e ~/.zshrc.local<CR>
+nnoremap <Leader>eL :e ~/.init.local.vim<CR>
 
 "" reload current file
 nnoremap <Leader>er :source %<CR>
