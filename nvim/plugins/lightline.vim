@@ -4,8 +4,21 @@ let g:lightline = {
       \   'filetype': 'FileType',
       \   'fileformat': 'FileFormat',
       \   'gitbranch': 'fugitive#head',
-      \   'readonly': 'LightlineReadonly'
-      \ }
+      \   'readonly': 'LightlineReadonly',
+      \ 'bufferbefore': 'lightline#buffer#bufferbefore',
+      \ 'bufferafter': 'lightline#buffer#bufferafter',
+      \ 'bufferinfo': 'lightline#buffer#bufferinfo'
+      \ },
+      \ 'tabline': {
+      \ 'left': [ [ 'bufferinfo' ], [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+      \ 'right': [ [  ], ],
+      \ },
+      \ 'component_expand': {
+      \ 'buffercurrent': 'lightline#buffer#buffercurrent2',
+      \ },
+      \ 'component_type': {
+      \ 'buffercurrent': 'tabsel',
+      \ },
       \ }
 
 let g:lightline.active = {
@@ -20,11 +33,6 @@ let g:lightline.inactive = {
       \ 'left': [ [ 'filename' ] ],
       \ 'right': [ [ 'percent' ],
       \            [ 'filetype' ] ] }
-
-
-let g:lightline.tabline = {
-      \ 'left': [ [ 'tabs' ] ],
-      \ 'right': [ ] }
 
 function! FileType()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''

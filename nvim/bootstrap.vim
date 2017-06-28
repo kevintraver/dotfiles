@@ -36,6 +36,9 @@ set softtabstop=0
 set shiftwidth=2
 set expandtab
 
+" always show tabline
+set showtabline=2
+
 "" Enable hidden buffers
 set hidden
 
