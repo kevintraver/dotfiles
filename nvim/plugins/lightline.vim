@@ -1,13 +1,13 @@
 let g:lightline = {
       \ 'colorscheme': 'lightline_solarized',
       \ 'component_function': {
-      \   'filetype': 'FileType',
-      \   'fileformat': 'FileFormat',
-      \   'gitbranch': 'fugitive#head',
-      \   'readonly': 'LightlineReadonly',
-      \ 'bufferbefore': 'lightline#buffer#bufferbefore',
-      \ 'bufferafter': 'lightline#buffer#bufferafter',
-      \ 'bufferinfo': 'lightline#buffer#bufferinfo'
+      \   'filetype':     'FileType',
+      \   'fileformat':   'FileFormat',
+      \   'gitbranch':    'fugitive#head',
+      \   'readonly':     'LightlineReadonly',
+      \   'bufferbefore': 'lightline#buffer#bufferbefore',
+      \   'bufferafter':  'lightline#buffer#bufferafter',
+      \   'bufferinfo':   'lightline#buffer#bufferinfo'
       \ },
       \ 'tabline': {
       \ 'left': [ [ 'bufferinfo' ], [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
