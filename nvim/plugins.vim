@@ -96,6 +96,7 @@ Plug 'francoiscabrol/ranger.vim'
 " completion
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'maralla/completor.vim'
+Plug 'ervandew/supertab'
 Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/ncm-rct-complete'
 
