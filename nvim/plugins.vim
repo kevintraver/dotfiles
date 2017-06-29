@@ -39,6 +39,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'takac/vim-hardtime'
 
 " motions
+Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'reedes/vim-textobj-sentence'
