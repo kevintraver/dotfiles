@@ -1,5 +1,5 @@
-map <Enter> <Plug>(expand_region_expand)
-map <BS> <Plug>(expand_region_shrink)
+map <BS> <Plug>(expand_region_expand)
+map <M-BS> <Plug>(expand_region_shrink)
 
 let g:expand_region_text_objects = get(g:, 'expand_region_text_objects', {
                   \ 'iW'  :0,
