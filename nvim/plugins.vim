@@ -21,6 +21,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " airline and friends
 Plug 'itchyny/lightline.vim'
+Plug 'taohex/lightline-buffer'
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 
@@ -73,7 +74,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " window / buffer managemenet
 Plug 'gcmt/taboo.vim'
-Plug 'taohex/lightline-buffer'
 Plug 'breuckelen/vim-resize'
 Plug 'simeji/winresizer'
 Plug 'zhaocai/GoldenView.Vim'
