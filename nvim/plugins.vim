@@ -54,7 +54,7 @@ Plug 'nhooyr/neoman.vim'
 
 " html
 Plug 'mattn/emmet-vim/'
-Plug 'lifepillar/vim-cheat40'
+" Plug 'lifepillar/vim-cheat40'
 
 " vim utilities
 Plug 'mtth/scratch.vim'
