@@ -106,4 +106,6 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
-autocmd FileType help wincmd H
+augroup help
+  autocmd FileType help wincmd H
+augroup END

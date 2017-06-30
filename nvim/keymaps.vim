@@ -96,7 +96,9 @@ nnoremap <M-k> K
 
 nnoremap <Leader>j `
 
-autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
+augroup qf
+  autocmd FileType qf noremap <buffer> <ESC> :BD<cr>
+augroup END
 
 noremap <silent> <Space>st :!stree<CR>
 

@@ -13,6 +13,8 @@ map # <Plug>(incsearch-nohl-#)<Plug>Pulse
 map g* <Plug>(incsearch-nohl-g*)<Plug>Pulse
 map g# <Plug>(incsearch-nohl-g#)<Plug>Pulse
 
-" Pulses the first match after hitting the enter keyan
-autocmd! User IncSearchExecute
-autocmd User IncSearchExecute :call search_pulse#Pulse()
+augroup incsearch
+  " Pulses the first match after hitting the enter keyan
+  autocmd! User IncSearchExecute
+  autocmd User IncSearchExecute :call search_pulse#Pulse()
+augroup END
