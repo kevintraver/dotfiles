@@ -7,5 +7,6 @@ vnoremap R r
 
 nmap M <Plug>MoveMotionEndOfLinePlug
 
+let g:EasyClipAutoFormat = 1
 let g:EasyClipPreserveCursorPositionAfterYank = 1
 let g:EasyClipYankHistorySize=50
