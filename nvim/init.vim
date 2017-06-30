@@ -10,6 +10,10 @@ for filename in split(glob(g:config_dir . '/plugins/*.vim'), '\n')
   execute 'source ' . filename
 endfor
 
+for filename in split(glob(g:config_dir . '/lib/*.vim'), '\n')
+  execute 'source ' . filename
+endfor
+
 if filereadable( expand( '$HOME/.init.local.vim' ) )
   source $HOME/.init.local.vim
 endif
