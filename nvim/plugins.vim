@@ -19,7 +19,7 @@ Plug 'tpope/vim-sensible'
 " icons
 Plug 'ryanoasis/vim-devicons'
 
-" airline and friends
+" lightline and friends
 Plug 'itchyny/lightline.vim'
 Plug 'taohex/lightline-buffer'
 Plug 'edkolev/promptline.vim'
