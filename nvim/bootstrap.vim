@@ -86,7 +86,7 @@ set colorcolumn=80
 set scrolloff=3
 
 set list
-set listchars=tab:▸\ ,trail:·,nbsp:_
+set listchars=tab:▸\ ,trail:･,nbsp:_
 
 let no_buffers_menu=1
 
