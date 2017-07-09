@@ -145,6 +145,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'sk1418/Join'
 " Plug 'itchyny/vim-cmdline-ranges'
 Plug 'machakann/vim-swap'
+Plug 'FooSoft/vim-argwrap'
 
 " formatting
 Plug 'tpope/vim-sleuth'
