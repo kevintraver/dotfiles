@@ -144,6 +144,7 @@ Plug 'triglav/vim-visual-increment'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'sk1418/Join'
 " Plug 'itchyny/vim-cmdline-ranges'
+Plug 'christoomey/vim-sort-motion'
 Plug 'machakann/vim-swap'
 Plug 'FooSoft/vim-argwrap'
 
