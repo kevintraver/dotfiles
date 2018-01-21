@@ -1,0 +1,15 @@
+autoload -U promptinit; promptinit
+prompt pure
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias tmpchrome='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`"'
+#alias tmpchromium='open -na /Applications/Chromium.app --args "--user-data-dir=/tmp/Chromium/`date +%s`"'
+alias tmpfirefox='DATE=$(date +%s) && /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "tmp-$DATE /tmp/Firefox/$DATE" && /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "tmp-$DATE"'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export EDITOR=nvim
+export VISUAL=nvim
