@@ -1,7 +1,8 @@
 autoload -U promptinit; promptinit
 prompt pure
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -13,3 +14,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export EDITOR=nvim
 export VISUAL=nvim
+
+chruby ruby-2.5.0
