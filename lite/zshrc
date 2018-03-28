@@ -16,3 +16,14 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 chruby ruby-2.5.0
+
+#aliases
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipwifi="ipconfig getifaddr en0"
+
+# trash https://github.com/sindresorhus/trash-cli
+alias rm="trash"
+alias rmdir="trash"
+alias del="trash"
+
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
