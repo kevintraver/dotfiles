@@ -11,11 +11,15 @@ let g:spacevim_disabled_plugins=[
     \ ['vim-easymotion'],
     \ ['vim-easyoperator-line'],
     \ ['clever-f.vim'],
+    \ ['vimfiler.vim'],
     \ ]
 
 let g:spacevim_custom_plugins = [
     \ ['justinmk/vim-sneak'],
     \ ['Shougo/neomru.vim'],
+    \ ['svermeulen/vim-easyclip'],
+    \ ['brettanomyces/nvim-terminus'],
+    \ ['justinmk/vim-dirvish'],
     \ ]
 
 " SpaceVim Options: {{{
@@ -31,7 +35,6 @@ let g:sneak#s_next = 1
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
 
-let g:spacevim_enable_debug = 1
 let g:spacevim_realtime_leader_guide = 1
 let g:spacevim_enable_tabline_filetype_icon = 1
 let g:spacevim_enable_statusline_display_mode = 0
@@ -43,6 +46,7 @@ let g:spacevim_enable_debug = 1
 " fix esc timeout
 set ttimeout
 set ttimeoutlen=0
+set ttyfast
 
 " }}}
 
