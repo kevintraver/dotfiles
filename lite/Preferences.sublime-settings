@@ -1,0 +1,5 @@
+{
+	"ignored_packages": [],
+	"folder_exclude_patterns": [".git",  "node_modules", "bower_components", "dist" ],
+	"file_exclude_patterns": [ ".gitkeep", "*.sublime-workspace" ]
+}
