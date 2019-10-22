@@ -1,18 +1,6 @@
 {
 	"binary_file_patterns":
 	[
-
-	],
-	"file_exclude_patterns":
-	[
-		".DS_Store",
-		".keep",
-		".gitkeep",
-		"*.sublime-project",
-		"*.sublime-workspace",
-		".byebug_history",
-		"*.sqlite3",
-
 		"*.jpg",
 		"*.jpeg",
 		"*.png",
@@ -26,6 +14,16 @@
 		"*.swf",
 		"*.jar",
 		"*.zip",
+		".DS_Store",
+		"*.sqlite3"
+	],
+	"file_exclude_patterns":
+	[
+		".keep",
+		".gitkeep",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		".byebug_history"
 	],
 	"folder_exclude_patterns":
 	[
