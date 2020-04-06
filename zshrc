@@ -6,10 +6,12 @@ source /usr/local/share/chruby/auto.sh
 
 chruby 2.6.0
 
-alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --remote-debugging-port --no-default-browser-check --no-first-run --enable-devtools-experiments'
+alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
+alias brave='open -na /Applications/Brave\ Browser.app --args "--user-data-dir=/tmp/Brave/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
 alias tmpchrome='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
 alias tmpchromium='open -na /Applications/Chromium.app --args "--user-data-dir=/tmp/Chromium/`date +%s`"'
 alias tmpfirefox='DATE=$(date +%s) && /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "tmp-$DATE /tmp/Firefox/$DATE" && /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "tmp-$DATE"'
+alias tf='DATE=$(date +%s) && /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "tmp-$DATE /tmp/Firefox/$DATE" && /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "tmp-$DATE"'
 
 alias chromereset="rm -rf /Users/kevin/Library/Application\ Support/Google && rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
 
@@ -26,8 +28,8 @@ zstyle ':completion:*' matcher-list '' \
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export EDITOR=subl
-export VISUAL=subl
+export EDITOR=nvim
+export VISUAL=nvim
 export ENHANCD_FILTER=fzf
 export ENHANCD_COMPLETION_BEHAVIOR=list
 
