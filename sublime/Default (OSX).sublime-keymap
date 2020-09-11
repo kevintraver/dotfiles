@@ -10,7 +10,7 @@
 				},
 				{
 					"command": "send_code",
-					"args": {"cmd": "eval(File.read\"$file\")"},
+					"args": {"cmd": "TOPLEVEL_BINDING.eval(File.read(\"$file\"))"},
 					"context": [
 						{ "key": "selector", "operator": "equal", "operand": "source.ruby" }
 					]
