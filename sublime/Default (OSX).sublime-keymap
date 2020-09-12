@@ -2,7 +2,9 @@
 	{ "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
 	{ "keys": ["super+shift+o"], "command": "prompt_select_workspace" },
 
-	{ "keys": ["super+shift+enter"], "command": "multicommand", 
+	{ 
+		"keys": ["super+shift+enter"],
+		"command": "multicommand", 
 		"args": {
 			"commands": [
 				{
@@ -10,12 +12,10 @@
 				},
 				{
 					"command": "send_code",
-					"args": {"cmd": "TOPLEVEL_BINDING.eval(File.read(\"$file\"))"},
-					"context": [
-						{ "key": "selector", "operator": "equal", "operand": "source.ruby" }
-					]
-
+					"args": {"cmd": "TOPLEVEL_BINDING.eval(File.read(\"$file\"))"}
 				}
 			]
-		} }
-	]
+		},
+		"context": [ { "key": "selector", "operator": "equal", "operand": "source.ruby" } ]
+	}
+]
