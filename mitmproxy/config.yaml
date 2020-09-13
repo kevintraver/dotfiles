@@ -2,3 +2,5 @@ ignore_hosts:
   - '^(.+\.)?google\.com:443$'
   - '^(.+\.)?googleapis\.com:443$'
   - '^(.+\.)?gstatic\.com:443$'
+  - '^(.+\.)?doubleclick\.net:443$'
+  - '^(.+\.)?googleusercontent\.com:443$'
