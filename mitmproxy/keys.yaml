@@ -1,12 +1,17 @@
 -
   key: c
-  ctx: ["flowlist"]
+  ctx: ["flowlist","flowview"]
   cmd: export.clip curl @focus
 
 -
   key: d
-  ctx: ["flowlist"]
+  ctx: ["flowlist","flowview"]
   cmd: cut.clip @focus request.host
+
+-
+  key: u
+  ctx: ["flowlist","flowview"]
+  cmd: cut.clip @focus request.url
 
 -
   key: D
