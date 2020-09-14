@@ -3,7 +3,7 @@ Pry.config.pager = false
 
 require 'amazing_print'
 
-# AmazingPrint.defaults = { :limit => true }
+AmazingPrint.defaults = { :limit => true }
 AmazingPrint.pry!
 
 def pbcopy(input)
