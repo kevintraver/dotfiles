@@ -1,5 +1,5 @@
 [
-	{ "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+    { "keys": ["super+o"], "command": "open_recently_closed_file", "args": {"current_project_only": false} },
 	{ "keys": ["super+shift+o"], "command": "prompt_select_workspace" },
 	{ 
 		"keys": ["super+shift+enter"],

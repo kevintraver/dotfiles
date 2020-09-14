@@ -10,6 +10,7 @@
 		"Delete Current File",
 		"EasyWorkspace",
 		"Emmet",
+		"File History",
 		"GitGutter",
 		"GotoWindow",
 		"Multicommand",
@@ -20,6 +21,6 @@
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
-		"SublimeLinter-ruby",
+		"SublimeLinter-ruby"
 	]
 }
