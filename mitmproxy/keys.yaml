@@ -7,3 +7,8 @@
   key: d
   ctx: ["flowlist"]
   cmd: cut.clip @focus request.host
+
+-
+  key: D
+  ctx: ["flowlist","flowview"]
+  cmd: view.flows.remove @focus
