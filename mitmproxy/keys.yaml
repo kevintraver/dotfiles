@@ -1,0 +1,9 @@
+-
+  key: c
+  ctx: ["flowlist"]
+  cmd: export.clip curl @focus
+
+-
+  key: d
+  ctx: ["flowlist"]
+  cmd: cut.clip @focus request.host
