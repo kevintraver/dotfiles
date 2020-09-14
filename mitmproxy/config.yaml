@@ -22,4 +22,6 @@ ignore_hosts:
   - '^(.+\.)?use.typekit\.net:80$'
   - '^(.+\.)?use.typekit\.net:443$'
   - '^(.+\.)?gvt1\.com:80$'
-  - '^(.+\.)?gvt1\.com:443$'
+  - '^(.+\.)?gvt1\.com:80$'
+  - '^(.+\.)?maxcdn.bootstrapcdn\.com:443$'
+  - '^(.+\.)?maxcdn.bootstrapcdn\.com:80$'
