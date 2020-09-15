@@ -21,6 +21,7 @@
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"SublimeLinter-json",
-		"SublimeLinter-ruby"
+		"SublimeLinter-ruby",
+		"Tower"
 	]
 }
