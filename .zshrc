@@ -75,3 +75,7 @@ alias s="subl"
 
 alias rc="rails console"
 
+
+backupdb() {
+  sqlite3 db/development.sqlite3 ".backup 'db_`date +%s`.db'"
+}
