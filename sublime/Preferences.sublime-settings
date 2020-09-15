@@ -31,6 +31,7 @@
 		"bower_components"
 	],
 	"font_size": 10,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Six",
@@ -38,6 +39,7 @@
 		"Vintageous"
 	],
 	"neovintageous_build_version": 11100,
+	"remember_open_files": false,
 	"vintageous_enable_abolish": true,
 	"vintageous_enable_sneak": true,
 	"vintageous_enable_surround": true,
