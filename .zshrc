@@ -68,3 +68,10 @@ alias proxyoff="networksetup -setsocksfirewallproxystate Wi-Fi off"
 alias proxy="mitmproxy --mode socks5 --showhost"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+alias gt="gittower"
+alias s="subl"
+
+alias rc="rails console"
+
