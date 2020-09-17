@@ -4,6 +4,11 @@
   cmd: export.clip curl @focus
 
 -
+  key: h
+  ctx: ["flowlist","flowview"]
+  cmd: export.clip httpie @focus
+
+-
   key: d
   ctx: ["flowlist","flowview"]
   cmd: cut.clip @focus request.host
