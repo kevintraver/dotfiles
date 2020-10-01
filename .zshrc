@@ -74,6 +74,7 @@ alias gt="gittower"
 alias s="subl"
 
 alias rc="rails console"
+alias rs="rails server"
 
 
 backupdb() {
