@@ -1,4 +1,5 @@
 {
+	"color_scheme": "Monokai Pro.sublime-color-scheme",
 	"file_exclude_patterns":
 	[
 		".keep",
@@ -40,6 +41,7 @@
 	],
 	"neovintageous_build_version": 11100,
 	"remember_open_files": false,
+	"theme": "Monokai Pro.sublime-theme",
 	"vintageous_enable_abolish": true,
 	"vintageous_enable_sneak": true,
 	"vintageous_enable_surround": true,
