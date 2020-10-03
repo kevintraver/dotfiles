@@ -32,7 +32,6 @@
 		"node_modules",
 		"bower_components"
 	],
-	"font_size": 10,
 	"hot_exit": false,
 	"ignored_packages":
 	[
