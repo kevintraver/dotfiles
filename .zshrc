@@ -26,8 +26,22 @@ zinit load gretzky/n.zsh
 zinit load laggardkernel/zsh-thefuck
 zinit load peterhurford/up.zsh
 zinit load agkozak/zsh-z
-zinit light Aloxaf/fzf-tab
+zinit load lincheney/fzf-tab-completion
+zinit load b4b4r07/enhancd
+zinit load Aloxaf/fzf-tab
+
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma/fast-syntax-highlighting \
+  blockf atpull'zinit creinstall -q .' \
+      zsh-users/zsh-completions
 
 autoload -U compinit && compinit
 
 source ~/.dotfiles/.aliases.zshrc
+
+zstyle ':completion:*' matcher-list \
+  'M:{a-zA-Z}={a-zA-Z}' \
+  'm:{a-zA-Z}={A-Za-z}' \
+  'm:{a-zA-Z}={A-Za-z} l:|=*' \
+  'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
