@@ -1,5 +1,6 @@
 # osx apps
 alias gt="gittower"
+alias gt.="gittower ."
 alias s="subl"
 
 # brave
