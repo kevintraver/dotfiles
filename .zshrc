@@ -18,6 +18,7 @@ zinit for \
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
+zinit load zdharma/history-search-multi-word
 zinit load junegunn/fzf-bin
 zinit load laggardkernel/zsh-iterm2
 zinit load DarrinTisdale/zsh-aliases-exa
@@ -29,9 +30,9 @@ zinit load gretzky/n.zsh
 zinit load laggardkernel/zsh-thefuck
 zinit load peterhurford/up.zsh
 zinit load agkozak/zsh-z
-zinit load lincheney/fzf-tab-completion
 zinit load b4b4r07/enhancd
 zinit load Aloxaf/fzf-tab
+zinit load lincheney/fzf-tab-completion
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
