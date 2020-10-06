@@ -45,3 +45,7 @@ alias rs="rails server"
 
 # ember
 alias ep='ember s --proxy http://localhost:3000'
+
+# clipboard
+alias pbc='pbcopy'
+alias pbp='pbpaste'
