@@ -12,6 +12,9 @@ zinit light-mode for \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
 
+zinit for \
+  light-mode pick"history/history.plugin.zsh" belak/zsh-utils
+
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
