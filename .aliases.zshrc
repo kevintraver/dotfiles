@@ -50,3 +50,6 @@ alias ep='ember s --proxy http://localhost:3000'
 # clipboard
 alias pbc='pbcopy'
 alias pbp='pbpaste'
+
+# xsv
+alias csv='xsv'
