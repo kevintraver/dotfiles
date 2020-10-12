@@ -49,5 +49,6 @@ zstyle ':completion:*' matcher-list \
   'm:{a-zA-Z}={A-Za-z} l:|=*' \
   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 
 source ~/.zshrc.local
