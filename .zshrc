@@ -49,3 +49,6 @@ zstyle ':completion:*' matcher-list \
   'm:{a-zA-Z}={A-Za-z}' \
   'm:{a-zA-Z}={A-Za-z} l:|=*' \
   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+
+source ~/.zshrc.local
