@@ -1,7 +1,9 @@
 [
 	{ "keys": ["super+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 	{ "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-    { "keys": ["super+y"], "command": "open_recently_closed_file", "args": {"current_project_only": false} },
+    { "keys": ["super+y"], "command": "open_recently_closed_file", "args": {"current_project_only": true} },
+    { "keys": ["super+shift+y"], "command": "open_recently_closed_file", "args": {"current_project_only": false} },
+    { "keys": ["super+ctrl+y"], "command": "open_recently_closed_file", "args": {"current_project_only": false} },
     {
         "keys": ["super+shift+o"],
         "command": "project_manager", "args": {"action": "switch"}
