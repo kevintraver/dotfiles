@@ -1,1 +1,4 @@
+:set ignorecase
+:set smartcase
+
 let g:neak-clever-s = 1
