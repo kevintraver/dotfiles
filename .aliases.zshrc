@@ -53,3 +53,5 @@ alias pbp='pbpaste'
 
 # xsv
 alias csv='xsv'
+
+alias pwdc="pwd | tr -d '\n' | pbcopy"
