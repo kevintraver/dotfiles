@@ -55,3 +55,6 @@ alias pbp='pbpaste'
 alias csv='xsv'
 
 alias pwdc="pwd | tr -d '\n' | pbcopy"
+
+# git
+alias gs='git status'
