@@ -43,10 +43,10 @@
 	"remember_open_files": false,
 	"theme": "Monokai Pro (Filter Spectrum).sublime-theme",
 	"vintageous_enable_abolish": true,
+	"vintageous_enable_commentary": true,
 	"vintageous_enable_sneak": true,
 	"vintageous_enable_surround": true,
 	"vintageous_enable_unimpaired": true,
-	"vintageous_enable_commentary": true,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": false,
 	"vintageous_use_sys_clipboard": false
