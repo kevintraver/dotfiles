@@ -15,6 +15,22 @@
         "command": "project_manager", "args": {"action": "switch"}
     },
 	{ 
+		"keys": ["super+ctrl+enter"],
+		"command": "multicommand", 
+		"args": {
+			"commands": [
+				{
+					"command": "save"
+				},
+				{
+					"command": "send_code",
+					"args": {"cmd": "TOPLEVEL_BINDING.eval(File.read(\"$file\"))"}
+				}
+			]
+		},
+		"context": [ { "key": "selector", "operator": "equal", "operand": "source.ruby" } ]
+	},
+	{ 
 		"keys": ["super+shift+enter"],
 		"command": "multicommand", 
 		"args": {
