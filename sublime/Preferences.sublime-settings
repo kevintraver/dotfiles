@@ -20,8 +20,6 @@
 		"*.zip",
 		".DS_Store",
 		"*.sqlite3",
-		"*.sublime-workspace",
-		"*.sublime-project",
 		"*.log"
 	],
 	"folder_exclude_patterns":
