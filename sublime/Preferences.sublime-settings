@@ -1,4 +1,6 @@
 {
+    "remember_full_screen": true,
+	"open_files_in_new_window": false,
 	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
 	"file_exclude_patterns":
 	[
