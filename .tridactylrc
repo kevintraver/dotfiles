@@ -1,0 +1,3 @@
+unbind d
+bind D tabclose
+bind x tabclose
