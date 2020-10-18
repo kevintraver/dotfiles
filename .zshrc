@@ -112,3 +112,4 @@ alias pwdc="pwd | tr -d '\n' | pbcopy"
 
 # git
 alias gs='git status'
+alias dc='cd'
