@@ -1,6 +1,5 @@
 {
-    "remember_full_screen": true,
-	"open_files_in_new_window": false,
+    "open_files_in_new_window": false,
 	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
 	"file_exclude_patterns":
 	[
@@ -46,6 +45,7 @@
 	"monokai_pro_small_scrollbar": true,
 	"monokai_pro_style_title_bar": true,
 	"neovintageous_build_version": 11100,
+	"open_files_in_new_window": false,
 	"remember_open_files": false,
 	"theme": "Monokai Pro (Filter Spectrum).sublime-theme",
 	"vintageous_enable_abolish": true,
