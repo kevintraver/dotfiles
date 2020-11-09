@@ -49,6 +49,8 @@ zstyle ':completion:*' matcher-list \
 
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 
+zstyle ':completion:*:approximate:*' max-errors 2 numeric
+
 source ~/.zshrc.local
 
 
