@@ -28,4 +28,6 @@ ignore_hosts:
   - '^(.+\.)?gvt1\.com:80$'
   - '^(.+\.)?gvt1\.com:443$'
   - '^(.+\.)?googlesyndication.com:80$'
-  - '^(.+\.)?googlesyndication.com:443$'
+  - '^(.+\.)?googlesyndication.com:80$'
+  - '^(.+\.)?code.jquery.com:80$'
+  - '^(.+\.)?code.jquery.com:443$'
