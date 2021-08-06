@@ -114,3 +114,5 @@ alias pwdc="pwd | tr -d '\n' | pbcopy"
 # git
 alias gs='git status'
 alias dc='cd'
+
+export JAVA_HOME=$(/usr/libexec/java_home)
