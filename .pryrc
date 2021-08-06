@@ -1,5 +1,5 @@
 Pry.config.editor = 'subl'
-Pry.config.pager = false
+Pry.config.pager = true
 
 require 'amazing_print'
 
