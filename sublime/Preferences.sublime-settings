@@ -59,5 +59,6 @@
 	"vintageous_enable_unimpaired": true,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": false,
-	"vintageous_use_sys_clipboard": false
+	"vintageous_use_sys_clipboard": false,
+	"vintageous_sneak_use_ic_scs": true
 }
