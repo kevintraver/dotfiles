@@ -40,4 +40,6 @@ ignore_hosts:
   - 'pixel.ad'
   - 'unpkg.com'
   - 'i.ytimg.com'
-
+  - 'cdn.ampproject.org'
+  - 'cdn.pushcrew.com'
+  - 'rs.fullstory.com'
