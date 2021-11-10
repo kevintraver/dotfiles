@@ -43,3 +43,5 @@ ignore_hosts:
   - 'cdn.ampproject.org'
   - 'cdn.pushcrew.com'
   - 'rs.fullstory.com'
+  - 'platform.twitter.com'
+  - 'syndication.twitter.com'
