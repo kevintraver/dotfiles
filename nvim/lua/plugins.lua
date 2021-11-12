@@ -47,6 +47,5 @@ vim.api.nvim_exec([[
   augroup Plugins
     autocmd!
     autocmd BufWritePost plugins.lua Reload
-    autocmd BufWritePost plugins.lua PackerInstall
     augroup end
 ]], false)
