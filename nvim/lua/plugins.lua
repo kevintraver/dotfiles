@@ -14,7 +14,7 @@ require('packer').startup(function()
   use 'RRethy/nvim-treesitter-textsubjects'
   -- use 'RRethy/vim-illuminate'
 
-  use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
   use 'wellle/targets.vim'
   use 'landock/vim-expand-region'
@@ -41,7 +41,7 @@ require('packer').startup(function()
   use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
 
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'TimUntersberger/neogit', requires = { 'nvim-lua/plenary.nvim' } }
 
   use { 'beauwilliams/focus.nvim' }
 
