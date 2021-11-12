@@ -14,4 +14,5 @@ require 'config.lualine'
 require 'config.neogit'
 require 'config.focus'
  
-vim.cmd[[colorscheme nord]]
+vim.cmd [[colorscheme onenord]]
+vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]

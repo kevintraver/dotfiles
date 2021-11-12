@@ -1,1 +1,1 @@
-require('lualine').setup { options = { theme = 'nord' } }
+require('lualine').setup { options = { theme = 'onenord' } }
