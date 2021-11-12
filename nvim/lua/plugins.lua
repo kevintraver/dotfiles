@@ -14,6 +14,8 @@ require('packer').startup(function()
   use 'RRethy/nvim-treesitter-textsubjects'
   -- use 'RRethy/vim-illuminate'
 
+  use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+
   use 'wellle/targets.vim'
   use 'landock/vim-expand-region'
   use 'tami5/sqlite.lua'
