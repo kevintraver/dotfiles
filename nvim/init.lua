@@ -13,6 +13,7 @@ require 'config.gitsigns'
 require 'config.lualine'
 require 'config.neogit'
 require 'config.focus'
+require 'config.tmux'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
