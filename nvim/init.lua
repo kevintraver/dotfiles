@@ -12,5 +12,6 @@ require 'config.move'
 require 'config.gitsigns'
 require 'config.lualine'
 require 'config.neogit'
+require 'config.focus'
  
 vim.cmd[[colorscheme nord]]
