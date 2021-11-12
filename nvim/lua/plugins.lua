@@ -8,13 +8,11 @@ require('packer').startup(function()
 
   use 'ggandor/lightspeed.nvim'
 
-  use 'tanvirtin/monokai.nvim'
-
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'RRethy/nvim-treesitter-textsubjects'
-  use 'RRethy/vim-illuminate'
+  -- use 'RRethy/vim-illuminate'
 
   use 'wellle/targets.vim'
   use 'landock/vim-expand-region'
@@ -35,9 +33,11 @@ require('packer').startup(function()
 
   use 'matze/vim-move'
 
-  use {'konapun/vacuumline.nvim', requires = { 'glepnir/galaxyline.nvim', branch = 'main', 'kyazdani42/nvim-web-devicons', opt = true } }
+  use 'shaunsingh/nord.nvim'
+  use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
 
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
 end)
 

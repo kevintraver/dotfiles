@@ -12,5 +12,3 @@ vim.o.smartindent = true
 vim.o.writebackup = false
 
 vim.o.smartcase = true
-
-require('monokai').setup {}

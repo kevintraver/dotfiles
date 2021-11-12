@@ -9,5 +9,8 @@ require 'config.switch'
 require 'config.comment'
 require 'config.autosave'
 require 'config.move'
-require 'config.vacuumline'
 require 'config.gitsigns'
+require 'config.lualine'
+require 'config.neogit'
+ 
+vim.cmd[[colorscheme nord]]
