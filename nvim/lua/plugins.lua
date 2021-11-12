@@ -14,6 +14,7 @@ require('packer').startup(function()
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'RRethy/nvim-treesitter-textsubjects'
+  use 'RRethy/vim-illuminate'
 
   use 'wellle/targets.vim'
   use 'landock/vim-expand-region'
@@ -30,6 +31,13 @@ require('packer').startup(function()
 
   use 'AndrewRadev/switch.vim'
   use 'tommcdo/vim-exchange'
+  use 'Pocco81/AutoSave.nvim'
+
+  use 'matze/vim-move'
+
+  use {'konapun/vacuumline.nvim', requires = { 'glepnir/galaxyline.nvim', branch = 'main', 'kyazdani42/nvim-web-devicons', opt = true } }
+
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
 end)
 
