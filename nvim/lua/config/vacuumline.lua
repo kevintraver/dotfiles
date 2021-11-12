@@ -1,3 +1,0 @@
-require('vacuumline').setup({
-  theme = require('vacuumline.theme.nord')
-})
