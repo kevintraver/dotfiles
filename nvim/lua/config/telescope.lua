@@ -1,3 +1,7 @@
-vim.api.nvim_set_keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').git_files({hidden=true})<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>fr', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').git_files({hidden=true})<CR>]], opts)
+map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
+map('n', '<leader>fr', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], opts)
+map('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
