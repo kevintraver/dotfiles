@@ -16,6 +16,7 @@ require 'config.focus'
 require 'config.tmux'
 require 'config.tree'
 require 'config.barbar'
+require 'config.project'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]

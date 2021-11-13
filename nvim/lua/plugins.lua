@@ -9,6 +9,7 @@ require('packer').startup(function()
   use 'ggandor/lightspeed.nvim'
 
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
+  use { 'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"} }
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'RRethy/nvim-treesitter-textsubjects'
@@ -44,6 +45,8 @@ require('packer').startup(function()
   use { 'TimUntersberger/neogit', requires = { 'nvim-lua/plenary.nvim' } }
 
   use { 'beauwilliams/focus.nvim' }
+  use { 'ahmedkhalf/project.nvim' }
+  use { 'p00f/nvim-ts-rainbow' }
 
 end)
 
