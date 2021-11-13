@@ -23,6 +23,8 @@ require('packer').startup(function()
   use 'tami5/sqlite.lua'
   use 'numToStr/Comment.nvim'
 
+  use {'jdhao/better-escape.vim', event = 'InsertEnter'}
+
   use 'tpope/vim-repeat'
   use 'tpope/vim-endwise'
   use 'tpope/vim-surround'
