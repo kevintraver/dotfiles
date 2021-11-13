@@ -10,6 +10,7 @@ require('packer').startup(function()
 
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
   use { 'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"} }
+  use { 'AckslD/nvim-neoclip.lua', requires = {'tami5/sqlite.lua', module = 'sqlite'} }
 
   use 'nvim-treesitter/nvim-treesitter'
   use 'RRethy/nvim-treesitter-textsubjects'
