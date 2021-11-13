@@ -1,4 +1,3 @@
-require('telescope').load_extension('fzf')
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -9,3 +8,5 @@ map('n', '<leader>fo', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]],
 map('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
 map('n', '<leader>fp', [[<cmd>lua require('telescope').extensions.projects.projects()<CR>]], opts)
 map("n", "<leader>fr", [[<Cmd>lua require('telescope').extensions.frecency.frecency({ sorter = require("telescope").extensions.fzf.native_fzf_sorter() })<CR>]], opts)
+
+require('telescope').load_extension('fzf')
