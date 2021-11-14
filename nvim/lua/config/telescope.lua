@@ -20,3 +20,9 @@ map('n', '<leader>gh', [[<cmd>lua require('telescope.builtin').git_bcommits()<CR
 map('n', '<leader>gb', [[<cmd>lua require('telescope.builtin').git_branches()<CR>]], opts)
 
 require('telescope').load_extension('fzf')
+
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = {"node_modules", ".git/.*" }
+  }
+}
