@@ -55,6 +55,7 @@ require('packer').startup(function()
   use { 'famiu/bufdelete.nvim' }
   use { 'chaoren/vim-wordmotion' }
   use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+  use { 'mhinz/vim-sayonara' }
 
 end)
 
