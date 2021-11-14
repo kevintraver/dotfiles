@@ -1,4 +1,5 @@
 vim.api.nvim_set_keymap('n', '<Leader>gg', '<cmd>Neogit<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<M-g>', '<cmd>Neogit<CR>', { silent = true })
 
 vim.cmd("autocmd FileType NeogitCommitMessage nnoremap <buffer> <M-s> :wq<CR>")
 
