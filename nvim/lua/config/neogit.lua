@@ -1,1 +1,1 @@
-vim.api.nvim_set_keymap('n', '<Leader>g', '<cmd>Neogit<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>gg', '<cmd>Neogit<CR>', { silent = true })
