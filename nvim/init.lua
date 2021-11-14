@@ -18,6 +18,7 @@ require 'config.barbar'
 require 'config.project'
 require 'config.rainbow'
 require 'config.neoclip'
+require 'config.coq'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
