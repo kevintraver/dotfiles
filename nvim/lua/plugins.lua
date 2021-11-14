@@ -51,6 +51,8 @@ require('packer').startup(function()
   use { 'ahmedkhalf/project.nvim' }
   use { 'p00f/nvim-ts-rainbow' }
 
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
 end)
 
 vim.api.nvim_exec([[
