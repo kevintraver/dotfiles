@@ -14,7 +14,6 @@ require('packer').startup(function()
 
   use 'nvim-treesitter/nvim-treesitter'
   use { 'RRethy/nvim-treesitter-textsubjects', requires = { 'nvim-treesitter/nvim-treesitter' } }
-  -- use 'RRethy/vim-illuminate'
 
   use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
