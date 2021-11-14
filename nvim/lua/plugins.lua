@@ -53,6 +53,7 @@ require('packer').startup(function()
 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'famiu/bufdelete.nvim' }
+  use { 'chaoren/vim-wordmotion' }
 
 end)
 
