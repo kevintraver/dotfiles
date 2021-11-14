@@ -14,5 +14,10 @@ vim.cmd [[
 ]]
 
 vim.g.send_disable_mapping = true
+vim.g.neoterm_autoscroll = 1
+vim.g.neoterm_autoinsert = 0
 
-map('n', '<C-Space>', [[<Plug>SendLine]], { silent = true })
+map('n', '<M-Enter>', [[<Plug>SendLine]], { silent = true })
+map('v', '<M-Enter>', [[<Plug>Send]], { silent = true })
+
+map('n', '<M-d>', [[<cmd>vsplit<CR><cmd>call NeomuxTerm()<CR>]], { silent = true })
