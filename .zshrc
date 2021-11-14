@@ -116,3 +116,7 @@ alias gs='git status'
 alias dc='cd'
 
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey '\ew' exit_zsh
