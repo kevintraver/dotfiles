@@ -60,10 +60,3 @@ require('packer').startup(function()
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 
 end)
-
-vim.api.nvim_exec([[
-  augroup Plugins
-    autocmd!
-    autocmd BufWritePost plugins.lua Reload
-    augroup end
-]], false)
