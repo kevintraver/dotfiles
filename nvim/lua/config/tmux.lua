@@ -4,7 +4,9 @@ require("tmux").setup({
     copy_sync = {
         -- enables copy sync and overwrites all register actions to
         -- sync registers *, +, unnamed, and 0 till 9 from tmux in advance
-        enable = false,
+        enable = true,
+        redirect_to_clipboard = false,
+        sync_clipboard = false
     },
     navigation = {
         -- enables default keybindings (C-hjkl) for normal mode
