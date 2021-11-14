@@ -56,7 +56,7 @@ require('packer').startup(function()
   use { 'chaoren/vim-wordmotion' }
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'mhinz/vim-sayonara' }
-  use { 'ms-jpq/coq_nvim', branch = 'coq', event = "VimEnter", config = 'vim.cmd[[COQnow]]' }
+  use { 'ms-jpq/coq_nvim', branch = 'coq' }
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 
 end)
