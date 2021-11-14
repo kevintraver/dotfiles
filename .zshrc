@@ -56,8 +56,6 @@ source ~/.zshrc.local
 # osx apps
 alias gt="gittower"
 alias gt.="gittower ."
-alias s="subl"
-alias s.="subl ."
 
 # brave
 alias brave='open -na /Applications/Brave\ Browser.app --args "--user-data-dir=/tmp/Brave/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
