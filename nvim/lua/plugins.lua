@@ -54,7 +54,7 @@ require('packer').startup(function()
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   use { 'famiu/bufdelete.nvim' }
   use { 'chaoren/vim-wordmotion' }
-  use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
   use { 'mhinz/vim-sayonara' }
   use { 'ms-jpq/coq_nvim', branch = 'coq', event = "VimEnter", config = 'vim.cmd[[COQnow]]' }
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
