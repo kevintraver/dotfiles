@@ -60,5 +60,6 @@ require('packer').startup(function()
 
   use { 'nikvdp/neomux' }
   use { 'mtikekar/nvim-send-to-term' }
+  use { 'kassio/neoterm' }
 
 end)
