@@ -58,4 +58,7 @@ require('packer').startup(function()
   use { 'ms-jpq/coq_nvim', branch = 'coq' }
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 
+  use { 'nikvdp/neomux' }
+  use { 'mtikekar/nvim-send-to-term' }
+
 end)

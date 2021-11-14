@@ -1,0 +1,18 @@
+local map = vim.api.nvim_set_keymap
+
+map('t', '<c-h>', [[<c-\><c-n><cmd>lua require("tmux").move_left()<cr>]], { silent = true })
+map('t', '<c-j>', [[<c-\><c-n><cmd>lua require("tmux").move_bottom()<cr>]], { silent = true })
+map('t', '<c-k>', [[<c-\><c-n><cmd>lua require("tmux").move_top()<cr>]], { silent = true })
+map('t', '<c-l>', [[<c-\><c-n><cmd>lua require("tmux").move_right()<cr>]], { silent = true })
+
+map('t', '<Esc>', [[<c-\><c-n>]], { silent = true })
+
+vim.cmd [[
+    autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
+    autocmd TermOpen * :SendHere
+    autocmd BufLeave term://* stopinsert
+]]
+
+vim.g.send_disable_mapping = true
+
+map('n', '<C-Space>', [[<Plug>SendLine]], { silent = true })

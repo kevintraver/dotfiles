@@ -1,6 +1,7 @@
 require 'plugins'
 require 'settings'
 require 'keymappings'
+require 'terminal'
 
 require 'config.telescope'
 require 'config.highlight-current-n'
