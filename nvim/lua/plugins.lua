@@ -52,6 +52,7 @@ require('packer').startup(function()
   use { 'p00f/nvim-ts-rainbow' }
 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'famiu/bufdelete.nvim' }
 
 end)
 
