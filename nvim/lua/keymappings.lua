@@ -12,3 +12,7 @@ vim.api.nvim_set_keymap('n', '<M-w>', '[[<cmd>quit<CR>]]', { noremap = true } )
 
 vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
 vim.api.nvim_set_keymap("v", ";", ":", { noremap = true })
+
+vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>Y", 'gg"+yG', { noremap = true })
