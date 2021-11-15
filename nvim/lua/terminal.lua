@@ -22,4 +22,4 @@ vim.g.neomux_no_term_autoinsert = 1
 map('n', '<M-Enter>', [[<Plug>SendLine]], { silent = true })
 map('v', '<M-Enter>', [[<Plug>Send]], { silent = true })
 
-map('n', '<M-d>', [[<cmd>vsplit<CR><cmd>call NeomuxTerm()<CR>]], { silent = true })
+map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>call NeomuxTerm()<CR>]], { silent = true })
