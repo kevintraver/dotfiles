@@ -1,5 +1,5 @@
 local config = {
-  enabled = true,
+  enabled = false,
   events = {"InsertLeave", "TextChanged"},
   conditions = {
     exists = true,
