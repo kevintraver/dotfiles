@@ -25,7 +25,7 @@ require('packer').startup(function()
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
 
   use 'tpope/vim-repeat'
-  use 'tpope/vim-endwise'
+  use 'windwp/nvim-autopairs'
   use 'blackCauldron7/surround.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
