@@ -3,6 +3,7 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 map('n', '<M-o>', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
+map('n', '<M-p>', [[<cmd>lua require('telescope.builtin').commands()<CR>]], opts)
 map('n', '<M-f>', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], opts)
 map('n', '<M-F>', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
 map('n', '<M-O>', [[<cmd>lua require('telescope').extensions.projects.projects()<CR>]], opts)
