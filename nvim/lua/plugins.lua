@@ -65,4 +65,6 @@ require('packer').startup(function()
   use { 'chentau/marks.nvim' }
   use { "folke/twilight.nvim" }
 
+  use { 'luukvbaal/stabilize.nvim' }
+
 end)

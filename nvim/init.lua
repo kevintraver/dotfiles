@@ -24,6 +24,7 @@ require 'config.winshift'
 require 'config.marks'
 require 'config.twilight'
 require 'config.surround'
+require 'config.stabilize'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
