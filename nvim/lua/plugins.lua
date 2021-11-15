@@ -51,6 +51,7 @@ require('packer').startup(function()
   use { 'p00f/nvim-ts-rainbow' }
 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'sindrets/winshift.nvim' }
   use { 'famiu/bufdelete.nvim' }
   use { 'chaoren/vim-wordmotion' }
   use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
