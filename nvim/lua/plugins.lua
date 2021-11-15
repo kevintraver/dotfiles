@@ -26,7 +26,7 @@ require('packer').startup(function()
 
   use 'tpope/vim-repeat'
   use 'tpope/vim-endwise'
-  use 'tpope/vim-surround'
+  use 'blackCauldron7/surround.nvim'
   use 'kyazdani42/nvim-web-devicons'
 
   use 'rktjmp/highlight-current-n.nvim'
