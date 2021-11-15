@@ -118,3 +118,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '\ew' exit_zsh
+
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
+export VISUAL="nvr -cc split --remote-wait +'setlocal bufhidden=wipe'"
