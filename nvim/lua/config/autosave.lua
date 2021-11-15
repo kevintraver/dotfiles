@@ -9,7 +9,7 @@ local config = {
   write_all_buffers = false,
   on_off_commands = true,
   clean_command_line_interval = 1,
-  debounce_delay = 300
+  debounce_delay = 200
 }
 
 require("autosave").setup(config)
