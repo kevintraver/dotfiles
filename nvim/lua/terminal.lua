@@ -20,3 +20,7 @@ map('n', '<C-Space>', [[<Plug>SendLine]], { silent = true })
 map('v', '<C-Space>', [[<Plug>Send]], { silent = true })
 
 map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>call NeomuxTerm()<CR>]], { silent = true })
+
+vim.cmd [[
+  autocmd FileType editcommand nnoremap <silent><buffer> <C-Space> <esc>:wq!<cr>
+]]
