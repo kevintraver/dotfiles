@@ -16,12 +16,12 @@ vim.g.send_disable_mapping = true
 vim.g.neoterm_autoscroll = 1
 vim.g.neoterm_autoinsert = 0
 
-map('n', '<C-Space>', [[<Plug>SendLine]], { silent = true })
-map('v', '<C-Space>', [[<Plug>Send]], { silent = true })
+map('n', '<M-\\>', [[<Plug>SendLine]], { silent = true })
+map('v', '<M-\\>', [[<Plug>Send]], { silent = true })
 
 map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>terminal<CR>]], { silent = true })
 map('n', '<M-D>', [[<cmd>terminal<CR>]], { silent = true })
 
 vim.cmd [[
-  autocmd FileType editcommand nnoremap <silent><buffer> <C-Space> <esc>:wq!<cr>
+  autocmd FileType editcommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
 ]]
