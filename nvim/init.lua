@@ -26,6 +26,7 @@ require 'config.twilight'
 require 'config.surround'
 require 'config.stabilize'
 require 'config.autopairs'
+require 'config.navigator'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
