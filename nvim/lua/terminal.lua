@@ -10,6 +10,7 @@ map('t', '<Esc>', [[<c-\><c-n>]], { silent = true })
 vim.cmd [[
     autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
     autocmd TermOpen * :SendHere
+    autocmd TermOpen term://* startinsert
     autocmd BufWinEnter,BufEnter,BufNew,BufLeave term://* stopinsert
 ]]
 
