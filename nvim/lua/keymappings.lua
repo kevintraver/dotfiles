@@ -11,8 +11,8 @@ vim.api.nvim_set_keymap('n', '<leader>et', [[<cmd>edit ~/.config/nvim/lua/termin
 
 vim.api.nvim_set_keymap('n', '<leader>ez', [[<cmd>edit ~/.zshrc<cr>]], { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<M-w>', '[[<cmd>Sayonara<CR>]]', { noremap = true } )
-vim.api.nvim_set_keymap('n', '<M-W>', '[[<cmd>Sayonara!<CR>]]', { noremap = true } )
+vim.api.nvim_set_keymap('n', '<M-w>', [[<cmd>Sayonara<CR>]], { noremap = true } )
+vim.api.nvim_set_keymap('n', '<M-W>', [[<cmd>Sayonara!<CR>]], { noremap = true } )
 
 vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
 vim.api.nvim_set_keymap("v", ";", ":", { noremap = true })
