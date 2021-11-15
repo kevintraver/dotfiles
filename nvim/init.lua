@@ -22,6 +22,7 @@ require 'config.neoclip'
 require 'config.coq'
 require 'config.winshift'
 require 'config.marks'
+require 'config.twilight'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
