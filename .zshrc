@@ -119,6 +119,8 @@ exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '\ew' exit_zsh
 
+bindkey -s "^[|" "fc^M"
+
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[\\" edit-command-line

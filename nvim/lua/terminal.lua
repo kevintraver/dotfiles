@@ -23,6 +23,9 @@ map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>terminal<CR>]], { silent = true
 map('n', '<M-D>', [[<cmd>terminal<CR>]], { silent = true })
 
 vim.cmd [[
+  autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
   autocmd FileType editcommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editcommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
+  autocmd FileType editcommand nnoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
+  autocmd FileType editcommand inoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
 ]]
