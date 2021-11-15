@@ -121,6 +121,7 @@ bindkey '\ew' exit_zsh
 
 autoload -z edit-command-line
 zle -N edit-command-line
-bindkey "^X^E" edit-command-line
+bindkey "^ " edit-command-line
 
 export VISUAL="nvr -cc split --remote-wait +'setlocal bufhidden=wipe'"
+export EDITOR="nvr -cc split --remote-wait +'setlocal bufhidden=wipe'"
