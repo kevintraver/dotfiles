@@ -27,6 +27,7 @@ require 'config.surround'
 require 'config.autopairs'
 require 'config.navigator'
 require 'config.lspconfig'
+require 'config.indent-blankline'
  
 vim.cmd [[colorscheme onenord]]
 vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]

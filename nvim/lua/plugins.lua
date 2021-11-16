@@ -68,5 +68,6 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make' }}
 
+  use 'lukas-reineke/indent-blankline.nvim'
 
 end)
