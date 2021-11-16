@@ -71,5 +71,6 @@ require('packer').startup(function()
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make' }}
 
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'abecodes/tabout.nvim'
 
 end)
