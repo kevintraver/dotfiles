@@ -16,3 +16,5 @@ vim.o.smartcase = true
 
 vim.opt.termguicolors = true
 vim.opt.syntax = 'on'
+
+vim.cmd[[set nowrap]]
