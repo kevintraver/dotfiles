@@ -65,8 +65,6 @@ require('packer').startup(function()
   use { 'chentau/marks.nvim' }
   use { "folke/twilight.nvim" }
 
-  use { 'luukvbaal/stabilize.nvim' }
-
   use 'neovim/nvim-lspconfig'
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make' }}
 
