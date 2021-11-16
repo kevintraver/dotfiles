@@ -6,7 +6,5 @@ map('n', '<Space><Space>', '<cmd>BufferPick<CR>', opts)
 map('n', '<C-p>', '<cmd>BufferPrevious<CR>', opts)
 map('n', '<C-n>', '<cmd>BufferNext<CR>', opts)
 
-map('n', '<Tab>', '<cmd>BufferNext<CR>', opts)
-map('n', '<S-Tab>', '<cmd>BufferPrevious<CR>', opts)
 
 map('n', '<M-t>', '<cmd>BufferPick<CR>', opts)
