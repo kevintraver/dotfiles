@@ -13,3 +13,6 @@ vim.o.smartindent = true
 vim.o.writebackup = false
 
 vim.o.smartcase = true
+
+vim.opt.termguicolors = true
+vim.opt.syntax = 'on'

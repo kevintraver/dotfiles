@@ -2,6 +2,7 @@ require 'plugins'
 require 'settings'
 require 'keymappings'
 require 'terminal'
+require 'theme'
 
 require 'config.telescope'
 require 'config.highlight-current-n'
@@ -10,7 +11,6 @@ require 'config.comment'
 require 'config.autosave'
 require 'config.move'
 require 'config.gitsigns'
-require 'config.lualine'
 require 'config.neogit'
 require 'config.focus'
 require 'config.tmux'
@@ -33,6 +33,3 @@ require 'config.iswap'
 require 'config.bqf'
 require 'config.tabout'
 require 'config.bufjump'
- 
-vim.cmd [[colorscheme onenord]]
-vim.cmd [[ autocmd ColorScheme * lua require'lightspeed'.init_highlight(true) ]]
