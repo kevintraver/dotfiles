@@ -73,4 +73,6 @@ require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'abecodes/tabout.nvim'
 
+  use 'simrat39/symbols-outline.nvim'
+
 end)
