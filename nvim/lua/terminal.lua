@@ -10,6 +10,7 @@ map('t', '<Esc>', [[<c-\><c-n>]], { silent = true })
 vim.cmd [[
     autocmd TermOpen * setlocal listchars= nonumber norelativenumber nocursorline
     autocmd TermOpen * :SendHere
+    autocmd TermClose * call feedkeys("i")
 ]]
 
 vim.g.send_disable_mapping = true
