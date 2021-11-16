@@ -56,7 +56,7 @@ require('packer').startup(function()
   use { 'sindrets/winshift.nvim' }
   use { 'famiu/bufdelete.nvim' }
   use { 'chaoren/vim-wordmotion' }
-  use { 'kevinhwang91/nvim-bqf', ft = 'qf' }
+  use { 'kevinhwang91/nvim-bqf' }
   use { 'mhinz/vim-sayonara' }
   use { 'ms-jpq/coq_nvim', branch = 'coq' }
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
@@ -71,6 +71,5 @@ require('packer').startup(function()
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make' }}
 
   use 'lukas-reineke/indent-blankline.nvim'
-  use {'kevinhwang91/nvim-bqf'}
 
 end)
