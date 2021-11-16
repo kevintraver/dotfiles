@@ -1,4 +1,5 @@
 vim.wo.number = true
+vim.o.termguicolors = true
 
 vim.opt.undofile = true
 vim.o.ignorecase = true
