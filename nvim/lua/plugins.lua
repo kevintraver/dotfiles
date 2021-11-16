@@ -35,6 +35,7 @@ require('packer').startup(function()
   use 'AndrewRadev/switch.vim'
   use 'tommcdo/vim-exchange'
   use 'machakann/vim-swap'
+  use 'mizlan/iswap.nvim'
   use 'Pocco81/AutoSave.nvim'
 
   use 'fedepujol/move.nvim'
