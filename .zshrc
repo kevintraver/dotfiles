@@ -125,5 +125,5 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[\\" edit-command-line
 
-export VISUAL="nvr -cc split --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
-export EDITOR="nvr -cc split --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
+export VISUAL="nvr -s -cc split --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
+export EDITOR="nvr -s -cc split --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
