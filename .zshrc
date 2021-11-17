@@ -128,3 +128,5 @@ bindkey "^[\\" edit-command-line
 export VISUAL="nvr -s --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
 export EDITOR="nvr -s --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcommand'"
 PURE_PROMPT_SYMBOL=\>
+
+unsetopt BEEP
