@@ -66,6 +66,10 @@ require('packer').startup(function()
   use { 'nikvdp/neomux' }
   use { 'mtikekar/nvim-send-to-term' }
   use { 'kassio/neoterm' }
+
+  use { 'brettanomyces/nvim-terminus' }
+
+
   use { 'chentau/marks.nvim' }
   use { "folke/twilight.nvim" }
 
