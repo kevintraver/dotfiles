@@ -20,8 +20,11 @@ vim.g.neoterm_autoinsert = 0
 map('n', '<M-\\>', [[<Plug>SendLine]], { silent = true })
 map('v', '<M-\\>', [[<Plug>Send]], { silent = true })
 
-map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>terminal<CR>]], { silent = true })
-map('n', '<M-D>', [[<cmd>terminal<CR>]], { silent = true })
+map('t', '<M-\\>', [[<Plug>TerminusEditCommand]], { silent = true })
+map('t', '<cr>', [[<Plug>TerminusInterceptCommand]], { silent = true })
+
+map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>TerminusOpen<CR>]], { silent = true })
+map('n', '<M-D>', [[<cmd>TerminusOpen<CR>]], { silent = true })
 
 vim.cmd [[
   autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
@@ -29,4 +32,10 @@ vim.cmd [[
   autocmd FileType editcommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editcommand nnoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
   autocmd FileType editcommand inoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
+  autocmd FileType terminus nnoremap <silent><buffer> <M-\> <esc>:bd!<cr>
+  autocmd FileType terminus inoremap <silent><buffer> <M-\> <esc>:bd!<cr>
 ]]
+
+
+vim.g.terminus_default_prompt = '>'
+vim.g.terminus_default_mappings = 1
