@@ -38,4 +38,4 @@ vim.cmd [[
 
 
 vim.g.terminus_default_prompt = '>'
-vim.g.terminus_default_mappings = 1
+vim.g.terminus_default_mappings = 0
