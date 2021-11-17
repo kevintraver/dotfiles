@@ -82,5 +82,6 @@ require('packer').startup(function()
   use 'simrat39/symbols-outline.nvim'
 
   use 'kwkarlwang/bufjump.nvim'
+  use 'justinmk/vim-gtfo'
 
 end)
