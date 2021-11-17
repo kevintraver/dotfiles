@@ -83,5 +83,6 @@ require('packer').startup(function()
 
   use 'kwkarlwang/bufjump.nvim'
   use 'justinmk/vim-gtfo'
+  use 'stsewd/gx-extended.vim'
 
 end)
