@@ -1,6 +1,8 @@
 Pry.config.editor = 'subl'
 Pry.config.pager = true
 
+Pry.config.editor = "nvr -s --remote-wait +'setlocal bufhidden=wipe' +'set ft=ruby'"
+
 require 'amazing_print'
 
 AmazingPrint.pry!
