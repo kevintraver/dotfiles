@@ -23,7 +23,7 @@ map('v', '<M-\\>', [[<Plug>Send]], { silent = true })
 map('t', '<M-\\>', [[<Plug>TerminusEditCommand]], { silent = true })
 map('t', '<cr>', [[<Plug>TerminusInterceptCommand]], { silent = true })
 
-map('n', '<M-d>', [[<cmd>botright vsplit<CR><cmd>TerminusOpen<CR>]], { silent = true })
+map('n', '<M-d>', [[<cmd>botright vnew<CR><cmd>TerminusOpen<CR>]], { silent = true })
 map('n', '<M-D>', [[<cmd>TerminusOpen<CR>]], { silent = true })
 
 vim.cmd [[
