@@ -28,12 +28,19 @@ map('n', '<M-D>', [[<cmd>TerminusOpen<CR>]], { silent = true })
 
 vim.cmd [[
   autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
+  autocmd FileType editcommand set ft=zsh
+
   autocmd FileType editcommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editcommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editcommand nnoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
   autocmd FileType editcommand inoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
+
   autocmd FileType terminus nnoremap <silent><buffer> <M-\> <esc>:bd!<cr>
   autocmd FileType terminus inoremap <silent><buffer> <M-\> <esc>:bd!<cr>
+
+  autocmd FileType editrubycommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
+  autocmd FileType editrubycommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
+  autocmd FileType editrubycommand set ft=ruby
 ]]
 
 
