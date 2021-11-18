@@ -24,8 +24,15 @@ map('n', '<leader>gl', [[<cmd>lua require('telescope.builtin').git_commits()<CR>
 map('n', '<leader>gh', [[<cmd>lua require('telescope.builtin').git_bcommits()<CR>]], opts)
 map('n', '<leader>gb', [[<cmd>lua require('telescope.builtin').git_branches()<CR>]], opts)
 
+local actions = require "telescope.actions"
+
 require('telescope').setup{
   defaults = {
+    mappings = {
+      i = {
+        ["<Escape>"] = actions.close
+      }
+    },
     file_ignore_patterns = {"node_modules", ".git/.*" }
   },
   extensions = {
