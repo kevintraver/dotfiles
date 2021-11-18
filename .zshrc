@@ -131,3 +131,6 @@ export EDITOR="nvr -s --remote-wait +'setlocal bufhidden=wipe' +'set ft=editcomm
 PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
+
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
