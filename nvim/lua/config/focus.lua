@@ -3,4 +3,4 @@ require("focus").setup({
   excluded_buftypes = { 'nofile', 'prompt', 'popup', 'quickfix'}
 })
 
-vim.api.nvim_set_keymap('n', '<M-l>', '<cmd>FocusSplitNicely<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<M-d>', '<cmd>FocusSplitNicely<CR>', { silent = true })
