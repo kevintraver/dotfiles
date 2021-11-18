@@ -31,6 +31,7 @@ zinit load agkozak/zsh-z
 zinit load b4b4r07/enhancd
 zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
+zinit load reegnz/jq-zsh-plugin
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
