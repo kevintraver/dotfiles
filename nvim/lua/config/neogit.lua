@@ -18,6 +18,7 @@ neogit.setup {
     status = {
       ["P"] = "PullPopup",
       ["p"] = "PushPopup",
+      ["<M-s>"] = "CommitPopup"
     }
   }
 }
