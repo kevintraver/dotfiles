@@ -1,7 +1,7 @@
 local opts = {noremap = true, silent = true}
 
 vim.api.nvim_set_keymap('n', '<Leader>gg', '<cmd>lua require("neogit").open()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<M-g>', '<cmd>lua require("neogit").open({ kind = "split_above" })<CR>', opts)
+vim.api.nvim_set_keymap('n', '<M-g>', '<cmd>lua require("neogit").open()<CR>', opts)
 
 vim.cmd("autocmd FileType NeogitCommitMessage nnoremap <buffer> <M-s> :wq<CR>")
 vim.cmd("autocmd FileType NeogitCommitMessage inoremap <buffer> <M-s> <C-\\><C-n>:wq<CR>")
