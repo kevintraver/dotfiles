@@ -27,7 +27,6 @@ zinit load momo-lab/zsh-abbrev-alias
 zinit load tj/git-extras
 zinit load laggardkernel/zsh-thefuck
 zinit load peterhurford/up.zsh
-zinit load agkozak/zsh-z
 zinit load b4b4r07/enhancd
 zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
