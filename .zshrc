@@ -146,3 +146,4 @@ alias l="nnn -de"
 alias nnn="nnn -e"
 
 alias nnode='/usr/local/bin/n'
+export NNN_OPTS="H"
