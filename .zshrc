@@ -140,3 +140,8 @@ if [ -n "$TMUX" ]; then
 else
     export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 fi
+
+alias n="nnn -e"
+alias nnn="nnn -e"
+
+alias nnode='/usr/local/bin/n'
