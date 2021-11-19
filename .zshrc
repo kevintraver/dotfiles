@@ -125,8 +125,8 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[\\" edit-command-line
 
-export VISUAL="nvr"
-export EDITOR="nvr"
+export VISUAL="nvr -s"
+export EDITOR="nvr -s"
 PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
