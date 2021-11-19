@@ -87,5 +87,6 @@ require('packer').startup(function()
   use 'stsewd/gx-extended.vim'
 
   use 'mtth/scratch.vim'
+  use 'mcchrish/nnn.vim'
 
 end)
