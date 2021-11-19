@@ -17,6 +17,8 @@ zinit for \
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
+zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
+
 zinit load zdharma/history-search-multi-word
 zinit load junegunn/fzf-bin
 zinit load laggardkernel/zsh-iterm2
@@ -31,6 +33,7 @@ zinit load b4b4r07/enhancd
 zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
+zinit load wfxr/forgit
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
@@ -46,7 +49,6 @@ zstyle ':completion:*' matcher-list \
   'm:{a-zA-Z}={A-Za-z} l:|=*' \
   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 
 zstyle ':completion:*:approximate:*' max-errors 2 numeric
 
@@ -147,3 +149,4 @@ alias nnn="nnn -e"
 
 alias nnode='/usr/local/bin/n'
 export NNN_OPTS="H"
+export FORGIT_COPY_CMD="tmux loadb -"
