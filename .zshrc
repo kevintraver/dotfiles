@@ -134,3 +134,9 @@ unsetopt BEEP
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 eval "$(zoxide init zsh)"
+
+if [ -n "$TMUX" ]; then
+    eval "$(tmux show-environment -s NVIM_LISTEN_ADDRESS)"
+else
+    export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+fi
