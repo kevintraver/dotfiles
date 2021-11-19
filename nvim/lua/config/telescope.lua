@@ -2,6 +2,8 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+require('telescope').load_extension('zoxide')
+
 map('n', '<M-o>', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
 map('n', '<M-O>', [[<cmd>lua require('telescope').extensions.projects.projects()<CR>]], opts)
 map('n', '<C-M-o>', [[<cmd>lua require('telescope').extensions.projects.projects()<CR>]], opts)
@@ -16,6 +18,7 @@ map('n', '<leader>fo', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]],
 map('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], opts)
 map('n', '<leader>fk', [[<cmd>lua require('telescope.builtin').keymaps()<CR>]], opts)
 map('n', '<leader>fy', [[<cmd>lua require('telescope').extensions.neoclip.default()<CR>]], opts)
+map('n', '<leader>fz', [[<cmd>lua require('telescope').extensions.zoxide.list()<CR>]], opts)
 map('n', '<leader>fp', [[<cmd>lua require('telescope').extensions.projects.projects()<CR>]], opts)
 map("n", "<leader>fr", [[<Cmd>lua require('telescope').extensions.frecency.frecency({ sorter = require("telescope").extensions.fzf.native_fzf_sorter() })<CR>]], opts)
 
@@ -44,3 +47,4 @@ require('telescope').setup{
     }
   }
 }
+
