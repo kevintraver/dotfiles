@@ -142,6 +142,7 @@ else
 fi
 
 alias n="nnn -e"
+alias l="nnn -de"
 alias nnn="nnn -e"
 
 alias nnode='/usr/local/bin/n'
