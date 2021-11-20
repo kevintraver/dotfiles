@@ -6,7 +6,7 @@ require("tmux").setup({
         -- sync registers *, +, unnamed, and 0 till 9 from tmux in advance
         enable = true,
         redirect_to_clipboard = false,
-        sync_clipboard = true
+        sync_clipboard = false
     },
     navigation = {
         -- enables default keybindings (C-hjkl) for normal mode
