@@ -63,6 +63,8 @@ require('packer').startup(function()
   use { 'famiu/bufdelete.nvim' }
   use { 'chaoren/vim-wordmotion' }
   use { 'kevinhwang91/nvim-bqf' }
+  use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end, requires = { 'junegunn/fzf.vim' } }
+
   use { 'mhinz/vim-sayonara' }
   use { 'ms-jpq/coq_nvim', branch = 'coq' }
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
