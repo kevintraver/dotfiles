@@ -25,6 +25,8 @@ require('packer').startup(function()
 
   use {'jdhao/better-escape.vim', event = 'InsertEnter'}
 
+  use 'tpope/vim-abolish'
+
   use 'tpope/vim-repeat'
   use 'tpope/vim-sleuth'
   use 'windwp/nvim-autopairs'
