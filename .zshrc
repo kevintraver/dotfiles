@@ -113,8 +113,6 @@ exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '\ew' exit_zsh
 
-bindkey -s "^[|" "fc^M"
-
 bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
 
@@ -126,6 +124,16 @@ nvim-edit-command-line () {
 }
 zle -N nvim-edit-command-line
 bindkey "^[\\" nvim-edit-command-line
+
+nvim-edit-command-line-last () {
+  local VISUAL="nvim -c 'set ft=editcommand'"
+  local EDITOR="nvim -c 'set ft=editcommand'"
+  zle up-history
+  edit-command-line
+}
+zle -N nvim-edit-command-line-last
+bindkey "^[|" nvim-edit-command-line-last
+
 
 export VISUAL="nvim"
 export EDITOR="nvim"
