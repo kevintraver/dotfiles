@@ -153,3 +153,6 @@ alias nnn="nnn -e"
 alias nnode='/usr/local/bin/n'
 export NNN_OPTS="H"
 export FORGIT_COPY_CMD="tmux loadb -"
+
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG='p:preview-tui'
