@@ -123,6 +123,9 @@ bindkey '\ew' exit_zsh
 
 bindkey -s "^[|" "fc^M"
 
+bindkey '^p' up-line-or-search
+bindkey '^n' down-line-or-search
+
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[\\" edit-command-line
