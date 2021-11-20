@@ -19,7 +19,7 @@ zinit light sindresorhus/pure
 
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 
-zinit load zdharma/history-search-multi-word
+zinit load zdharma-continuum/history-search-multi-word
 zinit load junegunn/fzf-bin
 zinit load laggardkernel/zsh-iterm2
 zinit load DarrinTisdale/zsh-aliases-exa
@@ -37,7 +37,7 @@ zinit load wfxr/forgit
 
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
-      zdharma/fast-syntax-highlighting \
+      zdharma-continuum/fast-syntax-highlighting \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
 
