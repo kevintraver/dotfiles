@@ -32,12 +32,8 @@ zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
 zinit load wfxr/forgit
-
-zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
-      zdharma-continuum/fast-syntax-highlighting \
-  blockf atpull'zinit creinstall -q .' \
-      zsh-users/zsh-completions
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
 
 autoload -U compinit && compinit
 
