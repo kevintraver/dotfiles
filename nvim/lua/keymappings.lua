@@ -22,6 +22,10 @@ vim.api.nvim_set_keymap("v", ";", ":", { noremap = true })
 
 vim.api.nvim_set_keymap("v", "<M-c>", '"+y', { noremap = true })
 
+vim.api.nvim_set_keymap("n", "<M-v>", '"*p', { noremap = true })
+vim.api.nvim_set_keymap("v", "<M-v>", '"*p', { noremap = true })
+vim.api.nvim_set_keymap("i", "<M-v>", '<C-r><C-p>+', { noremap = true })
+
 vim.api.nvim_set_keymap('n', 'c', '"_c', {noremap = true})
 vim.api.nvim_set_keymap('v', 'c', '"_c', {noremap = true})
 vim.api.nvim_set_keymap('n', 'C', '"_C', {noremap = true})
