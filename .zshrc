@@ -119,13 +119,13 @@ bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
 
 autoload -z edit-command-line
-nvim-command-line () {
+nvim-edit-command-line () {
   local VISUAL="nvim -c 'set ft=editcommand'"
   local EDITOR="nvim -c 'set ft=editcommand'"
   edit-command-line
 }
-zle -N nvim-command-line
-bindkey "^[\\" nvim-command-line
+zle -N nvim-edit-command-line
+bindkey "^[\\" nvim-edit-command-line
 
 export VISUAL="nvim"
 export EDITOR="nvim"
