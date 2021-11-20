@@ -126,8 +126,8 @@ nvim-command-line () {
 zle -N nvim-command-line
 bindkey "^[\\" nvim-command-line
 
-export VISUAL="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
-export EDITOR="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
+export VISUAL="nvim"
+export EDITOR="nvim"
 # PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
