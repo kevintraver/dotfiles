@@ -163,3 +163,5 @@ export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='p:preview-tui'
 
 export FCEDIT="nvim -c 'set ft=editcommand'"
+
+alias gu=gitui
