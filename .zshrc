@@ -9,10 +9,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-zinit light-mode for \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl
-
 zinit for \
   light-mode pick"history/history.plugin.zsh" belak/zsh-utils
 
