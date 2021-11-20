@@ -127,8 +127,8 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^[\\" edit-command-line
 
-export VISUAL="nvr -s"
-export EDITOR="nvr -s"
+export VISUAL="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
+export EDITOR="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
 PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
