@@ -90,4 +90,6 @@ require('packer').startup(function()
   use 'mtth/scratch.vim'
   use 'mcchrish/nnn.vim'
 
+  use 'christoomey/vim-titlecase'
+
 end)
