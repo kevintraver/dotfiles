@@ -32,7 +32,6 @@ zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
 zinit load wfxr/forgit
 zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
 
 autoload -U compinit && compinit
 
