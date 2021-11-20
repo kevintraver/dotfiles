@@ -121,6 +121,7 @@ bindkey '^n' down-line-or-search
 autoload -z edit-command-line
 nvim-command-line () {
   local VISUAL="nvim -c 'set ft=editcommand'"
+  local EDITOR="nvim -c 'set ft=editcommand'"
   edit-command-line
 }
 zle -N nvim-command-line
