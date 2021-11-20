@@ -129,7 +129,7 @@ bindkey "^[\\" edit-command-line
 
 export VISUAL="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
 export EDITOR="nvim +'setlocal bufhidden=wipe' +'set ft=editcommand'"
-PURE_PROMPT_SYMBOL=\>
+# PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
 
