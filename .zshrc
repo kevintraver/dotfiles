@@ -24,7 +24,6 @@ zinit load DarrinTisdale/zsh-aliases-exa
 zinit load momo-lab/zsh-abbrev-alias
 zinit load MichaelAquilina/zsh-you-should-use
 zinit load momo-lab/zsh-abbrev-alias
-zinit load tj/git-extras
 zinit load laggardkernel/zsh-thefuck
 zinit load peterhurford/up.zsh
 zinit load b4b4r07/enhancd
