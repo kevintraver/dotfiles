@@ -95,5 +95,6 @@ require('packer').startup(function()
   use 'mcchrish/nnn.vim'
 
   use 'arthurxavierx/vim-caser'
+  use 'svermeulen/vim-subversive'
 
 end)
