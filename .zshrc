@@ -15,11 +15,10 @@ zinit for \
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
-zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
-
 zinit ice wait lucid
 zinit snippet OMZ::plugins/globalias/globalias.plugin.zsh
 zinit snippet OMZ::plugins/rails/rails.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit load zdharma-continuum/history-search-multi-word
 zinit load junegunn/fzf-bin
