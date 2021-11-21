@@ -39,3 +39,7 @@ vim.api.nvim_set_keymap('n', 'C', '"_C', {noremap = true})
 vim.api.nvim_set_keymap('v', 'C', '"_C', {noremap = true})
 
 vim.api.nvim_set_keymap('n', 'r', [[<Plug>(SubversiveSubstitute)]], {})
+vim.api.nvim_set_keymap('v', 'r', [[<Plug>(SubversiveSubstitute)]], {})
+
+vim.api.nvim_set_keymap('n', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
+vim.api.nvim_set_keymap('v', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
