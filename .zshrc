@@ -165,3 +165,5 @@ export NNN_PLUG='p:preview-tui'
 export FCEDIT="nvim -c 'set ft=editcommand'"
 
 alias gu=gitui
+
+GLOBALIAS_FILTER_VALUES=(cd)
