@@ -19,6 +19,7 @@ zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/
 
 zinit ice wait lucid
 zinit snippet OMZ::plugins/globalias/globalias.plugin.zsh
+zinit snippet OMZ::plugins/rails/rails.plugin.zsh
 
 zinit load zdharma-continuum/history-search-multi-word
 zinit load junegunn/fzf-bin
@@ -89,10 +90,6 @@ alias proxy="mitmproxy --mode socks5 --showhost"
 
 # docker
 alias docker-ubuntu="docker run --name ubuntu --rm -i -t ubuntu /bin/bash"
-
-# rails
-alias rc="rails console"
-alias rs="rails server"
 
 # ember
 alias ep='ember s --proxy http://localhost:3000'
