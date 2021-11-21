@@ -43,3 +43,13 @@ vim.api.nvim_set_keymap('v', 'r', [[<Plug>(SubversiveSubstitute)]], {})
 
 vim.api.nvim_set_keymap('n', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
 vim.api.nvim_set_keymap('v', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
+
+vim.api.nvim_set_keymap('n', '<m-h>', [[<c-\><c-n><cmd>lua require("tmux").move_left()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<m-j>', [[<c-\><c-n><cmd>lua require("tmux").move_bottom()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<m-k>', [[<c-\><c-n><cmd>lua require("tmux").move_top()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<m-l>', [[<c-\><c-n><cmd>lua require("tmux").move_right()<cr>]], { silent = true })
+
+vim.api.nvim_set_keymap('i', '<m-h>', [[<c-\><c-n><cmd>lua require("tmux").move_left()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('i', '<m-j>', [[<c-\><c-n><cmd>lua require("tmux").move_bottom()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('i', '<m-k>', [[<c-\><c-n><cmd>lua require("tmux").move_top()<cr>]], { silent = true })
+vim.api.nvim_set_keymap('i', '<m-l>', [[<c-\><c-n><cmd>lua require("tmux").move_right()<cr>]], { silent = true })

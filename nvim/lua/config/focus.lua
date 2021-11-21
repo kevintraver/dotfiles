@@ -4,3 +4,4 @@ require("focus").setup({
 })
 
 vim.api.nvim_set_keymap('n', '<M-d>', '<cmd>FocusSplitNicely<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<M-L>', '<cmd>FocusSplitNicely<CR>', { silent = true })
