@@ -17,6 +17,9 @@ zinit light sindresorhus/pure
 
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/raw/master/plugins/git/git.plugin.zsh'
 
+zinit ice wait lucid
+zinit snippet OMZ::plugins/globalias/globalias.plugin.zsh
+
 zinit load zdharma-continuum/history-search-multi-word
 zinit load junegunn/fzf-bin
 zinit load laggardkernel/zsh-iterm2
