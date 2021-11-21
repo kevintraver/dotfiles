@@ -8,7 +8,7 @@ vim.api.nvim_set_keymap('n', '<leader>ep', [[<cmd>edit ~/.config/nvim/lua/plugin
 vim.api.nvim_set_keymap('n', '<leader>ek', [[<cmd>edit ~/.config/nvim/lua/keymappings.lua<cr>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ef', [[<cmd>edit ~/.config/nvim/lua/config/telescope.lua<cr>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>eT', [[<cmd>edit ~/.config/nvim/lua/terminal.lua<cr>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>et', [[<cmd>edit ~/.tmux.conf<cr>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>et', [[<cmd>edit ~/.dotfiles/.tmux.conf<cr>]], { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<leader>ez', [[<cmd>edit ~/.dotfiles/.zshrc<cr>]], { noremap = true })
 
