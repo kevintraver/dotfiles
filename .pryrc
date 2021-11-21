@@ -2,7 +2,7 @@ Pry.config.editor = 'subl'
 Pry.config.pager = true
 Pry.commands.alias_command 'e', 'edit'
 
-Pry.config.editor = "nvr -s --remote-wait +'setlocal bufhidden=wipe' +'set ft=editrubycommand'"
+Pry.config.editor = "nvim -c 'set ft=editrubycommand'"
 
 require 'amazing_print'
 
