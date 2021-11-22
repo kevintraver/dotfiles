@@ -3,6 +3,7 @@ Pry.config.pager = true
 Pry.commands.alias_command 'e', 'edit'
 
 Pry.config.editor = "nvim -c 'set ft=editrubycommand'"
+PryKeybind.register(:EDIT, "\e\\", save_input: true ) { |pi| pi.run_command('edit')};
 
 require 'amazing_print'
 
