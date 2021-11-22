@@ -173,3 +173,5 @@ zle -N jq-complete
 bindkey '\eJ' jq-complete
 
 export ZVM_VI_EDITOR="nvim -c 'set ft=editcommand'"
+
+export ZVM_KEYTIMEOUT=0
