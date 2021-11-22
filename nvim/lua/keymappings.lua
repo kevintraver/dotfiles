@@ -41,8 +41,8 @@ vim.api.nvim_set_keymap('v', 'C', '"_C', {noremap = true})
 vim.api.nvim_set_keymap('n', 'r', [[<Plug>(SubversiveSubstitute)]], {})
 vim.api.nvim_set_keymap('v', 'r', [[<Plug>(SubversiveSubstitute)]], {})
 
-vim.api.nvim_set_keymap('n', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
-vim.api.nvim_set_keymap('v', 'R', [["*<Plug>(SubversiveSubstitute)]], {})
+vim.api.nvim_set_keymap('n', 'R', [["*<Plug>(SubversiveSubstituteLine)]], {})
+vim.api.nvim_set_keymap('v', 'R', [["*<Plug>(SubversiveSubstituteLine)]], {})
 
 vim.api.nvim_set_keymap('n', '<m-h>', [[<c-\><c-n><cmd>lua require("tmux").move_left()<cr>]], { silent = true })
 vim.api.nvim_set_keymap('n', '<m-j>', [[<c-\><c-n><cmd>lua require("tmux").move_bottom()<cr>]], { silent = true })
