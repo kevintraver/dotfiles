@@ -98,4 +98,6 @@ require('packer').startup(function()
   use 'arthurxavierx/vim-caser'
   use 'svermeulen/vim-subversive'
 
+  use 'christoomey/vim-system-copy'
+
 end)
