@@ -35,6 +35,8 @@ zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
 zinit load wfxr/forgit
 zinit light zdharma-continuum/fast-syntax-highlighting
+zinit ice depth=1
+zinit light jeffreytse/zsh-vi-mode
 
 autoload -U compinit && compinit
 
@@ -169,3 +171,5 @@ GLOBALIAS_FILTER_VALUES=(cd)
 
 zle -N jq-complete
 bindkey '\eJ' jq-complete
+
+export ZVM_VI_EDITOR="nvim -c 'set ft=editcommand'"
