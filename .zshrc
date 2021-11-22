@@ -175,3 +175,8 @@ bindkey '\eJ' jq-complete
 export ZVM_VI_EDITOR="nvim -c 'set ft=editcommand'"
 
 export ZVM_KEYTIMEOUT=0
+
+function zvm_after_lazy_keybindings() {
+  zvm_bindkey vicmd '^[\\' zvm_vi_edit_command_line
+  zvm_bindkey vicmd '\ew' exit_zsh
+}
