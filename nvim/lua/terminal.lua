@@ -29,6 +29,7 @@ vim.g.neoterm_autoinsert = 0
 vim.cmd [[
   autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
   autocmd FileType editcommand set ft=zsh
+  autocmd FileType editcommand setlocal wrap
 
   autocmd FileType editcommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editcommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
@@ -41,6 +42,7 @@ vim.cmd [[
   autocmd FileType editrubycommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editrubycommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
   autocmd FileType editrubycommand set ft=ruby
+  autocmd FileType editrubycommand setlocal wrap
 ]]
 
 
