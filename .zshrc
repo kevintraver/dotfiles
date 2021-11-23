@@ -180,3 +180,5 @@ function zvm_after_lazy_keybindings() {
   zvm_bindkey vicmd '^[\\' zvm_vi_edit_command_line
   zvm_bindkey vicmd '\ew' exit_zsh
 }
+
+export ZVM_VI_SURROUND_BINDKEY='s-prefix'
