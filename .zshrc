@@ -124,7 +124,7 @@ nvim-edit-command-line () {
   edit-command-line
 }
 zle -N nvim-edit-command-line
-bindkey "^[\\" nvim-edit-command-line
+bindkey "\ee" nvim-edit-command-line
 
 nvim-edit-command-line-last () {
   local VISUAL="nvim -c 'set ft=editcommand'"
@@ -133,7 +133,7 @@ nvim-edit-command-line-last () {
   edit-command-line
 }
 zle -N nvim-edit-command-line-last
-bindkey "^[|" nvim-edit-command-line-last
+bindkey "\e^e" nvim-edit-command-line-last
 
 
 export VISUAL="nvim"
@@ -177,7 +177,7 @@ export ZVM_VI_EDITOR="nvim -c 'set ft=editcommand'"
 export ZVM_KEYTIMEOUT=0
 
 function zvm_after_lazy_keybindings() {
-  zvm_bindkey vicmd '^[\\' zvm_vi_edit_command_line
+  zvm_bindkey vicmd '\ee' zvm_vi_edit_command_line
   zvm_bindkey vicmd '\ew' exit_zsh
 }
 

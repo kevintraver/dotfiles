@@ -31,16 +31,16 @@ vim.cmd [[
   autocmd FileType editcommand set ft=zsh
   autocmd FileType editcommand setlocal wrap
 
-  autocmd FileType editcommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
-  autocmd FileType editcommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
-  autocmd FileType editcommand nnoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
-  autocmd FileType editcommand inoremap <silent><buffer> <M-\|> <esc>:wq!<cr>
+  autocmd FileType editcommand nnoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editcommand inoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editcommand nnoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
+  autocmd FileType editcommand inoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
 
-  autocmd FileType terminus nnoremap <silent><buffer> <M-\> <esc>:bd!<cr>
-  autocmd FileType terminus inoremap <silent><buffer> <M-\> <esc>:bd!<cr>
+  autocmd FileType terminus nnoremap <silent><buffer> <M-e> <esc>:bd!<cr>
+  autocmd FileType terminus inoremap <silent><buffer> <M-e> <esc>:bd!<cr>
 
-  autocmd FileType editrubycommand nnoremap <silent><buffer> <M-\> <esc>:wq!<cr>
-  autocmd FileType editrubycommand inoremap <silent><buffer> <M-\> <esc>:wq!<cr>
+  autocmd FileType editrubycommand nnoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editrubycommand inoremap <silent><buffer> <M-e> <esc>:wq!<cr>
   autocmd FileType editrubycommand set ft=ruby
   autocmd FileType editrubycommand setlocal wrap
 ]]
