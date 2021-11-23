@@ -30,7 +30,7 @@ require('packer').startup(function()
   use 'tpope/vim-repeat'
   use 'tpope/vim-sleuth'
   use 'windwp/nvim-autopairs'
-  use 'tpope/vim-surround'
+  use 'omachakann/vim-sandwich'
   use 'kyazdani42/nvim-web-devicons'
 
   use 'rktjmp/highlight-current-n.nvim'
