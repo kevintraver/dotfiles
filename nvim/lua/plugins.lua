@@ -82,6 +82,8 @@ require('packer').startup(function()
   use { "folke/twilight.nvim" }
 
   use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
+
   use { 'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make' }}
 
   use 'lukas-reineke/indent-blankline.nvim'
