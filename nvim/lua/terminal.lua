@@ -41,6 +41,8 @@ vim.cmd [[
 
   autocmd FileType editrubycommand nnoremap <silent><buffer> <M-e> <esc>:wq!<cr>
   autocmd FileType editrubycommand inoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editrubycommand nnoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
+  autocmd FileType editrubycommand inoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
   autocmd FileType editrubycommand set ft=ruby
   autocmd FileType editrubycommand setlocal wrap
 ]]
