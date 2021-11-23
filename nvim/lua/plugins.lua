@@ -41,6 +41,7 @@ require('packer').startup(function()
   use 'machakann/vim-swap'
   use 'mizlan/iswap.nvim'
   use 'Pocco81/AutoSave.nvim'
+  use 'AndrewRadev/splitjoin.vim'
 
   use 'fedepujol/move.nvim'
 
