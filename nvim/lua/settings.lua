@@ -17,4 +17,7 @@ vim.o.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.syntax = 'on'
 
-vim.cmd[[set nowrap]]
+vim.cmd[[
+  set nowrap
+  set nofoldenable
+]]
