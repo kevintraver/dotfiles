@@ -1,5 +1,6 @@
 ignore_hosts: 
   - 'accounts.google.com'
+  - 'protonmail.com'
   - 'amazonaws.com'
   - 'awsstatic.com'
   - 'bat.bing.com'
