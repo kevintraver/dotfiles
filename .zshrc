@@ -187,3 +187,9 @@ function zvm_after_lazy_keybindings() {
 }
 
 export ZVM_VI_SURROUND_BINDKEY='s-prefix'
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
