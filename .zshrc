@@ -180,8 +180,9 @@ export ZVM_KEYTIMEOUT=0
 export ZVM_ESCAPE_KEYTIMEOUT=0
 
 function zvm_after_lazy_keybindings() {
-  zvm_bindkey vicmd '\ee' zvm_vi_edit_command_line
-  zvm_bindkey vicmd '\e^M' zvm_vi_edit_command_line
+  zvm_bindkey vicmd '\ee' nvim-edit-command-line
+  zvm_bindkey vicmd '\e^M' nvim-edit-command-line
+  zvm_bindkey vicmd '\e^[^[M' nvim-edit-command-line-last
   zvm_bindkey vicmd '\ew' exit_zsh
 }
 
