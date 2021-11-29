@@ -45,7 +45,6 @@ require('packer').startup(function()
 
   use 'fedepujol/move.nvim'
 
-  use 'rmehri01/onenord.nvim'
   use 'aserowy/tmux.nvim'
 
   use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
