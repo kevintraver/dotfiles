@@ -34,7 +34,7 @@ zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
 zinit load wfxr/forgit
-zinit load softmoth/zsh-vim-mode
+zinit load kevintraver/zsh-vim-mode
 zinit load zdharma-continuum/fast-syntax-highlighting
 
 autoload -U compinit && compinit
