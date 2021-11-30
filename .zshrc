@@ -34,9 +34,8 @@ zinit load Aloxaf/fzf-tab
 zinit load lincheney/fzf-tab-completion
 zinit load reegnz/jq-zsh-plugin
 zinit load wfxr/forgit
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
+zinit load softmoth/zsh-vim-mode
+zinit load zdharma-continuum/fast-syntax-highlighting
 
 autoload -U compinit && compinit
 
@@ -174,22 +173,10 @@ GLOBALIAS_FILTER_VALUES=(cd)
 zle -N jq-complete
 bindkey '\eJ' jq-complete
 
-export ZVM_VI_EDITOR="nvim -c 'set ft=editcommand'"
-
-export ZVM_KEYTIMEOUT=0
-export ZVM_ESCAPE_KEYTIMEOUT=0
-
-function zvm_after_lazy_keybindings() {
-  zvm_bindkey vicmd '\ee' nvim-edit-command-line
-  zvm_bindkey vicmd '\e^M' nvim-edit-command-line
-  zvm_bindkey vicmd '\e^[^[M' nvim-edit-command-line-last
-  zvm_bindkey vicmd '\ew' exit_zsh
-}
-
-export ZVM_VI_SURROUND_BINDKEY='s-prefix'
-
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+export MODE_CURSOR_VIINS="bar"
