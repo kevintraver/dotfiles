@@ -1,4 +1,3 @@
-Pry.config.editor = 'subl'
 Pry.config.pager = true
 Pry.commands.alias_command 'e', 'edit'
 
