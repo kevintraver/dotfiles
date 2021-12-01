@@ -180,3 +180,5 @@ fi
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 export MODE_CURSOR_VIINS="bar"
+
+export MODE_INDICATOR_VICMD=""
