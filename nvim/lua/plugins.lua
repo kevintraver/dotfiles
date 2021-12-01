@@ -8,9 +8,8 @@ require('packer').startup(function()
 
   use 'ggandor/lightspeed.nvim'
 
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
-  use { 'nvim-telescope/telescope-frecency.nvim', requires = {"tami5/sqlite.lua"} }
-  use 'jvgrootveld/telescope-zoxide'
+  use {"liuchengxu/vim-clap", run = ":Clap install-binary!"}
+
   use { 'AckslD/nvim-neoclip.lua', requires = {'tami5/sqlite.lua', module = 'sqlite'} }
 
   use 'nvim-treesitter/nvim-treesitter'
