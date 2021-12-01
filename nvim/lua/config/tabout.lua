@@ -1,3 +1,1 @@
-require('tabout').setup {
-  tabkey = '<Tab>'
-}
+require('tabout').setup { }
