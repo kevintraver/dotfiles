@@ -4,6 +4,8 @@ local opts = { noremap = true, silent = true }
 
 vim.cmd[[
   autocmd FileType clap_input let g:completion_enable_auto_pop = 0
+  autocmd FileType clap_input inoremap <silent> <buffer> <C-n> <C-R>=clap#navigation#linewise('down')<CR>
+  autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigation#linewise('up')<CR>
 ]]
 
 map('n', '<M-o>', [[<cmd>Clap files<cr>]], opts)
