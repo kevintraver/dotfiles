@@ -137,8 +137,8 @@ bindkey "\e^e" nvim-edit-command-line-last
 bindkey "\e^[^[M" nvim-edit-command-line-last
 
 
-export VISUAL="nvim"
-export EDITOR="nvim"
+export VISUAL="nvr"
+export EDITOR="nvr"
 # PURE_PROMPT_SYMBOL=\>
 
 unsetopt BEEP
