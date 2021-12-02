@@ -9,33 +9,35 @@ source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-zinit for \
-  light-mode pick"history/history.plugin.zsh" belak/zsh-utils
-
-zinit ice pick"async.zsh" src"pure.zsh"
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-zinit ice wait lucid
-zinit snippet OMZ::plugins/globalias/globalias.plugin.zsh
-zinit snippet OMZ::plugins/rails/rails.plugin.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
+zinit light kevintraver/zsh-vim-mode
 
-zinit load zdharma-continuum/history-search-multi-word
-zinit load junegunn/fzf-bin
-zinit load laggardkernel/zsh-iterm2
-zinit load DarrinTisdale/zsh-aliases-exa
-zinit load momo-lab/zsh-abbrev-alias
-zinit load MichaelAquilina/zsh-you-should-use
-zinit load momo-lab/zsh-abbrev-alias
-zinit load laggardkernel/zsh-thefuck
-zinit load peterhurford/up.zsh
-zinit load b4b4r07/enhancd
-zinit load Aloxaf/fzf-tab
-zinit load lincheney/fzf-tab-completion
-zinit load reegnz/jq-zsh-plugin
-zinit load wfxr/forgit
-zinit load kevintraver/zsh-vim-mode
-zinit load zdharma-continuum/fast-syntax-highlighting
+zinit ice pick'init.zsh' compile'*.zsh'
+zinit light laggardkernel/zsh-iterm2
+
+zinit wait lucid light-mode for \
+  OMZP::rails \
+  OMZP::git \
+  atinit"zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+  pick"history/history.plugin.zsh" \
+    belak/zsh-utils \
+  zdharma-continuum/history-search-multi-word \
+  junegunn/fzf-bin \
+  DarrinTisdale/zsh-aliases-exa \
+  momo-lab/zsh-abbrev-alias \
+  MichaelAquilina/zsh-you-should-use \
+  laggardkernel/zsh-thefuck \
+  peterhurford/up.zsh \
+  b4b4r07/enhancd \
+  Aloxaf/fzf-tab \
+  lincheney/fzf-tab-completion \
+  reegnz/jq-zsh-plugin \
+  wfxr/forgit \
+  OMZP::globalias
 
 autoload -U compinit && compinit
 
