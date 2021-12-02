@@ -17,14 +17,10 @@ vim.g.send_disable_mapping = true
 vim.g.neoterm_autoscroll = 1
 vim.g.neoterm_autoinsert = 0
 
--- map('n', '<M-\\>', [[<Plug>SendLine]], { silent = true })
--- map('v', '<M-\\>', [[<Plug>Send]], { silent = true })
---
--- map('t', '<M-\\>', [[<Plug>TerminusEditCommand]], { silent = true })
--- map('t', '<cr>', [[<Plug>TerminusInterceptCommand]], { silent = true })
---
--- map('n', '<M-d>', [[<cmd>botright vnew<CR><cmd>TerminusOpen<CR>]], { silent = true })
--- map('n', '<M-D>', [[<cmd>TerminusOpen<CR>]], { silent = true })
+map('n', '<M-Enter>', [[<Plug>SendLine]], { silent = true })
+map('v', '<M-Enter>', [[<Plug>Send]], { silent = true })
+
+map('n', '<M-D>', [[<cmd>botright vnew<CR><cmd>TerminusOpen<CR>]], { silent = true })
 
 vim.cmd [[
   autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
