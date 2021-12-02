@@ -100,5 +100,6 @@ require('packer').startup(function()
   use 'svermeulen/vim-subversive'
 
   use 'christoomey/vim-system-copy'
+  use 'ethanholz/nvim-lastplace'
 
 end)
