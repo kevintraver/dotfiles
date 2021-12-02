@@ -1,8 +1,3 @@
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
-chruby ruby-2.7.2
-
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -184,3 +179,8 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export MODE_CURSOR_VIINS="bar"
 
 export MODE_INDICATOR_VICMD=""
+
+zinit ice atload'chruby ruby-2.7.2' lucid
+zinit snippet /usr/local/opt/chruby/share/chruby/chruby.sh
+
+zinit snippet /usr/local/opt/chruby/share/chruby/auto.sh
