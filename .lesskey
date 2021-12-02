@@ -1,5 +1,3 @@
 #command
 h left-scroll
 l right-scroll
-#env
-LESS = -i
