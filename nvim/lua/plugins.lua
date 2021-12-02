@@ -10,8 +10,6 @@ require('packer').startup(function()
 
   use {"liuchengxu/vim-clap", run = ":Clap install-binary!"}
 
-  use { 'AckslD/nvim-neoclip.lua', requires = {'tami5/sqlite.lua', module = 'sqlite'} }
-
   use 'nvim-treesitter/nvim-treesitter'
   use { 'RRethy/nvim-treesitter-textsubjects', requires = { 'nvim-treesitter/nvim-treesitter' } }
 
