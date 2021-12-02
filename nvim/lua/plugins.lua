@@ -100,4 +100,8 @@ require('packer').startup(function()
   use 'christoomey/vim-system-copy'
   use 'ethanholz/nvim-lastplace'
 
+  use 'kana/vim-textobj-user'
+  use 'kana/vim-textobj-entire'
+  use 'saaguero/vim-textobj-pastedtext'
+
 end)

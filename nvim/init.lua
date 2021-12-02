@@ -36,3 +36,5 @@ require 'config.gitblame'
 require 'config.system-copy'
 require 'config.sandwich'
 require 'config.lastplace'
+
+vim.g.pastedtext_select_key = 'p'
