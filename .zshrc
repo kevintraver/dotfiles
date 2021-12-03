@@ -16,7 +16,8 @@ zinit wait lucid light-mode for \
     zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
-  DarrinTisdale/zsh-aliases-exa \
+  pick"zsh-aliases-exa.plugin.zsh" \
+    DarrinTisdale/zsh-aliases-exa \
   momo-lab/zsh-abbrev-alias \
   MichaelAquilina/zsh-you-should-use \
   laggardkernel/zsh-thefuck \
