@@ -165,7 +165,7 @@ export FCEDIT="nvim -c 'set ft=editcommand'"
 
 alias gu=gitui
 
-export GLOBALIAS_FILTER_VALUES=(cd)
+export GLOBALIAS_FILTER_VALUES=(cd fd ls la n l)
 
 zle -N jq-complete
 bindkey '\eJ' jq-complete
