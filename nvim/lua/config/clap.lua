@@ -8,6 +8,7 @@ vim.cmd[[
   autocmd FileType clap_input inoremap <silent> <buffer> <C-p> <C-R>=clap#navigation#linewise('up')<CR>
 ]]
 
+map('n', '<M-p>', [[<cmd>Clap command<cr>]], opts)
 map('n', '<M-o>', [[<cmd>Clap files<cr>]], opts)
 map('n', '<M-f>', [[<cmd>Clap blines<cr>]], opts)
 map('n', '<C-M-f>', [[<cmd>Clap grep<cr>]], opts)
