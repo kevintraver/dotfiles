@@ -186,3 +186,5 @@ zinit snippet /usr/local/opt/chruby/share/chruby/chruby.sh
 zinit snippet /usr/local/opt/chruby/share/chruby/auto.sh
 
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
+alias fd="fd --case-sensitive --hidden --exclude .git"
