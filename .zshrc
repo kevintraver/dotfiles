@@ -20,8 +20,6 @@ zinit wait lucid light-mode for \
     zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
-  pick"zsh-fzf-history-search.plugin.zsh" \
-    joshskidmore/zsh-fzf-history-search \
   DarrinTisdale/zsh-aliases-exa \
   momo-lab/zsh-abbrev-alias \
   MichaelAquilina/zsh-you-should-use \
@@ -188,3 +186,8 @@ zinit snippet /usr/local/opt/chruby/share/chruby/auto.sh
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 
 alias fd="fd --case-sensitive --hidden --exclude .git"
+
+eval "$(mcfly init zsh)"
+
+export MCFLY_FUZZY=4
+export MCFLY_KEY_SCHEME=vim
