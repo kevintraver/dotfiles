@@ -23,7 +23,6 @@ zinit wait lucid light-mode for \
   peterhurford/up.zsh \
   b4b4r07/enhancd \
   Aloxaf/fzf-tab \
-  lincheney/fzf-tab-completion \
   reegnz/jq-zsh-plugin \
   wfxr/forgit \
   OMZP::globalias
