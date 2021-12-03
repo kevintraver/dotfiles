@@ -1,1 +1,1 @@
-vim.g.pastedtext_select_key = 'p'
+vim.g.pastedtext_select_key = 'gy'
