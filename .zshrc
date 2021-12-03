@@ -188,3 +188,6 @@ eval "$(mcfly init zsh)"
 
 export MCFLY_FUZZY=4
 export MCFLY_KEY_SCHEME=vim
+
+alias gl='git log --abbrev-commit -20 --pretty=oneline'
+alias gll='git show HEAD~1'
