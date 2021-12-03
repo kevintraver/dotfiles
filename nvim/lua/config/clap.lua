@@ -10,7 +10,7 @@ vim.cmd[[
 
 map('n', '<M-o>', [[<cmd>Clap files<cr>]], opts)
 map('n', '<M-f>', [[<cmd>Clap blines<cr>]], opts)
-map('n', '<C-M-f>', [[<cmd>Clap grep2<cr>]], opts)
+map('n', '<C-M-f>', [[<cmd>Clap grep<cr>]], opts)
 map("n", '<leader>fr', [[<cmd>Clap recent_files<cr>]], opts)
 map('n', '<leader>fm', [[<cmd>Clap marks<cr>]], opts)
 map('n', '<leader>fk', [[<cmd>Clap maps<cr>]], opts)
