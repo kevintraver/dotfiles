@@ -105,4 +105,6 @@ require('packer').startup(function()
   use 'kana/vim-textobj-entire'
   use 'saaguero/vim-textobj-pastedtext'
 
+  use 'rmagatti/igs.nvim'
+
 end)
