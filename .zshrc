@@ -20,7 +20,8 @@ zinit wait lucid light-mode for \
     zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
-  zdharma-continuum/history-search-multi-word \
+  pick"zsh-fzf-history-search.plugin.zsh" \
+    joshskidmore/zsh-fzf-history-search \
   junegunn/fzf-bin \
   DarrinTisdale/zsh-aliases-exa \
   momo-lab/zsh-abbrev-alias \
