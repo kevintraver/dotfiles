@@ -20,4 +20,5 @@ vim.opt.syntax = 'on'
 vim.cmd[[
   set nowrap
   set nofoldenable
+  autocmd FileType help wincmd L
 ]]
