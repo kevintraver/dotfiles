@@ -11,7 +11,6 @@ zinit light laggardkernel/zsh-iterm2
 
 zinit wait lucid light-mode for \
   OMZP::rails \
-  OMZP::git \
   atinit"zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
@@ -27,6 +26,8 @@ zinit wait lucid light-mode for \
   reegnz/jq-zsh-plugin \
   wfxr/forgit \
   OMZP::globalias
+
+zinit snippet OMZP::git
 
 autoload -U compinit && compinit
 
