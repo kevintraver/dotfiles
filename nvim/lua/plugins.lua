@@ -106,5 +106,6 @@ require('packer').startup(function()
   use 'saaguero/vim-textobj-pastedtext'
 
   use 'rmagatti/igs.nvim'
+  use 'folke/todo-comments.nvim'
 
 end)
