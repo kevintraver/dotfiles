@@ -22,7 +22,6 @@ zinit wait lucid light-mode for \
     belak/zsh-utils \
   pick"zsh-fzf-history-search.plugin.zsh" \
     joshskidmore/zsh-fzf-history-search \
-  junegunn/fzf-bin \
   DarrinTisdale/zsh-aliases-exa \
   momo-lab/zsh-abbrev-alias \
   MichaelAquilina/zsh-you-should-use \
