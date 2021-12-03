@@ -184,3 +184,5 @@ zinit ice atload'chruby ruby-2.7.2' lucid
 zinit snippet /usr/local/opt/chruby/share/chruby/chruby.sh
 
 zinit snippet /usr/local/opt/chruby/share/chruby/auto.sh
+
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
