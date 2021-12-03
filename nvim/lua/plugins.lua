@@ -2,6 +2,7 @@ local use = require('packer').use
 
 require('packer').startup(function()
 
+  use 'lewis6991/impatient.nvim'
   use 'wbthomason/packer.nvim'
 
   use 'famiu/nvim-reload'

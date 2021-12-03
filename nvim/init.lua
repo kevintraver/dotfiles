@@ -1,4 +1,5 @@
 require 'plugins'
+require 'impatient'
 require 'settings'
 require 'keymappings'
 require 'terminal'
