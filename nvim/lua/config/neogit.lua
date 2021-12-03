@@ -7,8 +7,8 @@ vim.api.nvim_set_keymap('n', '<M-g>', '<cmd>lua require("neogit").open()<CR>', o
 vim.cmd[[
   autocmd FileType NeogitCommitMessage inoremap <silent><buffer> <c-k> <c-\><c-n><cmd>lua require("tmux").move_top()<cr>
   autocmd FileType NeogitCommitMessage inoremap <silent><buffer> <m-k> <c-\><c-n><cmd>lua require("tmux").move_top()<cr>
-  autocmd FileType NeogitCommitMessage nnoremap <buffer> <M-s> :wq<CR>
-  autocmd FileType NeogitCommitMessage inoremap <buffer> <M-s> <c-\><c-n>:wq<CR>
+  autocmd FileType NeogitCommitMessage nnoremap <buffer> <M-s> :wq!<CR>
+  autocmd FileType NeogitCommitMessage inoremap <buffer> <M-s> <c-\><c-n>:wq!<CR>
 ]]
 
 local neogit = require("neogit")
