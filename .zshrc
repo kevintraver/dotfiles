@@ -10,7 +10,6 @@ zinit ice pick'init.zsh' compile'*.zsh'
 zinit light laggardkernel/zsh-iterm2
 
 zinit wait lucid light-mode for \
-  OMZP::rails \
   atinit"zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
@@ -28,6 +27,7 @@ zinit wait lucid light-mode for \
   OMZP::globalias
 
 zinit snippet OMZP::git
+zinit snippet OMZP::rails
 
 autoload -U compinit && compinit
 
