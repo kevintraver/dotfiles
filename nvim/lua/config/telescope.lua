@@ -23,6 +23,7 @@ require('telescope').setup{
 }
 
 map('n', '<M-o>', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
+map('n', '<leader>f<space>', [[<cmd>lua require('telescope.builtin').resume()<CR>]], opts)
 
 map("n", "<M-p>", [[<Cmd>lua require('telescope.builtin').commands()<CR>]], opts)
 map('n', '<M-f>', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], opts)
