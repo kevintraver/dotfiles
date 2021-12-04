@@ -39,6 +39,7 @@ map('n', '<leader>fy', [[<cmd>lua require('telescope').extensions.neoclip.defaul
 map('n', '<leader>fz', [[<cmd>lua require('telescope').extensions.zoxide.list()<CR>]], opts)
 map("n", "<leader>fr", [[<Cmd>lua require('telescope').extensions.frecency.frecency({ sorter = require("telescope").extensions.fzf.native_fzf_sorter() })<CR>]], opts)
 map('n', '<leader>ft', [[<cmd>lua require('telescope.builtin').treesitter()<CR>]], opts)
+map('n', '<leader>f/', [[<cmd>lua require('telescope.builtin').search_history()<CR>]], opts)
 
 map('n', '<leader>gs', [[<cmd>lua require('telescope.builtin').git_status()<CR>]], opts)
 map('n', '<leader>gl', [[<cmd>lua require('telescope.builtin').git_commits()<CR>]], opts)
