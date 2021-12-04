@@ -82,6 +82,10 @@ require('packer').startup( function()
   -- search
   use { 'liuchengxu/vim-clap', run = ':Clap install-binary!' }
   use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end, requires = { 'junegunn/fzf.vim' } }
+  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
+  use { 'nvim-telescope/telescope-project.nvim', requires = { 'nvim-telescope/telescope.nvim' } }
+  use { 'nvim-telescope/telescope-frecency.nvim', requires = {'tami5/sqlite.lua'} }
+  use { 'jvgrootveld/telescope-zoxide' }
 
   -- theme
   use { 'projekt0n/github-nvim-theme' }

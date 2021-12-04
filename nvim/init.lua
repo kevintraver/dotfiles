@@ -5,7 +5,7 @@ require 'keymappings'
 require 'terminal'
 require 'theme'
 
-require 'config.clap'
+require 'config.telescope'
 require 'config.highlight-current-n'
 require 'config.switch'
 require 'config.comment'
