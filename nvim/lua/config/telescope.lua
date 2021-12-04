@@ -2,10 +2,16 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 require('telescope').load_extension('project')
+require('telescope').load_extension('projects')
 
 local actions = require "telescope.actions"
 
 require('telescope').setup{
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  },
   defaults = {
     mappings = {
       i = {
@@ -30,13 +36,18 @@ require('telescope').setup{
   }
 }
 
+require("project_nvim").setup{
+  show_hidden = true
+}
+
 map('n', '<M-o>', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
 map('n', '<leader>f<space>', [[<cmd>lua require('telescope.builtin').resume()<CR>]], opts)
 
 map("n", "<M-p>", [[<Cmd>lua require('telescope.builtin').commands()<CR>]], opts)
 map('n', '<M-f>', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], opts)
 map('n', '<M-F>', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
-map('n', '<C-M-o>', [[<cmd>lua require'telescope'.extensions.project.project{}<CR>]], {noremap = true, silent = true})
+map('n', '<C-M-o>', [[<cmd>lua require'telescope'.extensions.project.project({hidden=true})<CR>]], {noremap = true, silent = true})
+map('n', '<M-O>', [[<cmd>lua require'telescope'.extensions.projects.projects({hidden=true})<CR>]], {noremap = true, silent = true})
 map('n', '<C-M-F>', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
 map('n', '<leader>fm', [[<cmd>lua require('telescope.builtin').marks()<CR>]], opts)
 map('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>]], opts)
