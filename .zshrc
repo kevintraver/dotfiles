@@ -9,6 +9,9 @@ zinit light kevintraver/zsh-vim-mode
 zinit ice pick'init.zsh' compile'*.zsh'
 zinit light laggardkernel/zsh-iterm2
 
+zinit load IngoMeyer441/zsh-easy-motion
+bindkey -M vicmd 's' vi-easy-motion
+
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
