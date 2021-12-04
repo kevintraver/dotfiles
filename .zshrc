@@ -118,8 +118,6 @@ nvim-edit-command-line () {
   edit-command-line
 }
 zle -N nvim-edit-command-line
-bindkey "\ee" nvim-edit-command-line
-bindkey "\e^M" nvim-edit-command-line
 
 nvim-edit-command-line-last () {
   local VISUAL="nvim -c 'set ft=editcommand'"
@@ -129,7 +127,6 @@ nvim-edit-command-line-last () {
 }
 zle -N nvim-edit-command-line-last
 bindkey "\e^e" nvim-edit-command-line-last
-bindkey "\e^[^[M" nvim-edit-command-line-last
 
 
 export VISUAL="nvr -s"
