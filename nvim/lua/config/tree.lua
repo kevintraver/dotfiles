@@ -10,11 +10,6 @@ require("nvim-tree").setup({
         { key = "h", cb = tree_cb("close_node") },
       }
     }
-  },
-  update_cwd = true,
-  update_focused_file = {
-    enable = true,
-    update_cwd = true
   }
 })
 
