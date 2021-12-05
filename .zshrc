@@ -190,3 +190,21 @@ alias gl='git log --abbrev-commit -20 --pretty=oneline'
 alias gll='git show HEAD'
 
 unalias sd
+
+# Yank to the tmux clipboard
+function vi-yank-tmux {
+   zle vi-yank
+   echo "$CUTBUFFER" | tmux load-buffer -
+}
+
+zle -N vi-yank-tmux
+bindkey -M vicmd 'y' vi-yank-tmux
+
+# Yank to the system clipboard
+function vi-yank-system {
+   zle vi-yank
+   echo "$CUTBUFFER" | pbcopy
+}
+
+zle -N vi-yank-system
+bindkey -M vicmd 'Y' vi-yank-system
