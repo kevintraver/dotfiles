@@ -11,19 +11,22 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.builtin.lualine.options.theme = 'github'
+lvim.colorscheme = "github_dimmed"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
 
-lvim.keys.normal_mode["<M-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<M-w>"] = "<cmd>Sayonara<CR>"
 lvim.keys.normal_mode["<M-q>"] = ":qall<cr>"
 lvim.keys.normal_mode["<M-w>"] = ":qall<cr>"
 lvim.keys.normal_mode["<M-Q>"] = ":qall!<cr>"
 
 lvim.keys.normal_mode["<M-o>"] = "<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>"
+
 lvim.keys.normal_mode["<C-M-o>"] = "<cmd>lua require'telescope'.extensions.project.project{}<CR>"
+
 lvim.keys.normal_mode["<M-f>"] = "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>"
 
 lvim.keys.normal_mode["<M-d>"] = "<cmd>FocusSplitNicely<CR>"
@@ -69,6 +72,8 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = true
 
+
+
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
@@ -86,7 +91,7 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.enabled = false
 
 -- generic LSP settings
 
@@ -160,6 +165,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
+
+  { 'projekt0n/github-nvim-theme',
+  },
 
   { 'lewis6991/impatient.nvim' },
 
@@ -268,7 +276,7 @@ lvim.plugins = {
 
   { 'f-person/git-blame.nvim',
     config = function()
-      vim.g.gitblame_enabled = 0
+      vim.g.gitblame_enabled = false
     end,
   },
 
