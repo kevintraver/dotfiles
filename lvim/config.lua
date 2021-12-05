@@ -162,35 +162,67 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
 
   { 'lewis6991/impatient.nvim' },
+
   { 'chaoren/vim-wordmotion' },
+
   { 'kana/vim-textobj-user' },
+
   { 'kana/vim-textobj-entire' },
+
   { 'saaguero/vim-textobj-pastedtext' },
-  { 'landock/vim-expand-region' },
+
   { 'justinmk/vim-gtfo' },
+
   { 'christoomey/vim-system-copy' },
+
   { 'tami5/sqlite.lua' },
+
   { 'stsewd/gx-extended.vim' },
 
   { 'AndrewRadev/splitjoin.vim' },
+
   { 'jdhao/better-escape.vim', event = 'InsertEnter' },
+
   { 'abecodes/tabout.nvim' },
+
   { 'arthurxavierx/vim-caser' },
+
   { 'svermeulen/vim-subversive' },
+
   { 'tommcdo/vim-exchange' },
+
   { 'machakann/vim-swap' },
+
   { 'mizlan/iswap.nvim' },
-  { 'machakann/vim-sandwich' },
+
   { 'AndrewRadev/switch.vim' },
+
   { 'tpope/vim-abolish' },
+
   { 'fedepujol/move.nvim' },
 
   { 'wellle/targets.vim' },
 
-  {
-    "ggandor/lightspeed.nvim",
-    event = "BufRead",
+  { 'machakann/vim-sandwich',
+    config = function()
+
+      vim.api.nvim_exec(
+        [[
+          let g:sandwich_no_default_key_mappings = 1
+          silent! nmap <unique><silent> gsd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+          silent! nmap <unique><silent> gsr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+          silent! nmap <unique><silent> gsdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+          silent! nmap <unique><silent> gsrb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+
+          let g:operator_sandwich_no_default_key_mappings = 1
+          silent! map <unique> gsa <Plug>(operator-sandwich-add)
+          silent! xmap <unique> gsd <Plug>(operator-sandwich-delete)
+          silent! xmap <unique> gsr <Plug>(operator-sandwich-replace)
+        ]],
+        false)
+    end,
   },
+
 
   {
     'wfxr/minimap.vim',
@@ -202,6 +234,44 @@ lvim.plugins = {
     end,
   },
 
+
+  { 'TimUntersberger/neogit',
+    config = function ()
+      require("neogit").setup {
+        disable_insert_on_commit = false,
+        disable_commit_confirmation = true,
+        integrations = {
+          diffview = true
+        },
+        mappings = {
+          status = {
+            ["P"] = "PullPopup",
+            ["p"] = "PushPopup",
+            ["<M-s>"] = "CommitPopup"
+          }
+        }
+      }
+      vim.cmd ("autocmd FileType NeogitCommitMessage inoremap <silent><buffer> <c-k> <c-\\><c-n><cmd>lua require('tmux').move_top()<cr>" )
+      vim.cmd ("autocmd FileType NeogitCommitMessage inoremap <silent><buffer> <m-k> <c-\\><c-n><cmd>lua require('tmux').move_top()<cr>" )
+      vim.cmd ("autocmd FileType NeogitCommitMessage,gitcommit nnoremap <buffer> <M-s> :wq!<CR>" )
+      vim.cmd ("autocmd FileType NeogitCommitMessage,gitcommit inoremap <buffer> <M-s> <c-\\><c-n>:wq!<CR>" )
+    end,
+  },
+
+  { 'junegunn/gv.vim' },
+
+  { 'tpope/vim-fugitive' },
+
+  { 'rbong/vim-flog' },
+
+  { 'rmagatti/igs.nvim' },
+
+  { 'f-person/git-blame.nvim',
+    config = function()
+      vim.g.gitblame_enabled = 0
+    end,
+  },
+
   {
     "kevinhwang91/nvim-bqf",
     event = { "BufRead", "BufNew" },
@@ -209,6 +279,13 @@ lvim.plugins = {
       require("bqf").setup({
         auto_enable = true,
       })
+    end,
+  },
+
+  {
+    "chentau/marks.nvim",
+    config = function()
+      require("marks").setup {}
     end,
   },
 
@@ -235,10 +312,14 @@ lvim.plugins = {
     event = "BufRead",
   },
 
+  { 'jvgrootveld/telescope-zoxide' },
+
   {
     "nvim-telescope/telescope-project.nvim",
     event = "BufWinEnter"
   },
+
+  { 'nvim-telescope/telescope-frecency.nvim' },
 
   {
     "folke/trouble.nvim",
@@ -319,17 +400,21 @@ lvim.plugins = {
 
   { 'mhinz/vim-sayonara' },
 
-{
+  {
     "kwkarlwang/bufjump.nvim",
     config = function()
-        require("bufjump").setup({
-            forward = "<C-i>",
-            backward = "<C-o>",
-            on_success = nil
-        })
+      require("bufjump").setup({
+        forward = "<C-i>",
+        backward = "<C-o>",
+        on_success = nil
+      })
     end,
-}
+  },
 
+  {
+    "ggandor/lightspeed.nvim",
+    event = "BufRead",
+  },
 
 
 }
