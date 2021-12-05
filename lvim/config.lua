@@ -18,9 +18,19 @@ lvim.leader = "space"
 -- add your own keymapping
 
 lvim.keys.normal_mode["<M-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<M-q>"] = ":q<cr>"
+lvim.keys.normal_mode["<M-q>"] = ":qall<cr>"
+lvim.keys.normal_mode["<M-w>"] = ":qall<cr>"
+lvim.keys.normal_mode["<M-Q>"] = ":qall!<cr>"
 
+lvim.keys.normal_mode["<M-o>"] = "<cmd>lua require('telescope.builtin').find_files({hidden=true})<CR>"
+lvim.keys.normal_mode["<C-M-o>"] = "<cmd>lua require'telescope'.extensions.project.project{}<CR>"
+lvim.keys.normal_mode["<M-f>"] = "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>"
 
+lvim.keys.normal_mode["<M-d>"] = "<cmd>FocusSplitNicely<CR>"
+
+lvim.builtin.telescope.defaults = {
+  file_ignore_patterns = {"node_modules", ".git/.*" }
+}
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -57,7 +67,7 @@ lvim.keys.normal_mode["<M-q>"] = ":q<cr>"
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.show_icons.git = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -70,6 +80,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "typescript",
   "css",
   "rust",
+  "ruby",
   "java",
   "yaml",
 }
@@ -150,14 +161,40 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
 
-  { "ggandor/lightspeed.nvim",
+  { 'lewis6991/impatient.nvim' },
+  { 'chaoren/vim-wordmotion' },
+  { 'kana/vim-textobj-user' },
+  { 'kana/vim-textobj-entire' },
+  { 'saaguero/vim-textobj-pastedtext' },
+  { 'landock/vim-expand-region' },
+  { 'justinmk/vim-gtfo' },
+  { 'christoomey/vim-system-copy' },
+  { 'tami5/sqlite.lua' },
+  { 'stsewd/gx-extended.vim' },
+
+  { 'AndrewRadev/splitjoin.vim' },
+  { 'jdhao/better-escape.vim', event = 'InsertEnter' },
+  { 'abecodes/tabout.nvim' },
+  { 'arthurxavierx/vim-caser' },
+  { 'svermeulen/vim-subversive' },
+  { 'tommcdo/vim-exchange' },
+  { 'machakann/vim-swap' },
+  { 'mizlan/iswap.nvim' },
+  { 'machakann/vim-sandwich' },
+  { 'AndrewRadev/switch.vim' },
+  { 'tpope/vim-abolish' },
+  { 'fedepujol/move.nvim' },
+
+  { 'wellle/targets.vim' },
+
+  {
+    "ggandor/lightspeed.nvim",
     event = "BufRead",
   },
 
   {
     'wfxr/minimap.vim',
     run = "cargo install --locked code-minimap",
-    -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
     config = function ()
       vim.cmd ("let g:minimap_width = 10")
       vim.cmd ("let g:minimap_auto_start = 0")
@@ -171,25 +208,15 @@ lvim.plugins = {
     config = function()
       require("bqf").setup({
         auto_enable = true,
-        preview = {
-          win_height = 12,
-          win_vheight = 12,
-          delay_syntax = 80,
-          border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
-        },
-        func_map = {
-          vsplit = "",
-          ptogglemode = "z,",
-          stoggleup = "",
-        },
-        filter = {
-          fzf = {
-            action_for = { ["ctrl-s"] = "split" },
-            extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
-          },
-        },
       })
     end,
+  },
+
+  { "tpope/vim-repeat" },
+
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
   },
 
   {
@@ -198,6 +225,19 @@ lvim.plugins = {
     config = function()
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
+  },
+
+  { "p00f/nvim-ts-rainbow" },
+
+  {
+    "nvim-telescope/telescope-fzy-native.nvim",
+    run = "make",
+    event = "BufRead",
+  },
+
+  {
+    "nvim-telescope/telescope-project.nvim",
+    event = "BufWinEnter"
   },
 
   {
@@ -215,6 +255,80 @@ lvim.plugins = {
       }
     end,
   },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    setup = function()
+      vim.g.indent_blankline_enabled = false
+    end
+  },
+
+  {
+    "ahmedkhalf/lsp-rooter.nvim",
+    event = "BufRead",
+    config = function()
+      require("lsp-rooter").setup()
+    end,
+  },
+
+  {
+    "ethanholz/nvim-lastplace",
+    event = "BufRead",
+    config = function()
+      require("nvim-lastplace").setup({
+        lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+        lastplace_ignore_filetype = {
+          "gitcommit", "gitrebase", "svn", "hgcommit",
+        },
+        lastplace_open_folds = true,
+      })
+    end,
+  },
+
+  { "alexghergh/nvim-tmux-navigation" },
+
+  {
+    "aserowy/tmux.nvim",
+    config = function()
+      require("tmux").setup({
+        copy_sync = {
+          enable = true,
+          redirect_to_clipboard = false,
+          sync_clipboard = false
+        },
+        navigation = {
+          enable_default_keybindings = true,
+        },
+        resize = {
+          enable_default_keybindings = false,
+        }
+      })
+    end
+  },
+
+  {
+    "beauwilliams/focus.nvim",
+    config = function()
+      require("focus").setup({
+        tmux = true,
+        excluded_buftypes = { 'nofile', 'prompt', 'popup', 'quickfix'}
+      })
+    end
+  },
+
+  { 'mhinz/vim-sayonara' },
+
+{
+    "kwkarlwang/bufjump.nvim",
+    config = function()
+        require("bufjump").setup({
+            forward = "<C-i>",
+            backward = "<C-o>",
+            on_success = nil
+        })
+    end,
+}
 
 
 
