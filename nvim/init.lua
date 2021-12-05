@@ -6,7 +6,7 @@ require 'terminal'
 require 'theme'
 
 require 'config.telescope'
-require 'config.highlight-current-n'
+require 'config.hlslens'
 require 'config.switch'
 require 'config.comment'
 require 'config.autosave'

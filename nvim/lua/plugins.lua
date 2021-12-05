@@ -68,7 +68,8 @@ require('packer').startup( function()
   use { 'chentau/marks.nvim' }
 
   -- highlighting
-  use { 'rktjmp/highlight-current-n.nvim' }
+  use { 'kevinhwang91/nvim-hlslens' }
+  use { 'haya14busa/vim-asterisk' }
 
   -- indent
   use { 'lukas-reineke/indent-blankline.nvim' }
