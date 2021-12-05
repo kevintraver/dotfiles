@@ -16,11 +16,11 @@ lvim.colorscheme = "onedarker"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
--- unmap a default keymapping
--- lvim.keys.normal_mode["<C-Up>"] = ""
--- edit a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+
+lvim.keys.normal_mode["<M-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<M-q>"] = ":q<cr>"
+
+
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -148,13 +148,77 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- Additional Plugins
--- lvim.plugins = {
---     {"folke/tokyonight.nvim"},
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+lvim.plugins = {
+
+  { "ggandor/lightspeed.nvim",
+    event = "BufRead",
+  },
+
+  {
+    'wfxr/minimap.vim',
+    run = "cargo install --locked code-minimap",
+    -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+    config = function ()
+      vim.cmd ("let g:minimap_width = 10")
+      vim.cmd ("let g:minimap_auto_start = 0")
+      vim.cmd ("let g:minimap_auto_start_win_enter = 1")
+    end,
+  },
+
+  {
+    "kevinhwang91/nvim-bqf",
+    event = { "BufRead", "BufNew" },
+    config = function()
+      require("bqf").setup({
+        auto_enable = true,
+        preview = {
+          win_height = 12,
+          win_vheight = 12,
+          delay_syntax = 80,
+          border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
+        },
+        func_map = {
+          vsplit = "",
+          ptogglemode = "z,",
+          stoggleup = "",
+        },
+        filter = {
+          fzf = {
+            action_for = { ["ctrl-s"] = "split" },
+            extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
+          },
+        },
+      })
+    end,
+  },
+
+  {
+    "andymass/vim-matchup",
+    event = "CursorMoved",
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
+  },
+
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+
+  {
+    "nacro90/numb.nvim",
+    event = "BufRead",
+    config = function()
+      require("numb").setup {
+        show_numbers = true, -- Enable 'number' for the window while peeking
+        show_cursorline = true, -- Enable 'cursorline' for the window while peeking
+      }
+    end,
+  },
+
+
+
+}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
