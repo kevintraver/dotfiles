@@ -14,6 +14,10 @@ lvim.format_on_save = true
 lvim.builtin.lualine.options.theme = 'github'
 lvim.colorscheme = "github_dimmed"
 
+lvim.builtin.lualine.style = "default"
+
+vim.g.gitblame_enabled = 0
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -34,6 +38,7 @@ lvim.keys.normal_mode["<M-d>"] = "<cmd>FocusSplitNicely<CR>"
 lvim.builtin.telescope.defaults = {
   file_ignore_patterns = {"node_modules", ".git/.*" }
 }
+
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -67,7 +72,7 @@ lvim.builtin.telescope.defaults = {
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+lvim.builtin.dashboard.active = false
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = true
@@ -274,12 +279,6 @@ lvim.plugins = {
 
   { 'rmagatti/igs.nvim' },
 
-  { 'f-person/git-blame.nvim',
-    config = function()
-      vim.g.gitblame_enabled = false
-    end,
-  },
-
   {
     "kevinhwang91/nvim-bqf",
     event = { "BufRead", "BufNew" },
@@ -375,7 +374,29 @@ lvim.plugins = {
     end,
   },
 
-  { "alexghergh/nvim-tmux-navigation" },
+  { 'alexghergh/nvim-tmux-navigation', config = function()
+        require'nvim-tmux-navigation'.setup { }
+        vim.api.nvim_set_keymap('n', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
+
+        vim.api.nvim_set_keymap('i', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
+
+        vim.api.nvim_set_keymap('n', "<M-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<M-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<M-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', "<M-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
+
+        vim.api.nvim_set_keymap('i', "<M-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<M-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<M-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('i', "<M-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
+    end
+  },
 
   {
     "aserowy/tmux.nvim",
