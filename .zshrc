@@ -194,7 +194,7 @@ unalias sd
 # Yank to the tmux clipboard
 function vi-yank-tmux {
    zle vi-yank
-   echo "$CUTBUFFER" | tmux load-buffer -
+   echo "$CUTBUFFER" | tr -d '\n' | tmux load-buffer -
 }
 
 zle -N vi-yank-tmux
@@ -203,7 +203,7 @@ bindkey -M vicmd 'y' vi-yank-tmux
 # Yank to the system clipboard
 function vi-yank-system {
    zle vi-yank
-   echo "$CUTBUFFER" | pbcopy
+   echo "$CUTBUFFER" | tr -d '\n' | pbcopy
 }
 
 zle -N vi-yank-system
