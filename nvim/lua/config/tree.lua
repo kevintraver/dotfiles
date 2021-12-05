@@ -10,8 +10,9 @@ require("nvim-tree").setup({
   view = {
     mappings = {
       list = {
-        { key = "l", cb = tree_cb("edit") },
-        { key = "h", cb = tree_cb("close_node") },
+        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+        { key = "h", cb = tree_cb "close_node" },
+        { key = "C", cb = tree_cb "cd" },
       }
     }
   }
