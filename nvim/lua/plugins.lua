@@ -38,6 +38,7 @@ require('packer').startup( function()
   -- utilities
   use { 'ahmedkhalf/project.nvim' }
   use { 'ethanholz/nvim-lastplace' }
+  use { 'nacro90/numb.nvim' }
   use { 'christoomey/vim-system-copy' }
   use { 'folke/twilight.nvim' }
   use { 'justinmk/vim-gtfo' }
