@@ -10,8 +10,7 @@ zinit ice pick'init.zsh' compile'*.zsh'
 zinit light laggardkernel/zsh-iterm2
 
 zinit wait lucid light-mode for \
-  atinit"zicompinit; zicdreplay" \
-    zdharma-continuum/fast-syntax-highlighting \
+  zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
   pick"zsh-aliases-exa.plugin.zsh" \
