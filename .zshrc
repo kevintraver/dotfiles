@@ -218,3 +218,5 @@ function vi-paste-tmux {
 zle -N vi-paste-tmux
 
 bindkey -a 'p' vi-paste-tmux
+
+source $HOME/.cargo/env
