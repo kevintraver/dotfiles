@@ -6,4 +6,5 @@ vim.g.switch_custom_definitions = {
   { 'top', 'bottom' },
   { 'right', 'left' },
   { 'next', 'prev' },
+  { '<', '>' },
 }
