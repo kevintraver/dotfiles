@@ -208,3 +208,11 @@ function vi-yank-system {
 
 zle -N vi-yank-system
 bindkey -M vicmd 'Y' vi-yank-system
+
+function vi-paste-tmux {
+  CUTBUFFER=$(tmux show-buffer)
+  zle vi-put-after
+}
+zle -N vi-paste-tmux
+
+bindkey -a 'p' vi-paste-tmux
