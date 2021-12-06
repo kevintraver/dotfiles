@@ -64,6 +64,4 @@ map('n', '<leader>f/', [[<cmd>lua require('telescope.builtin').search_history()<
 map('n', '<leader>fq', [[<cmd>lua require('telescope.builtin').quickfix()<CR>]], opts)
 
 map('n', '<leader>gs', [[<cmd>lua require('telescope.builtin').git_status()<CR>]], opts)
-map('n', '<leader>gl', [[<cmd>lua require('telescope.builtin').git_commits()<CR>]], opts)
-map('n', '<leader>gh', [[<cmd>lua require('telescope.builtin').git_bcommits()<CR>]], opts)
 map('n', '<leader>gb', [[<cmd>lua require('telescope.builtin').git_branches()<CR>]], opts)

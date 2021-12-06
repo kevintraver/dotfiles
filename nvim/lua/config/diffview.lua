@@ -2,3 +2,5 @@ vim.api.nvim_set_keymap('n', '<leader>df', [[<cmd>DiffviewOpen<CR>]], { noremap 
 vim.api.nvim_set_keymap('n', '<leader>dv', [[<cmd>DiffviewOpen<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>gd', [[<cmd>DiffviewOpen<CR>]], { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>dl', [[<cmd>DiffviewFileHistory .<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>gh', [[<cmd>DiffviewFileHistory<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>gl', [[<cmd>DiffviewFileHistory .<CR>]], { noremap = true })
