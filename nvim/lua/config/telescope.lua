@@ -19,6 +19,7 @@ require('telescope').setup{
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-l>"] = require('telescope.actions').cycle_history_next,
         ["<C-h>"] = require('telescope.actions').cycle_history_prev,
+        ["<C-u>"] = false
       },
     },
     file_ignore_patterns = {"node_modules", ".git/.*" }
