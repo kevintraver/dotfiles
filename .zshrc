@@ -4,7 +4,7 @@ zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
-zinit light kevintraver/zsh-vim-mode
+zinit light softmoth/zsh-vim-mode
 
 zinit ice pick'init.zsh' compile'*.zsh'
 zinit light laggardkernel/zsh-iterm2
@@ -114,6 +114,8 @@ nvim-edit-command-line () {
   edit-command-line
 }
 zle -N nvim-edit-command-line
+bindkey -M vicmd '\ee' nvim-edit-command-line
+bindkey '\ee' nvim-edit-command-line
 
 nvim-edit-command-line-last () {
   local VISUAL="nvim -c 'set ft=editcommand'"
@@ -122,7 +124,8 @@ nvim-edit-command-line-last () {
   edit-command-line
 }
 zle -N nvim-edit-command-line-last
-bindkey "\e^e" nvim-edit-command-line-last
+bindkey -M vicmd '\e^e' nvim-edit-command-line-last
+bindkey '\e^e' nvim-edit-command-line-last
 
 
 export VISUAL="nvr -s"
