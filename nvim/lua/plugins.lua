@@ -17,8 +17,6 @@ require('packer').startup( function()
   -- tmux
   use { 'aserowy/tmux.nvim' }
 
-  -- icons
-  use { 'kyazdani42/nvim-web-devicons' }
 
   -- statusline
   use { 'nvim-lualine/lualine.nvim' }
