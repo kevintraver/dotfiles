@@ -11,11 +11,17 @@ require('packer').startup( function()
   -- sqlite support
   use { 'tami5/sqlite.lua' }
 
+  -- utilities
+  use { 'nvim-lua/plenary.nvim' }
+
   -- tmux
   use { 'aserowy/tmux.nvim' }
 
+  -- icons
+  use { 'kyazdani42/nvim-web-devicons' }
+
   -- statusline
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { 'nvim-lualine/lualine.nvim' }
 
   -- movement
   use { 'ggandor/lightspeed.nvim' }
@@ -29,7 +35,7 @@ require('packer').startup( function()
   use { 'landock/vim-expand-region' }
 
   -- directory
-  use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
+  use { 'kyazdani42/nvim-tree.lua' }
   use { 'mcchrish/nnn.vim' }
 
   -- settings
@@ -49,7 +55,7 @@ require('packer').startup( function()
 
   -- editing / text manipulation
   use { 'AndrewRadev/splitjoin.vim' }
-  use { 'jdhao/better-escape.vim', event = 'InsertEnter' }
+  use { 'jdhao/better-escape.vim' }
   use { 'abecodes/tabout.nvim' }
   use { 'arthurxavierx/vim-caser' }
   use { 'tpope/vim-repeat' }
@@ -83,17 +89,19 @@ require('packer').startup( function()
 
   -- search
   use { 'liuchengxu/vim-clap', run = ':Clap install-binary!' }
-  use { 'junegunn/fzf', run = function() vim.fn['fzf#install'](0) end, requires = { 'junegunn/fzf.vim' } }
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } } }
-  use { 'nvim-telescope/telescope-project.nvim', requires = { 'nvim-telescope/telescope.nvim' } }
-  use { 'nvim-telescope/telescope-frecency.nvim', requires = {'tami5/sqlite.lua'} }
+  use { 'junegunn/fzf' }
+  use { 'junegunn/fzf.vim' }
+  use { 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope-fzf-native.nvim' }
+  use { 'nvim-telescope/telescope-project.nvim' }
+  use { 'nvim-telescope/telescope-frecency.nvim' }
   use { 'jvgrootveld/telescope-zoxide' }
 
   -- theme
   use { 'projekt0n/github-nvim-theme' }
 
   -- tabs / buffers / windows
-  use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
+  use { 'romgrk/barbar.nvim' }
   use { 'beauwilliams/focus.nvim' }
   use { 'kwkarlwang/bufjump.nvim' }
   use { 'sindrets/winshift.nvim' }
@@ -108,12 +116,12 @@ require('packer').startup( function()
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
 
   -- git
-  use { 'TimUntersberger/neogit', requires = { 'nvim-lua/plenary.nvim' } }
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'TimUntersberger/neogit' }
+  use { 'lewis6991/gitsigns.nvim' }
   use { 'junegunn/gv.vim' }
   use { 'tpope/vim-fugitive' }
   use { 'rbong/vim-flog' }
-  use { 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'sindrets/diffview.nvim' }
   use { 'rmagatti/igs.nvim' }
   use { 'f-person/git-blame.nvim' }
   use { 'oguzbilgic/vim-gdiff' }
@@ -121,9 +129,10 @@ require('packer').startup( function()
   -- treesitter / lsp
   use { 'neovim/nvim-lspconfig' }
   use { 'nvim-treesitter/nvim-treesitter' }
-  use { 'RRethy/nvim-treesitter-textsubjects', requires = { 'nvim-treesitter/nvim-treesitter' } }
+  use { 'RRethy/nvim-treesitter-textsubjects' }
   use { 'williamboman/nvim-lsp-installer' }
-  use { 'ray-x/navigator.lua', requires = { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' } }
+  use { 'ray-x/navigator.lua' }
+  use { 'ray-x/guihua.lua' }
   use { 'simrat39/symbols-outline.nvim' }
 
   -- terminal
