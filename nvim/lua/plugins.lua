@@ -29,6 +29,7 @@ require('packer').startup( function()
   use { 'chaoren/vim-wordmotion' }
   use { 'kana/vim-textobj-user' }
   use { 'kana/vim-textobj-entire' }
+  use { 'kana/vim-textobj-line' }
   use { 'saaguero/vim-textobj-pastedtext' }
   use { 'landock/vim-expand-region' }
   use { 'andymass/vim-matchup' }
