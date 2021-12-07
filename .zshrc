@@ -5,6 +5,7 @@ zinit light sindresorhus/pure
 
 zinit load IngoMeyer441/zsh-easy-motion
 bindkey -M vicmd 's' vi-easy-motion
+bindkey -rpM viins '\e'
 
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
