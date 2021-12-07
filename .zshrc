@@ -117,6 +117,7 @@ nvim-edit-command-line () {
 }
 zle -N nvim-edit-command-line
 bindkey -M vicmd '\ee' nvim-edit-command-line
+bindkey -M vicmd '\e^M' nvim-edit-command-line
 bindkey '\ee' nvim-edit-command-line
 bindkey '\e^M' nvim-edit-command-line
 
