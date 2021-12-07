@@ -191,8 +191,8 @@ alias fd="fd --case-sensitive --hidden --exclude .git"
 
 eval "$(mcfly init zsh)"
 
-export MCFLY_FUZZY=4
-export MCFLY_KEY_SCHEME=vim
+export MCFLY_FUZZY=true
+export MCFLY_INTERFACE_VIEW=BOTTOM
 
 alias gl='git log --abbrev-commit -20 --pretty=oneline'
 alias gll='git show HEAD'
