@@ -70,6 +70,7 @@ require('packer').startup( function()
   use { 'windwp/nvim-autopairs' }
   use { 'fedepujol/move.nvim' }
   use { 'nvim-pack/nvim-spectre' }
+  use { 'monaqa/dial.nvim' }
 
   -- marks
   use { 'chentau/marks.nvim' }
