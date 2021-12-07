@@ -87,7 +87,7 @@ require('packer').startup( function()
   use { 'kyazdani42/nvim-web-devicons' }
 
   -- search
-  use { 'liuchengxu/vim-clap', run = ':Clap install-binary!' }
+  use { 'liuchengxu/vim-clap' }
   use { 'junegunn/fzf' }
   use { 'junegunn/fzf.vim' }
   use { 'nvim-telescope/telescope.nvim' }
