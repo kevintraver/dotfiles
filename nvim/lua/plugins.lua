@@ -68,6 +68,7 @@ require('packer').startup( function()
   use { 'p00f/nvim-ts-rainbow' }
   use { 'windwp/nvim-autopairs' }
   use { 'fedepujol/move.nvim' }
+  use { 'nvim-pack/nvim-spectre' }
 
   -- marks
   use { 'chentau/marks.nvim' }
