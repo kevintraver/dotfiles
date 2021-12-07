@@ -107,6 +107,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '\ew' exit_zsh
+bindkey -M vicmd '\ew' exit_zsh
 
 bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
