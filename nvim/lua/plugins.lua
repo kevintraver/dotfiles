@@ -36,6 +36,7 @@ require('packer').startup( function()
   -- directory
   use { 'kyazdani42/nvim-tree.lua' }
   use { 'mcchrish/nnn.vim' }
+  use { 'kevinhwang91/rnvimr' }
 
   -- settings
   use { 'tpope/vim-sleuth' }
