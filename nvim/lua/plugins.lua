@@ -71,6 +71,7 @@ require('packer').startup( function()
   use { 'fedepujol/move.nvim' }
   use { 'nvim-pack/nvim-spectre' }
   use { 'monaqa/dial.nvim' }
+  use { 'svermeulen/vim-cutlass' }
 
   -- marks
   use { 'chentau/marks.nvim' }
