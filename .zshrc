@@ -191,6 +191,7 @@ eval "$(mcfly init zsh)"
 
 export MCFLY_FUZZY=true
 export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_RESULTS_SORT=LAST_RUN
 
 alias gl='git log --abbrev-commit -20 --pretty=oneline'
 alias gll='git show HEAD'
