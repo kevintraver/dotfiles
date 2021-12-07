@@ -10,9 +10,6 @@ bindkey -rpM viins '\e'
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
-zinit ice pick'init.zsh' compile'*.zsh'
-zinit light laggardkernel/zsh-iterm2
-
 zinit wait lucid light-mode for \
   zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
