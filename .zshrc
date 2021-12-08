@@ -111,8 +111,8 @@ bindkey '^n' down-line-or-search
 
 autoload -z edit-command-line
 nvim-edit-command-line () {
-  local VISUAL="nvim -c 'set ft=editcommand'"
-  local EDITOR="nvim -c 'set ft=editcommand'"
+  local VISUAL="nvim -c 'set ft=editcommand.zsh'"
+  local EDITOR="nvim -c 'set ft=editcommand.zsh'"
   edit-command-line
 }
 zle -N nvim-edit-command-line
@@ -122,8 +122,8 @@ bindkey '\ee' nvim-edit-command-line
 bindkey '\e^M' nvim-edit-command-line
 
 nvim-edit-command-line-last () {
-  local VISUAL="nvim -c 'set ft=editcommand'"
-  local EDITOR="nvim -c 'set ft=editcommand'"
+  local VISUAL="nvim -c 'set ft=editcommand.zsh'"
+  local EDITOR="nvim -c 'set ft=editcommand.zsh'"
   zle up-history
   edit-command-line
 }
@@ -159,7 +159,7 @@ export FORGIT_COPY_CMD="tmux loadb -"
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='p:preview-tui'
 
-export FCEDIT="nvim -c 'set ft=editcommand'"
+export FCEDIT="nvim -c 'set ft=editcommand.zsh'"
 
 alias gu=gitui
 

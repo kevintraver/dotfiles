@@ -23,17 +23,16 @@ map('v', '<M-Enter>', [[<Plug>Send]], { silent = true })
 map('n', '<M-D>', [[<cmd>botright vnew<CR><cmd>TerminusOpen<CR>]], { silent = true })
 
 vim.cmd [[
-  autocmd FileType editcommand,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
-  autocmd FileType editcommand set ft=zsh
-  autocmd FileType editcommand setlocal wrap
+  autocmd FileType editcommand.zsh,gitcommit,gitrebase,gitconfig,gitsendmail set bufhidden=delete
+  autocmd FileType editcommand.zsh setlocal wrap
 
-  autocmd FileType editcommand nnoremap <silent><buffer> <M-e> <esc>:wq!<cr>
-  autocmd FileType editcommand inoremap <silent><buffer> <M-e> <esc>:wq!<cr>
-  autocmd FileType editcommand nnoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
-  autocmd FileType editcommand inoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh nnoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh inoremap <silent><buffer> <M-e> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh nnoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh inoremap <silent><buffer> <M-C-e> <esc>:wq!<cr>
 
-  autocmd FileType editcommand nnoremap <silent><buffer> <M-Enter> <esc>:wq!<cr>
-  autocmd FileType editcommand inoremap <silent><buffer> <M-Enter> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh nnoremap <silent><buffer> <M-Enter> <esc>:wq!<cr>
+  autocmd FileType editcommand.zsh inoremap <silent><buffer> <M-Enter> <esc>:wq!<cr>
 
   autocmd FileType terminus nnoremap <silent><buffer> <M-e> <esc>:bd!<cr>
   autocmd FileType terminus inoremap <silent><buffer> <M-e> <esc>:bd!<cr>
