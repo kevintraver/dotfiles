@@ -43,6 +43,9 @@ vim.api.nvim_set_keymap('v', 'x', 'x', {noremap = true})
 vim.api.nvim_set_keymap('n', 'X', 'X', {noremap = true})
 vim.api.nvim_set_keymap('v', 'X', 'X', {noremap = true})
 
+vim.api.nvim_set_keymap('n', 'dd', 'dd', {noremap = true})
+vim.api.nvim_set_keymap('v', 'dd', 'dd', {noremap = true})
+
 vim.api.nvim_set_keymap('n', 'r', [[<Plug>(SubversiveSubstitute)]], {})
 vim.api.nvim_set_keymap('v', 'r', [[<Plug>(SubversiveSubstitute)]], {})
 
