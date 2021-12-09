@@ -53,6 +53,7 @@ require('packer').startup( function()
   use { 'Pocco81/AutoSave.nvim' }
   use { 'stsewd/gx-extended.vim' }
   use { 'folke/todo-comments.nvim' }
+  use { 'jghauser/mkdir.nvim' }
 
   -- editing / text manipulation
   use { 'AndrewRadev/splitjoin.vim' }
