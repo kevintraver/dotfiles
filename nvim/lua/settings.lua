@@ -1,5 +1,5 @@
 vim.wo.number = true
-vim.o.shortmess = "I"
+vim.o.shortmess = "Io"
 vim.o.wrap = false
 vim.o.termguicolors = true
 
