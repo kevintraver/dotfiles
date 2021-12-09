@@ -54,6 +54,7 @@ require('packer').startup( function()
   use { 'stsewd/gx-extended.vim' }
   use { 'folke/todo-comments.nvim' }
   use { 'jghauser/mkdir.nvim' }
+  use { 'Pocco81/AbbrevMan.nvim' }
 
   -- editing / text manipulation
   use { 'AndrewRadev/splitjoin.vim' }
