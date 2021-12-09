@@ -104,7 +104,7 @@ require('packer').startup( function()
   use { 'jvgrootveld/telescope-zoxide' }
 
   -- theme
-  use { 'projekt0n/github-nvim-theme' }
+  use { 'Mofiqul/dracula.nvim' }
 
   -- tabs / buffers / windows
   use { 'romgrk/barbar.nvim' }

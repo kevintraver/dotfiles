@@ -237,3 +237,5 @@ source $HOME/.cargo/env
 
 eval "$(batpipe)"
 
+export BAT_THEME="Dracula"
+
