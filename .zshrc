@@ -8,21 +8,20 @@ zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
 zinit wait lucid light-mode for \
+  load MenkeTechnologies/zsh-expand \
   IngoMeyer441/zsh-easy-motion \
   zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
   pick"zsh-aliases-exa.plugin.zsh" \
     DarrinTisdale/zsh-aliases-exa \
-  momo-lab/zsh-abbrev-alias \
   MichaelAquilina/zsh-you-should-use \
   laggardkernel/zsh-thefuck \
   peterhurford/up.zsh \
   b4b4r07/enhancd \
   Aloxaf/fzf-tab \
   reegnz/jq-zsh-plugin \
-  wfxr/forgit \
-  OMZP::globalias
+  wfxr/forgit
 
 zinit snippet OMZP::git
 zinit snippet OMZP::rails
