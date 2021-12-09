@@ -3,14 +3,12 @@ source /usr/local/opt/zinit/zinit.zsh
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-zinit load IngoMeyer441/zsh-easy-motion
-bindkey -M vicmd 's' vi-easy-motion
-bindkey -rpM viins '\e'
 
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
 zinit wait lucid light-mode for \
+  IngoMeyer441/zsh-easy-motion \
   zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
     belak/zsh-utils \
@@ -37,6 +35,8 @@ zstyle ':completion:*' matcher-list \
   'm:{a-zA-Z}={A-Za-z} l:|=*' \
   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+bindkey -M vicmd 's' vi-easy-motion
+bindkey -rpM viins '\e'
 
 zstyle ':completion:*:approximate:*' max-errors 2 numeric
 
