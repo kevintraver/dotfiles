@@ -96,7 +96,7 @@ alias pbp='pbpaste'
 # xsv
 alias csv='xsv'
 
-alias pwdc="pwd | tr -d '\n' | tee >(pbcopy)"
+alias pwd="pwd | tr -d '\n'"
 
 # git
 alias gs='git status'
