@@ -195,6 +195,7 @@ zle -N mcfly-history-widget-insert-mode
 bindkey -M vicmd '^R' mcfly-history-widget-insert-mode
 
 export MCFLY_FUZZY=true
+export MCFLY_RESULTS=50
 export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_RESULTS_SORT=LAST_RUN
 
