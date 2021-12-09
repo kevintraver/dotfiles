@@ -1,4 +1,6 @@
 vim.wo.number = true
+vim.o.shortmess = "I"
+vim.o.wrap = false
 vim.o.termguicolors = true
 
 vim.opt.undofile = true
@@ -17,8 +19,6 @@ vim.o.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.syntax = 'on'
 
-vim.cmd[[
-  set nowrap
-  set nofoldenable
+vim.api.nvim_command([[
   autocmd FileType help wincmd L
-]]
+]])
