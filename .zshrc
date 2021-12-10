@@ -27,7 +27,7 @@ zinit wait lucid light-mode for \
   Aloxaf/fzf-tab \
   reegnz/jq-zsh-plugin \
   wfxr/forgit \
-  OMZP::globalias
+  MenkeTechnologies/zsh-expand
 
 zinit snippet OMZP::git
 zinit snippet OMZP::rails
@@ -161,6 +161,7 @@ export FCEDIT="nvim -c 'set ft=editcommand.zsh'"
 alias gu=gitui
 
 export GLOBALIAS_FILTER_VALUES=(cd fd ls la n l pwd)
+export ZPWR_EXPAND_BLACKLIST=(cd fd ls la n l pwd)
 
 zle -N jq-complete
 bindkey '\eJ' jq-complete
