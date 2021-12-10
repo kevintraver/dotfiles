@@ -146,7 +146,6 @@ else
     export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 fi
 
-alias l="nnn -de"
 alias nnn="nnn -e"
 
 alias nnode='/usr/local/bin/n'
