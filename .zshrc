@@ -237,3 +237,6 @@ echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 export ENHANCD_FILTER="sk --reverse --height 60%"
+
+export FZF_DEFAULT_OPTS="--layout=reverse --height 60%"
+export _ZO_FZF_OPTS="--reverse --height 60%"
