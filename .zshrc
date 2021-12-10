@@ -108,6 +108,8 @@ exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '\ew' exit_zsh
 bindkey -M vicmd '\ew' exit_zsh
+bindkey -M visual '\ew' exit_zsh
+bindkey -M viins '\ew' exit_zsh
 
 bindkey '^p' up-line-or-search
 bindkey '^n' down-line-or-search
