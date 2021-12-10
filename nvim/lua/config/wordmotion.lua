@@ -1,1 +1,1 @@
-vim.g.wordmotion_uppercase_spaces = { '(', ')', '{', '}', '[', ']', '=', '"', '\\', '/' }
+vim.g.wordmotion_uppercase_spaces = { '(', ')', '{', '}', '[', ']', '=', "'", '"', '\\', '/' }
