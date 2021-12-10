@@ -34,19 +34,10 @@ zinit snippet OMZP::rails
 
 autoload -U compinit && compinit
 
-zstyle ':completion:*' matcher-list \
-  'M:{a-zA-Z}={a-zA-Z}' \
-  'm:{a-zA-Z}={A-Za-z}' \
-  'm:{a-zA-Z}={A-Za-z} l:|=*' \
-  'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
 bindkey -M vicmd 's' vi-easy-motion
 bindkey -rpM viins '\e'
 
-zstyle ':completion:*:approximate:*' max-errors 2 numeric
-
 source ~/.zshrc.local
-
 
 # osx apps
 alias gt="gittower"
