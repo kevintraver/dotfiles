@@ -237,3 +237,4 @@ export BAT_THEME="Dracula"
 echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+export ENHANCD_FILTER="sk --reverse --height 60%"
