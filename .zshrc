@@ -182,11 +182,9 @@ export RIPGREP_CONFIG_PATH=~/.ripgreprc
 alias fd="fd --case-sensitive --hidden --exclude .git"
 
 eval "$(mcfly init zsh)"
-mcfly-history-widget-insert-mode() {
-  mcfly-history-widget
-}
-zle -N mcfly-history-widget-insert-mode
-bindkey -M vicmd '^R' mcfly-history-widget-insert-mode
+
+bindkey '^R' mcfly-history-widget
+bindkey -M viins '^R' mcfly-history-widget
 
 export MCFLY_FUZZY=true
 export MCFLY_RESULTS=50
