@@ -5,11 +5,11 @@ autoload -Uz _zinit
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
-
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
 zinit wait lucid light-mode for \
+  kevinhwang91/zsh-tmux-capture \
   IngoMeyer441/zsh-easy-motion \
   zdharma-continuum/fast-syntax-highlighting \
   pick"history/history.plugin.zsh" \
@@ -247,3 +247,6 @@ export FZF_DEFAULT_OPTS="--layout=reverse --height 60%"
 export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 
 export _ZO_FZF_OPTS="--reverse --height 60%"
+
+TMUX_CP_MODE_STYLE_ERR='fg=black,bg=magenta'
+TMUX_CP_MODE_STYLE_SUC='fg=#f8f8f2,bg=#44475a'
