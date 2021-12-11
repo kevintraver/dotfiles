@@ -250,3 +250,6 @@ export _ZO_FZF_OPTS="--reverse --height 60%"
 
 TMUX_CP_MODE_STYLE_ERR='fg=black,bg=magenta'
 TMUX_CP_MODE_STYLE_SUC='fg=#f8f8f2,bg=#44475a'
+
+export TMUX_CP_BK_TOP_L='M-o'
+
