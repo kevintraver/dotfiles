@@ -9,9 +9,6 @@ zinit light sindresorhus/pure
 zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
-zinit ice as"program" pick"bin/git-fuzzy"
-zinit light bigH/git-fuzzy
-
 zinit wait lucid light-mode for \
   IngoMeyer441/zsh-easy-motion \
   zdharma-continuum/fast-syntax-highlighting \
@@ -27,6 +24,8 @@ zinit wait lucid light-mode for \
   Aloxaf/fzf-tab \
   reegnz/jq-zsh-plugin \
   wfxr/forgit \
+  as"program" pick"bin/git-fuzzy" \
+    bigH/git-fuzzy \
   MenkeTechnologies/zsh-expand
 
 zinit snippet OMZP::git
