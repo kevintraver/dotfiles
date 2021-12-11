@@ -26,7 +26,8 @@ zinit wait lucid light-mode for \
   wfxr/forgit \
   as"program" pick"bin/git-fuzzy" \
     bigH/git-fuzzy \
-  MenkeTechnologies/zsh-expand
+  MenkeTechnologies/zsh-expand \
+  hlissner/zsh-autopair
 
 zinit snippet OMZP::git
 zinit snippet OMZP::rails
