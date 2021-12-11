@@ -16,7 +16,6 @@ zinit wait lucid light-mode for \
     belak/zsh-utils \
   pick"zsh-aliases-exa.plugin.zsh" \
     DarrinTisdale/zsh-aliases-exa \
-  momo-lab/zsh-abbrev-alias \
   MichaelAquilina/zsh-you-should-use \
   laggardkernel/zsh-thefuck \
   peterhurford/up.zsh \
