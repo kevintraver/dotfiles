@@ -192,6 +192,7 @@ eval "$(mcfly init zsh)"
 
 bindkey '^R' mcfly-history-widget
 bindkey -M viins '^R' mcfly-history-widget
+bindkey -M vicmd '^R' mcfly-history-widget
 
 export MCFLY_FUZZY=true
 export MCFLY_RESULTS=50
