@@ -75,6 +75,8 @@ require('packer').startup( function()
   use { 'nvim-pack/nvim-spectre' }
   use { 'monaqa/dial.nvim' }
   use { 'svermeulen/vim-cutlass' }
+  use { 'cyansprite/Extract' }
+  use { 'tversteeg/registers.nvim' }
 
   -- marks
   use { 'chentau/marks.nvim' }
