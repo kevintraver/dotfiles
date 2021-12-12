@@ -26,7 +26,12 @@ zinit wait lucid light-mode for \
   as"program" pick"bin/git-fuzzy" \
     bigH/git-fuzzy \
   MenkeTechnologies/zsh-expand \
-  hlissner/zsh-autopair
+  hlissner/zsh-autopair \
+  pick'chruby.sh' \
+    /usr/local/opt/chruby/share/chruby \
+  pick'auto.sh' \
+    /usr/local/opt/chruby/share/chruby
+
 
 zinit snippet OMZP::git
 zinit snippet OMZP::rails
@@ -180,10 +185,6 @@ export MODE_CURSOR_VIINS="bar"
 
 export MODE_INDICATOR_VICMD=""
 
-zinit ice atload'chruby ruby-2.7.2' lucid
-zinit snippet /usr/local/opt/chruby/share/chruby/chruby.sh
-
-zinit snippet /usr/local/opt/chruby/share/chruby/auto.sh
 
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 
