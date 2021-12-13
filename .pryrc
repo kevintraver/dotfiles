@@ -12,7 +12,7 @@ require 'amazing_print'
 AmazingPrint.pry!
 
 def pbcopy(input)
-  str = input.to_s
+  str = input.pretty_inspect
   IO.popen('pbcopy', 'w') { |f| f << str }
   str
 end
