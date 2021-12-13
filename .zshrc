@@ -243,7 +243,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 _fix_cursor() { echo -ne '\e[5 q' }
 precmd_functions+=(_fix_cursor)
 
-export ENHANCD_FILTER="sk --reverse --height 60%"
+export ENHANCD_FILTER="sk"
 
 export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 export SKIM_DEFAULT_OPTIONS="--bind 'tab:accept' --reverse --height 60%"
