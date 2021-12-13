@@ -255,7 +255,5 @@ export _ZO_FZF_OPTS="--bind 'tab:accept' --reverse --height 60%"
 export TMUX_CP_MODE_STYLE_ERR='fg=black,bg=magenta'
 export TMUX_CP_MODE_STYLE_SUC='fg=#f8f8f2,bg=#44475a'
 
-export TMUX_CP_BK_TOP_L='C-o'
-
 zle -N insert-last-cmd-out
 bindkey -M vicmd -r 'C-o'
