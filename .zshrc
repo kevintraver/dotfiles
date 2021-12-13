@@ -248,7 +248,7 @@ export ENHANCD_FILTER="sk"
 export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 export SKIM_DEFAULT_OPTIONS="--bind 'tab:accept' --reverse --height 60%"
 
-export _ZO_FZF_OPTS="--reverse --height 60%"
+export _ZO_FZF_OPTS="--bind 'tab:accept' --reverse --height 60%"
 
 export TMUX_CP_MODE_STYLE_ERR='fg=black,bg=magenta'
 export TMUX_CP_MODE_STYLE_SUC='fg=#f8f8f2,bg=#44475a'
