@@ -32,7 +32,9 @@ zinit wait lucid light-mode for \
   pick'auto.sh' \
     /usr/local/opt/chruby/share/chruby \
   pick'fzf-marks.plugin.zsh' \
-    urbainvaes/fzf-marks
+    urbainvaes/fzf-marks \
+  pick'git-it-on.plugin.zsh' \
+    peterhurford/git-it-on.zsh
 
 
 zinit snippet OMZP::git
