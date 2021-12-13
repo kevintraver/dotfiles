@@ -246,6 +246,7 @@ precmd_functions+=(_fix_cursor)
 export ENHANCD_FILTER="sk --reverse --height 60%"
 
 export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
+export SKIM_DEFAULT_OPTIONS="--bind 'tab:accept' --reverse --height 60%"
 
 export _ZO_FZF_OPTS="--reverse --height 60%"
 
