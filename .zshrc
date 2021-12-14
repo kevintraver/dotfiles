@@ -146,8 +146,8 @@ bindkey -M vicmd '\e^e' nvim-edit-command-line-last
 bindkey '\e^e' nvim-edit-command-line-last
 
 
-export VISUAL="nvr -s"
-export EDITOR="nvr -s"
+export VISUAL="nvim"
+export EDITOR="nvim"
 PURE_PROMPT_SYMBOL=">"
 PURE_PROMPT_VICMD_SYMBOL="<"
 
