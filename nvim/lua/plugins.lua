@@ -33,6 +33,7 @@ require('packer').startup( function()
   use { 'saaguero/vim-textobj-pastedtext' }
   use { 'landock/vim-expand-region' }
   use { 'andymass/vim-matchup' }
+  use { 'jceb/vim-textobj-uri' }
 
   -- directory
   use { 'kyazdani42/nvim-tree.lua' }
