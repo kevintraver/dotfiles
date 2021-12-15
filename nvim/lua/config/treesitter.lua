@@ -5,7 +5,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     keymaps = {
       ['<cr>'] = 'textsubjects-smart',
-      [';'] = 'textsubjects-container-outer',
+      ['.'] = 'textsubjects-container-outer',
     }
   },
 }
