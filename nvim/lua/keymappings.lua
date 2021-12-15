@@ -32,8 +32,6 @@ vim.api.nvim_set_keymap("v", "Y", '<Plug>SystemCopy', {})
 vim.api.nvim_set_keymap("n", "YY", '<Plug>SystemCopyLine', {})
 vim.api.nvim_set_keymap("v", "<M-c>", '<Plug>SystemCopy', {})
 
-vim.api.nvim_set_keymap("i", "<c-v>", '<C-r><C-p>"', { noremap = true })
-
 vim.api.nvim_set_keymap("n", "<M-v>", '"*p', { noremap = true })
 vim.api.nvim_set_keymap("n", "<M-V>", '"*P', { noremap = true })
 vim.api.nvim_set_keymap("v", "<M-v>", '"*p', { noremap = true })
