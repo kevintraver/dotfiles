@@ -34,6 +34,7 @@ require('packer').startup( function()
   use { 'landock/vim-expand-region' }
   use { 'andymass/vim-matchup' }
   use { 'jceb/vim-textobj-uri' }
+  use { 'utubo/vim-textobj-twochars' }
 
   -- directory
   use { 'kyazdani42/nvim-tree.lua' }
