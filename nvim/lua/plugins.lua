@@ -35,6 +35,7 @@ require('packer').startup( function()
   use { 'andymass/vim-matchup' }
   use { 'jceb/vim-textobj-uri' }
   use { 'utubo/vim-textobj-twochars' }
+  use { 'MisanthropicBit/vim-numbers' }
 
   -- directory
   use { 'kyazdani42/nvim-tree.lua' }
