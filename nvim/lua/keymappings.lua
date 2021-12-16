@@ -80,3 +80,6 @@ vim.api.nvim_set_keymap('v', '>', '>gv', {} )
 
 vim.api.nvim_set_keymap('n', '<M-a>', '<Esc>ggVG', {} )
 vim.api.nvim_set_keymap('v', '<M-a>', '<Esc>ggVG', {} )
+
+vim.api.nvim_set_keymap('n', '<Tab><Tab>', '<C-^>', {} )
+vim.api.nvim_set_keymap('n', '<Leader><Space>', '<C-^>', {} )
