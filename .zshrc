@@ -266,3 +266,7 @@ zle -N insert-last-cmd-out
 bindkey -M vicmd -r 'C-o'
 
 export FZF_TAB_KEYBINDS='tab:accept'
+
+alias mark="open -a Marked\ 2"
+
+alias omf="fd -e md -x open -a Marked\ 2"
