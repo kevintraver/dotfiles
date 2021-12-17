@@ -115,6 +115,7 @@ require('packer').startup( function()
   -- tabs / buffers / windows
   use { 'romgrk/barbar.nvim' }
   use { 'beauwilliams/focus.nvim' }
+  use { 'dhruvasagar/vim-zoom' }
   use { 'kwkarlwang/bufjump.nvim' }
   use { 'sindrets/winshift.nvim' }
   use { 'famiu/bufdelete.nvim' }
