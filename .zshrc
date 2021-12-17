@@ -8,6 +8,10 @@ zinit ice compile'zsh-vim-mode.plugin.zsh' pick'zsh-vim-mode.plugin.zsh'
 zinit light softmoth/zsh-vim-mode
 
 zinit wait lucid light-mode for \
+  pick"completion.zsh" \
+    /usr/local/opt/fzf/shell \
+  pick"key-bindings.zsh" \
+    /usr/local/opt/fzf/shell \
   kevinhwang91/zsh-tmux-capture \
   IngoMeyer441/zsh-easy-motion \
   zdharma-continuum/fast-syntax-highlighting \
