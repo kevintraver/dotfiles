@@ -23,6 +23,7 @@ require('packer').startup( function()
 
   -- movement
   use { 'ggandor/lightspeed.nvim' }
+  use { 'danilamihailov/beacon.nvim' }
 
   -- motion / text objects
   use { 'wellle/targets.vim' }
