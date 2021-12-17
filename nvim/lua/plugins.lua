@@ -131,6 +131,7 @@ require('packer').startup( function()
   use { 'lewis6991/gitsigns.nvim' }
   use { 'junegunn/gv.vim' }
   use { 'tpope/vim-fugitive' }
+  use { 'ruifm/gitlinker.nvim' }
   use { 'rbong/vim-flog' }
   use { 'sindrets/diffview.nvim' }
   use { 'rmagatti/igs.nvim' }
