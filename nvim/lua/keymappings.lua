@@ -83,3 +83,5 @@ vim.api.nvim_set_keymap('v', '<M-a>', '<Esc>ggVG', {} )
 
 vim.api.nvim_set_keymap('n', '<Tab><Tab>', '<C-^>', {} )
 vim.api.nvim_set_keymap('n', '<Leader><Space>', [[<Plug>(zoom-toggle)]], {} )
+
+vim.api.nvim_set_keymap('n', '<M-t>', [[<cmd>tabnew<cr>]], {} )
