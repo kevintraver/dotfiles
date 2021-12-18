@@ -16,6 +16,7 @@ require('packer').startup( function()
 
   -- tmux
   use { 'aserowy/tmux.nvim' }
+  use { 'alexghergh/nvim-tmux-navigation' }
 
 
   -- statusline
