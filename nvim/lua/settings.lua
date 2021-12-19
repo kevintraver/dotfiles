@@ -21,6 +21,6 @@ vim.opt.syntax = 'on'
 
 vim.api.nvim_command([[
   autocmd FileType help wincmd L
-  autocmd WinEnter * :Beacon
-  autocmd BufWinEnter * :Beacon
+  autocmd BufWinEnter * call s:Highlight_position()
+  autocmd FocusGained * call s:Highlight_position()
 ]])
