@@ -272,3 +272,5 @@ alias mark="open -a Marked\ 2"
 alias omf="fd -e md -x open -a Marked\ 2"
 
 alias gs="git status -sb"
+
+export WORDCHARS='|?'
