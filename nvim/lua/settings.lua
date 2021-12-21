@@ -22,3 +22,5 @@ vim.opt.syntax = 'on'
 vim.api.nvim_command([[
   autocmd FileType help wincmd L
 ]])
+
+vim.cmd 'au TextYankPost * silent! lua vim.highlight.on_yank { timeout = 1000 }'
