@@ -18,8 +18,10 @@ vim.api.nvim_set_keymap('n', '<M-W>', [[<cmd>Sayonara!<CR>]], { noremap = true }
 vim.api.nvim_set_keymap('n', '<M-s>', [[<cmd>w<CR>]], { noremap = true } )
 
 vim.api.nvim_set_keymap('n', '<M-q>', [[<Esc><Esc><cmd>qall<cr>]], { noremap = true } )
+vim.api.nvim_set_keymap('n', '<C-M-q>', [[<Esc><Esc><cmd>qall<cr>]], { noremap = true } )
 vim.api.nvim_set_keymap('n', '<M-Q>', [[<Esc><Esc><cmd>qall!<cr>]], { noremap = true } )
 vim.api.nvim_set_keymap('i', '<M-q>', [[<Esc><Esc><cmd>qall<cr>]], { noremap = true } )
+vim.api.nvim_set_keymap('i', '<C-M-q>', [[<Esc><Esc><cmd>qall<cr>]], { noremap = true } )
 vim.api.nvim_set_keymap('i', '<M-Q>', [[<Esc><Esc><cmd>qall!<cr>]], { noremap = true } )
 vim.api.nvim_set_keymap('v', '<M-q>', [[<Esc><Esc><cmd>qall<cr>]], { noremap = true } )
 vim.api.nvim_set_keymap('v', '<M-Q>', [[<Esc><Esc><cmd>qall!<cr>]], { noremap = true } )
