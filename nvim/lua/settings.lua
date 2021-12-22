@@ -13,6 +13,8 @@ vim.o.swapfile = false
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.writebackup = false
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
 
 vim.o.smartcase = true
 
