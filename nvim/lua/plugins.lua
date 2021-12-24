@@ -140,6 +140,7 @@ require('packer').startup( function()
   use { 'rmagatti/igs.nvim' }
   use { 'f-person/git-blame.nvim' }
   use { 'oguzbilgic/vim-gdiff' }
+  use { 'tanvirtin/vgit.nvim', branch = 'develop' }
 
   -- treesitter / lsp
   use { 'neovim/nvim-lspconfig' }
