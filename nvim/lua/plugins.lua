@@ -26,6 +26,7 @@ require('packer').startup( function()
 
   -- movement
   use { 'ggandor/lightspeed.nvim' }
+  use { 'unblevable/quick-scope' }
   use { 'danilamihailov/beacon.nvim' }
 
   -- motion / text objects
