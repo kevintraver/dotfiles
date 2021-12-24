@@ -1,5 +1,7 @@
 local use = require('packer').use
 
+require'packer'.init({ max_jobs=50 })
+
 require('packer').startup( function()
 
   -- packer
