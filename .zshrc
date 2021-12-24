@@ -265,7 +265,7 @@ export TMUX_CP_MODE_STYLE_SUC='fg=#f8f8f2,bg=#44475a'
 zle -N insert-last-cmd-out
 bindkey -M vicmd -r 'C-o'
 
-export FZF_TAB_KEYBINDS='tab:accept'
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
 alias mark="open -a Marked\ 2"
 
