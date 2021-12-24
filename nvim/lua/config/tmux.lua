@@ -7,7 +7,7 @@ require("tmux").setup({
         enable = true,
         redirect_to_clipboard = false,
         sync_clipboard = false,
-        ignore_buffers = { tmp = true }
+        ignore_buffers = { tmp = true, zsh = true }
     },
     navigation = {
         -- enables default keybindings (C-hjkl) for normal mode
