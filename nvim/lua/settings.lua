@@ -26,3 +26,10 @@ vim.api.nvim_command([[
 ]])
 
 vim.cmd 'au TextYankPost * silent! lua vim.highlight.on_yank { timeout = 1000 }'
+
+vim.api.nvim_command([[
+  augroup qs_colors
+    autocmd ColorScheme * highlight QuickScopePrimary guifg='#00C7DF' gui=underline ctermfg=155 cterm=underline
+    autocmd ColorScheme * highlight QuickScopeSecondary guifg='#afff5f' gui=underline ctermfg=81 cterm=underline
+  augroup END
+]])
