@@ -35,6 +35,11 @@ zinit wait lucid light-mode for \
   pick'git-it-on.plugin.zsh' \
     peterhurford/git-it-on.zsh
 
+
+zinit ice wait lucid as'completion' \
+  id-as'docker-compose-completion' mv'docker-compose-completion -> _docker-compose'
+zinit snippet 'https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose'
+
 source ~/.fzf.zsh
 
 zinit snippet OMZP::git
