@@ -286,3 +286,5 @@ alias omf="fd -e md -x open -a Marked\ 2"
 alias gs="git status -sb"
 
 export WORDCHARS='|?'
+
+HISTORY_IGNORE="(l|ls*|sk|ep|fd|ranger|la|cd|tmux*|pwd|rc|rs|fzf|mssql-cli|exit|gt|nvim|z*|zi*|up|rm*|trash*|sudo rm*|spt)"
