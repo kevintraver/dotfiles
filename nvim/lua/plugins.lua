@@ -51,6 +51,7 @@ require('packer').startup( function()
   use { 'tpope/vim-sleuth' }
 
   -- utilities
+  use { 'simnalamburt/vim-mundo' }
   use { 'ahmedkhalf/project.nvim' }
   use { 'ethanholz/nvim-lastplace' }
   use { 'nacro90/numb.nvim' }
