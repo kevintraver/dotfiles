@@ -287,4 +287,4 @@ alias gs="git status -sb"
 
 export WORDCHARS='|?'
 
-HISTORY_IGNORE="(l|ls*|sk|ep|fd|ranger|la|cd|tmux*|pwd|rc|rs|fzf|mssql-cli|exit|gt|nvim|z*|zi*|up|rm*|trash*|sudo rm*|spt)"
+HISTORY_IGNORE="(l|ls*|sk|ep|fd|ranger|la|cd|tmux*|pwd|rc|rs|fzf|mssql-cli|exit|gt|nvim|z*|zi*|up|rm*|trash*|sudo rm*|spt|*pass*)"
