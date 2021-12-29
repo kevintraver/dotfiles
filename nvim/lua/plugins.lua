@@ -160,4 +160,6 @@ require('packer').startup( function()
   use { 'mtikekar/nvim-send-to-term' }
   use { 'brettanomyces/nvim-terminus' }
 
+  use { 'KadoBOT/nvim-spotify' }
+
 end)
