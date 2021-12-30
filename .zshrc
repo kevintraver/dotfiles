@@ -252,10 +252,10 @@ eval "$(batpipe)"
 
 export BAT_THEME="Dracula"
 
-echo -ne '\e[5 q'
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-_fix_cursor() { echo -ne '\e[5 q' }
-precmd_functions+=(_fix_cursor)
+zle-line-init() {
+  zle -K viins
+  echo -ne "\e[5 q"
+}
 
 export ENHANCD_FILTER="fzf"
 
