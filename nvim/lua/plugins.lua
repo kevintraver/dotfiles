@@ -81,6 +81,7 @@ require('packer').startup( function()
   use { 'p00f/nvim-ts-rainbow' }
   use { 'windwp/nvim-autopairs' }
   use { 'fedepujol/move.nvim' }
+  use { 'booperlv/nvim-gomove' }
   use { 'nvim-pack/nvim-spectre' }
   use { 'monaqa/dial.nvim' }
   use { 'svermeulen/vim-cutlass' }
