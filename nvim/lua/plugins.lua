@@ -86,6 +86,7 @@ require('packer').startup( function()
   use { 'monaqa/dial.nvim' }
   use { 'svermeulen/vim-cutlass' }
   use { 'cyansprite/Extract' }
+  use { 'svban/YankAssassin.vim' }
   use { 'tversteeg/registers.nvim' }
 
   -- marks
