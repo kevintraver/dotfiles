@@ -123,6 +123,7 @@ require('packer').startup( function()
   use { 'romgrk/barbar.nvim' }
   use { 'beauwilliams/focus.nvim' }
   use { 'dhruvasagar/vim-zoom' }
+  use { 'nyngwang/NeoZoom.lua' }
   use { 'kwkarlwang/bufjump.nvim' }
   use { 'sindrets/winshift.nvim' }
   use { 'famiu/bufdelete.nvim' }
