@@ -1,10 +1,6 @@
 source ~/.zshrc.local
 
 # osx apps
-function gt {
-  gittower $(git rev-parse --show-toplevel)
-}
-zle -N gt
 
 # brave
 alias brave='open -na /Applications/Brave\ Browser.app --args "--user-data-dir=/tmp/Brave/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
