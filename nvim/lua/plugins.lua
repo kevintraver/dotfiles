@@ -8,12 +8,7 @@ return require('packer').startup(function()
 
   use 'machakann/vim-sandwich'
 
-  use({
-    "gbprod/substitute.nvim",
-    config = function()
-      require("substitute").setup()
-    end
-  })
+  use 'gbprod/substitute.nvim'
 
   use 'chaoren/vim-wordmotion'
 
