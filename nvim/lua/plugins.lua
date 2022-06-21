@@ -8,4 +8,6 @@ return require('packer').startup(function()
   use 'svermeulen/vim-subversive'
   use 'tommcdo/vim-exchange'
 
+  use 'chaoren/vim-wordmotion'
+
 end)
