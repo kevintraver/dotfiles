@@ -1,5 +1,8 @@
 require 'plugins'
 
+vim.keymap.set('v', '<', '<gv', {} )
+vim.keymap.set('v', '>', '>gv', {} )
+
 require("substitute").setup()
 
 vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
