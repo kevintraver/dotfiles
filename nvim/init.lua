@@ -1,10 +1,12 @@
 require 'plugins'
 
+-- Keep selection when indenting
 vim.keymap.set('v', '<', '<gv', {} )
 vim.keymap.set('v', '>', '>gv', {} )
 
 require("substitute").setup()
 
+-- Keymappings for substitute
 vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
 vim.keymap.set("n", "rl", [[<cmd>lua require('substitute').line()<cr>]], { noremap = true })
 vim.keymap.set("x", "r", [[<cmd>lua require('substitute').visual()<cr>]], { noremap = true })
@@ -15,6 +17,7 @@ vim.keymap.set("n", "cxx", "<cmd>lua require('substitute.exchange').line()<cr>",
 vim.keymap.set("x", "C", "<cmd>lua require('substitute.exchange').visual()<cr>", { noremap = true })
 vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", { noremap = true })
 
+-- Keymappings for vim-sandwich
 vim.api.nvim_exec(
   [[
 
@@ -32,6 +35,7 @@ vim.api.nvim_exec(
   ]],
 false)
 
+-- Keymappings for vim-system-copy
 vim.keymap.set("n", "Y", '<Plug>SystemCopy', {})
 vim.keymap.set("v", "Y", '<Plug>SystemCopy', {})
 vim.keymap.set("n", "YY", '<Plug>SystemCopyLine', {})
