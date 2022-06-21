@@ -4,6 +4,8 @@ return require('packer').startup(function()
 
   use 'ggandor/lightspeed.nvim'
 
+  use 'arthurxavierx/vim-caser'
+
   use 'machakann/vim-sandwich'
 
   use({
