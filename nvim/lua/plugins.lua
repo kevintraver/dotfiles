@@ -12,4 +12,6 @@ return require('packer').startup(function()
 
   use 'chaoren/vim-wordmotion'
 
+  use 'christoomey/vim-system-copy'
+
 end)

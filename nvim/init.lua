@@ -28,3 +28,7 @@ vim.api.nvim_exec(
 
   ]],
 false)
+
+vim.keymap.set("n", "Y", '<Plug>SystemCopy', {})
+vim.keymap.set("v", "Y", '<Plug>SystemCopy', {})
+vim.keymap.set("n", "YY", '<Plug>SystemCopyLine', {})
