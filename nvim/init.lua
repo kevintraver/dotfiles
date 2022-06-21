@@ -2,8 +2,7 @@ require 'plugins'
 
 vim.cmd('runtime macros/sandwich/keymap/surround.vim')
 
-vim.api.nvim_set_keymap('n', 'r', [[<Plug>(SubversiveSubstitute)]], {})
-vim.api.nvim_set_keymap('v', 'r', [[<Plug>(SubversiveSubstitute)]], {})
-
-vim.api.nvim_set_keymap('n', 'rl', [[<Plug>(SubversiveSubstituteLine)]], {})
-vim.api.nvim_set_keymap('v', 'rl', [[<Plug>(SubversiveSubstituteLine)]], {})
+vim.keymap.set("n", "r", "<cmd>lua require('substitute').operator()<cr>", { noremap = true })
+vim.keymap.set("n", "rl", "<cmd>lua require('substitute').line()<cr>", { noremap = true })
+vim.keymap.set("n", "R", "<cmd>lua require('substitute').eol()<cr>", { noremap = true })
+vim.keymap.set("x", "r", "<cmd>lua require('substitute').visual()<cr>", { noremap = true })
