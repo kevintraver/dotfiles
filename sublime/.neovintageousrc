@@ -1,7 +1,0 @@
-:set ignorecase
-:set smartcase
-
-let g:neak-clever-s = 1
-
-vnoremap <lt> <lt>gv
-vnoremap > >gv
