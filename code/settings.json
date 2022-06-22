@@ -22,5 +22,6 @@
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.startupEditor": "none"
 }
