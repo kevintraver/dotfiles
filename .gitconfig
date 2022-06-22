@@ -2,3 +2,5 @@
 	name = Kevin Traver
 	email = kevintraver@kevintraver.com
 
+[core]
+	editor = code --wait
