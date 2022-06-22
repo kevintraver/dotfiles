@@ -26,5 +26,9 @@
   {
     "key": "cmd+p",
     "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "projectManager.listProjects"
   }
 ]
