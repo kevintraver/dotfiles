@@ -1,23 +1,4 @@
 [user]
-    name = Kevin Traver
-    email = kevintraver@kevintraver.com
+	name = Kevin Traver
+	email = kevintraver@kevintraver.com
 
-[core]
-    excludesfile = /Users/kevin/.gitignore_global
-    editor = "nvr -s -cc split --remote-wait-silent"
-    pager = delta
-    pager = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
-[diff]
-    colorMoved = default
-
-[delta]
-    navigate = true
-    syntax-theme = Dracula
-
-[alias]
-    b = branch
-    s = status
