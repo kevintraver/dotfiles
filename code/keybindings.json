@@ -18,5 +18,13 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands"
   }
 ]
