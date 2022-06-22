@@ -1,8 +1,8 @@
-require 'plugins'
+require("plugins")
 
 -- Keep selection when indenting
-vim.keymap.set('v', '<', '<gv', {} )
-vim.keymap.set('v', '>', '>gv', {} )
+vim.keymap.set("v", "<", "<gv", {})
+vim.keymap.set("v", ">", ">gv", {})
 
 require("substitute").setup()
 
@@ -19,7 +19,7 @@ vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>
 
 -- Keymappings for vim-sandwich
 vim.api.nvim_exec(
-  [[
+	[[
 
     let g:sandwich_no_default_key_mappings = 1
     silent! nmap <unique><silent> 'd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
@@ -33,9 +33,10 @@ vim.api.nvim_exec(
     silent! xmap <unique> 'r <Plug>(operator-sandwich-replace)
 
   ]],
-false)
+	false
+)
 
 -- Keymappings for vim-system-copy
-vim.keymap.set("n", "Y", '<Plug>SystemCopy', {})
-vim.keymap.set("v", "Y", '<Plug>SystemCopy', {})
-vim.keymap.set("n", "YY", '<Plug>SystemCopyLine', {})
+vim.keymap.set("n", "Y", "<Plug>SystemCopy", {})
+vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
+vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
