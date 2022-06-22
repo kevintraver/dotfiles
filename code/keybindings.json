@@ -1,0 +1,14 @@
+[
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.navigateLeft"
+  }
+]
