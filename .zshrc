@@ -2,6 +2,12 @@ source ~/.zshrc.local
 
 # osx apps
 
+# Tower
+function gt {
+  gittower $(git rev-parse --show-toplevel)
+}
+zle -N gt
+
 # GitKraken
 alias gk='(eval "gitkraken --new-window -p \"$(git rev-parse --show-toplevel)\" -l /dev/null >/dev/null 2>&1 &")'
 
