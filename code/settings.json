@@ -23,5 +23,6 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "git.autofetch": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "window.newWindowDimensions": "maximized"
 }
