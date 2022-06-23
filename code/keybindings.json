@@ -30,5 +30,27 @@
   {
     "key": "shift+cmd+o",
     "command": "projectManager.listProjects"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-cursorDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-cursorUp",
+    "when": "textInputFocus"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+p",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-p>"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+n",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-n>"
   }
 ]
