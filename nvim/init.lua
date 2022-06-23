@@ -1,5 +1,10 @@
 require("plugins")
 
+-- Highlight yank
+vim.api.nvim_command([[
+  autocmd TextYankPost * silent lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 1000}) 
+]])
+
 -- Keep selection when indenting
 vim.keymap.set("v", "<", "<gv", {})
 vim.keymap.set("v", ">", ">gv", {})
