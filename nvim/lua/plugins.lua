@@ -35,5 +35,9 @@ return require("packer").startup(function()
   -- vim-textobj-user is a Vim plugin to create your own text object
   -- https://github.com/kana/vim-textobj-user
   use("kana/vim-textobj-user")
+  
+  -- A convenient text object for last pasted text
+  -- https://github.com/saaguero/vim-textobj-pastedtext
+  use("saaguero/vim-textobj-pastedtext")
 
 end)
