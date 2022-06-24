@@ -52,5 +52,9 @@
     "key": "ctrl+n",
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "<C-n>"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.scm.focus"
   }
 ]
