@@ -22,7 +22,7 @@ vim.keymap.set("n", "RL", [["*<cmd>lua require('substitute').line()<cr>]], { nor
 vim.keymap.set("x", "R", [["*<cmd>lua require('substitute').visual()<cr>]], { noremap = true })
 
 vim.keymap.set("n", "cx", "<cmd>lua require('substitute.exchange').operator()<cr>", { noremap = true })
-vim.keymap.set("n", "cxx", "<cmd>lua require('substitute.exchange').line()<cr>", { noremap = true })
+vim.keymap.set("n", "cxl", "<cmd>lua require('substitute.exchange').line()<cr>", { noremap = true })
 vim.keymap.set("x", "C", "<cmd>lua require('substitute.exchange').visual()<cr>", { noremap = true })
 vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", { noremap = true })
 
