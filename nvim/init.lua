@@ -41,7 +41,7 @@ vim.keymap.set("n", "<c-n>", "<Plug>(YankyCycleForward)", {})
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
 
 -- surround setup and keymaps
-require"surround".setup({
+require("surround").setup({
   mappings_style = "sandwich",
   prefix = "'"
 })
