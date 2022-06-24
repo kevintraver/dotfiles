@@ -51,4 +51,5 @@ vim.keymap.set("n", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
 
+-- Keymappings for vim-textobj-pastedtext
 vim.g.pastedtext_select_key = 'lp'
