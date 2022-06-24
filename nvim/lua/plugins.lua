@@ -39,5 +39,9 @@ return require("packer").startup(function()
   -- A convenient text object for last pasted text
   -- https://github.com/saaguero/vim-textobj-pastedtext
   use("saaguero/vim-textobj-pastedtext")
+  
+  -- Text objects for dealing with URIs
+  -- https://github.com/jceb/vim-textobj-uri
+  use("jceb/vim-textobj-uri")
 
 end)
