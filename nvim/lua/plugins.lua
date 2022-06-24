@@ -32,19 +32,21 @@ return require("packer").startup(function()
   -- https://github.com/christoomey/vim-system-copy
   use("christoomey/vim-system-copy")
   
-  -- vim-textobj-user is a Vim plugin to create your own text object
+
+  -- Text Objects
+
+  -- vim-textobj-user is a Vim plugin to create your own text object.
   -- https://github.com/kana/vim-textobj-user
   use("kana/vim-textobj-user")
 
-  -- Text objects for the current line
-  -- https://github.com/kana/vim-textobj-line
+  -- Text objects for the current line.
   use("kana/vim-textobj-line")
   
-  -- A convenient text object for last pasted text
+  -- A convenient text object for last pasted text.
   -- https://github.com/saaguero/vim-textobj-pastedtext
   use("saaguero/vim-textobj-pastedtext")
   
-  -- Text objects for dealing with URIs
+  -- Text objects for dealing with URIs.
   -- https://github.com/jceb/vim-textobj-uri
   use("jceb/vim-textobj-uri")
 
