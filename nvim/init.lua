@@ -22,6 +22,21 @@ vim.keymap.set("n", "cxx", "<cmd>lua require('substitute.exchange').line()<cr>",
 vim.keymap.set("x", "C", "<cmd>lua require('substitute.exchange').visual()<cr>", { noremap = true })
 vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", { noremap = true })
 
+-- yanky setup and keymaps
+require("yanky").setup()
+
+vim.keymap.set("n", "p", "<Plug>(YankyPutAfter)", {})
+vim.keymap.set("n", "P", "<Plug>(YankyPutBefore)", {})
+vim.keymap.set("x", "p", "<Plug>(YankyPutAfter)", {})
+vim.keymap.set("x", "P", "<Plug>(YankyPutBefore)", {})
+vim.keymap.set("n", "gp", "<Plug>(YankyGPutAfter)", {})
+vim.keymap.set("n", "gP", "<Plug>(YankyGPutBefore)", {})
+vim.keymap.set("x", "gp", "<Plug>(YankyGPutAfter)", {})
+vim.keymap.set("x", "gP", "<Plug>(YankyGPutBefore)", {})
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyCycleForward)", {})
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
+
+
 -- Keymappings for vim-sandwich
 vim.api.nvim_exec(
 	[[

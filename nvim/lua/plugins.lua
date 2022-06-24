@@ -18,6 +18,10 @@ return require("packer").startup(function()
 	-- Neovim plugin introducing a new operators motions to quickly replace and exchange text.
 	-- https://github.com/gbprod/substitute.nvim
 	use("gbprod/substitute.nvim")
+  
+  -- Improved Yank and Put functionalities for Neovim
+  -- https://github.com/gbprod/yanky.nvim
+  use("gbprod/yanky.nvim")
 
 	-- More useful word motions for Vim
 	-- https://github.com/chaoren/vim-wordmotion
