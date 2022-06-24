@@ -32,6 +32,9 @@ return require("packer").startup(function()
   -- https://github.com/christoomey/vim-system-copy
   use("christoomey/vim-system-copy")
   
+  -- Nvim Treesitter configurations and abstraction layer.
+  -- https://github.com/nvim-treesitter/nvim-treesitter
+  use("nvim-treesitter/nvim-treesitter")
 
   -- Text Objects
 
