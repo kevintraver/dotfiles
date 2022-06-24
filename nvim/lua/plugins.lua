@@ -12,9 +12,9 @@ return require("packer").startup(function()
   -- https://github.com/arthurxavierx/vim-caser
   use("arthurxavierx/vim-caser")
 
-  -- Set of operators and textobjects to search/select/edit sandwiched texts.
-  -- https://github.com/machakann/vim-sandwich
-  use("machakann/vim-sandwich")
+  -- A surround text object plugin for neovim written in lua.
+  -- https://github.com/ur4ltz/surround.nvim
+  use("ur4ltz/surround.nvim")
 
   -- Neovim plugin introducing a new operators motions to quickly replace and exchange text.
   -- https://github.com/gbprod/substitute.nvim
