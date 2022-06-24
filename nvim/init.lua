@@ -18,6 +18,7 @@ vim.keymap.set("n", "rl", [[<cmd>lua require('substitute').line()<cr>]], { norem
 vim.keymap.set("x", "r", [[<cmd>lua require('substitute').visual()<cr>]], { noremap = true })
 vim.keymap.set("n", "R", [["*<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
 vim.keymap.set("n", "Rl", [["*<cmd>lua require('substitute').line()<cr>]], { noremap = true })
+vim.keymap.set("n", "RL", [["*<cmd>lua require('substitute').line()<cr>]], { noremap = true })
 vim.keymap.set("x", "R", [["*<cmd>lua require('substitute').visual()<cr>]], { noremap = true })
 
 vim.keymap.set("n", "cx", "<cmd>lua require('substitute.exchange').operator()<cr>", { noremap = true })
