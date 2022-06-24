@@ -28,10 +28,6 @@ return require("packer").startup(function()
   -- https://github.com/gbprod/cutlass.nvim
   use("gbprod/cutlass.nvim")
 
-  -- More useful word motions for Vim
-  -- https://github.com/chaoren/vim-wordmotion
-  use("chaoren/vim-wordmotion")
-
   -- Vim plugin for copying to the system clipboard with text-objects and motions
   -- https://github.com/christoomey/vim-system-copy
   use("christoomey/vim-system-copy")
