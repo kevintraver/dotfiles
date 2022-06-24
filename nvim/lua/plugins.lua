@@ -31,5 +31,9 @@ return require("packer").startup(function()
   -- Vim plugin for copying to the system clipboard with text-objects and motions.
   -- https://github.com/christoomey/vim-system-copy
   use("christoomey/vim-system-copy")
+  
+  -- vim-textobj-user is a Vim plugin to create your own text object
+  -- https://github.com/kana/vim-textobj-user
+  use("kana/vim-textobj-user")
 
 end)
