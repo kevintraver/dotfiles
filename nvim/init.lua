@@ -4,6 +4,12 @@ require("plugins")
 vim.keymap.set("v", "<", "<gv", {})
 vim.keymap.set("v", ">", ">gv", {})
 
+-- cutless settings
+require("cutlass").setup({
+  cut_key = "m",
+  exclude = { "ns", "nS" }
+})
+
 require("substitute").setup()
 
 -- Keymappings for substitute

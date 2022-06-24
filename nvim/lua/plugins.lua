@@ -22,6 +22,10 @@ return require("packer").startup(function()
   -- Improved Yank and Put functionalities for Neovim
   -- https://github.com/gbprod/yanky.nvim
   use("gbprod/yanky.nvim")
+  
+  -- Plugin that adds a cut operation separate from delete
+  -- https://github.com/gbprod/cutlass.nvim
+  use("gbprod/cutlass.nvim")
 
 	-- More useful word motions for Vim
 	-- https://github.com/chaoren/vim-wordmotion
