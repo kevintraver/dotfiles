@@ -10,6 +10,9 @@ require("cutlass").setup({
   exclude = { "ns", "nS" }
 })
 
+-- comment setup
+require('Comment').setup()
+
 -- substitute setup and keymaps
 require("substitute").setup()
 

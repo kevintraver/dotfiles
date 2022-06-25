@@ -39,6 +39,10 @@ return require("packer").startup(function()
   -- Location and syntax aware text objects which *do what you mean*.
   -- https://github.com/RRethy/nvim-treesitter-textsubjects
   use("RRethy/nvim-treesitter-textsubjects")
+  
+  -- Smart and powerful comment plugin for neovim.
+  -- https://github.com/numToStr/Comment.nvim
+  use("numToStr/Comment.nvim")
 
   -- Text Objects
 
