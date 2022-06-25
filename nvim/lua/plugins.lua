@@ -43,6 +43,10 @@ return require("packer").startup(function()
   -- Smart and powerful comment plugin for neovim.
   -- https://github.com/numToStr/Comment.nvim
   use("numToStr/Comment.nvim")
+  
+  -- More useful word motions for Vim
+  -- https://github.com/chaoren/vim-wordmotion
+  use("chaoren/vim-wordmotion")
 
   -- Text Objects
 
