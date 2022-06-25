@@ -29,6 +29,9 @@ vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>
 -- yanky setup and keymaps
 require("yanky").setup()
 
+vim.keymap.set("n", "y", "<Plug>(YankyYank)", {})
+vim.keymap.set("x", "y", "<Plug>(YankyYank)", {})
+
 vim.keymap.set("n", "p", "<Plug>(YankyPutAfter)", {})
 vim.keymap.set("n", "P", "<Plug>(YankyPutBefore)", {})
 vim.keymap.set("x", "p", "<Plug>(YankyPutAfter)", {})
