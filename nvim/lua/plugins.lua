@@ -47,6 +47,7 @@ return require("packer").startup(function()
   use("kana/vim-textobj-user")
 
   -- Text objects for the current line.
+  -- https://github.com/kana/vim-textobj-line
   use("kana/vim-textobj-line")
   
   -- A convenient text object for last pasted text.
