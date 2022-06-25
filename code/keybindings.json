@@ -61,4 +61,30 @@
     "key": "shift+cmd+d",
     "command": "git.openChange"
   },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.editor.nextChange"
+  },
+  {
+    "key": "alt+[",
+    "command": "workbench.action.editor.previousChange"
+  },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "alt+[",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "shift+alt+]",
+    "command": "editor.action.dirtydiff.next"
+  },
+  {
+    "key": "shift+alt+[",
+    "command": "editor.action.dirtydiff.previous"
+  }
 ]
