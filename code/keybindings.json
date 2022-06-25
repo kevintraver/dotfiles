@@ -56,5 +56,9 @@
   {
     "key": "shift+cmd+g",
     "command": "workbench.scm.focus"
-  }
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "git.openChange"
+  },
 ]
