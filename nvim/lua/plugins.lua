@@ -62,6 +62,10 @@ return require("packer").startup(function()
   -- https://github.com/saaguero/vim-textobj-pastedtext
   use("saaguero/vim-textobj-pastedtext")
   
+  -- A vim plugin providing a single text object (on iv and av) for variable segments.
+  -- https://github.com/Julian/vim-textobj-variable-segment
+  use("Julian/vim-textobj-variable-segment")
+  
   -- Text objects for dealing with URIs.
   -- https://github.com/jceb/vim-textobj-uri
   use("jceb/vim-textobj-uri")
