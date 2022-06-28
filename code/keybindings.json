@@ -88,6 +88,10 @@
     "command": "editor.action.dirtydiff.previous"
   },
   {
+    "key": "alt+c",
+    "command": "git.commit"
+  },
+  {
     "key": "alt+s",
     "command": "git.stage"
   },
