@@ -1,9 +1,5 @@
 require("plugins")
 
--- Keep selection when indenting
-vim.keymap.set("v", "<", "<gv", {})
-vim.keymap.set("v", ">", ">gv", {})
-
 -- cutless settings
 require("cutlass").setup({
   cut_key = "m",
