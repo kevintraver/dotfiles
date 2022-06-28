@@ -58,6 +58,10 @@ return require("packer").startup(function()
 
   -- Text Objects
 
+  -- Vim plugin that provides additional text objects
+  -- https://github.com/wellle/targets.vim
+  use("wellle/targets.vim")
+
   -- vim-textobj-user is a Vim plugin to create your own text object.
   -- https://github.com/kana/vim-textobj-user
   use("kana/vim-textobj-user")
