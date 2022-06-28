@@ -7,5 +7,6 @@
   "editor.detectIndentation": false,
   "git.autofetch": true,
   "workbench.startupEditor": "none",
-  "window.newWindowDimensions": "maximized"
+  "window.newWindowDimensions": "maximized",
+  "git.suggestSmartCommit": false
 }
