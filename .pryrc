@@ -3,12 +3,6 @@ Pry.commands.alias_command 'e', 'edit'
 
 Pry.config.editor = "nvim -c 'set ft=editrubycommand'"
 
-Pry.hooks.add_hook(:after_eval, "copy_to_tmux_buffer") do |result, pry|
-  unless result.nil?
-    IO.popen("tmux load-buffer -", "w") { |pipe| pipe.write result.awesome_inspect(plain: true, indent: -2, index: false) }
-  end
-end
-
 require 'amazing_print'
 
 AmazingPrint.pry!
