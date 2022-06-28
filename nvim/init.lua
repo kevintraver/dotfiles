@@ -13,6 +13,9 @@ require("cutlass").setup({
 -- comment setup
 require('Comment').setup()
 
+-- gomove setup
+require("gomove").setup { map_defaults = true }
+
 -- substitute setup and keymaps
 require("substitute").setup()
 

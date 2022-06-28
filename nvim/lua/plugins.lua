@@ -47,6 +47,10 @@ return require("packer").startup(function()
   -- More useful word motions for Vim
   -- https://github.com/chaoren/vim-wordmotion
   use("chaoren/vim-wordmotion")
+  
+  -- A complete plugin for moving and duplicating blocks and lines
+  -- https://github.com/booperlv/nvim-gomove
+  use("booperlv/nvim-gomove")
 
   -- Text Objects
 
