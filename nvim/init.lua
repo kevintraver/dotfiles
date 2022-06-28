@@ -53,3 +53,16 @@ vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
 
 -- Keymappings for vim-textobj-pastedtext
 vim.g.pastedtext_select_key = 'lp'
+
+-- Keymappings and setup for nvim-treesitter-textsubjects
+require("nvim-treesitter.configs").setup {
+  textsubjects = {
+      enable = true,
+      prev_selection = ',', -- (Optional) keymap to select the previous selection
+      keymaps = {
+          ['.'] = 'textsubjects-smart',
+          [';'] = 'textsubjects-container-outer',
+          ['i;'] = 'textsubjects-container-inner',
+      },
+  }
+}

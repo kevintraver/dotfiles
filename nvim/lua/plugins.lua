@@ -36,6 +36,10 @@ return require("packer").startup(function()
   -- https://github.com/nvim-treesitter/nvim-treesitter
   use("nvim-treesitter/nvim-treesitter")
 
+  -- Location and syntax aware text objects which *do what you mean*.
+  -- https://github.com/RRethy/nvim-treesitter-textsubjects
+  use("RRethy/nvim-treesitter-textsubjects")
+
   -- Text Objects
 
   -- vim-textobj-user is a Vim plugin to create your own text object.
