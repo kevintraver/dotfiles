@@ -86,5 +86,23 @@
   {
     "key": "shift+alt+[",
     "command": "editor.action.dirtydiff.previous"
+  },
+  {
+    "key": "alt+s",
+    "command": "git.stage"
+  },
+  {
+    "key": "alt+u",
+    "command": "git.unstage"
+  },
+  {
+    "key": "alt+r",
+    "command": "git.revertSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+r",
+    "command": "git.clean",
+    "when": "!editorFocus"
   }
 ]
