@@ -81,5 +81,9 @@ return require("packer").startup(function()
   -- Text objects for dealing with URIs.
   -- https://github.com/jceb/vim-textobj-uri
   use("jceb/vim-textobj-uri")
+  
+  -- Text objects for numbers
+  -- https://github.com/MisanthropicBit/vim-numbers
+  use("MisanthropicBit/vim-numbers")
 
 end)
