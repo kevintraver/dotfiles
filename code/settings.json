@@ -8,7 +8,6 @@
   "git.autofetch": true,
   "workbench.startupEditor": "none",
   "window.newWindowDimensions": "maximized",
-  "git.suggestSmartCommit": false
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
 }
