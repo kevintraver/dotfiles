@@ -26,7 +26,12 @@ require("gomove").setup { map_defaults = true }
 require'marks'.setup()
 
 -- substitute setup and keymaps
-require("substitute").setup()
+require("substitute").setup({
+  exchange = {
+    use_esc_to_cancel = false,
+  },
+
+})
 
 vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
 vim.keymap.set("x", "r", [[<cmd>lua require('substitute').visual()<cr>]], { noremap = true })
