@@ -10,4 +10,5 @@
   "window.newWindowDimensions": "maximized",
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
+  "window.commandCenter": true,
 }
