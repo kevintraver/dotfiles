@@ -8,7 +8,7 @@ require('leap-spooky').setup()
 
 -- cutless settings
 require("cutlass").setup({
-  cut_key = "m",
+  cut_key = "x",
   exclude = { "ns", "nS" }
 })
 
