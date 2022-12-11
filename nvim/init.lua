@@ -1,5 +1,11 @@
 require("plugins")
 
+require('leap').add_default_mappings()
+
+require('flit').setup()
+
+require('leap-spooky').setup()
+
 -- cutless settings
 require("cutlass").setup({
   cut_key = "m",

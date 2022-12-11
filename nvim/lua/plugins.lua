@@ -4,10 +4,18 @@ return require("packer").startup(function()
   -- https://github.com/wbthomason/packer.nvim
   use("wbthomason/packer.nvim")
 
-  -- Lightspeed is a motion plugin for Neovim.
-  -- https://github.com/ggandor/lightspeed.nvim
-  use("ggandor/lightspeed.nvim")
+  -- Neovim's answer to the mouse: a "clairvoyant" interface that makes on-screen navigation quicker and more natural than ever
+  -- https://github.com/ggandor/leap.nvim
+  use("ggandor/leap.nvim")
 
+  -- Enhanced f/t motions for Leap
+  -- https://github.com/ggandor/flit.nvim
+  use("ggandor/flit.nvim")
+
+  -- Actions at a distance
+  -- https://github.com/ggandor/leap-spooky.nvim
+  use("ggandor/leap-spooky.nvim")
+  
   -- Easily change word casing with motions, text objects or visual mode.
   -- https://github.com/arthurxavierx/vim-caser
   use("arthurxavierx/vim-caser")
