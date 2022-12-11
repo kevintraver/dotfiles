@@ -30,7 +30,6 @@ require("substitute").setup({
   exchange = {
     use_esc_to_cancel = false,
   },
-
 })
 
 vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
