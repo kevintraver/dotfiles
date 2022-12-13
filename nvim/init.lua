@@ -65,6 +65,9 @@ require("surround").setup({
   prefix = "'"
 })
 
+-- word motion config
+vim.g.wordmotion_uppercase_spaces = { ',', '(', ')', '{', '}', '[', ']', '=', "'", '"', '\\', '/' }
+
 -- Keymappings for vim-system-copy
 vim.keymap.set("n", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
