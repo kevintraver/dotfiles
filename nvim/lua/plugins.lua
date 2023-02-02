@@ -21,8 +21,8 @@ return require("packer").startup(function()
   use("arthurxavierx/vim-caser")
 
   -- A surround text object plugin for neovim written in lua.
-  -- https://github.com/ur4ltz/surround.nvim
-  use("ur4ltz/surround.nvim")
+  -- https://github.com/kylechui/nvim-surround
+  use("kylechui/nvim-surround")
 
   -- Neovim plugin introducing a new operators motions to quickly replace and exchange text.
   -- https://github.com/gbprod/substitute.nvim
