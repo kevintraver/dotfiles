@@ -4,6 +4,8 @@ require('leap').add_default_mappings()
 
 require('flit').setup()
 
+require('textcase').setup()
+
 require('leap-spooky').setup()
 
 -- cutless settings

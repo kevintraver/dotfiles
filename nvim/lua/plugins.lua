@@ -17,8 +17,8 @@ return require("packer").startup(function()
   use("ggandor/leap-spooky.nvim")
   
   -- Easily change word casing with motions, text objects or visual mode.
-  -- https://github.com/arthurxavierx/vim-caser
-  use("arthurxavierx/vim-caser")
+  -- https://github.com/johmsalas/text-case.nvim
+  use("johmsalas/text-case.nvim")
 
   -- A surround text object plugin for neovim written in lua.
   -- https://github.com/kylechui/nvim-surround
