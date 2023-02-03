@@ -16,11 +16,11 @@ return require("packer").startup(function()
   -- https://github.com/ggandor/leap-spooky.nvim
   use("ggandor/leap-spooky.nvim")
   
-  -- Easily change word casing with motions, text objects or visual mode.
+  -- An all in one plugin for converting text case in Neovim
   -- https://github.com/johmsalas/text-case.nvim
   use("johmsalas/text-case.nvim")
 
-  -- A surround text object plugin for neovim written in lua.
+  -- Add/change/delete surrounding delimiter pairs with ease. Written with ❤️ in Lua.
   -- https://github.com/kylechui/nvim-surround
   use("kylechui/nvim-surround")
 
