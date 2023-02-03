@@ -62,7 +62,7 @@ vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
 require("nvim-surround").setup()
 
 -- word motion config
-vim.g.wordmotion_uppercase_spaces = { ',', '(', ')', '{', '}', '[', ']', '=', "'", '"', '\\', '/' }
+vim.g.wordmotion_uppercase_spaces = { ',', '.', '(', ')', '{', '}', '[', ']', '=', "'", '"', '\\', '/' }
 
 -- Keymappings for vim-system-copy
 vim.keymap.set("n", "Y", "<Plug>SystemCopy", {})
