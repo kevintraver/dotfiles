@@ -24,8 +24,6 @@ require('Comment').setup()
 -- gomove setup
 require("gomove").setup { map_defaults = true }
 
--- marks setup
-require'marks'.setup()
 
 -- substitute setup and keymaps
 require("substitute").setup({
