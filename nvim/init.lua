@@ -59,8 +59,6 @@ vim.keymap.set("x", "gP", "<Plug>(YankyGPutBefore)", {})
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyCycleForward)", {})
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
 
-require("various-textobjs").setup({ useDefaultKeymaps = true })
-
 require("nvim-surround").setup()
 
 -- word motion config
@@ -72,6 +70,8 @@ vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
 
 -- Keymappings for vim-textobj-pastedtext
+vim.g.pastedtext_select_key = 'lp'
+
 -- Keymappings and setup for nvim-treesitter-textsubjects
 require("nvim-treesitter.configs").setup {
   textsubjects = {
