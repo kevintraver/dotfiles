@@ -12,4 +12,7 @@
   "workbench.iconTheme": "Monokai Pro Icons",
   "window.commandCenter": true,
   "gitlens.rebaseEditor.ordering": "asc",
+  "arduino.path": "/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-ide-extension/build/",
+  "arduino.useArduinoCli": true,
+  "arduino.commandPath": "arduino-cli"
 }
