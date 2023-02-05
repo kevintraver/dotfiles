@@ -59,7 +59,15 @@ vim.keymap.set("x", "gP", "<Plug>(YankyGPutBefore)", {})
 vim.keymap.set("n", "<c-n>", "<Plug>(YankyCycleForward)", {})
 vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
 
-require("nvim-surround").setup()
+require("nvim-surround").setup({
+  keymaps = {
+    normal = "y'",
+    visual = "'",
+    visual_line = "g'",
+    delete = "d'",
+    change = "c'",
+  },
+})
 
 -- word motion config
 vim.g.wordmotion_uppercase_spaces = { ',', '.', '(', ')', '{', '}', '[', ']', '=', "'", '"', '\\', '/' }
