@@ -61,7 +61,7 @@ vim.keymap.set("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
 
 require("nvim-surround").setup({
   keymaps = {
-    normal = "y'",
+    normal = "'",
     visual = "'",
     visual_line = "g'",
     delete = "d'",
