@@ -67,6 +67,7 @@ require("nvim-surround").setup({
     delete = "d'",
     change = "c'",
   },
+  move_cursor = false,
 })
 
 -- word motion config
