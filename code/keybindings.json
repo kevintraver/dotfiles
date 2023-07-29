@@ -134,5 +134,9 @@
     "key": "alt+l",
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "<A-l>"
+  },
+  {
+    "key": "shift-alt+r",
+    "command": "workbench.action.reloadWindow"
   }
 ]
