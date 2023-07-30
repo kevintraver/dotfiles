@@ -8,6 +8,8 @@ require('textcase').setup()
 
 require('leap-spooky').setup()
 
+require('treesj').setup()
+
 require('sort').setup()
 
 -- cutless settings
