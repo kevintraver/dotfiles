@@ -8,6 +8,8 @@ require('textcase').setup()
 
 require('leap-spooky').setup()
 
+require('sort').setup()
+
 -- cutless settings
 require("cutlass").setup({
   cut_key = "m",

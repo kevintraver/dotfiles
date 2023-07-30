@@ -48,6 +48,10 @@ return require("packer").startup(function()
   -- https://github.com/RRethy/nvim-treesitter-textsubjects
   use("RRethy/nvim-treesitter-textsubjects")
   
+  -- Sorting plugin for Neovim that supports line-wise and delimiter sorting.
+  -- https://github.com/sQVe/sort.nvim
+  use("sQVe/sort.nvim")
+  
   -- Smart and powerful comment plugin for neovim.
   -- https://github.com/numToStr/Comment.nvim
   use("numToStr/Comment.nvim")
