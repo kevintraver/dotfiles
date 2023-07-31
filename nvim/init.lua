@@ -18,10 +18,6 @@ require("cutlass").setup({
   exclude = { "ns", "nS" }
 })
 
--- vscode neovim git keymaps
-vim.keymap.set("n", "]]", [[<Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR>]], { noremap = true })
-vim.keymap.set("n", "[[", [[<Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR>]], { noremap = true })
-
 -- comment setup
 require('Comment').setup()
 
