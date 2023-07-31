@@ -1,8 +1,29 @@
 [
+  
+  // Menu commands
+
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "projectManager.listProjects"
+  },
+  
+  // Editor
+  
   {
     "key": "cmd+d",
     "command": "workbench.action.splitEditor"
   },
+  
+  // Navigation
+
   {
     "key": "cmd+l",
     "command": "workbench.action.navigateRight"
@@ -21,18 +42,34 @@
     "command": "workbench.action.navigateRight",
     "when": "neovim.mode != insert"
   },
+
   {
-    "key": "cmd+o",
-    "command": "workbench.action.quickOpen"
+    "command": "vscode-neovim.send",
+    "key": "alt+h",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-h>"
   },
   {
-    "key": "cmd+p",
-    "command": "workbench.action.showCommands"
+    "command": "vscode-neovim.send",
+    "key": "alt+j",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-j>"
   },
   {
-    "key": "shift+cmd+o",
-    "command": "projectManager.listProjects"
+    "command": "vscode-neovim.send",
+    "key": "alt+k",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-k>"
   },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+l",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-l>"
+  },
+
+  // ctrl-p and ctrl-n for next/previous
+
   {
     "key": "ctrl+n",
     "command": "-cursorDown",
@@ -55,6 +92,9 @@
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "<C-n>"
   },
+  
+  // git
+
   {
     "key": "shift+cmd+g",
     "command": "workbench.scm.focus"
@@ -84,33 +124,5 @@
     "key": "alt+r",
     "command": "git.clean",
     "when": "!editorFocus"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "alt+h",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<A-h>"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "alt+j",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<A-j>"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "alt+k",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<A-k>"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "alt+l",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<A-l>"
-  },
-  {
-    "key": "shift-alt+r",
-    "command": "workbench.action.reloadWindow"
   }
 ]
