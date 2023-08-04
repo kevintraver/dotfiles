@@ -16,5 +16,7 @@
   "arduino.useArduinoCli": true,
   "arduino.commandPath": "arduino-cli",
   "editor.accessibilitySupport": "off",
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "rest-client.previewResponsePanelTakeFocus": false,
+  "rest-client.previewResponseInUntitledDocument": true
 }
