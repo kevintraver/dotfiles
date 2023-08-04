@@ -19,7 +19,8 @@
   
   {
     "key": "cmd+d",
-    "command": "workbench.action.splitEditor"
+    "command": "workbench.action.splitEditor",
+    "when": "editorTextFocus"
   },
   
   // Navigation
