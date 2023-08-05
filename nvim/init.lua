@@ -10,6 +10,8 @@ require('leap-spooky').setup()
 
 require('treesj').setup()
 
+require('sibling-swap').setup()
+
 require('sort').setup()
 
 -- cutless settings

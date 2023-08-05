@@ -47,6 +47,10 @@ return require("packer").startup(function()
   -- Neovim plugin for splitting/joining blocks of code
   -- https://github.com/Wansmer/treesj
   use("Wansmer/treesj")
+  
+  -- Neovim plugin for swaps closest siblings with Tree-Sitter
+  -- https://github.com/Wansmer/sibling-swap.nvim
+  use("Wansmer/sibling-swap.nvim")
 
   -- Location and syntax aware text objects which *do what you mean*.
   -- https://github.com/RRethy/nvim-treesitter-textsubjects
