@@ -1,5 +1,4 @@
 [
-  
   // Menu commands
 
   {
@@ -14,15 +13,15 @@
     "key": "shift+cmd+o",
     "command": "projectManager.listProjects"
   },
-  
+
   // Editor
-  
+
   {
     "key": "cmd+d",
     "command": "workbench.action.splitEditor",
     "when": "editorTextFocus"
   },
-  
+
   // Navigation
 
   {
@@ -95,7 +94,7 @@
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "<C-n>"
   },
-  
+
   // git
 
   {
@@ -128,7 +127,7 @@
     "command": "git.clean",
     "when": "!editorFocus"
   },
-  
+
   // git change navigation
 
   {
