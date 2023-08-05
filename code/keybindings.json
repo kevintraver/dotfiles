@@ -127,5 +127,18 @@
     "key": "alt+r",
     "command": "git.clean",
     "when": "!editorFocus"
+  },
+  
+  // git change navigation
+
+  {
+    "key": "alt+[",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+]",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
   }
 ]
