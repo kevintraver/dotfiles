@@ -44,6 +44,8 @@
     "when": "neovim.mode != insert"
   },
 
+  // Neovim Navigation
+
   {
     "command": "vscode-neovim.send",
     "key": "alt+h",
