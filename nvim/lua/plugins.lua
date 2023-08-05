@@ -72,10 +72,6 @@ return require("packer").startup(function()
   -- https://github.com/booperlv/nvim-gomove
   use("booperlv/nvim-gomove")
 
-  -- repeat.vim: enable repeating supported plugin maps with "."
-  -- https://github.com/tpope/vim-repeat
-  use("tpope/vim-repeat")
-  
   -- A better user experience for viewing and interacting with Vim marks.
   -- https://github.com/chentoast/marks.nvim
   use("chentoast/marks.nvim")
