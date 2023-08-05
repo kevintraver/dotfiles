@@ -80,34 +80,8 @@ return require("packer").startup(function()
   -- https://github.com/chentoast/marks.nvim
   use("chentoast/marks.nvim")
 
-  -- Text Objects
-
-  -- Vim plugin that provides additional text objects
-  -- https://github.com/wellle/targets.vim
-  use("wellle/targets.vim")
-
-  -- vim-textobj-user is a Vim plugin to create your own text object.
-  -- https://github.com/kana/vim-textobj-user
-  use("kana/vim-textobj-user")
-
-  -- Text objects for the current line.
-  -- https://github.com/kana/vim-textobj-line
-  use("kana/vim-textobj-line")
-  
-  -- A convenient text object for last pasted text.
-  -- https://github.com/saaguero/vim-textobj-pastedtext
-  use("saaguero/vim-textobj-pastedtext")
-  
-  -- A vim plugin providing a single text object (on iv and av) for variable segments.
-  -- https://github.com/Julian/vim-textobj-variable-segment
-  use("Julian/vim-textobj-variable-segment")
-  
-  -- Text objects for dealing with URIs.
-  -- https://github.com/jceb/vim-textobj-uri
-  use("jceb/vim-textobj-uri")
-  
-  -- Text objects for numbers
-  -- https://github.com/MisanthropicBit/vim-numbers
-  use("MisanthropicBit/vim-numbers")
+  -- Bundle of two dozen new text objects for Neovim.
+  -- https://github.com/chrisgrieser/nvim-various-textobjs
+  use("chrisgrieser/nvim-various-textobjs")
 
 end)

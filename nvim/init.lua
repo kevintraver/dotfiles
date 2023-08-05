@@ -10,6 +10,8 @@ require('textcase').setup()
 
 require('leap-spooky').setup()
 
+require('various-textobjs').setup({ useDefaultKeymaps = true, })
+
 require('treesj').setup()
 
 require('sibling-swap').setup()
@@ -86,9 +88,6 @@ require("nvim-surround").setup({
 vim.keymap.set("n", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
-
--- Keymappings for vim-textobj-pastedtext
-vim.g.pastedtext_select_key = 'lp'
 
 -- Keymappings and setup for nvim-treesitter-textsubjects
 require("nvim-treesitter.configs").setup {
