@@ -64,10 +64,10 @@ return require("packer").startup(function()
   -- https://github.com/numToStr/Comment.nvim
   use("numToStr/Comment.nvim")
   
-  -- More useful word motions for Vim
-  -- https://github.com/chaoren/vim-wordmotion
-  use("chaoren/vim-wordmotion")
-  
+  -- Use the w, e, b motions like a spider. Move by subwords and skip insignificant punctuation.
+  -- https://github.com/chrisgrieser/nvim-spider
+  use("chrisgrieser/nvim-spider")
+
   -- A complete plugin for moving and duplicating blocks and lines
   -- https://github.com/booperlv/nvim-gomove
   use("booperlv/nvim-gomove")
