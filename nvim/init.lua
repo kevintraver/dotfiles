@@ -1,40 +1,40 @@
 require("plugins")
 
-require('leap').add_default_mappings()
-require('leap-config')
+require("leap").add_default_mappings()
+require("leap-config")
 
-require('flit').setup()
+require("flit").setup()
 
 require("spider").setup()
 
-require('textcase').setup()
+require("textcase").setup()
 
-require('leap-spooky').setup()
+require("leap-spooky").setup()
 
-require('various-textobjs').setup({ useDefaultKeymaps = true, })
+require("various-textobjs").setup({ useDefaultKeymaps = true })
 
-require('treesj').setup()
+require("treesj").setup()
 
-require('sibling-swap').setup()
+require("sibling-swap").setup()
 
-require('sort').setup()
+require("sort").setup()
 
 -- cutless settings
 require("cutlass").setup({
   cut_key = "m",
-  exclude = { "ns", "nS" }
+  exclude = { "ns", "nS" },
 })
 
 -- comment setup
-require('Comment').setup()
+require("Comment").setup()
 
 -- gomove setup
-require("gomove").setup { map_defaults = true }
+require("gomove").setup({ map_defaults = true })
 
-vim.keymap.set({"n", "o", "x"}, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-vim.keymap.set({"n", "o", "x"}, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-vim.keymap.set({"n", "o", "x"}, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-vim.keymap.set({"n", "o", "x"}, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
+vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
+vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
+vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
+vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
 
 -- substitute setup and keymaps
 require("substitute").setup({
@@ -87,14 +87,14 @@ vim.keymap.set("v", "Y", "<Plug>SystemCopy", {})
 vim.keymap.set("n", "YY", "<Plug>SystemCopyLine", {})
 
 -- Keymappings and setup for nvim-treesitter-textsubjects
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup({
   textsubjects = {
-      enable = true,
-      prev_selection = ',', -- (Optional) keymap to select the previous selection
-      keymaps = {
-          ['.'] = 'textsubjects-smart',
-          [';'] = 'textsubjects-container-outer',
-          ['i;'] = 'textsubjects-container-inner',
-      },
-  }
-}
+    enable = true,
+    prev_selection = ",", -- (Optional) keymap to select the previous selection
+    keymaps = {
+      ["."] = "textsubjects-smart",
+      [";"] = "textsubjects-container-outer",
+      ["i;"] = "textsubjects-container-inner",
+    },
+  },
+})
