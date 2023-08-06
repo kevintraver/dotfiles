@@ -1,6 +1,7 @@
 require("plugins")
 
 require('leap').add_default_mappings()
+require('leap-config')
 
 require('flit').setup()
 
