@@ -5,6 +5,16 @@ require("leap-config")
 
 require("flit").setup()
 
+require("hardtime").setup({
+  restricted_keys = {
+    ["h"] = { "n", "x" },
+    ["j"] = { "n" },
+    ["k"] = { "n" },
+    ["l"] = { "n", "x" },
+    ["x"] = { "n" },
+  },
+})
+
 require("spider").setup()
 
 require("textcase").setup()

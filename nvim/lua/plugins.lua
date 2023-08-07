@@ -3,6 +3,10 @@ return require("packer").startup(function()
   -- A use-package inspired plugin manager for Neovim.
   -- https://github.com/wbthomason/packer.nvim
   use("wbthomason/packer.nvim")
+  
+  -- A Neovim plugin helping you establish good command workflow and habit
+  -- https://github.com/m4xshen/hardtime.nvim
+  use("m4xshen/hardtime.nvim")
 
   -- Neovim's answer to the mouse: a "clairvoyant" interface that makes on-screen navigation quicker and more natural than ever
   -- https://github.com/ggandor/leap.nvim
