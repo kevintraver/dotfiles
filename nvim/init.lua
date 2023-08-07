@@ -5,6 +5,8 @@ require("leap-config")
 
 require("flit").setup()
 
+require("stay-in-place").setup()
+
 require("hardtime").setup({
   restricted_keys = {
     ["h"] = { "n", "x" },

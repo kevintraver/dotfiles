@@ -84,4 +84,9 @@ return require("packer").startup(function()
   -- https://github.com/chrisgrieser/nvim-various-textobjs
   use("chrisgrieser/nvim-various-textobjs")
 
+  -- Neovim plugin that prevent cursor from moving when using shift and filter actions.
+  -- https://github.com/gbprod/stay-in-place.nvim
+  use("gbprod/stay-in-place.nvim")
+
+
 end)
