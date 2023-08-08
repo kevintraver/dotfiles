@@ -139,5 +139,18 @@
     "key": "alt+]",
     "command": "workbench.action.editor.previousChange",
     "when": "editorTextFocus && !textCompareEditorActive"
+  },
+
+  // rest-client keymaps
+
+  {
+    "key": "cmd+enter",
+    "command": "rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'graphql'"
   }
 ]
