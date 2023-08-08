@@ -47,6 +47,10 @@ return require("packer").startup(function()
   -- Nvim Treesitter configurations and abstraction layer.
   -- https://github.com/nvim-treesitter/nvim-treesitter
   use("nvim-treesitter/nvim-treesitter")
+
+  -- Syntax aware text-objects, select, move, swap, and peek support.
+  -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  use("nvim-treesitter/nvim-treesitter-textobjects")
   
   -- Neovim plugin for splitting/joining blocks of code
   -- https://github.com/Wansmer/treesj
