@@ -57,8 +57,7 @@ vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')
 
 -- substitute setup and keymaps
 require("substitute").setup({
-  exchange = {    use_esc_to_cancel = false,
-  },
+  exchange = { use_esc_to_cancel = false },
 })
 
 vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], { noremap = true })
