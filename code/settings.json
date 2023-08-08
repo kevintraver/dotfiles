@@ -19,5 +19,8 @@
   "editor.inlineSuggest.enabled": true,
   "rest-client.previewResponsePanelTakeFocus": false,
   "rest-client.previewResponseInUntitledDocument": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  }
 }
