@@ -16,3 +16,5 @@ require("lazy").setup("plugins", {
     enabled = false,
   },
 })
+
+vim.o.foldenable = false
