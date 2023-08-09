@@ -19,8 +19,11 @@ return {
 
           keymaps = {
             -- You can use the capture groups defined in textobjects.scm
-            ["ia"] = "@comment.inner",
-            ["aa"] = "@comment.outer",
+            ["a/"] = "@comment.outer",
+            ["i/"] = "@comment.inner",
+
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
           },
 
           include_surrounding_whitespace = true,
