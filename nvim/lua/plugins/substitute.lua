@@ -2,6 +2,7 @@ return {
   "gbprod/substitute.nvim",
   config = function()
     require("substitute").setup({
+      on_substitute = require("yanky.integration").substitute(),
       exchange = { use_esc_to_cancel = false },
     })
 
