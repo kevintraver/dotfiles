@@ -37,8 +37,6 @@ return {
             ["aa"] = "@parameter.outer",
             ["ia"] = "@parameter.inner",
           },
-
-          include_surrounding_whitespace = true,
         },
       },
     })
