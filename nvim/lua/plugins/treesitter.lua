@@ -6,6 +6,15 @@ return {
   end,
   config = function()
     require("nvim-treesitter.configs").setup({
+      ensure_installed = {
+        "javascript",
+        "json",
+        "ruby",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+      },
       highlight = {
         enable = false,
       },
