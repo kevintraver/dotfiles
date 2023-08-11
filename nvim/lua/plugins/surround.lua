@@ -6,8 +6,6 @@ return {
       keymaps = {
         visual = "ys",
         visual_line = "yS",
-        change = "rs",
-        change_line = "rS",
       },
     })
   end,
