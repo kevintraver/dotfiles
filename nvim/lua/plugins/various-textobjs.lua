@@ -34,7 +34,7 @@ return {
   vim.keymap.set({ "o", "x" }, "iv", "<cmd>lua require('various-textobjs').value(true)<CR>"),
   vim.keymap.set({ "o", "x" }, "av", "<cmd>lua require('various-textobjs').value(false)<CR>"),
 
-  vim.keymap.set({ "o", "x" }, "%", "<cmd>lua require('various-textobjs').toNextClosingBracket()<CR>"),
+  vim.keymap.set({ "o", "x" }, "C", "<cmd>lua require('various-textobjs').toNextClosingBracket()<CR>"),
 
   vim.keymap.set({ "o", "x" }, "gG", "<cmd>lua require('various-textobjs').entireBuffer()<CR>"),
 }
