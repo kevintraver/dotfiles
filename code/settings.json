@@ -21,6 +21,7 @@
   "rest-client.previewResponseInUntitledDocument": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.external.osxExec": "Warp.app",
+  "prettier.configPath": "/Users/kevin/.dotfiles/.prettierrc",
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua"
   },
