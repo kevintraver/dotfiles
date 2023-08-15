@@ -18,3 +18,5 @@ require("lazy").setup("plugins", {
 })
 
 vim.o.foldenable = false
+vim.o.ignorecase = true
+vim.o.smartcase = true
