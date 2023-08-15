@@ -5,7 +5,7 @@ return {
   opts = {},
   keys = {
     {
-      "<space>",
+      "<Space>",
       mode = { "n", "x" },
       function()
         require("flash").jump()
@@ -13,14 +13,21 @@ return {
       desc = "Flash (normal, visual)",
     },
     {
-      "<space>",
+      "<Space>",
       mode = { "o" },
       function()
         require("flash").jump({ jump = { inclusive = false } })
       end,
       desc = "Flash (operator)",
     },
-
+    {
+      "<S-Space>",
+      mode = { "n", "o", "x" },
+      function()
+        require("flash").treesitter()
+      end,
+      desc = "Flash (treesitter)",
+    },
     {
       "j",
       mode = { "o", "x" },
