@@ -8,7 +8,7 @@ return {
       function()
         require("flash").jump()
       end,
-      desc = "Flash",
+      desc = "Flash (normal, visual)",
     },
     {
       "<space>",
@@ -16,7 +16,7 @@ return {
       function()
         require("flash").jump({ jump = { inclusive = false } })
       end,
-      desc = "Flash",
+      desc = "Flash (operator)",
     },
 
     {
@@ -29,7 +29,7 @@ return {
           pattern = "^",
         })
       end,
-      desc = "Flash",
+      desc = "Flash (line)",
     },
   },
 }
