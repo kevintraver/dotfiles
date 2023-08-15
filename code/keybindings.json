@@ -164,5 +164,17 @@
     "key": "alt+,",
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "<A-,>"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus",
+    "args": "<C-Space>"
+  },
+  {
+    "key": "shift+space",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus",
+    "args": "<S-Space>"
   }
 ]
