@@ -39,6 +39,15 @@ return {
             ["ia"] = "@parameter.inner",
           },
         },
+        swap = {
+          enable = true,
+          swap_next = {
+            ['<A-.>'] = "@parameter.inner",
+          },
+          swap_previous = {
+            ['<A-,>'] = "@parameter.inner",
+          },
+        },
       },
     })
   end,
