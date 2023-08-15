@@ -20,7 +20,7 @@ return {
   vim.keymap.set({ "o" }, "h", "^"),
 
   vim.keymap.set({ "o" }, "L", "$"),
-  vim.keymap.set({ "o" }, "H", "^"),
+  vim.keymap.set({ "o" }, "H", "0"),
 
   vim.keymap.set({ "n", "x" }, "L", "$"),
   vim.keymap.set({ "n", "x" }, "H", "^"),
