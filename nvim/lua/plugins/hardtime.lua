@@ -5,5 +5,6 @@ return {
   },
   opts = {
     notification = false,
+    max_count = 5,
   },
 }
