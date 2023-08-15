@@ -152,5 +152,17 @@
     "key": "cmd+enter",
     "command": "rest-client.request",
     "when": "editorTextFocus && editorLangId == 'graphql'"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+.",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-.>"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+,",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<A-,>"
   }
 ]
