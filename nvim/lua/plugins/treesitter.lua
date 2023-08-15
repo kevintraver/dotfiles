@@ -42,10 +42,10 @@ return {
         swap = {
           enable = true,
           swap_next = {
-            ['<A-.>'] = "@parameter.inner",
+            ["<A-.>"] = "@parameter.inner",
           },
           swap_previous = {
-            ['<A-,>'] = "@parameter.inner",
+            ["<A-,>"] = "@parameter.inner",
           },
         },
       },
