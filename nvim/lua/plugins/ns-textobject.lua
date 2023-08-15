@@ -1,3 +1,5 @@
+-- https://github.com/XXiaoA/ns-textobject.nvim
+
 return {
   "XXiaoA/ns-textobject.nvim",
   dependencies = { "nvim-surround" },

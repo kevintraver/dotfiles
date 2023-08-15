@@ -1,3 +1,5 @@
+-- https://github.com/christoomey/vim-system-copy
+
 return {
   "christoomey/vim-system-copy",
   config = function()

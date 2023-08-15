@@ -1,3 +1,5 @@
+-- https://github.com/gbprod/substitute.nvim
+
 return {
   "gbprod/substitute.nvim",
   config = function()
