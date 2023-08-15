@@ -10,6 +10,7 @@ return {
         "javascript",
         "json",
         "ruby",
+        "html",
         "lua",
         "vim",
         "vimdoc",
