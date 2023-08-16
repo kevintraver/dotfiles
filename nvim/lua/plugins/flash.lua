@@ -4,7 +4,7 @@ return {
   "folke/flash.nvim",
   opts = {
     search = {
-      mode = "fuzzy",
+      mode = "exact",
       multi_window = false,
     },
   },
