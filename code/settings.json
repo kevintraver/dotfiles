@@ -1,6 +1,7 @@
 {
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "ruby.format": "standard",
+  "editor.lineNumbers": "relative",
   "workbench.list.automaticKeyboardNavigation": false,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
