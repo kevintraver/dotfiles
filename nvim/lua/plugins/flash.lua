@@ -5,6 +5,7 @@ return {
   opts = {
     search = {
       mode = "fuzzy",
+      multi_window = false,
     },
   },
   keys = {
