@@ -2,7 +2,11 @@
 
 return {
   "folke/flash.nvim",
-  opts = {},
+  opts = {
+    search = {
+      mode = "fuzzy",
+    },
+  },
   keys = {
     {
       "<Space>",
