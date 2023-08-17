@@ -14,9 +14,9 @@ return {
     vim.keymap.set("n", "R", [["*<cmd>lua require('substitute').operator()<cr>]], {})
     vim.keymap.set("x", "R", [["*<cmd>lua require('substitute').visual()<cr>]], {})
 
-    vim.keymap.set("n", "cx", "<cmd>lua require('substitute.exchange').operator()<cr>", {})
-    vim.keymap.set("n", "cxx", "<cmd>lua require('substitute.exchange').line()<cr>", {})
-    vim.keymap.set("x", "C", "<cmd>lua require('substitute.exchange').visual()<cr>", {})
-    vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", {})
+    vim.keymap.set("n", "gx", "<cmd>lua require('substitute.exchange').operator()<cr>", {})
+    vim.keymap.set("n", "gxx", "<cmd>lua require('substitute.exchange').line()<cr>", {})
+    vim.keymap.set("x", "G", "<cmd>lua require('substitute.exchange').visual()<cr>", {})
+    vim.keymap.set("n", "gxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", {})
   end,
 }
