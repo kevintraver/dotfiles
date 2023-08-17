@@ -19,7 +19,7 @@ return {
         "query",
       },
       highlight = {
-        enable = false,
+        enable = not vim.g.vscode,
       },
       indent = { enable = true },
       textobjects = {
