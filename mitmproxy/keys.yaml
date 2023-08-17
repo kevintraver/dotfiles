@@ -1,24 +1,19 @@
--
-  key: c
-  ctx: ["flowlist","flowview"]
+- key: c
+  ctx: ['flowlist', 'flowview']
   cmd: export.clip curl @focus
 
--
-  key: h
-  ctx: ["flowlist","flowview"]
+- key: h
+  ctx: ['flowlist', 'flowview']
   cmd: export.clip httpie @focus
 
--
-  key: d
-  ctx: ["flowlist","flowview"]
+- key: d
+  ctx: ['flowlist', 'flowview']
   cmd: cut.clip @focus request.host
 
--
-  key: u
-  ctx: ["flowlist","flowview"]
+- key: u
+  ctx: ['flowlist', 'flowview']
   cmd: cut.clip @focus request.url
 
--
-  key: D
-  ctx: ["flowlist","flowview"]
+- key: D
+  ctx: ['flowlist', 'flowview']
   cmd: view.flows.remove @focus
