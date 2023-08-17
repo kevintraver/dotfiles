@@ -9,4 +9,4 @@ unbind gT
 blacklistadd https://github.com
 
 bindurl https://github.com --mode=ignore f hint
-bindurl https://github.com --mode=ignore f hint -b
+bindurl https://github.com --mode=ignore F hint -b
