@@ -2,6 +2,7 @@
 
 return {
   "gbprod/substitute.nvim",
+  event = "VeryLazy",
   config = function()
     require("substitute").setup({
       on_substitute = require("yanky.integration").substitute(),

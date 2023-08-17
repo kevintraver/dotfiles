@@ -2,6 +2,7 @@
 
 return {
   "chrisgrieser/nvim-spider",
+  event = "VeryLazy",
   config = function()
     vim.keymap.set({ "n", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
 

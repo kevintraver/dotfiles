@@ -2,6 +2,7 @@
 
 return {
   "XXiaoA/ns-textobject.nvim",
+  event = "VeryLazy",
   dependencies = { "nvim-surround" },
   config = function()
     require("ns-textobject").setup({
