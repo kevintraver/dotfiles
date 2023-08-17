@@ -13,7 +13,6 @@ GitHub.remotehub
 GitHub.vscode-pull-request-github
 humao.rest-client
 JohnnyMorganz.stylua
-jq-syntax-highlighting.jq-syntax-highlighting
 lifeart.vscode-ember-unstable
 lifeart.vscode-glimmer-syntax
 monokai.theme-monokai-pro-vscode
