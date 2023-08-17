@@ -31,5 +31,8 @@
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "ms-mssql.mssql"
   }
 }
