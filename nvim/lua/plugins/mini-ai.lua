@@ -35,8 +35,6 @@ return {
         }, {}),
         f = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
         c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
-        k = gen_spec.treesitter({ a = "@assignment.lhs", i = "@assignment.lhs" }, {}),
-        v = gen_spec.treesitter({ a = "@assignment.rhs", i = "@assignment.rhs" }, {}),
       },
     })
   end,
