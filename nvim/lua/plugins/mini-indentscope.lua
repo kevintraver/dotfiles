@@ -1,4 +1,4 @@
--- https://github.com/echasnovski/mini.ai
+-- https://github.com/echasnovski/mini.indentscope
 
 return {
   "echasnovski/mini.indentscope",
