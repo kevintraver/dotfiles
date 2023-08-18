@@ -4,7 +4,11 @@ return {
   "gbprod/yanky.nvim",
   event = "VeryLazy",
   config = function()
-    require("yanky").setup()
+    require("yanky").setup({
+      preserve_cursor_position = {
+        enabled = true,
+      },
+    })
 
     vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
     vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
