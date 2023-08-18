@@ -5,7 +5,7 @@ return {
   event = "VeryLazy",
   opts = {
     search = {
-      mode = "exact",
+      mode = "fuzzy",
       multi_window = false,
     },
   },
