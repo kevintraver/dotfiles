@@ -27,9 +27,9 @@ alias tmpchrome='open -na /Applications/Google\ Chrome.app --args "--user-data-d
 alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications'
 alias tcp='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications --proxy-server="socks5://127.0.0.1:8080" --host-resolver-rules="MAP * ~NOTFOUND , EXCLUDE 127.0.0.1"'
 
-alias chromereset="rm -rf /Users/kevin/Library/Application\ Support/Google && rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
+alias reset-chrome="rm -rf /Users/kevin/Library/Application\ Support/Google && rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
 
-alias firefoxreset='\
+alias reset-firefox='\
   rm -rf /Users/kevin/Library/Application\ Support/Firefox; \
   rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist; \
   echo -e "lockPref(\"browser.aboutwelcome.enabled\", false);\
