@@ -1,4 +1,5 @@
 1Password.op-vscode
+alefragnani.Bookmarks
 alefragnani.project-manager
 asvetliakov.vscode-neovim
 dbaeumer.vscode-eslint

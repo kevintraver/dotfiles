@@ -22,6 +22,7 @@
   "rest-client.previewResponseInUntitledDocument": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.external.osxExec": "Warp.app",
+  "bookmarks.sideBar.countBadge": "off",
   "prettier.configPath": "/Users/kevin/.dotfiles/.prettierrc",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
