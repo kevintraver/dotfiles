@@ -5,7 +5,6 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
-  "editor.detectIndentation": false,
   "git.autofetch": true,
   "workbench.startupEditor": "none",
   "window.newWindowDimensions": "maximized",
