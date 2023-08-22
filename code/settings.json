@@ -25,7 +25,7 @@
   "cSpell.customDictionaries": {
     "myWords": {
       "name": "Custom Dictionary",
-      "path": "/Users/kevin/.vscode/custom-dictionary.txt",
+      "path": "/Users/kevin/.custom-words.txt",
       "scope": "user",
       "addWords": true
     }
