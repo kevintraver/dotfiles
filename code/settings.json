@@ -22,6 +22,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.external.osxExec": "Warp.app",
   "bookmarks.sideBar.countBadge": "off",
+  "cSpell.customDictionaries": {
+    "myWords": {
+      "name": "Custom Dictionary",
+      "path": "/Users/kevin/.vscode/custom-dictionary.txt",
+      "scope": "user",
+      "addWords": true
+    }
+  },
   "prettier.configPath": "/Users/kevin/.dotfiles/.prettierrc",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
@@ -34,5 +42,8 @@
   },
   "[sql]": {
     "editor.defaultFormatter": "ms-mssql.mssql"
-  }
+  },
+  "cSpell.enableFiletypes": [
+    "lua"
+  ]
 }
