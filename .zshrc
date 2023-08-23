@@ -87,6 +87,8 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
 HISTORY_IGNORE="(l|ls*|sk|ep|fd|ranger|la|cd|tmux*|pwd|rc|rs|fzf|mssql-cli|exit|gt|nvim|z*|zi*|up|rm*|trash*|sudo rm*|spt|*pass*)"
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
