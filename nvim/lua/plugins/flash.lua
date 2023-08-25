@@ -27,7 +27,7 @@ return {
       desc = "Flash (operator)",
     },
     {
-      "<C-Space>",
+      "<S-Space>",
       mode = { "n", "o", "x" },
       function()
         require("flash").treesitter()
