@@ -15,6 +15,4 @@ return {
 
   vim.keymap.set({ "n", "x" }, "L", "$"),
   vim.keymap.set({ "n", "x" }, "H", "^"),
-
-  vim.keymap.set({ "o", "x" }, "gG", "<cmd>lua require('various-textobjs').entireBuffer()<CR>"),
 }

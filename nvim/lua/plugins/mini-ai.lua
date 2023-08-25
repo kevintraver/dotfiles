@@ -33,6 +33,15 @@ return {
           return { from = { line = line_num, col = from_col }, to = { line = line_num, col = to_col } }
         end,
 
+        g = function(ai_type)
+          local from = { line = 1, col = 1 }
+          local to = {
+            line = vim.fn.line("$"),
+            col = math.max(vim.fn.getline("$"):len(), 1),
+          }
+          return { from = from, to = to, vis_mode = "V" }
+        end,
+
         m = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
         c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
       },
