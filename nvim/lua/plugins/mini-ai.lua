@@ -14,7 +14,7 @@ return {
       custom_textobjects = {
         d = { "[%-%.]?%f[%d]%d+" },
 
-        L = function(ai_type)
+        l = function(ai_type)
           local line_num = vim.fn.line(".")
           local line = vim.fn.getline(line_num)
           -- Select `\n` past the line for `a` to delete it whole
