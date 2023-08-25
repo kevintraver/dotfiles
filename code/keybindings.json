@@ -18,8 +18,6 @@
   // -------------------------
   // Navigation
   // -------------------------
-  { "key": "cmd+h", "command": "workbench.action.navigateLeft" },
-  { "key": "cmd+l", "command": "workbench.action.navigateRight" },
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
@@ -151,5 +149,10 @@
     "key": "cmd+[",
     "command": "editor.action.marker.prev",
     "when": "editorFocus"
+  },
+  {
+    "key": "cmd+h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
   }
 ]
