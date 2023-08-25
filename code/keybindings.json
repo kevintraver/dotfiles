@@ -141,5 +141,15 @@
     "command": "vscode-neovim.send",
     "args": "<S-Space>",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+[",
+    "command": "editor.action.marker.prev",
+    "when": "editorFocus"
   }
 ]
