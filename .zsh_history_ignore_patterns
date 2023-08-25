@@ -1,0 +1,29 @@
+cd
+cd ..
+cd ~
+code
+code .
+exa
+exit
+fzf
+git log
+git pull
+git push
+git undo
+gt
+gt .
+la
+ls
+mssql-cli
+n *
+nvim
+nvim .
+pwd
+reset-chrome
+reset-firefox
+rm *
+sudo rm *
+tc
+tmux
+trash*
+z *

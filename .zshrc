@@ -86,7 +86,9 @@ alias gs='git status'
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-HISTORY_IGNORE="(l|ls*|sk|ep|fd|ranger|la|cd|tmux*|pwd|rc|rs|fzf|mssql-cli|exit|gt|nvim|z*|zi*|up|rm*|trash*|sudo rm*|spt|*pass*)"
+HISTORY_IGNORE=$(cat ~/.dotfiles/.zsh_history_ignore_patterns | tr '\n' '|')
+HISTORY_IGNORE=${HISTORY_IGNORE%|}
+
 HISTSIZE=1000000000
 SAVEHIST=1000000000
 
