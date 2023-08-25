@@ -24,8 +24,8 @@
   "terminal.external.osxExec": "Warp.app",
   "bookmarks.sideBar.countBadge": "off",
   "cSpell.customDictionaries": {
-    "myWords": {
-      "name": "Custom Dictionary",
+    "Custom Words": {
+      "name": "Custom Words",
       "path": "/Users/kevin/.custom-words.txt",
       "scope": "user",
       "addWords": true

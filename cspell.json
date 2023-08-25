@@ -1,8 +1,8 @@
 {
-  "dictionaries": ["Custom Dictionary"],
+  "dictionaries": ["Custom Words"],
   "dictionaryDefinitions": [
     {
-      "name": "Custom Dictionary",
+      "name": "Custom Words",
       "path": "/Users/kevin/.custom-words.txt",
       "scope": "user",
       "addWords": true
