@@ -30,7 +30,7 @@
       "addWords": true
     }
   },
-  "prettier.configPath": "/Users/kevin/.dotfiles/.prettierrc",
+  "prettier.configPath": "~/.dotfiles/.prettierrc",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
