@@ -3,7 +3,7 @@
   "dictionaryDefinitions": [
     {
       "name": "Custom Words",
-      "path": "/Users/kevin/.custom-words.txt",
+      "path": "~/.custom-words.txt",
       "scope": "user",
       "addWords": true
     },
