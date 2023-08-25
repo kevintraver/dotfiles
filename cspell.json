@@ -1,9 +1,15 @@
 {
-  "dictionaries": ["Custom Words"],
+  "dictionaries": ["Custom Words", "Plugins"],
   "dictionaryDefinitions": [
     {
       "name": "Custom Words",
       "path": "/Users/kevin/.custom-words.txt",
+      "scope": "user",
+      "addWords": true
+    },
+    {
+      "name": "Plugins",
+      "path": ".cspell/plugins.txt",
       "scope": "user",
       "addWords": true
     }
