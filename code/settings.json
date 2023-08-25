@@ -46,6 +46,7 @@
   },
   "cSpell.enableFiletypes": ["lua"],
   "github.copilot.enable": {
-    "*": true,
+    "plaintext": true,
+    "markdown": true
   }
 }
