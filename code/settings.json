@@ -44,5 +44,8 @@
   "[sql]": {
     "editor.defaultFormatter": "ms-mssql.mssql"
   },
-  "cSpell.enableFiletypes": ["lua"]
+  "cSpell.enableFiletypes": ["lua"],
+  "github.copilot.enable": {
+    "*": true,
+  }
 }
