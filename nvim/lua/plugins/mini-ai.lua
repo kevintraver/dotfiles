@@ -7,6 +7,10 @@ return {
   config = function()
     local gen_spec = require("mini.ai").gen_spec
     require("mini.ai").setup({
+      mappings = {
+        around_last = "",
+        inside_last = "",
+      },
       custom_textobjects = {
         d = { "[%-%.]?%f[%d]%d+" },
 
