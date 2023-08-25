@@ -20,7 +20,6 @@
   "editor.inlineSuggest.enabled": true,
   "rest-client.previewResponsePanelTakeFocus": false,
   "rest-client.previewResponseInUntitledDocument": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.external.osxExec": "Warp.app",
   "bookmarks.sideBar.countBadge": "off",
   "cSpell.customDictionaries": {
@@ -35,6 +34,7 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua"
   },
