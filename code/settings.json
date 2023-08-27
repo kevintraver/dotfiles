@@ -22,6 +22,7 @@
   "rest-client.previewResponseInUntitledDocument": true,
   "terminal.external.osxExec": "Warp.app",
   "bookmarks.sideBar.countBadge": "off",
+  "1password.editor.suggestStorage": false,
   "cSpell.customDictionaries": {
     "Custom Words": {
       "name": "Custom Words",
