@@ -133,13 +133,13 @@
     "key": "ctrl+space",
     "command": "vscode-neovim.send",
     "args": "<C-Space>",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "shift+space",
     "command": "vscode-neovim.send",
     "args": "<S-Space>",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "cmd+]",
