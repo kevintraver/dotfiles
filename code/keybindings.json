@@ -78,7 +78,7 @@
   {
     "key": "alt+d",
     "command": "git.openChange",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "shift+alt+d",
@@ -87,26 +87,27 @@
   {
     "key": "alt+c",
     "command": "git.commit",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "alt+s",
     "command": "git.stageSelectedRanges",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "shift+alt+s",
-    "command": "git.stage"
+    "command": "git.stage",
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "alt+u",
     "command": "git.unstage",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "alt+r",
     "command": "git.revertSelectedRanges",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "alt+[",
