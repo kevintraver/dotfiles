@@ -76,30 +76,37 @@
     "command": "workbench.scm.focus"
   },
   {
-    "key": "shift+cmd+d",
+    "key": "alt+d",
+    "command": "git.openChange",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+d",
     "command": "git.openAllChanges"
   },
   {
     "key": "alt+c",
-    "command": "git.commit"
+    "command": "git.commit",
+    "when": "editorTextFocus"
   },
   {
     "key": "alt+s",
+    "command": "git.stageSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+s",
     "command": "git.stage"
   },
   {
     "key": "alt+u",
-    "command": "git.unstage"
+    "command": "git.unstage",
+    "when": "editorTextFocus"
   },
   {
     "key": "alt+r",
     "command": "git.revertSelectedRanges",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+r",
-    "command": "git.clean",
-    "when": "!editorFocus"
   },
   {
     "key": "alt+[",
