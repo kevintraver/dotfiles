@@ -52,6 +52,7 @@ Prisma.prisma
 rebornix.ruby
 redhat.java
 redhat.vscode-yaml
+statelyai.stately-vscode
 streetsidesoftware.code-spell-checker
 twxs.cmake
 typed-ember.glint-vscode
