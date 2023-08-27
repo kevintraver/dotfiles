@@ -5,6 +5,7 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    "RRethy/nvim-treesitter-textsubjects",
     "nvim-treesitter/playground",
   },
   build = function()
@@ -25,13 +26,9 @@ return {
       highlight = {
         enable = not vim.g.vscode,
       },
-      indent = { enable = true },
       textobjects = {
         select = {
           enable = true,
-
-          -- Automatically jump forward to textobj, similar to targets.vim
-          lookahead = true,
         },
         swap = {
           enable = true,
@@ -41,6 +38,15 @@ return {
           swap_previous = {
             ["<A-,>"] = "@parameter.inner",
           },
+        },
+      },
+      textsubjects = {
+        enable = true,
+        prev_selection = ",", -- (Optional) keymap to select the previous selection
+        keymaps = {
+          ["<cr>"] = "textsubjects-smart",
+          [";"] = "textsubjects-container-outer",
+          ["i;"] = "textsubjects-container-inner",
         },
       },
       playground = {
