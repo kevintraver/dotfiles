@@ -13,8 +13,7 @@
   },
   {
     "key": "cmd+d",
-    "command": "workbench.action.splitEditor",
-    "when": "editorTextFocus"
+    "command": "workbench.action.splitEditor"
   },
   {
     "key": "ctrl+h",
