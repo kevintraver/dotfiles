@@ -204,7 +204,7 @@
     "command": "workbench.scm.focus"
   },
   {
-    "key": "shift+cmd+g",
+    "key": "alt+g",
     "command": "magit.status"
   },
   {
