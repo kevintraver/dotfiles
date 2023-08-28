@@ -193,11 +193,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "m m",
-    "command": "bookmarks.toggle",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
-  },
-  {
     "key": "] ]",
     "command": "bookmarks.jumpToNext",
     "when": "editorTextFocus && neovim.mode != 'insert'"
