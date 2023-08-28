@@ -16,6 +16,7 @@
   "arduino.path": "/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-ide-extension/build/",
   "arduino.useArduinoCli": true,
   "arduino.commandPath": "arduino-cli",
+  "xstate.nestTypegenFiles": false,
   "editor.accessibilitySupport": "off",
   "editor.inlineSuggest.enabled": true,
   "rest-client.previewResponsePanelTakeFocus": false,
