@@ -170,12 +170,12 @@
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
-    "key": "cmd+]",
+    "key": "cmd-]",
     "command": "editor.action.marker.next",
     "when": "editorFocus"
   },
   {
-    "key": "cmd+[",
+    "key": "cmd-[",
     "command": "editor.action.marker.prev",
     "when": "editorFocus"
   },
@@ -185,12 +185,17 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "] ]",
+    "key": "ctrl+m",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+]",
     "command": "bookmarks.jumpToNext",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
-    "key": "[ [",
+    "key": "ctrl+[",
     "command": "bookmarks.jumpToPrevious",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
