@@ -77,14 +77,6 @@
     "when": "editorTextFocus && neovim.mode != insert"
   },
   {
-    "key": "shift+cmd+g",
-    "command": "workbench.scm.focus"
-  },
-  {
-    "key": "ctrl+cmd+g",
-    "command": "workbench.scm.focus"
-  },
-  {
     "key": "alt+d",
     "command": "git.openChange",
     "when": "editorTextFocus && neovim.mode != 'insert'"
@@ -201,5 +193,52 @@
     "key": "[ [",
     "command": "bookmarks.jumpToPrevious",
     "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+cmd+g",
+    "command": "workbench.scm.focus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "magit.status"
+  },
+  {
+    "key": "g g",
+    "command": "cursorTop",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "x",
+    "command": "magit.discard-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "k",
+    "command": "-magit.discard-at-point"
+  },
+  {
+    "key": "o",
+    "command": "magit.visit-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "magit.move-next-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "magit.move-next-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "magit.move-previous-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "magit.move-previous-entity",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   }
 ]
