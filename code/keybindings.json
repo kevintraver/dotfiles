@@ -91,7 +91,7 @@
   {
     "key": "alt+c",
     "command": "git.commit",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
+    "when": "neovim.mode != 'insert'"
   },
   {
     "key": "c",
