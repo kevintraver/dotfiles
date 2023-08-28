@@ -99,11 +99,6 @@
     "when": "focusedView == 'workbench.scm'"
   },
   {
-    "key": "o",
-    "command": "git.openFile",
-    "when": "focusedView == 'workbench.scm'"
-  },
-  {
     "key": "s",
     "command": "git.stage",
     "when": "focusedView == 'workbench.scm'"
