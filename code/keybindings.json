@@ -76,6 +76,10 @@
     "command": "workbench.scm.focus"
   },
   {
+    "key": "ctrl+cmd+g",
+    "command": "workbench.scm.focus"
+  },
+  {
     "key": "alt+d",
     "command": "git.openChange",
     "when": "editorTextFocus && neovim.mode != 'insert'"
@@ -88,6 +92,31 @@
     "key": "alt+c",
     "command": "git.commit",
     "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+  {
+    "key": "c",
+    "command": "git.commit",
+    "when": "focusedView == 'workbench.scm'"
+  },
+  {
+    "key": "o",
+    "command": "git.openFile",
+    "when": "focusedView == 'workbench.scm'"
+  },
+  {
+    "key": "s",
+    "command": "git.stage",
+    "when": "focusedView == 'workbench.scm'"
+  },
+  {
+    "key": "u",
+    "command": "git.unstage",
+    "when": "focusedView == 'workbench.scm'"
+  },
+  {
+    "key": "r",
+    "command": "git.clean",
+    "when": "focusedView == 'workbench.scm'"
   },
   {
     "key": "alt+s",
