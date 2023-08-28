@@ -42,6 +42,11 @@ return {
           return { from = from, to = to, vis_mode = "V" }
         end,
 
+        o = gen_spec.treesitter({
+          a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+          i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+        }, {}),
+
         m = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
         c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
       },
