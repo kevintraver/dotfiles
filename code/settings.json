@@ -33,6 +33,8 @@
       "addWords": true
     }
   },
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
   "prettier.configPath": "~/.dotfiles/.prettierrc",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
