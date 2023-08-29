@@ -12,6 +12,7 @@
   "window.newWindowDimensions": "maximized",
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
+  "editor.fontFamily": "Hack",
   "window.commandCenter": true,
   "gitlens.rebaseEditor.ordering": "asc",
   "arduino.path": "/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-ide-extension/build/",
