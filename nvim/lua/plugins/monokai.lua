@@ -5,6 +5,6 @@ return {
   event = "VeryLazy",
   cond = not vim.g.vscode,
   config = function()
-    require("monokai-pro").setup({ filter = "spectrum" })
+    require("monokai-pro").setup()
   end,
 }
