@@ -245,5 +245,9 @@
     "key": "ctrl+p",
     "command": "magit.move-previous-entity",
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "ctrl+alt+g",
+    "command": "magit.status"
   }
 ]
