@@ -1,31 +1,9 @@
 {
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "editor.formatOnSave": true,
-  "ruby.format": "standard",
-  "editor.lineNumbers": "relative",
-  "workbench.list.automaticKeyboardNavigation": false,
-  "editor.minimap.enabled": false,
-  "editor.tabSize": 2,
-  "git.autofetch": true,
-  "git.showCommitInput": false,
-  "workbench.startupEditor": "none",
-  "window.newWindowDimensions": "maximized",
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons",
-  "editor.fontFamily": "Hack",
-  "window.commandCenter": true,
-  "gitlens.rebaseEditor.ordering": "asc",
+  "1password.editor.suggestStorage": false,
+  "arduino.commandPath": "arduino-cli",
   "arduino.path": "/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-ide-extension/build/",
   "arduino.useArduinoCli": true,
-  "arduino.commandPath": "arduino-cli",
-  "xstate.nestTypegenFiles": false,
-  "editor.accessibilitySupport": "off",
-  "editor.inlineSuggest.enabled": true,
-  "rest-client.previewResponsePanelTakeFocus": false,
-  "rest-client.previewResponseInUntitledDocument": true,
-  "terminal.external.osxExec": "Warp.app",
   "bookmarks.sideBar.countBadge": "off",
-  "1password.editor.suggestStorage": false,
   "cSpell.customDictionaries": {
     "Custom Words": {
       "name": "Custom Words",
@@ -34,27 +12,47 @@
       "addWords": true
     }
   },
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.configPath": "~/.dotfiles/.prettierrc",
+  "cSpell.enableFiletypes": ["lua"],
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Hack",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "eslint.rules.customizations": [
+    {
+      "rule": "*",
+      "severity": "warn"
+    }
+  ],
+  "eslint.validate": ["glimmer-ts", "glimmer-js"],
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[lua]": {
-    "editor.defaultFormatter": "JohnnyMorganz.stylua"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "[sql]": {
-    "editor.defaultFormatter": "ms-mssql.mssql"
-  },
-  "cSpell.enableFiletypes": ["lua"],
+  "git.autofetch": true,
+  "git.showCommitInput": false,
   "github.copilot.enable": {
     "plaintext": true,
     "markdown": true
   },
+  "gitlens.rebaseEditor.ordering": "asc",
+  "prettier.configPath": "~/.dotfiles/.prettierrc",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "rest-client.previewResponseInUntitledDocument": true,
+  "rest-client.previewResponsePanelTakeFocus": false,
+  "ruby.format": "standard",
+  "terminal.external.osxExec": "Warp.app",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "window.commandCenter": true,
+  "window.newWindowDimensions": "maximized",
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.list.automaticKeyboardNavigation": false,
+  "workbench.startupEditor": "none",
+  "xstate.nestTypegenFiles": false,
   "[glimmer-js]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.foldingStrategy": "indentation"
@@ -63,11 +61,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.foldingStrategy": "indentation"
   },
-  "eslint.validate": ["glimmer-ts", "glimmer-js"],
-  "eslint.rules.customizations": [
-    {
-      "rule": "*",
-      "severity": "warn"
-    }
-  ]
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "ms-mssql.mssql"
+  }
 }
