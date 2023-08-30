@@ -96,6 +96,11 @@
     "when": "focusedView == 'workbench.scm'"
   },
   {
+    "key": "o",
+    "command": "git.openFile",
+    "when": "focusedView == 'workbench.scm'"
+  },
+  {
     "key": "s",
     "command": "git.stage",
     "when": "focusedView == 'workbench.scm'"
@@ -186,6 +191,11 @@
   },
   {
     "key": "ctrl+m",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus && neovim.mode != 'insert'"
+  },
+  {
+    "key": "cmd+m",
     "command": "bookmarks.toggle",
     "when": "editorTextFocus && neovim.mode != 'insert'"
   },
