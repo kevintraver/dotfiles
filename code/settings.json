@@ -10,6 +10,12 @@
       "path": "~/.cspell/custom-words.txt",
       "scope": "user",
       "addWords": true
+    },
+    "Plugins": {
+      "name": "Plugins",
+      "path": "~/.cspell/plugins.txt",
+      "scope": "user",
+      "addWords": true
     }
   },
   "cSpell.enableFiletypes": ["lua"],
