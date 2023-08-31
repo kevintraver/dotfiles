@@ -3,13 +3,13 @@
   "dictionaryDefinitions": [
     {
       "name": "Custom Words",
-      "path": "~/.custom-words.txt",
+      "path": "~/.cspell/custom-words.txt",
       "scope": "user",
       "addWords": true
     },
     {
       "name": "Plugins",
-      "path": ".cspell/plugins.txt",
+      "path": "~/.cspell/plugins.txt",
       "scope": "user",
       "addWords": true
     }
