@@ -13,6 +13,11 @@
     }
   },
   "cSpell.enableFiletypes": ["lua"],
+  "cSpell.ignorePaths": [
+    "node_modules/**",
+    "package-lock.json",
+    "pnpm-lock.json"
+  ],
   "editor.accessibilitySupport": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Hack",
