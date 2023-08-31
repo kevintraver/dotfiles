@@ -39,7 +39,6 @@
   },
   "gitlens.rebaseEditor.ordering": "asc",
   "prettier.configPath": "~/.dotfiles/.prettierrc",
-  "prettier.semi": false,
   "prettier.singleQuote": true,
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.previewResponsePanelTakeFocus": false,
