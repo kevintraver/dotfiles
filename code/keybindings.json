@@ -267,5 +267,15 @@
   {
     "key": "ctrl+alt+g",
     "command": "magit.status"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
   }
 ]
