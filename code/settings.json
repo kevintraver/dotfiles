@@ -49,8 +49,6 @@
     "markdown": true
   },
   "gitlens.rebaseEditor.ordering": "asc",
-  "prettier.configPath": "~/.dotfiles/.prettierrc",
-  "prettier.singleQuote": true,
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.previewResponsePanelTakeFocus": false,
   "ruby.format": "standard",
