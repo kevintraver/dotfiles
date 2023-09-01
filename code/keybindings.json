@@ -8,6 +8,10 @@
     "command": "workbench.view.explorer"
   },
   {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
     "key": "cmd+p",
     "command": "workbench.action.showCommands"
   },
