@@ -5,8 +5,7 @@
   },
   {
     "key": "ctrl+cmd+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
+    "command": "workbench.view.explorer"
   },
   {
     "key": "cmd+p",
