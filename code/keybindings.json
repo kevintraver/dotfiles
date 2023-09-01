@@ -202,12 +202,12 @@
   {
     "key": "ctrl+]",
     "command": "bookmarks.jumpToNext",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
+    "when": "neovim.mode != 'insert'"
   },
   {
     "key": "ctrl+[",
     "command": "bookmarks.jumpToPrevious",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
+    "when": "neovim.mode != 'insert'"
   },
   {
     "key": "ctrl+cmd+g",
