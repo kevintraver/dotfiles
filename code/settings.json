@@ -56,7 +56,6 @@
   "ruby.format": "standard",
   "terminal.external.osxExec": "Warp.app",
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "window.commandCenter": true,
   "window.newWindowDimensions": "maximized",
   "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "Monokai Pro Icons",
