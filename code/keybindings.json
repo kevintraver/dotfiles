@@ -276,5 +276,15 @@
     "key": "ctrl+k",
     "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "q",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarFocus"
   }
 ]
