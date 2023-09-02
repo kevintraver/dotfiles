@@ -8,5 +8,7 @@ return {
   config = function()
     require("telescope").setup()
     require("telescope").load_extension("fzf")
+
+    vim.keymap.set("n", "<A-o>", require("telescope.builtin").find_files, {})
   end,
 }
