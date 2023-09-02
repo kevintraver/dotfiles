@@ -305,5 +305,10 @@
     "key": "q",
     "command": "workbench.action.closeAuxiliaryBar",
     "when": "auxiliaryBarFocus"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   }
 ]
