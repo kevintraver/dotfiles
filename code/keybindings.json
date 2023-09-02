@@ -284,7 +284,7 @@
   {
     "key": "q",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarFocus"
+    "when": "sideBarFocus && !textInputFocus"
   },
   {
     "key": "cmd+e",
