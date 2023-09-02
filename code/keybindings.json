@@ -290,5 +290,9 @@
     "key": "cmd+e",
     "command": "workbench.action.closeSidebar",
     "when": "sideBarFocus"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
