@@ -1,4 +1,5 @@
 1Password.op-vscode
+adamcowley.neo4j-vscode
 alefragnani.Bookmarks
 alefragnani.project-manager
 asvetliakov.vscode-neovim
@@ -13,9 +14,9 @@ bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
-dracula-theme.theme-dracula
 eamodio.gitlens
 EditorConfig.EditorConfig
+ericadamski.carbon-now-sh
 esbenp.prettier-vscode
 formulahendry.code-runner
 fregante.ghost-text
@@ -32,6 +33,7 @@ JohnnyMorganz.stylua
 kahole.magit
 lifeart.vscode-ember-unstable
 lifeart.vscode-glimmer-syntax
+mikestead.dotenv
 monokai.theme-monokai-pro-vscode
 ms-azuretools.vscode-docker
 ms-mssql.data-workspace-vscode
@@ -55,6 +57,7 @@ ms-vscode.live-server
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
 ms-vscode.vscode-serial-monitor
+ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
 msjsdiag.vscode-react-native
 Prisma.prisma
@@ -63,6 +66,8 @@ redhat.java
 redhat.vscode-yaml
 statelyai.stately-vscode
 streetsidesoftware.code-spell-checker
+sumneko.lua
+Thinker.sort-json
 twxs.cmake
 typed-ember.glint-vscode
 VisualStudioExptTeam.intellicode-api-usage-examples
