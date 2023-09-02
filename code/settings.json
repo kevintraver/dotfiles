@@ -1,5 +1,6 @@
 {
   "1password.editor.suggestStorage": false,
+  "Lua.diagnostics.globals": ["vim"],
   "arduino.commandPath": "arduino-cli",
   "arduino.path": "/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-ide-extension/build/",
   "arduino.useArduinoCli": true,
