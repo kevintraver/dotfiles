@@ -26,12 +26,12 @@
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
-    "when": "neovim.mode != insert"
+    "when": "neovim.mode != insert && !editorSimpleInput"
   },
   {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
-    "when": "neovim.mode != insert"
+    "when": "neovim.mode != insert || !editorSimpleInput"
   },
   {
     "key": "alt+h",
@@ -284,7 +284,7 @@
   {
     "key": "q",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarFocus && !textInputFocus"
+    "when": "sideBarFocus && !editorSimpleInput"
   },
   {
     "key": "cmd+e",
