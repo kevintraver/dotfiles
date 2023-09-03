@@ -26,12 +26,12 @@
   {
     "key": "ctrl+h",
     "command": "workbench.action.navigateLeft",
-    "when": "neovim.mode != insert && !editorSimpleInput"
+    "when": "neovim.mode != insert && !editorSimpleInput && !inQuickOpen"
   },
   {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
-    "when": "neovim.mode != insert || !editorSimpleInput"
+    "when": "neovim.mode != insert && !editorSimpleInput && !inQuickOpen"
   },
   {
     "key": "alt+h",
