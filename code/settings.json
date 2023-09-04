@@ -26,6 +26,7 @@
     "pnpm-lock.json"
   ],
   "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Hack",
   "editor.formatOnSave": true,
