@@ -55,7 +55,8 @@
   "rest-client.previewResponsePanelTakeFocus": false,
   "ruby.format": "standard",
   "search.exclude": {
-    "**/.git": true
+    "**/.git": true,
+    "**/COMMIT_EDITMSG": true
   },
   "terminal.external.osxExec": "Warp.app",
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
