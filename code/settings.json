@@ -51,6 +51,7 @@
     "markdown": true
   },
   "gitlens.rebaseEditor.ordering": "asc",
+  "indentRainbow.indicatorStyle": "light",
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.previewResponsePanelTakeFocus": false,
   "ruby.format": "standard",
