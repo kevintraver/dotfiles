@@ -225,6 +225,10 @@
     "command": "magit.status"
   },
   {
+    "key": "cmd+g",
+    "command": "magit.status"
+  },
+  {
     "key": "shift+alt+g",
     "command": "magit.status"
   },
