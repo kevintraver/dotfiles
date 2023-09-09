@@ -14,10 +14,4 @@ return {
   vim.keymap.set({ "o", "x" }, "ai", "<cmd>lua require('various-textobjs').indentation('outer', 'inner')<CR>"),
   vim.keymap.set({ "o", "x" }, "iI", "<cmd>lua require('various-textobjs').indentation('inner', 'outer')<CR>"),
   vim.keymap.set({ "o", "x" }, "aI", "<cmd>lua require('various-textobjs').indentation('outer', 'outer')<CR>"),
-
-  vim.keymap.set({ "o" }, "L", "$"),
-  vim.keymap.set({ "o" }, "H", "0"),
-
-  vim.keymap.set({ "n", "x" }, "L", "$"),
-  vim.keymap.set({ "n", "x" }, "H", "^"),
 }
