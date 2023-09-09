@@ -308,7 +308,7 @@
   {
     "key": "q",
     "command": "workbench.action.closeAuxiliaryBar",
-    "when": "auxiliaryBarFocus"
+    "when": "auxiliaryBarFocus && inputFocus"
   },
   {
     "key": "ctrl+.",
