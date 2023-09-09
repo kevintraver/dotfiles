@@ -2,6 +2,7 @@
 
 return {
   "jackMort/ChatGPT.nvim",
+  enabled = false,
   event = "VeryLazy",
   cond = not vim.g.vscode,
   config = function()
