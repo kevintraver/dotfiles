@@ -24,6 +24,14 @@ return {
         neogit.open()
       end, { desc = "Neogit Open" })
 
+      vim.keymap.set("n", "<A-g>", function()
+        neogit.open()
+      end, { desc = "Neogit Open" })
+
+      vim.keymap.set("n", "<D-g>", function()
+        neogit.open()
+      end, { desc = "Neogit Open" })
+
       vim.keymap.set("n", "<leader>gc", function()
         neogit.open({ "commit" })
       end, { desc = "Neogit Open" })
