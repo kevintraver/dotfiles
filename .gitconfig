@@ -3,5 +3,4 @@
 	email = kevintraver@kevintraver.com
 
 [core]
-	editor = code --wait
 	excludesfile = /Users/kevin/.gitignore_global
