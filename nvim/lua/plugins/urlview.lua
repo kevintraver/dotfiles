@@ -4,6 +4,6 @@ return {
   "axieax/urlview.nvim",
   event = "VeryLazy",
   config = function()
-    require("urlview").setup()
+    require("urlview").setup({})
   end,
 }
