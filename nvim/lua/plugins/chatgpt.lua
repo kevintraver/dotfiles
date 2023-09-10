@@ -5,7 +5,9 @@ return {
   event = "VeryLazy",
   cond = not vim.g.vscode,
   config = function()
-    require("chatgpt").setup()
+    require("chatgpt").setup({
+      yank_register = '"',
+    })
   end,
   requires = {
     "MunifTanjim/nui.nvim",
