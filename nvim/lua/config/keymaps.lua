@@ -12,4 +12,8 @@ if not vim.g.vscode then
   vim.keymap.set("n", "<leader>gc", function()
     neogit.open({ "commit" })
   end, { desc = "Neogit Open" })
+
+  vim.keymap.set("n", "<leader>cc", function()
+    neogit.open({ "commit" })
+  end, { desc = "Neogit Open" })
 end
