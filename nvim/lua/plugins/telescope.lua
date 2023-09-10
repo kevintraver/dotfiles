@@ -21,6 +21,8 @@ return {
     },
   },
   keys = {
-    { "<D-o>", Util.telescope("files"), desc = "Find Files (root dir)" },
+    { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
+    { "<D-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+    { "<D-p>", "<cmd>Telescope commands<cr>", desc = "Commands" },
   },
 }
