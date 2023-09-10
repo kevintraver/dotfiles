@@ -18,7 +18,4 @@ return {
       dependencies = { "kkharji/sqlite.lua" },
     },
   },
-  keys = {
-    { "<leader><space>", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecent" },
-  },
 }
