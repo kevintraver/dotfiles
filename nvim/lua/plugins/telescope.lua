@@ -1,21 +1,23 @@
 -- https://github.com/nvim-telescope/telescope.nvim
 
 return {
-  "telescope.nvim",
-  cond = not vim.g.vscode,
+  "nvim-telescope/telescope.nvim",
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
     },
-    "nvim-telescope/telescope-frecency.nvim",
-    "kkharji/sqlite.lua",
+    {
+      "nvim-telescope/telescope-frecency.nvim",
+      config = function()
+        require("telescope").load_extension("frecency")
+      end,
+      dependencies = { "kkharji/sqlite.lua" },
+    },
   },
-  config = function()
-    require("telescope").load_extension("fzf")
-    require("telescope").load_extension("frecency")
-  end,
-
   keys = {
     { "<leader><space>", "<cmd>Telescope frecency workspace=CWD<CR>", desc = "Frecent" },
   },
