@@ -14,4 +14,13 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
+  keys = {
+    {
+      "<leader><space>",
+      function()
+        require("chatgpt").openChat()
+      end,
+      desc = "ChatGPT",
+    },
+  },
 }
