@@ -3,10 +3,38 @@
 return {
   "chrisgrieser/nvim-spider",
   event = "VeryLazy",
-  config = function()
-    vim.keymap.set({ "n", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-    vim.keymap.set({ "n", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-    vim.keymap.set({ "n", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-    vim.keymap.set({ "n", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
-  end,
+  keys = {
+    {
+      "w",
+      mode = { "n", "x" },
+      function()
+        require("spider").motion("w")
+      end,
+      desc = "Spider-w",
+    },
+    {
+      "e",
+      mode = { "n", "x" },
+      function()
+        require("spider").motion("e")
+      end,
+      desc = "Spider-e",
+    },
+    {
+      "b",
+      mode = { "n", "x" },
+      function()
+        require("spider").motion("b")
+      end,
+      desc = "Spider-b",
+    },
+    {
+      "ge",
+      mode = { "n", "x" },
+      function()
+        require("spider").motion("ge")
+      end,
+      desc = "Spider-ge",
+    },
+  },
 }
