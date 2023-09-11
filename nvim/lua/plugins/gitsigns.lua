@@ -102,6 +102,10 @@ return {
         map({ "o", "x" }, "ih", function()
           require("gitsigns").select_hunk()
         end, { desc = "Select hunk" })
+
+        map({ "o", "x" }, "ah", function()
+          require("gitsigns").select_hunk()
+        end, { desc = "Select hunk" })
       end,
     })
   end,
