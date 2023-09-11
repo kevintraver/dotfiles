@@ -34,6 +34,26 @@ return {
           return "<Ignore>"
         end, { expr = true })
 
+        map("n", "<D-]>", function()
+          if vim.wo.diff then
+            return "<D-]>"
+          end
+          vim.schedule(function()
+            gs.next_hunk()
+          end)
+          return "<Ignore>"
+        end, { expr = true })
+
+        map("n", "<D-[>", function()
+          if vim.wo.diff then
+            return "<D-[>"
+          end
+          vim.schedule(function()
+            gs.prev_hunk()
+          end)
+          return "<Ignore>"
+        end, { expr = true })
+
         -- Actions
         map("n", "<leader>hs", gs.stage_hunk, { desc = "Stage hunk" })
         map("n", "<A-s>", gs.stage_hunk, { desc = "Stage hunk" })
