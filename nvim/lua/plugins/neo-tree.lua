@@ -2,6 +2,13 @@
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  opts = {
+    window = {
+      mappings = {
+        ["<D-f>"] = "fuzzy_sorter",
+      },
+    },
+  },
 
   keys = {
     {
