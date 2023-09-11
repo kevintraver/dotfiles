@@ -99,9 +99,9 @@ return {
         map("n", "<leader>td", gs.toggle_deleted, { desc = "Toggle deleted" })
 
         -- Text object
-        map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", {
-          desc = "Select hunk",
-        })
+        map({ "o", "x" }, "ih", function()
+          require("gitsigns").select_hunk()
+        end, { desc = "Select hunk" })
       end,
     })
   end,
