@@ -27,6 +27,7 @@ return {
     { "<leader>gl", "<cmd>Telescope git_commits<CR>", desc = "commits" },
     { "<leader>gh", "<cmd>Telescope git_bcommits<CR>", desc = "commits" },
     { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "branches" },
+    { "<D-S-o>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
     {
       "<D-t>",
       Util.telescope("lsp_document_symbols", {
