@@ -8,17 +8,23 @@ return {
   keys = {
     {
       "<leader>gd",
-      "<cmd>DiffviewOpen<cr>",
+      function()
+        require("diffview").open({})
+      end,
       desc = "Diff view open",
     },
     {
       "<leader>gh",
-      "<cmd>DiffviewFileHistory %<CR>",
+      function()
+        require("diffview").file_history(nil, { "%" })
+      end,
       desc = "Diff view file history",
     },
     {
       "<leader>gq",
-      "<cmd>DiffviewClose<CR>",
+      function()
+        require("diffview").close()
+      end,
       desc = "Diff view close",
     },
   },
