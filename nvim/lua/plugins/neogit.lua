@@ -11,21 +11,30 @@ return {
   },
   config = function()
     require("neogit").setup({})
-
-    if not vim.g.vscode then
-      local neogit = require("neogit")
-
-      vim.keymap.set("n", "<A-g>", function()
-        neogit.open()
-      end, { desc = "Neogit Open" })
-
-      vim.keymap.set("n", "<D-g>", function()
-        neogit.open()
-      end, { desc = "Neogit Open" })
-
-      vim.keymap.set("n", "<leader>gc", function()
-        neogit.open({ "commit" })
-      end, { desc = "Neogit Open" })
-    end
   end,
+
+  keys = {
+    {
+      "<A-g>",
+      function()
+        require("neogit").open()
+      end,
+      { desc = "Neogit Open" },
+    },
+    {
+
+      "<D-g>",
+      function()
+        require("neogit").open()
+      end,
+      { desc = "Neogit Open" },
+    },
+    {
+      "<leader>gc",
+      function()
+        require("neogit").open({ "commit" })
+      end,
+      { desc = "Neogit Open" },
+    },
+  },
 }
