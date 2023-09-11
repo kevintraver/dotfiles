@@ -6,5 +6,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("lazy").setup({})
+
+    vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Lazygit" })
   end,
 }
