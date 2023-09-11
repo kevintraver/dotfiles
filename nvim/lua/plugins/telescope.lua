@@ -24,5 +24,6 @@ return {
     { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
     { "<D-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
     { "<D-p>", "<cmd>Telescope commands<cr>", desc = "Commands" },
+    { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "commits" },
   },
 }
