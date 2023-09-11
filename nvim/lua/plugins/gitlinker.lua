@@ -10,17 +10,23 @@ return {
   keys = {
     {
       "<leader>gY",
-      '<cmd>lua require"gitlinker".get_repo_url()<cr>',
+      function()
+        require("gitlinker").get_repo_url()
+      end,
       { desc = "Copy Repo URL" },
     },
     {
       "<leader>go",
-      '<cmd>lua require"gitlinker".get_buf_range_url("n", {action_callback = require"gitlinker.actions".open_in_browser})<cr>',
+      function()
+        require("gitlinker").get_buf_range_url("n", { action_callback = require("gitlinker.actions").open_in_browser })
+      end,
       { desc = "Open File in Browser" },
     },
     {
       "<leader>gO",
-      '<cmd>lua require"gitlinker".get_repo_url({action_callback = require"gitlinker.actions".open_in_browser})<cr>',
+      function()
+        require("gitlinker").get_repo_url({ action_callback = require("gitlinker.actions").open_in_browser })
+      end,
       { desc = "Open Repo in Browser" },
     },
   },
