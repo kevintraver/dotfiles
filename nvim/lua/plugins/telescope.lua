@@ -25,5 +25,23 @@ return {
     { "<D-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
     { "<D-p>", "<cmd>Telescope commands<cr>", desc = "Commands" },
     { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "commits" },
+    {
+      "<D-t>",
+      Util.telescope("lsp_document_symbols", {
+        symbols = {
+          "Class",
+          "Function",
+          "Method",
+          "Constructor",
+          "Interface",
+          "Module",
+          "Struct",
+          "Trait",
+          "Field",
+          "Property",
+        },
+      }),
+      desc = "Goto Symbol",
+    },
   },
 }
