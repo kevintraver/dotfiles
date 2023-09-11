@@ -6,6 +6,8 @@ return {
     window = {
       mappings = {
         ["<D-f>"] = "fuzzy_sorter",
+        ["<A-]>"] = "next_git_modified",
+        ["<A-[>"] = "prev_git_modified",
       },
     },
   },
