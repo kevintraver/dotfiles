@@ -5,6 +5,7 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
   },
+  opts = {},
   cmd = {
     "NeoAI",
     "NeoAIOpen",
@@ -22,7 +23,4 @@ return {
     { "<leader>as", desc = "summarize text" },
     { "<leader>ag", desc = "generate git message" },
   },
-  config = function()
-    require("neoai").setup({})
-  end,
 }
