@@ -14,8 +14,6 @@ return {
     },
   },
   keys = {
-    { "<C-n>", "<Plug>(YankyCycleForward)", desc = "Cycle forward through yank history" },
-    { "<C-p>", "<Plug>(YankyCycleBackward)", desc = "Cycle backward through yank history" },
     { "Y", [["+<Plug>(YankyYank)]], mode = { "n", "x" }, desc = "Yank to global clipboard" },
   },
 }
