@@ -7,11 +7,48 @@ return {
     useDefaultKeymaps = false,
   },
 
-  vim.keymap.set({ "o", "x" }, "iS", "<cmd>lua require('various-textobjs').subword(true)<CR>"),
-  vim.keymap.set({ "o", "x" }, "aS", "<cmd>lua require('various-textobjs').subword(false)<CR>"),
-
-  vim.keymap.set({ "o", "x" }, "ii", "<cmd>lua require('various-textobjs').indentation('inner', 'inner')<CR>"),
-  vim.keymap.set({ "o", "x" }, "ai", "<cmd>lua require('various-textobjs').indentation('outer', 'inner')<CR>"),
-  vim.keymap.set({ "o", "x" }, "iI", "<cmd>lua require('various-textobjs').indentation('inner', 'outer')<CR>"),
-  vim.keymap.set({ "o", "x" }, "aI", "<cmd>lua require('various-textobjs').indentation('outer', 'outer')<CR>"),
+  keys = {
+    {
+      "iS",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").subword("inner")
+      end,
+    },
+    {
+      "aS",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").subword("outer")
+      end,
+    },
+    {
+      "ii",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("inner", "inner")
+      end,
+    },
+    {
+      "ai",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("outer", "outer")
+      end,
+    },
+    {
+      "iI",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("inner", "outer")
+      end,
+    },
+    {
+      "aI",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("outer", "outer")
+      end,
+    },
+  },
 }
