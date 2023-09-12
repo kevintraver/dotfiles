@@ -11,6 +11,7 @@ return {
     max_count = 5,
     disabled_filetypes = {
       "neo-tree",
+      "NeogitStatus",
     },
   },
 }
