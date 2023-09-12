@@ -14,7 +14,7 @@ return {
   },
   keys = {
     {
-      "<leader><space>",
+      "\\\\",
       function()
         require("chatgpt").openChat()
       end,
