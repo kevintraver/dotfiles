@@ -6,7 +6,9 @@ return {
   keys = {
     {
       "<leader>r",
-      "<Plug>RestNvim<CR>",
+      function()
+        require("rest-nvim").run()
+      end,
       { desc = "Send HTTP Request" },
     },
   },
