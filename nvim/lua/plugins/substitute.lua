@@ -9,15 +9,70 @@ return {
     exchange = { use_esc_to_cancel = false },
   },
 
-  config = function()
-    vim.keymap.set("n", "r", [[<cmd>lua require('substitute').operator()<cr>]], {})
-    vim.keymap.set("x", "r", [[<cmd>lua require('substitute').visual()<cr>]], {})
-    vim.keymap.set("n", "R", [["*<cmd>lua require('substitute').operator()<cr>]], {})
-    vim.keymap.set("x", "R", [["*<cmd>lua require('substitute').visual()<cr>]], {})
-
-    vim.keymap.set("n", "cx", "<cmd>lua require('substitute.exchange').operator()<cr>", {})
-    vim.keymap.set("n", "cxx", "<cmd>lua require('substitute.exchange').line()<cr>", {})
-    vim.keymap.set("x", "cx", "<cmd>lua require('substitute.exchange').visual()<cr>", {})
-    vim.keymap.set("n", "cxc", "<cmd>lua require('substitute.exchange').cancel()<cr>", {})
-  end,
+  keys = {
+    {
+      "r",
+      mode = "n",
+      function()
+        require("substitute").operator()
+      end,
+      desc = "Replace",
+    },
+    {
+      "r",
+      mode = "x",
+      function()
+        require("substitute").visual()
+      end,
+      desc = "Replace",
+    },
+    {
+      "R",
+      mode = "n",
+      function()
+        require("substitute").operator({ register = "*" })
+      end,
+      desc = "Replace from system clipboard",
+    },
+    {
+      "R",
+      mode = "x",
+      function()
+        require("substitute").visual({ register = "*" })
+      end,
+      desc = "Replace from system clipboard",
+    },
+    {
+      "cx",
+      mode = "n",
+      function()
+        require("substitute.exchange").operator()
+      end,
+      desc = "Exchange",
+    },
+    {
+      "cxx",
+      mode = "n",
+      function()
+        require("substitute.exchange").line()
+      end,
+      desc = "Exchange (line)",
+    },
+    {
+      "cx",
+      mode = "x",
+      function()
+        require("substitute.exchange").visual()
+      end,
+      desc = "Exchange",
+    },
+    {
+      "cxc",
+      mode = "x",
+      function()
+        require("substitute.exchange").cancel()
+      end,
+      desc = "Exchange (cancel)",
+    },
+  },
 }
