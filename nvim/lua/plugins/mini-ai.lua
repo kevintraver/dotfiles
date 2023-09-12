@@ -33,7 +33,7 @@ return {
           return { from = { line = line_num, col = from_col }, to = { line = line_num, col = to_col } }
         end,
 
-        g = function(ai_type)
+        g = function()
           local from = { line = 1, col = 1 }
           local to = {
             line = vim.fn.line("$"),
