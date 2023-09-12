@@ -1,3 +1,5 @@
+-- https://github.com/tomasky/bookmarks.nvim
+
 return {
   "crusj/bookmarks.nvim",
   cond = not vim.g.vscode,
