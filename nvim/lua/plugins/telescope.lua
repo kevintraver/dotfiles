@@ -45,4 +45,20 @@ return {
       desc = "Goto Symbol",
     },
   },
+  opts = {
+    defaults = {
+      mappings = {
+        n = {
+          ["<D-w>"] = function(...)
+            return require("telescope.actions").close(...)
+          end,
+        },
+        i = {
+          ["<D-w>"] = function(...)
+            return require("telescope.actions").close(...)
+          end,
+        },
+      },
+    },
+  },
 }
