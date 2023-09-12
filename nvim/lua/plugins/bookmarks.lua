@@ -1,5 +1,6 @@
 return {
   "crusj/bookmarks.nvim",
+  cond = not vim.g.vscode,
   dependencies = {
     "nvim-telescope/telescope.nvim",
     "nvim-web-devicons",

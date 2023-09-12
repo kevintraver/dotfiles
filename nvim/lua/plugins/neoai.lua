@@ -2,6 +2,7 @@
 
 return {
   "Bryley/neoai.nvim",
+  cond = not vim.g.vscode,
   dependencies = {
     "MunifTanjim/nui.nvim",
   },

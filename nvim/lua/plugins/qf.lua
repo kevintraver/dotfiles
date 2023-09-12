@@ -2,6 +2,7 @@
 
 return {
   "ten3roberts/qf.nvim",
+  cond = not vim.g.vscode,
   enabled = false,
   config = function()
     require("qf").setup({})

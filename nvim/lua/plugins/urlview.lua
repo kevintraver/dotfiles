@@ -2,5 +2,6 @@
 
 return {
   "axieax/urlview.nvim",
+  cond = not vim.g.vscode,
   event = "VeryLazy",
 }

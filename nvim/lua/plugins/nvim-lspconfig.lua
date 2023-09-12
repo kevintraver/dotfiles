@@ -2,6 +2,7 @@
 
 return {
   "neovim/nvim-lspconfig",
+  cond = not vim.g.vscode,
   dependencies = { "jose-elias-alvarez/typescript.nvim" },
   opts = {
     -- make sure mason installs the server

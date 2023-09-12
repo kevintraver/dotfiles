@@ -4,6 +4,7 @@ local Util = require("lazyvim.util")
 
 return {
   "nvim-telescope/telescope.nvim",
+  cond = not vim.g.vscode,
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
