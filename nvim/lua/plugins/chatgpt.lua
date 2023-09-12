@@ -14,6 +14,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
+  opts = {},
   keys = {
     {
       "<leader><space>",
