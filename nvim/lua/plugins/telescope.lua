@@ -19,6 +19,12 @@ return {
       end,
       dependencies = { "kkharji/sqlite.lua" },
     },
+    {
+      "crusj/bookmarks.nvim",
+      config = function()
+        require("telescope").load_extension("bookmarks")
+      end,
+    },
   },
   keys = {
     { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
