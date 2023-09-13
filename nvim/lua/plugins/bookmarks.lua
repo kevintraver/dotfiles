@@ -1,4 +1,4 @@
--- https://github.com/tomasky/bookmarks.nvim
+-- https://github.com/crusj/bookmarks.nvim
 
 return {
   "crusj/bookmarks.nvim",
