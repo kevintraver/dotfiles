@@ -14,6 +14,13 @@ return {
       desc = "Diff view open",
     },
     {
+      "<D-d>",
+      function()
+        require("diffview").open({})
+      end,
+      desc = "Diff view open",
+    },
+    {
       "<leader>gh",
       function()
         require("diffview").file_history(nil, { "%" })
