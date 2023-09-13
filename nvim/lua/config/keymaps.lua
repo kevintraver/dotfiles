@@ -15,5 +15,6 @@ vim.keymap.set("n", "<D-q>", "<cmd>qa<cr>", { desc = "Quit all" })
 vim.keymap.set("n", "<D-S-n>", "<cmd>tabnew<cr>", { desc = "New tab" })
 vim.keymap.set("n", "<D-n>", "<cmd>vnew<cr>", { desc = "New File" })
 
+-- unmap lazyvim keymaps
 vim.keymap.set("n", "<leader>l", "")
 vim.keymap.set("n", "<leader>L", "")
