@@ -8,7 +8,16 @@ return {
     "nvim-web-devicons",
   },
   config = function()
-    require("bookmarks").setup()
+    require("bookmarks").setup({
+      keymap = {
+        add = "<leader>ba",
+      },
+    })
   end,
-  keys = { { "<tab><tab>", mode = { "n" } } },
+  keys = {
+    {
+      "<tab><tab>",
+      desc = "Toggle Bookmarks",
+    },
+  },
 }
