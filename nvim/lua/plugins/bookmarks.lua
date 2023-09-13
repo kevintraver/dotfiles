@@ -4,7 +4,12 @@ return {
   "crusj/bookmarks.nvim",
   cond = not vim.g.vscode,
   dependencies = {
-    "nvim-telescope/telescope.nvim",
+    {
+      "nvim-telescope/telescope.nvim",
+      config = function()
+        require("telescope").load_extension("bookmarks")
+      end,
+    },
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
