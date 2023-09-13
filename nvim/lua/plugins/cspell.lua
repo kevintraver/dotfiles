@@ -1,6 +1,22 @@
 -- https://github.com/davidmh/cspell.nvim
 
 return {
-  "davidmh/cspell.nvim",
-  cond = not vim.g.vscode,
+  {
+    "davidmh/cspell.nvim",
+    cond = not vim.g.vscode,
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    opts = function(_, opts)
+      table.insert(
+        opts.sources,
+        require("cspell").diagnostics.with({
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity["WARN"]
+          end,
+        })
+      )
+      table.insert(opts.sources, require("cspell").code_actions)
+    end,
+  },
 }
