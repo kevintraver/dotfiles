@@ -9,7 +9,11 @@ return {
     "nvim-telescope/telescope.nvim",
     "sindrets/diffview.nvim",
   },
-  opts = {},
+  opts = {
+    integrations = {
+      diffview = true,
+    },
+  },
   keys = {
     {
       "<A-g>",
