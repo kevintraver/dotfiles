@@ -5,6 +5,16 @@ return {
   cond = not vim.g.vscode,
   event = "VeryLazy",
 
+  opts = {
+    keymaps = {
+      file_panel = {
+        ["q"] = "<Cmd>tabc<CR>",
+        ["<D-w>"] = "<Cmd>tabc<CR>",
+        ["<D-d>"] = "<Cmd>tabc<CR>",
+      },
+    },
+  },
+
   keys = {
     {
       "<leader>gd",
