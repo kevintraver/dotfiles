@@ -14,5 +14,13 @@ return {
       end,
       desc = "Send line to terminal",
     },
+    {
+      mode = { "n", "t" },
+      "<D-t>",
+      function()
+        require("toggleterm").toggle_command()
+      end,
+      desc = "Send line to terminal",
+    },
   },
 }
