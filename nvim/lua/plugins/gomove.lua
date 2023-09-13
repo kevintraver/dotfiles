@@ -2,6 +2,7 @@
 
 return {
   "booperlv/nvim-gomove",
+  event = "VeryLazy",
   config = function()
     require("gomove").setup()
     vim.keymap.set("n", "<A-h>", function()
