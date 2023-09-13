@@ -4,13 +4,15 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   cond = not vim.g.vscode,
   opts = {
-    window = {
-      mappings = {
-        ["<D-f>"] = "fuzzy_sorter",
-        ["<A-]>"] = "next_git_modified",
-        ["<A-[>"] = "prev_git_modified",
-        ["<D-]>"] = "next_git_modified",
-        ["<D-[>"] = "prev_git_modified",
+    filesystem = {
+      window = {
+        mappings = {
+          ["<D-f>"] = "fuzzy_sorter",
+          ["<A-]>"] = "next_git_modified",
+          ["<A-[>"] = "prev_git_modified",
+          ["<D-]>"] = "next_git_modified",
+          ["<D-[>"] = "prev_git_modified",
+        },
       },
     },
   },
