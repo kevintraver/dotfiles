@@ -15,13 +15,14 @@ return {
   config = function()
     require("bookmarks").setup({
       keymap = {
+        toggle = "<leader>bt",
         add = "<leader>ba",
       },
     })
   end,
   keys = {
     {
-      "<tab><tab>",
+      "<leader>bt",
       desc = "Toggle Bookmarks",
     },
   },
