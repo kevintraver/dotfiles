@@ -5,7 +5,7 @@ return {
   cond = not vim.g.vscode,
   dependencies = {
     "nvim-telescope/telescope.nvim",
-    "nvim-web-devicons",
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
     require("bookmarks").setup({
