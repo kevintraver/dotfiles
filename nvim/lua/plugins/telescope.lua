@@ -28,7 +28,7 @@ return {
     { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "branches" },
     { "<D-S-o>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
     {
-      "<D-t>",
+      "<leader>ft",
       Util.telescope("lsp_document_symbols", {
         symbols = {
           "Class",
