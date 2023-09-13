@@ -8,10 +8,6 @@ return {
     -- make sure mason installs the server
     servers = {
       tsserver = {
-        keys = {
-          { "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", desc = "Organize Imports" },
-          { "<leader>cR", "<cmd>TypescriptRenameFile<CR>", desc = "Rename File" },
-        },
         settings = {
           typescript = {
             format = {
