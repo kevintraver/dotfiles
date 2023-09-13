@@ -5,6 +5,7 @@ return {
   opts = {
     defaults = {
       ["<leader>g"] = { name = "+git" },
+      ["<leader>r"] = { name = "+replace" },
     },
   },
 }
