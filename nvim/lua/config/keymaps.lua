@@ -9,6 +9,8 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Sav
 vim.keymap.set("n", "<D-d>", "<C-W>v", { desc = "Split window right" })
 
 vim.keymap.set("n", "<D-q>", "<cmd>qa<cr>", { desc = "Quit all" })
+vim.keymap.set("n", "<D-S-q>", "<cmd>qa!<cr>", { desc = "Quit! all" })
+vim.keymap.set("n", "<D-S-w>", "<cmd>q<cr>", { desc = "Close" })
 
 -- new
 vim.keymap.set("n", "<D-S-n>", "<cmd>tabnew<cr>", { desc = "New tab" })
