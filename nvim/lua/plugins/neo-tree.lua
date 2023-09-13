@@ -8,6 +8,8 @@ return {
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",
+        ["<D-,>"] = "prev_source",
+        ["<D-.>"] = "next_source",
       },
     },
     filesystem = {
