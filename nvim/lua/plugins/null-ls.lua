@@ -7,7 +7,14 @@ return {
     local nls = require("null-ls")
     table.insert(opts.sources, nls.builtins.formatting.prettierd)
     table.insert(opts.sources, require("typescript.extensions.null-ls.code-actions"))
-    table.insert(opts.sources, require("cspell").diagnostics)
+    table.insert(
+      opts.sources,
+      require("cspell").diagnostics.with({
+        diagnostics_postprocess = function(diagnostic)
+          diagnostic.severity = vim.diagnostic.severity["WARN"]
+        end,
+      })
+    )
     table.insert(opts.sources, require("cspell").code_actions)
   end,
 }
