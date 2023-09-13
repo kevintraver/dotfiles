@@ -21,6 +21,13 @@ return {
       desc = "Diff view file history",
     },
     {
+      "<leader>gl",
+      function()
+        require("diffview").file_history(nil, {})
+      end,
+      desc = "Diff view history",
+    },
+    {
       "<leader>gq",
       function()
         require("diffview").close()
