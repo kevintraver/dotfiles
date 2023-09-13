@@ -4,6 +4,12 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   cond = not vim.g.vscode,
   opts = {
+    window = {
+      mappings = {
+        ["l"] = "open",
+        ["h"] = "close_node",
+      },
+    },
     filesystem = {
       window = {
         mappings = {
