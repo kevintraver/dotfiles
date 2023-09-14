@@ -12,6 +12,16 @@ return {
         ["<D-w>"] = "<Cmd>tabc<CR>",
         ["<D-d>"] = "<Cmd>tabc<CR>",
       },
+      view = {
+        ["q"] = "<Cmd>tabc<CR>",
+        ["<D-w>"] = "<Cmd>tabc<CR>",
+        ["<D-d>"] = "<Cmd>tabc<CR>",
+      },
+      file_history_panel = {
+        ["q"] = "<Cmd>tabc<CR>",
+        ["<D-w>"] = "<Cmd>tabc<CR>",
+        ["<D-d>"] = "<Cmd>tabc<CR>",
+      },
     },
   },
 
