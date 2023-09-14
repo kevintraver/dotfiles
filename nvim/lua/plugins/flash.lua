@@ -20,14 +20,6 @@ return {
       desc = "Flash Treesitter",
     },
     {
-      "<C-s>",
-      mode = { "n", "o", "x" },
-      function()
-        require("flash").treesitter_search()
-      end,
-      desc = "Flash Treesitter",
-    },
-    {
       "S",
       mode = { "n", "x", "o" },
       function()
