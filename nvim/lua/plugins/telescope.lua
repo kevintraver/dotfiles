@@ -40,6 +40,7 @@ return {
     { "<D-r>", "<cmd>Telescope resume<cr>", desc = "Resume" },
     { "<D-u>", "<cmd>Telescope undo<cr>", desc = "Undo" },
     { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "branches" },
+    { "<leader>fz", "<cmd>Telescope zoxide list<CR>", desc = "zoxide" },
     { "<D-S-o>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
     {
       "<leader>ft",
