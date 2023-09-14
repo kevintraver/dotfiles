@@ -8,19 +8,37 @@ return {
   opts = {
     keymaps = {
       file_panel = {
-        ["q"] = "<Cmd>tabc<CR>",
-        ["<D-w>"] = "<Cmd>tabc<CR>",
-        ["<D-d>"] = "<Cmd>tabc<CR>",
+        ["q"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-w>"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-d>"] = function()
+          vim.cmd.tabclose()
+        end,
       },
       view = {
-        ["q"] = "<Cmd>tabc<CR>",
-        ["<D-w>"] = "<Cmd>tabc<CR>",
-        ["<D-d>"] = "<Cmd>tabc<CR>",
+        ["q"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-w>"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-d>"] = function()
+          vim.cmd.tabclose()
+        end,
       },
       file_history_panel = {
-        ["q"] = "<Cmd>tabc<CR>",
-        ["<D-w>"] = "<Cmd>tabc<CR>",
-        ["<D-d>"] = "<Cmd>tabc<CR>",
+        ["q"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-w>"] = function()
+          vim.cmd.tabclose()
+        end,
+        ["<D-d>"] = function()
+          vim.cmd.tabclose()
+        end,
       },
     },
   },
