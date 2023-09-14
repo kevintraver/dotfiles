@@ -1,3 +1,6 @@
+autoload -U promptinit; promptinit
+prompt pure
+
 source ~/.zshrc.local
 
 export EDITOR=code
