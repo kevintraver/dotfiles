@@ -2,6 +2,7 @@
 
 return {
   "akinsho/toggleterm.nvim",
+  event = "VeryLazy",
   cmd = { "ToggleTerm" },
   opts = {
     size = 40,
