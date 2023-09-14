@@ -24,6 +24,9 @@ return {
       "vimdoc",
       "yaml",
     },
+    rainbow = {
+      enable = true,
+    },
     textobjects = {
       select = {
         enable = true,
