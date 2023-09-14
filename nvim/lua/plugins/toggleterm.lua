@@ -20,7 +20,7 @@ return {
       function()
         require("toggleterm").toggle_command()
       end,
-      desc = "Send line to terminal",
+      desc = "Toggle terminal",
     },
   },
 }
