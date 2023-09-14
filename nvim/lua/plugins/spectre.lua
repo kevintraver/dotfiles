@@ -13,7 +13,7 @@ return {
     {
       "<leader>rf",
       function()
-        require("spectre").open()
+        require("spectre").open_file_search()
       end,
       desc = "Replace in files (Spectre)",
     },
