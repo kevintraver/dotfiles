@@ -20,6 +20,12 @@ return {
       end,
       dependencies = { "kkharji/sqlite.lua" },
     },
+    {
+      "jvgrootveld/telescope-zoxide",
+      config = function()
+        require("telescope").load_extension("zoxide")
+      end,
+    },
   },
   keys = {
     { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
