@@ -6,6 +6,7 @@ return {
   opts = {
     window = {
       mappings = {
+        ["s"] = "",
         ["l"] = "open",
         ["h"] = "close_node",
         ["<D-,>"] = "prev_source",
