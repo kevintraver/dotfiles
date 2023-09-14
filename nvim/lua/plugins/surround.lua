@@ -9,8 +9,8 @@ return {
       normal_cur = "gss",
       visual = "gs",
       delete = "gds",
-      change = "gcs",
-      change_line = "gcS",
+      change = "grs",
+      change_line = "gS",
     },
   },
 }
