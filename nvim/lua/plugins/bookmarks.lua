@@ -12,14 +12,12 @@ return {
     },
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("bookmarks").setup({
-      keymap = {
-        toggle = "<leader>bt",
-        add = "<leader>ba",
-      },
-    })
-  end,
+  opts = {
+    keymap = {
+      toggle = "<leader>bt",
+      add = "<leader>ba",
+    },
+  },
   keys = {
     {
       "<leader>bt",
