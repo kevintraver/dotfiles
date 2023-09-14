@@ -15,7 +15,7 @@ return {
     filesystem = {
       window = {
         mappings = {
-          ["<D-f>"] = "fuzzy_sorter",
+          ["<D-f>"] = "filter_on_submit",
           ["<A-]>"] = "next_git_modified",
           ["<A-[>"] = "prev_git_modified",
           ["<D-]>"] = "next_git_modified",
