@@ -2,6 +2,7 @@
 
 return {
   "crusj/bookmarks.nvim",
+  event = "VeryLazy",
   cond = not vim.g.vscode,
   dependencies = {
     {
