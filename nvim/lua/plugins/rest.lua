@@ -8,10 +8,11 @@ return {
   keys = {
     {
       "<C-Enter>",
-      function()
-        require("rest-nvim").run()
-      end,
-      { desc = "Send HTTP Request" },
+      desc = "Send HTTP Request",
+    },
+    {
+      "<D-Enter>",
+      desc = "Send HTTP Request",
     },
   },
 }
