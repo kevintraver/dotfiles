@@ -26,12 +26,19 @@ return {
         require("telescope").load_extension("zoxide")
       end,
     },
+    {
+      "debugloop/telescope-undo.nvim",
+      config = function()
+        require("telescope").load_extension("undo")
+      end,
+    },
   },
   keys = {
     { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
     { "<D-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
     { "<D-p>", "<cmd>Telescope commands<cr>", desc = "Commands" },
     { "<D-r>", "<cmd>Telescope resume<cr>", desc = "Resume" },
+    { "<D-u>", "<cmd>Telescope undo<cr>", desc = "Undo" },
     { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "branches" },
     { "<D-S-o>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
     {
