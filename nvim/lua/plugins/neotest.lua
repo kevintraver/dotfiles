@@ -21,6 +21,7 @@ return {
       function()
         require("neotest").run.run()
       end,
+      desc = "Run tests",
     },
   },
 }
