@@ -10,16 +10,8 @@ return {
   },
 
   keys = {
-    {
-      "gj",
-      ":join<CR>",
-      desc = "Join with spaces",
-    },
-    {
-      "gJ",
-      ":join!<CR>",
-      desc = "Join without spaces",
-    },
+    { "gj", vim.cmd.join, desc = "Join with spaces" },
+    { "gJ", vim.cmd.Join, desc = "Join without spaces" },
     {
       "J",
       function()
