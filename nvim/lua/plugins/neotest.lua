@@ -9,6 +9,7 @@ return {
     "rouge8/neotest-rust",
   },
   config = function()
+    ---@diagnostic disable-next-line: missing-fields
     require("neotest").setup({
       adapters = {
         require("neotest-rust"),
