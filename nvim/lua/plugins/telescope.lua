@@ -34,14 +34,60 @@ return {
     },
   },
   keys = {
-    { "<D-o>", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-    { "<D-f>", Util.telescope("live_grep"), desc = "Grep (root dir)" },
-    { "<D-p>", "<cmd>Telescope commands<cr>", desc = "Commands" },
-    { "<D-r>", "<cmd>Telescope resume<cr>", desc = "Resume" },
-    { "<D-u>", "<cmd>Telescope undo<cr>", desc = "Undo" },
-    { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "branches" },
-    { "<leader>fz", "<cmd>Telescope zoxide list<CR>", desc = "zoxide" },
-    { "<D-S-o>", "<Cmd>Telescope projects<CR>", desc = "Projects" },
+    {
+      "<D-o>",
+      function()
+        require("telescope.builtin").oldfiles()
+      end,
+      desc = "Recent",
+    },
+    {
+      "<D-f>",
+      Util.telescope("live_grep"),
+      desc = "Grep (root dir)",
+    },
+    {
+      "<D-p>",
+      function()
+        require("telescope.builtin").commands()
+      end,
+      desc = "Commands",
+    },
+    {
+      "<D-r>",
+      function()
+        require("telescope.builtin").resume()
+      end,
+      desc = "Resume",
+    },
+    {
+      "<D-u>",
+      function()
+        require("telescope").extensions.undo.undo()
+      end,
+      desc = "Undo",
+    },
+    {
+      "<leader>gb",
+      function()
+        require("telescope.builtin").git_branches()
+      end,
+      desc = "branches",
+    },
+    {
+      "<leader>fz",
+      function()
+        require("telescope").extensions.zoxide.list()
+      end,
+      desc = "zoxide",
+    },
+    {
+      "<D-S-o>",
+      function()
+        require("telescope").extensions.projects.projects({})
+      end,
+      desc = "Projects",
+    },
     {
       "<leader>ft",
       Util.telescope("lsp_document_symbols", {
