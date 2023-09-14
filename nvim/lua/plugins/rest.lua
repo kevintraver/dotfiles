@@ -2,6 +2,7 @@
 
 return {
   "rest-nvim/rest.nvim",
+  event = "VeryLazy",
   cond = not vim.g.vscode,
   ft = "http",
   keys = {
