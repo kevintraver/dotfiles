@@ -9,8 +9,8 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", vim.cmd.write, { desc = "Save fi
 vim.keymap.set("n", "<D-l>", vim.cmd.vsplit, { desc = "Split window right" })
 
 vim.keymap.set("n", "<D-q>", vim.cmd.quitall, { desc = "Quit all" })
+vim.keymap.set("n", "<D-w>", vim.cmd.quit, { desc = "Close" })
 vim.keymap.set("n", "<D-S-q>", vim.cmd.Quit, { desc = "Quit! all" })
-vim.keymap.set("n", "<D-S-w>", vim.cmd.quit, { desc = "Close" })
 
 -- new
 vim.keymap.set("n", "<D-S-n>", vim.cmd.tabnew, { desc = "New tab" })
