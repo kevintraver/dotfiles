@@ -17,6 +17,7 @@ return {
       "query",
       "regex",
       "ruby",
+      "rust",
       "tsx",
       "typescript",
       "vim",
