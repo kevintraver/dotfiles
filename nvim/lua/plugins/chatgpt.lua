@@ -19,8 +19,8 @@ return {
   },
   keys = {
     {
-      mode = { "n", "v", "t" },
       "<D-\\>",
+      mode = { "n", "v", "t" },
       function()
         require("chatgpt").openChat()
       end,
