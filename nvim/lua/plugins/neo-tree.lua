@@ -13,6 +13,7 @@ return {
         ["<D-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
         ["<S-Tab>"] = "next_source",
+        ["<Esc>"] = "clear_filter",
       },
     },
     filesystem = {
