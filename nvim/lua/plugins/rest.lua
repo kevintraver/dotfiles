@@ -6,7 +6,7 @@ return {
   ft = "http",
   keys = {
     {
-      "<leader>r",
+      "<C-Enter>",
       function()
         require("rest-nvim").run()
       end,
