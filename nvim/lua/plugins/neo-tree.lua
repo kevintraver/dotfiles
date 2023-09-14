@@ -11,6 +11,8 @@ return {
         ["h"] = "close_node",
         ["<D-,>"] = "prev_source",
         ["<D-.>"] = "next_source",
+        ["<Tab>"] = "prev_source",
+        ["<S-Tab>"] = "next_source",
       },
     },
     filesystem = {
