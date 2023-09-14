@@ -10,9 +10,10 @@ return {
   keys = {
     {
       "<C-Enter>",
-      function()
-        require("toggleterm").send_lines_to_terminal("single_line", true, {})
-      end,
+      desc = "Send line to terminal",
+    },
+    {
+      "<D-Enter>",
       desc = "Send line to terminal",
     },
     {
