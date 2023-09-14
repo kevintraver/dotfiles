@@ -12,8 +12,8 @@ return {
       desc = "Flash Treesitter",
     },
     {
-      mode = { "n", "o", "x" },
       "<leader>j",
+      mode = { "n", "o", "x" },
       function()
         require("flash").jump({
           search = { mode = "search", max_length = 0 },
