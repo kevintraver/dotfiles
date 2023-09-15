@@ -13,12 +13,12 @@ return {
         ["<D-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
         ["<S-Tab>"] = "next_source",
-        ["<Esc>"] = "clear_filter",
       },
     },
     filesystem = {
       window = {
         mappings = {
+          ["<Esc>"] = "clear_filter",
           ["<D-f>"] = "filter_on_submit",
           ["<A-]>"] = "next_git_modified",
           ["<A-[>"] = "prev_git_modified",
