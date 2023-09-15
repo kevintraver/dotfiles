@@ -6,7 +6,7 @@ return {
     move_cursor = false,
     keymaps = {
       normal = "gs",
-      normal_cur = "gss",
+      normal_cur = "gsl",
       visual = "gs",
       delete = "gds",
       change = "grs",
