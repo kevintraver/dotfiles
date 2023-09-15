@@ -8,4 +8,13 @@ return {
     default_picker = "telescope",
     default_action = "clipboard",
   },
+  keys = {
+    {
+      "<leader>su",
+      function()
+        vim.cmd.UrlView()
+      end,
+      desc = "UrlView U",
+    },
+  },
 }
