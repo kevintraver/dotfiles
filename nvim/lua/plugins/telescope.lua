@@ -75,6 +75,13 @@ return {
       desc = "branches",
     },
     {
+      "<leader>ut",
+      function()
+        require("telescope.builtin").filetypes()
+      end,
+      desc = "Filetypes",
+    },
+    {
       "<leader>fz",
       function()
         require("telescope").extensions.zoxide.list()
