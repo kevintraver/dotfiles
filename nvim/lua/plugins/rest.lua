@@ -5,6 +5,13 @@ return {
   event = "VeryLazy",
   cond = not vim.g.vscode,
   ft = "http",
+  opts = {
+    result = {
+      formatters = {
+        vnd = "jq",
+      },
+    },
+  },
   keys = {
     {
       "<C-Enter>",
