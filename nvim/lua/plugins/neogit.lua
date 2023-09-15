@@ -20,7 +20,7 @@ return {
       function()
         require("neogit").open()
       end,
-      { desc = "Neogit Open" },
+      desc = "Neogit Open",
     },
     {
 
@@ -28,14 +28,14 @@ return {
       function()
         require("neogit").open()
       end,
-      { desc = "Neogit Open" },
+      desc = "Neogit Open",
     },
     {
       "<leader>gc",
       function()
         require("neogit").open({ "commit" })
       end,
-      { desc = "Neogit Open" },
+      desc = "Neogit Open",
     },
   },
 }

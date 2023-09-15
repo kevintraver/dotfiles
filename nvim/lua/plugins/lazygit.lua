@@ -11,7 +11,7 @@ return {
       function()
         require("lazygit").lazygit()
       end,
-      { desc = "Lazygit" },
+      desc = "Lazygit",
     },
   },
 }
