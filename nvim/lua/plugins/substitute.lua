@@ -68,7 +68,7 @@ return {
     },
     {
       "cxc",
-      mode = "x",
+      mode = "n",
       function()
         require("substitute.exchange").cancel()
       end,
