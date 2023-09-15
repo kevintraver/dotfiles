@@ -10,6 +10,11 @@ return {
 
   keys = {
     {
+
+      "<leader>gy",
+      desc = "Copy Buffer URL",
+    },
+    {
       "<leader>gY",
       function()
         require("gitlinker").get_repo_url()
