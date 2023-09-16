@@ -17,10 +17,26 @@ return {
       desc = "Send line to terminal",
     },
     {
-      mode = { "n", "t" },
       "<D-t>",
+      mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command()
+        require("toggleterm").toggle_command("direction=horizontal")
+      end,
+      desc = "Toggle terminal",
+    },
+    {
+      "<D-S-t>",
+      mode = { "n", "t" },
+      function()
+        require("toggleterm").toggle_command("direction=vertical size=100")
+      end,
+      desc = "Toggle terminal",
+    },
+    {
+      "<tab><tab>",
+      mode = { "n", "t" },
+      function()
+        require("toggleterm").toggle_command("direction=tab")
       end,
       desc = "Toggle terminal",
     },
