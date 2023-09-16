@@ -4,3 +4,4 @@
 
 [core]
 	excludesfile = /Users/kevin/.gitignore_global
+	editor = nvr --remote-wait-silent
