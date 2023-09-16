@@ -100,3 +100,6 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 eval "$(zoxide init zsh)"
+
+export PAGER=page
+export MANPAGER="page -t man"
