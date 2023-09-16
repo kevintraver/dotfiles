@@ -50,5 +50,13 @@ return {
         require("various-textobjs").indentation("outer", "outer")
       end,
     },
+    {
+      "u",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").url()
+      end,
+      desc = "Url",
+    },
   },
 }
