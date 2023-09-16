@@ -3,14 +3,4 @@
 return {
   "williamboman/mason.nvim",
   cond = not vim.g.vscode,
-  opts = {
-    ensure_installed = {
-      "stylua",
-      "shfmt",
-      "prettierd",
-      "prisma-language-server",
-      "rust-analyzer",
-      "typescript-language-server",
-    },
-  },
 }
