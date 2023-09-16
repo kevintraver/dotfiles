@@ -53,4 +53,8 @@ require("lazy").setup({
       },
     },
   },
+  dev = {
+    path = vim.fn.stdpath("data") .. "/lazy",
+    fallback = false, -- Fallback to git when local plugin doesn't exist
+  },
 })
