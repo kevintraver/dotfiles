@@ -9,3 +9,6 @@ vim.env["EDITOR"] = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
 vim.env["GIT_EDITOR"] = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
 
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
