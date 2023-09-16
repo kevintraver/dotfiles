@@ -113,6 +113,10 @@ return {
       }),
       desc = "Goto Symbol",
     },
+    {
+      "<leader><space>",
+      false,
+    },
   },
   opts = {
     defaults = {
