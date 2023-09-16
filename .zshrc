@@ -117,3 +117,7 @@ else
     export VISUAL="nvim"
     export EDITOR="nvim"
 fi
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^e' edit-command-line
