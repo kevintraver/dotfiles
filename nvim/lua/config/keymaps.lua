@@ -21,3 +21,5 @@ vim.keymap.set("n", "<leader>l", "")
 vim.keymap.set("n", "<leader>L", "")
 
 vim.keymap.set("n", "<leader><space>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+
+vim.keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
