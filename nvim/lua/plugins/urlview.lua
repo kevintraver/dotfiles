@@ -15,7 +15,7 @@ return {
       function()
         vim.cmd.UrlView()
       end,
-      desc = "UrlView U",
+      desc = "UrlView",
     },
   },
 }
