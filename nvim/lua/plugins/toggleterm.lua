@@ -33,7 +33,7 @@ return {
       desc = "Toggle terminal",
     },
     {
-      "<tab><tab>",
+      "<Tab><Space>",
       mode = { "n", "t" },
       function()
         require("toggleterm").toggle_command("direction=tab")
