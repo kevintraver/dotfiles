@@ -22,7 +22,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=horizontal")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle terminal (horizontal)",
     },
     {
       "<D-S-l>",
@@ -30,7 +30,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=vertical size=100")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle terminal (vertical)",
     },
     {
       "<D-S-t>",
@@ -38,7 +38,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=vertical size=100")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle terminal (vertical)",
     },
     {
       "<leader><tab><tab>",
@@ -46,7 +46,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=tab")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle terminal (tab)",
     },
     {
       "<leader><tab><tab>",
@@ -54,7 +54,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=tab")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle terminal (tab)",
     },
   },
 }
