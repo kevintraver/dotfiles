@@ -4,7 +4,9 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 autoload -U promptinit; promptinit
-prompt pure
+
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
 
 source ~/.zshrc.local
 
