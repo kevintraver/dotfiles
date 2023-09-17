@@ -25,6 +25,14 @@ return {
       desc = "Toggle terminal",
     },
     {
+      "<D-S-l>",
+      mode = { "n", "t" },
+      function()
+        require("toggleterm").toggle_command("direction=vertical size=100")
+      end,
+      desc = "Toggle terminal",
+    },
+    {
       "<D-S-t>",
       mode = { "n", "t" },
       function()
