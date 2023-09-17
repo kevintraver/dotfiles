@@ -29,6 +29,13 @@ return {
     {
       "debugloop/telescope-undo.nvim",
       config = function()
+        require("telescope").setup({
+          extensions = {
+            undo = {
+              use_delta = false,
+            },
+          },
+        })
         require("telescope").load_extension("undo")
       end,
     },
