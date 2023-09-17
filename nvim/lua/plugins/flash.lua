@@ -36,7 +36,7 @@ return {
       function()
         require("flash").treesitter_search()
       end,
-      desc = "Treesitter Search",
+      desc = "Flash Treesitter",
     },
     {
       "R",
@@ -52,7 +52,7 @@ return {
       function()
         require("flash").jump()
       end,
-      desc = "Flash Treesitter",
+      desc = "Flash",
     },
     {
       "<leader>j",
