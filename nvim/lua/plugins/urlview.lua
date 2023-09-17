@@ -1,9 +1,8 @@
 -- https://github.com/axieax/urlview.nvim
 
 return {
-  "kevintraver/urlview.nvim",
+  "axieax/urlview.nvim",
   cond = not vim.g.vscode,
-  dev = true,
   event = "VeryLazy",
   opts = {
     default_picker = "telescope",
