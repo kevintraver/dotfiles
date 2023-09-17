@@ -128,3 +128,4 @@ zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 eval "$(mcfly init zsh)"
+eval "$(mcfly-fzf init zsh)"
