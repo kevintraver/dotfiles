@@ -8,7 +8,6 @@ prompt pure
 
 source ~/.zshrc.local
 
-export EDITOR=code
 # osx apps
 
 # Tower
