@@ -4,7 +4,7 @@ return {
   "gbprod/yanky.nvim",
   opts = {
     highlight = {
-      timer = 300,
+      timer = 400,
     },
     preserve_cursor_position = {
       enabled = true,
