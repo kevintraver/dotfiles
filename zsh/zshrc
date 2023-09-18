@@ -30,8 +30,6 @@ source ~/.zshrc.local
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-HISTORY_IGNORE=$(cat ~/.dotfiles/.zsh_history_ignore_patterns | tr '\n' '|')
-HISTORY_IGNORE=${HISTORY_IGNORE%|}
 
 HISTSIZE=1000000000
 SAVEHIST=1000000000
@@ -83,3 +81,6 @@ alias lt='exa --tree --level=2'
 
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
 source "$DOTFILES_HOME/aliases.zsh"
+
+HISTORY_IGNORE=$(cat $DOTFILES_HOME/history_ignore_patterns.txt | tr '\n' '|')
+HISTORY_IGNORE=${HISTORY_IGNORE%|}
