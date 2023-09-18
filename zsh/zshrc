@@ -33,9 +33,6 @@ export PAGER=page
 export MANPAGER="page -t man"
 
 
-eval "$(mcfly init zsh)"
-eval "$(mcfly-fzf init zsh)"
-
 export FZF_DEFAULT_OPTS="
 --height=50%
 --layout=reverse
@@ -53,3 +50,7 @@ for file in "$DOTFILES_HOME/lib/languages"/*.zsh; do
 done
 
 source "$DOTFILES_HOME/aliases.zsh"
+
+eval "$(mcfly init zsh)"
+eval "$(mcfly-fzf init zsh)"
+
