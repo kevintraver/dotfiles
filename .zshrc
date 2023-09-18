@@ -151,3 +151,12 @@ export FZF_DEFAULT_OPTS="
 --layout=reverse
 --bind 'tab:accept'
 "
+
+alias l='exa -lbF --git'
+alias ls='exa'
+alias ll='exa -lbGF --git'
+alias llm='exa -lbGd --git --sort=modified'
+alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'
+alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+alias lS='exa -1'
+alias lt='exa --tree --level=2'
