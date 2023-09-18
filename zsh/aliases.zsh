@@ -1,3 +1,6 @@
+# editor
+alias e="$EDITOR"
+
 # osx apps
 
 # Tower
