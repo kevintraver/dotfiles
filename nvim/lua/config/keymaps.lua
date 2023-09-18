@@ -6,12 +6,12 @@
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", vim.cmd.write, { desc = "Save file" })
 
 -- windows
-vim.keymap.set("n", "<D-l>", vim.cmd.vsplit, { desc = "Split window right" })
+vim.keymap.set({ "n", "i" }, "<D-l>", vim.cmd.vsplit, { desc = "Split window right" })
 
 -- close/quit
-vim.keymap.set("n", "<D-q>", vim.cmd.quitall, { desc = "Quit all" })
-vim.keymap.set("n", "<D-w>", vim.cmd.quit, { desc = "Close" })
-vim.keymap.set("n", "<D-S-q>", vim.cmd.Quit, { desc = "Quit! all" })
+vim.keymap.set({ "n", "i" }, "<D-q>", vim.cmd.quitall, { desc = "Quit all" })
+vim.keymap.set({ "n", "i" }, "<D-w>", vim.cmd.quit, { desc = "Close" })
+vim.keymap.set({ "n", "i" }, "<D-S-q>", vim.cmd.Quit, { desc = "Quit! all" })
 
 -- new
 vim.keymap.set("n", "<D-S-n>", vim.cmd.tabnew, { desc = "New tab" })
