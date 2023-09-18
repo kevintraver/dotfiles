@@ -32,9 +32,6 @@ eval "$(zoxide init zsh)"
 export PAGER=page
 export MANPAGER="page -t man"
 
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '^e' edit-command-line
 
 eval "$(mcfly init zsh)"
 eval "$(mcfly-fzf init zsh)"
@@ -47,6 +44,7 @@ export FZF_DEFAULT_OPTS="
 
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
 source "$DOTFILES_HOME/aliases.zsh"
+source "$DOTFILES_HOME/keymaps.zsh"
 
 source "$DOTFILES_HOME/history/history.zsh"
 source "$DOTFILES_HOME/neovim_remote.zsh"
