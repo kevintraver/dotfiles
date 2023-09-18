@@ -35,3 +35,19 @@ vim.api.nvim_create_autocmd("TermEnter", {
     vim.keymap.set("n", "P", "<Plug>(YankyPutBefore)", { buffer = event.buf, silent = true })
   end,
 })
+
+vim.keymap.set("t", "<D-e>", "<C-e>")
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "/tmp/zsh*",
+  callback = function()
+    vim.keymap.set({ "n", "i" }, "<D-e>", function()
+      vim.cmd.write({ bang = true })
+      vim.cmd.quit()
+    end)
+    vim.keymap.set({ "n", "i" }, "<D-w>", function()
+      vim.cmd.write({ bang = true })
+      vim.cmd.quit()
+    end)
+  end,
+})
