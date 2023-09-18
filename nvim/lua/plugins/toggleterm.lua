@@ -25,6 +25,14 @@ return {
       desc = "Toggle terminal (horizontal)",
     },
     {
+      "<D-w>",
+      mode = { "t" },
+      function()
+        require("toggleterm").toggle_command()
+      end,
+      desc = "Toggle terminal",
+    },
+    {
       "<D-S-l>",
       mode = { "n", "t" },
       function()
