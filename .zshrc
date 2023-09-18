@@ -20,6 +20,8 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light Aloxaf/fzf-tab
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
+zinit light babarot/enhancd
+
 source ~/.zshrc.local
 
 # osx apps
