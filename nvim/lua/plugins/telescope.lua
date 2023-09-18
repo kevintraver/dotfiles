@@ -56,9 +56,9 @@ return {
     {
       "<D-p>",
       function()
-        require("telescope.builtin").commands()
+        require("telescope").extensions.yank_history.yank_history({})
       end,
-      desc = "Commands",
+      desc = "Open Yank History",
     },
     {
       "<D-r>",
