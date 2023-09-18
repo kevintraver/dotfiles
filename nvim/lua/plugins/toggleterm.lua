@@ -28,7 +28,7 @@ return {
       "<D-S-l>",
       mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command("direction=vertical size=100")
+        require("toggleterm").toggle_command("direction=vertical size=120")
       end,
       desc = "Toggle terminal (vertical)",
     },
@@ -36,7 +36,7 @@ return {
       "<D-S-t>",
       mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command("direction=vertical size=100")
+        require("toggleterm").toggle_command("direction=vertical size=120")
       end,
       desc = "Toggle terminal (vertical)",
     },
