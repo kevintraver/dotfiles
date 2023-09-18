@@ -27,3 +27,11 @@ vim.keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
 vim.keymap.set("n", "<leader>l", "")
 vim.keymap.set("n", "<leader>L", "")
 vim.keymap.set("n", "<leader><tab><tab>", "", { desc = "New Tab" })
+
+-- Use regular (not filtered) put in terminals
+vim.api.nvim_create_autocmd("TermEnter", {
+  callback = function(event)
+    vim.keymap.set("n", "p", "<Plug>(YankyPutAfter)", { buffer = event.buf, silent = true })
+    vim.keymap.set("n", "P", "<Plug>(YankyPutBefore)", { buffer = event.buf, silent = true })
+  end,
+})
