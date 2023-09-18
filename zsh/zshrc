@@ -39,20 +39,6 @@ eval "$(zoxide init zsh)"
 export PAGER=page
 export MANPAGER="page -t man"
 
-
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
-fi
-
-
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-else
-    export VISUAL="nvim"
-    export EDITOR="nvim"
-fi
-
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -80,3 +66,5 @@ source "$DOTFILES_HOME/aliases.zsh"
 
 HISTORY_IGNORE=$(cat $DOTFILES_HOME/history_ignore_patterns.txt | tr '\n' '|')
 HISTORY_IGNORE=${HISTORY_IGNORE%|}
+
+source "$DOTFILES_HOME/neovim_remote.zsh"
