@@ -27,13 +27,6 @@ zinit snippet OMZP::git
 
 source ~/.zshrc.local
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 eval "$(zoxide init zsh)"
 
 export PAGER=page
@@ -57,3 +50,7 @@ source "$DOTFILES_HOME/aliases.zsh"
 
 source "$DOTFILES_HOME/history/history.zsh"
 source "$DOTFILES_HOME/neovim_remote.zsh"
+
+for file in "$DOTFILES_HOME/lib/languages"/*.zsh; do
+  source "$file"
+done
