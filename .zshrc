@@ -23,6 +23,8 @@ zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 zinit light babarot/enhancd
 zinit light wfxr/forgit
 
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+
 source ~/.zshrc.local
 
 # osx apps
