@@ -9,6 +9,7 @@ return {
         ["s"] = "",
         ["l"] = "open",
         ["h"] = "close_node",
+        ["<D-w>"] = "close_window",
         ["<D-,>"] = "prev_source",
         ["<D-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
