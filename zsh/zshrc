@@ -55,5 +55,5 @@ export FZF_DEFAULT_OPTS="
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
 source "$DOTFILES_HOME/aliases.zsh"
 
-source "$DOTFILES_HOME/history/init.zsh"
+source "$DOTFILES_HOME/history/history.zsh"
 source "$DOTFILES_HOME/neovim_remote.zsh"
