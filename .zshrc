@@ -8,6 +8,12 @@ autoload -U promptinit; promptinit
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
+
+zinit ice blockf atpull'zinit creinstall -q .'
+zinit light zsh-users/zsh-completions
+
+autoload compinit
+compinit
 source ~/.zshrc.local
 
 # osx apps
