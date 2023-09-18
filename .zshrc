@@ -130,3 +130,9 @@ bindkey '^e' edit-command-line
 
 eval "$(mcfly init zsh)"
 eval "$(mcfly-fzf init zsh)"
+
+export FZF_DEFAULT_OPTS="
+--height=50%
+--layout=reverse
+--bind 'tab:accept'
+"
