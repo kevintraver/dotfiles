@@ -21,6 +21,7 @@ zinit light Aloxaf/fzf-tab
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
 zinit light babarot/enhancd
+zinit light wfxr/forgit
 
 source ~/.zshrc.local
 
