@@ -80,9 +80,6 @@ alias csv='xsv'
 
 alias pwd="pwd | tr -d '\n'"
 
-# git
-alias gs='git status'
-
 # exa
 alias l='exa -lbF --git'
 alias ls='exa'
