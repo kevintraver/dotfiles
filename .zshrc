@@ -16,6 +16,10 @@ autoload compinit
 compinit
 
 zinit light zdharma-continuum/fast-syntax-highlighting
+
+zinit light Aloxaf/fzf-tab
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+
 source ~/.zshrc.local
 
 # osx apps
