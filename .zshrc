@@ -14,6 +14,8 @@ zinit light zsh-users/zsh-completions
 
 autoload compinit
 compinit
+
+zinit light zdharma-continuum/fast-syntax-highlighting
 source ~/.zshrc.local
 
 # osx apps
