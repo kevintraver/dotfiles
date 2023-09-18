@@ -42,14 +42,6 @@ return {
     },
     {
       "<leader><tab><tab>",
-      mode = { "n" },
-      function()
-        require("toggleterm").toggle_command("direction=tab")
-      end,
-      desc = "Toggle terminal (tab)",
-    },
-    {
-      "<leader><tab><tab>",
       mode = { "t" },
       function()
         require("toggleterm").toggle_command("direction=tab")

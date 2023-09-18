@@ -19,6 +19,7 @@ vim.keymap.set("n", "<D-n>", vim.cmd.vnew, { desc = "New File" })
 -- unmap lazyvim keymaps
 vim.keymap.set("n", "<leader>l", "")
 vim.keymap.set("n", "<leader>L", "")
+vim.keymap.set("n", "<leader><tab><tab>", "", { desc = "New Tab" })
 
 vim.keymap.set("n", "<leader><space>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 
