@@ -5,7 +5,8 @@ return {
   event = "VeryLazy",
   cmd = { "ToggleTerm" },
   opts = {
-    size = 40,
+    size = 120,
+    direction = "vertical",
   },
   keys = {
     {
