@@ -23,14 +23,6 @@ return {
       desc = "Neogit Open",
     },
     {
-
-      "<D-g>",
-      function()
-        require("neogit").open()
-      end,
-      desc = "Neogit Open",
-    },
-    {
       "<leader>gc",
       function()
         require("neogit").open({ "commit" })

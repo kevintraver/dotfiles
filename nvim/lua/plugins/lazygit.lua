@@ -7,7 +7,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   keys = {
     {
-      "<leader>gg",
+      "<D-g>",
       function()
         require("lazygit").lazygit()
       end,
