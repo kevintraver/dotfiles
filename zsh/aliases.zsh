@@ -93,3 +93,6 @@ alias lt='exa --tree --level=2'
 #terminal apps
 
 alias lg='lazygit'
+
+# git
+alias gs="git status"
