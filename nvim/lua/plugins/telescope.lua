@@ -43,9 +43,7 @@ return {
   keys = {
     {
       "<D-o>",
-      function()
-        require("telescope.builtin").oldfiles()
-      end,
+      Util.telescope("files"),
       desc = "Recent",
     },
     {
@@ -59,6 +57,13 @@ return {
         require("telescope").extensions.yank_history.yank_history({})
       end,
       desc = "Open Yank History",
+    },
+    {
+      "<D-i>",
+      function()
+        require("telescope.builtin").oldfiles()
+      end,
+      desc = "Recent",
     },
     {
       "<D-r>",
@@ -103,7 +108,7 @@ return {
       desc = "Projects",
     },
     {
-      "<leader>ft",
+      "<leader>fs",
       Util.telescope("lsp_document_symbols", {
         symbols = {
           "Class",
