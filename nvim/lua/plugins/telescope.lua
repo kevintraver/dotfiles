@@ -43,16 +43,19 @@ return {
   keys = {
     {
       "<D-o>",
+      mode = { "n", "i" },
       Util.telescope("files"),
       desc = "Recent",
     },
     {
       "<D-f>",
+      mode = { "n", "i" },
       Util.telescope("live_grep"),
       desc = "Grep (root dir)",
     },
     {
       "<D-p>",
+      mode = { "n", "i" },
       function()
         require("telescope").extensions.yank_history.yank_history({})
       end,
@@ -60,6 +63,7 @@ return {
     },
     {
       "<D-i>",
+      mode = { "n", "i" },
       function()
         require("telescope.builtin").oldfiles()
       end,
@@ -67,6 +71,7 @@ return {
     },
     {
       "<D-r>",
+      mode = { "n", "i" },
       function()
         require("telescope.builtin").resume()
       end,
@@ -74,6 +79,7 @@ return {
     },
     {
       "<D-u>",
+      mode = { "n", "i" },
       function()
         require("telescope").extensions.undo.undo()
       end,
@@ -102,6 +108,7 @@ return {
     },
     {
       "<D-S-o>",
+      mode = { "n", "i" },
       function()
         require("telescope").extensions.projects.projects({})
       end,
