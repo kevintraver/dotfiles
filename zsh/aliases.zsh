@@ -92,6 +92,7 @@ alias lt='exa --tree --level=2'
 
 # terminal apps
 
+# lazygit
 alias lg='lazygit'
 
 # git
