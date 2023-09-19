@@ -90,7 +90,7 @@ alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
 alias lS='exa -1'
 alias lt='exa --tree --level=2'
 
-#terminal apps
+# terminal apps
 
 alias lg='lazygit'
 
