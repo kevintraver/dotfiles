@@ -8,6 +8,7 @@ return {
       mappings = {
         ["s"] = "",
         ["l"] = "open",
+        ["L"] = "focus_preview",
         ["h"] = "close_node",
         ["<D-w>"] = "close_window",
         ["<D-,>"] = "prev_source",
