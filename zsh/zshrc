@@ -54,3 +54,7 @@ source "$DOTFILES_HOME/aliases.zsh"
 eval "$(mcfly init zsh)"
 eval "$(mcfly-fzf init zsh)"
 
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}'
