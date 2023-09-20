@@ -10,6 +10,7 @@ return {
       "gitcommit",
       "html",
       "http",
+      "java",
       "javascript",
       "json",
       "lua",
