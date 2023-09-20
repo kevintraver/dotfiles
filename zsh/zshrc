@@ -40,10 +40,10 @@ export FZF_DEFAULT_OPTS="
 "
 
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
-source "$DOTFILES_HOME/keymaps.zsh"
 
+source "$DOTFILES_HOME/editor.zsh"
+source "$DOTFILES_HOME/keymaps.zsh"
 source "$DOTFILES_HOME/history/history.zsh"
-source "$DOTFILES_HOME/neovim_remote.zsh"
 
 for file in "$DOTFILES_HOME/lib/languages"/*.zsh; do
   source "$file"
