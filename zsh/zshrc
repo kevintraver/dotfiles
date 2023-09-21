@@ -54,3 +54,7 @@ source "$DOTFILES_HOME/aliases.zsh"
 
 eval "$(mcfly init zsh)"
 eval "$(mcfly-fzf init zsh)"
+
+# fnm
+export PATH="/Users/kevin/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
