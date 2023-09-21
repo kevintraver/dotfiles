@@ -1,7 +1,7 @@
 [user]
-	name = Kevin Traver
-	email = kevintraver@kevintraver.com
+  name = Kevin Traver
+  email = kevintraver@kevintraver.com
 
 [core]
-	excludesfile = /Users/kevin/.gitignore_global
-	editor = nvr --remote-wait-silent +'set bufhidden=wipe'
+  excludesfile = /Users/kevin/.gitignore_global
+  editor = nvr --remote-wait-silent +'set bufhidden=wipe'
