@@ -1,0 +1,6 @@
+# Window Movement Keymaps
+
+cmd + ctrl - h: yabai -m window --focus west  || (yabai -m display --focus west  && yabai -m window --focus east)
+cmd + ctrl - j: yabai -m window --focus south || (yabai -m display --focus south && yabai -m window --focus north)
+cmd + ctrl - k: yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
+cmd + ctrl - l: yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
