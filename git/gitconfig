@@ -4,4 +4,4 @@
 
 [core]
 	excludesfile = /Users/kevin/.gitignore_global
-	editor = nvr --remote-wait-silent
+	editor = nvr --remote-wait-silent +'set bufhidden=wipe'
