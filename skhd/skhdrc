@@ -1,9 +1,9 @@
 # https://github.com/koekeishiya/yabai/wiki/Commands
 
-cmd + ctrl - h : yabai -m window --focus west  || (yabai -m display --focus west  && yabai -m window --focus east)
-cmd + ctrl - j : yabai -m window --focus south || (yabai -m display --focus south && yabai -m window --focus north)
-cmd + ctrl - k : yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
-cmd + ctrl - l : yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
+shift + cmd - h : yabai -m window --focus west  || (yabai -m display --focus west  && yabai -m window --focus east)
+shift + cmd - j : yabai -m window --focus south || (yabai -m display --focus south && yabai -m window --focus north)
+shift + cmd - k : yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
+shift + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
 
 cmd + ctrl - 1 : yabai -m display --focus 1
 cmd + ctrl - 2 : yabai -m display --focus 2
