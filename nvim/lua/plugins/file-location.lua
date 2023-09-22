@@ -5,6 +5,7 @@ return {
   opts = {
     keymap = "<leader>yp",
     add_line = false,
+    default_register = '"',
   },
   keys = {
     {
@@ -14,7 +15,7 @@ return {
     {
       "<leader>yP",
       function()
-        require("nvim-file-location").copy_file_location("absolute", false, false)
+        require("nvim-file-location").copy_file_location("absolute", false, false, "*")
       end,
       desc = "Copy file location (absolute) to clipboard",
     },
