@@ -3,7 +3,7 @@
 return {
   "ruifm/gitlinker.nvim",
   cond = not vim.g.vscode,
-  dependencies = "nvim-lua/plenary.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
   opts = {},
   keys = {
     {
