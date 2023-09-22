@@ -8,3 +8,8 @@ cmd + ctrl - l : yabai -m window --focus east  || (yabai -m display --focus east
 cmd + ctrl - 1 : yabai -m display --focus 1
 cmd + ctrl - 2 : yabai -m display --focus 2
 cmd + ctrl - 3 : yabai -m display --focus 3
+
+cmd + ctrl - up : yabai -m window --toggle native-fullscreen
+
+cmd + ctrl - left : yabai -m space --display prev
+cmd + ctrl - right : yabai -m space --display next
