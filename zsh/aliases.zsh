@@ -94,6 +94,7 @@ alias lt='exa --tree --level=2'
 
 # lazygit
 alias lg='lazygit'
+alias gl='lazygit'
 
 # git
 alias gs="git status"
