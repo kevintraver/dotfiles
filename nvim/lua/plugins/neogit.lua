@@ -4,6 +4,7 @@ return {
   "NeogitOrg/neogit",
   cond = not vim.g.vscode,
   event = "VeryLazy",
+  cmd = "Neogit",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",

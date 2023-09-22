@@ -2,6 +2,8 @@
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  event = "VeryLazy",
+  cmd = "Neotree",
   cond = not vim.g.vscode,
   opts = {
     window = {
