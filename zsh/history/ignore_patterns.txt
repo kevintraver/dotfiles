@@ -27,3 +27,4 @@ tc
 tmux
 trash*
 z *
+*DB_PASS*
