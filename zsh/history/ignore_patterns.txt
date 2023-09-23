@@ -1,3 +1,4 @@
+*DB_PASS*
 cd
 cd ..
 cd ~
@@ -10,9 +11,11 @@ git log
 git pull
 git push
 git undo
+gl
 gt
 gt .
 la
+lg
 ls
 mssql-cli
 n *
@@ -27,4 +30,3 @@ tc
 tmux
 trash*
 z *
-*DB_PASS*
