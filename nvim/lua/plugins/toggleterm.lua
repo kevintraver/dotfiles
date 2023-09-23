@@ -29,7 +29,9 @@ return {
       "<C-D-h>",
       mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command("direction=horizontal size=40")
+        local window_height = vim.api.nvim_get_option("lines")
+        local size = math.floor(window_height * 0.40)
+        require("toggleterm").toggle_command("direction=horizontal size=" .. size)
       end,
       desc = "Toggle terminal (horizontal)",
     },
@@ -37,7 +39,9 @@ return {
       "<C-D-l>",
       mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command("direction=vertical size=120")
+        local window_width = vim.api.nvim_get_option("columns")
+        local size = math.floor(window_width * 0.40)
+        require("toggleterm").toggle_command("direction=vertical size=" .. size)
       end,
       desc = "Toggle terminal (vertical)",
     },
