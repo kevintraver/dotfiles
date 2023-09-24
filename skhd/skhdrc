@@ -1,15 +1,17 @@
 # https://github.com/koekeishiya/yabai/wiki/Commands
 
-shift + cmd - h : yabai -m window --focus west  || (yabai -m display --focus west  && yabai -m window --focus east)
-shift + cmd - j : yabai -m window --focus south || (yabai -m display --focus south && yabai -m window --focus north)
-shift + cmd - k : yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
-shift + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
+ctrl + cmd - h : yabai -m window --focus west  || (yabai -m display --focus west  && yabai -m window --focus east)
+ctrl + cmd - j : yabai -m window --focus south || (yabai -m display --focus south && yabai -m window --focus north)
+ctrl + cmd - k : yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
+ctrl + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
 
-cmd + ctrl - 1 : yabai -m display --focus 1
-cmd + ctrl - 2 : yabai -m display --focus 2
-cmd + ctrl - 3 : yabai -m display --focus 3
+ctrl + cmd - 1 : yabai -m display --focus 1
+ctrl + cmd - 2 : yabai -m display --focus 2
+ctrl + cmd - 3 : yabai -m display --focus 3
 
-cmd + ctrl - up : yabai -m window --toggle native-fullscreen
+ctrl + cmd - up : yabai -m window --toggle native-fullscreen
 
-cmd + ctrl - left : yabai -m space --display prev
-cmd + ctrl - right : yabai -m space --display next
+ctrl + cmd - left : yabai -m space --display prev
+ctrl + cmd - right : yabai -m space --display next
+
+ctrl + cmd - right : yabai -m space --display next
