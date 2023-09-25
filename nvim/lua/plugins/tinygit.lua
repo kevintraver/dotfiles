@@ -9,7 +9,7 @@ return {
       function()
         require("tinygit").smartCommit()
       end,
-      "Git Commit",
+      desc = "Git Commit",
     },
   },
 }
