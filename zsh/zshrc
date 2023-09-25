@@ -27,7 +27,7 @@ zinit snippet OMZP::git
 
 source ~/.zshrc.local
 
-eval "$(zoxide init zsh)"
+zinit light ajeetdsouza/zoxide
 
 export PAGER=page
 export MANPAGER="page -t man"
