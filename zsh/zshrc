@@ -3,41 +3,11 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-autoload -U promptinit; promptinit
-
-zinit ice pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
-
-
-zinit ice blockf atpull'zinit creinstall -q .'
-zinit light zsh-users/zsh-completions
+autoload -U promptinit
+promptinit
 
 autoload compinit
 compinit
-
-zinit light zdharma-continuum/fast-syntax-highlighting
-
-zinit light Aloxaf/fzf-tab
-zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
-
-zinit light babarot/enhancd
-zinit light wfxr/forgit
-
-zinit snippet OMZP::git
-
-source ~/.zshrc.local
-
-zinit light ajeetdsouza/zoxide
-
-export PAGER=page
-export MANPAGER="page -t man"
-
-
-export FZF_DEFAULT_OPTS="
---height=50%
---layout=reverse
---bind 'tab:accept'
-"
 
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
 
@@ -50,14 +20,10 @@ for file in "$DOTFILES_HOME/lib/languages"/*.zsh; do
   source "$file"
 done
 
+for file in "$DOTFILES_HOME/plugins"/*.zsh; do
+  source "$file"
+done
+
 source "$DOTFILES_HOME/aliases.zsh"
 
-zinit ice lucid wait"0a" from"gh-r" as"program" atload'eval "$(mcfly init zsh)"'
-zinit light cantino/mcfly
-
-zinit ice lucid nocompile
-zinit load MenkeTechnologies/zsh-expand
-
-# fnm
-export PATH="/Users/kevin/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
+source ~/.zshrc.local
