@@ -16,7 +16,7 @@ source "$DOTFILES_HOME/keymaps.zsh"
 source "$DOTFILES_HOME/history/history.zsh"
 source "$DOTFILES_HOME/completion.zsh"
 
-for file in "$DOTFILES_HOME/lib/languages"/*.zsh; do
+for file in "$DOTFILES_HOME/languages"/*.zsh; do
   source "$file"
 done
 
