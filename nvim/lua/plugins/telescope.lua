@@ -140,6 +140,9 @@ return {
   },
   opts = {
     defaults = {
+      file_ignore_patterns = {
+        "private/tmp",
+      },
       mappings = {
         n = {
           ["<D-w>"] = function(...)
