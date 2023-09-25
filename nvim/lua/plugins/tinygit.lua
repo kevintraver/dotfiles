@@ -21,5 +21,12 @@ return {
       end,
       desc = "Git Commit",
     },
+    {
+      "<leader>ga",
+      function()
+        require("tinygit").amendNoEdit()
+      end,
+      desc = "Git Amend",
+    },
   },
 }
