@@ -18,7 +18,7 @@ return {
       desc = "Send line to terminal",
     },
     {
-      "<D-t>",
+      "<C-D-t>",
       mode = { "n", "t" },
       function()
         require("toggleterm").toggle_command("direction=tab")
@@ -26,7 +26,7 @@ return {
       desc = "Toggle terminal (horizontal)",
     },
     {
-      "<C-D-h>",
+      "<S-D-t>",
       mode = { "n", "t" },
       function()
         local window_height = vim.api.nvim_get_option("lines")
@@ -36,7 +36,7 @@ return {
       desc = "Toggle terminal (horizontal)",
     },
     {
-      "<C-D-l>",
+      "<D-t>",
       mode = { "n", "t" },
       function()
         local window_width = vim.api.nvim_get_option("columns")
