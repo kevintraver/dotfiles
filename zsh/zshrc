@@ -55,6 +55,9 @@ source "$DOTFILES_HOME/aliases.zsh"
 zinit ice lucid wait"0a" from"gh-r" as"program" atload'eval "$(mcfly init zsh)"'
 zinit light cantino/mcfly
 
+zinit ice lucid nocompile
+zinit load MenkeTechnologies/zsh-expand
+
 # fnm
 export PATH="/Users/kevin/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
