@@ -2,6 +2,7 @@
 
 return {
   "chrisgrieser/nvim-tinygit",
+  event = "VeryLazy",
   dependencies = { "stevearc/dressing.nvim" },
   opts = {
     commitMsg = {
