@@ -28,5 +28,19 @@ return {
       end,
       desc = "Git Amend",
     },
+    {
+      "<M-c>",
+      function()
+        require("tinygit").smartCommit()
+      end,
+      desc = "Git Commit",
+    },
+    {
+      "<M-a>",
+      function()
+        require("tinygit").amendNoEdit()
+      end,
+      desc = "Git Amend",
+    },
   },
 }
