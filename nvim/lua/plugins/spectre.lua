@@ -2,6 +2,7 @@
 
 return {
   "nvim-pack/nvim-spectre",
+  event = "VeryLazy",
   keys = {
     {
       "<leader>rb",
