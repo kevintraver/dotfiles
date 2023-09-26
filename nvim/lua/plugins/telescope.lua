@@ -71,14 +71,6 @@ return {
       desc = "Recent",
     },
     {
-      "<D-r>",
-      mode = { "n", "i" },
-      function()
-        require("telescope.builtin").resume()
-      end,
-      desc = "Resume",
-    },
-    {
       "<D-u>",
       mode = { "n", "i" },
       function()
