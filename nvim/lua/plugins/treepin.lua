@@ -2,5 +2,6 @@
 
 return {
   "KaitlynEthylia/TreePin",
+  event = "VeryLazy",
   opts = {},
 }
