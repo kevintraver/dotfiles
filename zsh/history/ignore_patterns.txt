@@ -23,6 +23,7 @@ mssql-cli
 n *
 nvim
 nvim .
+nvr
 pwd
 reset-chrome
 reset-firefox
