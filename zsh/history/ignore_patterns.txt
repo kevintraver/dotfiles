@@ -15,6 +15,7 @@ gl
 gt
 gt .
 la
+lazygit
 lg
 ls
 mssql-cli
