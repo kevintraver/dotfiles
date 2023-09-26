@@ -2,6 +2,7 @@
 
 return {
   "kelly-lin/ranger.nvim",
+  event = "VeryLazy",
   keys = {
     {
       "<D-r>",
