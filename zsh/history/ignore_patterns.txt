@@ -5,6 +5,8 @@ cd ~
 clear
 code
 code .
+e
+e .
 exa
 exit
 fzf
