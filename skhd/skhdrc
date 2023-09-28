@@ -13,5 +13,3 @@ ctrl + cmd - up : yabai -m window --toggle native-fullscreen
 
 ctrl + cmd - left : yabai -m space --display prev
 ctrl + cmd - right : yabai -m space --display next
-
-ctrl + cmd - right : yabai -m space --display next
