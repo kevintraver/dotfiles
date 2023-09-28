@@ -12,6 +12,13 @@ return {
     system_clipboard = {
       sync_with_ring = false,
     },
+    picker = {
+      telescope = {
+        mappings = {
+          default = require("yanky.telescope.mapping").put_and_set_register("p", '"'),
+        },
+      },
+    },
   },
   keys = {
     {
