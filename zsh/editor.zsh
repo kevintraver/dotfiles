@@ -1,5 +1,5 @@
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-  alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+  alias nvim="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 fi
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
