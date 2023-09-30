@@ -61,7 +61,7 @@ return {
       "<D-p>",
       mode = { "n", "i" },
       function()
-        require("telescope").extensions.yank_history.yank_history({})
+        require("telescope").extensions.projects.projects({})
       end,
       desc = "Open Yank History",
     },
