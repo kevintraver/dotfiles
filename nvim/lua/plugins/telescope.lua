@@ -103,14 +103,6 @@ return {
       desc = "zoxide",
     },
     {
-      "<D-S-o>",
-      mode = { "n", "i" },
-      function()
-        require("telescope").extensions.projects.projects({})
-      end,
-      desc = "Projects",
-    },
-    {
       "<leader>fs",
       Util.telescope("lsp_document_symbols", {
         symbols = {
