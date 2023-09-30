@@ -66,7 +66,7 @@ alias proxyoff="networksetup -setsocksfirewallproxystate Wi-Fi off"
 alias proxy="mitmproxy --mode socks5 --showhost"
 
 # docker
-alias docker-ubuntu="docker run --name ubuntu --rm -i -t ubuntu /bin/bash"
+alias docker-ubuntu="docker run --name ubuntu --rm -i -t ubuntu"
 
 # ember
 alias ep='ember s --proxy http://localhost:3000'
