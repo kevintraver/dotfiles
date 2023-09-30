@@ -66,7 +66,7 @@ return {
       desc = "Open Yank History",
     },
     {
-      "<D-i>",
+      "<leader>fo",
       mode = { "n", "i" },
       function()
         require("telescope.builtin").oldfiles()
