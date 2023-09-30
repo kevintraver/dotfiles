@@ -12,6 +12,7 @@ return {
     disabled_filetypes = {
       "neo-tree",
       "NeogitStatus",
+      "qf",
     },
   },
 }
