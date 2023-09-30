@@ -7,4 +7,13 @@ return {
     require("dbee").install()
   end,
   opts = {},
+  keys = {
+    {
+      "<leader>db",
+      function()
+        require("dbee").open()
+      end,
+      "Open DBee",
+    },
+  },
 }
