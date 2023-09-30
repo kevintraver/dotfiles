@@ -10,14 +10,14 @@ return {
       function()
         require("treepin").pinLocal()
       end,
-      { desc = "Pin Node" },
+      desc = "Pin Node",
     },
     {
       "<leader>tg",
       function()
         require("treepin").pinGo()
       end,
-      { desc = "Go To Pin" },
+      desc = "Go To Pin",
     },
   },
 }
