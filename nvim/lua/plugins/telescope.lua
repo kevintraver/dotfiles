@@ -46,7 +46,9 @@ return {
     {
       "<D-o>",
       mode = { "n", "i" },
-      Util.telescope("files"),
+      function()
+        require("telescope").extensions.frecency.frecency()
+      end,
       desc = "Recent",
     },
     {
