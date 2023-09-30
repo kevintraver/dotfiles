@@ -8,7 +8,7 @@ return {
   },
   opts = {
     notification = false,
-    max_count = 5,
+    max_count = 3,
     disabled_filetypes = {
       "neo-tree",
       "NeogitStatus",
