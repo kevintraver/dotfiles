@@ -67,7 +67,6 @@ return {
     },
     {
       "<leader>fo",
-      mode = { "n", "i" },
       function()
         require("telescope.builtin").oldfiles()
       end,
