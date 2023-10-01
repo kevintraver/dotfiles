@@ -13,3 +13,8 @@ keybinding:
   commits:
     moveDownCommit: "J"
     moveUpCommit: "K"
+
+gui:
+  scrollHeight: 10
+  nerdFontsVersion: "3"
+  skipRewordInEditorWarning: true
