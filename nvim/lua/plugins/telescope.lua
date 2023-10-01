@@ -52,6 +52,14 @@ return {
       desc = "Recent",
     },
     {
+      "<D-i>",
+      mode = { "n", "i" },
+      function()
+        require("telescope").extensions.frecency.frecency()
+      end,
+      desc = "Recent",
+    },
+    {
       "<D-f>",
       mode = { "n", "i" },
       Util.telescope("live_grep"),
