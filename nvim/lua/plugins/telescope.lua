@@ -71,7 +71,7 @@ return {
       function()
         require("telescope").extensions.projects.projects({})
       end,
-      desc = "Open Yank History",
+      desc = "Open Projects",
     },
     {
       "<leader>fo",
