@@ -4,11 +4,22 @@ return {
   "Wansmer/sibling-swap.nvim",
   event = "VeryLazy",
   opts = {
-    keymaps = {
-      ["<A-.>"] = "swap_with_right",
-      ["<A-,>"] = "swap_with_left",
-      ["<S-A-,>"] = "swap_with_right_with_opp",
-      ["<S-A-.>"] = "swap_with_left_with_opp",
+    use_default_keymaps = false,
+  },
+  keys = {
+    {
+      "<A-.>",
+      function()
+        require("sibling-swap.swap").swap_with("right")
+      end,
+      desc = "Swap sibling with right",
+    },
+    {
+      "<A-,>",
+      function()
+        require("sibling-swap.swap").swap_with("left")
+      end,
+      desc = "Swap sibling with left",
     },
   },
 }
