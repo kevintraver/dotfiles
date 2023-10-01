@@ -110,6 +110,13 @@ return {
       desc = "zoxide",
     },
     {
+      "<D-y>",
+      function()
+        require("telescope").extensions.yank_history.yank_history({})
+      end,
+      desc = "Open Yank History",
+    },
+    {
       "<leader>fs",
       Util.telescope("lsp_document_symbols", {
         symbols = {
