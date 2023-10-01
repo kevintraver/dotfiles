@@ -103,6 +103,13 @@ return {
       desc = "Filetypes",
     },
     {
+      "<leader>fm",
+      function()
+        require("telescope").extensions.bookmarks.list({})
+      end,
+      desc = "Bookmarks",
+    },
+    {
       "<leader>fz",
       function()
         require("telescope").extensions.zoxide.list()
