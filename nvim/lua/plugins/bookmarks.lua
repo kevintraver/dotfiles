@@ -22,49 +22,49 @@ return {
       function()
         require("bookmarks").bookmark_ann()
       end,
-      desc = "Bookmark (annotate)",
+      desc = "Annotate",
     },
     {
       "mm",
       function()
         require("bookmarks").bookmark_toggle()
       end,
-      desc = "Toggle Bookmark",
+      desc = "Toggle",
     },
     {
       "<D-m>",
       function()
         require("bookmarks").bookmark_next()
       end,
-      desc = "Bookmarks Next",
+      desc = "Next",
     },
     {
       "<S-D-m>",
       function()
         require("bookmarks").bookmark_prev()
       end,
-      desc = "Bookmarks Next",
+      desc = "Next",
     },
     {
       "md",
       function()
         require("bookmarks").bookmark_clean()
       end,
-      desc = "Clean Bookmarks (buffer)",
+      desc = "Clean (buffer)",
     },
     {
       "mq",
       function()
         require("bookmarks").bookmark_list()
       end,
-      desc = "Bookmarks List (quickfix)",
+      desc = "List (quickfix)",
     },
     {
       "ms",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,
-      desc = "Bookmarks Telescope",
+      desc = "Telescope",
     },
   },
 }
