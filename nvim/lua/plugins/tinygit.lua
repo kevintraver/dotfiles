@@ -20,28 +20,28 @@ return {
       function()
         require("tinygit").smartCommit()
       end,
-      desc = "Git Commit",
+      desc = "Commit",
     },
     {
       "<leader>ga",
       function()
         require("tinygit").amendNoEdit()
       end,
-      desc = "Git Amend",
+      desc = "Amend",
     },
     {
       "<M-c>",
       function()
         require("tinygit").smartCommit()
       end,
-      desc = "Git Commit",
+      desc = "Commit",
     },
     {
       "<M-a>",
       function()
         require("tinygit").amendNoEdit()
       end,
-      desc = "Git Amend",
+      desc = "Amend",
     },
   },
 }
