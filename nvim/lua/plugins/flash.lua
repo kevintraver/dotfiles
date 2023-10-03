@@ -64,6 +64,7 @@ return {
           pattern = "^",
         })
       end,
+      desc = "Flash Jump (line)",
     },
   },
 }
