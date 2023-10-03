@@ -79,6 +79,7 @@ return {
       function()
         require("telescope").extensions.adjacent.adjacent()
       end,
+      desc = "Adjacent",
     },
     {
       "<D-o>",
@@ -128,7 +129,7 @@ return {
       function()
         require("telescope.builtin").git_branches()
       end,
-      desc = "branches",
+      desc = "Branches",
     },
     {
       "<leader>ut",
@@ -149,13 +150,14 @@ return {
       function()
         require("telescope").extensions.emoji.emoji()
       end,
+      desc = "Emoji",
     },
     {
       "<leader>fz",
       function()
         require("telescope").extensions.zoxide.list()
       end,
-      desc = "zoxide",
+      desc = "Zoxide",
     },
     {
       "<D-y>",
@@ -169,12 +171,14 @@ return {
       function()
         require("telescope").extensions.lazy.lazy()
       end,
+      desc = "Lazy",
     },
     {
       "<leader>gl",
       function()
         require("telescope").extensions.git_diffs.diff_commits()
       end,
+      desc = "Git Diff Commits",
     },
     {
       "<leader>fs",
