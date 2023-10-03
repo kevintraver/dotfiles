@@ -123,9 +123,17 @@ return {
       desc = "Files",
     },
     {
-      "<D-f>",
+      "<D-S-f>",
       mode = { "n", "i" },
       Util.telescope("live_grep"),
+      desc = "Grep (root dir)",
+    },
+    {
+      "<D-f>",
+      mode = { "n", "i" },
+      function()
+        require("telescope.builtin").current_buffer_fuzzy_find()
+      end,
       desc = "Grep (root dir)",
     },
     {
@@ -222,7 +230,7 @@ return {
       desc = "Git Diff Commits",
     },
     {
-      "<leader>fs",
+      "<D-j>",
       Util.telescope("lsp_document_symbols", {
         symbols = {
           "Class",
