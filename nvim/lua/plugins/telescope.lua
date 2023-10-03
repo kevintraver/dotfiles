@@ -47,6 +47,12 @@ return {
         require("telescope").load_extension("lazy")
       end,
     },
+    {
+      "paopaol/telescope-git-diffs.nvim",
+      config = function()
+        require("telescope").load_extension("git_diffs")
+      end,
+    },
   },
   keys = {
     {
@@ -131,6 +137,12 @@ return {
       "<leader>fl",
       function()
         require("telescope").extensions.lazy.lazy()
+      end,
+    },
+    {
+      "<leader>gl",
+      function()
+        require("telescope").extensions.git_diffs.diff_commits()
       end,
     },
     {
