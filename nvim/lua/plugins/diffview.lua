@@ -49,28 +49,28 @@ return {
       function()
         require("diffview").open({})
       end,
-      desc = "Diff view open",
+      desc = "Diff View Open",
     },
     {
       "<leader>gh",
       function()
         require("diffview").file_history(nil, { "%" })
       end,
-      desc = "Diff view file history",
+      desc = "Diff View File History",
     },
     {
       "<leader>gd",
       function()
         require("diffview").file_history(nil, {})
       end,
-      desc = "Diff view history",
+      desc = "Diff View History",
     },
     {
       "<leader>gq",
       function()
         require("diffview").close()
       end,
-      desc = "Diff view close",
+      desc = "Diff View Close",
     },
   },
 }
