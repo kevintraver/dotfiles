@@ -10,6 +10,7 @@ return {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
+      event = "VeryLazy",
       config = function()
         require("telescope").load_extension("fzf")
       end,
@@ -24,12 +25,14 @@ return {
     },
     {
       "jvgrootveld/telescope-zoxide",
+      event = "VeryLazy",
       config = function()
         require("telescope").load_extension("zoxide")
       end,
     },
     {
       "debugloop/telescope-undo.nvim",
+      event = "VeryLazy",
       config = function()
         require("telescope").setup({
           extensions = {
@@ -43,12 +46,14 @@ return {
     },
     {
       "tsakirist/telescope-lazy.nvim",
+      event = "VeryLazy",
       config = function()
         require("telescope").load_extension("lazy")
       end,
     },
     {
       "paopaol/telescope-git-diffs.nvim",
+      event = "VeryLazy",
       config = function()
         require("telescope").load_extension("git_diffs")
       end,
