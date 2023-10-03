@@ -45,13 +45,6 @@ return {
 
   keys = {
     {
-      "<leader>gd",
-      function()
-        require("diffview").open({})
-      end,
-      desc = "Diff view open",
-    },
-    {
       "<D-d>",
       function()
         require("diffview").open({})
@@ -66,7 +59,7 @@ return {
       desc = "Diff view file history",
     },
     {
-      "<leader>gl",
+      "<leader>gd",
       function()
         require("diffview").file_history(nil, {})
       end,
