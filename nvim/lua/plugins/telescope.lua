@@ -41,6 +41,12 @@ return {
         require("telescope").load_extension("undo")
       end,
     },
+    {
+      "tsakirist/telescope-lazy.nvim",
+      config = function()
+        require("telescope").load_extension("lazy")
+      end,
+    },
   },
   keys = {
     {
@@ -120,6 +126,12 @@ return {
         require("telescope").extensions.yank_history.yank_history({})
       end,
       desc = "Open Yank History",
+    },
+    {
+      "<leader>fl",
+      function()
+        require("telescope").extensions.lazy.lazy()
+      end,
     },
     {
       "<leader>fs",
