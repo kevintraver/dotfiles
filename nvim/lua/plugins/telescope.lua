@@ -132,7 +132,7 @@ return {
       desc = "Branches",
     },
     {
-      "<leader>ut",
+      "<leader>ct",
       function()
         require("telescope.builtin").filetypes()
       end,
