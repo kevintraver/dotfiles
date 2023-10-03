@@ -82,6 +82,23 @@ return {
         require("telescope").load_extension("emoji")
       end,
     },
+    {
+      "ghassan0/telescope-glyph.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("telescope").setup({
+          extensions = {
+            glyph = {
+              action = function(glyph)
+                vim.fn.setreg('"', glyph.value)
+                vim.api.nvim_put({ glyph.value }, "c", false, true)
+              end,
+            },
+          },
+        })
+        require("telescope").load_extension("glyph")
+      end,
+    },
   },
   keys = {
     {
@@ -161,6 +178,13 @@ return {
         require("telescope").extensions.emoji.emoji()
       end,
       desc = "Emoji",
+    },
+    {
+      "<leader>sE",
+      function()
+        require("telescope").extensions.glyph.glyph()
+      end,
+      desc = "Glyphs",
     },
     {
       "<leader>fz",
