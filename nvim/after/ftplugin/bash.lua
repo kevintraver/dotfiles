@@ -1,1 +1,1 @@
-sh.lua
+zsh.lua
