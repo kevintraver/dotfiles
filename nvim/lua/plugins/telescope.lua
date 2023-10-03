@@ -52,6 +52,13 @@ return {
       end,
     },
     {
+      "MaximilianLloyd/adjacent.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("telescope").load_extension("adjacent")
+      end,
+    },
+    {
       "paopaol/telescope-git-diffs.nvim",
       event = "VeryLazy",
       config = function()
@@ -60,6 +67,12 @@ return {
     },
   },
   keys = {
+    {
+      "<leader>fa",
+      function()
+        require("telescope").extensions.adjacent.adjacent()
+      end,
+    },
     {
       "<D-o>",
       mode = { "n", "i" },
