@@ -65,6 +65,13 @@ return {
         require("telescope").load_extension("git_diffs")
       end,
     },
+    {
+      "xiyaowong/telescope-emoji.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("telescope").load_extension("emoji")
+      end,
+    },
   },
   keys = {
     {
@@ -136,6 +143,12 @@ return {
         require("telescope").extensions.bookmarks.list({})
       end,
       desc = "Bookmarks",
+    },
+    {
+      "<leader>se",
+      function()
+        require("telescope").extensions.emoji.emoji()
+      end,
     },
     {
       "<leader>fz",
