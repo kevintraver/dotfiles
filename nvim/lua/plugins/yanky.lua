@@ -24,9 +24,7 @@ return {
     {
       "Y",
       mode = { "n", "x" },
-      function()
-        require("yanky").yank({ register = "+" })
-      end,
+      [["+<Plug>(YankyYank)]],
       desc = "Yank to global clipboard",
     },
     {
