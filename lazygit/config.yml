@@ -15,6 +15,6 @@ keybinding:
     moveUpCommit: "K"
 
 gui:
-  scrollHeight: 10
+  scrollHeight: 20
   nerdFontsVersion: "3"
   skipRewordInEditorWarning: true
