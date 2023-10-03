@@ -23,8 +23,10 @@ return {
   keys = {
     {
       "Y",
-      [["+<Plug>(YankyYank)]],
       mode = { "n", "x" },
+      function()
+        require("yanky").yank({ register = "+" })
+      end,
       desc = "Yank to global clipboard",
     },
     {
