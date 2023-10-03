@@ -160,6 +160,13 @@ return {
       desc = "Zoxide",
     },
     {
+      "<leader>gs",
+      function()
+        require("telescope.builtin").git_status()
+      end,
+      desc = "Status",
+    },
+    {
       "<D-y>",
       function()
         require("telescope").extensions.yank_history.yank_history({})
