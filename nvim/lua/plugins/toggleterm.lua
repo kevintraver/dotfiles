@@ -23,7 +23,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=tab")
       end,
-      desc = "Toggle terminal (horizontal)",
+      desc = "Toggle terminal (tab)",
     },
     {
       "<S-D-t>",
