@@ -233,7 +233,7 @@ return {
       desc = "Lazy",
     },
     {
-      "<leader>gl",
+      "<leader>gL",
       function()
         require("telescope").extensions.git_diffs.diff_commits()
       end,
