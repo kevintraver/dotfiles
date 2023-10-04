@@ -18,10 +18,10 @@ vim.keymap.set("n", "<D-S-n>", vim.cmd.tabnew, { desc = "New tab" })
 vim.keymap.set("n", "<D-n>", vim.cmd.vnew, { desc = "New File" })
 vim.keymap.set("n", "<leader><tab>n", vim.cmd.tabnew, { desc = "New Tab" })
 
--- buffer
-vim.keymap.set("n", "<leader><space>", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-
 -- tabs
+vim.keymap.set("n", "<leader><space>", function()
+  vim.cmd.tabprevious()
+end, { desc = "Cycle Tab" })
 
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")
