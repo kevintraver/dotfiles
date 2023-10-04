@@ -1,7 +1,5 @@
 -- https://github.com/nvim-telescope/telescope.nvim
 
-local Util = require("lazyvim.util")
-
 return {
   "nvim-telescope/telescope.nvim",
   event = "VeryLazy",
@@ -119,14 +117,18 @@ return {
     {
       "<D-i>",
       mode = { "n", "i" },
-      Util.telescope("files", { cwd = false }),
+      function()
+        require("telescope.builtin").find_files()
+      end,
       desc = "Files",
     },
     {
       "<D-S-f>",
       mode = { "n", "i" },
-      Util.telescope("live_grep"),
-      desc = "Grep (root dir)",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Grep",
     },
     {
       "<D-f>",
@@ -134,7 +136,7 @@ return {
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
       end,
-      desc = "Grep (root dir)",
+      desc = "Search Buffer",
     },
     {
       "<D-p>",
@@ -146,6 +148,14 @@ return {
     },
     {
       "<leader>fo",
+      function()
+        require("telescope.builtin").oldfiles()
+      end,
+      desc = "Recent",
+    },
+    {
+      "<D-S-o>",
+      mode = { "n", "i" },
       function()
         require("telescope.builtin").oldfiles()
       end,
@@ -231,21 +241,17 @@ return {
     },
     {
       "<D-j>",
-      Util.telescope("lsp_document_symbols", {
-        symbols = {
-          "Class",
-          "Function",
-          "Method",
-          "Constructor",
-          "Interface",
-          "Module",
-          "Struct",
-          "Trait",
-          "Field",
-          "Property",
-        },
-      }),
+      function()
+        require("telescope.builtin").lsp_document_symbols()
+      end,
       desc = "Goto Symbol",
+    },
+    {
+      "<D-S-j>",
+      function()
+        require("telescope.builtin").lsp_workspace_symbols()
+      end,
+      desc = "Goto Symbol (workspace)",
     },
     {
       "<leader><space>",
