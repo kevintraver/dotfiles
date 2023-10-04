@@ -65,12 +65,5 @@ return {
       end,
       desc = "Diff View History",
     },
-    {
-      "<leader>gq",
-      function()
-        require("diffview").close()
-      end,
-      desc = "Diff View Close",
-    },
   },
 }
