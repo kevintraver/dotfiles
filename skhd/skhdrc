@@ -8,6 +8,3 @@ ctrl + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east
 ctrl + cmd - 1 : yabai -m display --focus 1
 ctrl + cmd - 2 : yabai -m display --focus 2
 ctrl + cmd - 3 : yabai -m display --focus 3
-
-ctrl + cmd - s : yabai -m display --focus 1
-ctrl + cmd - e : yabai -m display --focus 2
