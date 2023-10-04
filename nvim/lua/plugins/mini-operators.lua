@@ -2,9 +2,9 @@ return {
   "echasnovski/mini.operators",
   event = "VeryLazy",
   opts = {
-    evaluate = {},
-    exchange = {},
-    replace = {},
-    sort = {},
+    evaluate = { prefix = "" },
+    exchange = { prefix = "" },
+    replace = { prefix = "" },
+    sort = { prefix = "" },
   },
 }
