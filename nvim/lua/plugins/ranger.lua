@@ -12,7 +12,7 @@ return {
   },
   keys = {
     {
-      "<D-r>",
+      "<D-S-e>",
       function()
         require("ranger-nvim").open(true)
       end,
