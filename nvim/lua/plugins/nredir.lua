@@ -1,0 +1,3 @@
+return {
+  "sbulav/nredir.nvim",
+}
