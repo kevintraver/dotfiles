@@ -10,6 +10,7 @@ return {
         ["l"] = "open",
         ["L"] = "focus_preview",
         ["h"] = "close_node",
+        ["v"] = "open_vsplit",
         ["<D-w>"] = "close_window",
         ["<D-,>"] = "prev_source",
         ["<D-.>"] = "next_source",
