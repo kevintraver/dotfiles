@@ -3,6 +3,13 @@ return {
   event = "VeryLazy",
   keys = {
     {
+      "<leader>rr",
+      function()
+        require("spectre").open()
+      end,
+      desc = "Replace in files (Spectre)",
+    },
+    {
       "<leader>rb",
       function()
         require("spectre").open({ path = vim.fn.expand("%:t:p") })
