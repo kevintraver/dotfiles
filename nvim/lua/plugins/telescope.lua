@@ -266,6 +266,7 @@ return {
     defaults = {
       file_ignore_patterns = {
         "private/tmp",
+        "target/debug",
       },
       mappings = {
         n = {
