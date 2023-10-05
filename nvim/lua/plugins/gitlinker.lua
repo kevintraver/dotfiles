@@ -1,5 +1,3 @@
--- https://github.com/ruifm/gitlinker.nvim
-
 return {
   "ruifm/gitlinker.nvim",
   event = "VeryLazy",

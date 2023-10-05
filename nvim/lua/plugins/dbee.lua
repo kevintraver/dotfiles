@@ -1,5 +1,3 @@
--- https://github.com/kndndrj/nvim-dbee
-
 return {
   "kndndrj/nvim-dbee",
   enabled = false,

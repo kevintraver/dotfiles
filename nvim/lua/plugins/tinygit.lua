@@ -1,5 +1,3 @@
--- https://github.com/chrisgrieser/nvim-tinygit
-
 return {
   "chrisgrieser/nvim-tinygit",
   event = "VeryLazy",

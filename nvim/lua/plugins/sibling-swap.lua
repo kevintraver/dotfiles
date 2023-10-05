@@ -1,5 +1,3 @@
--- https://github.com/Wansmer/sibling-swap.nvim
-
 return {
   "Wansmer/sibling-swap.nvim",
   event = "VeryLazy",

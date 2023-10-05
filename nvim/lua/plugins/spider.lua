@@ -1,5 +1,3 @@
--- https://github.com/chrisgrieser/nvim-spider
-
 return {
   "chrisgrieser/nvim-spider",
   event = "VeryLazy",

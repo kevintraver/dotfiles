@@ -1,5 +1,3 @@
--- https://github.com/Bryley/neoai.nvim
-
 return {
   "Bryley/neoai.nvim",
   event = "VeryLazy",

@@ -1,5 +1,3 @@
--- https://github.com/tomasky/bookmarks.nvim
-
 return {
   "tomasky/bookmarks.nvim",
   event = "VeryLazy",

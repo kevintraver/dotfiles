@@ -1,5 +1,3 @@
--- https://github.com/diegoulloao/nvim-file-location
-
 return {
   "diegoulloao/nvim-file-location",
   event = "VeryLazy",

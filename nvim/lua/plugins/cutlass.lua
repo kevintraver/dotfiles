@@ -1,5 +1,3 @@
--- https://github.com/gbprod/cutlass.nvim
-
 return {
   "gbprod/cutlass.nvim",
   opts = {

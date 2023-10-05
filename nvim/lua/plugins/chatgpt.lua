@@ -1,5 +1,3 @@
--- https://github.com/jackMort/ChatGPT.nvim
-
 return {
   "jackMort/ChatGPT.nvim",
   cond = not vim.g.vscode,

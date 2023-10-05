@@ -1,5 +1,3 @@
--- https://github.com/NeogitOrg/neogit
-
 return {
   "NeogitOrg/neogit",
   cond = not vim.g.vscode,

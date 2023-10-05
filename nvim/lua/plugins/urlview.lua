@@ -1,5 +1,3 @@
--- https://github.com/axieax/urlview.nvim
-
 return {
   "axieax/urlview.nvim",
   cond = not vim.g.vscode,

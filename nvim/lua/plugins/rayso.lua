@@ -1,5 +1,3 @@
--- https://github.com/TobinPalmer/rayso.nvim
-
 return {
   "TobinPalmer/rayso.nvim",
   event = "VeryLazy",

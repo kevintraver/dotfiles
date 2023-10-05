@@ -1,5 +1,3 @@
--- https://github.com/rainbowhxch/beacon.nvim
-
 return {
   "rainbowhxch/beacon.nvim",
   event = "VeryLazy",
