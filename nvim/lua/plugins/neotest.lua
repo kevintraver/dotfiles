@@ -1,20 +1,5 @@
 return {
   "nvim-neotest/neotest",
-  event = "VeryLazy",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
-    "antoinemadec/FixCursorHold.nvim",
-    "rouge8/neotest-rust",
-  },
-  config = function()
-    ---@diagnostic disable-next-line: missing-fields
-    require("neotest").setup({
-      adapters = {
-        require("neotest-rust"),
-      },
-    })
-  end,
   keys = {
     {
       "<leader>tr",
