@@ -39,6 +39,9 @@ return {
       select = {
         enable = true,
       },
+      move = {
+        enable = false,
+      },
     },
   },
 }
