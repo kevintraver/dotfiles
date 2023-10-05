@@ -1,7 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
   event = "VeryLazy",
-  cond = not vim.g.vscode,
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
