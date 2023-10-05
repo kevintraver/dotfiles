@@ -4,7 +4,7 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>tz",
+      "<leader>wz",
       function()
         require("zen-mode").toggle({
           window = {
