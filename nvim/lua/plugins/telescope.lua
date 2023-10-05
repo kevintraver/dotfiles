@@ -216,11 +216,18 @@ return {
       desc = "Status",
     },
     {
-      "<D-y>",
+      "<leader>sh",
       function()
         require("telescope").extensions.yank_history.yank_history({})
       end,
-      desc = "Open Yank History",
+      desc = "Yank History",
+    },
+    {
+      "<leader>sp",
+      function()
+        require("telescope").extensions.yank_history.yank_history({})
+      end,
+      desc = "Yank History",
     },
     {
       "<leader>fl",
