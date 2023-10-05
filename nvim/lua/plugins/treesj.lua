@@ -6,8 +6,13 @@ return {
   },
 
   keys = {
-    { "gj", "<cmd>join<cr>", desc = "join" },
-    { "gJ", "<cmd>join!<cr>", desc = "join!" },
+    {
+      "gj",
+      function()
+        vim.cmd.join()
+      end,
+      desc = "Join Lines",
+    },
     {
       "J",
       function()
