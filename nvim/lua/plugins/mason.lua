@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     ensure_installed = {
+      "eslint-lsp",
       "stylua",
       "shfmt",
       "prettierd",
