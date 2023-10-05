@@ -2,7 +2,6 @@ return {
   {
     "davidmh/cspell.nvim",
     event = "VeryLazy",
-    cond = not vim.g.vscode,
   },
   {
     "nvimtools/none-ls.nvim",

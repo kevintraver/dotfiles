@@ -1,6 +1,5 @@
 return {
   "ten3roberts/qf.nvim",
-  cond = not vim.g.vscode,
   event = "VeryLazy",
   opts = {},
   keys = {

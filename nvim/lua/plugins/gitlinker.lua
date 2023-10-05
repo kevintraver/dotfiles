@@ -1,7 +1,6 @@
 return {
   "ruifm/gitlinker.nvim",
   event = "VeryLazy",
-  cond = not vim.g.vscode,
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {},
   keys = {

@@ -1,6 +1,5 @@
 return {
   "lewis6991/gitsigns.nvim",
-  cond = not vim.g.vscode,
   config = function()
     require("gitsigns").setup({
       on_attach = function(bufnr)

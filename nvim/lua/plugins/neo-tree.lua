@@ -3,7 +3,6 @@ return {
   branch = "main",
   event = "VeryLazy",
   cmd = "Neotree",
-  cond = not vim.g.vscode,
   opts = {
     window = {
       mappings = {

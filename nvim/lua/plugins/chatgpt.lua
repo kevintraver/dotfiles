@@ -1,6 +1,5 @@
 return {
   "jackMort/ChatGPT.nvim",
-  cond = not vim.g.vscode,
   event = "VeryLazy",
   requires = {
     "MunifTanjim/nui.nvim",
