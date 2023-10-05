@@ -1,5 +1,3 @@
--- https://github.com/pwntester/octo.nvim
-
 return {
   "pwntester/octo.nvim",
   event = "VeryLazy",

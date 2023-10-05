@@ -1,5 +1,3 @@
--- https://github.com/loctvl842/monokai-pro.nvim
-
 return {
   "loctvl842/monokai-pro.nvim",
   event = "VeryLazy",

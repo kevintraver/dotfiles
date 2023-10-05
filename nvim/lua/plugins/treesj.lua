@@ -1,5 +1,3 @@
--- https://github.com/Wansmer/treesj
-
 return {
   "Wansmer/treesj",
   dependencies = { "nvim-treesitter/nvim-treesitter" },

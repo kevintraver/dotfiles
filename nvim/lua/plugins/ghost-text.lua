@@ -1,5 +1,3 @@
--- https://github.com/subnut/nvim-ghost.nvim
-
 return {
   "subnut/nvim-ghost.nvim",
   cond = not vim.g.vscode,

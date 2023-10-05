@@ -1,5 +1,3 @@
--- https://github.com/neovim/nvim-lspconfig
-
 return {
   "neovim/nvim-lspconfig",
   cond = not vim.g.vscode,

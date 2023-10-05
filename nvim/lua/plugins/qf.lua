@@ -1,5 +1,3 @@
--- https://github.com/ten3roberts/qf.nvim
-
 return {
   "ten3roberts/qf.nvim",
   cond = not vim.g.vscode,
