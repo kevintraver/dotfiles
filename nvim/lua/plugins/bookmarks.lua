@@ -8,7 +8,6 @@ return {
     end,
   },
   opts = {
-    sign_priority = 8,
     signs = {
       add = { hl = "BookMarksAdd", text = "🏷️", numhl = "BookMarksAddNr", linehl = "BookMarksAddLn" },
       ann = { hl = "BookMarksAnn", text = "📝", numhl = "BookMarksAnnNr", linehl = "BookMarksAnnLn" },
