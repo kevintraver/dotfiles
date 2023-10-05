@@ -8,11 +8,11 @@ return {
     keymaps = {
       insert = "<C-g>s",
       insert_line = "<C-g>S",
-      normal = "gs",
+      normal = "gsa",
       normal_cur = "gsl",
       normal_line = "gsL",
       normal_cur_line = "gSS",
-      visual = "gs",
+      visual = "gsa",
       visual_line = "gsl",
       delete = "gsd",
       change = "gsc",
