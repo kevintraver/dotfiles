@@ -23,5 +23,12 @@ return {
       end,
       desc = "Run tests",
     },
+    {
+      "<leader>tt",
+      function()
+        require("neotest").summary.toggle()
+      end,
+      desc = "Watch Tests",
+    },
   },
 }
