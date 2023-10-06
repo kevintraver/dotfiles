@@ -49,6 +49,20 @@ return {
       end,
     },
     {
+      "ip",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("inner", "inner", "noBlanks")
+      end,
+    },
+    {
+      "ap",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").indentation("outer", "outer", "noBlanks")
+      end,
+    },
+    {
       "u",
       mode = { "o", "x" },
       function()
