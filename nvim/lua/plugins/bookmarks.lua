@@ -29,20 +29,6 @@ return {
       desc = "Toggle",
     },
     {
-      "<D-m>",
-      function()
-        require("bookmarks").bookmark_next()
-      end,
-      desc = "Next",
-    },
-    {
-      "<S-D-m>",
-      function()
-        require("bookmarks").bookmark_prev()
-      end,
-      desc = "Next",
-    },
-    {
       "md",
       function()
         require("bookmarks").bookmark_clean()
@@ -57,7 +43,7 @@ return {
       desc = "List (quickfix)",
     },
     {
-      "ms",
+      "<D-m>",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,
