@@ -4,6 +4,7 @@ return {
   opts = {
     ensure_installed = {
       "bash",
+      "c",
       "css",
       "diff",
       "git_config",
@@ -16,7 +17,9 @@ return {
       "java",
       "javascript",
       "jq",
+      "jsdoc",
       "json",
+      "jsonc",
       "lua",
       "luadoc",
       "luap",
@@ -30,6 +33,7 @@ return {
       "ruby",
       "rust",
       "sql",
+      "toml",
       "tsx",
       "typescript",
       "vim",
