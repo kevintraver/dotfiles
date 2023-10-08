@@ -5,7 +5,7 @@ return {
   build = function()
     require("dbee").install()
   end,
-  opts = {},
+  config = true,
   keys = {
     {
       "<leader>db",

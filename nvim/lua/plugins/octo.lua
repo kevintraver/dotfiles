@@ -7,5 +7,5 @@ return {
     "nvim-telescope/telescope.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  opts = {},
+  config = true,
 }

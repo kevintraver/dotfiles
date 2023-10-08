@@ -2,7 +2,7 @@ return {
   "ruifm/gitlinker.nvim",
   event = "VeryLazy",
   dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {},
+  config = true,
   keys = {
     {
 

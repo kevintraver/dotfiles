@@ -1,7 +1,7 @@
 return {
   "ten3roberts/qf.nvim",
   event = "VeryLazy",
-  opts = {},
+  config = true,
   keys = {
     {
       "<leader>qt",
