@@ -22,9 +22,11 @@ return {
         if cspell_check_enabled then
           none_ls.disable({ name = "cspell" })
           cspell_check_enabled = false
+          vim.notify("CSpell disabled", vim.log.levels.WARN, { title = "CSpell" })
         else
           none_ls.enable({ name = "cspell" })
           cspell_check_enabled = true
+          vim.notify("CSpell enabled", vim.log.levels.INFO, { title = "CSpell" })
         end
       end, { desc = "Toggle CSpell", noremap = true })
     end,
