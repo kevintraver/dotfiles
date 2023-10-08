@@ -148,14 +148,14 @@ return {
       function()
         require("telescope").extensions.projects.projects({})
       end,
-      desc = "Open Projects",
+      desc = "Projects",
     },
     {
       "<leader>fw",
       function()
         require("telescope").extensions.workspaces.workspaces()
       end,
-      desc = "Open Projects",
+      desc = "Workspaces",
     },
     {
       "<leader>fo",
