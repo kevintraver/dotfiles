@@ -1,7 +1,7 @@
 return {
   "KaitlynEthylia/TreePin",
   event = "VeryLazy",
-  opts = {},
+  config = true,
   keys = {
     {
       "<leader>tp",

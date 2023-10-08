@@ -1,5 +1,5 @@
 return {
   "luukvbaal/nnn.nvim",
   event = "VeryLazy",
-  opts = {},
+  config = true,
 }

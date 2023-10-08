@@ -1,5 +1,5 @@
 return {
   "chrishrb/gx.nvim",
   event = "VeryLazy",
-  opts = {},
+  config = true,
 }
