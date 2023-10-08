@@ -61,6 +61,13 @@ return {
       end,
     },
     {
+      "natecraddock/workspaces.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("telescope").load_extension("workspaces")
+      end,
+    },
+    {
       "xiyaowong/telescope-emoji.nvim",
       event = "VeryLazy",
       config = function()
@@ -140,6 +147,13 @@ return {
       mode = { "n", "i" },
       function()
         require("telescope").extensions.projects.projects({})
+      end,
+      desc = "Open Projects",
+    },
+    {
+      "<leader>fw",
+      function()
+        require("telescope").extensions.workspaces.workspaces()
       end,
       desc = "Open Projects",
     },
