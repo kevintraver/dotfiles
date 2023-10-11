@@ -12,6 +12,9 @@ return {
       telescope = true,
       diffview = true,
     },
+    status = {
+      recent_commit_count = 20,
+    },
   },
   keys = {
     {
