@@ -230,6 +230,13 @@ return {
       desc = "Status",
     },
     {
+      "<D-y>",
+      function()
+        require("telescope").extensions.yank_history.yank_history({})
+      end,
+      desc = "Yank History",
+    },
+    {
       "<leader>sp",
       function()
         require("telescope").extensions.yank_history.yank_history({})
