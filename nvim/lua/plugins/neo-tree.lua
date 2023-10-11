@@ -78,7 +78,6 @@ return {
       end,
       desc = "Explorer NeoTree (root dir)",
     },
-
     {
       "<D-e>",
       function()
@@ -93,5 +92,8 @@ return {
       end,
       desc = "Explorer NeoTree (cwd)",
     },
+    -- disable LazyVim neo-tree keymaps
+    { "<leader>e", false },
+    { "<leader>E", false },
   },
 }
