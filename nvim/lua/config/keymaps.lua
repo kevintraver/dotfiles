@@ -54,3 +54,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 vim.keymap.set("n", "q", "")
 vim.keymap.set("n", "Q", "")
+
+vim.keymap.set("n", "<leader>ep", function()
+  require("oil").open("~/.dotfiles/nvim/lua/plugins")
+end, { desc = "Open Plugins Folder" })
