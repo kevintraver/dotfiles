@@ -95,5 +95,7 @@ return {
     -- disable LazyVim neo-tree keymaps
     { "<leader>e", false },
     { "<leader>E", false },
+    { "<leader>fe", false },
+    { "<leader>fE", false },
   },
 }
