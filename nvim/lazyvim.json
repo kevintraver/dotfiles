@@ -1,21 +1,22 @@
 {
   "extras": [
-    "coding.copilot",
-    "coding.yanky",
-    "editor.aerial",
-    "editor.navic",
-    "lang.json",
-    "lang.ruby",
-    "lang.rust",
-    "lang.tailwind",
-    "lang.typescript",
-    "lang.yaml",
-    "linting.eslint",
-    "lsp.none-ls",
-    "test.core",
-    "util.project"
+    "lazyvim.plugins.extras.coding.copilot",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.editor.navic",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.ruby",
+    "lazyvim.plugins.extras.lang.rust",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint",
+    "lazyvim.plugins.extras.lsp.none-ls",
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.util.project"
   ],
   "news": {
-    "NEWS.md": "2035"
-  }
+    "NEWS.md": "2123"
+  },
+  "version": 1
 }
