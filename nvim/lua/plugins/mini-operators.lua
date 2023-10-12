@@ -4,6 +4,7 @@ return {
   opts = {
     evaluate = { prefix = "" },
     exchange = { prefix = "" },
+    multiply = { prefix = "gm" },
     replace = { prefix = "" },
     sort = { prefix = "" },
   },
