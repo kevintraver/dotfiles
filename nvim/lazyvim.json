@@ -1,0 +1,20 @@
+{
+  "extras": [
+    "coding.copilot",
+    "coding.yanky",
+    "editor.navic",
+    "lang.json",
+    "lang.ruby",
+    "lang.rust",
+    "lang.tailwind",
+    "lang.typescript",
+    "lang.yaml",
+    "linting.eslint",
+    "lsp.none-ls",
+    "test.core",
+    "util.project"
+  ],
+  "news": {
+    "NEWS.md": "2035"
+  }
+}
