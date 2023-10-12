@@ -2,6 +2,7 @@
   "extras": [
     "coding.copilot",
     "coding.yanky",
+    "editor.aerial",
     "editor.navic",
     "lang.json",
     "lang.ruby",
