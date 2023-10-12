@@ -7,62 +7,6 @@ return {
 
   keys = {
     {
-      "iS",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").subword("inner")
-      end,
-    },
-    {
-      "aS",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").subword("outer")
-      end,
-    },
-    {
-      "ii",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("inner", "inner")
-      end,
-    },
-    {
-      "ai",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("outer", "outer")
-      end,
-    },
-    {
-      "iI",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("inner", "outer")
-      end,
-    },
-    {
-      "aI",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("outer", "outer")
-      end,
-    },
-    {
-      "ip",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("inner", "inner", "noBlanks")
-      end,
-    },
-    {
-      "ap",
-      mode = { "o", "x" },
-      function()
-        require("various-textobjs").indentation("outer", "outer", "noBlanks")
-      end,
-    },
-    {
       "u",
       mode = { "o", "x" },
       function()
