@@ -6,7 +6,8 @@
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", vim.cmd.write, { desc = "Save file" })
 
 -- windows
-vim.keymap.set({ "n", "i" }, "<D-l>", vim.cmd.vsplit, { desc = "Split window right" })
+vim.keymap.set({ "n", "i" }, "<D-l>", vim.cmd.vsplit, { desc = "Split window vertical" })
+vim.keymap.set({ "n", "i" }, "<D-S-l>", vim.cmd.split, { desc = "Split window horizontal" })
 
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<D-q>", vim.cmd.quitall, { desc = "Quit all" })
