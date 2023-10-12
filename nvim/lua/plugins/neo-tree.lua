@@ -74,25 +74,18 @@ return {
     {
       "<D-b>",
       function()
-        require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").root.get() })
+        require("neo-tree.command").execute({ toggle = true })
       end,
       desc = "Explorer NeoTree (root dir)",
     },
     {
       "<D-e>",
       function()
-        require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").root.get() })
+        require("neo-tree.command").execute({ toggle = true })
       end,
       desc = "Explorer NeoTree (root dir)",
     },
-    {
-      "<D-S-e>",
-      function()
-        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
-      end,
-      desc = "Explorer NeoTree (cwd)",
-    },
-    -- disable LazyVim neo-tree keymaps
+    -- disable LazyVim Neo-tree keymaps
     { "<leader>e", false },
     { "<leader>E", false },
     { "<leader>fe", false },
