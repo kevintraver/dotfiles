@@ -1,4 +1,4 @@
 return {
-  "goolord/alpha-nvim",
+  "glepnir/dashboard-nvim",
   enabled = false,
 }
