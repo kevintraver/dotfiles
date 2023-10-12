@@ -14,3 +14,4 @@ fi
 alias e="$EDITOR"
 alias n="$EDITOR"
 
+alias code="$EDITOR"
