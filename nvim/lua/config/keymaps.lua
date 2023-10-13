@@ -43,7 +43,3 @@ vim.keymap.set("t", "<D-e>", "<C-e>")
 
 vim.keymap.set("n", "q", "")
 vim.keymap.set("n", "Q", "")
-
-vim.keymap.set("n", "<leader>ep", function()
-  require("oil").open("~/.dotfiles/nvim/lua/plugins")
-end, { desc = "Open Plugins Folder" })
