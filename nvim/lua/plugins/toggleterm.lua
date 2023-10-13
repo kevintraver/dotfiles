@@ -7,7 +7,7 @@ return {
       "<D-t>",
       mode = { "n", "t" },
       function()
-        require("toggleterm").toggle_command()
+        require("toggleterm").toggle_command("direction=vertical")
       end,
       desc = "Toggle terminal",
     },
