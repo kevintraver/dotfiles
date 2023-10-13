@@ -45,12 +45,3 @@ vim.keymap.set("n", "Q", "")
 vim.keymap.set("n", "<leader>ep", function()
   require("oil").open("~/.dotfiles/nvim/lua/plugins")
 end, { desc = "Open Plugins Folder" })
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.keymap.set("n", "<leader>pm", function()
-      vim.cmd("silent !open -a Marked\\ 2.app '%:p'")
-    end, { desc = "Markdown Preview" })
-  end,
-})
