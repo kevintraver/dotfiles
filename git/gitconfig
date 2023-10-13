@@ -4,7 +4,7 @@
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor = nvr --remote-wait-silent +'set bufhidden=wipe'
+  editor = nvr -l --remote-wait-silent +'set bufhidden=wipe'
   pager = delta
 
 [interactive]
