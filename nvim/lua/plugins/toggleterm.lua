@@ -1,7 +1,7 @@
 return {
   "akinsho/toggleterm.nvim",
   event = "VeryLazy",
-  cmd = { "ToggleTerm" },
+  config = true,
   keys = {
     {
       "<C-Enter>",
