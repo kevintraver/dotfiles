@@ -52,7 +52,6 @@ return {
       mode = { "n", "x" },
       function()
         require("yanky.textobj").last_put()
-        require("yanky.textobj").last_put()
       end,
       desc = "Last Put",
     },
