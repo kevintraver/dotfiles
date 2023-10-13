@@ -11,7 +11,9 @@ vim.keymap.set({ "n", "i" }, "<D-S-l>", vim.cmd.split, { desc = "Split window ho
 
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<D-q>", vim.cmd.quitall, { desc = "Quit all" })
-vim.keymap.set({ "n", "i", "x" }, "<D-w>", vim.cmd.quit, { desc = "Close" })
+vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
+  vim.cmd.bdelete()
+end, { desc = "Close" })
 vim.keymap.set({ "n", "i", "x" }, "<D-S-q>", vim.cmd.Quit, { desc = "Quit! all" })
 
 -- new
