@@ -56,5 +56,9 @@ return {
       end,
       desc = "Last Put",
     },
+    {
+      "<leader>p",
+      false,
+    },
   },
 }
