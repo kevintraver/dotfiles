@@ -4,14 +4,6 @@ return {
   config = true,
   keys = {
     {
-      "<C-Enter>",
-      desc = "Send line to terminal",
-    },
-    {
-      "<D-Enter>",
-      desc = "Send line to terminal",
-    },
-    {
       "<D-t>",
       mode = { "n", "t" },
       function()
