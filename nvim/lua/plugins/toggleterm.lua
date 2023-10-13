@@ -29,5 +29,15 @@ return {
       end,
       desc = "Lazygit",
     },
+    {
+      "<D-S-e>",
+      mode = { "n", "t" },
+      function()
+        require("toggleterm.terminal").Terminal
+          :new({ cmd = "ranger", direction = "float", count = 10, hidden = true })
+          :toggle()
+      end,
+      desc = "Ranger",
+    },
   },
 }
