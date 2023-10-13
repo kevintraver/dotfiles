@@ -1,7 +1,8 @@
 os:
-  edit: 'nvim --server "$NVIM" --remote-tab {{filename}}'
-  editAtLine: 'nvim --server "$NVIM" --remote-tab {{filename}}; [ -z "$NVIM" ] || nvim --server "$NVIM" --remote-send ":{{line}}<CR>"'
-  editAtLineAndWait: "nvim +{{line}} {{filename}}"
+  edit: "nvr -l {{filename}}"
+  editAtLine: "nvr -l +{{line}} {{filename}}"
+  editAtLineAndWait: "nvr -l --remote-wait +{{line}} {{filename}}"
+
 promptToReturnFromSubprocess: false
 
 git:
