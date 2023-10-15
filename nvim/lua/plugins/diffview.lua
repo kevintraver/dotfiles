@@ -27,6 +27,9 @@ return {
         end,
       },
       file_history_panel = {
+        ["e"] = function()
+          require("diffview.actions").goto_file_tab()
+        end,
         ["q"] = function()
           vim.cmd.tabclose()
         end,
