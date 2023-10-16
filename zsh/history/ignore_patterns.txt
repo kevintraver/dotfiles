@@ -9,6 +9,7 @@ e
 e .
 exa
 exit
+fc
 fzf
 git log
 git pull
