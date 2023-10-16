@@ -244,11 +244,11 @@ return {
       desc = "Yank History",
     },
     {
-      "<leader>fl",
+      "<leader>ls",
       function()
         require("telescope").extensions.lazy.lazy()
       end,
-      desc = "Lazy",
+      desc = "Find",
     },
     {
       "<leader>gL",
