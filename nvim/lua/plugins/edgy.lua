@@ -40,6 +40,10 @@ return {
       },
       { title = "Neotest Summary", ft = "neotest-summary" },
       { title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
+      {
+        title = "Aerial",
+        ft = "aerial",
+      },
     },
     left = {
       {
