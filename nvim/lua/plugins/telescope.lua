@@ -260,7 +260,7 @@ return {
     {
       "<D-j>",
       function()
-        require("telescope.builtin").lsp_document_symbols()
+        require("telescope").extensions.aerial.aerial()
       end,
       desc = "Goto Symbol",
     },
