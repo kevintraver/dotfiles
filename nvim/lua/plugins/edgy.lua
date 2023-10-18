@@ -34,6 +34,7 @@ return {
     right = {
       {
         ft = "toggleterm",
+        title = "Terminal",
         size = { width = 0.4 },
         filter = function(buf, win)
           return vim.api.nvim_win_get_config(win).relative == ""
