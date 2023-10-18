@@ -145,7 +145,6 @@ return {
     },
     {
       "<leader>p",
-      mode = { "n", "i" },
       function()
         require("telescope").extensions.projects.projects({})
       end,
