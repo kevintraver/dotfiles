@@ -29,7 +29,11 @@ return {
         end,
       },
       { title = "Spectre", ft = "spectre_panel", size = { height = 0.4 } },
-      { title = "Diff View File History", ft = "DiffviewFileHistory", size = { height = 0.3 } },
+      {
+        title = "Diff View File History",
+        ft = "DiffviewFileHistory",
+        size = { height = 0.3 },
+      },
     },
     right = {
       {
@@ -40,8 +44,15 @@ return {
           return vim.api.nvim_win_get_config(win).relative == ""
         end,
       },
-      { title = "Neotest Summary", ft = "neotest-summary" },
-      { title = "Neotest Output", ft = "neotest-output-panel", size = { height = 15 } },
+      {
+        title = "Neotest Summary",
+        ft = "neotest-summary",
+      },
+      {
+        title = "Neotest Output",
+        ft = "neotest-output-panel",
+        size = { height = 15 },
+      },
       {
         title = "Aerial",
         ft = "aerial",
