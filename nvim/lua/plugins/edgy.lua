@@ -29,6 +29,7 @@ return {
         end,
       },
       { title = "Spectre", ft = "spectre_panel", size = { height = 0.4 } },
+      { title = "Diff View File History", ft = "DiffviewFileHistory", size = { height = 0.3 } },
     },
     right = {
       {
@@ -46,6 +47,7 @@ return {
       },
     },
     left = {
+      { title = "Diff View", ft = "DiffviewFiles" },
       {
         title = "Neo-Tree",
         ft = "neo-tree",
