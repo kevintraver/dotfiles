@@ -1,6 +1,7 @@
 return {
   "nvim-telescope/telescope.nvim",
   event = "VeryLazy",
+  config = true,
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
@@ -281,22 +282,6 @@ return {
     {
       "<leader><space>",
       false,
-    },
-  },
-  opts = {
-    defaults = {
-      mappings = {
-        n = {
-          ["<D-w>"] = function(...)
-            return require("telescope.actions").close(...)
-          end,
-        },
-        i = {
-          ["<D-w>"] = function(...)
-            return require("telescope.actions").close(...)
-          end,
-        },
-      },
     },
   },
 }
