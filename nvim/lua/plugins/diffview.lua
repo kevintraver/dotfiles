@@ -6,24 +6,24 @@ return {
     keymaps = {
       file_panel = {
         ["q"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-w>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-d>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
       },
       view = {
         ["q"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-w>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-d>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
       },
       file_history_panel = {
@@ -31,13 +31,13 @@ return {
           require("diffview.actions").goto_file_tab()
         end,
         ["q"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-w>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
         ["<D-d>"] = function()
-          vim.cmd.tabclose()
+          require("diffview").close()
         end,
       },
     },
