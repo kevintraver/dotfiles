@@ -28,13 +28,11 @@ return {
     {
       "p",
       "<Plug>(YankyPutAfterFilter)",
-      mode = { "n", "x" },
       desc = "Yanky put after (filter)",
     },
     {
       "P",
       "<Plug>(YankyPutBeforeFilter)",
-      mode = { "n", "x" },
       desc = "Yanky put before (filter)",
     },
     {
