@@ -48,14 +48,6 @@ return {
       desc = "Put before (no filter)",
     },
     {
-      "lp",
-      mode = { "n", "x" },
-      function()
-        require("yanky.textobj").last_put()
-      end,
-      desc = "Last Put",
-    },
-    {
       "<leader>p",
       false,
     },
