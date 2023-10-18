@@ -45,6 +45,11 @@ return {
         end,
       },
       {
+        ft = "httpResult",
+        title = "HTTP Result",
+        size = { width = 0.4 },
+      },
+      {
         title = "Neotest Summary",
         ft = "neotest-summary",
       },
