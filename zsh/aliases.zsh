@@ -74,15 +74,15 @@ alias csv='xsv'
 
 alias pwd="pwd | tr -d '\n'"
 
-# exa
-alias l='exa -lbF --git'
-alias ls='exa'
-alias ll='exa -lbGF --git'
-alias llm='exa -lbGd --git --sort=modified'
-alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
-alias lS='exa -1'
-alias lt='exa --tree --level=2'
+# eza
+alias l='eza -lbF --git'
+alias ls='eza'
+alias ll='eza -lbGF --git'
+alias llm='eza -lbGd --git --sort=modified'
+alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
+alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+alias lS='eza -1'
+alias lt='eza --tree --level=2'
 
 # terminal apps
 
