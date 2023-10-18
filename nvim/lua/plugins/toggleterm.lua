@@ -24,7 +24,12 @@ return {
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
-          :new({ cmd = "lazygit", direction = "float", count = 5, hidden = true })
+          :new({
+            cmd = "lazygit",
+            direction = "float",
+            count = 5,
+            hidden = true,
+          })
           :toggle()
       end,
       desc = "Lazygit",
@@ -34,7 +39,12 @@ return {
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
-          :new({ cmd = "ranger", direction = "float", count = 10, hidden = true })
+          :new({
+            cmd = "ranger",
+            direction = "float",
+            count = 10,
+            hidden = true,
+          })
           :toggle()
       end,
       desc = "Ranger",
