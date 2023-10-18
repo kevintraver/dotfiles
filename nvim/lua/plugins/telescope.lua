@@ -144,7 +144,7 @@ return {
       desc = "Search Buffer",
     },
     {
-      "<D-p>",
+      "<leader>p",
       mode = { "n", "i" },
       function()
         require("telescope").extensions.projects.projects({})
@@ -232,6 +232,13 @@ return {
     },
     {
       "<D-y>",
+      function()
+        require("telescope").extensions.yank_history.yank_history({})
+      end,
+      desc = "Yank History",
+    },
+    {
+      "<D-p>",
       function()
         require("telescope").extensions.yank_history.yank_history({})
       end,
