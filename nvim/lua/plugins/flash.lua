@@ -45,6 +45,14 @@ return {
       desc = "Flash",
     },
     {
+      "R",
+      mode = "o",
+      function()
+        require("flash").remote()
+      end,
+      desc = "Remote Flash",
+    },
+    {
       "<leader>j",
       mode = { "n", "o", "x" },
       function()
