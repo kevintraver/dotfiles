@@ -20,7 +20,7 @@ return {
     {
       "<A-g>",
       function()
-        require("neogit").open()
+        require("neogit").open({ kind = "split" })
       end,
       desc = "Neogit Open",
     },
