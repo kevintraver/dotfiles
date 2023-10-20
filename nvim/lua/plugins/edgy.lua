@@ -65,6 +65,22 @@ return {
     },
     left = {
       {
+        ft = "NeogitStatus",
+        size = { width = 0.4 },
+      },
+      {
+        ft = "NeogitPopup",
+        size = { width = 0.4 },
+      },
+      {
+        ft = "NeogitCommitMessage",
+        size = { width = 0.4 },
+      },
+      {
+        ft = "NeogitCommitView",
+        size = { width = 0.4 },
+      },
+      {
         title = "Diff View",
         ft = "DiffviewFiles",
       },
