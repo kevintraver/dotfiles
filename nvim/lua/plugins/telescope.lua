@@ -271,6 +271,13 @@ return {
       desc = "Lazy Find",
     },
     {
+      "<leader>fl",
+      function()
+        require("telescope").extensions.lazy.lazy()
+      end,
+      desc = "Find Lazy Plugin",
+    },
+    {
       "<leader>gL",
       function()
         require("telescope").extensions.git_diffs.diff_commits()
