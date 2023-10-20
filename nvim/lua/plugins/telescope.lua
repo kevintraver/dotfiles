@@ -254,14 +254,14 @@ return {
       function()
         require("telescope").extensions.lazy.lazy()
       end,
-      desc = "Lazy Find",
+      desc = "Lazy Search Plugin",
     },
     {
       "<leader>lf",
       function()
         require("telescope").extensions.lazy.lazy()
       end,
-      desc = "Lazy Find",
+      desc = "Lazy Find Plugin",
     },
     {
       "<leader>fl",
