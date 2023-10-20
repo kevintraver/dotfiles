@@ -102,6 +102,12 @@ return {
         require("telescope").load_extension("glyph")
       end,
     },
+    {
+      "Zane-/cder.nvim",
+      config = function()
+        require("telescope").load_extension("cder")
+      end,
+    },
   },
   keys = {
     {
@@ -284,6 +290,13 @@ return {
         require("telescope.builtin").lsp_workspace_symbols()
       end,
       desc = "Goto Symbol (workspace)",
+    },
+    {
+      "<leader>fd",
+      function()
+        require("telescope").extensions.cder.cder()
+      end,
+      desc = "Change Directory",
     },
     {
       "<leader><space>",
