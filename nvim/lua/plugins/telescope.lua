@@ -150,13 +150,6 @@ return {
       desc = "Search Buffer",
     },
     {
-      "<leader>p",
-      function()
-        require("telescope").extensions.projects.projects({})
-      end,
-      desc = "Projects",
-    },
-    {
       "<leader>fw",
       function()
         require("telescope").extensions.workspaces.workspaces()
