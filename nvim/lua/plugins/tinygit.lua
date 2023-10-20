@@ -1,3 +1,4 @@
+-- derp
 return {
   "chrisgrieser/nvim-tinygit",
   event = "VeryLazy",
@@ -23,7 +24,7 @@ return {
     {
       "<leader>ga",
       function()
-        require("tinygit").amendNoEdit()
+        require("tinygit").amendOnlyMsg()
       end,
       desc = "Amend",
     },
@@ -37,7 +38,7 @@ return {
     {
       "<M-a>",
       function()
-        require("tinygit").amendNoEdit()
+        require("tinygit").amendOnlyMsg()
       end,
       desc = "Amend",
     },
