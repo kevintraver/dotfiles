@@ -7,6 +7,7 @@ return {
       "markdown",
       "NeogitStatus",
       "lazy",
+      "DiffviewFileHistory",
     },
   },
 }
