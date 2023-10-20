@@ -4,9 +4,9 @@
 
 vim.opt.clipboard = "" -- Don't sync with system clipboard
 
-vim.env["VISUAL"] = "nvr -s -l --remote-wait +'set bufhidden=wipe'"
-vim.env["EDITOR"] = "nvr -s -l --remote-wait +'set bufhidden=wipe'"
-vim.env["GIT_EDITOR"] = "nvr -s -l --remote-wait +'set bufhidden=wipe'"
+vim.env["VISUAL"] = "nvr -s -l --remote-wait"
+vim.env["EDITOR"] = "nvr -s -l --remote-wait"
+vim.env["GIT_EDITOR"] = "nvr -s -l --remote-wait"
 
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
 
