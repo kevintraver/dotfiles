@@ -194,7 +194,7 @@ return {
       desc = "Filetypes",
     },
     {
-      "<leader>fm",
+      "<leader>sm",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,
