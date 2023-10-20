@@ -12,6 +12,19 @@ return {
       desc = "Toggle terminal",
     },
     {
+      "<leader><tab>t",
+      function()
+        require("toggleterm.terminal").Terminal
+          :new({
+            direction = "tab",
+            count = 2,
+            hidden = true,
+          })
+          :toggle()
+      end,
+      desc = "New Terminal Tab",
+    },
+    {
       "<D-w>",
       mode = { "t" },
       function()
