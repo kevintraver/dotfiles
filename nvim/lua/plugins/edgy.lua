@@ -22,7 +22,7 @@ return {
       { ft = "qf", title = "QuickFix" },
       {
         ft = "help",
-        size = { height = 20 },
+        size = { height = 0.4 },
         -- don't open help files in edgy that we're editing
         filter = function(buf)
           return vim.bo[buf].buftype == "help"
@@ -32,7 +32,7 @@ return {
       {
         title = "Diff View File History",
         ft = "DiffviewFileHistory",
-        size = { height = 0.3 },
+        size = { height = 0.4 },
       },
     },
     right = {
@@ -56,7 +56,7 @@ return {
       {
         title = "Neotest Output",
         ft = "neotest-output-panel",
-        size = { height = 15 },
+        size = { width = 0.4 },
       },
       {
         title = "Aerial",
@@ -64,7 +64,10 @@ return {
       },
     },
     left = {
-      { title = "Diff View", ft = "DiffviewFiles" },
+      {
+        title = "Diff View",
+        ft = "DiffviewFiles",
+      },
       {
         title = "Neo-Tree",
         ft = "neo-tree",
@@ -74,7 +77,6 @@ return {
         open = function()
           vim.api.nvim_input("<esc><space>e")
         end,
-        size = { height = 0.5 },
       },
       {
         title = "Neo-Tree Git",
