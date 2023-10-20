@@ -32,6 +32,9 @@ vim.keymap.del("n", "<leader>l")
 vim.keymap.del("n", "<leader>L")
 vim.keymap.del("n", "<leader><tab><tab>")
 
+vim.keymap.del("n", "<leader>ft")
+vim.keymap.del("n", "<leader>fT")
+
 -- Use regular (not filtered) put in terminals
 vim.api.nvim_create_autocmd("TermEnter", {
   callback = function(event)
