@@ -159,9 +159,9 @@ return {
     {
       "<leader>fo",
       function()
-        require("telescope.builtin").oldfiles()
+        require("telescope").extensions.frecency.frecency()
       end,
-      desc = "Recent",
+      desc = "Frecent",
     },
     {
       "<D-S-o>",
