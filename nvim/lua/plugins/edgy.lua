@@ -29,6 +29,10 @@ return {
     },
     right = {
       {
+        ft = "Codewindow",
+        title = "Mini Map",
+      },
+      {
         ft = "toggleterm",
         title = "Terminal",
         size = { width = 0.4 },
