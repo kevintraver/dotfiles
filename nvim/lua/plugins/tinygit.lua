@@ -1,4 +1,3 @@
--- derp
 return {
   "chrisgrieser/nvim-tinygit",
   event = "VeryLazy",
