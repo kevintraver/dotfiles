@@ -8,8 +8,9 @@ return {
       mappings = {
         ["s"] = "",
         ["l"] = "open",
+        ["<S-p>"] = { "toggle_preview" },
+        ["<C-p>"] = { "toggle_preview" },
         ["L"] = "focus_preview",
-        ["h"] = "close_node",
         ["v"] = "open_vsplit",
         ["<D-w>"] = "close_window",
         ["<D-,>"] = "prev_source",
