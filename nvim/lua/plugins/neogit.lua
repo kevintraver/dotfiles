@@ -25,7 +25,7 @@ return {
       desc = "Neogit Open",
     },
     {
-      "<leader>gn",
+      "<leader>gc",
       function()
         require("neogit").open({ "commit" })
       end,
