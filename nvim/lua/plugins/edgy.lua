@@ -10,8 +10,16 @@ return {
           return vim.api.nvim_win_get_config(win).relative == ""
         end,
       },
-      "Trouble",
-      { ft = "qf", title = "QuickFix" },
+      {
+        ft = "qf",
+        title = "QuickFix",
+        size = { height = 0.3 },
+      },
+      {
+        ft = "Trouble",
+        title = "Trouble",
+        size = { height = 0.3 },
+      },
       {
         ft = "help",
         size = { height = 0.4 },
@@ -20,7 +28,11 @@ return {
           return vim.bo[buf].buftype == "help"
         end,
       },
-      { title = "Spectre", ft = "spectre_panel", size = { height = 0.4 } },
+      {
+        title = "Spectre",
+        ft = "spectre_panel",
+        size = { height = 0.4 },
+      },
       {
         title = "Diff View File History",
         ft = "DiffviewFileHistory",
