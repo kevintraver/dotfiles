@@ -14,20 +14,6 @@ return {
 
   keys = {
     {
-      "<leader>gc",
-      function()
-        require("tinygit").smartCommit()
-      end,
-      desc = "Commit",
-    },
-    {
-      "<leader>ga",
-      function()
-        require("tinygit").amendOnlyMsg()
-      end,
-      desc = "Amend",
-    },
-    {
       "<M-c>",
       function()
         require("tinygit").smartCommit()
