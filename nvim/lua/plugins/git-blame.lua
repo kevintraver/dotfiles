@@ -4,7 +4,7 @@ return {
   keys = {
     {
 
-      "<leader>ghb",
+      "<leader>ghB",
       function()
         require("gitblame").toggle()
       end,
