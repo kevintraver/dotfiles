@@ -75,14 +75,20 @@ return {
     {
       "<D-b>",
       function()
-        require("neo-tree.command").execute({ toggle = true })
+        require("neo-tree.command").execute({
+          reveal = true,
+          toggle = true,
+        })
       end,
       desc = "Explorer NeoTree (root dir)",
     },
     {
       "<D-e>",
       function()
-        require("neo-tree.command").execute({ toggle = true })
+        require("neo-tree.command").execute({
+          reveal = true,
+          toggle = true,
+        })
       end,
       desc = "Explorer NeoTree (root dir)",
     },
