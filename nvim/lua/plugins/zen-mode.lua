@@ -6,11 +6,7 @@ return {
     {
       "<leader>wz",
       function()
-        require("zen-mode").toggle({
-          window = {
-            width = 0.85, -- width will be 85% of the editor width
-          },
-        })
+        require("zen-mode").toggle()
       end,
       desc = "Toggle Zen Mode",
     },
