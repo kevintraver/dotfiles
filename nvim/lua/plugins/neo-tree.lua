@@ -8,8 +8,8 @@ return {
       mappings = {
         ["s"] = "",
         ["l"] = "open",
-        ["<S-p>"] = { "toggle_preview" },
-        ["<C-p>"] = { "toggle_preview" },
+        ["<S-p>"] = { "toggle_preview", config = { use_float = true } },
+        ["<C-p>"] = { "toggle_preview", config = { use_float = true } },
         ["L"] = "focus_preview",
         ["v"] = "open_vsplit",
         ["<D-w>"] = "close_window",
