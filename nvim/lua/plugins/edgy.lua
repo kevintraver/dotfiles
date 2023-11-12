@@ -4,6 +4,10 @@ return {
   opts = {
     bottom = {
       {
+        ft = "undotreeDiff",
+        size = { height = 0.4 },
+      },
+      {
         ft = "noice",
         size = { height = 0.4 },
         filter = function(buf, win)
@@ -72,6 +76,10 @@ return {
       },
     },
     left = {
+      {
+        ft = "undotree",
+        size = { width = 0.3 },
+      },
       {
         ft = "NeogitStatus",
         size = { width = 0.4 },

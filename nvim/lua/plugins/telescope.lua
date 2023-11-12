@@ -27,20 +27,6 @@ return {
       end,
     },
     {
-      "debugloop/telescope-undo.nvim",
-      event = "VeryLazy",
-      config = function()
-        require("telescope").setup({
-          extensions = {
-            undo = {
-              use_delta = false,
-            },
-          },
-        })
-        require("telescope").load_extension("undo")
-      end,
-    },
-    {
       "tsakirist/telescope-lazy.nvim",
       event = "VeryLazy",
       config = function()
@@ -170,14 +156,6 @@ return {
         require("telescope.builtin").oldfiles()
       end,
       desc = "Recent",
-    },
-    {
-      "<D-u>",
-      mode = { "n", "i" },
-      function()
-        require("telescope").extensions.undo.undo()
-      end,
-      desc = "Undo",
     },
     {
       "<leader>gb",
