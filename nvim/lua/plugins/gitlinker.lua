@@ -5,7 +5,6 @@ return {
   config = true,
   keys = {
     {
-
       "<leader>gy",
       desc = "Copy Buffer URL",
     },

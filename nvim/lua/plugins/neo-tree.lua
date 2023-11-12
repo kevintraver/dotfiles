@@ -38,7 +38,6 @@ return {
         local filepath = node:get_id()
         local filename = node.name
         local modify = vim.fn.fnamemodify
-
         local vals = {
           ["BASENAME"] = modify(filename, ":r"),
           ["EXTENSION"] = modify(filename, ":e"),
@@ -48,7 +47,6 @@ return {
           ["PATH"] = filepath,
           ["URI"] = vim.uri_from_fname(filepath),
         }
-
         local options = vim.tbl_filter(function(val)
           return vals[val] ~= ""
         end, vim.tbl_keys(vals))
@@ -70,7 +68,6 @@ return {
       end,
     },
   },
-
   keys = {
     {
       "<D-b>",

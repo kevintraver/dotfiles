@@ -4,7 +4,6 @@ return {
   opts = {
     useDefaultKeymaps = false,
   },
-
   keys = {
     {
       "u",

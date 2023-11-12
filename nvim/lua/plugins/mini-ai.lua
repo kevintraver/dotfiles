@@ -11,7 +11,6 @@ return {
       },
       custom_textobjects = {
         d = { "[%-%.]?%f[%d]%d+" },
-
         l = function(ai_type)
           local line_num = vim.fn.line(".")
           local line = vim.fn.getline(line_num)
@@ -27,10 +26,8 @@ return {
               to_col = line:len()
             end
           end
-
           return { from = { line = line_num, col = from_col }, to = { line = line_num, col = to_col } }
         end,
-
         g = function()
           local from = { line = 1, col = 1 }
           local to = {
@@ -39,12 +36,10 @@ return {
           }
           return { from = from, to = to, vis_mode = "V" }
         end,
-
         o = gen_spec.treesitter({
           a = { "@block.outer", "@conditional.outer", "@loop.outer" },
           i = { "@block.inner", "@conditional.inner", "@loop.inner" },
         }, {}),
-
         m = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
         c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
       },

@@ -13,7 +13,6 @@ return {
       })
     )
     table.insert(opts.sources, require("cspell").code_actions)
-
     local none_ls = require("null-ls")
     local cspell_check_enabled = true
     vim.keymap.set("n", "<leader>us", function()
