@@ -3,7 +3,6 @@ return {
   config = true,
   keys = {
     {
-
       "<leader>ghB",
       function()
         require("gitblame").toggle()

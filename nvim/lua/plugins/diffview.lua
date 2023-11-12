@@ -1,7 +1,6 @@
 return {
   "sindrets/diffview.nvim",
   event = "VeryLazy",
-
   opts = {
     keymaps = {
       file_panel = {
@@ -42,7 +41,6 @@ return {
       },
     },
   },
-
   keys = {
     {
       "<D-d>",
