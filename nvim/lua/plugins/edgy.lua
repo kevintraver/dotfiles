@@ -118,7 +118,6 @@ return {
         end,
         open = "Neotree position=top buffers",
       },
-      "neo-tree",
     },
     animate = {
       enabled = false,
