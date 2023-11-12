@@ -4,8 +4,6 @@ return {
   dependencies = { "stevearc/dressing.nvim" },
   opts = {
     commitMsg = {
-      maxLen = 72,
-      mediumLen = 50,
       enforceConvCommits = {
         enabled = false,
       },
