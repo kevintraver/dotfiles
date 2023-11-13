@@ -106,9 +106,6 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "filesystem"
         end,
-        open = function()
-          vim.api.nvim_input("<esc><space>e")
-        end,
       },
       {
         title = "Neo-Tree Git",
@@ -116,7 +113,6 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "git_status"
         end,
-        open = "Neotree position=right git_status",
       },
       {
         title = "Neo-Tree Buffers",
@@ -124,7 +120,6 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "buffers"
         end,
-        open = "Neotree position=top buffers",
       },
     },
     animate = {
