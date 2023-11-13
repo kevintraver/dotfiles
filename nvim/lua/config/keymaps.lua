@@ -48,20 +48,6 @@ vim.keymap.del("n", "<leader><tab><tab>")
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
--- Use regular (not filtered) put in terminals
-vim.api.nvim_create_autocmd("TermEnter", {
-  callback = function(event)
-    vim.keymap.set("n", "p", "<Plug>(YankyPutAfter)", {
-      buffer = event.buf,
-      silent = true,
-    })
-    vim.keymap.set("n", "P", "<Plug>(YankyPutBefore)", {
-      buffer = event.buf,
-      silent = true,
-    })
-  end,
-})
-
 vim.keymap.set("t", "<D-e>", "<C-e>")
 
 vim.keymap.set("n", "q", "")
