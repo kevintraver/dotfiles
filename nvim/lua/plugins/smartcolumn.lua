@@ -6,6 +6,7 @@ return {
       "httpResult",
       "text",
       "markdown",
+      "mason",
       "NeogitStatus",
       "lazy",
       "DiffviewFileHistory",
