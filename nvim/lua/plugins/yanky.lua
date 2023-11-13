@@ -20,28 +20,14 @@ return {
       desc = "Yank to global clipboard",
     },
     {
-      "p",
+      "<leader>p",
       "<Plug>(YankyPutAfterFilter)",
       desc = "Yanky put after (filter)",
     },
     {
-      "P",
+      "<leader>P",
       "<Plug>(YankyPutBeforeFilter)",
       desc = "Yanky put before (filter)",
-    },
-    {
-      "=p",
-      "<Plug>(YankyPutAfter)",
-      desc = "Put after (no filter)",
-    },
-    {
-      "=P",
-      "<Plug>(YankyPutBefore)",
-      desc = "Put before (no filter)",
-    },
-    {
-      "<leader>p",
-      false,
     },
   },
 }
