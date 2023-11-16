@@ -1,5 +1,5 @@
 return {
   "roobert/tabtree.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }

@@ -1,6 +1,6 @@
 return {
   "sindrets/winshift.nvim",
-  event = "VeryLazy",
+  lazy = true,
   keys = {
     {
       "<leader>ws",

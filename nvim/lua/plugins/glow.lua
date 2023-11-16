@@ -1,7 +1,7 @@
 return {
   "ellisonleao/glow.nvim",
+  lazy = true,
   config = true,
-  event = "VeryLazy",
   cmd = "Glow",
   opts = {
     width_ratio = 0.9,

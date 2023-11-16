@@ -1,6 +1,6 @@
 return {
   "stevearc/oil.nvim",
-  event = "VeryLazy",
+  lazy = true,
   opts = {
     use_default_keymaps = false,
     keymaps = {

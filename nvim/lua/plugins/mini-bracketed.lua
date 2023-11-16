@@ -1,5 +1,5 @@
 return {
   "echasnovski/mini.bracketed",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }

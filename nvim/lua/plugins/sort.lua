@@ -1,4 +1,4 @@
 return {
   "sQVe/sort.nvim",
-  event = "VeryLazy",
+  lazy = true,
 }

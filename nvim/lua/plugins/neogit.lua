@@ -1,7 +1,6 @@
 return {
   "NeogitOrg/neogit",
-  event = "VeryLazy",
-  cmd = "Neogit",
+  lazy = true,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",

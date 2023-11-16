@@ -1,5 +1,5 @@
 return {
   "tenxsoydev/tabs-vs-spaces.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }

@@ -1,19 +1,18 @@
 return {
   "nvim-telescope/telescope.nvim",
-  event = "VeryLazy",
   config = true,
   dependencies = {
     {
       "nvim-telescope/telescope-fzf-native.nvim",
+      lazy = true,
       build = "make",
-      event = "VeryLazy",
       config = function()
         require("telescope").load_extension("fzf")
       end,
     },
     {
       "nvim-telescope/telescope-frecency.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("frecency")
       end,
@@ -21,42 +20,42 @@ return {
     },
     {
       "jvgrootveld/telescope-zoxide",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("zoxide")
       end,
     },
     {
       "tsakirist/telescope-lazy.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("lazy")
       end,
     },
     {
       "MaximilianLloyd/adjacent.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("adjacent")
       end,
     },
     {
       "paopaol/telescope-git-diffs.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("git_diffs")
       end,
     },
     {
       "natecraddock/workspaces.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").load_extension("workspaces")
       end,
     },
     {
       "xiyaowong/telescope-emoji.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").setup({
           extensions = {
@@ -73,7 +72,7 @@ return {
     },
     {
       "ghassan0/telescope-glyph.nvim",
-      event = "VeryLazy",
+      lazy = true,
       config = function()
         require("telescope").setup({
           extensions = {
@@ -90,6 +89,7 @@ return {
     },
     {
       "Zane-/cder.nvim",
+      lazy = true,
       config = function()
         require("telescope").load_extension("cder")
       end,

@@ -1,4 +1,4 @@
 return {
   "sbulav/nredir.nvim",
-  event = "VeryLazy",
+  lazy = true,
 }
