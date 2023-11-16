@@ -1,6 +1,6 @@
 return {
   "ten3roberts/qf.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
   keys = {
     {

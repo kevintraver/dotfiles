@@ -1,6 +1,6 @@
 return {
   "Wansmer/sibling-swap.nvim",
-  event = "VeryLazy",
+  lazy = true,
   opts = {
     use_default_keymaps = false,
   },

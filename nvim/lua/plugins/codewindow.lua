@@ -1,5 +1,6 @@
 return {
   "gorbit99/codewindow.nvim",
+  lazy = true,
   config = true,
   opts = {
     relative = "editor",

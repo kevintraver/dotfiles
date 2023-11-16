@@ -1,5 +1,5 @@
 return {
   "m-demare/hlargs.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }

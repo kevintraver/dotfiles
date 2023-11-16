@@ -1,6 +1,6 @@
 return {
   "diegoulloao/nvim-file-location",
-  event = "VeryLazy",
+  lazy = true,
   opts = {
     keymap = "<leader>yp",
     add_line = false,

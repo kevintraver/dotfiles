@@ -1,5 +1,6 @@
 return {
   "jiaoshijie/undotree",
+  lazy = true,
   opts = {
     float_diff = false,
     keymaps = {

@@ -1,5 +1,11 @@
 return {
   "chrishrb/gx.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
+  keys = {
+    {
+      "gx",
+      desc = "Open Link",
+    },
+  },
 }

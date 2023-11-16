@@ -1,6 +1,6 @@
 return {
   "TobinPalmer/rayso.nvim",
-  event = "VeryLazy",
+  lazy = true,
   keys = {
     {
       "<leader>cs",

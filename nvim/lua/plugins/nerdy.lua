@@ -1,6 +1,6 @@
 return {
   "2kabhishek/nerdy.nvim",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = {
     "stevearc/dressing.nvim",
     "nvim-telescope/telescope.nvim",
