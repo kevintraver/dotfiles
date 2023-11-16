@@ -286,6 +286,10 @@ return {
       desc = "Lazy Config Files",
     },
     {
+      "<leader>gc",
+      false,
+    },
+    {
       "<leader><space>",
       false,
     },
