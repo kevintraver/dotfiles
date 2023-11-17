@@ -1,5 +1,5 @@
 return {
   "yorickpeterse/nvim-pqf",
-  lazy = true,
+  event = "VeryLazy",
   config = true,
 }
