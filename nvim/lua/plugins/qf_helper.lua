@@ -1,5 +1,5 @@
 return {
   "stevearc/qf_helper.nvim",
-  lazy = true,
+  event = "VeryLazy",
   config = true,
 }
