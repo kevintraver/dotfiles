@@ -6,10 +6,12 @@ return {
   keys = {
     {
       "<leader>gy",
+      mode = { "n", "v" },
       desc = "Copy Buffer URL",
     },
     {
       "<leader>gY",
+      mode = { "n", "v" },
       function()
         require("gitlinker").get_repo_url()
       end,
@@ -17,6 +19,7 @@ return {
     },
     {
       "<leader>go",
+      mode = { "n", "v" },
       function()
         require("gitlinker").get_buf_range_url("n", { action_callback = require("gitlinker.actions").open_in_browser })
       end,
@@ -24,6 +27,7 @@ return {
     },
     {
       "<leader>gO",
+      mode = { "n", "v" },
       function()
         require("gitlinker").get_repo_url({ action_callback = require("gitlinker.actions").open_in_browser })
       end,
