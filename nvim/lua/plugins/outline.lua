@@ -3,6 +3,12 @@ return {
   event = "VeryLazy",
   config = true,
   keys = {
-    { "<leader>tt", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    {
+      "<D-i>",
+      function()
+        require("outline").toggle_outline()
+      end,
+      desc = "Toggle outline",
+    },
   },
 }
