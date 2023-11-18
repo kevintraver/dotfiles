@@ -112,14 +112,6 @@ return {
       desc = "Recent",
     },
     {
-      "<D-i>",
-      mode = { "n", "i" },
-      function()
-        require("telescope.builtin").find_files()
-      end,
-      desc = "Files",
-    },
-    {
       "<D-S-f>",
       mode = { "n", "i" },
       function()
