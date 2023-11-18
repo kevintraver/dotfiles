@@ -250,7 +250,9 @@ return {
     {
       "<D-j>",
       function()
-        require("telescope").extensions.aerial.aerial()
+        require("telescope.builtin").lsp_document_symbols({
+          symbols = require("lazyvim.config").get_kind_filter(),
+        })
       end,
       desc = "Goto Symbol",
     },
