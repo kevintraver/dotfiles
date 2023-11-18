@@ -70,6 +70,10 @@ return {
         size = { width = 0.4 },
       },
       {
+        title = "Outline",
+        ft = "Outline",
+      },
+      {
         title = "Aerial",
         ft = "aerial",
       },
