@@ -7,11 +7,13 @@ return {
       mappings = {
         ["s"] = "",
         ["l"] = "open",
+        ["h"] = "close_node",
         ["<S-p>"] = { "toggle_preview", config = { use_float = true } },
         ["<C-p>"] = { "toggle_preview", config = { use_float = true } },
         ["L"] = "focus_preview",
         ["v"] = "open_vsplit",
         ["<D-w>"] = "close_window",
+        ["<D-h>"] = "navigate_up",
         ["<D-,>"] = "prev_source",
         ["<D-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
