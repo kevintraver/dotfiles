@@ -136,7 +136,6 @@ return {
     },
     {
       "<leader>o",
-      mode = { "n", "i" },
       function()
         require("telescope.builtin").find_files()
       end,
