@@ -135,19 +135,19 @@ return {
       desc = "Workspaces",
     },
     {
-      "<leader>fo",
+      "<leader>o",
+      mode = { "n", "i" },
       function()
-        require("telescope").extensions.frecency.frecency()
+        require("telescope.builtin").find_files()
       end,
-      desc = "Frecent",
+      desc = "Files",
     },
     {
-      "<D-S-o>",
-      mode = { "n", "i" },
+      "<leader>fo",
       function()
         require("telescope.builtin").oldfiles()
       end,
-      desc = "Recent",
+      desc = "Frecent",
     },
     {
       "<leader>gb",
