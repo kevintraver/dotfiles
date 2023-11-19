@@ -1,5 +1,6 @@
 return {
   "axieax/urlview.nvim",
+  lazy = true,
   opts = {
     default_picker = "telescope",
     default_action = "clipboard",
