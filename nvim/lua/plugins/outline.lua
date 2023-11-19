@@ -1,7 +1,11 @@
 return {
   "hedyhli/outline.nvim",
   event = "VeryLazy",
-  config = true,
+  config = {
+    keymaps = {
+      close = { "q" },
+    },
+  },
   keys = {
     {
       "<D-i>",
