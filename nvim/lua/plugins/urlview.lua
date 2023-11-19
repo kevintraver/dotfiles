@@ -10,7 +10,7 @@ return {
     {
       "<leader>su",
       function()
-        vim.cmd.UrlView()
+        require("urlview").search("buffer", {})
       end,
       desc = "UrlView",
     },
