@@ -1,5 +1,6 @@
 return {
   "folke/twilight.nvim",
+  lazy = true,
   config = true,
   keys = {
     {
