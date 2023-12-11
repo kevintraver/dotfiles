@@ -4,7 +4,6 @@ return {
   keys = {
     {
       "w",
-      mode = { "n", "x" },
       function()
         require("spider").motion("w")
       end,
@@ -12,7 +11,6 @@ return {
     },
     {
       "e",
-      mode = { "n", "x" },
       function()
         require("spider").motion("e")
       end,
@@ -20,7 +18,6 @@ return {
     },
     {
       "b",
-      mode = { "n", "x" },
       function()
         require("spider").motion("b")
       end,
@@ -28,7 +25,6 @@ return {
     },
     {
       "ge",
-      mode = { "n", "x" },
       function()
         require("spider").motion("ge")
       end,
