@@ -3,6 +3,10 @@ return {
   config = true,
   dependencies = {
     {
+      "FabianWirth/search.nvim",
+      dependencies = { "nvim-telescope/telescope.nvim" },
+    },
+    {
       "nvim-telescope/telescope-fzf-native.nvim",
       lazy = true,
       build = "make",
