@@ -17,7 +17,7 @@ return {
   },
   keys = {
     {
-      "<A-g>",
+      "<leader>gn",
       function()
         require("neogit").open({ kind = "split" })
       end,
