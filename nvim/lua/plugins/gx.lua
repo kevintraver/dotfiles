@@ -5,6 +5,9 @@ return {
   keys = {
     {
       "gx",
+      function()
+        require("gx").open()
+      end,
       desc = "Open Link",
     },
   },
