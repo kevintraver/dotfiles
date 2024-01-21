@@ -20,7 +20,7 @@ vim.keymap.set({ "n", "i" }, "<D-S-l>", vim.cmd.split, {
 
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
-  vim.cmd.close()
+  vim.cmd.bdelete()
 end, { desc = "Close" })
 
 vim.keymap.set({ "n", "i", "x" }, "<D-q>", vim.cmd.quitall, {
