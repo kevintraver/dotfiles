@@ -5,6 +5,18 @@ return {
   },
   keys = {
     {
+      "aw",
+      mode = { "o", "x" },
+      "iw",
+    },
+    {
+      "iw",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").subword("inner")
+      end,
+    },
+    {
       "u",
       mode = { "o", "x" },
       function()
