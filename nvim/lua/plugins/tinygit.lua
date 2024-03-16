@@ -18,28 +18,28 @@ return {
       function()
         require("tinygit").smartCommit()
       end,
-      desc = "Tinygit Commit",
+      desc = "Git Commit",
     },
     {
       "<M-a>",
       function()
         require("tinygit").amendNoEdit()
       end,
-      desc = "Tinygit Amend",
+      desc = "Git Amend Commit",
     },
     {
       "<M-r>",
       function()
         require("tinygit").amendOnlyMsg()
       end,
-      desc = "Tinygit Amend Message",
+      desc = "Git Amend Message",
     },
     {
       "<M-p>",
       function()
         require("tinygit").push({})
       end,
-      desc = "Git push",
+      desc = "Git Push",
     },
   },
 }
