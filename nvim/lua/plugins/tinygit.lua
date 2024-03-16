@@ -8,6 +8,9 @@ return {
         enabled = false,
       },
     },
+    push = {
+      confirmationSound = false,
+    },
   },
   keys = {
     {
@@ -23,6 +26,13 @@ return {
         require("tinygit").amendOnlyMsg()
       end,
       desc = "Tinygit Amend",
+    },
+    {
+      "<M-p>",
+      function()
+        require("tinygit").push({})
+      end,
+      desc = "Git push",
     },
   },
 }
