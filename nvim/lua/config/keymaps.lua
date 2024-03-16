@@ -11,12 +11,9 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", vim.cmd.write, {
 })
 
 -- windows
-vim.keymap.set({ "n", "i" }, "<D-l>", vim.cmd.vsplit, {
-  desc = "Split window vertical",
-})
-vim.keymap.set({ "n", "i" }, "<D-S-l>", vim.cmd.split, {
-  desc = "Split window horizontal",
-})
+vim.keymap.set("n", "<D-l>", function()
+  require("focus").split_nicely()
+end, { desc = "split nicely" })
 
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
