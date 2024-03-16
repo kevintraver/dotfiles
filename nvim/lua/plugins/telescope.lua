@@ -23,6 +23,13 @@ return {
       dependencies = { "kkharji/sqlite.lua" },
     },
     {
+      "nvim-telescope/telescope-project.nvim",
+      lazy = true,
+      config = function()
+        require("telescope").load_extension("project")
+      end,
+    },
+    {
       "jvgrootveld/telescope-zoxide",
       lazy = true,
       config = function()
@@ -130,6 +137,13 @@ return {
         require("telescope.builtin").current_buffer_fuzzy_find()
       end,
       desc = "Search Buffer",
+    },
+    {
+      "<D-p>",
+      function()
+        require("telescope").extensions.project.project({})
+      end,
+      desc = "Projects",
     },
     {
       "<leader>fw",
