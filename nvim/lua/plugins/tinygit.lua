@@ -15,14 +15,14 @@ return {
       function()
         require("tinygit").smartCommit()
       end,
-      desc = "Commit",
+      desc = "Tinygit Commit",
     },
     {
       "<M-a>",
       function()
         require("tinygit").amendOnlyMsg()
       end,
-      desc = "Amend",
+      desc = "Tinygit Amend",
     },
   },
 }
