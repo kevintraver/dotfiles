@@ -2,15 +2,7 @@ return {
   "rest-nvim/rest.nvim",
   lazy = true,
   ft = "http",
-  config = function()
-    require("rest-nvim").setup({
-      result = {
-        formatters = {
-          vnd = "jq",
-        },
-      },
-    })
-  end,
+  name = "rest-nvim",
   keys = {
     {
       "<C-Enter>",
