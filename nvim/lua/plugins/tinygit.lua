@@ -23,9 +23,16 @@ return {
     {
       "<M-a>",
       function()
-        require("tinygit").amendOnlyMsg()
+        require("tinygit").amendNoEdit()
       end,
       desc = "Tinygit Amend",
+    },
+    {
+      "<M-r>",
+      function()
+        require("tinygit").amendOnlyMsg()
+      end,
+      desc = "Tinygit Amend Message",
     },
     {
       "<M-p>",
