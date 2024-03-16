@@ -19,36 +19,5 @@ return {
       [["+<Plug>(YankyYank)]],
       desc = "Yank to global clipboard",
     },
-    {
-      "<leader>p",
-      "<Plug>(YankyPutAfterFilter)",
-      desc = "Yanky put after (filter)",
-    },
-    {
-      "<leader>P",
-      "<Plug>(YankyPutBeforeFilter)",
-      desc = "Yanky put before (filter)",
-    },
-    {
-      "<D-y>",
-      function()
-        require("telescope").extensions.yank_history.yank_history({})
-      end,
-      desc = "Yank History",
-    },
-    {
-      "<D-p>",
-      function()
-        require("telescope").extensions.yank_history.yank_history({})
-      end,
-      desc = "Yank History",
-    },
-    {
-      "<leader>sp",
-      function()
-        require("telescope").extensions.yank_history.yank_history({})
-      end,
-      desc = "Yank History",
-    },
   },
 }
