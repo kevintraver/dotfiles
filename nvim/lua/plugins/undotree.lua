@@ -10,7 +10,7 @@ return {
   },
   keys = {
     {
-      "<D-u>",
+      "<A-u>",
       function()
         require("undotree").toggle()
       end,

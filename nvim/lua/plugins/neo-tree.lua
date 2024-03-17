@@ -12,10 +12,10 @@ return {
         ["<C-p>"] = { "toggle_preview", config = { use_float = true } },
         ["L"] = "focus_preview",
         ["v"] = "open_vsplit",
-        ["<D-w>"] = "close_window",
-        ["<D-h>"] = "navigate_up",
-        ["<D-,>"] = "prev_source",
-        ["<D-.>"] = "next_source",
+        ["<A-w>"] = "close_window",
+        ["<A-h>"] = "navigate_up",
+        ["<A-,>"] = "prev_source",
+        ["<A-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
         ["<S-Tab>"] = "next_source",
       },
@@ -24,18 +24,18 @@ return {
       window = {
         mappings = {
           ["<Esc>"] = "clear_filter",
-          ["<D-f>"] = "filter_on_submit",
+          ["<A-f>"] = "filter_on_submit",
           ["<A-]>"] = "next_git_modified",
           ["<A-[>"] = "prev_git_modified",
-          ["<D-]>"] = "next_git_modified",
-          ["<D-[>"] = "prev_git_modified",
+          ["<A-]>"] = "next_git_modified",
+          ["<A-[>"] = "prev_git_modified",
         },
       },
     },
   },
   keys = {
     {
-      "<D-b>",
+      "<A-b>",
       function()
         require("neo-tree.command").execute({
           reveal = true,
@@ -45,7 +45,7 @@ return {
       desc = "Explorer NeoTree (root dir)",
     },
     {
-      "<D-e>",
+      "<A-e>",
       function()
         require("neo-tree.command").execute({
           reveal = true,

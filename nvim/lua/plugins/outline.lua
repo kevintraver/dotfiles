@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<D-i>",
+      "<A-i>",
       function()
         require("outline").toggle_outline()
       end,

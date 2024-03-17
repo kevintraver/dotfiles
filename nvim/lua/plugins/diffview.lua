@@ -7,10 +7,10 @@ return {
         ["q"] = function()
           require("diffview").close()
         end,
-        ["<D-w>"] = function()
+        ["<A-w>"] = function()
           require("diffview").close()
         end,
-        ["<D-d>"] = function()
+        ["<A-d>"] = function()
           require("diffview").close()
         end,
       },
@@ -18,10 +18,10 @@ return {
         ["q"] = function()
           require("diffview").close()
         end,
-        ["<D-w>"] = function()
+        ["<A-w>"] = function()
           require("diffview").close()
         end,
-        ["<D-d>"] = function()
+        ["<A-d>"] = function()
           require("diffview").close()
         end,
       },
@@ -32,10 +32,10 @@ return {
         ["q"] = function()
           require("diffview").close()
         end,
-        ["<D-w>"] = function()
+        ["<A-w>"] = function()
           require("diffview").close()
         end,
-        ["<D-d>"] = function()
+        ["<A-d>"] = function()
           require("diffview").close()
         end,
       },
@@ -43,7 +43,7 @@ return {
   },
   keys = {
     {
-      "<D-d>",
+      "<A-d>",
       function()
         require("diffview").open({})
       end,

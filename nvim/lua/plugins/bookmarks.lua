@@ -54,7 +54,7 @@ return {
       desc = "List (quickfix)",
     },
     {
-      "<D-m>",
+      "<A-m>",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,

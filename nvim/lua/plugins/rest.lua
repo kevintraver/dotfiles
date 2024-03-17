@@ -9,7 +9,7 @@ return {
       desc = "Send HTTP Request",
     },
     {
-      "<D-Enter>",
+      "<A-Enter>",
       desc = "Send HTTP Request",
     },
   },

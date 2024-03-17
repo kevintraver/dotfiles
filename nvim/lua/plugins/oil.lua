@@ -11,7 +11,7 @@ return {
       ["<C-t>"] = "actions.select_tab",
       ["<C-p>"] = "actions.preview",
       ["<S-p>"] = "actions.preview",
-      ["<D-h>"] = "actions.parent",
+      ["<A-h>"] = "actions.parent",
       ["-"] = "actions.parent",
       ["_"] = "actions.open_cwd",
       ["`"] = "actions.cd",
@@ -23,7 +23,7 @@ return {
   },
   keys = {
     {
-      "<D-h>",
+      "<A-h>",
       function()
         require("oil").open()
       end,
