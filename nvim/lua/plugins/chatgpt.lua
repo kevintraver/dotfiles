@@ -10,13 +10,13 @@ return {
     yank_register = '"',
     chat = {
       keymaps = {
-        close = { "<C-c>", "<D-\\>" },
+        close = { "<C-c>", "<A-\\>" },
       },
     },
   },
   keys = {
     {
-      "<D-\\>",
+      "<A-\\>",
       mode = { "n", "v", "t" },
       function()
         require("chatgpt").openChat()

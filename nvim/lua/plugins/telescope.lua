@@ -115,7 +115,7 @@ return {
       desc = "Adjacent",
     },
     {
-      "<D-o>",
+      "<A-o>",
       mode = { "n", "i" },
       function()
         require("telescope").extensions.frecency.frecency()
@@ -123,7 +123,7 @@ return {
       desc = "Recent",
     },
     {
-      "<D-S-f>",
+      "<A-S-f>",
       mode = { "n", "i" },
       function()
         require("telescope.builtin").live_grep()
@@ -131,7 +131,7 @@ return {
       desc = "Grep",
     },
     {
-      "<D-f>",
+      "<A-f>",
       mode = { "n", "i" },
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
@@ -139,7 +139,7 @@ return {
       desc = "Search Buffer",
     },
     {
-      "<D-p>",
+      "<A-p>",
       function()
         require("telescope").extensions.project.project({})
       end,
@@ -230,7 +230,7 @@ return {
       desc = "Git Diff Commits",
     },
     {
-      "<D-j>",
+      "<A-j>",
       function()
         require("telescope.builtin").lsp_document_symbols({
           symbols = require("lazyvim.config").get_kind_filter(),
@@ -239,7 +239,7 @@ return {
       desc = "Goto Symbol",
     },
     {
-      "<D-S-j>",
+      "<A-S-j>",
       function()
         require("telescope.builtin").lsp_workspace_symbols()
       end,

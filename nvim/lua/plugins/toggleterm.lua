@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<D-t>",
+      "<A-t>",
       mode = { "n", "t" },
       function()
         require("toggleterm").toggle_command("direction=vertical")
@@ -25,7 +25,7 @@ return {
       desc = "New Terminal Tab",
     },
     {
-      "<D-w>",
+      "<A-w>",
       mode = { "t" },
       function()
         require("toggleterm").toggle_command()
@@ -33,7 +33,7 @@ return {
       desc = "Toggle (close) terminal",
     },
     {
-      "<D-g>",
+      "<A-g>",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
@@ -48,7 +48,7 @@ return {
       desc = "Lazygit",
     },
     {
-      "<D-S-e>",
+      "<A-S-e>",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
