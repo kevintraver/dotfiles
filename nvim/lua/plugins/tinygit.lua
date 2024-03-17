@@ -14,28 +14,28 @@ return {
   },
   keys = {
     {
-      "<M-c>",
+      "<leader>gc",
       function()
         require("tinygit").smartCommit()
       end,
       desc = "Git Commit",
     },
     {
-      "<M-a>",
+      "<leader>ga",
       function()
         require("tinygit").amendNoEdit()
       end,
       desc = "Git Amend Commit",
     },
     {
-      "<M-r>",
+      "<leader>gr",
       function()
         require("tinygit").amendOnlyMsg()
       end,
       desc = "Git Amend Message",
     },
     {
-      "<M-p>",
+      "<leader>gp",
       function()
         require("tinygit").push({})
       end,
