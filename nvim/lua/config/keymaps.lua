@@ -13,7 +13,7 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", vim.cmd.write, {
 -- windows
 vim.keymap.set("n", "<D-l>", function()
   require("focus").split_nicely()
-end, { desc = "split nicely" })
+end, { desc = "Split Nicely" })
 
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
