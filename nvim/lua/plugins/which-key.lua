@@ -6,7 +6,6 @@ return {
       ["m"] = { name = "+bookmarks" },
       ["<leader>g"] = { name = "+git" },
       ["<leader>r"] = { name = "+replace" },
-      ["<leader>l"] = { name = "+lazy" },
       ["<leader>h"] = { name = "+githunk" },
     },
   },

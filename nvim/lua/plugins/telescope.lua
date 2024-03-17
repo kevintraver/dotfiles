@@ -216,20 +216,6 @@ return {
       desc = "Status",
     },
     {
-      "<leader>ls",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Lazy Search Plugin",
-    },
-    {
-      "<leader>lf",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Lazy Find Plugin",
-    },
-    {
       "<leader>fl",
       function()
         require("telescope").extensions.lazy.lazy()
@@ -265,15 +251,6 @@ return {
         require("telescope").extensions.cder.cder()
       end,
       desc = "Change Directory",
-    },
-    {
-      "<leader>lc",
-      function()
-        require("telescope.builtin").find_files({
-          cwd = vim.fn.stdpath("config"),
-        })
-      end,
-      desc = "Lazy Config Files",
     },
     {
       "<leader>gc",
