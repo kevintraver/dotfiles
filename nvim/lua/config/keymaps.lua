@@ -10,11 +10,12 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<A-s>", vim.cmd.write, {
   desc = "Save file",
 })
 
--- close/quit
+-- close
 vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
   vim.cmd.bdelete()
 end, { desc = "Close" })
 
+-- quitall
 vim.keymap.set({ "n", "i", "x" }, "<A-q>", vim.cmd.quitall, {
   desc = "Quit all",
 })
