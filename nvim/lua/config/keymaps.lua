@@ -10,11 +10,6 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<A-s>", vim.cmd.write, {
   desc = "Save file",
 })
 
--- windows
-vim.keymap.set("n", "<A-l>", function()
-  require("focus").split_nicely()
-end, { desc = "Split Nicely" })
-
 -- close/quit
 vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
   vim.cmd.bdelete()
