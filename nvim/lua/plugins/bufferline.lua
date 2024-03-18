@@ -8,4 +8,14 @@ return {
       show_buffer_close_icons = false,
     },
   },
+  keys = {
+    {
+      "<S-l>",
+      false,
+    },
+    {
+      "<S-h>",
+      false,
+    },
+  },
 }
