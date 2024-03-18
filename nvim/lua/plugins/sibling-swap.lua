@@ -3,10 +3,6 @@ return {
   lazy = true,
   opts = {
     use_default_keymaps = false,
-    keymaps = {
-      ["H"] = "swap_with_left",
-      ["L"] = "swap_with_right",
-    },
   },
   keys = {
     {
