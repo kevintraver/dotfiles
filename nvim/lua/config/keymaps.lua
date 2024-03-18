@@ -23,9 +23,6 @@ end, { desc = "Close" })
 vim.keymap.set({ "n", "i", "x" }, "<A-q>", vim.cmd.quitall, {
   desc = "Quit all",
 })
-vim.keymap.set({ "n", "i", "x" }, "<A-S-q>", vim.cmd.Quit, {
-  desc = "Quit! all",
-})
 
 -- new
 vim.keymap.set("n", "<A-S-n>", vim.cmd.tabnew, { desc = "New tab" })
