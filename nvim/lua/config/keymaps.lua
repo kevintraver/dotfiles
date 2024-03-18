@@ -34,8 +34,8 @@ vim.keymap.set("n", "<leader><tab>n", vim.cmd.tabnew, { desc = "New Tab" })
 
 -- tabs
 vim.keymap.set("n", "<leader><space>", function()
-  vim.cmd.tabprevious()
-end, { desc = "Cycle Tab" })
+  vim.cmd.buffer("#")
+end, { desc = "Switch to Other Buffer" })
 
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")
