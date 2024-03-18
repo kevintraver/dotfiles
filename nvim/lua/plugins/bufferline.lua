@@ -10,12 +10,18 @@ return {
   },
   keys = {
     {
-      "<S-l>",
-      false,
+      "<A-C-l>",
+      function()
+        require("bufferline").cycle(1)
+      end,
+      desc = "Next Buffer",
     },
     {
-      "<S-h>",
-      false,
+      "<A-C-h>",
+      function()
+        require("bufferline").cycle(-1)
+      end,
+      desc = "Previous Buffer",
     },
     {
       "<leader><space>",
@@ -23,6 +29,21 @@ return {
         vim.cmd.buffer("#")
       end,
       desc = "Switch to Other Buffer",
+    },
+    {
+      "<leader>bp",
+      function()
+        require("bufferline").pick()
+      end,
+      desc = "Pick Buffer",
+    },
+    {
+      "<S-l>",
+      false,
+    },
+    {
+      "<S-h>",
+      false,
     },
   },
 }
