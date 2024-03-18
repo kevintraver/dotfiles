@@ -17,5 +17,12 @@ return {
       "<S-h>",
       false,
     },
+    {
+      "<leader><space>",
+      function()
+        vim.cmd.buffer("#")
+      end,
+      desc = "Switch to Other Buffer",
+    },
   },
 }
