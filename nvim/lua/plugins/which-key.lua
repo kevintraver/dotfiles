@@ -7,6 +7,7 @@ return {
       ["<leader>g"] = { name = "+git" },
       ["<leader>r"] = { name = "+replace" },
       ["<leader>h"] = { name = "+githunk" },
+      ["<leader>q"] = { name = "+recorder" },
     },
   },
 }
