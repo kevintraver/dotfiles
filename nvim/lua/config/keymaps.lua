@@ -46,6 +46,3 @@ vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
 vim.keymap.set("t", "<A-e>", "<C-e>")
-
-vim.keymap.set("n", "q", "")
-vim.keymap.set("n", "Q", "")
