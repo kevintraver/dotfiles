@@ -24,11 +24,6 @@ vim.keymap.set("n", "<A-S-n>", vim.cmd.tabnew, { desc = "New tab" })
 vim.keymap.set("n", "<A-n>", vim.cmd.tabnew, { desc = "New Tab" })
 vim.keymap.set("n", "<leader><tab>n", vim.cmd.tabnew, { desc = "New Tab" })
 
--- tabs
-vim.keymap.set("n", "<leader><space>", function()
-  vim.cmd.buffer("#")
-end, { desc = "Switch to Other Buffer" })
-
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")
 vim.keymap.del("n", "<leader>L")
