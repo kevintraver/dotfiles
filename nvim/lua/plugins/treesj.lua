@@ -7,14 +7,14 @@ return {
   },
   keys = {
     {
-      "gj",
+      "gJ",
       function()
         vim.cmd.join()
       end,
       desc = "Join Lines",
     },
     {
-      "J",
+      "gj",
       function()
         require("treesj").toggle()
       end,
