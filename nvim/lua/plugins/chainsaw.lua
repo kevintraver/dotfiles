@@ -7,14 +7,14 @@ return {
       function()
         require("chainsaw").variableLog()
       end,
-      desc = "Toggle chainsaw",
+      desc = "Toggle Chainsaw Variable Log",
     },
     {
       "<leader>lm",
       function()
         require("chainsaw").messageLog()
       end,
-      desc = "Toggle chainsaw",
+      desc = "Toggle Chainsaw Message Log",
     },
   },
 }
