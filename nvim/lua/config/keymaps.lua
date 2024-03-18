@@ -45,4 +45,6 @@ vim.keymap.del("n", "<leader><tab><tab>")
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
+vim.keymap.del("n", "<leader>qq")
+
 vim.keymap.set("t", "<A-e>", "<C-e>")
