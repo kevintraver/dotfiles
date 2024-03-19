@@ -3,6 +3,7 @@ return {
   lazy = true,
   opts = {
     use_default_keymaps = false,
+    highlight_node_at_cursor = true,
   },
   keys = {
     {
