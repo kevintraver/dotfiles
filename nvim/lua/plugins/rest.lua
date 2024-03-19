@@ -3,6 +3,7 @@ return {
   lazy = true,
   ft = "http",
   name = "rest-nvim",
+  config = true,
   keys = {
     {
       "<C-Enter>",
