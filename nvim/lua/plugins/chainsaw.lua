@@ -16,5 +16,12 @@ return {
       end,
       desc = "Toggle Chainsaw Message Log",
     },
+    {
+      "<leader>lb",
+      function()
+        require("chainsaw").beepLog()
+      end,
+      desc = "Toggle Chainsaw Beep Log",
+    },
   },
 }
