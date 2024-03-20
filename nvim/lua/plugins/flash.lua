@@ -25,7 +25,7 @@ return {
     },
     {
       "r",
-      mode = "o",
+      mode = { "o" },
       false,
       desc = "Flash Remote",
     },
@@ -47,7 +47,7 @@ return {
     },
     {
       "R",
-      mode = "o",
+      mode = { "o" },
       function()
         require("flash").remote()
       end,
