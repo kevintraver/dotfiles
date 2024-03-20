@@ -3,8 +3,10 @@ return {
   lazy = true,
   ft = "http",
   name = "rest-nvim",
-  tag = "v1.2.1",
-  config = true,
+  dependencies = { "vhyrro/luarocks.nvim" },
+  opts = {
+    encode_url = false,
+  },
   keys = {
     {
       "<C-Enter>",
