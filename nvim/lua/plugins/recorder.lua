@@ -9,6 +9,7 @@ return {
       editMacro = "<leader>qe",
       deleteAllMacros = "<leader>qd",
       yankMacro = "<leader>qy",
+      addBreakPoint = "<leader>qb",
     },
   },
 }
