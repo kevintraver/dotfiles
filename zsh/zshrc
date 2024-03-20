@@ -26,4 +26,6 @@ done
 
 source "$DOTFILES_HOME/aliases.zsh"
 
+source ~/.zshrc.local
+
 WORDCHARS=${WORDCHARS/\/}
