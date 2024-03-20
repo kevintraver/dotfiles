@@ -1,5 +1,5 @@
 return {
-  "ecthelionvi/neoswap.nvim",
+  "kevintraver/word-swap.nvim",
   lazy = true,
   config = true,
   keys = {
