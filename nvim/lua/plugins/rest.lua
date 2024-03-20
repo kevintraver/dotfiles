@@ -3,7 +3,6 @@ return {
   lazy = true,
   ft = "http",
   name = "rest-nvim",
-  tag = "v1.2.1",
   config = true,
   keys = {
     {
