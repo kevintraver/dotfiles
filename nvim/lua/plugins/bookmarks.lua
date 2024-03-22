@@ -47,6 +47,20 @@ return {
       desc = "Clean (buffer)",
     },
     {
+      "mn",
+      function()
+        require("bookmarks").bookmark_next()
+      end,
+      desc = "Jump to Next Bookmark",
+    },
+    {
+      "mp",
+      function()
+        require("bookmarks").bookmark_prev()
+      end,
+      desc = "Jump to Previous Bookmark",
+    },
+    {
       "mq",
       function()
         require("bookmarks").bookmark_list()
