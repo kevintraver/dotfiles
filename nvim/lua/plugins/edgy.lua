@@ -44,6 +44,11 @@ return {
     },
     right = {
       {
+        ft = "copilot-chat",
+        title = "Copilot Chat",
+        size = { width = 0.4 },
+      },
+      {
         ft = "Codewindow",
         title = "Mini Map",
       },
