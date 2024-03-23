@@ -19,6 +19,14 @@ return {
         end,
         desc = "Toggle Copilot Chat",
       },
+      {
+        mode = { "n", "v" },
+        "<Leader>\\e",
+        function()
+          require("CopilotChat").ask("/COPILOT_EXPLAIN Write an explanation for the code")
+        end,
+        desc = "Copilot Chat - Explain Code",
+      },
     },
   },
 }
