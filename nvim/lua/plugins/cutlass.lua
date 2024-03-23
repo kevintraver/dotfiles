@@ -3,6 +3,6 @@ return {
   lazy = false,
   opts = {
     cut_key = "x",
-    exclude = { "ns", "nS" },
+    exclude = { "ns", "nS", "s<space>" },
   },
 }
