@@ -6,6 +6,12 @@ return {
     config = true,
     opts = {
       show_help = false,
+      mappings = {
+        reset = {
+          normal = "<C-n>",
+          insert = "<C-n>",
+        },
+      },
     },
     dependencies = {
       { "zbirenbaum/copilot.lua" },
