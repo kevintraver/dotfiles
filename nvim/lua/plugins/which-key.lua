@@ -8,6 +8,7 @@ return {
       ["<leader>r"] = { name = "+replace" },
       ["<leader>h"] = { name = "+githunk" },
       ["<leader>q"] = { name = "+recorder" },
+      ["<leader>d"] = { name = "+debug" },
     },
   },
 }
