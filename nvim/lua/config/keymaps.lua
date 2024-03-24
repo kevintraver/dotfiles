@@ -15,6 +15,10 @@ vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
   vim.cmd.bdelete()
 end, { desc = "Close" })
 
+vim.keymap.set({ "n" }, "<A-n>", function()
+  vim.cmd.tabnew()
+end, { desc = "New Tab" })
+
 -- quitall
 vim.keymap.set({ "n", "i", "x" }, "<A-q>", function()
   vim.cmd.quitall()
