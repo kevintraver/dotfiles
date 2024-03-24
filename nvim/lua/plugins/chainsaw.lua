@@ -3,21 +3,21 @@ return {
   config = true,
   keys = {
     {
-      "<leader>lv",
+      "<leader>dv",
       function()
         require("chainsaw").variableLog()
       end,
       desc = "Add Debug Variable Log",
     },
     {
-      "<leader>lm",
+      "<leader>dm",
       function()
         require("chainsaw").messageLog()
       end,
       desc = "Add Debug Message Log",
     },
     {
-      "<leader>lb",
+      "<leader>db",
       function()
         require("chainsaw").beepLog()
       end,
