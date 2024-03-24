@@ -34,7 +34,7 @@ return {
       function()
         require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
       end,
-      desc = "Edit Plugins Folder",
+      desc = "Plugins Config Folder",
     },
   },
 }

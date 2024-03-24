@@ -35,7 +35,7 @@ return {
       function()
         require("telescope.builtin").git_branches()
       end,
-      desc = "Branches",
+      desc = "Git Branches",
     },
     {
       "<leader>ct",
@@ -49,7 +49,7 @@ return {
       function()
         require("telescope.builtin").git_status()
       end,
-      desc = "Status",
+      desc = "Git Status",
     },
     {
       "<A-j>",
