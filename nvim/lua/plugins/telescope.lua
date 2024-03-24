@@ -52,6 +52,13 @@ return {
       desc = "Git Status",
     },
     {
+      "<leader>gh",
+      function()
+        require("telescope.builtin").git_commits()
+      end,
+      desc = "Git Commits",
+    },
+    {
       "<A-j>",
       function()
         require("telescope.builtin").lsp_document_symbols({
