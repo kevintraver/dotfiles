@@ -11,7 +11,6 @@ return {
       "prettierd",
       "prisma-language-server",
       "rust-analyzer",
-      "typescript-language-server",
     },
   },
 }
