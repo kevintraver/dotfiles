@@ -74,5 +74,12 @@ return {
       end,
       desc = "Telescope",
     },
+    {
+      "<leader>sm",
+      function()
+        require("telescope").extensions.bookmarks.list({})
+      end,
+      desc = "Bookmarks",
+    },
   },
 }
