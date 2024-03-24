@@ -253,6 +253,13 @@ return {
       desc = "Change Directory",
     },
     {
+      "<A-r>",
+      function()
+        require("telescope.builtin").resume()
+      end,
+      desc = "Resume",
+    },
+    {
       "<leader>gc",
       false,
     },
