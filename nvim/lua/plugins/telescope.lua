@@ -124,7 +124,6 @@ return {
     },
     {
       "<A-S-f>",
-      mode = { "n", "i" },
       function()
         require("telescope.builtin").live_grep()
       end,
@@ -132,7 +131,6 @@ return {
     },
     {
       "<A-f>",
-      mode = { "n", "i" },
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
       end,
