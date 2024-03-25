@@ -2,6 +2,7 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     lazy = true,
+    dev = true,
     branch = "canary",
     config = true,
     opts = {
