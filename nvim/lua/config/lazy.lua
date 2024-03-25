@@ -27,6 +27,7 @@ require("lazy").setup({
   checker = { enabled = false }, -- automatically check for plugin updates
   dev = {
     path = vim.fn.stdpath("data") .. "/dev",
+    fallback = true,
   },
   change_detection = {
     -- automatically check for config file changes and reload the ui
