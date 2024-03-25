@@ -21,7 +21,7 @@ return {
       function()
         require("chainsaw").beepLog()
       end,
-      desc = "Add Debug Message Log",
+      desc = "Add Beep Message Log",
     },
   },
 }
