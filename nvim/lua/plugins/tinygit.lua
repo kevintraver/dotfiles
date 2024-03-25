@@ -41,5 +41,12 @@ return {
       end,
       desc = "Git Push",
     },
+    {
+      "<leader>gu",
+      function()
+        require("tinygit").undo()
+      end,
+      desc = "Git Undo (mixed)",
+    },
   },
 }
