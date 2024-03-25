@@ -7,21 +7,49 @@ return {
       function()
         require("chainsaw").variableLog()
       end,
-      desc = "Add Debug Variable Log",
+      desc = "Add Variable Log",
+    },
+    {
+      "<leader>do",
+      function()
+        require("chainsaw").objectLog()
+      end,
+      desc = "Add Object Log",
+    },
+    {
+      "<leader>da",
+      function()
+        require("chainsaw").assertLog()
+      end,
+      desc = "Add Assert Log",
     },
     {
       "<leader>dm",
       function()
         require("chainsaw").messageLog()
       end,
-      desc = "Add Debug Message Log",
+      desc = "Add Message Log",
+    },
+    {
+      "<leader>ds",
+      function()
+        require("chainsaw").stracktraceLog()
+      end,
+      desc = "Add Stacktrace",
     },
     {
       "<leader>db",
       function()
         require("chainsaw").beepLog()
       end,
-      desc = "Add Beep Message Log",
+      desc = "Add Beep Log",
+    },
+    {
+      "<leader>dx",
+      function()
+        require("chainsaw").removeLogs()
+      end,
+      desc = "Remove Log Statements",
     },
   },
 }
