@@ -14,6 +14,9 @@ return {
         ["<A-d>"] = function()
           require("diffview").close()
         end,
+        ["x"] = function()
+          require("diffview.actions").restore_entry()
+        end,
       },
       view = {
         ["q"] = function()
