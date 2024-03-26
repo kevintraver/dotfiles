@@ -35,6 +35,18 @@ return {
         end,
         desc = "Copilot Chat - Explain Code",
       },
+      {
+        mode = { "n", "v" },
+        "<Leader>\\g",
+        function()
+          local copilot_chat = require("CopilotChat")
+          local config = require("CopilotChat.config")
+          copilot_chat.ask(config.prompts.CommitStaged.prompt, {
+            selection = config.prompts.CommitStaged.selection,
+          })
+        end,
+        desc = "Copilot Chat - Commit Message",
+      },
     },
   },
 }
