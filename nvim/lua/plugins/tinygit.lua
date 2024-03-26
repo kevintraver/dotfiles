@@ -29,7 +29,7 @@ return {
       desc = "Git Amend Commit",
     },
     {
-      "<leader>gr",
+      "<leader>ge",
       function()
         require("tinygit").amendOnlyMsg()
       end,
