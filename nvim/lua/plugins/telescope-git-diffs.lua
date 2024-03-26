@@ -6,7 +6,7 @@ return {
   end,
   keys = {
     {
-      "<leader>gL",
+      "<leader>gh",
       function()
         require("telescope").extensions.git_diffs.diff_commits()
       end,

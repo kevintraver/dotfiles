@@ -59,7 +59,7 @@ return {
       desc = "Git Status",
     },
     {
-      "<leader>gh",
+      "<leader>gL",
       function()
         require("telescope.builtin").git_commits()
       end,
