@@ -8,6 +8,7 @@ return {
       "stylua",
       "shfmt",
       "prettierd",
+      "eslint_d",
       "prisma-language-server",
       "rust-analyzer",
     },
