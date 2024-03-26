@@ -12,8 +12,18 @@ end, { desc = "Save file" })
 
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
+  vim.cmd.close()
+end, { desc = "Close Window" })
+
+-- close
+vim.keymap.set({ "n", "i", "x" }, "<A-C-w>", function()
   vim.cmd.bdelete()
-end, { desc = "Close" })
+end, { desc = "Close Buffer" })
+
+-- close
+vim.keymap.set({ "n", "i", "x" }, "<A-S-w>", function()
+  vim.cmd.bdelete()
+end, { desc = "Close Buffer" })
 
 vim.keymap.set({ "n" }, "<A-n>", function()
   vim.cmd.tabnew()
