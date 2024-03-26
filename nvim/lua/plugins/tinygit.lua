@@ -49,5 +49,16 @@ return {
       end,
       desc = "Git Undo Last Commit",
     },
+    {
+      "<leader>gf",
+      function()
+        require("tinygit").fixupCommit({
+          selectFromLastXCommits = 15,
+          squashInstead = false,
+          autoRebase = false,
+        })
+      end,
+      desc = "Git Fixup",
+    },
   },
 }
