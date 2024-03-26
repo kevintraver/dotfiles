@@ -1,5 +1,5 @@
 return {
   "akinsho/git-conflict.nvim",
-  lazy = true,
+  event = "VeryLazy",
   config = true,
 }
