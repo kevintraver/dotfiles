@@ -10,6 +10,13 @@ return {
       desc = "Grep",
     },
     {
+      "<A-C-f>",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Grep",
+    },
+    {
       "<A-f>",
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
@@ -67,6 +74,13 @@ return {
     },
     {
       "<A-S-j>",
+      function()
+        require("telescope.builtin").lsp_workspace_symbols()
+      end,
+      desc = "Goto Symbol (Workspace)",
+    },
+    {
+      "<A-C-j>",
       function()
         require("telescope.builtin").lsp_workspace_symbols()
       end,
