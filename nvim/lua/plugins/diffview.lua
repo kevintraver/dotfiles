@@ -68,7 +68,7 @@ return {
       desc = "Diff View History",
     },
     {
-      "<leader>gf",
+      "<leader>gL",
       function()
         require("diffview").file_history(nil, { "%" })
       end,
