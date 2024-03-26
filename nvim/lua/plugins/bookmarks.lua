@@ -1,5 +1,6 @@
 return {
-  "kevintraver/bookmarks.nvim",
+  "tomasky/bookmarks.nvim",
+  dev = true,
   event = "VeryLazy",
   dependencies = {
     "nvim-telescope/telescope.nvim",
