@@ -61,9 +61,7 @@ return {
     {
       "<A-j>",
       function()
-        require("telescope.builtin").lsp_document_symbols({
-          symbols = require("lazyvim.config").get_kind_filter(),
-        })
+        require("telescope.builtin").lsp_document_symbols()
       end,
       desc = "Goto Symbol",
     },
@@ -72,7 +70,7 @@ return {
       function()
         require("telescope.builtin").lsp_workspace_symbols()
       end,
-      desc = "Goto Symbol (workspace)",
+      desc = "Goto Symbol (Workspace)",
     },
     {
       "<A-r>",
