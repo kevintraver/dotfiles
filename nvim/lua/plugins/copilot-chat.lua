@@ -31,7 +31,9 @@ return {
         mode = { "n", "v" },
         "<Leader>\\e",
         function()
-          require("CopilotChat").ask("/COPILOT_EXPLAIN Write an explanation for the code")
+          local copilot_chat = require("CopilotChat")
+          local config = require("CopilotChat.config")
+          copilot_chat.ask(config.prompts.Explain.prompt)
         end,
         desc = "Copilot Chat - Explain Code",
       },
