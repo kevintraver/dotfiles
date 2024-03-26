@@ -6,7 +6,7 @@
 vim.keymap.set("n", ";", ":")
 
 -- save file
-vim.keymap.set({ "i", "x", "n", "s" }, "<A-s>", function()
+vim.keymap.set({ "n" }, "<A-s>", function()
   vim.cmd.write()
 end, { desc = "Save file" })
 
