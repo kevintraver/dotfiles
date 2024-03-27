@@ -11,14 +11,14 @@ return {
       function()
         require("sibling-swap.swap").swap_with("left")
       end,
-      desc = "Swap sibling with left",
+      desc = "Swap Sibling with Left",
     },
     {
       "<S-l>",
       function()
         require("sibling-swap.swap").swap_with("right")
       end,
-      desc = "Swap sibling with right",
+      desc = "Swap Sibling with Right",
     },
   },
 }

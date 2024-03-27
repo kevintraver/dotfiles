@@ -8,7 +8,7 @@ vim.keymap.set("n", ";", ":")
 -- save file
 vim.keymap.set({ "n" }, "<A-s>", function()
   vim.cmd.write()
-end, { desc = "Save file" })
+end, { desc = "Save File" })
 
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
@@ -32,7 +32,7 @@ end, { desc = "New Tab" })
 -- quitall
 vim.keymap.set({ "n", "i", "x" }, "<A-q>", function()
   vim.cmd.quitall()
-end, { desc = "Quit all" })
+end, { desc = "Quit All" })
 
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")

@@ -9,7 +9,7 @@ return {
       function()
         require("toggleterm").toggle_command("direction=vertical")
       end,
-      desc = "Toggle terminal",
+      desc = "Toggle Terminal",
     },
     {
       "<leader><tab>t",
@@ -30,7 +30,7 @@ return {
       function()
         require("toggleterm").toggle_command()
       end,
-      desc = "Toggle (close) terminal",
+      desc = "Toggle (Close) Terminal",
     },
     {
       "<A-g>",

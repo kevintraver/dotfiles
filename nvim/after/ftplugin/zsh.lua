@@ -1,9 +1,9 @@
 vim.keymap.set({ "n", "i" }, "<C-Enter>", function()
   require("toggleterm").send_lines_to_terminal("single_line", true, {})
-end, { desc = "Send line to terminal", buffer = true })
+end, { desc = "Send Line to Terminal", buffer = true })
 vim.keymap.set({ "n", "i" }, "<A-Enter>", function()
   require("toggleterm").send_lines_to_terminal("single_line", true, {})
-end, { desc = "Send line to terminal", buffer = true })
+end, { desc = "Send Line to Terminal", buffer = true })
 
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "/tmp/zsh*",

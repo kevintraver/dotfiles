@@ -42,7 +42,7 @@ return {
           toggle = true,
         })
       end,
-      desc = "Explorer NeoTree (root dir)",
+      desc = "Explorer NeoTree (Root Dir)",
     },
     {
       "<A-e>",
@@ -52,7 +52,7 @@ return {
           toggle = true,
         })
       end,
-      desc = "Explorer NeoTree (root dir)",
+      desc = "Explorer NeoTree (Root Dir)",
     },
     -- disable LazyVim Neo-tree keymaps
     { "<leader>e", false },

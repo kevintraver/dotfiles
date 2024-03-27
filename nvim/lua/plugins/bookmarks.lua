@@ -45,7 +45,7 @@ return {
       function()
         require("bookmarks").bookmark_clean()
       end,
-      desc = "Clean (buffer)",
+      desc = "Clean (Buffer)",
     },
     {
       "mn",
@@ -66,7 +66,7 @@ return {
       function()
         require("bookmarks").bookmark_list()
       end,
-      desc = "List (quickfix)",
+      desc = "List (Quickfix)",
     },
     {
       "<A-m>",

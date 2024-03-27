@@ -17,7 +17,7 @@ return {
       "Y",
       mode = { "n", "x" },
       [["+<Plug>(YankyYank)]],
-      desc = "Yank to global clipboard",
+      desc = "Yank to Global Clipboard",
     },
   },
 }
