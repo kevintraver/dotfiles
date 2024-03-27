@@ -15,7 +15,7 @@ return {
       function()
         require("codewindow").toggle_minimap()
       end,
-      desc = "Toggle minimap",
+      desc = "Toggle Mini Map",
     },
   },
 }

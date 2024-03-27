@@ -34,7 +34,7 @@ return {
       function()
         require("substitute").operator({ register = "*" })
       end,
-      desc = "Replace from system clipboard",
+      desc = "Replace from System Clipboard",
     },
     {
       "R",
@@ -42,7 +42,7 @@ return {
       function()
         require("substitute").visual({ register = "*" })
       end,
-      desc = "Replace from system clipboard",
+      desc = "Replace from System Clipboard",
     },
     {
       "cx",
@@ -58,7 +58,7 @@ return {
       function()
         require("substitute.exchange").line()
       end,
-      desc = "Exchange (line)",
+      desc = "Exchange (Line)",
     },
     {
       "cx",
@@ -74,7 +74,7 @@ return {
       function()
         require("substitute.exchange").cancel()
       end,
-      desc = "Exchange (cancel)",
+      desc = "Exchange (Cancel)",
     },
   },
 }

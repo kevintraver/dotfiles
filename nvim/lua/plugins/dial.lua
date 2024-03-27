@@ -16,14 +16,14 @@ return {
       function()
         require("dial.map").manipulate("increment", "normal")
       end,
-      desc = "Dial increment",
+      desc = "Dial Increment",
     },
     {
       "<C-x>",
       function()
         require("dial.map").manipulate("decrement", "normal")
       end,
-      desc = "Dial decrement",
+      desc = "Dial Decrement",
     },
   },
 }

@@ -11,11 +11,11 @@ return {
   keys = {
     {
       "gm",
-      desc = "multiply",
+      desc = "Multiply",
     },
     {
       "go",
-      desc = "sort",
+      desc = "Sort",
     },
   },
 }

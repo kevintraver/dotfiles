@@ -9,28 +9,28 @@ return {
   keys = {
     {
       "<leader>yf",
-      desc = "Copy file location (relative) to clipboard",
+      desc = "Copy File Location (Relative) to Clipboard",
     },
     {
       "<leader>yF",
       function()
         require("nvim-file-location").copy_file_location("absolute", false, false)
       end,
-      desc = "Copy file location (absolute) to clipboard",
+      desc = "Copy File Location (Absolute) to Clipboard",
     },
     {
       "<leader>Yf",
       function()
         require("nvim-file-location").copy_file_location("relative", false, false, "*")
       end,
-      desc = "Copy file location (absolute) to system clipboard",
+      desc = "Copy File Location (Absolute) to System Clipboard",
     },
     {
       "<leader>YF",
       function()
         require("nvim-file-location").copy_file_location("absolute", false, false, "*")
       end,
-      desc = "Copy file location (absolute) to system clipboard",
+      desc = "Copy File Location (Absolute) to System Clipboard",
     },
   },
 }

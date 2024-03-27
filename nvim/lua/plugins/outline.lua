@@ -8,7 +8,7 @@ return {
       function()
         require("outline").toggle_outline()
       end,
-      desc = "Toggle outline",
+      desc = "Toggle Outline",
     },
   },
 }

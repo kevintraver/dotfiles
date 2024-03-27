@@ -18,7 +18,7 @@ return {
       function()
         require("treesj").toggle()
       end,
-      desc = "Toggle split/join",
+      desc = "Toggle Split/Join",
     },
   },
 }
