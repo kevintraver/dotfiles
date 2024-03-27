@@ -9,6 +9,7 @@ return {
       "shfmt",
       "prettierd",
       "eslint_d",
+      "cspell",
       "prisma-language-server",
       "rust-analyzer",
     },
