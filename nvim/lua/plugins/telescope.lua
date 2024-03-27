@@ -54,7 +54,7 @@ return {
       function()
         require("telescope.builtin").oldfiles()
       end,
-      desc = "Frecent",
+      desc = "Old Files",
     },
     {
       "<leader>gb",
