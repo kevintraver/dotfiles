@@ -3,6 +3,7 @@ return {
   cmd = "Oil",
   event = "VeryLazy",
   opts = {
+    delete_to_trash = true,
     use_default_keymaps = false,
     keymaps = {
       ["g?"] = "actions.show_help",
