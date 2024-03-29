@@ -5,12 +5,15 @@ return {
   },
   keys = {
     {
-      "aw",
+      "as",
       mode = { "o", "x" },
+      function()
+        require("various-textobjs").subword("outer")
+      end,
       "iw",
     },
     {
-      "iw",
+      "is",
       mode = { "o", "x" },
       function()
         require("various-textobjs").subword("inner")
