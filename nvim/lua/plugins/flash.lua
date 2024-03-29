@@ -20,7 +20,11 @@ return {
       "s",
       mode = { "o", "x" },
       function()
-        require("flash").treesitter()
+        require("flash").treesitter({
+          remote_op = {
+            restore = true,
+          },
+        })
       end,
       desc = "Flash Treesitter",
     },
@@ -34,7 +38,11 @@ return {
       "r",
       mode = { "o", "x" },
       function()
-        require("flash").treesitter_search()
+        require("flash").treesitter_search({
+          remote_op = {
+            restore = true,
+          },
+        })
       end,
       desc = "Flash Treesitter",
     },
