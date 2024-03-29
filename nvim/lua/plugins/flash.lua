@@ -17,6 +17,14 @@ return {
       desc = "Flash",
     },
     {
+      "<C-s>",
+      mode = { "n" },
+      function()
+        require("flash").jump({ continue = true })
+      end,
+      desc = "Flash Continue",
+    },
+    {
       "s",
       mode = { "o", "x" },
       function()
