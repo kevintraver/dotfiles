@@ -6,8 +6,8 @@ return {
     local gen_spec = require("mini.ai").gen_spec
     require("mini.ai").setup({
       mappings = {
-        around_last = "",
-        inside_last = "",
+        around_last = "ap",
+        inside_last = "ip",
       },
       custom_textobjects = {
         d = { "[%-%.]?%f[%d]%d+" },
