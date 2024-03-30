@@ -13,8 +13,6 @@ return {
         ["L"] = "focus_preview",
         ["v"] = "open_vsplit",
         ["<A-w>"] = "close_window",
-        ["<A-,>"] = "prev_source",
-        ["<A-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
         ["<S-Tab>"] = "next_source",
       },
