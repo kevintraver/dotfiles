@@ -17,30 +17,35 @@ return {
       function()
         require("recall").toggle()
       end,
+      desc = "Recall Toggle",
     },
     {
       "<leader>mn",
       function()
         require("recall").goto_next()
       end,
+      desc = "Recall Goto Next",
     },
     {
       "<leader>mp",
       function()
         require("recall").goto_prev()
       end,
+      desc = "Recall Goto Prev",
     },
     {
       "<leader>mx",
       function()
         require("recall").clear()
       end,
+      desc = "Recall Clear",
     },
     {
       "<leader>mt",
       function()
         require("telescope").extensions.recall.recall()
       end,
+      desc = "Recall Telescope",
     },
   },
 }
