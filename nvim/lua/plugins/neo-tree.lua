@@ -29,6 +29,7 @@ return {
           ["<A-[>"] = "prev_git_modified",
           ["<C-]>"] = "next_git_modified",
           ["<C-[>"] = "prev_git_modified",
+          ["g."] = "toggle_hidden",
         },
       },
     },
