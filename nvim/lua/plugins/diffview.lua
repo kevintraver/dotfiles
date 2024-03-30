@@ -40,7 +40,7 @@ return {
           require("diffview").close()
         end,
         ["<A-d>"] = function()
-          require("diffview").close()
+          require("diffview.actions").open_in_diffview()
         end,
       },
     },
