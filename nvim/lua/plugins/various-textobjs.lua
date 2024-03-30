@@ -11,7 +11,7 @@ return {
       function()
         require("various-textobjs").subword("outer")
       end,
-      "iw",
+      desc = "Subword Outer",
     },
     {
       "is",
@@ -19,6 +19,7 @@ return {
       function()
         require("various-textobjs").subword("inner")
       end,
+      desc = "Subword Inner",
     },
   },
 }
