@@ -11,9 +11,6 @@ return {
         ["<A-w>"] = function()
           require("diffview").close()
         end,
-        ["<A-d>"] = function()
-          require("diffview").close()
-        end,
         ["x"] = function()
           require("diffview.actions").restore_entry()
         end,
@@ -23,9 +20,6 @@ return {
           require("diffview").close()
         end,
         ["<A-w>"] = function()
-          require("diffview").close()
-        end,
-        ["<A-d>"] = function()
           require("diffview").close()
         end,
       },
