@@ -94,4 +94,4 @@ alias gl='lazygit'
 alias gs="git status"
 
 # yt-dlp
-alias yt='yt-dlp'
+alias ytd='yt-dlp'
