@@ -1,5 +1,6 @@
 return {
   "folke/persistence.nvim",
+  lazy = true,
   keys = {
     {
       "<leader>qs",

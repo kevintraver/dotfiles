@@ -1,7 +1,7 @@
 return {
   "chrisgrieser/nvim-origami",
   enabled = false,
-  lazy = true,
+  event = "VeryLazy",
   event = "BufReadPost",
   config = true,
 }

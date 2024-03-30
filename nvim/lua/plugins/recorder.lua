@@ -1,5 +1,6 @@
 return {
   "chrisgrieser/nvim-recorder",
+  lazy = true,
   config = true,
   opts = {
     mapping = {

@@ -1,5 +1,6 @@
 return {
   "gabrielpoca/replacer.nvim",
+  lazy = true,
   keys = {
     {
       "<leader>rq",

@@ -1,5 +1,6 @@
 return {
   "danielfalk/smart-open.nvim",
+  lazy = true,
   config = function()
     require("telescope").load_extension("smart_open")
   end,

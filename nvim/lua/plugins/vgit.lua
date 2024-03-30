@@ -1,5 +1,6 @@
 return {
   "tanvirtin/vgit.nvim",
+  lazy = true,
   opts = {
     settings = {
       live_blame = {

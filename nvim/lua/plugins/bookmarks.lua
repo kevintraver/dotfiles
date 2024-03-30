@@ -1,5 +1,6 @@
 return {
   "tomasky/bookmarks.nvim",
+  lazy = true,
   dev = true,
   event = "VeryLazy",
   dependencies = {
