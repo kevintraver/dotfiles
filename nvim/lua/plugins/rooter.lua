@@ -1,5 +1,5 @@
 return {
   "notjedi/nvim-rooter.lua",
-  lazy = true,
+  event = "VeryLazy",
   config = true,
 }
