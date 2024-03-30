@@ -2,6 +2,11 @@ return {
   "chrishrb/gx.nvim",
   lazy = true,
   config = true,
+  opts = {
+    handlers = {
+      search = false,
+    },
+  },
   keys = {
     {
       "gx",
