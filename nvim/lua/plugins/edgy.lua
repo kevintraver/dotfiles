@@ -1,5 +1,6 @@
 return {
   "folke/edgy.nvim",
+  lazy = true,
   opts = {
     bottom = {
       {

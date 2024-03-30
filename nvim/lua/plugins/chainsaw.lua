@@ -1,5 +1,6 @@
 return {
   "chrisgrieser/nvim-chainsaw",
+  lazy = true,
   config = true,
   keys = {
     {
