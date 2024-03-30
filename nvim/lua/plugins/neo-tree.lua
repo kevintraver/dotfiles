@@ -13,7 +13,6 @@ return {
         ["L"] = "focus_preview",
         ["v"] = "open_vsplit",
         ["<A-w>"] = "close_window",
-        ["<A-h>"] = "navigate_up",
         ["<A-,>"] = "prev_source",
         ["<A-.>"] = "next_source",
         ["<Tab>"] = "prev_source",
@@ -24,6 +23,7 @@ return {
       window = {
         mappings = {
           ["<Esc>"] = "clear_filter",
+          ["<A-h>"] = "navigate_up",
           ["<A-f>"] = "filter_on_submit",
           ["<A-]>"] = "next_git_modified",
           ["<A-[>"] = "prev_git_modified",
