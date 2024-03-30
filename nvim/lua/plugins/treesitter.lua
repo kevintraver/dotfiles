@@ -47,7 +47,7 @@ return {
         enable = true,
       },
       move = {
-        enable = false,
+        enable = true,
       },
     },
     context_commentstring = {
