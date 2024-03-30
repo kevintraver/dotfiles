@@ -5,8 +5,8 @@ return {
     telescope = {
       mappings = {
         unmark_selected_entry = {
-          normal = "d",
-          insert = "<C-d>",
+          normal = "x",
+          insert = "<C-x>",
         },
       },
     },
