@@ -121,5 +121,9 @@ return {
       "<leader><space>",
       false,
     },
+    {
+      "<leader>sm",
+      false,
+    },
   },
 }
