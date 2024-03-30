@@ -40,7 +40,6 @@ return {
       "r",
       mode = { "o" },
       false,
-      desc = "Flash Remote",
     },
     {
       "r",
