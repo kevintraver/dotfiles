@@ -43,5 +43,12 @@ return {
       end,
       desc = "Lazy Config",
     },
+    {
+      "<leader>ll",
+      function()
+        require("lazy.view").show("home")
+      end,
+      desc = "Lazy Config",
+    },
   },
 }
