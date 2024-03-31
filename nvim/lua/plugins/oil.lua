@@ -30,12 +30,5 @@ return {
       end,
       desc = "Open Oil",
     },
-    {
-      "<leader>lc",
-      function()
-        require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
-      end,
-      desc = "Plugins Config Folder",
-    },
   },
 }

@@ -13,13 +13,4 @@ return {
     })
     require("telescope").load_extension("lazy")
   end,
-  keys = {
-    {
-      "<leader>fl",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Find Lazy Plugin",
-    },
-  },
 }
