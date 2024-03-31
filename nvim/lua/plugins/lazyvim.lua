@@ -2,7 +2,7 @@ return {
   "LazyVim/LazyVim",
   keys = {
     {
-      "<leader>Lu",
+      "<leader>lu",
       function()
         require("lazy").update()
       end,

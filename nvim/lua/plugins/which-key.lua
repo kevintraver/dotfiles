@@ -9,6 +9,7 @@ return {
       ["<leader>h"] = { name = "+githunk" },
       ["<leader>q"] = { name = "+recorder" },
       ["<leader>d"] = { name = "+debug" },
+      ["<leader>l"] = { name = "+lazy" },
     },
   },
 }
