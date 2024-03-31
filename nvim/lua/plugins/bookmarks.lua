@@ -1,6 +1,6 @@
 return {
   "tomasky/bookmarks.nvim",
-  lazy = true,
+  event = "VeryLazy",
   dev = true,
   dependencies = {
     "nvim-telescope/telescope.nvim",
