@@ -1,6 +1,6 @@
 return {
   "m4xshen/smartcolumn.nvim",
-  event = "UIEnter",
+  event = "VeryLazy",
   opts = {
     disabled_filetypes = {
       "help",

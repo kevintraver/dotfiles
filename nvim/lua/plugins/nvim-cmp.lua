@@ -1,5 +1,6 @@
 return {
   "hrsh7th/nvim-cmp",
+  lazy = true,
   dependencies = {
     {
       "chrisgrieser/cmp_yanky",

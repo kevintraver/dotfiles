@@ -1,5 +1,5 @@
 return {
   "swaits/thethethe.nvim",
-  event = "VeryLazy",
+  event = "InsertEnter",
   config = true,
 }

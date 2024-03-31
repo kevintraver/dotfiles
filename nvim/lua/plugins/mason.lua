@@ -1,5 +1,6 @@
 return {
   "williamboman/mason.nvim",
+  lazy = true,
   opts = {
     ensure_installed = {
       "bash-language-server",
