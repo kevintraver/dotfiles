@@ -1,6 +1,5 @@
 return {
   "nvimtools/none-ls.nvim",
-  lazy = true,
   dependencies = {
     "davidmh/cspell.nvim",
   },
