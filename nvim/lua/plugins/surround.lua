@@ -1,6 +1,6 @@
 return {
   "kylechui/nvim-surround",
-  event = "VeryLazy",
+  lazy = true,
   opts = {
     move_cursor = false,
     keymaps = {

@@ -1,6 +1,6 @@
 return {
   "shellRaining/hlchunk.nvim",
-  event = "UIEnter",
+  event = "VeryLazy",
   opts = {
     chunk = { notify = false },
     blank = { enable = false },

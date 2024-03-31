@@ -1,6 +1,6 @@
 return {
   "gbprod/cutlass.nvim",
-  lazy = false,
+  event = "VeryLazy",
   opts = {
     cut_key = "x",
     exclude = { "ns", "nS", "s<space>" },

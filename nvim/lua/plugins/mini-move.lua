@@ -1,6 +1,6 @@
 return {
   "echasnovski/mini.move",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
   opts = {
     mappings = {

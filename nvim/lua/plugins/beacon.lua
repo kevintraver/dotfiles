@@ -1,6 +1,6 @@
 return {
   "rainbowhxch/beacon.nvim",
-  event = "VeryLazy",
+  event = "WinNew",
   config = true,
   opts = {
     size = 100,
