@@ -1,5 +1,7 @@
 return {
   "fnune/recall.nvim",
+  enabled = false,
+  lazy = true,
   config = true,
   opts = {
     telescope = {
