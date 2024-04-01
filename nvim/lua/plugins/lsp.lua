@@ -3,6 +3,15 @@ return {
   init = function()
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "K", false }
-    keys[#keys + 1] = { "<A-k>", vim.lsp.buf.hover, desc = "Hover" }
+    keys[#keys + 1] = {
+      "<A-k>",
+      function()
+        require("telescope.builtin").lsp_definitions({
+          reuse_win = true,
+        })
+      end,
+      desc = "Goto Definition",
+      has = "definition",
+    }
   end,
 }
