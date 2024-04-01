@@ -20,7 +20,7 @@ return {
         size = { height = 0.3 },
       },
       {
-        ft = "Trouble",
+        ft = "trouble",
         title = "Trouble",
         size = { height = 0.3 },
       },
