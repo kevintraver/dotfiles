@@ -4,6 +4,7 @@ return {
   opts = {
     input = {
       insert_only = false,
+      relative = "editor",
       start_in_insert = true,
       mappings = {
         n = {
