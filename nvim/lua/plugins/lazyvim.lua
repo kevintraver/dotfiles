@@ -55,7 +55,7 @@ return {
       function()
         require("lazy.view").show("home")
       end,
-      desc = "Lazy Config",
+      desc = "Lazy Home",
     },
   },
 }
