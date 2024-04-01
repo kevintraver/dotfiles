@@ -9,6 +9,13 @@ return {
       desc = "Find Lazy Plugin",
     },
     {
+      "<leader>fl",
+      function()
+        require("telescope").extensions.lazy.lazy()
+      end,
+      desc = "Find Lazy Plugin",
+    },
+    {
       "<leader>lp",
       function()
         require("telescope").extensions.lazy.lazy()
