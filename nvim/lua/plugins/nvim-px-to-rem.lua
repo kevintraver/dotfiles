@@ -1,5 +1,12 @@
 return {
   "jsongerber/nvim-px-to-rem",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
+  cmd = {
+    "PxToRemCursor",
+    "PxToRemLine",
+  },
+  opts = {
+    disable_keymaps = true,
+  },
 }
