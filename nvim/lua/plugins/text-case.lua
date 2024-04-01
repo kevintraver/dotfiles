@@ -1,5 +1,5 @@
 return {
   "johmsalas/text-case.nvim",
-  lazy = true,
+  event = "VeryLazy",
   config = true,
 }
