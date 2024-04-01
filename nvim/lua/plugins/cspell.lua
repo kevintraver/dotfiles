@@ -3,7 +3,16 @@ return {
   dependencies = {
     "davidmh/cspell.nvim",
   },
-  opts = function(_, opts)
-    table.insert(opts.sources, require("cspell").code_actions)
+  config = function()
+    require("null-ls").setup({
+      sources = {
+        require("cspell").diagnostics.with({
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity["WARN"]
+          end,
+        }),
+        require("cspell").code_actions,
+      },
+    })
   end,
 }
