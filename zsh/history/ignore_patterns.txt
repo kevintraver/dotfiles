@@ -16,23 +16,16 @@ git pull
 git push
 git undo
 gl
-gt
-gt .
 la
 lazygit
 lg
 ls
 mssql-cli
-n *
 nvim
 nvim .
 nvr
 pwd
 reset-chrome
 reset-firefox
-rm *
-sudo rm *
 tc
 tmux
-trash*
-z *
