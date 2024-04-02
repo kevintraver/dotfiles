@@ -46,7 +46,9 @@ return {
     {
       "<leader>lc",
       function()
-        require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+        require("telescope.builtin").find_files({
+          cwd = vim.fn.stdpath("config"),
+        })
       end,
       desc = "Lazy Config",
     },

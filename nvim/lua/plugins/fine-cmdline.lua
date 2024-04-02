@@ -8,7 +8,12 @@ return {
       },
       hooks = {
         after_mount = function(input)
-          vim.keymap.set("i", "<Esc>", "<cmd>stopinsert<cr>", { buffer = input.bufnr })
+          vim.keymap.set(
+            "i",
+            "<Esc>",
+            "<cmd>stopinsert<cr>",
+            { buffer = input.bufnr }
+          )
         end,
       },
     })
