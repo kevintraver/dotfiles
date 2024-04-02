@@ -38,6 +38,7 @@ require("lazy").setup({
   checker = { enabled = false }, -- automatically check for plugin updates
   dev = {
     path = vim.fn.stdpath("data") .. "/dev",
+    patterns = { "" },
     fallback = true,
   },
   change_detection = {
