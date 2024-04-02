@@ -13,6 +13,7 @@ return {
       ["<C-p>"] = "actions.preview",
       ["<S-p>"] = "actions.preview",
       ["<A-h>"] = "actions.parent",
+      ["<C-q>"] = "actions.send_to_qflist",
       ["-"] = "actions.parent",
       ["_"] = "actions.open_cwd",
       ["`"] = "actions.cd",
