@@ -45,6 +45,7 @@ return {
         require("neo-tree.command").execute({
           reveal = true,
           toggle = true,
+          reveal_force_cwd = true,
         })
       end,
       desc = "Explorer NeoTree (Root Dir)",
@@ -55,6 +56,7 @@ return {
         require("neo-tree.command").execute({
           reveal = true,
           toggle = true,
+          reveal_force_cwd = true,
         })
       end,
       desc = "Explorer NeoTree (Root Dir)",
