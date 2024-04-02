@@ -4,7 +4,7 @@ return {
     {
       "<leader>fj",
       function()
-        require("jot").open()
+        require("jot").toggle()
       end,
       desc = "Jot",
     },
