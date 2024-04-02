@@ -5,8 +5,10 @@ return {
     require("telescope").setup({
       extensions = {
         lazy = {
-          open_in_browser_opts = {
-            close_window_after_action = true,
+          actions_opts = {
+            open_in_browser = {
+              auto_close = true,
+            },
           },
           mappings = {
             open_in_live_grep = "<C-s>",
