@@ -1,7 +1,6 @@
 return {
   "tomasky/bookmarks.nvim",
   event = "VeryLazy",
-  dev = true,
   dependencies = {
     "nvim-telescope/telescope.nvim",
     config = function()

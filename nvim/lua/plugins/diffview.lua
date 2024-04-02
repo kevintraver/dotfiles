@@ -1,7 +1,6 @@
 return {
   "sindrets/diffview.nvim",
   lazy = true,
-  dev = true,
   cmd = {
     "DiffviewOpen",
     "DiffviewFileHistory",
