@@ -21,7 +21,9 @@ return {
       "<leader>go",
       mode = { "n", "v" },
       function()
-        require("gitlinker").get_buf_range_url("n", { action_callback = require("gitlinker.actions").open_in_browser })
+        require("gitlinker").get_buf_range_url("n", {
+          action_callback = require("gitlinker.actions").open_in_browser,
+        })
       end,
       desc = "Open File in Browser",
     },
@@ -29,7 +31,9 @@ return {
       "<leader>gO",
       mode = { "n", "v" },
       function()
-        require("gitlinker").get_repo_url({ action_callback = require("gitlinker.actions").open_in_browser })
+        require("gitlinker").get_repo_url({
+          action_callback = require("gitlinker.actions").open_in_browser,
+        })
       end,
       desc = "Open Repo in Browser",
     },

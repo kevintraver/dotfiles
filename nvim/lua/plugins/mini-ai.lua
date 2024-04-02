@@ -21,12 +21,19 @@ return {
               -- Don't remove empty line
               from_col, to_col = 0, 0
             else
-              -- Ignore indentation for `i` textobject and don't remove `\n` past the line
+              -- Ignore indentation for `i` textobject and don't remove `\n`
+              -- past the line
               from_col = line:match("^%s*()")
               to_col = line:len()
             end
           end
-          return { from = { line = line_num, col = from_col }, to = { line = line_num, col = to_col } }
+          return {
+            from = { line = line_num, col = from_col },
+            to = {
+              line = line_num,
+              col = to_col,
+            },
+          }
         end,
         g = function()
           local from = { line = 1, col = 1 }
@@ -40,8 +47,14 @@ return {
           a = { "@block.outer", "@conditional.outer", "@loop.outer" },
           i = { "@block.inner", "@conditional.inner", "@loop.inner" },
         }, {}),
-        m = gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }, {}),
-        c = gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }, {}),
+        m = gen_spec.treesitter({
+          a = "@function.outer",
+          i = "@function.inner",
+        }, {}),
+        c = gen_spec.treesitter({
+          a = "@class.outer",
+          i = "@class.inner",
+        }, {}),
       },
     })
   end,
