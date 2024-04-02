@@ -1,5 +1,6 @@
 return {
   "VonHeikemen/fine-cmdline.nvim",
+  enabled = false,
   config = function()
     require("fine-cmdline").setup({
       cmdline = {
