@@ -13,5 +13,12 @@ return {
       desc = "Goto Definition",
       has = "definition",
     }
+    keys[#keys + 1] = {
+      "gk",
+      function()
+        vim.lsp.buf.hover()
+      end,
+      desc = "Hover",
+    }
   end,
 }
