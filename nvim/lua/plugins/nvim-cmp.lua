@@ -4,9 +4,9 @@ return {
   dependencies = {
     {
       "chrisgrieser/cmp_yanky",
-    },
-    {
       "ray-x/cmp-treesitter",
+      "tzachar/cmp-fuzzy-buffer",
+      "tzachar/fuzzy.nvim",
     },
   },
   opts = function(_, opts)
@@ -14,6 +14,7 @@ return {
       { name = "cmp_yanky" },
       { name = "treesitter" },
       { name = "nvim_px_to_rem" },
+      { name = "fuzzy_buffer" },
     }))
   end,
 }
