@@ -4,11 +4,9 @@ return {
   dependencies = {
     {
       "chrisgrieser/cmp_yanky",
-      lazy = true,
     },
     {
       "ray-x/cmp-treesitter",
-      lazy = true,
     },
   },
   opts = function(_, opts)
