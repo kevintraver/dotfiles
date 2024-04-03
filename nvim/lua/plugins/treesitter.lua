@@ -43,6 +43,25 @@ return {
       enable = true,
     },
     textobjects = {
+      swap = {
+        enable = true,
+        swap_next = {
+          ["<S-l>"] = {
+            query = {
+              "@parameter.inner",
+              "@assignment.inner",
+            },
+          },
+        },
+        swap_previous = {
+          ["<S-h>"] = {
+            query = {
+              "@parameter.inner",
+              "@assignment.inner",
+            },
+          },
+        },
+      },
       select = {
         enable = true,
       },
