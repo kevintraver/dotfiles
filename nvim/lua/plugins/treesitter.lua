@@ -67,6 +67,22 @@ return {
       },
       move = {
         enable = true,
+        goto_next_start = {
+          ["]]"] = {
+            query = {
+              "@parameter.outer",
+              "@assignment.outer",
+            },
+          },
+        },
+        goto_previous_start = {
+          ["[["] = {
+            query = {
+              "@parameter.outer",
+              "@assignment.outer",
+            },
+          },
+        },
       },
     },
     context_commentstring = {
