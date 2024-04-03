@@ -93,5 +93,13 @@ return {
       end,
       desc = "GitSigns Select Hunk",
     },
+    {
+      "ah",
+      mode = { "o", "x" },
+      function()
+        require("gitsigns").select_hunk()
+      end,
+      desc = "GitSigns Select Hunk",
+    },
   },
 }
