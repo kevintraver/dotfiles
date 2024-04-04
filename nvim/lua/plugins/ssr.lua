@@ -1,6 +1,6 @@
 return {
   "cshuaimin/ssr.nvim",
-  event = "VeryLazy",
+  lazy = true,
   keys = {
     {
       "<leader>rt",
