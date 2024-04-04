@@ -62,6 +62,18 @@ return {
       end,
       desc = "Explorer NeoTree (Root Dir)",
     },
+    {
+      "<A-g>",
+      function()
+        require("neo-tree.command").execute({
+          source = "git_status",
+          reveal = true,
+          toggle = true,
+          reveal_force_cwd = true,
+        })
+      end,
+      desc = "Explorer NeoTree (Git)",
+    },
     -- disable LazyVim Neo-tree keymaps
     { "<leader>e", false },
     { "<leader>E", false },
