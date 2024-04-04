@@ -49,7 +49,7 @@ return {
           reveal_force_cwd = true,
         })
       end,
-      desc = "Explorer NeoTree (Root Dir)",
+      desc = "NeoTree (Root Dir)",
     },
     {
       "<A-e>",
@@ -60,7 +60,7 @@ return {
           reveal_force_cwd = true,
         })
       end,
-      desc = "Explorer NeoTree (Root Dir)",
+      desc = "NeoTree (Root Dir)",
     },
     {
       "<A-g>",
@@ -72,7 +72,7 @@ return {
           reveal_force_cwd = true,
         })
       end,
-      desc = "Explorer NeoTree (Git)",
+      desc = "NeoTree (Git)",
     },
     -- disable LazyVim Neo-tree keymaps
     { "<leader>e", false },
