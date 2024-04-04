@@ -66,6 +66,5 @@ return {
     { "<leader>E", false },
     { "<leader>fe", false },
     { "<leader>fE", false },
-    { "<leader>ge", false },
   },
 }

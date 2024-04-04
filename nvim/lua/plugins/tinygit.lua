@@ -28,7 +28,7 @@ return {
       desc = "Git Amend Commit",
     },
     {
-      "<leader>ge",
+      "<leader>gr",
       function()
         require("tinygit").amendOnlyMsg()
       end,
