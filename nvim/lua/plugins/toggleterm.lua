@@ -33,7 +33,7 @@ return {
       desc = "Toggle (Close) Terminal",
     },
     {
-      "<A-g>",
+      "<leader>gg",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
