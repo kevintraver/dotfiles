@@ -90,6 +90,10 @@ alias lt='eza --tree --level=2'
 alias lg='lazygit'
 alias gl='lazygit'
 
+# gitui
+alias gu='gitui'
+alias gi='gitui'
+
 # git
 alias gs="git status"
 
