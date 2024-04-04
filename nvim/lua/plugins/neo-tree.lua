@@ -3,6 +3,7 @@ return {
   branch = "main",
   cmd = "Neotree",
   opts = {
+    use_popups_for_input = false,
     window = {
       mappings = {
         ["s"] = "",
