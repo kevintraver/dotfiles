@@ -20,21 +20,5 @@ return {
       [["+<Plug>(YankyYank)]],
       desc = "Yank to Global Clipboard",
     },
-    {
-      "<C-p>",
-      mode = { "n" },
-      function()
-        require("yanky").cycle(1)
-      end,
-      desc = "Yanky Cycle Forward",
-    },
-    {
-      "<C-n>",
-      mode = { "n" },
-      function()
-        require("yanky").cycle(-1)
-      end,
-      desc = "Yanky Cycle Backward",
-    },
   },
 }
