@@ -1,5 +1,6 @@
 return {
   "kevintraver/word-swap.nvim",
+  enabled = false,
   lazy = true,
   config = true,
   keys = {
