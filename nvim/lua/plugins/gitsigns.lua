@@ -3,30 +3,14 @@ return {
   keys = {
     {
       mode = { "n" },
-      "<A-]>",
+      "]]",
       function()
         require("gitsigns").next_hunk()
       end,
       desc = "Next Hunk",
     },
     {
-      "<A-[>",
-      mode = { "n" },
-      function()
-        require("gitsigns").prev_hunk()
-      end,
-      desc = "Prev Hunk",
-    },
-    {
-      mode = { "n" },
-      "<C-]>",
-      function()
-        require("gitsigns").next_hunk()
-      end,
-      desc = "Next Hunk",
-    },
-    {
-      "<C-[>",
+      "[[",
       mode = { "n" },
       function()
         require("gitsigns").prev_hunk()
