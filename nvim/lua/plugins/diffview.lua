@@ -8,6 +8,12 @@ return {
   opts = {
     keymaps = {
       file_panel = {
+        ["j"] = function()
+          require("diffview.actions").select_next_entry()
+        end,
+        ["k"] = function()
+          require("diffview.actions").select_prev_entry()
+        end,
         ["q"] = function()
           require("diffview").close()
         end,
