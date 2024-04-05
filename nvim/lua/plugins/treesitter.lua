@@ -68,7 +68,7 @@ return {
       move = {
         enable = true,
         goto_next_start = {
-          ["}"] = {
+          ["<tab>"] = {
             query = {
               "@parameter.outer",
               "@assignment.outer",
@@ -76,7 +76,7 @@ return {
           },
         },
         goto_previous_start = {
-          ["{"] = {
+          ["<S-tab>"] = {
             query = {
               "@parameter.outer",
               "@assignment.outer",
