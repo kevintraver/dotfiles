@@ -42,6 +42,9 @@ return {
     rainbow = {
       enable = true,
     },
+    incremental_selection = {
+      enable = false,
+    },
     textobjects = {
       swap = {
         enable = true,
