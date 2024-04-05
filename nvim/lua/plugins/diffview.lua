@@ -23,6 +23,9 @@ return {
         ["x"] = function()
           require("diffview.actions").restore_entry()
         end,
+        ["d"] = function()
+          require("diffview.actions").restore_entry()
+        end,
       },
       view = {
         ["q"] = function()
