@@ -68,7 +68,7 @@ return {
       move = {
         enable = true,
         goto_next_start = {
-          ["]]"] = {
+          ["}"] = {
             query = {
               "@parameter.outer",
               "@assignment.outer",
@@ -76,7 +76,7 @@ return {
           },
         },
         goto_previous_start = {
-          ["[["] = {
+          ["{"] = {
             query = {
               "@parameter.outer",
               "@assignment.outer",
