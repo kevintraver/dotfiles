@@ -46,7 +46,9 @@ return {
     {
       "<leader>ls",
       function()
-        require("telescope").extensions.lazy.lazy()
+        require("telescope.builtin").live_grep({
+          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+        })
       end,
       desc = "Find Lazy Plugin",
     },
