@@ -17,6 +17,12 @@ return {
         ["k"] = function()
           require("diffview.actions").select_prev_entry()
         end,
+        ["<C-n>"] = function()
+          require("diffview.actions").select_next_entry()
+        end,
+        ["<C-p>"] = function()
+          require("diffview.actions").select_prev_entry()
+        end,
         ["q"] = function()
           require("diffview").close()
         end,
