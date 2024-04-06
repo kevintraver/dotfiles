@@ -35,6 +35,9 @@ return {
         ["d"] = function()
           require("diffview.actions").restore_entry()
         end,
+        ["c"] = function()
+          require("tinygit").smartCommit()
+        end,
       },
       view = {
         ["q"] = function()
