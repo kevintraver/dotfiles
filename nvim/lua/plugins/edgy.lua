@@ -90,7 +90,7 @@ return {
       },
       {
         ft = "NeogitStatus",
-        size = { width = 0.4 },
+        size = { width = 0.6 },
       },
       {
         ft = "NeogitPopup",
