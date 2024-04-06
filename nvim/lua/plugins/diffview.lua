@@ -57,6 +57,13 @@ return {
       desc = "Diff View Open",
     },
     {
+      "<A-g>",
+      function()
+        require("diffview").open({})
+      end,
+      desc = "Diff View Open",
+    },
+    {
       "<leader>gd",
       function()
         require("diffview").open({})
