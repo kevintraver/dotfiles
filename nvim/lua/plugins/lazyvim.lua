@@ -50,7 +50,7 @@ return {
           cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
         })
       end,
-      desc = "Find Lazy Plugin",
+      desc = "Search (grep) LazyVim",
     },
     {
       "<leader>le",
