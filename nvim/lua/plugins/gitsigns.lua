@@ -71,6 +71,13 @@ return {
       desc = "Reset Buffer",
     },
     {
+      "<leader>br",
+      function()
+        require("gitsigns").reset_buffer()
+      end,
+      desc = "Reset Buffer",
+    },
+    {
       "<leader>hp",
       function()
         require("gitsigns").preview_hunk_inline()
