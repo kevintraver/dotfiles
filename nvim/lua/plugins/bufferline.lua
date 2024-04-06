@@ -45,5 +45,13 @@ return {
       "<S-h>",
       false,
     },
+    {
+      "<leader>br",
+      false,
+    },
+    {
+      "<leader>bl",
+      false,
+    },
   },
 }
