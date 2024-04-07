@@ -11,6 +11,9 @@ return {
         ["<Enter>"] = function()
           require("diffview.actions").goto_file_edit()
         end,
+        ["e"] = function()
+          require("diffview.actions").goto_file_edit()
+        end,
         ["<Space>"] = function()
           require("diffview.actions").toggle_stage_entry()
         end,
