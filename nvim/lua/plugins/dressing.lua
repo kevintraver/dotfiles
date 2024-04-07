@@ -9,6 +9,11 @@ return {
       mappings = {
         n = {
           ["<A-s>"] = "Confirm",
+          ["<C-s>"] = "Confirm",
+        },
+        i = {
+          ["<A-s>"] = "Confirm",
+          ["<C-s>"] = "Confirm",
         },
       },
     },
