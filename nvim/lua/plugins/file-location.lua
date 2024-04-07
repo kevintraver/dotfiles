@@ -14,21 +14,35 @@ return {
     {
       "<leader>yF",
       function()
-        require("nvim-file-location").copy_file_location("absolute", false, false)
+        require("nvim-file-location").copy_file_location(
+          "absolute",
+          false,
+          false
+        )
       end,
       desc = "Copy File Location (Absolute) to Clipboard",
     },
     {
       "<leader>Yf",
       function()
-        require("nvim-file-location").copy_file_location("relative", false, false, "*")
+        require("nvim-file-location").copy_file_location(
+          "relative",
+          false,
+          false,
+          "*"
+        )
       end,
       desc = "Copy File Location (Absolute) to System Clipboard",
     },
     {
       "<leader>YF",
       function()
-        require("nvim-file-location").copy_file_location("absolute", false, false, "*")
+        require("nvim-file-location").copy_file_location(
+          "absolute",
+          false,
+          false,
+          "*"
+        )
       end,
       desc = "Copy File Location (Absolute) to System Clipboard",
     },

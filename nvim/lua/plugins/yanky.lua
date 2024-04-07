@@ -8,7 +8,10 @@ return {
     picker = {
       telescope = {
         mappings = {
-          default = require("yanky.telescope.mapping").put_and_set_register("p", '"'),
+          default = require("yanky.telescope.mapping").put_and_set_register(
+            "p",
+            '"'
+          ),
         },
       },
     },
@@ -25,7 +28,11 @@ return {
       mode = { "n" },
       function()
         local yanky_wrappers = require("yanky.wrappers")
-        require("yanky").put("p", false, yanky_wrappers.linewise(yanky_wrappers.change("==")))
+        require("yanky").put(
+          "p",
+          false,
+          yanky_wrappers.linewise(yanky_wrappers.change("=="))
+        )
       end,
       desc = "Yanky Put After Filter",
     },
@@ -34,7 +41,11 @@ return {
       mode = { "n" },
       function()
         local yanky_wrappers = require("yanky.wrappers")
-        require("yanky").put("P", false, yanky_wrappers.linewise(yanky_wrappers.change("==")))
+        require("yanky").put(
+          "P",
+          false,
+          yanky_wrappers.linewise(yanky_wrappers.change("=="))
+        )
       end,
       desc = "Yanky Put Before Filter",
     },
