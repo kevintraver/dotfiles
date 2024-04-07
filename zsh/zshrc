@@ -1,3 +1,6 @@
+declare -A ZINIT
+export ZINIT[NO_ALIASES]=1
+
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
 autoload -Uz _zinit
