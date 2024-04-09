@@ -121,5 +121,77 @@ return {
       end,
       desc = "GitSigns Select Hunk",
     },
+    {
+      "ghs",
+      mode = { "n", "v" },
+      function()
+        require("gitsigns").stage_hunk()
+      end,
+      desc = "Stage Hunk",
+    },
+    {
+      "ghr",
+      mode = { "n", "v" },
+      function()
+        require("gitsigns").reset_hunk()
+      end,
+      desc = "Reset Hunk",
+    },
+    {
+      "ghS",
+      function()
+        require("gitsigns").stage_buffer()
+      end,
+      desc = "Stage Buffer",
+    },
+    {
+      "ghu",
+      function()
+        require("gitsigns").undo_stage_hunk()
+      end,
+      desc = "Undo Stage Hunk",
+    },
+    {
+      "ghR",
+      function()
+        require("gitsigns").reset_buffer()
+      end,
+      desc = "Reset Buffer",
+    },
+    {
+      "gbr",
+      function()
+        require("gitsigns").reset_buffer()
+      end,
+      desc = "Reset Buffer",
+    },
+    {
+      "ghp",
+      function()
+        require("gitsigns").preview_hunk_inline()
+      end,
+      desc = "Preview Hunk Inline",
+    },
+    {
+      "ghb",
+      function()
+        require("gitsigns").blame_line({ full = true })
+      end,
+      desc = "Blame Line",
+    },
+    {
+      "ghd",
+      function()
+        require("gitsigns").diffthis()
+      end,
+      desc = "Diff This",
+    },
+    {
+      "ghD",
+      function()
+        require("gitsigns").diffthis("~")
+      end,
+      desc = "Diff This ~",
+    },
   },
 }
