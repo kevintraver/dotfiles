@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>n",
+      "<leader>a",
       function()
         require("neogen").generate()
       end,
