@@ -1,5 +1,6 @@
 return {
   "echasnovski/mini.align",
+  event = "VeryLazy",
   opts = {
     mappings = {
       start = "gl",
