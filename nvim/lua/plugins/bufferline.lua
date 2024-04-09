@@ -24,7 +24,7 @@ return {
       desc = "Previous Buffer",
     },
     {
-      "<C-Space>",
+      "<Tab>",
       function()
         vim.cmd.buffer("#")
       end,
