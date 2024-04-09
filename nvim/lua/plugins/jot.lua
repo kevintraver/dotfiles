@@ -1,5 +1,6 @@
 return {
   "letieu/jot.lua",
+  lazy = true,
   keys = {
     {
       "<leader>n",
