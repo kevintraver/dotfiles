@@ -2,7 +2,7 @@ return {
   "letieu/jot.lua",
   keys = {
     {
-      "<leader><space>",
+      "<leader>n",
       function()
         require("jot").toggle()
       end,
