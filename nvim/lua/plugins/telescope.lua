@@ -114,6 +114,15 @@ return {
       desc = "Resume",
     },
     {
+      "<leader>fc",
+      function()
+        require("telescope.builtin").find_files({
+          cwd = "~/.dotfiles",
+        })
+      end,
+      desc = "Find Config Files (dotfiles)",
+    },
+    {
       "<leader>gc",
       false,
     },
