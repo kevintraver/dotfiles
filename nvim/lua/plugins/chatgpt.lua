@@ -1,6 +1,6 @@
 return {
   "jackMort/ChatGPT.nvim",
-  lazy = true,
+  event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
     "nvim-lua/plenary.nvim",
@@ -10,14 +10,18 @@ return {
     yank_register = '"',
     chat = {
       keymaps = {
-        close = { "<C-c>", "<C-\\>" },
+        close = {
+          "q",
+          "<C-c>",
+          "<C-Space>",
+        },
       },
     },
   },
   keys = {
     {
-      "<C-\\>",
-      mode = { "n", "v", "t" },
+      "<C-Space>",
+      mode = { "n", "i", "v", "t" },
       function()
         require("chatgpt").openChat()
       end,
