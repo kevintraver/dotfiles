@@ -50,6 +50,9 @@ return {
         ["<A-p>"] = function()
           require("tinygit").push({})
         end,
+        ["<A-u>"] = function()
+          require("tinygit").undoLastCommit()
+        end,
       },
       view = {
         ["q"] = function()
