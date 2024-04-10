@@ -52,8 +52,8 @@ return {
           i = "@function.inner",
         }, {}),
         c = gen_spec.treesitter({
-          a = "@class.outer",
-          i = "@class.inner",
+          a = "@comment.outer",
+          i = "@comment.inner",
         }, {}),
       },
     })
