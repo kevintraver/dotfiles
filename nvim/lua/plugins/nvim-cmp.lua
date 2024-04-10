@@ -1,12 +1,24 @@
 return {
   "hrsh7th/nvim-cmp",
-  lazy = true,
+  event = "InsertEnter",
   dependencies = {
     {
-      "chrisgrieser/cmp_yanky",
-      "ray-x/cmp-treesitter",
-      "tzachar/cmp-fuzzy-buffer",
-      "tzachar/fuzzy.nvim",
+      {
+        "chrisgrieser/cmp_yanky",
+        event = "InsertEnter",
+      },
+      {
+        "ray-x/cmp-treesitter",
+        event = "InsertEnter",
+      },
+      {
+        "tzachar/cmp-fuzzy-buffer",
+        event = "InsertEnter",
+      },
+      {
+        "tzachar/fuzzy.nvim",
+        event = "InsertEnter",
+      },
     },
   },
   opts = function(_, opts)
