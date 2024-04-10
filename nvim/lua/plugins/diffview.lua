@@ -47,6 +47,9 @@ return {
         ["c"] = function()
           require("tinygit").smartCommit()
         end,
+        ["<A-p>"] = function()
+          require("tinygit").push({})
+        end,
       },
       view = {
         ["q"] = function()
