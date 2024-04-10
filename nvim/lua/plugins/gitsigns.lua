@@ -159,13 +159,6 @@ return {
       desc = "Reset Buffer",
     },
     {
-      "gbr",
-      function()
-        require("gitsigns").reset_buffer()
-      end,
-      desc = "Reset Buffer",
-    },
-    {
       "ghp",
       function()
         require("gitsigns").preview_hunk_inline()
