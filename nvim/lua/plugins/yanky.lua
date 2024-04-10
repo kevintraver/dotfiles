@@ -49,5 +49,21 @@ return {
       end,
       desc = "Yanky Put Before Filter",
     },
+    {
+      "[p",
+      mode = { "n" },
+      function()
+        require("yanky").cycle(1)
+      end,
+      desc = "Yanky Cycle Forward",
+    },
+    {
+      "]p",
+      mode = { "n" },
+      function()
+        require("yanky").cycle(-1)
+      end,
+      desc = "Yanky Cycle Backward",
+    },
   },
 }
