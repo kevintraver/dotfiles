@@ -108,6 +108,10 @@ return {
         title = "Diff View",
         ft = "DiffviewFiles",
       },
+      {
+        title = "NvimTree",
+        ft = "NvimTree",
+      },
     },
     animate = {
       enabled = false,
