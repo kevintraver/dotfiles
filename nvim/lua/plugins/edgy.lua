@@ -87,6 +87,7 @@ return {
     left = {
       {
         ft = "undotree",
+        size = { width = 0.4 },
       },
       {
         ft = "NeogitStatus",
