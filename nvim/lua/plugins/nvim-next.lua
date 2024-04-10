@@ -1,5 +1,6 @@
 return {
   "ghostbuster91/nvim-next",
+  event = "VeryLazy",
   config = function()
     require("nvim-next").setup({
       default_mappings = {
