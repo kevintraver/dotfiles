@@ -10,7 +10,7 @@ return {
     {
       "<A-l>",
       function()
-        require("focus").split_nicely()
+        require("focus").split_command("l")
       end,
       desc = "Split Nicely",
     },
