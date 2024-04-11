@@ -30,6 +30,11 @@ vim.keymap.set({ "n", "i", "x" }, "<A-q>", function()
   vim.cmd.quitall()
 end, { desc = "Quit All" })
 
+-- new
+vim.keymap.set({ "n", "i", "x" }, "<A-n>", function()
+  vim.cmd.tabnew()
+end, { desc = "New Tab" })
+
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")
 vim.keymap.del("n", "<leader>L")
