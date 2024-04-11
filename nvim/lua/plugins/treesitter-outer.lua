@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   dependencies = "nvim-treesitter/nvim-treesitter",
   opts = {
-    prev_outer_key = "[o",
-    next_outer_key = "]o",
+    next_outer_key = "<A-]>",
+    prev_outer_key = "<A-[>",
   },
 }
