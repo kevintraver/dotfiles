@@ -29,7 +29,6 @@ return {
     opts.sources = require("cmp").config.sources(vim.list_extend(opts.sources, {
       { name = "cmp_yanky" },
       { name = "treesitter" },
-      { name = "nvim_px_to_rem" },
       {
         name = "fuzzy_buffer",
         option = {
