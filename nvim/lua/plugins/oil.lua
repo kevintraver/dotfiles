@@ -25,6 +25,7 @@ return {
       ["q"] = "actions.close",
       ["<A-w>"] = "actions.close",
       ["H"] = "actions.toggle_hidden",
+      ["<C-A-l>"] = "actions.select_vsplit",
     },
   },
   keys = {
