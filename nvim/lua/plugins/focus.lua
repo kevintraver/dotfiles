@@ -1,7 +1,11 @@
 return {
   "nvim-focus/focus.nvim",
   lazy = true,
-  opts = true,
+  opts = {
+    split = {
+      bufnew = true,
+    },
+  },
   keys = {
     {
       "<A-l>",
