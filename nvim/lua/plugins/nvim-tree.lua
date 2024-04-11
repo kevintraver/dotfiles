@@ -34,7 +34,7 @@ return {
           silent = true,
           nowait = true,
         })
-        vim.keymap.set("n", "<A-]>", function()
+        vim.keymap.set("n", "]]", function()
           require("nvim-tree.api").node.navigate.git.next()
         end, {
           desc = "Next Git",
@@ -43,7 +43,7 @@ return {
           silent = true,
           nowait = true,
         })
-        vim.keymap.set("n", "<A-[>", function()
+        vim.keymap.set("n", "[[", function()
           require("nvim-tree.api").node.navigate.git.prev()
         end, {
           desc = "Previous Git",
