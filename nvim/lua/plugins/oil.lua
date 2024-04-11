@@ -23,6 +23,7 @@ return {
       ["g."] = "actions.toggle_hidden",
       ["q"] = "actions.close",
       ["<A-w>"] = "actions.close",
+      ["H"] = "actions.toggle_hidden",
     },
   },
   keys = {
