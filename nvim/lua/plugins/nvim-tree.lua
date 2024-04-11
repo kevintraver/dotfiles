@@ -52,6 +52,24 @@ return {
           silent = true,
           nowait = true,
         })
+        vim.keymap.set("n", "<A-h>", function()
+          require("nvim-tree.api").node.navigate.parent()
+        end, {
+          desc = "Previous Git",
+          buffer = bufnr,
+          noremap = true,
+          silent = true,
+          nowait = true,
+        })
+        vim.keymap.set("n", "<A-l>", function()
+          require("nvim-tree.api").node.open.no_window_picker()
+        end, {
+          desc = "Previous Git",
+          buffer = bufnr,
+          noremap = true,
+          silent = true,
+          nowait = true,
+        })
         vim.keymap.set("n", "g.", function()
           require("nvim-tree.api").tree.toggle_hidden_filter()
         end, {
