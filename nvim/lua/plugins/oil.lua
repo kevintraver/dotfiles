@@ -12,6 +12,8 @@ return {
       ["<C-t>"] = "actions.select_tab",
       ["<A-p>"] = "actions.preview",
       ["<A-h>"] = "actions.parent",
+      ["<A-j>"] = "j",
+      ["<A-k>"] = "k",
       ["<C-q>"] = "actions.send_to_qflist",
       ["-"] = "actions.parent",
       ["_"] = "actions.open_cwd",
