@@ -19,6 +19,10 @@ return {
         "tzachar/fuzzy.nvim",
         event = "InsertEnter",
       },
+      {
+        "tzachar/cmp-fuzzy-path",
+        event = "InsertEnter",
+      },
     },
   },
   opts = function(_, opts)
@@ -27,6 +31,7 @@ return {
       { name = "treesitter" },
       { name = "nvim_px_to_rem" },
       { name = "fuzzy_buffer" },
+      { name = "fuzzy_path" },
     }))
   end,
 }
