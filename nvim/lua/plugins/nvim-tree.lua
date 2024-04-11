@@ -8,6 +8,11 @@ return {
   },
   config = function()
     require("nvim-tree").setup({
+      filters = {
+        enable = true,
+        git_ignored = false,
+        dotfiles = true,
+      },
       on_attach = function(bufnr)
         require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
 
