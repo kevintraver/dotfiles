@@ -8,7 +8,7 @@ return {
     keymaps = {
       ["g?"] = "actions.show_help",
       ["<CR>"] = "actions.select",
-      ["<C-l>"] = "actions.select",
+      ["<A-l>"] = "actions.select",
       ["<C-t>"] = "actions.select_tab",
       ["<C-p>"] = "actions.preview",
       ["<S-p>"] = "actions.preview",
