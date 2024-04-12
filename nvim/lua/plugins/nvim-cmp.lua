@@ -26,6 +26,17 @@ return {
     },
   },
   opts = function(_, opts)
+    -- remove path and buffer added by LazyVim
+    local remove_sources = {
+      buffer = true,
+      path = true,
+    }
+    for i = #opts.sources, 1, -1 do
+      if remove_sources[opts.sources[i].name] then
+        table.remove(opts.sources, i)
+      end
+    end
+
     opts.sources = require("cmp").config.sources(vim.list_extend(opts.sources, {
       { name = "cmp_yanky" },
       { name = "treesitter" },
