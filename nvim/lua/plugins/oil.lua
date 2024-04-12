@@ -1,7 +1,7 @@
 return {
   "stevearc/oil.nvim",
   cmd = "Oil",
-  event = "VeryLazy",
+  event = "VimEnter",
   opts = {
     delete_to_trash = true,
     use_default_keymaps = false,
