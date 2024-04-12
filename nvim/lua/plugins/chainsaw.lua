@@ -18,6 +18,13 @@ return {
       desc = "Add Object Log",
     },
     {
+      "<leader>di",
+      function()
+        require("chainsaw").objectLog()
+      end,
+      desc = "Add Object Log",
+    },
+    {
       "<leader>da",
       function()
         require("chainsaw").assertLog()
