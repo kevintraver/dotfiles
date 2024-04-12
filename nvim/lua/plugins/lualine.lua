@@ -7,7 +7,6 @@ return {
     },
     extensions = {
       "lazy",
-      "trouble",
       "toggleterm",
       "nvim-tree",
       "quickfix",
