@@ -6,7 +6,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>cp",
+      "<leader>pp",
       function()
         require("peek").open()
       end,
