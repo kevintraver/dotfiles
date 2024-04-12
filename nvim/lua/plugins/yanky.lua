@@ -65,5 +65,13 @@ return {
       end,
       desc = "Yanky Cycle Backward",
     },
+    {
+      "<A-y>",
+      mode = { "n" },
+      function()
+        require("telescope").extensions.yank_history.yank_history({})
+      end,
+      desc = "Yank History",
+    },
   },
 }
