@@ -4,12 +4,4 @@ return {
   ft = "markdown",
   build = "deno task --quiet build:fast",
   config = true,
-  keys = {
-    {
-      "<leader>pp",
-      function()
-        require("peek").open()
-      end,
-    },
-  },
 }
