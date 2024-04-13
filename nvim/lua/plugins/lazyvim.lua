@@ -82,5 +82,12 @@ return {
       end,
       desc = "Lazy Home",
     },
+    {
+      "<leader><tab>x",
+      function()
+        vim.cmd.tabonly()
+      end,
+      desc = "Close Other Tabs",
+    },
   },
 }
