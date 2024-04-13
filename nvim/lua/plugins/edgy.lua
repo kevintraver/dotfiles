@@ -113,6 +113,27 @@ return {
         title = "NvimTree",
         ft = "NvimTree",
       },
+      {
+        title = "Neo-Tree",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "filesystem"
+        end,
+      },
+      {
+        title = "Neo-Tree Git",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "git_status"
+        end,
+      },
+      {
+        title = "Neo-Tree Buffers",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "buffers"
+        end,
+      },
     },
     animate = {
       enabled = false,
