@@ -73,5 +73,9 @@ return {
       end,
       desc = "Yank History",
     },
+    {
+      "<leader>p",
+      false,
+    },
   },
 }
