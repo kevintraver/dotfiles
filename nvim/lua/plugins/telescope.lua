@@ -123,6 +123,16 @@ return {
       desc = "Find Config Files (dotfiles)",
     },
     {
+      "<leader>bf",
+      function()
+        require("telescope.builtin").buffers({
+          sort_lastused = true,
+          sort_mru = true,
+        })
+      end,
+      desc = "Buffers",
+    },
+    {
       "<leader>gc",
       false,
     },
