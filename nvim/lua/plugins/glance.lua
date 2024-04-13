@@ -10,5 +10,12 @@ return {
       end,
       desc = "Glance Definition",
     },
+    {
+      "<leader>k",
+      function()
+        require("glance").open("references")
+      end,
+      desc = "Glance References",
+    },
   },
 }
