@@ -1,6 +1,6 @@
 return {
   "olimorris/persisted.nvim",
-  enabled = true,
+  enabled = false,
   lazy = false,
   opts = {
     autoload = true,
