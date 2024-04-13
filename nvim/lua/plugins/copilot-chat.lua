@@ -26,14 +26,6 @@ return {
       desc = "Toggle Copilot Chat",
     },
     {
-      "<C-\\>",
-      mode = { "n", "i", "v", "t" },
-      function()
-        require("CopilotChat").toggle()
-      end,
-      desc = "Toggle Copilot Chat",
-    },
-    {
       mode = { "n", "v" },
       "<Leader>\\e",
       function()
