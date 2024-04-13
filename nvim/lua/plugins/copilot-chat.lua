@@ -5,6 +5,7 @@ return {
   config = true,
   opts = {
     show_help = false,
+    auto_insert_mode = true,
     mappings = {
       reset = {
         normal = "<C-n>",
