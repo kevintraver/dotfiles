@@ -1,6 +1,6 @@
 return {
   "akinsho/git-conflict.nvim",
-  lazy = true,
+  event = "VeryLazy",
   cmd = { "GitConflictListQf" },
   opts = {
     default_mappings = {
