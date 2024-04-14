@@ -11,7 +11,6 @@ return {
     chat = {
       keymaps = {
         close = {
-          "q",
           "<C-c>",
           "<C-Space>",
         },
