@@ -37,22 +37,20 @@ return {
       end
     end
 
-    opts.sources = require("cmp").config.sources(vim.list_extend(opts.sources, {
-      { name = "cmp_yanky" },
-      { name = "treesitter" },
-      {
-        name = "fuzzy_buffer",
-        option = {
-          get_bufnrs = function()
-            local bufs = {}
-            for _, win in ipairs(vim.api.nvim_list_wins()) do
-              bufs[vim.api.nvim_win_get_buf(win)] = true
-            end
-            return vim.tbl_keys(bufs)
-          end,
-        },
+    table.insert(opts.sources, {
+      name = "fuzzy_buffer",
+      option = {
+        get_bufnrs = function()
+          local bufs = {}
+          for _, win in ipairs(vim.api.nvim_list_wins()) do
+            bufs[vim.api.nvim_win_get_buf(win)] = true
+          end
+          return vim.tbl_keys(bufs)
+        end,
       },
-      { name = "fuzzy_path" },
-    }))
+    })
+    table.insert(opts.sources, { name = "fuzzy_path" })
+    table.insert(opts.sources, { name = "treesitter" })
+    table.insert(opts.sources, { name = "cmp_yanky" })
   end,
 }
