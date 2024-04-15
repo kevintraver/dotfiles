@@ -11,6 +11,13 @@ return {
         normal = "<C-n>",
         insert = "<C-n>",
       },
+      accept_diff = {
+        normal = "<C-Enter>",
+        insert = "<C-Enter>",
+      },
+      yank_diff = {
+        normal = "<C-y>",
+      },
     },
   },
   dependencies = {
