@@ -46,7 +46,7 @@ return {
           selection = config.prompts.CommitStaged.selection,
         })
       end,
-      desc = "Copilot Chat - Commit Message",
+      desc = "Copilot Chat - Generate Commit Message",
     },
   },
 }
