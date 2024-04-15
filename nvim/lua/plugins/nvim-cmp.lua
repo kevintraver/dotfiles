@@ -26,6 +26,13 @@ return {
     },
   },
   opts = function(_, opts)
+    require("cmp").setup.filetype({
+      "copilot-chat",
+      "chatgpt-input",
+    }, {
+      enabled = false,
+    })
+
     -- remove path and buffer added by LazyVim
     local remove_sources = {
       buffer = true,
