@@ -121,7 +121,7 @@ return {
           cwd = "~/.dotfiles",
         })
       end,
-      desc = "Find Config Files (dotfiles)",
+      desc = "Find Dotfiles",
     },
     {
       "<leader>fc",
