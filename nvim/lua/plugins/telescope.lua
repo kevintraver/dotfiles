@@ -117,6 +117,7 @@ return {
       "<leader>fc",
       function()
         require("telescope.builtin").find_files({
+          prompt_title = "Find Dotfiles",
           cwd = "~/.dotfiles",
         })
       end,

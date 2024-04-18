@@ -47,6 +47,7 @@ return {
       "<leader>ls",
       function()
         require("telescope.builtin").live_grep({
+          prompt_title = "Grep LazyVim config",
           cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
         })
       end,
@@ -70,6 +71,7 @@ return {
       "<leader>lc",
       function()
         require("telescope.builtin").find_files({
+          prompt_title = "Find nvim Config",
           cwd = vim.fn.stdpath("config"),
         })
       end,
