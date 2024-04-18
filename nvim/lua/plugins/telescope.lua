@@ -114,7 +114,7 @@ return {
       desc = "Resume",
     },
     {
-      "<leader>fc",
+      "<leader>fd",
       function()
         require("telescope.builtin").find_files({
           prompt_title = "Find Dotfiles",
