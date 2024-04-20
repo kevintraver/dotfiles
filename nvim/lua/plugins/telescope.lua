@@ -1,21 +1,19 @@
 return {
   "nvim-telescope/telescope.nvim",
-  config = function()
-    require("telescope").setup({
-      defaults = {
-        mappings = {
-          i = {
-            ["<C-l>"] = require("telescope.actions").file_vsplit,
-            ["<A-l>"] = require("telescope.actions").file_vsplit,
-            ["<C-o>"] = require("telescope.actions").select_default,
-            ["<A-o>"] = require("telescope.actions").select_default,
-          },
-          n = {
-            ["<C-l>"] = require("telescope.actions").file_vsplit,
-            ["<A-l>"] = require("telescope.actions").file_vsplit,
-            ["<C-o>"] = require("telescope.actions").select_default,
-            ["<A-o>"] = require("telescope.actions").select_default,
-          },
+  opts = function(_, opts)
+    opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
+      mappings = {
+        i = {
+          ["<C-l>"] = require("telescope.actions").file_vsplit,
+          ["<A-l>"] = require("telescope.actions").file_vsplit,
+          ["<C-o>"] = require("telescope.actions").select_default,
+          ["<A-o>"] = require("telescope.actions").select_default,
+        },
+        n = {
+          ["<C-l>"] = require("telescope.actions").file_vsplit,
+          ["<A-l>"] = require("telescope.actions").file_vsplit,
+          ["<C-o>"] = require("telescope.actions").select_default,
+          ["<A-o>"] = require("telescope.actions").select_default,
         },
       },
     })
