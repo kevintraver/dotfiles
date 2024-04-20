@@ -14,6 +14,7 @@ return {
             },
             mappings = {
               open_in_live_grep = "<C-s>",
+              open_in_browser = "<A-o>",
             },
           },
         },
