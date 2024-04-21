@@ -94,13 +94,6 @@ return {
       desc = "Diff View Open",
     },
     {
-      "<leader>gd",
-      function()
-        require("diffview").open({})
-      end,
-      desc = "Diff View Open",
-    },
-    {
       "<leader>gl",
       function()
         require("diffview").file_history(nil, {})
