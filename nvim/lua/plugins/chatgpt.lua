@@ -12,7 +12,7 @@ return {
       keymaps = {
         close = {
           "<C-c>",
-          "<C-Space>",
+          "<C-\\>",
         },
       },
     },
