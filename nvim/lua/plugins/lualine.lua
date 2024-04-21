@@ -3,7 +3,13 @@ return {
   event = "VeryLazy",
   opts = {
     sections = {
-      lualine_z = {},
+      lualine_b = {},
+      lualine_y = {
+        "git_prompt_string",
+      },
+      lualine_z = {
+        "location",
+      },
     },
     extensions = {
       "lazy",
