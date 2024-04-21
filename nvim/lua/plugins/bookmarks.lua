@@ -1,12 +1,6 @@
 return {
   "tomasky/bookmarks.nvim",
   event = "VeryLazy",
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-    config = function()
-      require("telescope").load_extension("bookmarks")
-    end,
-  },
   opts = {
     save_file = vim.fn.stdpath("data") .. "/bookmarks.json",
     signs = {
