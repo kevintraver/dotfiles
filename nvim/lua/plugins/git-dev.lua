@@ -10,7 +10,7 @@ return {
     {
       "<leader>gr",
       function()
-        vim.ui.input({ prompt = "Repository name / URI: " }, function(input)
+        vim.ui.input({ prompt = "Repository name / URI" }, function(input)
           if not input or input == "" then
             return
           end
