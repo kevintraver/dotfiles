@@ -21,5 +21,37 @@ return {
       end,
       desc = "Subword Inner",
     },
+    {
+      "ik",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").key("inner")
+      end,
+      desc = "Url",
+    },
+    {
+      "ak",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").key("outer")
+      end,
+      desc = "Url",
+    },
+    {
+      "iv",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").value("inner")
+      end,
+      desc = "Url",
+    },
+    {
+      "av",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").value("outer")
+      end,
+      desc = "Url",
+    },
   },
 }
