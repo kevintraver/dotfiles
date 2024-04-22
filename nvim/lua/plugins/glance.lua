@@ -1,5 +1,6 @@
 return {
   "dnlhc/glance.nvim",
+  lazy = true,
   cmd = "Glance",
   config = true,
   keys = {
