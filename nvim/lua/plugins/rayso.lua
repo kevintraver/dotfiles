@@ -1,5 +1,6 @@
 return {
   "TobinPalmer/rayso.nvim",
+  lazy = true,
   keys = {
     {
       "<leader>cp",
