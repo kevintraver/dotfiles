@@ -5,6 +5,14 @@ return {
     repositories_dir = vim.fn.stdpath("data") .. "/git-dev",
     ephemeral = false,
     read_only = false,
+    git = {
+      clone_args = "",
+      fetch_args = "",
+    },
+    opener = function(dir)
+      require("oil").open(dir)
+      vim.api.nvim_set_current_dir(dir)
+    end,
   },
   keys = {
     {
