@@ -1,6 +1,6 @@
 return {
   "moyiz/git-dev.nvim",
-  event = "VeryLazy",
+  lazy = true,
   opts = {
     repositories_dir = vim.fn.stdpath("data") .. "/git-dev",
     ephemeral = false,
