@@ -99,3 +99,4 @@ alias gs="git status"
 
 # yt-dlp
 alias ytd='yt-dlp'
+alias ytdl='yt-dlp'
