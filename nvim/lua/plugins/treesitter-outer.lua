@@ -1,6 +1,6 @@
 return {
   "Mr-LLLLL/treesitter-outer",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = "nvim-treesitter/nvim-treesitter",
   opts = {
     next_outer_key = "<A-]>",
