@@ -1,5 +1,6 @@
 return {
   "tanvirtin/vgit.nvim",
+  enabled = false,
   lazy = true,
   opts = {
     settings = {
