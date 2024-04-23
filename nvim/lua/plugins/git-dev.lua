@@ -22,7 +22,7 @@ return {
           if not input or input == "" then
             return
           end
-          require("git-dev").open(input)
+          require("git-dev").open(input, {}, {})
         end)
       end,
       desc = "Open a remote git repository",
