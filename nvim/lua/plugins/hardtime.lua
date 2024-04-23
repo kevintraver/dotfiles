@@ -5,7 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
-    notification = false,
+    notification = true,
     max_count = 3,
   },
 }
