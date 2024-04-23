@@ -4,12 +4,14 @@ return {
     opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
       mappings = {
         i = {
+          ["jk"] = require("telescope.actions").close,
           ["<C-l>"] = require("telescope.actions").file_vsplit,
           ["<A-l>"] = require("telescope.actions").file_vsplit,
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<A-o>"] = require("telescope.actions").select_default,
         },
         n = {
+          ["jk"] = require("telescope.actions").close,
           ["<C-l>"] = require("telescope.actions").file_vsplit,
           ["<A-l>"] = require("telescope.actions").file_vsplit,
           ["<C-o>"] = require("telescope.actions").select_default,
