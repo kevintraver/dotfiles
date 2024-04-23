@@ -1,5 +1,6 @@
 return {
   "mrjones2014/legendary.nvim",
+  enabled = false,
   priority = 10000,
   lazy = false,
   config = function()
