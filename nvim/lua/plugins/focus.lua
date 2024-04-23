@@ -3,7 +3,7 @@ return {
   lazy = true,
   opts = {
     split = {
-      bufnew = true,
+      bufnew = false,
     },
   },
   keys = {
@@ -17,9 +17,9 @@ return {
     {
       "<A-S-l>",
       function()
-        require("focus").split_command("l")
+        require("focus").split_command("l", "", true)
       end,
-      desc = "Split Nicely",
+      desc = "Split Nicely (bufnew)",
     },
   },
 }
