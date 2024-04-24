@@ -18,6 +18,10 @@ return {
       yank_diff = {
         normal = "<C-y>",
       },
+      close = {
+        normal = "jk",
+        insert = "jk",
+      },
     },
   },
   dependencies = {
