@@ -81,6 +81,13 @@ return {
     {
       "<leader>hp",
       function()
+        require("gitsigns").preview_hunk()
+      end,
+      desc = "Preview Hunk Inline",
+    },
+    {
+      "<leader>hP",
+      function()
         require("gitsigns").preview_hunk_inline()
       end,
       desc = "Preview Hunk Inline",
