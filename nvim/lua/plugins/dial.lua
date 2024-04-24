@@ -19,7 +19,21 @@ return {
       desc = "Dial Increment",
     },
     {
-      "<C-x>",
+      "<C-a>",
+      function()
+        require("dial.map").manipulate("increment", "normal")
+      end,
+      desc = "Dial Increment",
+    },
+    {
+      "-",
+      function()
+        require("dial.map").manipulate("increment", "normal")
+      end,
+      desc = "Dial Increment",
+    },
+    {
+      "<C-->",
       function()
         require("dial.map").manipulate("decrement", "normal")
       end,
