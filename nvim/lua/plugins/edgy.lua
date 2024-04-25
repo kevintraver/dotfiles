@@ -47,6 +47,22 @@ return {
         ft = "DiffviewFileHistory",
         size = { height = 0.4 },
       },
+      {
+        ft = "NeogitStatus",
+        size = { height = 0.6 },
+      },
+      {
+        ft = "NeogitPopup",
+        size = { height = 0.4 },
+      },
+      {
+        ft = "NeogitCommitMessage",
+        size = { height = 0.4 },
+      },
+      {
+        ft = "NeogitCommitView",
+        size = { height = 0.4 },
+      },
     },
     right = {
       {
@@ -92,22 +108,6 @@ return {
     left = {
       {
         ft = "undotree",
-        size = { width = 0.4 },
-      },
-      {
-        ft = "NeogitStatus",
-        size = { width = 0.6 },
-      },
-      {
-        ft = "NeogitPopup",
-        size = { width = 0.4 },
-      },
-      {
-        ft = "NeogitCommitMessage",
-        size = { width = 0.4 },
-      },
-      {
-        ft = "NeogitCommitView",
         size = { width = 0.4 },
       },
       {
