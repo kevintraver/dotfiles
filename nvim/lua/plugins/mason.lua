@@ -33,7 +33,6 @@ return {
       "stylua",
       "tailwindcss-language-server",
       "taplo",
-      "typescript-language-server",
       "woke",
       "yaml-language-server",
     },
