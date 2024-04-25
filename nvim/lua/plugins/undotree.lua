@@ -6,7 +6,7 @@ return {
     keymaps = {
       ["<tab>"] = "move_next",
       ["k"] = "move_prev",
-      ["jk"] = "quit",
+      ["<A-w>"] = "quit",
     },
   },
   keys = {

@@ -5,7 +5,7 @@ return {
     require("glance").setup({
       mappings = {
         list = {
-          ["jk"] = require("glance").actions.close,
+          ["<A-w>"] = require("glance").actions.close,
         },
       },
     })
