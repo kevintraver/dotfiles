@@ -38,6 +38,9 @@ return {
         ["<A-w>"] = function()
           require("diffview").close()
         end,
+        ["jk"] = function()
+          require("diffview").close()
+        end,
         ["x"] = function()
           require("diffview.actions").restore_entry()
         end,
@@ -55,6 +58,9 @@ return {
         end,
       },
       view = {
+        ["jk"] = function()
+          require("diffview").close()
+        end,
         ["q"] = function()
           require("diffview").close()
         end,
@@ -63,6 +69,9 @@ return {
         end,
       },
       file_history_panel = {
+        ["jk"] = function()
+          require("diffview").close()
+        end,
         ["q"] = function()
           require("diffview").close()
         end,
