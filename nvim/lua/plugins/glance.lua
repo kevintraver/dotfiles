@@ -1,8 +1,15 @@
 return {
   "dnlhc/glance.nvim",
-  lazy = true,
   cmd = "Glance",
-  config = true,
+  config = function()
+    require("glance").setup({
+      mappings = {
+        list = {
+          ["jk"] = require("glance").actions.close,
+        },
+      },
+    })
+  end,
   keys = {
     {
       "<A-k>",
