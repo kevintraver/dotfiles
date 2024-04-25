@@ -2,6 +2,11 @@ return {
   "folke/edgy.nvim",
   event = "WinNew",
   opts = {
+    keys = {
+      ["jk"] = function(win)
+        win:close()
+      end,
+    },
     bottom = {
       {
         ft = "undotreeDiff",
