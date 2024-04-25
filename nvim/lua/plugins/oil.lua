@@ -23,6 +23,7 @@ return {
       ["gx"] = "actions.open_external",
       ["g."] = "actions.toggle_hidden",
       ["q"] = "actions.close",
+      ["jk"] = "actions.close",
       ["<A-w>"] = "actions.close",
       ["H"] = "actions.toggle_hidden",
       ["<C-A-l>"] = "actions.select_vsplit",
