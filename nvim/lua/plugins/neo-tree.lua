@@ -18,6 +18,7 @@ return {
         ["<A-w>"] = "close_window",
         ["<Tab>"] = "prev_source",
         ["<S-Tab>"] = "next_source",
+        ["jk"] = "close_window",
       },
     },
     filesystem = {
