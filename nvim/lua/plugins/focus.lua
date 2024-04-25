@@ -2,6 +2,10 @@ return {
   "nvim-focus/focus.nvim",
   lazy = true,
   opts = {
+    autoresize = {
+      minwidth = 40,
+      minheight = 40,
+    },
     split = {
       bufnew = false,
     },
