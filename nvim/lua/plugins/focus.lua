@@ -3,8 +3,8 @@ return {
   lazy = true,
   opts = {
     autoresize = {
-      minwidth = 40,
-      minheight = 40,
+      minwidth = 20,
+      minheight = 20,
     },
     split = {
       bufnew = false,
