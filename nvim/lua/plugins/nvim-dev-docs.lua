@@ -15,7 +15,7 @@ return {
   },
   opts = {
     after_open = function()
-      vim.keymap.set({ "n" }, "jk", function()
+      vim.keymap.set({ "n" }, "<A-w>", function()
         vim.cmd.close()
       end, { buffer = true, desc = "Close" })
       vim.keymap.set({ "n" }, "q", function()

@@ -19,8 +19,8 @@ return {
         normal = "<C-y>",
       },
       close = {
-        normal = "jk",
-        insert = "jk",
+        normal = "<A-w>",
+        insert = "<A-w>",
       },
     },
   },

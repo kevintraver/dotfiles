@@ -3,7 +3,7 @@ return {
   event = "WinNew",
   opts = {
     keys = {
-      ["jk"] = function(win)
+      ["<A-w>"] = function(win)
         win:close()
       end,
     },
