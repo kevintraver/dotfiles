@@ -33,6 +33,14 @@ return {
       desc = "Toggle (Close) Terminal",
     },
     {
+      "jk",
+      mode = { "t" },
+      function()
+        require("toggleterm").toggle_command()
+      end,
+      desc = "Toggle (Close) Terminal",
+    },
+    {
       "<leader>gg",
       mode = { "n", "t" },
       function()
