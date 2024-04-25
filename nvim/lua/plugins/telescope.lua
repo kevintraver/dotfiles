@@ -8,6 +8,7 @@ return {
           ["<C-l>"] = require("telescope.actions").file_vsplit,
           ["<A-l>"] = require("telescope.actions").file_vsplit,
           ["<A-o>"] = require("telescope.actions").select_default,
+          ["<C-u>"] = false,
         },
         n = {
           ["jk"] = require("telescope.actions").close,
