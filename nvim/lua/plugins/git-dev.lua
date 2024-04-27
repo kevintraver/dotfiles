@@ -18,11 +18,11 @@ return {
     {
       "<leader>gr",
       function()
-        vim.ui.input({ prompt = "Repository name / URI" }, function(input)
-          if not input or input == "" then
+        vim.ui.input({ prompt = "Repository name / URI" }, function(url)
+          if not url or url == "" then
             return
           end
-          require("git-dev").open(input, {}, {})
+          require("git-dev").open(url, {}, {})
         end)
       end,
       desc = "Open a remote git repository",
