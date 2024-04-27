@@ -77,6 +77,13 @@ return {
       desc = "Git Status",
     },
     {
+      "<leader>bb",
+      function()
+        require("telescope.builtin").buffers()
+      end,
+      desc = "Switch Buffer",
+    },
+    {
       "<leader>gH",
       function()
         require("telescope.builtin").git_commits()
