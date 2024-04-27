@@ -53,5 +53,13 @@ return {
       end,
       desc = "Url",
     },
+    {
+      "u",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").url()
+      end,
+      desc = "Url",
+    },
   },
 }
