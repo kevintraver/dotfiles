@@ -51,6 +51,26 @@ return {
           a = "@comment.outer",
           i = "@comment.inner",
         }, {}),
+        o = gen_spec.treesitter({
+          a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+          i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+        }, {}),
+        f = gen_spec.treesitter(
+          { a = "@function.outer", i = "@function.inner" },
+          {}
+        ),
+        t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },
+        e = { -- Word with case
+          {
+            "%u[%l%d]+%f[^%l%d]",
+            "%f[%S][%l%d]+%f[^%l%d]",
+            "%f[%P][%l%d]+%f[^%l%d]",
+            "^[%l%d]+%f[^%l%d]",
+          },
+          "^().*()$",
+        },
+        u = gen_spec.function_call(), -- u for "Usage"
+        U = gen_spec.function_call({ name_pattern = "[%w_]" }),
       },
     })
   end,
