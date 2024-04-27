@@ -90,6 +90,7 @@ return {
       {
         title = "Neotest Summary",
         ft = "neotest-summary",
+        size = { width = 0.4 },
       },
       {
         title = "Neotest Output",
