@@ -24,13 +24,6 @@ return {
       desc = "Previous Buffer",
     },
     {
-      "<Tab>",
-      function()
-        vim.cmd.buffer("#")
-      end,
-      desc = "Switch to Other Buffer",
-    },
-    {
       "<leader>bp",
       function()
         require("bufferline").pick()

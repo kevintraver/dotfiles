@@ -79,7 +79,10 @@ return {
     {
       "<leader>bb",
       function()
-        require("telescope.builtin").buffers()
+        require("telescope.builtin").buffers({
+          sort_mru = true,
+          sort_lastused = true,
+        })
       end,
       desc = "Switch Buffer",
     },
