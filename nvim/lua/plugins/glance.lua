@@ -3,6 +3,7 @@ return {
   cmd = "Glance",
   config = function()
     require("glance").setup({
+      use_trouble_qf = true,
       mappings = {
         list = {
           ["<A-w>"] = require("glance").actions.close,
