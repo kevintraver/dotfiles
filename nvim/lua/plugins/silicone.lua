@@ -12,6 +12,7 @@ return {
       function()
         require("silicon").start()
       end,
+      desc = "Code Image",
     },
   },
 }
