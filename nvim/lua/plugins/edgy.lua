@@ -63,6 +63,11 @@ return {
         ft = "NeogitCommitView",
         size = { height = 0.4 },
       },
+      {
+        title = "Neotest Output",
+        ft = "neotest-output-panel",
+        size = { height = 0.4 },
+      },
     },
     right = {
       {
@@ -90,11 +95,6 @@ return {
       {
         title = "Neotest Summary",
         ft = "neotest-summary",
-        size = { width = 0.4 },
-      },
-      {
-        title = "Neotest Output",
-        ft = "neotest-output-panel",
         size = { width = 0.4 },
       },
       {
