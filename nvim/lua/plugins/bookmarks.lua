@@ -2,6 +2,7 @@ return {
   "tomasky/bookmarks.nvim",
   event = "VeryLazy",
   opts = {
+    sign_priority = 200,
     save_file = vim.fn.stdpath("data") .. "/bookmarks.json",
     signs = {
       add = {
