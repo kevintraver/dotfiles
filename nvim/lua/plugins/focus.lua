@@ -9,6 +9,9 @@ return {
     split = {
       bufnew = false,
     },
+    ui = {
+      signcolumn = false,
+    },
   },
   keys = {
     {
