@@ -3,6 +3,15 @@ return {
   enabled = false,
   lazy = true,
   config = true,
+  cmd = {
+    "RecallMark",
+    "RecallUnmark",
+    "RecallToggle",
+    "RecallNext",
+    "RecallToggle",
+    "RecallPrevious",
+    "RecallClear",
+  },
   opts = {
     telescope = {
       mappings = {
