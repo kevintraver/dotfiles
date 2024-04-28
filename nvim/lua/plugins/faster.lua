@@ -1,5 +1,5 @@
 return {
   "pteroctopus/faster.nvim",
-  lazy = false,
+  event = "LazyFile",
   config = true,
 }
