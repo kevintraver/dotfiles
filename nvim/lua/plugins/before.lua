@@ -1,6 +1,6 @@
 return {
   "bloznelis/before.nvim",
-  enabled = false,
+  enabled = true,
   config = function()
     require("before").setup()
     require("telescope").load_extension("before")
