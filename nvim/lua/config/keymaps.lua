@@ -47,3 +47,7 @@ vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
 vim.keymap.del("n", "<leader>qq")
+
+-- unmap lsp keymaps
+vim.keymap.del("n", "crr")
+vim.keymap.del("n", "crn")
