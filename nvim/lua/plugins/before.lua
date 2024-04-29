@@ -6,6 +6,10 @@ return {
     require("before").setup()
     require("telescope").load_extension("before")
   end,
+  opts = {
+    history_size = 100,
+    history_wrap_enabled = true,
+  },
   keys = {
     {
       "<C-A-o>",
