@@ -42,7 +42,7 @@ return {
       desc = "Search Buffer",
     },
     {
-      "<leader>o",
+      "<leader>of",
       function()
         require("telescope.builtin").find_files()
       end,
