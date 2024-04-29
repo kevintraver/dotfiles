@@ -132,6 +132,20 @@ return {
       desc = "Find Dotfiles",
     },
     {
+      "<leader>sq",
+      function()
+        require("telescope.builtin").quickfix()
+      end,
+      desc = "Quickfix List",
+    },
+    {
+      "<leader>sl",
+      function()
+        require("telescope.builtin").loclist()
+      end,
+      desc = "Location List",
+    },
+    {
       "<leader>fc",
       function()
         require("telescope.builtin").find_files({
