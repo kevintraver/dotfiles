@@ -96,6 +96,7 @@ alias gi='gitui'
 
 # git
 alias gs="git status"
+alias ghb="gh browse"
 
 # yt-dlp
 alias ytd='yt-dlp'
