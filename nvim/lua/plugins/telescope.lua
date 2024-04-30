@@ -146,16 +146,6 @@ return {
       desc = "Location List",
     },
     {
-      "<leader>fc",
-      function()
-        require("telescope.builtin").find_files({
-          prompt_title = "Find nvim Config",
-          cwd = vim.fn.stdpath("config"),
-        })
-      end,
-      desc = "Find nvim Config Files",
-    },
-    {
       "<leader>gc",
       false,
     },
