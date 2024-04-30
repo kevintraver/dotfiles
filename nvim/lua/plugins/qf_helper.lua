@@ -8,7 +8,7 @@ return {
   },
   keys = {
     {
-      "<leader>q",
+      "<C-q>",
       function()
         require("qf_helper").toggle("c")
       end,

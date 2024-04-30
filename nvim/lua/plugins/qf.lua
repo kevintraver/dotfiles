@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>q",
+      "<C-q>",
       function()
         require("qf").toggle("c")
       end,
