@@ -14,7 +14,7 @@ return {
       ["<A-h>"] = "actions.parent",
       ["<A-j>"] = "j",
       ["<A-k>"] = "k",
-      ["<C-q>"] = "actions.send_to_qflist",
+      ["<C-q>"] = "actions.send_to_qflist_and_open",
       ["-"] = "actions.parent",
       ["_"] = "actions.open_cwd",
       ["`"] = "actions.cd",
