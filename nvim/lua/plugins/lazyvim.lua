@@ -57,6 +57,16 @@ return {
       desc = "Search (grep) LazyVim",
     },
     {
+      "<leader>lg",
+      function()
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep LazyVim config",
+          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+        })
+      end,
+      desc = "Search (grep) LazyVim",
+    },
+    {
       "<leader>le",
       function()
         require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
