@@ -24,7 +24,7 @@ return {
       desc = "Yank to Global Clipboard",
     },
     {
-      "<A-p>",
+      "<C-p>",
       mode = { "n" },
       function()
         local yanky_wrappers = require("yanky.wrappers")
@@ -37,7 +37,7 @@ return {
       desc = "Yanky Put After Filter",
     },
     {
-      "<S-A-p>",
+      "<C-A-p>",
       mode = { "n" },
       function()
         local yanky_wrappers = require("yanky.wrappers")
