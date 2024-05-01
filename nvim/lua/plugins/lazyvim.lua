@@ -23,21 +23,6 @@ return {
         require("telescope").load_extension("lazy")
       end,
     },
-    {
-      "polirritmico/telescope-lazy-plugins.nvim",
-      config = function()
-        require("telescope").load_extension("lazy_plugins")
-      end,
-      keys = {
-        {
-          "<leader>fc",
-          function()
-            require("telescope").extensions.lazy_plugins.lazy_plugins()
-          end,
-          desc = "Lazy Plugin",
-        },
-      },
-    },
   },
   keys = {
     {
