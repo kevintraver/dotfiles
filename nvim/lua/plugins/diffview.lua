@@ -75,6 +75,9 @@ return {
         ["d"] = function()
           require("diffview.actions").open_in_diffview()
         end,
+        ["<A-g>"] = function()
+          require("diffview").close()
+        end,
       },
     },
   },
