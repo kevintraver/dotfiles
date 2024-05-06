@@ -14,7 +14,13 @@ return {
       ["<A-h>"] = "actions.parent",
       ["<A-j>"] = "j",
       ["<A-k>"] = "k",
-      ["<C-q>"] = "actions.send_to_qflist_and_open",
+      ["<C-q>"] = {
+        callback = function()
+          require("oil.actions").send_to_qflist.callback()
+          vim.cmd.copen()
+        end,
+        desc = "Send items to quickfix and open",
+      },
       ["-"] = "actions.parent",
       ["_"] = "actions.open_cwd",
       ["`"] = "actions.cd",
