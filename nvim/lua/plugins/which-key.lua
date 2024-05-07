@@ -2,6 +2,7 @@ return {
   "folke/which-key.nvim",
   event = "VeryLazy",
   opts = {
+    ignore_missing = true,
     defaults = {
       ["<leader>m"] = { name = "+bookmarks" },
       ["<leader>g"] = { name = "+git" },
