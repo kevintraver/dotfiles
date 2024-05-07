@@ -21,42 +21,42 @@ return {
   },
   keys = {
     {
-      "ma",
+      "<leader>ma",
       function()
         require("bookmarks").bookmark_ann()
       end,
       desc = "Annotate",
     },
     {
-      "mm",
+      "<leader>mm",
       function()
         require("bookmarks").bookmark_toggle()
       end,
       desc = "Toggle",
     },
     {
-      "md",
+      "<leader>md",
       function()
         require("bookmarks").bookmark_clean()
       end,
       desc = "Clean (Buffer)",
     },
     {
-      "mn",
+      "<leader>mn",
       function()
         require("bookmarks").bookmark_next()
       end,
       desc = "Jump to Next Bookmark",
     },
     {
-      "mp",
+      "<leader>mp",
       function()
         require("bookmarks").bookmark_prev()
       end,
       desc = "Jump to Previous Bookmark",
     },
     {
-      "mq",
+      "<leader>mq",
       function()
         require("bookmarks").bookmark_list()
       end,
