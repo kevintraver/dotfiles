@@ -7,6 +7,11 @@ return {
       default = {
         augend.integer.alias.decimal,
         augend.constant.alias.bool,
+        augend.constant.new({
+          elements = { "yes", "no" },
+          word = true,
+          cyclic = true,
+        }),
       },
     })
   end,
