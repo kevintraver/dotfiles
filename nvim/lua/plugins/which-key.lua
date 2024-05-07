@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     defaults = {
-      ["m"] = { name = "+bookmarks" },
+      ["<leader>m"] = { name = "+bookmarks" },
       ["<leader>g"] = { name = "+git" },
       ["<leader>r"] = { name = "+replace" },
       ["<leader>h"] = { name = "+githunk" },
