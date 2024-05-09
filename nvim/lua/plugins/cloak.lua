@@ -1,6 +1,11 @@
 return {
   "laytan/cloak.nvim",
-  event = "LazyFile",
+  cmd = {
+    "CloakDisable",
+    "CloakEnable",
+    "CloakPreviewLine",
+    "CloakToggle",
+  },
   opts = {
     enabled = false,
   },
