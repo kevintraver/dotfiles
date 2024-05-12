@@ -48,8 +48,4 @@ vim.keymap.del("n", "<leader>fT")
 
 vim.keymap.del("n", "<leader>qq")
 
--- unmap lsp keymaps
-vim.keymap.del("n", "crr")
-vim.keymap.del("n", "crn")
-
 vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true })
