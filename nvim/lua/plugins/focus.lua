@@ -24,7 +24,7 @@ return {
     {
       "<A-S-l>",
       function()
-        require("focus").split_command("l", "", true)
+        require("focus").split_command("l", "")
       end,
       desc = "Split Nicely (bufnew)",
     },
