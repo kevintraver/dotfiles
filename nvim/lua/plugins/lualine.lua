@@ -1,7 +1,10 @@
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
+  event = "ColorScheme",
   opts = {
+    options = {
+      theme = "rose-pine",
+    },
     sections = {
       lualine_b = {
         {
