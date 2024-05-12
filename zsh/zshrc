@@ -1,34 +1,64 @@
-declare -A ZINIT
-export ZINIT[NO_ALIASES]=1
+# https://github.com/sindresorhus/pure
+autoload -U promptinit; promptinit
+prompt pure
 
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+# https://github.com/zsh-users/zsh-completions
+autoload -Uz compinit; compinit
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+# https://zsh.sourceforge.io/Doc/Release/Completion-System.html
+zstyle ':completion:*' matcher-list '' \
+  'm:{a-z\-}={A-Z\_}' \
+  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+  'r:|?=** m:{a-z\-}={A-Z\_}' \
+  'm:{a-zA-Z}={A-Za-z}'
 
-autoload -U promptinit
-promptinit
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
 
-autoload compinit
-compinit
+# https://github.com/MenkeTechnologies/zsh-expand
+source $HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh
+
+# https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS="
+--height=50%
+--layout=reverse
+--bind 'tab:accept'
+"
+
+# https://github.com/Aloxaf/fzf-tab
+source $HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
+
+# https://help.cloud66.com/docs/toolbelt/toolbelt
+export PATH="/opt/cloud66/bin:${PATH}"
+
+# https://github.com/cantino/mcfly
+export MCFLY_RESULTS_SORT=LAST_RUN
+eval "$(mcfly init zsh)"
+
+# https://github.com/I60R/page
+export PAGER=page
+export MANPAGER="page -t man"
+
+# https://github.com/Schniz/fnm
+eval "$(fnm env --use-on-cd)"
+
+# https://docs.python.org/3/library/venv.html
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# https://github.com/rust-lang/cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# https://zsh.sourceforge.io/Guide/zshguide04.html
+WORDCHARS=${WORDCHARS/\/}
 
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
-
 source "$DOTFILES_HOME/editor.zsh"
 source "$DOTFILES_HOME/keymaps.zsh"
 source "$DOTFILES_HOME/history/history.zsh"
-source "$DOTFILES_HOME/completion.zsh"
-
-for file in "$DOTFILES_HOME/plugins"/*.zsh; do
-  source "$file"
-done
-
-for file in "$DOTFILES_HOME/languages"/*.zsh; do
-  source "$file"
-done
-
 source "$DOTFILES_HOME/aliases.zsh"
 
 source ~/.zshrc.local
-
-WORDCHARS=${WORDCHARS/\/}
