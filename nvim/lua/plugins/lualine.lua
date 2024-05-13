@@ -5,7 +5,12 @@ return {
     sections = {
       lualine_b = {},
       lualine_y = {
-        "git_prompt_string",
+        {
+          "git_prompt_string",
+          prompt_config = {
+            color_disabled = true,
+          },
+        },
       },
       lualine_z = {
         "location",
