@@ -1,6 +1,6 @@
 return {
   "cbochs/portal.nvim",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = {
     "cbochs/grapple.nvim",
   },
