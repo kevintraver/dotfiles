@@ -1,51 +1,6 @@
 return {
   "LazyVim/LazyVim",
-  dependencies = {
-    {
-      "tsakirist/telescope-lazy.nvim",
-      lazy = true,
-      config = function()
-        require("telescope").setup({
-          extensions = {
-            lazy = {
-              actions_opts = {
-                open_in_browser = {
-                  auto_close = true,
-                },
-              },
-              mappings = {
-                open_in_live_grep = "<C-s>",
-                open_in_browser = "<A-o>",
-              },
-            },
-          },
-        })
-        require("telescope").load_extension("lazy")
-      end,
-    },
-  },
   keys = {
-    {
-      "<leader>fp",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Find Lazy Plugin",
-    },
-    {
-      "<leader>fl",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Find Lazy Plugin",
-    },
-    {
-      "<leader>lp",
-      function()
-        require("telescope").extensions.lazy.lazy()
-      end,
-      desc = "Find Lazy Plugin",
-    },
     {
       "<leader>ls",
       function()
