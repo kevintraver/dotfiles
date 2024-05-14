@@ -7,21 +7,12 @@ return {
         lazy_plugins = {
           mappings = {
             ["i"] = {
-              ["<A-o>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_url()
-                require("telescope.actions").close(bufnr)
-              end,
-              ["<C-o>"] = function(bufnr)
+              ["<C-b>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_url()
                 require("telescope.actions").close(bufnr)
               end,
               ["<C-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
-                  bufnr
-                )
-              end,
-              ["<A-e>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
                   bufnr
                 )
               end,
@@ -32,21 +23,12 @@ return {
               end,
             },
             ["n"] = {
-              ["<A-o>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_url()
-                require("telescope.actions").close(bufnr)
-              end,
-              ["<C-o>"] = function(bufnr)
+              ["<C-b>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_url()
                 require("telescope.actions").close(bufnr)
               end,
               ["<C-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
-                  bufnr
-                )
-              end,
-              ["<A-e>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
                   bufnr
                 )
               end,
