@@ -1,5 +1,6 @@
 return {
   "ghostbuster91/nvim-next",
+  enabled = false,
   event = "VeryLazy",
   config = function()
     require("nvim-next").setup({
