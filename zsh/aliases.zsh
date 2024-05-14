@@ -93,5 +93,5 @@ alias gs="git status"
 alias ghb="gh browse"
 
 # yt-dlp
-alias ytd='yt-dlp'
-alias ytdl='yt-dlp'
+alias ytd='yt-dlp -P ~/YouTube'
+alias ytdl='yt-dlp -P ~/YouTube'
