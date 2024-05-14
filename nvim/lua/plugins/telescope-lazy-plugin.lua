@@ -64,7 +64,14 @@ return {
   end,
   keys = {
     {
-      "<A-p>",
+      "<leader>fp",
+      function()
+        require("telescope").extensions.lazy_plugins.lazy_plugins()
+      end,
+      desc = "Lazy Plugin",
+    },
+    {
+      "<leader>lp",
       function()
         require("telescope").extensions.lazy_plugins.lazy_plugins()
       end,
