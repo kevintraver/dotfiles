@@ -1,5 +1,6 @@
 return {
   "cshuaimin/ssr.nvim",
+  enabled = false,
   lazy = true,
   keys = {
     {
