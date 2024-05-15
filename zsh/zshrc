@@ -3,8 +3,8 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # https://github.com/zsh-users/zsh-completions
-autoload -Uz compinit; compinit
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit; compinit
 
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 zstyle ':completion:*' matcher-list '' \
