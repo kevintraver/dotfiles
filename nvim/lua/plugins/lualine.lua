@@ -3,17 +3,13 @@ return {
   event = "VeryLazy",
   opts = {
     sections = {
-      lualine_b = {},
-      lualine_y = {
+      lualine_b = {
         {
           "git_prompt_string",
           prompt_config = {
             color_disabled = true,
           },
         },
-      },
-      lualine_z = {
-        "location",
       },
     },
     extensions = {
