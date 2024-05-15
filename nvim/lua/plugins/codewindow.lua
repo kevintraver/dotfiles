@@ -11,7 +11,7 @@ return {
   },
   keys = {
     {
-      "<leader>um",
+      "<leader>uc",
       function()
         require("codewindow").toggle_minimap()
       end,
