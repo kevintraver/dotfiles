@@ -1,4 +1,4 @@
 return {
   "RRethy/vim-illuminate",
-  enabled = false,
+  enabled = true,
 }
