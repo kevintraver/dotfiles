@@ -49,3 +49,6 @@ vim.keymap.del("n", "<leader>fT")
 vim.keymap.del("n", "<leader>qq")
 
 vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true })
+
+-- join lines
+vim.keymap.set({ "n", "x" }, "gJ", "J", { desc = "Join Lines" })
