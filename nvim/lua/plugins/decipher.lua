@@ -9,6 +9,7 @@ return {
       function()
         require("decipher").encode_selection("base64")
       end,
+      desc = "Encode Selection Base64",
     },
     {
       mode = { "n", "v" },
@@ -16,6 +17,7 @@ return {
       function()
         require("decipher").decode_selection("base64")
       end,
+      desc = "Decode Selection Base64",
     },
   },
 }
