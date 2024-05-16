@@ -55,6 +55,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # https://zsh.sourceforge.io/Guide/zshguide04.html
 WORDCHARS=${WORDCHARS/\/}
 
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
+source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
+
 export DOTFILES_HOME="$HOME/.dotfiles/zsh"
 source "$DOTFILES_HOME/editor.zsh"
 source "$DOTFILES_HOME/keymaps.zsh"
