@@ -5,14 +5,14 @@ return {
   keys = {
     {
       mode = { "n", "v" },
-      "<leader>ee",
+      "<leader>De",
       function()
         require("decipher").encode_selection("base64")
       end,
     },
     {
       mode = { "n", "v" },
-      "<leader>ed",
+      "<leader>Dd",
       function()
         require("decipher").decode_selection("base64")
       end,
