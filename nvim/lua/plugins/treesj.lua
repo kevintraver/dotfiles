@@ -7,13 +7,6 @@ return {
   },
   keys = {
     {
-      "gJ",
-      function()
-        vim.cmd.join()
-      end,
-      desc = "Join Lines",
-    },
-    {
       "gj",
       function()
         require("treesj").toggle()
