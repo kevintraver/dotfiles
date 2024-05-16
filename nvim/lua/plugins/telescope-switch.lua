@@ -30,5 +30,12 @@ return {
       end,
       desc = "Search Alternate Files",
     },
+    {
+      "<leader>fa",
+      function()
+        require("telescope").extensions.switch.switch()
+      end,
+      desc = "Search Alternate Files",
+    },
   },
 }
