@@ -16,3 +16,10 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufNewFile" }, {
     vim.b.autoformat = false
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = ".env*",
+  callback = function(args)
+    vim.diagnostic.disable(args.buf)
+  end,
+})
