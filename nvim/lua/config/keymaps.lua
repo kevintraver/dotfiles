@@ -52,3 +52,22 @@ vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true })
 
 -- join lines
 vim.keymap.set({ "n", "x" }, "gJ", "J", { desc = "Join Lines" })
+
+-- Open/Edit HTTP Requests
+vim.keymap.set("n", "<leader>or", function()
+  local root_dir = LazyVim.root.git()
+  local requests_folder = root_dir .. "/.requests"
+  local requests_file = root_dir .. "/.requests.http"
+  if vim.fn.isdirectory(requests_folder) == 1 then
+    vim.cmd.edit(requests_folder)
+  else
+    if vim.fn.filereadable(requests_file) == 0 then
+      local file = io.open(requests_file, "w")
+      if file then
+        file:write("GET http://localhost:3000")
+        file:close()
+      end
+    end
+    vim.cmd.edit(requests_file)
+  end
+end, { desc = "Open/Edit HTTP Request" })
