@@ -6,6 +6,9 @@ prompt pure
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit; compinit
 
+# https://github.com/zdharma-continuum/fast-syntax-highlighting
+source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html
 zstyle ':completion:*' matcher-list '' \
   'm:{a-z\-}={A-Z\_}' \
