@@ -23,6 +23,10 @@ return {
         "tzachar/cmp-fuzzy-path",
         event = "InsertEnter",
       },
+      {
+        "SergioRibera/cmp-dotenv",
+        event = "InsertEnter",
+      },
     },
   },
   opts = function(_, opts)
@@ -59,5 +63,6 @@ return {
     table.insert(opts.sources, { name = "fuzzy_path" })
     table.insert(opts.sources, { name = "treesitter" })
     table.insert(opts.sources, { name = "cmp_yanky" })
+    table.insert(opts.sources, { name = "dotenv" })
   end,
 }
