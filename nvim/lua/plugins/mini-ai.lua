@@ -1,6 +1,6 @@
 return {
   "echasnovski/mini.ai",
-  lazy = true,
+  event = "VeryLazy",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   config = function()
     local gen_spec = require("mini.ai").gen_spec
