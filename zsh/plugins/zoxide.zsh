@@ -1,1 +1,0 @@
-zinit light ajeetdsouza/zoxide
