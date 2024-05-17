@@ -27,7 +27,7 @@ return {
       function()
         require("various-textobjs").key("inner")
       end,
-      desc = "Url",
+      desc = "Inside Key",
     },
     {
       "ak",
@@ -35,7 +35,7 @@ return {
       function()
         require("various-textobjs").key("outer")
       end,
-      desc = "Url",
+      desc = "Around Key",
     },
     {
       "iv",
@@ -43,7 +43,7 @@ return {
       function()
         require("various-textobjs").value("inner")
       end,
-      desc = "Url",
+      desc = "Inside Value",
     },
     {
       "av",
@@ -51,7 +51,7 @@ return {
       function()
         require("various-textobjs").value("outer")
       end,
-      desc = "Url",
+      desc = "Around Value",
     },
     {
       "u",
