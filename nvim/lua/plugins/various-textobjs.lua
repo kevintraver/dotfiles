@@ -61,5 +61,13 @@ return {
       end,
       desc = "Url",
     },
+    {
+      "ir",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").restOfIndentation()
+      end,
+      desc = "Remaining Indentation",
+    },
   },
 }
