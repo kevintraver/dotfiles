@@ -1,6 +1,6 @@
 return {
   "echasnovski/mini.move",
-  lazy = true,
+  event = "VeryLazy",
   opts = {
     mappings = {
       line_up = "K",
