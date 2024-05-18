@@ -44,7 +44,7 @@ return {
     {
       "<leader>gu",
       function()
-        require("tinygit").undoLastCommit()
+        require("tinygit").undoLastCommitOrAmend()
       end,
       desc = "Git Undo Last Commit",
     },
