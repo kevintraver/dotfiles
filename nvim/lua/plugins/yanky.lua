@@ -1,6 +1,9 @@
 return {
   "gbprod/yanky.nvim",
   opts = {
+    highlight = {
+      timer = 300,
+    },
     system_clipboard = {
       sync_with_ring = false,
     },
