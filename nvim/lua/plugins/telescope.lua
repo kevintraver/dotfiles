@@ -9,7 +9,8 @@ return {
           ["<A-l>"] = require("telescope.actions").file_vsplit,
           ["<A-o>"] = require("telescope.actions").select_default,
           ["<C-o>"] = require("telescope.actions").select_default,
-          ["<C-u>"] = false,
+          ["<C-u>"] = require("telescope.actions").results_scrolling_up,
+          ["<C-d>"] = require("telescope.actions").results_scrolling_down,
         },
         n = {
           ["<A-w>"] = require("telescope.actions").close,
@@ -17,6 +18,8 @@ return {
           ["<A-l>"] = require("telescope.actions").file_vsplit,
           ["<A-o>"] = require("telescope.actions").select_default,
           ["<C-o>"] = require("telescope.actions").select_default,
+          ["<C-u>"] = require("telescope.actions").results_scrolling_up,
+          ["<C-d>"] = require("telescope.actions").results_scrolling_down,
         },
       },
       scroll_strategy = "limit",
