@@ -19,6 +19,7 @@ return {
           ["<C-o>"] = require("telescope.actions").select_default,
         },
       },
+      scroll_strategy = "limit",
     })
   end,
   keys = {
