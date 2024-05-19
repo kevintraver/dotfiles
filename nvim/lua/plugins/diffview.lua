@@ -51,7 +51,7 @@ return {
           require("tinygit").push({})
         end,
         ["<A-u>"] = function()
-          require("tinygit").undoLastCommit()
+          require("tinygit").undoLastCommitOrAmend()
         end,
       },
       view = {
