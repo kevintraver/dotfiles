@@ -1,5 +1,6 @@
 return {
   "gbprod/yanky.nvim",
+  event = "LazyFile",
   opts = {
     highlight = {
       timer = 300,
