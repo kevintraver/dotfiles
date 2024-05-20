@@ -1,16 +1,14 @@
 return {
   "gbprod/substitute.nvim",
   lazy = true,
-  config = function()
-    require("substitute").setup({
+  opts = function()
+    return {
       on_substitute = require("yanky.integration").substitute(),
-    })
+      exchange = {
+        use_esc_to_cancel = false,
+      },
+    }
   end,
-  opts = {
-    exchange = {
-      use_esc_to_cancel = false,
-    },
-  },
   keys = {
     {
       "r",
