@@ -19,6 +19,13 @@ return {
         end,
         desc = "Toggle Render Markdown",
       },
+      {
+        "<leader>mt",
+        function()
+          require("render-markdown").toggle()
+        end,
+        desc = "Toggle Render Markdown",
+      },
     },
   },
 }
