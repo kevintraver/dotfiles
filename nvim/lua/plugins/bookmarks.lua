@@ -21,60 +21,81 @@ return {
   },
   keys = {
     {
-      "<leader>ma",
+      "ma",
       function()
         require("bookmarks").bookmark_ann()
       end,
-      desc = "Annotate",
+      desc = "Bookmark Annotate",
     },
     {
-      "<leader>mm",
+      "mm",
       function()
         require("bookmarks").bookmark_toggle()
       end,
-      desc = "Toggle",
+      desc = "Bookmark Toggle",
     },
     {
-      "<leader>md",
+      "mx",
       function()
         require("bookmarks").bookmark_clean()
       end,
-      desc = "Clean (Buffer)",
+      desc = "Bookmarks Clear Buffer",
     },
     {
-      "<leader>mn",
+      "mX",
+      function()
+        require("bookmarks").bookmark_clear_all()
+      end,
+      desc = "Bookmarks Clear All",
+    },
+    {
+      "[m",
       function()
         require("bookmarks").bookmark_next()
       end,
       desc = "Jump to Next Bookmark",
     },
     {
-      "<leader>mp",
+      "]m",
       function()
         require("bookmarks").bookmark_prev()
       end,
       desc = "Jump to Previous Bookmark",
     },
     {
-      "<leader>mq",
+      "mq",
       function()
         require("bookmarks").bookmark_list()
       end,
       desc = "List (Quickfix)",
     },
     {
-      "<A-m>",
+      "mf",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,
-      desc = "Telescope",
+      desc = "Search Bookmarks",
+    },
+    {
+      "ms",
+      function()
+        require("telescope").extensions.bookmarks.list({})
+      end,
+      desc = "Search Bookmarks",
     },
     {
       "<leader>sm",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,
-      desc = "Bookmarks",
+      desc = "Search Bookmarks",
+    },
+    {
+      "<A-m>",
+      function()
+        require("telescope").extensions.bookmarks.list({})
+      end,
+      desc = "Search Bookmarks",
     },
   },
 }
