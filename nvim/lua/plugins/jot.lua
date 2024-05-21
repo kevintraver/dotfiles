@@ -3,7 +3,7 @@ return {
   lazy = true,
   keys = {
     {
-      "<leader>on",
+      "<leader>n",
       function()
         require("jot").toggle()
       end,
