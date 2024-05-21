@@ -7,4 +7,13 @@ return {
   opts = {
     app = "browser",
   },
+  keys = {
+    {
+      "<leader>mp",
+      function()
+        require("peek").open()
+      end,
+      desc = "Markdown Preview",
+    },
+  },
 }
