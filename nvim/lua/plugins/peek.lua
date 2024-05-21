@@ -4,5 +4,7 @@ return {
   enabled = true,
   ft = "markdown",
   build = "deno task --quiet build:fast",
-  config = true,
+  opts = {
+    app = "browser",
+  },
 }
