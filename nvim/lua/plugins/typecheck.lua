@@ -1,6 +1,6 @@
 return {
   "jellydn/typecheck.nvim",
-  laz = true,
+  lazy = true,
   dependencies = {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
