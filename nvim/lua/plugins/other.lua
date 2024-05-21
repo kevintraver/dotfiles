@@ -29,13 +29,6 @@ return {
   },
   keys = {
     {
-      "<C-t>",
-      function()
-        require("other-nvim").open()
-      end,
-      desc = "Other File",
-    },
-    {
       "<leader>ta",
       function()
         require("other-nvim").open()
