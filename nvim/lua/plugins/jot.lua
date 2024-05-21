@@ -15,5 +15,12 @@ return {
       end,
       desc = "Jot",
     },
+    {
+      "<leader>on",
+      function()
+        require("jot").toggle()
+      end,
+      desc = "Jot",
+    },
   },
 }
