@@ -152,6 +152,13 @@ return {
       desc = "Location List",
     },
     {
+      "<leader>sj",
+      function()
+        require("telescope.builtin").jumplist()
+      end,
+      desc = "Jumplist",
+    },
+    {
       "<leader>gc",
       false,
     },
