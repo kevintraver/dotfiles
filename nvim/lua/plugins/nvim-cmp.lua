@@ -27,6 +27,10 @@ return {
         "SergioRibera/cmp-dotenv",
         event = "InsertEnter",
       },
+      {
+        "f3fora/cmp-spell",
+        event = "InsertEnter",
+      },
     },
   },
   opts = function(_, opts)
@@ -64,5 +68,6 @@ return {
     table.insert(opts.sources, { name = "treesitter" })
     table.insert(opts.sources, { name = "cmp_yanky" })
     table.insert(opts.sources, { name = "dotenv" })
+    table.insert(opts.sources, { name = "spell" })
   end,
 }
