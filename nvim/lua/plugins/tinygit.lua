@@ -42,6 +42,15 @@ return {
       desc = "Git Push",
     },
     {
+      "<leader>gP",
+      function()
+        require("tinygit").push({
+          createGitHubPr = true,
+        })
+      end,
+      desc = "Git Push",
+    },
+    {
       "<leader>gu",
       function()
         require("tinygit").undoLastCommitOrAmend()
