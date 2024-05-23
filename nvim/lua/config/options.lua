@@ -9,7 +9,7 @@ vim.env["VISUAL"] = "nvr -s -l --remote-wait"
 vim.env["EDITOR"] = "nvr -s -l --remote-wait"
 vim.env["GIT_EDITOR"] = "nvr -s -l --remote-wait"
 
-vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 
 vim.opt.swapfile = false
 vim.opt.backup = false
