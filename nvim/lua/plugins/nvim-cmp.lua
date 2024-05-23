@@ -52,6 +52,7 @@ return {
       end
     end
 
+    table.insert(opts.sources, { name = "cmp_yanky" })
     table.insert(opts.sources, {
       name = "fuzzy_buffer",
       option = {
@@ -66,7 +67,6 @@ return {
     })
     table.insert(opts.sources, { name = "fuzzy_path" })
     table.insert(opts.sources, { name = "treesitter" })
-    table.insert(opts.sources, { name = "cmp_yanky" })
     table.insert(opts.sources, { name = "dotenv" })
     table.insert(opts.sources, { name = "spell" })
   end,
