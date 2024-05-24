@@ -17,7 +17,7 @@ return {
       desc = "Toggle Checkbox",
     },
     {
-      "<leader>mm",
+      "<leader>mc",
       function()
         vim.go.operatorfunc = "v:lua.require'markdown-togglecheck'.toggle"
         return "g@l"
