@@ -70,6 +70,7 @@ alias pbp='pbpaste'
 # xsv
 alias csv='xsv'
 
+# pwd
 alias pwd="pwd | tr -d '\n'"
 
 # eza
