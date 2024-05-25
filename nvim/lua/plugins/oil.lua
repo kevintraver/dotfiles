@@ -40,6 +40,12 @@ return {
         end,
         desc = "Copy filepath",
       },
+      ["<A-s>"] = {
+        desc = "Save",
+        callback = function()
+          require("oil").save()
+        end,
+      },
     },
   },
   keys = {
