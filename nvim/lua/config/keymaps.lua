@@ -17,11 +17,13 @@ end, { desc = "Save File" })
 
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
+  vim.cmd.stopinsert()
   vim.cmd.close()
 end, { desc = "Close Window" })
 
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-C-w>", function()
+  vim.cmd.stopinsert()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
@@ -31,6 +33,7 @@ end, { desc = "Switch to Alternate Buffer" })
 
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-S-w>", function()
+  vim.cmd.stopinsert()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
