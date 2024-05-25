@@ -33,6 +33,13 @@ return {
       ["<A-w>"] = "actions.close",
       ["H"] = "actions.toggle_hidden",
       ["<C-A-l>"] = "actions.select_vsplit",
+      ["<C-y>"] = {
+        callback = function()
+          require("oil.actions").copy_entry_path.callback()
+          vim.fn.setreg("+", vim.fn.getreg(vim.v.register))
+        end,
+        desc = "Copy filepath",
+      },
     },
   },
   keys = {
