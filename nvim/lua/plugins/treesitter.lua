@@ -32,6 +32,7 @@ return {
       "regex",
       "ruby",
       "rust",
+      "scss",
       "sql",
       "toml",
       "tsx",
