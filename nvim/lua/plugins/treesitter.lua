@@ -100,5 +100,12 @@ return {
       end,
       desc = "Inspect Tree",
     },
+    {
+      "<Leader>eq",
+      function()
+        vim.treesitter.query.edit()
+      end,
+      desc = "Edit Query",
+    },
   },
 }
