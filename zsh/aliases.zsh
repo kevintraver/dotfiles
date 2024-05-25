@@ -35,7 +35,7 @@ alias reset-firefox='\
   > "/Applications/Firefox.app/Contents/Resources/mozilla.cfg"; \
   echo -e "pref(\"general.config.filename\", \"mozilla.cfg\");\
   \npref(\"general.config.obscure_value\", 0);" \
-  > "/Applications/Firefox.app/Contents/Resources/defaults/pref/autoconfig.js"'
+  > "/Applications/Firefox.app/Contents/Resources/defaults/pref/local-settings.js"'
 
 # trash https://github.com/sindresorhus/trash-cli
 alias rm="trash"
