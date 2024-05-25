@@ -92,4 +92,13 @@ return {
       enable_autocmd = false,
     },
   },
+  keys = {
+    {
+      "<Leader>it",
+      function()
+        vim.treesitter.inspect_tree()
+      end,
+      desc = "Inspect Tree",
+    },
+  },
 }
