@@ -97,6 +97,10 @@ alias gi='gitui'
 alias gs="git status"
 alias ghb="gh browse"
 
-# yt-dlp
-alias ytd='yt-dlp -P ~/YouTube'
-alias ytdl='yt-dlp -P ~/YouTube'
+# yt-dlp with tmux
+function tmux-yt-dlp() {
+  noglob tmux new-session -s ytdl "noglob yt-dlp -P ~/YouTube $@"
+}
+
+alias ytdl="noglob tmux-yt-dlp"
+alias ytd="noglob tmux-yt-dlp"
