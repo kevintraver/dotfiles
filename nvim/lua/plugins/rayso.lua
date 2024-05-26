@@ -9,7 +9,7 @@ return {
         ---@diagnostic disable-next-line: missing-parameter
         require("lib.create").create_snippet()
       end,
-      desc = "Create Snipper",
+      desc = "Create Snippet",
     },
   },
 }
