@@ -8,6 +8,7 @@ return {
       },
       char = {
         jump_labels = true,
+        label = { exclude = "" },
       },
     },
   },
