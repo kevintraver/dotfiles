@@ -14,28 +14,7 @@ alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp
 alias tcp='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications --proxy-server="http://localhost:8080"'
 
 alias reset-chrome="rm -rf /Users/kevin/Library/Application\ Support/Google && rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
-
-alias reset-firefox='\
-  rm -rf /Users/kevin/Library/Application\ Support/Firefox; \
-  rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist; \
-  echo -e "lockPref(\"browser.aboutwelcome.enabled\", false);\
-  \nlockPref(\"browser.tabs.warnOnClose\", false);\
-  \nlockPref(\"browser.showQuitWarning\", false);\
-  \nlockPref(\"browser.startup.blankWindow\", true);\
-  \nlockPref(\"browser.startup.firstrunSkipsHomepage\", true);\
-  \nlockPref(\"browser.warnOnQuitShortcut\", false);\
-  \nlockPref(\"browser.shell.checkDefaultBrowser\", false);\
-  \nlockPref(\"browser.newtabpage.enabled\", false);\
-  \nlockPref(\"startup.homepage_welcome_url\", \"\");\
-  \nlockPref(\"browser.startup.page\", 0);\
-  \nlockPref(\"browser.toolbars.bookmarks.visibility\", \"never\");\
-  \nlockPref(\"datareporting.policy.dataSubmissionPolicyBypassNotification\", true);\
-  \nlockPref(\"browser.startup.couldRestoreSession.count\", 0);\
-  \nlockPref(\"extensions.pocket.enabled\", false);" \
-  > "/Applications/Firefox.app/Contents/Resources/mozilla.cfg"; \
-  echo -e "pref(\"general.config.filename\", \"mozilla.cfg\");\
-  \npref(\"general.config.obscure_value\", 0);" \
-  > "/Applications/Firefox.app/Contents/Resources/defaults/pref/local-settings.js"'
+alias reset-firefox='rm -rf /Users/kevin/Library/Application\ Support/Firefox && rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist'
 
 # trash https://github.com/sindresorhus/trash-cli
 alias rm="trash"
