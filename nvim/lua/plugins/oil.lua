@@ -35,6 +35,12 @@ return {
       ["<C-A-l>"] = "actions.select_vsplit",
       ["<C-y>"] = {
         callback = function()
+          require("oil.actions").copy_entry_filename.callback()
+        end,
+        desc = "Copy filename",
+      },
+      ["<C-A-y>"] = {
+        callback = function()
           require("oil.actions").copy_entry_path.callback()
         end,
         desc = "Copy filepath",
