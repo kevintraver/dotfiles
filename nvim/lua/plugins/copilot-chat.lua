@@ -39,7 +39,7 @@ return {
     },
     {
       mode = { "n", "v" },
-      "<Leader>\\e",
+      "<leader>ae",
       function()
         local copilot_chat = require("CopilotChat")
         local config = require("CopilotChat.config")
@@ -49,7 +49,7 @@ return {
     },
     {
       mode = { "n", "v" },
-      "<Leader>\\g",
+      "<leader>ac",
       function()
         local copilot_chat = require("CopilotChat")
         local config = require("CopilotChat.config")
