@@ -50,7 +50,7 @@ return {
   },
   keys = {
     {
-      "<A-h>",
+      "<S-A-h>",
       function()
         require("oil").open()
       end,
