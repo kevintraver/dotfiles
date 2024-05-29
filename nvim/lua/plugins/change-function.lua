@@ -1,6 +1,7 @@
 return {
   "SleepySwords/change-function.nvim",
   event = "VeryLazy",
+  enabled = false,
   keys = {
     {
       "<leader>cf",
