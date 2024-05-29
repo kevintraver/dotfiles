@@ -2,72 +2,25 @@ return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
-    {
-      {
-        "chrisgrieser/cmp_yanky",
-        event = "InsertEnter",
-      },
-      {
-        "ray-x/cmp-treesitter",
-        event = "InsertEnter",
-      },
-      {
-        "tzachar/cmp-fuzzy-buffer",
-        event = "InsertEnter",
-      },
-      {
-        "tzachar/fuzzy.nvim",
-        event = "InsertEnter",
-      },
-      {
-        "tzachar/cmp-fuzzy-path",
-        event = "InsertEnter",
-      },
-      {
-        "SergioRibera/cmp-dotenv",
-        event = "InsertEnter",
-      },
-      {
-        "f3fora/cmp-spell",
-        event = "InsertEnter",
-      },
-    },
+    { "chrisgrieser/cmp_yanky" },
+    { "ray-x/cmp-treesitter" },
+    { "tzachar/cmp-fuzzy-buffer" },
+    { "tzachar/fuzzy.nvim" },
+    { "tzachar/cmp-fuzzy-path" },
+    { "SergioRibera/cmp-dotenv" },
+    { "f3fora/cmp-spell" },
   },
   opts = function(_, opts)
-    require("cmp").setup.filetype({
-      "copilot-chat",
-      "chatgpt-input",
-    }, {
-      enabled = false,
+    opts.sources = require("cmp").config.sources({
+      { name = "nvim_lsp" },
+      { name = "snippets" },
+      { name = "cmp_yanky" },
+      { name = "fuzzy_buffer" },
+      { name = "fuzzy_path" },
+      { name = "treesitter" },
+      { name = "dotenv" },
+      { name = "spell" },
+      { name = "copilot" },
     })
-
-    -- remove path and buffer added by LazyVim
-    local remove_sources = {
-      buffer = true,
-      path = true,
-    }
-    for i = #opts.sources, 1, -1 do
-      if remove_sources[opts.sources[i].name] then
-        table.remove(opts.sources, i)
-      end
-    end
-
-    table.insert(opts.sources, { name = "cmp_yanky" })
-    table.insert(opts.sources, {
-      name = "fuzzy_buffer",
-      option = {
-        get_bufnrs = function()
-          local bufs = {}
-          for _, win in ipairs(vim.api.nvim_list_wins()) do
-            bufs[vim.api.nvim_win_get_buf(win)] = true
-          end
-          return vim.tbl_keys(bufs)
-        end,
-      },
-    })
-    table.insert(opts.sources, { name = "fuzzy_path" })
-    table.insert(opts.sources, { name = "treesitter" })
-    table.insert(opts.sources, { name = "dotenv" })
-    table.insert(opts.sources, { name = "spell" })
   end,
 }
