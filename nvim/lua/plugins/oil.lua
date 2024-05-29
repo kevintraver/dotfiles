@@ -32,7 +32,7 @@ return {
       ["q"] = "actions.close",
       ["<A-w>"] = "actions.close",
       ["H"] = "actions.toggle_hidden",
-      ["<C-A-l>"] = "actions.select_vsplit",
+      ["<C-A-l>"] = "actions.select",
       ["<C-y>"] = {
         callback = function()
           require("oil.actions").copy_entry_filename.callback()
@@ -55,7 +55,7 @@ return {
   },
   keys = {
     {
-      "<S-A-h>",
+      "<C-A-h>",
       function()
         require("oil").open()
       end,
