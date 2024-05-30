@@ -4,7 +4,7 @@ return {
   config = true,
   cmd = {
     "TabsVsSpacesToggle",
-    "TabsVsSpacesStandartize",
+    "TabsVsSpacesStandardize",
     "TabsVsSpacesConvert",
   },
 }
