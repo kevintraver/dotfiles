@@ -15,6 +15,9 @@ return {
       ["<A-h>"] = "actions.parent",
       ["<A-j>"] = "j",
       ["<A-k>"] = "k",
+      ["<C-A-j>"] = "j",
+      ["<C-A-k>"] = "k",
+      ["<C-A-Enter>"] = "actions.select",
       ["<C-q>"] = {
         callback = function()
           require("oil.actions").send_to_qflist.callback()
