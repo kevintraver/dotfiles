@@ -9,10 +9,6 @@ return {
     },
     bottom = {
       {
-        ft = "undotreeDiff",
-        size = { height = 0.4 },
-      },
-      {
         ft = "noice",
         size = { height = 0.4 },
         filter = function(_, win)
@@ -107,10 +103,6 @@ return {
       },
     },
     left = {
-      {
-        ft = "undotree",
-        size = { width = 0.4 },
-      },
       {
         title = "Diff View",
         ft = "DiffviewFiles",
