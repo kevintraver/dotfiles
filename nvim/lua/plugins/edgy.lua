@@ -9,10 +9,6 @@ return {
     },
     bottom = {
       {
-        ft = "OverseerList",
-        size = { height = 0.4 },
-      },
-      {
         ft = "undotreeDiff",
         size = { height = 0.4 },
       },
