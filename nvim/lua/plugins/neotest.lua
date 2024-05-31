@@ -15,11 +15,13 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.right = opts.right or {}
-      table.insert(opts.right, {
+      table.insert(opts.bottom, {
         ft = "neotest-output-panel",
         title = "Neotest Output",
-        size = { height = 0.4 },
+      })
+      table.insert(opts.left, {
+        title = "Neotest Summary",
+        ft = "neotest-summary",
       })
     end,
   },
