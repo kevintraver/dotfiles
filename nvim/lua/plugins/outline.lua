@@ -2,7 +2,13 @@ return {
   {
     "hedyhli/outline.nvim",
     lazy = true,
-    config = true,
+    opts = {
+      keymaps = {
+        down_and_jump = { "<C-n>", "J" },
+        up_and_jump = { "<C-p>", "K" },
+        toggle_preview = "<S-p>",
+      },
+    },
     keys = {
       {
         "<A-i>",
