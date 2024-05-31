@@ -66,12 +66,11 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.right = opts.right or {}
-      table.insert(opts.right, {
-        ft = "copilot-chat",
-        title = "Copilot Chat",
-        size = { width = 0.5 },
-      })
+      for _, v in ipairs(opts.right) do
+        if v.ft == "copilot-chat" then
+          v.size.width = 0.5
+        end
+      end
     end,
   },
 }
