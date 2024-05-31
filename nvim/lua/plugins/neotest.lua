@@ -11,18 +11,4 @@ return {
       },
     },
   },
-  {
-    "folke/edgy.nvim",
-    optional = true,
-    opts = function(_, opts)
-      table.insert(opts.bottom, {
-        ft = "neotest-output-panel",
-        title = "Neotest Output",
-      })
-      table.insert(opts.left, {
-        title = "Neotest Summary",
-        ft = "neotest-summary",
-      })
-    end,
-  },
 }
