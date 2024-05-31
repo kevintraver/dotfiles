@@ -69,6 +69,7 @@ return {
       for _, v in ipairs(opts.right) do
         if v.ft == "copilot-chat" then
           v.size.width = 0.5
+          break
         end
       end
     end,
