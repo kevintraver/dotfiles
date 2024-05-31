@@ -1,27 +1,41 @@
 return {
-  "MagicDuck/grug-far.nvim",
-  cmd = "GrugFar",
-  opts = {
-    keymaps = {
-      replace = { n = "R" },
-      qflist = { n = "q" },
-      syncLocations = { n = "s" },
-      syncLine = { n = "l" },
-      close = { n = "q" },
-      historyOpen = { n = "t" },
-      historyAdd = { n = "a" },
-      refresh = { n = "f" },
-      gotoLocation = { n = "<enter>" },
-      pickHistoryEntry = { n = "<enter>" },
+  {
+    "MagicDuck/grug-far.nvim",
+    cmd = "GrugFar",
+    opts = {
+      keymaps = {
+        replace = { n = "R" },
+        qflist = { n = "q" },
+        syncLocations = { n = "s" },
+        syncLine = { n = "l" },
+        close = { n = "q" },
+        historyOpen = { n = "t" },
+        historyAdd = { n = "a" },
+        refresh = { n = "f" },
+        gotoLocation = { n = "<enter>" },
+        pickHistoryEntry = { n = "<enter>" },
+      },
+    },
+    keys = {
+      {
+        "<leader>rg",
+        function()
+          require("grug-far").grug_far()
+        end,
+        desc = "Grug Far",
+      },
     },
   },
-  keys = {
-    {
-      "<leader>rg",
-      function()
-        require("grug-far").grug_far()
-      end,
-      desc = "Grug Far",
-    },
+  {
+    "folke/edgy.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.right = opts.right or {}
+      table.insert(opts.right, {
+        ft = "grug-far",
+        title = "Grug",
+        size = { width = 0.5 },
+      })
+    end,
   },
 }
