@@ -62,7 +62,7 @@ vim.keymap.set("n", "q", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "x" }, "gJ", "J", { desc = "Join Lines" })
 
 -- Open/Edit HTTP Requests
-vim.keymap.set("n", "<leader>or", function()
+vim.keymap.set("n", "<leader>er", function()
   local root_dir = LazyVim.root.git()
   local requests_folder = root_dir .. "/.requests"
   local requests_file = root_dir .. "/.requests.http"
