@@ -24,13 +24,11 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.left = opts.left or {}
       table.insert(opts.left, {
         ft = "undotree",
         title = "Undotree",
         size = { width = 0.5 },
       })
-      opts.bottom = opts.bottom or {}
       table.insert(opts.bottom, {
         ft = "undotreeDiff",
         title = "Undotree Diff",

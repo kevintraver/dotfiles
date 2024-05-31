@@ -76,7 +76,6 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.left = opts.left or {}
       table.insert(opts.left, {
         ft = "neo-tree",
         title = "Neo-Tree",
