@@ -69,6 +69,12 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
+      for i, v in ipairs(opts.bottom) do
+        if v.ft == "toggleterm" then
+          table.remove(opts.bottom, i)
+          break
+        end
+      end
       table.insert(opts.right, {
         ft = "toggleterm",
         title = "Terminal",
