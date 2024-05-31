@@ -1,66 +1,82 @@
 return {
-  "akinsho/toggleterm.nvim",
-  lazy = true,
-  config = true,
-  keys = {
-    {
-      "<A-t>",
-      mode = { "n", "t" },
-      function()
-        require("toggleterm").toggle_command("direction=vertical")
-      end,
-      desc = "Toggle Terminal",
+  {
+    "akinsho/toggleterm.nvim",
+    lazy = true,
+    config = true,
+    keys = {
+      {
+        "<A-t>",
+        mode = { "n", "t" },
+        function()
+          require("toggleterm").toggle_command("direction=vertical")
+        end,
+        desc = "Toggle Terminal",
+      },
+      {
+        "<leader><tab>t",
+        function()
+          require("toggleterm.terminal").Terminal
+            :new({
+              direction = "tab",
+              count = 2,
+              hidden = true,
+            })
+            :toggle()
+        end,
+        desc = "New Terminal Tab",
+      },
+      {
+        "<A-w>",
+        mode = { "t" },
+        function()
+          require("toggleterm").toggle_command()
+        end,
+        desc = "Toggle (Close) Terminal",
+      },
+      {
+        "<leader>gg",
+        mode = { "n", "t" },
+        function()
+          require("toggleterm.terminal").Terminal
+            :new({
+              cmd = "lazygit",
+              direction = "float",
+              count = 5,
+              hidden = true,
+            })
+            :toggle()
+        end,
+        desc = "Lazygit",
+      },
+      {
+        "<A-S-e>",
+        mode = { "n", "t" },
+        function()
+          require("toggleterm.terminal").Terminal
+            :new({
+              cmd = "ranger",
+              direction = "float",
+              count = 10,
+              hidden = true,
+            })
+            :toggle()
+        end,
+        desc = "Ranger",
+      },
     },
-    {
-      "<leader><tab>t",
-      function()
-        require("toggleterm.terminal").Terminal
-          :new({
-            direction = "tab",
-            count = 2,
-            hidden = true,
-          })
-          :toggle()
-      end,
-      desc = "New Terminal Tab",
-    },
-    {
-      "<A-w>",
-      mode = { "t" },
-      function()
-        require("toggleterm").toggle_command()
-      end,
-      desc = "Toggle (Close) Terminal",
-    },
-    {
-      "<leader>gg",
-      mode = { "n", "t" },
-      function()
-        require("toggleterm.terminal").Terminal
-          :new({
-            cmd = "lazygit",
-            direction = "float",
-            count = 5,
-            hidden = true,
-          })
-          :toggle()
-      end,
-      desc = "Lazygit",
-    },
-    {
-      "<A-S-e>",
-      mode = { "n", "t" },
-      function()
-        require("toggleterm.terminal").Terminal
-          :new({
-            cmd = "ranger",
-            direction = "float",
-            count = 10,
-            hidden = true,
-          })
-          :toggle()
-      end,
-      desc = "Ranger",
-    },
+  },
+  {
+    "folke/edgy.nvim",
+    optional = true,
+    opts = function(_, opts)
+      table.insert(opts.right, {
+        ft = "toggleterm",
+        title = "Terminal",
+        size = { width = 0.4 },
+        filter = function(_, win)
+          return vim.api.nvim_win_get_config(win).relative == ""
+        end,
+      })
+    end,
   },
 }
