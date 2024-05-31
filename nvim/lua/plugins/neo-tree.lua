@@ -76,27 +76,11 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      table.insert(opts.left, {
-        ft = "neo-tree",
-        title = "Neo-Tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "filesystem"
-        end,
-      })
-      table.insert(opts.left, {
-        title = "Neo-Tree Git",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "git_status"
-        end,
-      })
-      table.insert(opts.left, {
-        title = "Neo-Tree Buffers",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "buffers"
-        end,
-      })
+      for _, v in ipairs(opts.left) do
+        if v.ft == "neo-tree" then
+          v.pinned = false
+        end
+      end
     end,
   },
 }
