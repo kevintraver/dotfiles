@@ -48,13 +48,6 @@ return {
       desc = "Search Buffer",
     },
     {
-      "<leader>of",
-      function()
-        require("telescope.builtin").find_files()
-      end,
-      desc = "Files",
-    },
-    {
       "<leader>fo",
       function()
         require("telescope.builtin").oldfiles()
