@@ -10,7 +10,7 @@ return {
       ["<leader>q"] = { name = "+recorder" },
       ["<leader>d"] = { name = "+debug" },
       ["<leader>l"] = { name = "+lazy" },
-      ["<leader>o"] = { name = "+open" },
+      ["<leader>o"] = { name = "+overseer" },
     },
   },
 }
