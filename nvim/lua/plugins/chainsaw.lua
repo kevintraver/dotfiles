@@ -4,56 +4,56 @@ return {
   config = true,
   keys = {
     {
-      "<leader>dv",
+      "<leader>ddv",
       function()
         require("chainsaw").variableLog()
       end,
       desc = "Add Variable Log",
     },
     {
-      "<leader>do",
+      "<leader>ddo",
       function()
         require("chainsaw").objectLog()
       end,
       desc = "Add Object Log",
     },
     {
-      "<leader>di",
+      "<leader>ddi",
       function()
         require("chainsaw").objectLog()
       end,
       desc = "Add Object Log",
     },
     {
-      "<leader>da",
+      "<leader>dda",
       function()
         require("chainsaw").assertLog()
       end,
       desc = "Add Assert Log",
     },
     {
-      "<leader>dm",
+      "<leader>ddm",
       function()
         require("chainsaw").messageLog()
       end,
       desc = "Add Message Log",
     },
     {
-      "<leader>ds",
+      "<leader>dds",
       function()
         require("chainsaw").stracktraceLog()
       end,
       desc = "Add Stacktrace",
     },
     {
-      "<leader>db",
+      "<leader>ddb",
       function()
         require("chainsaw").beepLog()
       end,
       desc = "Add Beep Log",
     },
     {
-      "<leader>dx",
+      "<leader>ddx",
       function()
         require("chainsaw").removeLogs()
       end,
