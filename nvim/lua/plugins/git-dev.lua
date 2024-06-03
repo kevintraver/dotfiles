@@ -16,7 +16,7 @@ return {
   },
   keys = {
     {
-      "<leader>gr",
+      "<leader>gd",
       function()
         vim.ui.input({ prompt = "Repository name / URI" }, function(url)
           if not url or url == "" then
