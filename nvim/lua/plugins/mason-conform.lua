@@ -1,5 +1,5 @@
 return {
   "zapling/mason-conform.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }
