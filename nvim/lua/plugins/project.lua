@@ -6,7 +6,7 @@ return {
   end,
   keys = {
     {
-      "<leader>fP",
+      "<leader>oP",
       function()
         require("telescope").extensions.projects.projects({})
       end,
