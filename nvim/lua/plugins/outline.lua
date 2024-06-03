@@ -26,6 +26,7 @@ return {
       for _, v in ipairs(opts.right) do
         if v.ft == "Outline" then
           v.pinned = false
+          v.size = { width = 0.3 }
         end
       end
     end,
