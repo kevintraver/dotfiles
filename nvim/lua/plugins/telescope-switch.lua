@@ -16,6 +16,16 @@ return {
               from = "(.*).test.ts$",
               to = "%1.ts",
             },
+            {
+              name = "go implementation",
+              from = "(.*).go$",
+              to = "%1.go",
+            },
+            {
+              name = "go test",
+              from = "(.*)_test.go$",
+              to = "%1.go",
+            },
           },
         },
       },
