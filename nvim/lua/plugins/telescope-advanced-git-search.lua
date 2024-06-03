@@ -19,14 +19,14 @@ return {
       function()
         require("telescope").extensions.advanced_git_search.search_log_content()
       end,
-      desc = "Git Search",
+      desc = "Git Search (Log)",
     },
     {
       "<leader>ghf",
       function()
         require("telescope").extensions.advanced_git_search.search_log_content_file()
       end,
-      desc = "Git Search",
+      desc = "Git Search (File)",
     },
   },
 }
