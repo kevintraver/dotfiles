@@ -152,6 +152,16 @@ return {
       desc = "Jumplist",
     },
     {
+      "<leader>sc",
+      function()
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep Config Files",
+          cwd = vim.fn.stdpath("config"),
+        })
+      end,
+      desc = "Grep Config Files",
+    },
+    {
       "<leader>gc",
       false,
     },
