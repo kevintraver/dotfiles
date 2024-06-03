@@ -52,5 +52,19 @@ return {
       end,
       desc = "(L)azy Plugin",
     },
+    {
+      "<leader>fp",
+      function()
+        require("telescope").extensions.lazy_plugins.lazy_plugins()
+      end,
+      desc = "(L)azy Plugin",
+    },
+    {
+      "<leader>lp",
+      function()
+        require("telescope").extensions.lazy_plugins.lazy_plugins()
+      end,
+      desc = "(L)azy Plugin",
+    },
   },
 }
