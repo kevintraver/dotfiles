@@ -45,5 +45,12 @@ return {
       end,
       desc = "Alternate File",
     },
+    {
+      "<C-t>",
+      function()
+        require("other-nvim").open()
+      end,
+      desc = "Alternate File",
+    },
   },
 }
