@@ -17,14 +17,16 @@ return {
       { name = "cmp_yanky", priority = 3 },
       {
         name = "fuzzy_buffer",
-        priority = 4,
         option = {
           get_bufnrs = function()
             local bufs = {}
-            for _, win in ipairs(vim.api.nvim_list_wins()) do
-              bufs[vim.api.nvim_win_get_buf(win)] = true
+            for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+              local buftype = vim.api.nvim_buf_get_option(buf, "buftype")
+              if buftype ~= "nofile" and buftype ~= "prompt" then
+                bufs[#bufs + 1] = buf
+              end
             end
-            return vim.tbl_keys(bufs)
+            return bufs
           end,
         },
       },
