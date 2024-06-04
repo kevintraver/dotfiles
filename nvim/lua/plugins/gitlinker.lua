@@ -9,7 +9,7 @@ return {
       function()
         require("gitlinker").link()
       end,
-      desc = "Copy Buffer URL",
+      desc = "Copy Git Url",
     },
     {
       "<leader>yg",
@@ -17,7 +17,7 @@ return {
       function()
         require("gitlinker").link()
       end,
-      desc = "Copy Buffer URL",
+      desc = "Copy Git Url",
     },
     {
       "<leader>go",
@@ -27,7 +27,7 @@ return {
           action = require("gitlinker.actions").system,
         })
       end,
-      desc = "Copy Buffer URL",
+      desc = "Open Git Url",
     },
   },
 }
