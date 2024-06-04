@@ -1,5 +1,6 @@
 return {
   "LazyVim/LazyVim",
+  version = false,
   keys = {
     {
       "<leader>ls",
