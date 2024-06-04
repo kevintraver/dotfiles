@@ -7,7 +7,7 @@ return {
   },
   keys = {
     {
-      "<leader>mg",
+      "<leader>mP",
       function()
         require("md-pdf").convert_md_to_pdf()
       end,
