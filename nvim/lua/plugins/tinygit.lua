@@ -35,14 +35,23 @@ return {
       desc = "Git Amend Message",
     },
     {
-      "<leader>gp",
+      "<leader>gpp",
       function()
         require("tinygit").push({})
       end,
       desc = "Git Push",
     },
     {
-      "<leader>gP",
+      "<leader>gpf",
+      function()
+        require("tinygit").push({
+          forceWithLease = true,
+        })
+      end,
+      desc = "Git Push (Force)",
+    },
+    {
+      "<leader>gpr",
       function()
         require("tinygit").push({
           createGitHubPr = true,
