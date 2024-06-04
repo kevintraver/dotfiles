@@ -17,6 +17,22 @@ return {
         recent_commit_count = 20,
       },
     },
+    keys = {
+      {
+        "<leader>gn",
+        function()
+          require("neogit").open({ kind = "split" })
+        end,
+        desc = "Neogit Open",
+      },
+      {
+        "<leader>gC",
+        function()
+          require("neogit").open({ "commit" })
+        end,
+        desc = "Neogit Open",
+      },
+    },
   },
   {
     "folke/edgy.nvim",
