@@ -48,7 +48,7 @@ return {
           createGitHubPr = true,
         })
       end,
-      desc = "Git Push",
+      desc = "Git Push (with PR)",
     },
     {
       "<leader>gu",
