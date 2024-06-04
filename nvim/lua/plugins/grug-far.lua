@@ -37,4 +37,8 @@ return {
       })
     end,
   },
+}, {
+
+  "nvim-pack/nvim-spectre",
+  enabled = false,
 }
