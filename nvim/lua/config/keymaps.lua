@@ -79,3 +79,10 @@ vim.keymap.set("n", "<leader>er", function()
     vim.cmd.tabnew(requests_file)
   end
 end, { desc = "Open/Edit HTTP Request" })
+
+vim.keymap.set("n", "<Tab>", function()
+  vim.cmd.tabn()
+end)
+vim.keymap.set("n", "<S-Tab>", function()
+  vim.cmd.tabp()
+end)
