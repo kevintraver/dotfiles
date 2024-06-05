@@ -67,7 +67,7 @@ vim.keymap.set("n", "<leader>er", function()
   local requests_folder = root_dir .. "/.requests"
   local requests_file = root_dir .. "/.requests.http"
   if vim.fn.isdirectory(requests_folder) == 1 then
-    vim.cmd.vsplit(requests_folder)
+    vim.cmd.tabnew(requests_folder)
   else
     if vim.fn.filereadable(requests_file) == 0 then
       local file = io.open(requests_file, "w")
@@ -76,6 +76,6 @@ vim.keymap.set("n", "<leader>er", function()
         file:close()
       end
     end
-    vim.cmd.vsplit(requests_file)
+    vim.cmd.tabnew(requests_file)
   end
 end, { desc = "Open/Edit HTTP Request" })
