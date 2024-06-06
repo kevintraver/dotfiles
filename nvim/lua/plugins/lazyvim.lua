@@ -3,16 +3,6 @@ return {
   version = false,
   keys = {
     {
-      "<leader>ls",
-      function()
-        require("telescope.builtin").live_grep({
-          prompt_title = "Grep LazyVim config",
-          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
-        })
-      end,
-      desc = "Search (grep) LazyVim",
-    },
-    {
       "<leader>lc",
       function()
         require("telescope.builtin").live_grep({
