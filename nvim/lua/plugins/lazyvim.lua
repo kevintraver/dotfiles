@@ -51,7 +51,7 @@ return {
       function()
         require("telescope.builtin").find_files({
           prompt_title = "Find nvim Config",
-          cwd = vim.fn.stdpath("config"),
+          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
         })
       end,
       desc = "Lazy Config",
