@@ -7,6 +7,7 @@ return {
         enable = true,
         keymaps = {
           ["."] = "textsubjects-smart",
+          ["<Space>"] = "textsubjects-smart",
         },
       },
     })
