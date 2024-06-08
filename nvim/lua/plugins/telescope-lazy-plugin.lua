@@ -8,8 +8,9 @@ return {
           mappings = {
             ["i"] = {
               ["<C-b>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_url()
-                require("telescope.actions").close(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_url(
+                  bufnr
+                )
               end,
               ["<C-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
@@ -24,8 +25,9 @@ return {
             },
             ["n"] = {
               ["<C-b>"] = function(bufnr)
-                require("telescope").extensions.lazy_plugins.actions.open_repo_url()
-                require("telescope.actions").close(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_url(
+                  bufnr
+                )
               end,
               ["<C-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
