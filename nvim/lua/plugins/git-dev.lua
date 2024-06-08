@@ -22,7 +22,7 @@ return {
           if not url or url == "" then
             return
           end
-          require("git-dev").open(url, {}, {})
+          require("git-dev").open(url)
         end)
       end,
       desc = "Open a remote git repository",
