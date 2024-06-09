@@ -12,6 +12,7 @@ return {
         require("md-pdf").convert_md_to_pdf()
       end,
       desc = "Markdown PDF",
+      ft = "markdown",
     },
   },
 }

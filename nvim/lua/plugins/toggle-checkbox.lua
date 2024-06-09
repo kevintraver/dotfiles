@@ -15,6 +15,7 @@ return {
       end,
       expr = true,
       desc = "Toggle Checkbox",
+      ft = "markdown",
     },
   },
 }
