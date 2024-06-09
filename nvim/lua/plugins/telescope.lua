@@ -131,27 +131,6 @@ return {
       desc = "Find Dotfiles",
     },
     {
-      "<leader>sq",
-      function()
-        require("telescope.builtin").quickfix()
-      end,
-      desc = "Quickfix List",
-    },
-    {
-      "<leader>sl",
-      function()
-        require("telescope.builtin").loclist()
-      end,
-      desc = "Location List",
-    },
-    {
-      "<leader>sj",
-      function()
-        require("telescope.builtin").jumplist()
-      end,
-      desc = "Jumplist",
-    },
-    {
       "<leader>sc",
       function()
         require("telescope.builtin").live_grep({
