@@ -27,10 +27,6 @@ vim.keymap.set({ "n", "i", "x" }, "<A-C-w>", function()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
-vim.keymap.set("n", "<C-Space>", function()
-  vim.cmd.buffer("#")
-end, { desc = "Switch to Alternate Buffer" })
-
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-S-w>", function()
   vim.cmd.stopinsert()
@@ -79,3 +75,8 @@ vim.keymap.set("n", "<leader>er", function()
     vim.cmd.tabnew(requests_file)
   end
 end, { desc = "Open/Edit HTTP Request" })
+
+-- Switch Tabs
+vim.keymap.set("n", "<C-Space>", function()
+  vim.cmd.tabn()
+end)
