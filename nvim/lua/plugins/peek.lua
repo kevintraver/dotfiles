@@ -14,6 +14,7 @@ return {
         require("peek").open()
       end,
       desc = "Markdown Preview",
+      ft = "markdown",
     },
   },
 }
