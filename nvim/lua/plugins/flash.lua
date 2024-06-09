@@ -39,14 +39,6 @@ return {
       desc = "Flash Treesitter",
     },
     {
-      "<C-s>",
-      mode = { "n" },
-      function()
-        require("flash").jump({ continue = true })
-      end,
-      desc = "Flash Continue",
-    },
-    {
       "r",
       mode = { "o" },
       false,
