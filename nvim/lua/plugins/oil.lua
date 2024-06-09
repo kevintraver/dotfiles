@@ -58,13 +58,6 @@ return {
   },
   keys = {
     {
-      "<C-A-h>",
-      function()
-        require("oil").open()
-      end,
-      desc = "Open Oil",
-    },
-    {
       "<A-h>",
       function()
         require("oil").open()

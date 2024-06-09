@@ -10,14 +10,14 @@ return {
   },
   keys = {
     {
-      "<S-A-l>",
+      "<C-A-l>",
       function()
         require("bufferline").cycle(1)
       end,
       desc = "Next Buffer",
     },
     {
-      "<S-A-h>",
+      "<C-A-h>",
       function()
         require("bufferline").cycle(-1)
       end,
