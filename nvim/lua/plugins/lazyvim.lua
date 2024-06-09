@@ -3,31 +3,18 @@ return {
   version = false,
   keys = {
     {
-      "<leader>lc",
+      "<leader>lh",
       function()
-        require("telescope.builtin").live_grep({
-          prompt_title = "Grep LazyVim config",
-          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
-        })
+        require("lazy.view").show("home")
       end,
-      desc = "Search (grep) LazyVim",
+      desc = "Lazy Home",
     },
     {
-      "<leader>lg",
+      "<leader>ll",
       function()
-        require("telescope.builtin").live_grep({
-          prompt_title = "Grep LazyVim config",
-          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
-        })
+        require("lazy.manage").log()
       end,
-      desc = "Search (grep) LazyVim",
-    },
-    {
-      "<leader>le",
-      function()
-        require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
-      end,
-      desc = "Edit Lazy Config Folder",
+      desc = "Lazy Log",
     },
     {
       "<leader>lu",
@@ -37,21 +24,71 @@ return {
       desc = "Lazy Update",
     },
     {
-      "<leader>lf",
+      "<leader>lg",
       function()
-        require("telescope.builtin").find_files({
-          prompt_title = "Find nvim Config",
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep Dotfiles",
+          cwd = "~/.dotfiles",
+        })
+      end,
+      desc = "Search (grep) Dotfiles",
+    },
+    {
+      "<leader>ls",
+      function()
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep Dotfiles",
+          cwd = "~/.dotfiles",
+        })
+      end,
+      desc = "Search (grep) Dotfiles",
+    },
+    {
+      "<leader>lG",
+      function()
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep LazyVim config",
           cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
         })
       end,
-      desc = "Lazy Config",
+      desc = "Search (grep) LazyVim",
     },
     {
-      "<leader>ll",
+      "<leader>lS",
       function()
-        require("lazy.view").show("home")
+        require("telescope.builtin").live_grep({
+          prompt_title = "Grep LazyVim config",
+          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+        })
       end,
-      desc = "Lazy Home",
+      desc = "Search (grep) LazyVim",
+    },
+    {
+      "<leader>lf",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Find Dotfiles",
+          cwd = "~/.dotfiles",
+        })
+      end,
+      desc = "Find Dotfiles",
+    },
+    {
+      "<leader>lF",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Find LazyVim Files",
+          cwd = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+        })
+      end,
+      desc = "Find LazyVim Files",
+    },
+    {
+      "<leader>le",
+      function()
+        require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
+      end,
+      desc = "Edit Neovim Plugins Folder",
     },
   },
 }
