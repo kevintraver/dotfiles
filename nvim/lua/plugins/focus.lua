@@ -21,12 +21,5 @@ return {
       end,
       desc = "Split Nicely",
     },
-    {
-      "<A-C-l>",
-      function()
-        require("focus").split_command("l")
-      end,
-      desc = "Split Nicely",
-    },
   },
 }
