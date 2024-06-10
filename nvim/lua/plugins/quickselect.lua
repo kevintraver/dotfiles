@@ -1,5 +1,5 @@
 return {
   "ausgefuchster/quickselect.nvim",
-  event = "VeryLazy",
+  lazy = true,
   config = true,
 }
