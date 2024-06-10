@@ -2,9 +2,9 @@ return {
   "echasnovski/mini.ai",
   event = "VeryLazy",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
-  config = function()
+  opts = function()
     local gen_spec = require("mini.ai").gen_spec
-    require("mini.ai").setup({
+    return {
       mappings = {
         around_last = "ap",
         inside_last = "ip",
@@ -72,6 +72,6 @@ return {
         u = gen_spec.function_call(), -- u for "Usage"
         U = gen_spec.function_call({ name_pattern = "[%w_]" }),
       },
-    })
+    }
   end,
 }
