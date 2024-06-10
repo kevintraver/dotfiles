@@ -1,6 +1,7 @@
 return {
   "rbong/vim-flog",
   lazy = true,
+  enabled = false,
   cmd = { "Flog", "Flogsplit", "Floggit" },
   dependencies = {
     "tpope/vim-fugitive",
