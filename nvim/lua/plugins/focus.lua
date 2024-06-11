@@ -21,5 +21,12 @@ return {
       end,
       desc = "Split Nicely",
     },
+    {
+      "<leader>wm",
+      function()
+        require("focus").focus_max_or_equal()
+      end,
+      desc = "Maximize Toggle",
+    },
   },
 }
