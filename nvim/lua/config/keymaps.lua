@@ -85,6 +85,7 @@ end, { desc = "Open/Edit HTTP Request" })
 
 vim.keymap.set("n", "<C-i>", "<C-i>")
 
+vim.keymap.set("n", "<Tab>", function()
   vim.cmd.tabn()
 end)
 
