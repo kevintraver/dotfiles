@@ -15,14 +15,14 @@ return {
   end,
   keys = {
     {
-      "<leader>ghl",
+      "<leader>gls",
       function()
         require("telescope").extensions.advanced_git_search.search_log_content()
       end,
       desc = "Git Search (Log)",
     },
     {
-      "<leader>ghf",
+      "<leader>glS",
       function()
         require("telescope").extensions.advanced_git_search.search_log_content_file()
       end,

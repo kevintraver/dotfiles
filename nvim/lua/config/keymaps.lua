@@ -51,6 +51,9 @@ end, { desc = "New Tab" })
 vim.keymap.del("n", "<leader>l")
 vim.keymap.del("n", "<leader>L")
 
+vim.keymap.del("n", "<leader>gl")
+vim.keymap.del("n", "<leader>gL")
+
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
