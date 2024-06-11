@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>wz",
+      "<leader>uz",
       function()
         require("zen-mode").toggle()
       end,
