@@ -83,7 +83,8 @@ vim.keymap.set("n", "<leader>er", function()
   end
 end, { desc = "Open/Edit HTTP Request" })
 
-vim.keymap.set("n", "<C-Space>", function()
+vim.keymap.set("n", "<C-i>", "<C-i>")
+
   vim.cmd.tabn()
 end)
 
