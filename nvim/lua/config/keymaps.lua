@@ -89,6 +89,10 @@ vim.keymap.set("n", "<Tab>", function()
   vim.cmd.tabn()
 end)
 
+vim.keymap.set("n", "<S-Tab>", function()
+  vim.cmd.tabp()
+end)
+
 -- insert date
 vim.keymap.set("i", "<C-g>d", '<C-r>=strftime("%F")<CR>')
 
