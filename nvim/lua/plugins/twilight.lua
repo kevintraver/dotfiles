@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<leader>wt",
+      "<leader>uZ",
       function()
         require("twilight").toggle()
       end,
