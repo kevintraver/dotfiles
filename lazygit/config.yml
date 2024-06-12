@@ -19,3 +19,5 @@ gui:
   scrollHeight: 20
   nerdFontsVersion: "3"
   skipRewordInEditorWarning: true
+
+notARepository: "quit"
