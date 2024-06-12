@@ -2,6 +2,7 @@ os:
   edit: "nvr -s -l {{filename}}"
   editAtLine: "nvr -s -l +{{line}} {{filename}}"
   editAtLineAndWait: "nvr -s -l --remote-wait +{{line}} {{filename}}"
+  editPreset: "nvim"
 
 promptToReturnFromSubprocess: false
 
