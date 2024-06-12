@@ -11,7 +11,7 @@ vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move Left" })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move Right" })
 
 -- save file
-vim.keymap.set({ "n" }, "<A-s>", function()
+vim.keymap.set({ "n", "i", "o" }, "<A-s>", function()
   vim.cmd.write()
 end, { desc = "Save File" })
 
