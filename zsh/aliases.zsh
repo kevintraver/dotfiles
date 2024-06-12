@@ -83,6 +83,3 @@ function tmux-yt-dlp() {
 
 alias ytdl="noglob tmux-yt-dlp"
 alias ytd="noglob tmux-yt-dlp"
-
-# https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli#setting-up-aliases-for-copilot-in-the-cli
-eval "$(gh copilot alias -- zsh)"
