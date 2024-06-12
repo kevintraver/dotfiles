@@ -53,6 +53,7 @@ return {
         callback = function()
           require("oil").save()
         end,
+        mode = { "n", "i" },
       },
     },
   },
