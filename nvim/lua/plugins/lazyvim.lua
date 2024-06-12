@@ -84,6 +84,16 @@ return {
       desc = "Find LazyVim Files",
     },
     {
+      "<leader>ld",
+      function()
+        require("telescope.builtin").find_files({
+          prompt_title = "Find Dotfiles",
+          cwd = "~/.dotfiles",
+        })
+      end,
+      desc = "Find Dotfiles",
+    },
+    {
       "<leader>le",
       function()
         require("oil").open(vim.fn.stdpath("config") .. "/lua/plugins")
