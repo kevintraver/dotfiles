@@ -54,6 +54,7 @@ eval "$(pyenv init -)"
 
 # https://github.com/rust-lang/cargo
 export PATH="$HOME/.cargo/bin:$PATH"
+source "$HOME/.cargo/env"
 
 # https://zsh.sourceforge.io/Guide/zshguide04.html
 WORDCHARS=${WORDCHARS/\/}
