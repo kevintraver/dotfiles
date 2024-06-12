@@ -51,6 +51,7 @@ return {
       ["<A-s>"] = {
         desc = "Save",
         callback = function()
+          vim.cmd.stopinsert()
           require("oil").save()
         end,
         mode = { "n", "i" },
