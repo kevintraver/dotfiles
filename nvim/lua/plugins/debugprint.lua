@@ -1,7 +1,14 @@
 return {
   "andrewferrier/debugprint.nvim",
   lazy = true,
-  config = true,
+  opts = {
+    keymaps = {
+      normal = {
+        toggle_comment_debug_prints = "g?t",
+        delete_debug_prints = "g?d",
+      },
+    },
+  },
   cmd = {
     "ToggleCommentDebugPrints",
     "DeleteDebugPrints",
@@ -15,5 +22,7 @@ return {
     { "g?O", mode = "n", desc = "Debug Print: Text Object Above" },
     { "g?v", mode = "x", desc = "Debug Print: Variable Debug Above" },
     { "g?V", mode = "x", desc = "Debug Print: Variable Debug Below" },
+    { "g?t", mode = "n", desc = "Debug Print: Toggle Debug Prints" },
+    { "g?d", mode = "n", desc = "Debug Print: Delete Debug Prints" },
   },
 }
