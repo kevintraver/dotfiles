@@ -18,7 +18,10 @@ return {
       "OverseerClearCache",
     },
     opts = {
-      strategy = "toggleterm",
+      strategy = {
+        "toggleterm",
+        direction = "vertical",
+      },
     },
   },
   {
