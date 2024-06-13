@@ -8,6 +8,9 @@ return {
         advanced_git_search = {
           diff_plugin = "diffview",
           git_flags = { "--no-pager" },
+          keymaps = {
+            show_entire_commit = "<CR>",
+          },
         },
       },
     })
