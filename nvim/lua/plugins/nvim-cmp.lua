@@ -9,6 +9,7 @@ return {
     { "tzachar/cmp-fuzzy-path" },
     { "SergioRibera/cmp-dotenv" },
     { "f3fora/cmp-spell" },
+    { "hrsh7th/cmp-emoji" },
   },
   opts = function(_, opts)
     opts.sources = require("cmp").config.sources({
@@ -34,7 +35,8 @@ return {
       { name = "treesitter", priority = 6 },
       { name = "dotenv", priority = 7 },
       { name = "copilot", priority = 8 },
-      { name = "spell", priority = 9 },
+      { name = "emoji", priority = 9 },
+      { name = "spell", priority = 10 },
     })
   end,
 }
