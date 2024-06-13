@@ -2,10 +2,11 @@ return {
   "folke/edgy.nvim",
   optional = true,
   opts = function(_, opts)
-    table.insert(opts.bottom, {
-      ft = "qf",
-      title = "QuickFix",
-      height = 0.5,
-    })
+    for _, v in ipairs(opts.bottom) do
+      if v.ft == "qf" then
+        v.size = { height = 0.5 }
+        break
+      end
+    end
   end,
 }
