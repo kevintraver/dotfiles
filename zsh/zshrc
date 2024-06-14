@@ -26,8 +26,7 @@ source $HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh
 export FZF_DEFAULT_OPTS="
 --height=50%
 --layout=reverse
---bind 'tab:accept'
-"
+--bind 'tab:accept'"
 
 # https://github.com/Aloxaf/fzf-tab
 source $HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
