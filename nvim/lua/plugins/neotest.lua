@@ -1,6 +1,7 @@
 return {
   {
     "nvim-neotest/neotest",
+    event = "VeryLazy",
     keys = {
       {
         "<leader>tw",
