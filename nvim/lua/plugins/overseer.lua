@@ -23,6 +23,15 @@ return {
         direction = "vertical",
       },
     },
+    keys = {
+      {
+        "<leader>or",
+        function()
+          require("overseer").run_template()
+        end,
+        desc = "Run Task",
+      },
+    },
   },
   {
     "folke/edgy.nvim",
