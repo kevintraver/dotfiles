@@ -36,6 +36,7 @@ return {
       { name = "fuzzy_path", priority = 7 },
       { name = "emoji", priority = 8 },
       { name = "spell", priority = 9 },
+      { name = "lazydev", priority = 10 },
     })
   end,
 }
