@@ -7,7 +7,6 @@ return {
     { "tzachar/cmp-fuzzy-buffer" },
     { "tzachar/fuzzy.nvim" },
     { "tzachar/cmp-fuzzy-path" },
-    { "f3fora/cmp-spell" },
     { "hrsh7th/cmp-emoji" },
   },
   opts = function(_, opts)
@@ -35,7 +34,6 @@ return {
       },
       { name = "fuzzy_path", priority = 7 },
       { name = "emoji", priority = 8 },
-      { name = "spell", priority = 9 },
       { name = "lazydev", priority = 10 },
     })
   end,
