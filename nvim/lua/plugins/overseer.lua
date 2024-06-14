@@ -31,6 +31,13 @@ return {
         end,
         desc = "Run Task",
       },
+      {
+        "<leader>ot",
+        function()
+          require("overseer").toggle()
+        end,
+        desc = "Toggle",
+      },
     },
   },
   {
