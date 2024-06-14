@@ -13,10 +13,13 @@ return {
   opts = function(_, opts)
     opts.sources = require("cmp").config.sources({
       { name = "nvim_lsp", priority = 1 },
-      { name = "snippets", priority = 2 },
+      { name = "copilot", priority = 2 },
       { name = "cmp_yanky", priority = 3 },
+      { name = "treesitter", priority = 4 },
+      { name = "snippets", priority = 5 },
       {
         name = "fuzzy_buffer",
+        priority = 6,
         option = {
           get_bufnrs = function()
             local bufs = {}
@@ -30,11 +33,9 @@ return {
           end,
         },
       },
-      { name = "fuzzy_path", priority = 5 },
-      { name = "treesitter", priority = 6 },
-      { name = "copilot", priority = 8 },
-      { name = "emoji", priority = 9 },
-      { name = "spell", priority = 10 },
+      { name = "fuzzy_path", priority = 7 },
+      { name = "emoji", priority = 8 },
+      { name = "spell", priority = 9 },
     })
   end,
 }
