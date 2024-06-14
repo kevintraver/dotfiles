@@ -18,6 +18,7 @@ return {
       { name = "snippets", priority = 5 },
       {
         name = "fuzzy_buffer",
+        max_item_count = 3,
         priority = 6,
         option = {
           get_bufnrs = function()
