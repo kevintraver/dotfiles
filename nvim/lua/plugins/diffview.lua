@@ -79,6 +79,18 @@ return {
           ["<A-g>"] = function()
             require("diffview").close()
           end,
+          ["j"] = function()
+            require("diffview.actions").select_next_entry()
+          end,
+          ["k"] = function()
+            require("diffview.actions").select_prev_entry()
+          end,
+          ["gg"] = function()
+            require("diffview.actions").select_first_entry()
+          end,
+          ["G"] = function()
+            require("diffview.actions").select_last_entry()
+          end,
         },
       },
     },
