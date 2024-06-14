@@ -2,9 +2,6 @@ return {
   "pmizio/typescript-tools.nvim",
   lazy = true,
   ft = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
     "typescript",
     "typescriptreact",
     "typescript.tsx",
