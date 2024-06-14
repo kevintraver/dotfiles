@@ -1,5 +1,6 @@
 return {
   "nvimtools/none-ls.nvim",
+  event = "VeryLazy",
   enabled = true,
   dependencies = {
     "davidmh/cspell.nvim",
