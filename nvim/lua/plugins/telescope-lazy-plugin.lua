@@ -71,6 +71,22 @@ return {
               end,
             },
           },
+          custom_entries = {
+            {
+              name = "LazyVim",
+              filepath = vim.fn.stdpath("config") .. "/lua/plugins/lazyvim.lua",
+              line = 2,
+              repo_url = "https://github.com/LazyVim/LazyVim",
+              repo_dir = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+            },
+            {
+              name = "LazyVim",
+              filepath = vim.fn.stdpath("config") .. "/lua/config/lazy.lua",
+              line = 19,
+              repo_url = "https://github.com/LazyVim/LazyVim",
+              repo_dir = vim.fn.stdpath("data") .. "/lazy/LazyVim",
+            },
+          },
         },
       },
     })
