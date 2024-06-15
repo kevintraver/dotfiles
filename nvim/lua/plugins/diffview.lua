@@ -54,6 +54,8 @@ return {
           ["<A-u>"] = function()
             require("tinygit").undoLastCommitOrAmend()
           end,
+          ["<tab>"] = false,
+          ["<s-tab>"] = false,
         },
         view = {
           ["q"] = function()
@@ -91,6 +93,8 @@ return {
           ["G"] = function()
             require("diffview.actions").select_last_entry()
           end,
+          ["<tab>"] = false,
+          ["<s-tab>"] = false,
         },
       },
     },
