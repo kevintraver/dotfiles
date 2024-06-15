@@ -10,6 +10,7 @@ return {
       function()
         require("octo.commands").octo("pr", "list", "states=OPEN")
       end,
+      desc = "Octo List Open Pull Requests",
     },
   },
 }
