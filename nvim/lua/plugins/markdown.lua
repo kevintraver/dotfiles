@@ -30,4 +30,10 @@ return {
       },
     },
   },
+
+  {
+    "ChuufMaster/markdown-toc",
+    config = true,
+    ft = "markdown",
+  },
 }
