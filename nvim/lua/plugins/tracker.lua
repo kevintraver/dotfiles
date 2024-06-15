@@ -1,5 +1,5 @@
 return {
   "GuiC0506/Tracker.nvim",
-  enabled = false,
+  enabled = true,
   config = true,
 }
