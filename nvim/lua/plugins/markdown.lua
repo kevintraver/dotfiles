@@ -5,6 +5,7 @@ return {
     lazy = true,
     config = true,
   },
+
   {
     "MeanderingProgrammer/markdown.nvim",
     lazy = true,
@@ -35,5 +36,11 @@ return {
     "ChuufMaster/markdown-toc",
     config = true,
     ft = "markdown",
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    lazy = true,
+    enabled = false,
   },
 }
