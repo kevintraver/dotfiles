@@ -22,6 +22,21 @@ return {
                   bufnr
                 )
               end,
+              ["<A-b>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_url(
+                  bufnr
+                )
+              end,
+              ["<A-g>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
+                  bufnr
+                )
+              end,
+              ["<A-e>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
+                  bufnr
+                )
+              end,
             },
             ["n"] = {
               ["<C-b>"] = function(bufnr)
@@ -35,6 +50,21 @@ return {
                 )
               end,
               ["<C-e>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
+                  bufnr
+                )
+              end,
+              ["<A-b>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_url(
+                  bufnr
+                )
+              end,
+              ["<A-g>"] = function(bufnr)
+                require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
+                  bufnr
+                )
+              end,
+              ["<A-e>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
                   bufnr
                 )
