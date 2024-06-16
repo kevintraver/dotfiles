@@ -86,7 +86,7 @@ return {
       desc = "Switch Buffer",
     },
     {
-      "<leader>j",
+      "<A-j>",
       function()
         require("telescope.builtin").lsp_document_symbols()
       end,
