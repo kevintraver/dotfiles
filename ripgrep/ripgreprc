@@ -1,3 +1,4 @@
+--vimgrep
 --hidden
 --smart-case
 --glob=!.git/
