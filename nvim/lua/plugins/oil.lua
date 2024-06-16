@@ -10,7 +10,26 @@ return {
       ["g?"] = "actions.show_help",
       ["<CR>"] = "actions.select",
       ["<A-l>"] = "actions.select",
-      ["<C-t>"] = "actions.select_tab",
+      ["<C-t>"] = {
+        callback = function()
+          local dir = require("oil").get_current_dir()
+          require("oil").close()
+          require("toggleterm.terminal").Terminal
+            :new({ dir = dir, count = 4, direction = "vertical" })
+            :toggle()
+        end,
+        desc = "Open directory in toggle term",
+      },
+      ["<A-t>"] = {
+        callback = function()
+          local dir = require("oil").get_current_dir()
+          require("oil").close()
+          require("toggleterm.terminal").Terminal
+            :new({ dir = dir, count = 4, direction = "vertical" })
+            :toggle()
+        end,
+        desc = "Open directory in toggle term",
+      },
       ["<A-p>"] = "actions.preview",
       ["<A-h>"] = "actions.parent",
       ["<A-j>"] = "j",
