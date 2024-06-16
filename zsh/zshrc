@@ -21,6 +21,9 @@ zstyle ':completion:*' matcher-list '' \
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
 
+# https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
+export RIPGREP_CONFIG_PATH="$DOTFILES_HOME/ripgrep/ripgreprc"
+
 # https://github.com/MenkeTechnologies/zsh-expand
 source $HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh
 
