@@ -28,7 +28,7 @@ return {
     },
     {
       "s",
-      mode = { "o", "x" },
+      mode = { "o" },
       function()
         require("flash").treesitter({
           remote_op = {
@@ -37,6 +37,14 @@ return {
         })
       end,
       desc = "Flash Treesitter",
+    },
+    {
+      "s",
+      mode = { "x" },
+      function()
+        require("flash").jump()
+      end,
+      desc = "Flash Jump",
     },
     {
       "r",
