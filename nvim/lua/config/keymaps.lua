@@ -85,13 +85,13 @@ end, { desc = "Open/Edit HTTP Request" })
 
 vim.keymap.set("n", "<C-i>", "<C-i>")
 
-vim.keymap.set("n", "<Tab>", function()
-  vim.cmd.tabn()
-end)
-
-vim.keymap.set("n", "<S-Tab>", function()
-  vim.cmd.tabp()
-end)
+-- vim.keymap.set("n", "<Tab>", function()
+--   vim.cmd.tabn()
+-- end)
+--
+-- vim.keymap.set("n", "<S-Tab>", function()
+--   vim.cmd.tabp()
+-- end)
 
 -- insert date
 vim.keymap.set("i", "<C-g>d", '<C-r>=strftime("%F")<CR>')
