@@ -6,6 +6,8 @@ prompt pure
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit; compinit
 
+export DOTFILES_HOME="$HOME/.dotfiles"
+
 # https://github.com/zdharma-continuum/fast-syntax-highlighting
 source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
@@ -61,10 +63,9 @@ WORDCHARS=${WORDCHARS/\/}
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
 
-export DOTFILES_HOME="$HOME/.dotfiles/zsh"
-source "$DOTFILES_HOME/editor.zsh"
-source "$DOTFILES_HOME/keymaps.zsh"
-source "$DOTFILES_HOME/history/history.zsh"
-source "$DOTFILES_HOME/aliases.zsh"
+source "$DOTFILES_HOME/zsh/editor.zsh"
+source "$DOTFILES_HOME/zsh/keymaps.zsh"
+source "$DOTFILES_HOME/zsh/history/history.zsh"
+source "$DOTFILES_HOME/zsh/aliases.zsh"
 
 source ~/.zshrc.local
