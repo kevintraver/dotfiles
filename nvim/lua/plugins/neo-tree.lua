@@ -43,17 +43,6 @@ return {
     },
     keys = {
       {
-        "<A-b>",
-        function()
-          require("neo-tree.command").execute({
-            reveal = true,
-            toggle = true,
-            reveal_force_cwd = true,
-          })
-        end,
-        desc = "NeoTree (Root Dir)",
-      },
-      {
         "<A-e>",
         function()
           require("neo-tree.command").execute({
