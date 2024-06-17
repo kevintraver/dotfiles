@@ -1,5 +1,6 @@
 return {
   "gabrielpoca/replacer.nvim",
+  enabled = false,
   lazy = true,
   keys = {
     {
