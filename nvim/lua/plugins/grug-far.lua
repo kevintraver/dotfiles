@@ -18,7 +18,7 @@ return {
     },
     keys = {
       {
-        "<leader>rg",
+        "<leader>fr",
         function()
           require("grug-far").grug_far()
         end,
