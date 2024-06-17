@@ -83,6 +83,7 @@ vim.keymap.set("n", "<leader>er", function()
   end
 end, { desc = "Open/Edit HTTP Request" })
 
+-- Fix to be able to remap tab
 vim.keymap.set("n", "<C-i>", "<C-i>")
 
 -- vim.keymap.set("n", "<Tab>", function()
