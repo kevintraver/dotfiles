@@ -1,5 +1,8 @@
 return {
   "LazyVim/LazyVim",
+  opts = {
+    colorscheme = "monokai-nightasty",
+  },
   version = false,
   keys = {
     {
