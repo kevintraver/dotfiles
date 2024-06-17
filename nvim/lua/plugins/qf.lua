@@ -11,5 +11,12 @@ return {
       end,
       desc = "Quickfix Toggle",
     },
+    {
+      "<leader>q",
+      function()
+        require("qf").toggle("c")
+      end,
+      desc = "Quickfix Toggle",
+    },
   },
 }
