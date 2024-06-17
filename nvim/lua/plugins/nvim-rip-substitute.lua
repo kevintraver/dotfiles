@@ -1,6 +1,11 @@
 return {
   lazy = true,
   "chrisgrieser/nvim-rip-substitute",
+  opts = {
+    keymaps = {
+      abort = "<esc>",
+    },
+  },
   keys = {
     {
       "<leader>sr",
