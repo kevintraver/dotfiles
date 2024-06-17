@@ -3,7 +3,7 @@ return {
   lazy = true,
   keys = {
     {
-      "<leader>rq",
+      "<leader>xr",
       function()
         require("replacer").run()
       end,
