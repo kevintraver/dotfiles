@@ -3,7 +3,7 @@ return {
   "chrisgrieser/nvim-rip-substitute",
   keys = {
     {
-      "<leader>rr",
+      "<leader>sr",
       mode = { "n", "x" },
       function()
         require("rip-substitute").sub()
