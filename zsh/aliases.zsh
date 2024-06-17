@@ -83,3 +83,6 @@ function tmux-yt-dlp() {
 
 alias ytdl="noglob tmux-yt-dlp"
 alias ytd="noglob tmux-yt-dlp"
+
+# tmux
+alias t="tmux attach || tmux new"
