@@ -13,14 +13,14 @@ return {
   end,
   keys = {
     {
-      "<leader>j",
+      "<A-j>",
       function()
         require("glance").open("definitions")
       end,
       desc = "Glance Definition",
     },
     {
-      "<leader>k",
+      "<A-k>",
       function()
         require("glance").open("references")
       end,
