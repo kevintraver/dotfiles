@@ -4,42 +4,42 @@ return {
   config = true,
   opts = {
     mapping = {
-      startStopRecording = "<leader>qr",
-      playMacro = "<leader>qp",
-      switchSlot = "<leader>qc",
-      editMacro = "<leader>qe",
-      deleteAllMacros = "<leader>qd",
-      yankMacro = "<leader>qy",
-      addBreakPoint = "<leader>qb",
+      startStopRecording = "<leader>mr",
+      playMacro = "<C-m>",
+      switchSlot = "<leader>mc",
+      editMacro = "<leader>me",
+      deleteAllMacros = "<leader>md",
+      yankMacro = "<leader>my",
+      addBreakPoint = "<leader>mb",
     },
   },
   keys = {
     {
-      "<leader>qr",
+      "<leader>mr",
       desc = "Start/Stop Recording",
     },
     {
-      "<leader>qp",
+      "<C-m>",
       desc = "Play Macro",
     },
     {
-      "<leader>qc",
+      "<leader>ms",
       desc = "Switch Macro Slot",
     },
     {
-      "<leader>qe",
+      "<leader>me",
       desc = "Edit Macro",
     },
     {
-      "<leader>qd",
+      "<leader>md",
       desc = "Delete All Macros",
     },
     {
-      "<leader>qy",
+      "<leader>my",
       desc = "Yank Macro",
     },
     {
-      "<leader>qb",
+      "<leader>mb",
       desc = "Insert Macro Breakpoint",
     },
   },
