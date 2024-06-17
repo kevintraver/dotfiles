@@ -11,6 +11,7 @@
   diffFilter = delta --color-only --features=interactive
 
 [delta]
+  line-numbers = true
   features = decorations
   navigate = true
   light = false
