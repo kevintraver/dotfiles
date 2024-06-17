@@ -9,6 +9,7 @@ return {
       "codelldb",
       "commitlint",
       "cspell",
+      "emmet-language-server",
       "eslint_d",
       "html-lsp",
       "htmlbeautifier",
