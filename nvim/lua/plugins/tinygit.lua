@@ -60,7 +60,7 @@ return {
       desc = "Git Push (with PR)",
     },
     {
-      "<leader>gu",
+      "<leader>gU",
       function()
         require("tinygit").undoLastCommitOrAmend()
       end,
