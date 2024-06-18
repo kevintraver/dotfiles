@@ -96,5 +96,22 @@ return {
       end,
       desc = "Flash Jump (Line)",
     },
+    {
+      "<C-s>",
+      mode = { "i" },
+      function()
+        require("flash").jump()
+      end,
+      desc = "Flash",
+    },
+    {
+      "<C-s>",
+      mode = { "n" },
+      function()
+        require("flash").jump()
+        vim.cmd.startinsert()
+      end,
+      desc = "Flash",
+    },
   },
 }
