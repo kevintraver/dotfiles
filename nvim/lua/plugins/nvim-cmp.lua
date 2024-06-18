@@ -10,9 +10,6 @@ return {
     { "hrsh7th/cmp-emoji" },
   },
   opts = function(_, opts)
-    require("cmp").setup.filetype({
-      "rip-substitute",
-    }, { enabled = false })
     opts.sources = require("cmp").config.sources({
       { name = "nvim_lsp", priority = 1 },
       { name = "copilot", priority = 2 },
