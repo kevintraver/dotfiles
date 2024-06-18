@@ -6,6 +6,9 @@ return {
       abort = "<esc>",
       insertModeConfirm = "<CR>",
     },
+    prefill = {
+      startInReplaceLineIfPrefill = true,
+    },
   },
   keys = {
     {
