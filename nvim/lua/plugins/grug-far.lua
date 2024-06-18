@@ -41,4 +41,14 @@ return {
     "nvim-pack/nvim-spectre",
     enabled = false,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    optional = true,
+    keys = {
+      {
+        "<leader>fr",
+        false,
+      },
+    },
+  },
 }
