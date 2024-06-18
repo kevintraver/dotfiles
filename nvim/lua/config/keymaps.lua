@@ -5,11 +5,6 @@
 
 vim.keymap.set("n", ";", ":")
 
-vim.keymap.set("i", "<C-b>", "<ESC>^i", { desc = "Move Beginning of Line" })
-vim.keymap.set("i", "<C-e>", "<End>", { desc = "Move End Of line" })
-vim.keymap.set("i", "<C-h>", "<Left>", { desc = "Move Left" })
-vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move Right" })
-
 -- save file
 vim.keymap.set({ "n", "i", "o" }, "<A-s>", function()
   vim.cmd.write()
