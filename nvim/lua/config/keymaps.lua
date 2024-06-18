@@ -5,6 +5,15 @@
 
 vim.keymap.set("n", ";", ":")
 
+vim.keymap.set("i", "<C-l>", "<Del>", { desc = "Delete Right" })
+vim.keymap.set("i", "<C-i>", "<Home>", { desc = "Move To Beginning of Line" })
+vim.keymap.set("i", "<C-a>", "<End>", { desc = "Move To End Of line" })
+vim.keymap.set("i", "<C-j>", "<C-u>", { desc = "Delete To Beginning of Line" })
+vim.keymap.set("i", "<C-d>", "<C-o>D", { desc = "Delete Until End of Line" })
+vim.keymap.set("i", "<C-u>", "<C-o>u", { desc = "Undo" })
+vim.keymap.set("i", "<C-r>", "<C-o><C-r>", { desc = "Redo" })
+vim.keymap.set("i", "<A-p>", "<C-o>P", { desc = "Paste" })
+
 -- save file
 vim.keymap.set({ "n", "i", "o" }, "<A-s>", function()
   vim.cmd.write()
