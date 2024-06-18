@@ -72,3 +72,7 @@ source "$DOTFILES_HOME/zsh/history/history.zsh"
 source "$DOTFILES_HOME/zsh/aliases.zsh"
 
 source ~/.zshrc.local
+
+# https://github.com/postmodern/chruby
+# source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+# source /opt/homebrew/opt/chruby/share/chruby/auto.sh
