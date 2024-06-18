@@ -43,6 +43,19 @@ return {
       desc = "Yanky Put Before Filter",
     },
     {
+      "<C-A-p>",
+      mode = { "n" },
+      function()
+        local yanky_wrappers = require("yanky.wrappers")
+        require("yanky").put(
+          "P",
+          false,
+          yanky_wrappers.linewise(yanky_wrappers.change("=="))
+        )
+      end,
+      desc = "Yanky Put Before Filter",
+    },
+    {
       "[p",
       mode = { "n" },
       function()
