@@ -5,13 +5,13 @@ return {
     opts = {
       keymaps = {
         replace = { n = "R" },
-        qflist = { n = "q" },
+        qflist = { n = "<C-q>" },
         syncLocations = { n = "s" },
         syncLine = { n = "l" },
         close = { n = "q" },
-        historyOpen = { n = "t" },
+        historyOpen = { n = "o" },
         historyAdd = { n = "a" },
-        refresh = { n = "f" },
+        refresh = { n = "r" },
         gotoLocation = { n = "<enter>" },
         pickHistoryEntry = { n = "<enter>" },
       },
