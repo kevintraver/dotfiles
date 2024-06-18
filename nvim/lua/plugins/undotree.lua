@@ -27,12 +27,12 @@ return {
       table.insert(opts.left, {
         ft = "undotree",
         title = "Undotree",
-        size = { width = 0.5 },
+        size = { width = 0.3 },
       })
       table.insert(opts.bottom, {
         ft = "undotreeDiff",
         title = "Undotree Diff",
-        size = { height = 0.5 },
+        size = { height = 0.3 },
       })
     end,
   },
