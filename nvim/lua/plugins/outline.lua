@@ -28,6 +28,7 @@ return {
           v.pinned = false
           v.size = { width = 0.3 }
         end
+        break
       end
     end,
   },

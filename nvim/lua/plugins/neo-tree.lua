@@ -68,6 +68,7 @@ return {
       for _, v in ipairs(opts.left) do
         if v.ft == "neo-tree" then
           v.pinned = false
+          break
         end
       end
     end,
