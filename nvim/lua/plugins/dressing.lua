@@ -3,7 +3,6 @@ return {
   event = "VeryLazy",
   opts = {
     input = {
-      insert_only = false,
       title_pos = "center",
       relative = "editor",
       start_in_insert = true,
