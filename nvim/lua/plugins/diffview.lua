@@ -9,17 +9,8 @@ return {
     opts = {
       keymaps = {
         file_panel = {
-          ["<Enter>"] = function()
-            require("diffview.actions").goto_file_edit()
-          end,
           ["e"] = function()
             require("diffview.actions").goto_file_edit()
-          end,
-          ["j"] = function()
-            require("diffview.actions").select_next_entry()
-          end,
-          ["k"] = function()
-            require("diffview.actions").select_prev_entry()
           end,
           ["<C-n>"] = function()
             require("diffview.actions").select_next_entry()
@@ -78,12 +69,6 @@ return {
           end,
           ["<A-g>"] = function()
             require("diffview").close()
-          end,
-          ["j"] = function()
-            require("diffview.actions").select_next_entry()
-          end,
-          ["k"] = function()
-            require("diffview.actions").select_prev_entry()
           end,
           ["gg"] = function()
             require("diffview.actions").select_first_entry()
