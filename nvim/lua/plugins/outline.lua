@@ -27,8 +27,8 @@ return {
         if v.ft == "Outline" then
           v.pinned = false
           v.size = { width = 0.3 }
+          break
         end
-        break
       end
     end,
   },
