@@ -7,7 +7,6 @@ return {
       show_hidden = true,
     },
     skip_confirm_for_simple_edits = true,
-    loading_message_delay = 1000,
     delete_to_trash = true,
     use_default_keymaps = false,
     keymaps = {
