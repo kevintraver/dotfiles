@@ -1,5 +1,6 @@
 return {
   "SuperBo/fugit2.nvim",
+  enabled = false,
   lazy = true,
   opts = {
     width = 70,
