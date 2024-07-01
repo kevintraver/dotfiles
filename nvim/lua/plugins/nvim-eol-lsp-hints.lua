@@ -1,5 +1,5 @@
 return {
-  "chrisgrieser/nvim-eol-lsp-hints",
+  "chrisgrieser/nvim-lsp-endhints",
   event = "LspAttach",
   config = true,
 }
