@@ -1,5 +1,5 @@
 return {
   "gregorias/coerce.nvim",
-  enabled = false,
+  enabled = true,
   config = true,
 }
