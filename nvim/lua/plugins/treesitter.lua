@@ -53,7 +53,7 @@ return {
     },
     textobjects = {
       swap = {
-        enable = true,
+        enable = false,
         swap_next = {
           ["<S-l>"] = {
             query = {

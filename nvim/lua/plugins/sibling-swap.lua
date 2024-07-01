@@ -1,7 +1,6 @@
 return {
   "Wansmer/sibling-swap.nvim",
   lazy = true,
-  enabled = false,
   opts = {
     use_default_keymaps = false,
     highlight_node_at_cursor = true,
