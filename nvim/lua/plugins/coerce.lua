@@ -1,6 +1,7 @@
 return {
   "gregorias/coerce.nvim",
   enabled = true,
+  event = "VeryLazy",
   opts = function()
     local coroutine_m = require("coerce.coroutine")
     local selector_m = require("coerce.selector")
