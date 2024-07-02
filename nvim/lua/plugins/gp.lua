@@ -4,6 +4,7 @@ return {
     lazy = true,
     cmd = {
       "GpChatNew",
+      "GpAgent",
       "GpChatToggle",
       "GpRewrite",
       "GpContext",
