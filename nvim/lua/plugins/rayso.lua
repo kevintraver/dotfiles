@@ -1,5 +1,6 @@
 return {
   "TobinPalmer/rayso.nvim",
+  enabled = false,
   lazy = true,
   keys = {
     {
