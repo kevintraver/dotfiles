@@ -22,6 +22,12 @@ return {
         },
         {
           vim_mode = "n",
+          keymap_prefix = "gU",
+          selector = selector_m.select_current_word,
+          transformer = transformer_m.transform_local,
+        },
+        {
+          vim_mode = "n",
           keymap_prefix = "guo",
           selector = selector_m.select_with_motion,
           transformer = transformer_m.transform_local,
