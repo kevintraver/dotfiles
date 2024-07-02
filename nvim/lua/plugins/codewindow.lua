@@ -1,5 +1,6 @@
 return {
   "gorbit99/codewindow.nvim",
+  enabled = false,
   lazy = true,
   config = true,
   opts = {
