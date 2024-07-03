@@ -3,7 +3,7 @@
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", ";", ":")
+vim.keymap.set({ "n", "x" }, ";", ":")
 
 vim.keymap.set("i", "<C-l>", "<Del>", { desc = "Delete Right" })
 vim.keymap.set("i", "<C-i>", "<Home>", { desc = "Move To Beginning of Line" })
