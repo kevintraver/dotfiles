@@ -56,6 +56,22 @@ return {
       desc = "Yanky Put Before Filter",
     },
     {
+      "<A-p>",
+      mode = { "i" },
+      function()
+        require("yanky").put("p", false)
+      end,
+      desc = "Yanky Put After",
+    },
+    {
+      "<S-A-p>",
+      mode = { "i" },
+      function()
+        require("yanky").put("P", false)
+      end,
+      desc = "Yanky Put Before",
+    },
+    {
       "[p",
       mode = { "n" },
       function()
