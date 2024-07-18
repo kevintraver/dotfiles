@@ -27,17 +27,6 @@ return {
     },
   },
   {
-    "folke/edgy.nvim",
-    optional = true,
-    opts = function(_, opts)
-      table.insert(opts.right, {
-        ft = "grug-far",
-        title = "Grug",
-        size = { width = 0.5 },
-      })
-    end,
-  },
-  {
     "nvim-pack/nvim-spectre",
     enabled = false,
   },
