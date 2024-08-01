@@ -2,6 +2,7 @@ return {
   {
 
     "nvim-pack/nvim-spectre",
+    enabled = false,
     lazy = true,
     keys = {
       {
