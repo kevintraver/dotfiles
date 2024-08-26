@@ -1,6 +1,7 @@
 return {
   {
     "rest-nvim/rest.nvim",
+    enabled = false,
     lazy = true,
     ft = "http",
     name = "rest-nvim",
