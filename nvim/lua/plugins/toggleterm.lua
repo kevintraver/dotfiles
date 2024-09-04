@@ -63,6 +63,26 @@ return {
         end,
         desc = "Ranger",
       },
+      {
+        "<C-Enter>",
+        ft = { "bash", "zsh" },
+        mode = { "n", "i" },
+        function()
+          require("toggleterm").send_lines_to_terminal("single_line", true, {})
+        end,
+        desc = "Send Line to Terminal",
+        buffer = true,
+      },
+      {
+        "<A-Enter>",
+        ft = { "bash", "zsh" },
+        mode = { "n", "i" },
+        function()
+          require("toggleterm").send_lines_to_terminal("single_line", true, {})
+        end,
+        desc = "Send Line to Terminal",
+        buffer = true,
+      },
     },
   },
   {
