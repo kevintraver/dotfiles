@@ -20,7 +20,7 @@ return {
       {
         "<leader>fr",
         function()
-          require("grug-far").grug_far()
+          require("grug-far").open()
         end,
         desc = "Grug Far",
       },
