@@ -149,5 +149,9 @@ return {
       "<leader>fb",
       false,
     },
+    {
+      "<leader>fr",
+      false,
+    },
   },
 }
