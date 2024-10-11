@@ -18,5 +18,19 @@ return {
       end,
       desc = "Send the request",
     },
+    {
+      "<leader>Ry",
+      function()
+        require("kulala").copy()
+      end,
+      desc = "Copy request as curl",
+    },
+    {
+      "<leader>Rp",
+      function()
+        require("kulala").from_curl()
+      end,
+      desc = "Paste from curl",
+    },
   },
 }
