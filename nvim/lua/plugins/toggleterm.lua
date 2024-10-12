@@ -8,7 +8,13 @@ return {
         "<A-t>",
         mode = { "n", "t" },
         function()
-          require("toggleterm").toggle_command("direction=vertical")
+          require("toggleterm.terminal").Terminal
+            :new({
+              direction = "horizontal",
+              count = 2,
+              hidden = true,
+            })
+            :toggle()
         end,
         desc = "Toggle Terminal",
       },
@@ -95,10 +101,10 @@ return {
           break
         end
       end
-      table.insert(opts.right, {
+      table.insert(opts.bottom, {
         ft = "toggleterm",
         title = "Terminal",
-        size = { width = 0.4 },
+        size = { height = 0.5 },
         filter = function(_, win)
           return vim.api.nvim_win_get_config(win).relative == ""
         end,
