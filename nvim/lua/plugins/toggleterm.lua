@@ -33,9 +33,16 @@ return {
       },
       {
         "<A-w>",
-        mode = { "t" },
+        ft = "toggleterm",
+        mode = { "t", "n" },
         function()
-          require("toggleterm").toggle_command()
+          require("toggleterm.terminal").Terminal
+            :new({
+              direction = "horizontal",
+              count = 2,
+              hidden = true,
+            })
+            :close()
         end,
         desc = "Toggle (Close) Terminal",
       },
