@@ -31,7 +31,7 @@ return {
     },
     keys = {
       {
-        "<A-\\>",
+        "<C-\\>",
         mode = { "n", "v" },
         function()
           require("CopilotChat").toggle()
