@@ -11,21 +11,16 @@ exa
 exit
 fc
 fzf
-git log
-git pull
-git push
-git undo
 gl
+l
 la
-lazygit
 lg
 ls
-mssql-cli
 nvim
 nvim .
 nvr
 pwd
-reset-chrome
-reset-firefox
+t
 tc
 tmux
+z
