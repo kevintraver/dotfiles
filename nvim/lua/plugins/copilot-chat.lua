@@ -31,6 +31,10 @@ return {
     },
     keys = {
       {
+        "<leader>aa",
+        false,
+      },
+      {
         "<C-\\>",
         mode = { "n", "v" },
         function()
