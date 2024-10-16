@@ -2,6 +2,7 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     lazy = true,
+    enabled = false,
     branch = "canary",
     config = true,
     opts = {
@@ -33,36 +34,6 @@ return {
       {
         "<leader>aa",
         false,
-      },
-      {
-        "<C-\\>",
-        mode = { "n", "v" },
-        function()
-          require("CopilotChat").toggle()
-        end,
-        desc = "Toggle Copilot Chat",
-      },
-      {
-        mode = { "n", "v" },
-        "<leader>ae",
-        function()
-          local copilot_chat = require("CopilotChat")
-          local config = require("CopilotChat.config")
-          copilot_chat.ask(config.prompts.Explain.prompt)
-        end,
-        desc = "Copilot Chat - Explain Code",
-      },
-      {
-        mode = { "n", "v" },
-        "<leader>ac",
-        function()
-          local copilot_chat = require("CopilotChat")
-          local config = require("CopilotChat.config")
-          copilot_chat.ask(config.prompts.CommitStaged.prompt, {
-            selection = config.prompts.CommitStaged.selection,
-          })
-        end,
-        desc = "Copilot Chat - Generate Commit Message",
       },
     },
   },
