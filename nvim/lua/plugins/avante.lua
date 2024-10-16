@@ -3,6 +3,9 @@ return {
   event = "VeryLazy",
   opts = {
     provider = "openai",
+    hints = {
+      enabled = false,
+    },
   },
   build = "make",
   keys = {
