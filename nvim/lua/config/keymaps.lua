@@ -103,3 +103,7 @@ vim.keymap.set("i", "<C-g>d", '<C-r>=strftime("%F")<CR>')
 
 -- insert date and time
 vim.keymap.set("i", "<C-g>t", '<C-r>=strftime("%d/%m/%y %H:%M:%S")<CR>')
+
+vim.keymap.set("n", "<leader>lL", function()
+  vim.cmd.LspRestart()
+end, { desc = "Restart LSP" })
