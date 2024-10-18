@@ -10,6 +10,7 @@ return {
   keys = {
     {
       "<A-\\>",
+      mode = { "n", "v" },
       function()
         require("avante.api").ask()
       end,
