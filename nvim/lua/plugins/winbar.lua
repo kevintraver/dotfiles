@@ -1,8 +1,6 @@
 return {
-  {
-    "ramilito/winbar.nvim",
-    enabled = false,
-    event = "VimEnter",
-    config = true,
-  },
+  "ramilito/winbar.nvim",
+  enabled = false,
+  event = "VimEnter",
+  config = true,
 }
