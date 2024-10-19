@@ -9,5 +9,6 @@ return {
   },
   {
     "olrtg/nvim-emmet",
+    event = "VeryLazy",
   },
 }
