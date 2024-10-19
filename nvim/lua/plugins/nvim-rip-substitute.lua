@@ -23,17 +23,20 @@ return {
       "<tab>",
       mode = { "n", "i" },
       function()
-        --- @class RipSubstituteState
-        --- @field cursorPositions table<number, number>
         local state = require("rip-substitute.state").state
-        if state.cursorPositions == nil then
-          state.cursorPositions = { [1] = 0, [2] = 0 }
-        end
         local cursorPos = vim.api.nvim_win_get_cursor(state.popupWinNr)
-        state.cursorPositions[cursorPos[1]] = cursorPos[2]
-        local line = cursorPos[1] == 1 and 2 or 1
-        local col = state.cursorPositions[line] or 0
-        vim.api.nvim_win_set_cursor(state.popupWinNr, { line, col })
+        local currentLine = cursorPos[1]
+        local otherLine = currentLine == 1 and 2 or 1
+        local otherLineLength = #vim.api.nvim_buf_get_lines(
+          state.popupBufNr,
+          otherLine - 1,
+          otherLine,
+          false
+        )[1]
+        vim.api.nvim_win_set_cursor(
+          state.popupWinNr,
+          { otherLine, otherLineLength }
+        )
       end,
       ft = "rip-substitute",
     },
