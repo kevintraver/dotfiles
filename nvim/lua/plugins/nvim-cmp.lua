@@ -37,5 +37,8 @@ return {
       { name = "emoji", priority = 8 },
       { name = "lazydev", priority = 10 },
     })
+    require("cmp").setup.filetype("rip-substitute", {
+      enabled = false,
+    })
   end,
 }
