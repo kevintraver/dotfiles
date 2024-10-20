@@ -49,7 +49,7 @@ return {
       function()
         require("flash").treesitter_search({
           remote_op = {
-            restore = true,
+            restore = false,
           },
         })
       end,
