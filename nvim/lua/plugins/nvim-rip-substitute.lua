@@ -8,6 +8,7 @@ return {
     },
     prefill = {
       startInReplaceLineIfPrefill = true,
+      alsoPrefillReplaceLine = true,
     },
   },
   keys = {
