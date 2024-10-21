@@ -23,13 +23,11 @@ return {
     "folke/edgy.nvim",
     optional = true,
     opts = function(_, opts)
-      for _, v in ipairs(opts.right) do
-        if v.ft == "Outline" then
-          v.pinned = false
-          v.size = { width = 0.3 }
-          break
-        end
-      end
+      table.insert(opts.right, {
+        title = "Outline",
+        ft = "Outline",
+        size = { width = 0.3 },
+      })
     end,
   },
 }
