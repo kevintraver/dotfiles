@@ -1,6 +1,7 @@
 return {
   "dnlhc/glance.nvim",
   cmd = "Glance",
+  enabled = false,
   opts = function()
     return {
       use_trouble_qf = true,
@@ -11,20 +12,4 @@ return {
       },
     }
   end,
-  keys = {
-    {
-      "<A-j>",
-      function()
-        require("glance").open("definitions")
-      end,
-      desc = "Glance Definition",
-    },
-    {
-      "<A-k>",
-      function()
-        require("glance").open("references")
-      end,
-      desc = "Glance References",
-    },
-  },
 }
