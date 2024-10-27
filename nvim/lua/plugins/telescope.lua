@@ -11,6 +11,7 @@ return {
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<C-u>"] = require("telescope.actions").results_scrolling_up,
           ["<C-d>"] = require("telescope.actions").results_scrolling_down,
+          ["<C-Space>"] = require("telescope.actions").to_fuzzy_refine,
         },
         n = {
           ["<A-w>"] = require("telescope.actions").close,
@@ -20,6 +21,7 @@ return {
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<C-u>"] = require("telescope.actions").results_scrolling_up,
           ["<C-d>"] = require("telescope.actions").results_scrolling_down,
+          ["<C-Space>"] = require("telescope.actions").to_fuzzy_refine,
         },
       },
       scroll_strategy = "limit",
