@@ -3,7 +3,10 @@ return {
   event = "VeryLazy",
   enabled = true,
   dependencies = {
-    "davidmh/cspell.nvim",
+    {
+      "davidmh/cspell.nvim",
+      event = "VeryLazy",
+    },
   },
   config = function()
     require("null-ls").setup({
