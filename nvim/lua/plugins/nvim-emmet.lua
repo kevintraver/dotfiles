@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    enabled = false,
     opts = {
       servers = {
         emmet_language_server = {},
@@ -9,6 +10,7 @@ return {
   },
   {
     "olrtg/nvim-emmet",
+    enabled = false,
     event = "VeryLazy",
   },
 }
