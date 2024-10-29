@@ -1,6 +1,6 @@
 return {
   "csessh/stopinsert.nvim",
-  event = "VeryLazy",
+  event = "InsertEnter",
   opts = {
     show_popup_msg = false,
   },
