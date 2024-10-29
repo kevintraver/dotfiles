@@ -6,6 +6,7 @@ return {
   keys = {
     {
       "<leader>cc",
+      mode = { "n", "v" },
       function()
         require("nvim-silicon").clip()
       end,
