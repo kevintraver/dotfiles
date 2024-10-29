@@ -1,7 +1,7 @@
 return {
   "iamyoki/buffer-reopen.nvim",
   lazy = true,
-  opts = {},
+  config = true,
   keys = {
     {
       "<leader>bt",
