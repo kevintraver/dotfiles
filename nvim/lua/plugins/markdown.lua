@@ -8,9 +8,6 @@ return {
 
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    lazy = true,
-    ft = "markdown",
-    config = true,
     keys = {
       {
         "<leader>um",
