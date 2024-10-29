@@ -1,5 +1,6 @@
 return {
   "pwntester/octo.nvim",
+  lazy = true,
   keys = {
     {
       "<leader>gp",
