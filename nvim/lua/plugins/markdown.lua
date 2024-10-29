@@ -7,10 +7,9 @@ return {
   },
 
   {
-    "MeanderingProgrammer/markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     lazy = true,
     ft = "markdown",
-    name = "render-markdown",
     config = true,
     keys = {
       {
