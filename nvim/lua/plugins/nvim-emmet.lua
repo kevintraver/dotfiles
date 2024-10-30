@@ -1,12 +1,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    enabled = false,
-    opts = {
-      servers = {
-        emmet_language_server = {},
-      },
-    },
+    -- opts = {
+    --   servers = {
+    --     emmet_language_server = {},
+    --   },
+    -- },
   },
   {
     "olrtg/nvim-emmet",
