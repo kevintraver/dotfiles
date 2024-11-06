@@ -86,3 +86,6 @@ alias ytd="noglob tmux-yt-dlp"
 
 # tmux
 alias t="tmux attach || tmux new"
+
+# speed
+alias speedtest="networkQuality"
