@@ -1,5 +1,6 @@
 return {
   "rainbowhxch/beacon.nvim",
+  enabled = false,
   event = "VeryLazy",
   config = true,
   opts = {
