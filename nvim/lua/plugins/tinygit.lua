@@ -3,12 +3,14 @@ return {
   lazy = true,
   dependencies = { "stevearc/dressing.nvim" },
   opts = {
-    backdrop = {
-      enabled = false,
-    },
-    commitMsg = {
-      enforceConvCommits = {
+    appearance = {
+      backdrop = {
         enabled = false,
+      },
+    },
+    commit = {
+      conventionalCommits = {
+        enforce = false,
       },
     },
     push = {
