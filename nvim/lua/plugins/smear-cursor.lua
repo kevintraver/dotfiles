@@ -2,5 +2,7 @@ return {
   "sphamba/smear-cursor.nvim",
   event = "VeryLazy",
   enabled = true,
-  opts = {},
+  opts = {
+    use_floating_windows = false,
+  },
 }
