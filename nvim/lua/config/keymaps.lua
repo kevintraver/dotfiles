@@ -31,10 +31,6 @@ vim.keymap.set({ "n", "i", "x" }, "<A-C-w>", function()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
-vim.keymap.set("n", "<leader><space>", function()
-  vim.cmd.buffer("#")
-end, { desc = "Switch to Alternate Buffer" })
-
 -- close
 vim.keymap.set({ "n", "i", "x" }, "<A-S-w>", function()
   vim.cmd.stopinsert()
