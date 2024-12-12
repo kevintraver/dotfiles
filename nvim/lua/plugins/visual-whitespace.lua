@@ -11,6 +11,7 @@ return {
       function()
         require("visual-whitespace").toggle()
       end,
+      desc = "Toggle Visual Whitespace",
     },
   },
 }
