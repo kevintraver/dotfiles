@@ -5,6 +5,9 @@ return {
     require("telescope").setup({
       extensions = {
         lazy_plugins = {
+          picker_opts = {
+            sorting_strategy = "descending",
+          },
           mappings = {
             ["i"] = {
               ["<C-b>"] = function(bufnr)
