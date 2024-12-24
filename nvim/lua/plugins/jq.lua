@@ -6,7 +6,7 @@ return {
   },
   keys = {
     {
-      "<leader>cj",
+      "<leader>cJ",
       function()
         require("jq").run()
       end,
