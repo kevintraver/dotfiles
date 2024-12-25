@@ -56,7 +56,7 @@ return {
         swap = {
           enable = false,
           swap_next = {
-            ["<S-l>"] = {
+            ["L"] = {
               query = {
                 "@parameter.inner",
                 "@assignment.inner",
@@ -64,7 +64,7 @@ return {
             },
           },
           swap_previous = {
-            ["<S-h>"] = {
+            ["H"] = {
               query = {
                 "@parameter.inner",
                 "@assignment.inner",
@@ -77,20 +77,6 @@ return {
         },
         move = {
           enable = true,
-          goto_next_start = {
-            ["}"] = {
-              query = {
-                "@parameter.outer",
-              },
-            },
-          },
-          goto_previous_start = {
-            ["{"] = {
-              query = {
-                "@parameter.outer",
-              },
-            },
-          },
         },
       },
       context_commentstring = {
