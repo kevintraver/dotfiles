@@ -4,32 +4,44 @@ return {
   keys = {
     {
       "<S-Tab>",
-      "<cmd>Treewalker Up<cr>",
+      function()
+        require("treewalker").move_up()
+      end,
       desc = "Treewalker Up",
     },
     {
       "<Tab>",
-      "<cmd>Treewalker Down<cr>",
+      function()
+        require("treewalker").move_down()
+      end,
       desc = "Treewalker Down",
     },
     {
       "}",
-      "<cmd>Treewalker Right<cr>",
+      function()
+        require("treewalker").move_in()
+      end,
       desc = "Treewalker Right",
     },
     {
       "{",
-      "<cmd>Treewalker Left<cr>",
+      function()
+        require("treewalker").move_out()
+      end,
       desc = "Treewalker Left",
     },
     {
       "J",
-      "<cmd>Treewalker SwapDown<cr>",
+      function()
+        require("treewalker").swap_down()
+      end,
       desc = "Treewalker Swap Down",
     },
     {
       "K",
-      "<cmd>Treewalker SwapUp<cr>",
+      function()
+        require("treewalker").swap_up()
+      end,
       desc = "Treewalker Swap Up",
     },
   },
