@@ -15,7 +15,7 @@ return {
   },
   keys = {
     {
-      "<leader>mr",
+      "<leader>rr",
       desc = "Start/Stop Recording",
     },
     {
@@ -23,23 +23,23 @@ return {
       desc = "Play Macro",
     },
     {
-      "<leader>ms",
+      "<leader>rs",
       desc = "Switch Macro Slot",
     },
     {
-      "<leader>me",
+      "<leader>re",
       desc = "Edit Macro",
     },
     {
-      "<leader>md",
+      "<leader>rd",
       desc = "Delete All Macros",
     },
     {
-      "<leader>my",
+      "<leader>ry",
       desc = "Yank Macro",
     },
     {
-      "<leader>mb",
+      "<leader>rb",
       desc = "Insert Macro Breakpoint",
     },
   },
