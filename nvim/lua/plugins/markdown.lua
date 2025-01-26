@@ -18,7 +18,7 @@ return {
         ft = "markdown",
       },
       {
-        "<leader>mt",
+        "<leader>mr",
         function()
           require("render-markdown").toggle()
         end,
