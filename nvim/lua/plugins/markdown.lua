@@ -106,4 +106,19 @@ return {
     lazy = true,
     enabled = false,
   },
+
+  {
+    "yousefakbar/toc.nvim",
+    ft = "markdown",
+    opts = {},
+    keys = {
+      {
+        "<leader>mt",
+        function()
+          require("toc").TOC()
+        end,
+        desc = "Table of contents",
+      },
+    },
+  },
 }
