@@ -23,6 +23,17 @@ return {
         end,
         desc = "Open directory in toggle term",
       },
+      ["<A-e>"] = {
+        callback = function()
+          local dir = require("oil").get_current_dir()
+          require("neo-tree.command").execute({
+            reveal = true,
+            dir = dir,
+            toggle = true,
+          })
+        end,
+        desc = "Open directory in toggle term",
+      },
       ["<A-t>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
