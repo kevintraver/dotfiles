@@ -44,10 +44,6 @@ export PATH="/opt/cloud66/bin:${PATH}"
 export MCFLY_RESULTS_SORT=LAST_RUN
 eval "$(mcfly init zsh)"
 
-# https://github.com/I60R/page
-export PAGER=page
-export MANPAGER="page -t man"
-
 # https://github.com/Schniz/fnm
 eval "$(fnm env --use-on-cd)"
 
