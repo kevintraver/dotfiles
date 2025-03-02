@@ -26,7 +26,7 @@ return {
       desc = "Git Commit",
     },
     {
-      "<leader>gA",
+      "<leader>ga",
       function()
         require("tinygit").amendNoEdit()
       end,
@@ -40,14 +40,14 @@ return {
       desc = "Git Amend Message",
     },
     {
-      "<leader>gpp",
+      "<leader>gp",
       function()
         require("tinygit").push({})
       end,
       desc = "Git Push",
     },
     {
-      "<leader>gpf",
+      "<leader>gP",
       function()
         require("tinygit").push({
           forceWithLease = true,
@@ -56,7 +56,7 @@ return {
       desc = "Git Push (Force)",
     },
     {
-      "<leader>gpr",
+      "<leader>gr",
       function()
         require("tinygit").push({
           createGitHubPr = true,
@@ -65,7 +65,7 @@ return {
       desc = "Git Push (with PR)",
     },
     {
-      "<leader>gU",
+      "<leader>gu",
       function()
         require("tinygit").undoLastCommitOrAmend()
       end,
