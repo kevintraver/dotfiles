@@ -80,3 +80,5 @@ fi
 
 # add local bin to path
 export PATH="$PATH:/Users/kevin/.local/bin"
+
+export AIDER_EDITOR=nvim
