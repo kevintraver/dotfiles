@@ -2,12 +2,16 @@ return {
   "GeorgesAlkhouri/nvim-aider",
   lazy = true,
   keys = {
-    { "<leader>a/", "<cmd>AiderTerminalToggle<cr>", desc = "Open Aider" },
+    {
+      "<leader>aa",
+      "<cmd>AiderTerminalToggle<cr>",
+      desc = "Open Aider",
+    },
     {
       "<leader>as",
+      mode = { "n", "v" },
       "<cmd>AiderTerminalSend<cr>",
       desc = "Send to Aider",
-      mode = { "n", "v" },
     },
     {
       "<leader>ac",
@@ -19,9 +23,13 @@ return {
       "<cmd>AiderQuickSendBuffer<cr>",
       desc = "Send Buffer To Aider",
     },
-    { "<leader>a+", "<cmd>AiderQuickAddFile<cr>", desc = "Add File to Aider" },
     {
-      "<leader>a-",
+      "<leader>af",
+      "<cmd>AiderQuickAddFile<cr>",
+      desc = "Add File to Aider",
+    },
+    {
+      "<leader>ad",
       "<cmd>AiderQuickDropFile<cr>",
       desc = "Drop File from Aider",
     },
@@ -29,19 +37,6 @@ return {
       "<leader>ar",
       "<cmd>AiderQuickReadOnlyFile<cr>",
       desc = "Add File as Read-Only",
-    },
-    -- Example nvim-tree.lua integration if needed
-    {
-      "<leader>a+",
-      "<cmd>AiderTreeAddFile<cr>",
-      desc = "Add File from Tree to Aider",
-      ft = "NvimTree",
-    },
-    {
-      "<leader>a-",
-      "<cmd>AiderTreeDropFile<cr>",
-      desc = "Drop File from Tree from Aider",
-      ft = "NvimTree",
     },
   },
   config = true,
