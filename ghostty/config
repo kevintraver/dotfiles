@@ -1,0 +1,10 @@
+font-family = "Hack"
+
+keybind = "super+w=unbind"
+keybind = "super+t=unbind"
+keybind = "super+q=unbind"
+keybind = "super+d=unbind"
+keybind = "super+e=unbind"
+keybind = "super+a=unbind"
+
+theme = "/Users/kevin/.config/ghostty/themes/tokyonight_storm.conf"
