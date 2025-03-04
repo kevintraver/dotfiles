@@ -11,7 +11,7 @@ return {
     },
     keys = {
       {
-        "<A-]>",
+        "<D-]>",
         function()
           if require("trouble").is_open() then
             require("trouble").next({ skip_groups = true, jump = true })
@@ -25,7 +25,7 @@ return {
         desc = "Next Trouble/Quickfix Item",
       },
       {
-        "<A-[>",
+        "<D-[>",
         function()
           if require("trouble").is_open() then
             require("trouble").prev({ skip_groups = true, jump = true })

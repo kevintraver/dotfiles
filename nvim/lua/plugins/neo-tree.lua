@@ -14,7 +14,7 @@ return {
           ["P"] = { "toggle_preview", config = { use_float = false } },
           ["L"] = { "toggle_preview", config = { use_float = false } },
           ["v"] = "open_vsplit",
-          ["<A-w>"] = "close_window",
+          ["<D-w>"] = "close_window",
           ["<Tab>"] = "prev_source",
           ["<S-Tab>"] = "next_source",
         },
@@ -30,8 +30,8 @@ return {
         window = {
           mappings = {
             ["<Esc>"] = "clear_filter",
-            ["<A-h>"] = "navigate_up",
-            ["<A-f>"] = "filter_on_submit",
+            ["<D-h>"] = "navigate_up",
+            ["<D-f>"] = "filter_on_submit",
             ["]h"] = "next_git_modified",
             ["[h"] = "prev_git_modified",
             ["g."] = "toggle_hidden",
@@ -41,7 +41,7 @@ return {
     },
     keys = {
       {
-        "<A-e>",
+        "<D-e>",
         function()
           require("neo-tree.command").execute({
             reveal = true,

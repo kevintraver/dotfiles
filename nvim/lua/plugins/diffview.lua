@@ -21,13 +21,13 @@ return {
           ["q"] = function()
             require("diffview").close()
           end,
-          ["<A-d>"] = function()
+          ["<D-d>"] = function()
             require("diffview").close()
           end,
-          ["<A-g>"] = function()
+          ["<D-g>"] = function()
             require("diffview").close()
           end,
-          ["<A-w>"] = function()
+          ["<D-w>"] = function()
             require("diffview").close()
           end,
           ["x"] = function()
@@ -39,10 +39,10 @@ return {
           ["c"] = function()
             require("tinygit").smartCommit()
           end,
-          ["<A-p>"] = function()
+          ["<D-p>"] = function()
             require("tinygit").push({})
           end,
-          ["<A-u>"] = function()
+          ["<D-u>"] = function()
             require("tinygit").undoLastCommitOrAmend()
           end,
         },
@@ -50,7 +50,7 @@ return {
           ["q"] = function()
             require("diffview").close()
           end,
-          ["<A-w>"] = function()
+          ["<D-w>"] = function()
             require("diffview").close()
           end,
         },
@@ -58,16 +58,16 @@ return {
           ["q"] = function()
             require("diffview").close()
           end,
-          ["<A-w>"] = function()
+          ["<D-w>"] = function()
             require("diffview").close()
           end,
-          ["<A-d>"] = function()
+          ["<D-d>"] = function()
             require("diffview.actions").open_in_diffview()
           end,
           ["d"] = function()
             require("diffview.actions").open_in_diffview()
           end,
-          ["<A-g>"] = function()
+          ["<D-g>"] = function()
             require("diffview").close()
           end,
           ["gg"] = function()
@@ -81,7 +81,7 @@ return {
     },
     keys = {
       {
-        "<A-d>",
+        "<D-d>",
         function()
           require("diffview").open({})
         end,

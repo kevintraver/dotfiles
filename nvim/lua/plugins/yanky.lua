@@ -18,7 +18,7 @@ return {
       desc = "Yank to Global Clipboard",
     },
     {
-      "<A-p>",
+      "<D-p>",
       mode = { "n" },
       function()
         local yanky_wrappers = require("yanky.wrappers")
@@ -57,7 +57,7 @@ return {
       desc = "Yanky Put Before Filter",
     },
     {
-      "<A-p>",
+      "<D-p>",
       mode = { "i" },
       function()
         require("yanky").put("p", false)
@@ -89,7 +89,7 @@ return {
       desc = "Yanky Cycle Backward",
     },
     {
-      "<A-y>",
+      "<D-y>",
       mode = { "n" },
       function()
         require("telescope").extensions.yank_history.yank_history({})

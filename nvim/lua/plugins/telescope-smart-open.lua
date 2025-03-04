@@ -12,7 +12,7 @@ return {
   },
   keys = {
     {
-      "<A-o>",
+      "<D-o>",
       function()
         require("telescope").extensions.smart_open.smart_open()
       end,

@@ -4,7 +4,7 @@ return {
   config = true,
   keys = {
     {
-      "<A-t>",
+      "<D-t>",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
@@ -31,7 +31,7 @@ return {
       desc = "New Terminal Tab",
     },
     {
-      "<A-w>",
+      "<D-w>",
       ft = "toggleterm",
       mode = { "t", "n" },
       function()
@@ -46,7 +46,7 @@ return {
       desc = "Toggle (Close) Terminal",
     },
     {
-      "<A-g>",
+      "<D-g>",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
@@ -61,7 +61,7 @@ return {
       desc = "Lazygit",
     },
     {
-      "<A-S-e>",
+      "<D-S-e>",
       mode = { "n", "t" },
       function()
         require("toggleterm.terminal").Terminal
@@ -86,7 +86,7 @@ return {
       buffer = true,
     },
     {
-      "<A-Enter>",
+      "<D-Enter>",
       ft = { "bash", "zsh" },
       mode = { "n", "i" },
       function()

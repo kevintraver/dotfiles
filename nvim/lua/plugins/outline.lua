@@ -11,7 +11,7 @@ return {
     },
     keys = {
       {
-        "<A-i>",
+        "<D-i>",
         function()
           require("outline").toggle_outline()
         end,
