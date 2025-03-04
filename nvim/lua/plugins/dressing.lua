@@ -7,13 +7,13 @@ return {
       start_in_insert = true,
       mappings = {
         n = {
-          ["<A-w>"] = "Close",
-          ["<A-s>"] = "Confirm",
+          ["<D-w>"] = "Close",
+          ["<D-s>"] = "Confirm",
           ["<C-s>"] = "Confirm",
         },
         i = {
-          ["<A-w>"] = "Close",
-          ["<A-s>"] = "Confirm",
+          ["<D-w>"] = "Close",
+          ["<D-s>"] = "Confirm",
           ["<C-s>"] = "Confirm",
         },
       },

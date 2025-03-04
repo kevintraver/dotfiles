@@ -25,17 +25,17 @@ return {
                   bufnr
                 )
               end,
-              ["<A-b>"] = function(bufnr)
+              ["<D-b>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_url(
                   bufnr
                 )
               end,
-              ["<A-g>"] = function(bufnr)
+              ["<D-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
                   bufnr
                 )
               end,
-              ["<A-e>"] = function(bufnr)
+              ["<D-e>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
                   bufnr
                 )
@@ -57,17 +57,17 @@ return {
                   bufnr
                 )
               end,
-              ["<A-b>"] = function(bufnr)
+              ["<D-b>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_url(
                   bufnr
                 )
               end,
-              ["<A-g>"] = function(bufnr)
+              ["<D-g>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_live_grep(
                   bufnr
                 )
               end,
-              ["<A-e>"] = function(bufnr)
+              ["<D-e>"] = function(bufnr)
                 require("telescope").extensions.lazy_plugins.actions.open_repo_dir(
                   bufnr
                 )

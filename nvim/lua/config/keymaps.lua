@@ -15,35 +15,35 @@ vim.keymap.set("i", "<C-u>", "<C-o>u", { desc = "Undo" })
 vim.keymap.set("i", "<C-r>", "<C-o><C-r>", { desc = "Redo" })
 
 -- save file
-vim.keymap.set({ "n", "i", "o" }, "<A-s>", function()
+vim.keymap.set({ "n", "i", "o" }, "<D-s>", function()
   vim.cmd.write()
 end, { desc = "Save File" })
 
 -- close
-vim.keymap.set({ "n", "i", "x" }, "<A-w>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
   vim.cmd.stopinsert()
   vim.cmd.close()
 end, { desc = "Close Window" })
 
 -- close
-vim.keymap.set({ "n", "i", "x" }, "<A-C-w>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-C-w>", function()
   vim.cmd.stopinsert()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
 -- close
-vim.keymap.set({ "n", "i", "x" }, "<A-S-w>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-S-w>", function()
   vim.cmd.stopinsert()
   vim.cmd.bdelete()
 end, { desc = "Close Buffer" })
 
 -- quitall
-vim.keymap.set({ "n", "i", "x" }, "<A-q>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-q>", function()
   vim.cmd.quitall()
 end, { desc = "Quit All" })
 
 -- new
-vim.keymap.set({ "n", "i", "x" }, "<A-n>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-n>", function()
   vim.cmd.tabnew()
 end, { desc = "New Tab" })
 

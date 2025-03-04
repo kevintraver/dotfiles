@@ -9,7 +9,7 @@ return {
   build = "make",
   keys = {
     {
-      "<A-\\>",
+      "<D-\\>",
       mode = { "n", "v" },
       function()
         require("avante.api").ask()

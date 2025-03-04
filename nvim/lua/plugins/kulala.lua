@@ -13,7 +13,7 @@ return {
       },
       {
         ft = { "http" },
-        "<A-Enter>",
+        "<D-Enter>",
         function()
           require("kulala").run()
         end,

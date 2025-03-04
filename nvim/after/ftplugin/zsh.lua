@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "/tmp/zsh*",
   callback = function()
-    vim.keymap.set({ "n", "i" }, "<A-w>", function()
+    vim.keymap.set({ "n", "i" }, "<D-w>", function()
       vim.cmd.write({ bang = true })
       vim.cmd.bdelete()
       require("toggleterm.terminal").Terminal
@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         })
         :toggle()
     end, { buffer = true })
-    vim.keymap.set({ "n", "i" }, "<A-e>", function()
+    vim.keymap.set({ "n", "i" }, "<D-e>", function()
       vim.cmd.write({ bang = true })
       vim.cmd.bdelete()
       require("toggleterm.terminal").Terminal
@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         })
         :toggle()
     end, { buffer = true })
-    vim.keymap.set({ "n", "i" }, "<A-Enter>", function()
+    vim.keymap.set({ "n", "i" }, "<D-Enter>", function()
       vim.cmd.write({ bang = true })
       vim.cmd.bdelete()
       require("toggleterm.terminal").Terminal

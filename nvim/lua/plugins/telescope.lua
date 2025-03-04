@@ -4,20 +4,20 @@ return {
     opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
       mappings = {
         i = {
-          ["<A-w>"] = require("telescope.actions").close,
+          ["<D-w>"] = require("telescope.actions").close,
           ["<C-l>"] = require("telescope.actions").file_vsplit,
-          ["<A-l>"] = require("telescope.actions").file_vsplit,
-          ["<A-o>"] = require("telescope.actions").select_default,
+          ["<D-l>"] = require("telescope.actions").file_vsplit,
+          ["<D-o>"] = require("telescope.actions").select_default,
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<C-u>"] = require("telescope.actions").results_scrolling_up,
           ["<C-d>"] = require("telescope.actions").results_scrolling_down,
           ["<C-Space>"] = require("telescope.actions").to_fuzzy_refine,
         },
         n = {
-          ["<A-w>"] = require("telescope.actions").close,
+          ["<D-w>"] = require("telescope.actions").close,
           ["<C-l>"] = require("telescope.actions").file_vsplit,
-          ["<A-l>"] = require("telescope.actions").file_vsplit,
-          ["<A-o>"] = require("telescope.actions").select_default,
+          ["<D-l>"] = require("telescope.actions").file_vsplit,
+          ["<D-o>"] = require("telescope.actions").select_default,
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<C-u>"] = require("telescope.actions").results_scrolling_up,
           ["<C-d>"] = require("telescope.actions").results_scrolling_down,
@@ -29,21 +29,21 @@ return {
   end,
   keys = {
     {
-      "<A-S-f>",
+      "<D-S-f>",
       function()
         require("telescope.builtin").live_grep()
       end,
       desc = "Grep",
     },
     {
-      "<A-C-f>",
+      "<D-C-f>",
       function()
         require("telescope.builtin").live_grep()
       end,
       desc = "Grep",
     },
     {
-      "<A-f>",
+      "<D-f>",
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
       end,
@@ -98,35 +98,35 @@ return {
       desc = "Switch Buffer",
     },
     {
-      "<A-j>",
+      "<D-j>",
       function()
         require("telescope.builtin").lsp_document_symbols()
       end,
       desc = "Goto Symbol",
     },
     {
-      "<A-S-j>",
+      "<D-S-j>",
       function()
         require("telescope.builtin").lsp_workspace_symbols()
       end,
       desc = "Goto Symbol (Workspace)",
     },
     {
-      "<A-C-j>",
+      "<D-C-j>",
       function()
         require("telescope.builtin").lsp_workspace_symbols()
       end,
       desc = "Goto Symbol (Workspace)",
     },
     {
-      "<A-k>",
+      "<D-k>",
       function()
         require("telescope.builtin").lsp_references()
       end,
       desc = "Goto References",
     },
     {
-      "<A-r>",
+      "<D-r>",
       function()
         require("telescope.builtin").resume()
       end,

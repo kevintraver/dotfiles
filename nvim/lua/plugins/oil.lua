@@ -12,7 +12,7 @@ return {
     keymaps = {
       ["g?"] = "actions.show_help",
       ["<CR>"] = "actions.select",
-      ["<A-l>"] = "actions.select",
+      ["<D-l>"] = "actions.select",
       ["<C-t>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
@@ -23,7 +23,7 @@ return {
         end,
         desc = "Open directory in toggle term",
       },
-      ["<A-e>"] = {
+      ["<D-e>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
           require("neo-tree.command").execute({
@@ -34,7 +34,7 @@ return {
         end,
         desc = "Open directory in toggle term",
       },
-      ["<A-t>"] = {
+      ["<D-t>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
           require("oil").close()
@@ -44,10 +44,10 @@ return {
         end,
         desc = "Open directory in toggle term",
       },
-      ["<A-p>"] = "actions.preview",
-      ["<A-h>"] = "actions.parent",
-      ["<A-j>"] = "j",
-      ["<A-k>"] = "k",
+      ["<D-p>"] = "actions.preview",
+      ["<D-h>"] = "actions.parent",
+      ["<D-j>"] = "j",
+      ["<D-k>"] = "k",
       ["<C-A-j>"] = "j",
       ["<C-A-k>"] = "k",
       ["<C-A-Enter>"] = "actions.select",
@@ -66,7 +66,7 @@ return {
       ["gx"] = "actions.open_external",
       ["g."] = "actions.toggle_hidden",
       ["q"] = "actions.close",
-      ["<A-w>"] = "actions.close",
+      ["<D-w>"] = "actions.close",
       ["H"] = "actions.toggle_hidden",
       ["<C-A-l>"] = "actions.select",
       ["<C-y>"] = {
@@ -81,7 +81,7 @@ return {
         end,
         desc = "Copy filepath",
       },
-      ["<A-s>"] = {
+      ["<D-s>"] = {
         desc = "Save",
         callback = function()
           vim.cmd.stopinsert()
@@ -93,7 +93,7 @@ return {
   },
   keys = {
     {
-      "<A-h>",
+      "<D-h>",
       function()
         require("oil").open()
       end,

@@ -91,7 +91,7 @@ return {
       desc = "Search Bookmarks",
     },
     {
-      "<A-m>",
+      "<D-m>",
       function()
         require("telescope").extensions.bookmarks.list({})
       end,

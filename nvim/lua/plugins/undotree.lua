@@ -8,12 +8,12 @@ return {
       keymaps = {
         ["<tab>"] = "move_next",
         ["k"] = "move_prev",
-        ["<A-w>"] = "quit",
+        ["<D-w>"] = "quit",
       },
     },
     keys = {
       {
-        "<A-u>",
+        "<D-u>",
         function()
           require("undotree").toggle()
         end,
