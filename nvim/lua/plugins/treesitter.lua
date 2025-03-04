@@ -2,6 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "LazyFile", "VeryLazy" },
+    vscode = true,
     opts = {
       ensure_installed = {
         "bash",
@@ -104,6 +105,7 @@ return {
 
   {
     "RRethy/nvim-treesitter-textsubjects",
+    vscode = true,
     event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
