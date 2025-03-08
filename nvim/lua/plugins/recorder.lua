@@ -2,6 +2,7 @@ return {
   "chrisgrieser/nvim-recorder",
   lazy = true,
   config = true,
+  enabled = false,
   opts = {
     mapping = {
       startStopRecording = "<leader>mr",
