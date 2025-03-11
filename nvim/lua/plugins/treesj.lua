@@ -1,5 +1,6 @@
 return {
   "Wansmer/treesj",
+  vscode = true,
   lazy = true,
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {
