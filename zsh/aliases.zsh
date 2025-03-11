@@ -89,3 +89,5 @@ alias t="tmux attach || tmux new"
 
 # speed
 alias speedtest="networkQuality"
+
+alias ws="windsurf"
