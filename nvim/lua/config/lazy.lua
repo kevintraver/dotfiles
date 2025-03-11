@@ -35,6 +35,7 @@ require("lazy").setup({
     -- that support semver
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
+  concurrency = 20,
   checker = { enabled = false }, -- automatically check for plugin updates
   dev = {
     path = vim.fn.stdpath("data") .. "/dev",
