@@ -1,0 +1,6 @@
+[
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpen"
+  }
+]
