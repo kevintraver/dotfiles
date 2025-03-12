@@ -23,5 +23,10 @@
     "key": "cmd+e",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
   }
 ]
