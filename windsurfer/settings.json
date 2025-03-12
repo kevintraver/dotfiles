@@ -13,5 +13,6 @@
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "windsurf.cascadeOpenOnReload": false,
-  "scm.defaultViewMode": "tree"
+  "scm.defaultViewMode": "tree",
+  "files.dialog.defaultPath": "/Users/kevin/code"
 }
