@@ -9,5 +9,6 @@
   "windsurf.rememberLastModelSelection": true,
   "windsurf.openRecentConversation": true,
   "windsurf.explainAndFixInCurrentConversation": true,
-  "windsurf.cascadeCommandsAllowList": []
+  "windsurf.cascadeCommandsAllowList": [],
+  "editor.formatOnSave": true
 }
