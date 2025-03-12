@@ -12,5 +12,6 @@
   "windsurf.cascadeCommandsAllowList": [],
   "editor.formatOnSave": true,
   "git.autofetch": true,
-  "windsurf.cascadeOpenOnReload": false
+  "windsurf.cascadeOpenOnReload": false,
+  "scm.defaultViewMode": "tree"
 }
