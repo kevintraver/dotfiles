@@ -14,5 +14,9 @@
   {
     "key": "cmd+t",
     "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.openRecent"
   }
 ]
