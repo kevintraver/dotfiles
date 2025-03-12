@@ -24,3 +24,5 @@ t
 tc
 tmux
 z
+ws
+ws .
