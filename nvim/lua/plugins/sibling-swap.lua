@@ -1,5 +1,6 @@
 return {
   "Wansmer/sibling-swap.nvim",
+  vscode = true,
   lazy = true,
   opts = {
     use_default_keymaps = false,
