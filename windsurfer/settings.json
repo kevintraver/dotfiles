@@ -10,5 +10,6 @@
   "windsurf.openRecentConversation": true,
   "windsurf.explainAndFixInCurrentConversation": true,
   "windsurf.cascadeCommandsAllowList": [],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "git.autofetch": true
 }
