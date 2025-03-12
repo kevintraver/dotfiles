@@ -28,5 +28,9 @@
     "key": "cmd+g",
     "command": "workbench.view.scm",
     "when": "workbench.scm.active"
-  }
+  },
+  {
+    "key": "cmd+,",
+    "command": "workbench.action.openGlobalSettings"
+  },
 ]
