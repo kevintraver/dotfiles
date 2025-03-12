@@ -18,5 +18,10 @@
   {
     "key": "shift+cmd+o",
     "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   }
 ]
