@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "resend": {
+      "command": "node",
+      "args": [
+        "/Users/kevin/.mcp/servers/mcp-send-email/build/index.js"
+      ]
+    },
+    "git": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/<path to mcp-servers>/mcp-servers/src/git",
+        "run",
+        "mcp-server-git"
+      ],
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    }
+  }
+}
