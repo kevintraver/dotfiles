@@ -30,7 +30,7 @@
     "when": "workbench.scm.active"
   },
   {
-    "key": "cmd+,",
-    "command": "workbench.action.openGlobalSettings"
+    "key": "cmd+d",
+    "command": "workbench.action.splitEditor"
   },
 ]
