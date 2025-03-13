@@ -10,9 +10,10 @@
   "windsurf.openRecentConversation": true,
   "windsurf.explainAndFixInCurrentConversation": true,
   "windsurf.cascadeCommandsAllowList": [],
+  "windsurf.cascadeOpenOnReload": true,
   "editor.formatOnSave": true,
   "git.autofetch": true,
-  "windsurf.cascadeOpenOnReload": false,
   "scm.defaultViewMode": "tree",
-  "files.dialog.defaultPath": "/Users/kevin/code"
+  "files.dialog.defaultPath": "/Users/kevin/code",
+  "search.useIgnoreFiles": false
 }
