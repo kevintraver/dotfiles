@@ -13,13 +13,12 @@
       ]
     },
     "git": {
-      "command": "uv",
+      "command": "uvx",
       "args": [
-        "--directory",
-        "/<path to mcp-servers>/mcp-servers/src/git",
-        "run",
-        "mcp-server-git"
-      ],
+        "mcp-server-git",
+        "--repository",
+        "/Users/kevin/.dotfiles"
+      ]
     },
     "sequential-thinking": {
       "command": "npx",
