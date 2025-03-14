@@ -8,13 +8,6 @@
         "/Users/kevin/.dotfiles"
       ]
     },
-    "github": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-github"
-      ]
-    },
     "resend": {
       "command": "node",
       "args": [
