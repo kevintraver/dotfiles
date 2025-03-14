@@ -14,13 +14,6 @@
         "mcp-server-fetch"
       ]
     },
-    "github": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-github"
-      ]
-    },
     "sequential-thinking": {
       "command": "npx",
       "args": [
