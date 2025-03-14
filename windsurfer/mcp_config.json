@@ -1,15 +1,5 @@
 {
   "mcpServers": {
-    "memory": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-memory"
-      ],
-      "env": {
-        "MEMORY_FILE_PATH": "/Users/kevin/.mcp/memory.json"
-      }
-    },
     "git": {
       "command": "uvx",
       "args": [

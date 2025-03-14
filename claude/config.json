@@ -8,16 +8,6 @@
         "/Users/kevin/.dotfiles"
       ]
     },
-    "memory": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-memory"
-      ],
-      "env": {
-        "MEMORY_FILE_PATH": "/Users/kevin/.mcp/memory.json"
-      }
-    },
     "fetch": {
       "command": "uvx",
       "args": [
