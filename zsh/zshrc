@@ -69,13 +69,13 @@ source "$DOTFILES_HOME/zsh/aliases.zsh"
 
 source ~/.zshrc.local
 
-# https://mise.jdx.dev/
-eval "$(mise activate zsh)"
-
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
+
+# https://mise.jdx.dev/
+eval "$(mise activate zsh)"
 
 # add local bin to path
 export PATH="$PATH:/Users/kevin/.local/bin"
