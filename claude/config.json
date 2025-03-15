@@ -2,31 +2,19 @@
   "mcpServers": {
     "puppeteer": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-puppeteer"
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
     },
     "git": {
       "command": "uvx",
-      "args": [
-        "mcp-server-git",
-        "--repository",
-        "/Users/kevin/.dotfiles"
-      ]
+      "args": ["mcp-server-git", "--repository", "/Users/kevin/.dotfiles"]
     },
     "fetch": {
       "command": "uvx",
-      "args": [
-        "mcp-server-fetch"
-      ]
+      "args": ["mcp-server-fetch"]
     },
     "sequential-thinking": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     }
   },
   "globalShortcut": ""
