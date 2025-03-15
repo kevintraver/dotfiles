@@ -15,5 +15,6 @@
   "git.autofetch": true,
   "scm.defaultViewMode": "tree",
   "files.dialog.defaultPath": "/Users/kevin/code",
+  "prettier.configPath": "/Users/kevin/.dotfiles/prettier/prettierrc",
   "search.useIgnoreFiles": false
 }
