@@ -1,5 +1,12 @@
 {
   "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
     "git": {
       "command": "uvx",
       "args": [
