@@ -8,12 +8,6 @@
         "/Users/kevin/.dotfiles"
       ]
     },
-    "resend": {
-      "command": "node",
-      "args": [
-        "/Users/kevin/.mcp/servers/mcp-send-email/build/index.js"
-      ]
-    },
     "sequential-thinking": {
       "command": "npx",
       "args": [
