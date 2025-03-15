@@ -6,12 +6,6 @@
         "mcp-server-fetch"
       ]
     },
-    "resend": {
-      "command": "node",
-      "args": [
-        "/Users/kevin/.mcp/servers/mcp-send-email/build/index.js"
-      ]
-    },
     "git": {
       "command": "uvx",
       "args": [
