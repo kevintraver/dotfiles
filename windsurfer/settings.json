@@ -17,5 +17,6 @@
   "files.dialog.defaultPath": "/Users/kevin/code",
   "prettier.configPath": "/Users/kevin/.dotfiles/prettier/prettierrc",
   "gitlens.ai.model": "anthropic:claude-3-5-sonnet-latest",
-  "search.useIgnoreFiles": false
+  "search.useIgnoreFiles": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
