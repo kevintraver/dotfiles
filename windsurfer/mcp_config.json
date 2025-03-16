@@ -11,6 +11,10 @@
     "puppeteer": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    },
+    "pandoc": {
+      "command": "uvx",
+      "args": ["mcp-pandoc"]
     }
   }
 }
