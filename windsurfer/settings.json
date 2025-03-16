@@ -18,5 +18,6 @@
   "prettier.configPath": "/Users/kevin/.dotfiles/prettier/prettierrc",
   "gitlens.ai.model": "anthropic:claude-3-5-sonnet-latest",
   "search.useIgnoreFiles": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format"
 }
