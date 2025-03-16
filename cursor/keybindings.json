@@ -32,5 +32,9 @@
   {
     "key": "cmd+d",
     "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "copyRelativeFilePath"
   }
 ]

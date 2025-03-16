@@ -1,15 +1,6 @@
 {
   "editor.minimap.enabled": false,
   "window.commandCenter": 1,
-  "files.exclude": {
-    "**/.aider": true,
-    "console.log": true
-  },
-  "search.exclude": {
-    "**/.aider": true,
-    "**/.aider*": true,
-    "console.log": true
-  },
   "explorer.excludeGitIgnore": true,
   "git.enableSmartCommit": true,
   "git.autofetch": true,
@@ -17,6 +8,7 @@
   "files.dialog.defaultPath": "/Users/kevin/code",
   "search.useIgnoreFiles": false,
   "editor.formatOnSave": true,
+  "prettier.configPath": "/Users/kevin/.dotfiles/prettier/prettierrc",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   }
