@@ -10,3 +10,7 @@ keybind = "super+a=unbind"
 theme = "/Users/kevin/.config/ghostty/themes/tokyonight_storm.conf"
 
 window-save-state = always
+
+window-width = 160
+window-height = 50
+
