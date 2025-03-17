@@ -19,5 +19,6 @@
   "gitlens.ai.model": "anthropic:claude-3-5-sonnet-latest",
   "search.useIgnoreFiles": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.newWindowDimensions": "maximized",
   "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format"
 }
