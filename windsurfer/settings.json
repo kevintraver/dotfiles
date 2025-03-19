@@ -17,8 +17,24 @@
   "files.dialog.defaultPath": "/Users/kevin/code",
   "prettier.configPath": "/Users/kevin/.dotfiles/prettier/prettierrc",
   "gitlens.ai.model": "anthropic:claude-3-5-sonnet-latest",
-  "search.useIgnoreFiles": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.packageManager": "pnpm",
+  "eslint.workingDirectories": ["apps", "packages"],
+  "prettier.printWidth": 100,
+  "prettier.arrowParens": "avoid",
+  "prettier.enable": true,
+  "prettier.endOfLine": "lf",
+  "prettier.jsxSingleQuote": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
   "window.newWindowDimensions": "maximized",
-  "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format"
+  "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format",
+  "extensions.ignoreRecommendations": true,
+  "files.exclude": {
+    "**/.next": true
+  },
+  "search.useGlobalIgnoreFiles": true
 }
