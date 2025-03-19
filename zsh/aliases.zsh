@@ -92,3 +92,6 @@ alias speedtest="networkQuality"
 
 # windsurf
 alias ws="windsurf"
+
+# pnpm run dev
+alias dev="pnpm run dev"
