@@ -1,7 +1,11 @@
 return {
   "gregorias/coerce.nvim",
+  vscode = true,
   dependencies = {
-    "gregorias/coop.nvim",
+    {
+      "gregorias/coop.nvim",
+      vscode = true,
+    },
   },
   event = "VeryLazy",
   opts = {

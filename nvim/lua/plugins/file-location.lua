@@ -1,5 +1,6 @@
 return {
   "diegoulloao/nvim-file-location",
+  vscode = true,
   lazy = true,
   opts = {
     add_line = false,

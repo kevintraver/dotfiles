@@ -1,5 +1,6 @@
 return {
   "echasnovski/mini.ai",
+  vscode = true,
   event = "VeryLazy",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = function()
