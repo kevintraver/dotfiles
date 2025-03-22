@@ -1,6 +1,7 @@
 return {
   "echasnovski/mini.operators",
   lazy = true,
+  vscode = true,
   opts = {
     evaluate = { prefix = "" },
     exchange = { prefix = "" },
