@@ -23,7 +23,7 @@
   "prettier.arrowParens": "avoid",
   "prettier.enable": true,
   "prettier.endOfLine": "lf",
-  "prettier.jsxSingleQuote": false,
+  "prettier.jsxSingleQuote": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
