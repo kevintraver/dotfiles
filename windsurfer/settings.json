@@ -25,6 +25,7 @@
   "prettier.endOfLine": "lf",
   "prettier.semi": false,
   "prettier.jsxSingleQuote": true,
+  "workbench.colorTheme": "Tokyo Night",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
