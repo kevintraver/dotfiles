@@ -34,7 +34,8 @@
   "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format",
   "extensions.ignoreRecommendations": true,
   "files.exclude": {
-    "**/.next": true
+    "**/.next": true,
+    "**/pnpm-lock.yaml": true
   },
   "search.useGlobalIgnoreFiles": true
 }
