@@ -52,6 +52,9 @@ alias csv='xsv'
 # pwd
 alias pwd="pwd | tr -d '\n'"
 
+# Copy current working directory to clipboard
+alias cwd="pwd | tr -d '\n' | pbcopy"
+
 # eza
 alias l='eza -lbF --git'
 alias ls='eza'
@@ -95,3 +98,15 @@ alias ws="windsurf"
 
 # pnpm run dev
 alias dev="pnpm run dev"
+
+# Copy absolute path of a file to clipboard
+copypath() {
+  local filepath=$(realpath "$1" 2>/dev/null)
+  if [[ -e "$filepath" ]]; then
+    echo "$filepath" | pbcopy
+    echo "Copied: $filepath"
+  else
+    echo "File not found: $1" >&2
+    return 1
+  fi
+}
