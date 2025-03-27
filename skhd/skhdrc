@@ -8,3 +8,18 @@ ctrl + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east
 ctrl + cmd - 1 : yabai -m display --focus 1
 ctrl + cmd - 2 : yabai -m display --focus 2
 ctrl + cmd - 3 : yabai -m display --focus 3
+
+ctrl + alt - h : \
+  yabai -m window --swap west || (yabai -m window --display west && yabai -m display --focus west && yabai -m window --focus recent)
+
+ctrl + alt - l : \
+  yabai -m window --swap east || (yabai -m window --display east && yabai -m display --focus east && yabai -m window --focus recent)
+
+ctrl + alt - f : \
+  current_id=$(yabai -m query --windows --window | jq '.id'); \
+  current_display=$(yabai -m query --windows --window | jq '.display'); \
+  if [ "$current_display" -eq 1 ]; then target_display=2; else target_display=1; fi; \
+  yabai -m query --windows | jq -r --argjson current_id "$current_id" --argjson current_display "$current_display" '.[] | select(.id != $current_id and .display == $current_display) | .id' | while read -r wid; do \
+    yabai -m window "$wid" --display "$target_display"; \
+  done; \
+  yabai -m window --toggle zoom-parent
