@@ -24,6 +24,10 @@
     "command": "workbench.action.openRecent"
   },
   {
+    "key": "ctrl+cmd+o",
+    "command": "workbench.action.openRecent"
+  },
+  {
     "key": "cmd+e",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
