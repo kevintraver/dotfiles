@@ -6,6 +6,7 @@ keybind = "super+q=unbind"
 keybind = "super+d=unbind"
 keybind = "super+e=unbind"
 keybind = "super+a=unbind"
+keybind = "super+m=unbind"
 
 theme = "/Users/kevin/.config/ghostty/themes/tokyonight_storm.conf"
 
