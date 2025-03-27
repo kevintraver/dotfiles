@@ -16,6 +16,10 @@
     "command": "workbench.action.gotoSymbol"
   },
   {
+    "key": "cmd+j",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
     "key": "shift+cmd+o",
     "command": "workbench.action.openRecent"
   },
