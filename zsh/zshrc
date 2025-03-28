@@ -44,9 +44,6 @@ export PATH="/opt/cloud66/bin:${PATH}"
 export MCFLY_RESULTS_SORT=LAST_RUN
 eval "$(mcfly init zsh)"
 
-# https://github.com/Schniz/fnm
-eval "$(fnm env --use-on-cd)"
-
 # https://docs.python.org/3/library/venv.html
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
