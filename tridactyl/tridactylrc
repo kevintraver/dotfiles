@@ -1,5 +1,7 @@
 sanitise tridactyllocal tridactylsync
 
+set modeindicator false
+
 unbind d
 unbind D
 
