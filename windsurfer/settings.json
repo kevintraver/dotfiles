@@ -37,5 +37,14 @@
     "**/.next": true,
     "**/pnpm-lock.yaml": true
   },
-  "search.useGlobalIgnoreFiles": true
+  "search.useGlobalIgnoreFiles": true,
+  "accessibility.signals.terminalBell": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "accessibility.signals.terminalCommandSucceeded": {
+    "sound": "off",
+    "announcement": "off"
+  },
+  "terminal.integrated.enableVisualBell": false
 }
