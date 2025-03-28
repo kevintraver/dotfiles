@@ -13,7 +13,7 @@
   },
   {
     "key": "cmd+t",
-    "command": "workbench.action.gotoSymbol"
+    "command": "workbench.action.terminal.toggleTerminal"
   },
   {
     "key": "cmd+j",
