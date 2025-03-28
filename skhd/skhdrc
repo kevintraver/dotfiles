@@ -10,10 +10,5 @@ ctrl + cmd - 2 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | 
 ctrl + cmd - 3 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Zen") | .id')
 ctrl + cmd - 4 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Google Chrome") | .id')
 
-ctrl + alt - h : \
-  current_display=$(yabai -m query --windows --window | jq '.display'); \
-  if [ "$current_display" -eq 2 ]; then yabai -m window --display 1; yabai -m window --focus recent; fi
-
-ctrl + alt - l : \
-  current_display=$(yabai -m query --windows --window | jq '.display'); \
-  if [ "$current_display" -eq 1 ]; then yabai -m window --display 2; yabai -m window --focus recent; fi
+shift + cmd - h : yabai -m window --display 1; yabai -m window --focus recent
+shift + cmd - l : yabai -m window --display 2; yabai -m window --focus recent
