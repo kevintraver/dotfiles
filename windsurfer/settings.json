@@ -27,8 +27,11 @@
   "prettier.jsxSingleQuote": true,
   "workbench.colorTheme": "Tokyo Night",
   "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit"
   },
+  "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
+  "eslint.format.enable": true,
 
   "window.newWindowDimensions": "maximized",
   "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format",
