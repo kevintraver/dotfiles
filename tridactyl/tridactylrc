@@ -2,6 +2,3 @@ sanitise tridactyllocal tridactylsync
 
 unbind d
 unbind D
-
-unbind gt
-unbind gT
