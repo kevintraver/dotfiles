@@ -44,5 +44,9 @@
   {
     "key": "shift+cmd+c",
     "command": "copyRelativeFilePath"
+  },
+  {
+    "key": "cmd+,",
+    "command": "workbench.action.openSettings2"
   }
 ]
