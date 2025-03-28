@@ -1,4 +1,4 @@
-yabai -m config layout bsp
+yabai -m config layout stack
 yabai -m config auto_balance on
 
 yabai -m config top_padding 10
