@@ -10,3 +10,7 @@ unbind D
 
 bind t fillcmdline tabopen
 bind x tabclose
+
+blacklistadd x.com
+blacklistadd github.com
+blacklistadd mail.proton.me
