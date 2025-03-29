@@ -2,6 +2,7 @@ yabai -m config layout stack
 yabai -m config auto_balance on
 
 yabai -m config window_origin_display focused
+yabai -m config mouse_follows_focus on
 
 yabai -m config top_padding 10
 yabai -m config bottom_padding 10
