@@ -5,10 +5,5 @@ ctrl + cmd - j : yabai -m window --focus south || (yabai -m display --focus sout
 ctrl + cmd - k : yabai -m window --focus north || (yabai -m display --focus north && yabai -m window --focus south)
 ctrl + cmd - l : yabai -m window --focus east  || (yabai -m display --focus east  && yabai -m window --focus west)
 
-ctrl + cmd - 1 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Windsurf") | .id')
-ctrl + cmd - 2 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Ghostty") | .id')
-ctrl + cmd - 3 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Zen") | .id')
-ctrl + cmd - 4 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.app == "Google Chrome") | .id')
-
 shift + cmd - h : id=$(yabai -m query --windows --window | jq '.id') && yabai -m window --display west && yabai -m window --focus "$id"
 shift + cmd - l : id=$(yabai -m query --windows --window | jq '.id') && yabai -m window --display east && yabai -m window --focus "$id"
