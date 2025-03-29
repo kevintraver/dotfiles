@@ -2,8 +2,11 @@ sanitise tridactyllocal tridactylsync
 
 set modeindicator false
 
+bind a js javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))
+command archive js javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))
+
 unbind d
 unbind D
 
-bind a js javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))
-command archive js javascript:void(open('http://archive.today/?run=1&url='+encodeURIComponent(document.location)))
+bind t fillcmdline tabopen
+bind x tabclose
