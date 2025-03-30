@@ -10,6 +10,7 @@ unbind D
 
 bind t fillcmdline tabopen
 bind x tabclose
+bind X tabonly
 
 blacklistadd x.com
 blacklistadd github.com
