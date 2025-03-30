@@ -1,3 +1,5 @@
+# https://github.com/tridactyl/tridactyl/blob/master/src/lib/config.ts
+
 sanitise tridactyllocal tridactylsync
 
 set modeindicator false
