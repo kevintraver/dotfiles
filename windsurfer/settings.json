@@ -10,7 +10,7 @@
   "windsurf.openRecentConversation": true,
   "windsurf.explainAndFixInCurrentConversation": true,
   "windsurf.cascadeCommandsAllowList": [],
-  "windsurf.cascadeOpenOnReload": true,
+  "windsurf.cascadeOpenOnReload": false,
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "scm.defaultViewMode": "tree",
