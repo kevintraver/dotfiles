@@ -12,3 +12,6 @@ bind t fillcmdline tabopen
 bind x tabclose
 bind X tabonly
 
+unbindurl x.com j
+unbindurl x.com k
+
