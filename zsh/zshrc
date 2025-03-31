@@ -79,3 +79,6 @@ export AIDER_EDITOR=nvim
 export CLAUDE_MCP_CONFIG_PATH="/Users/kevin/Library/Application Support/Claude/claude_desktop_config.json"
 export WINDSURF_MCP_CONFIG_PATH="/Users/kevin/.codeium/windsurf/mcp_config.json"
 export CURSOR_MCP_CONFIG_PATH="/Users/kevin/.cursor/mcp.json"
+
+# https://pnpm.io/
+export PATH="$HOME/Library/pnpm:$PATH"
