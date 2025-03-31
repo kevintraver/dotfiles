@@ -74,9 +74,6 @@ fi
 # https://mise.jdx.dev/
 eval "$(mise activate zsh)"
 
-# add local bin to path
-export PATH="$PATH:/Users/kevin/.local/bin"
-
 export AIDER_EDITOR=nvim
 
 export CLAUDE_MCP_CONFIG_PATH="/Users/kevin/Library/Application Support/Claude/claude_desktop_config.json"
