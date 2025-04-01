@@ -9,10 +9,10 @@ return {
   build = "make",
   keys = {
     {
-      "<D-\\>",
-      mode = { "n", "v" },
+      "<D-l>",
+      mode = { "n", "v", "i" },
       function()
-        require("avante.api").ask()
+        require("avante.api").toggle()
       end,
     },
   },
