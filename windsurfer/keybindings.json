@@ -48,5 +48,9 @@
   {
     "key": "cmd+,",
     "command": "workbench.action.openSettings2"
+  },
+  {
+    "key": "shift+x",
+    "command": "workbench.action.closeOtherEditors"
   }
 ]
