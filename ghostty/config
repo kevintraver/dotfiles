@@ -10,6 +10,5 @@ keybind = "super+m=unbind"
 
 theme = tokyonight
 
-window-width = 160
-window-height = 50
-
+window-width = 213
+window-height = 66
