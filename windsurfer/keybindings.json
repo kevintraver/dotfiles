@@ -52,5 +52,15 @@
   {
     "key": "shift+x",
     "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "neovim.mode != 'insert'"
   }
 ]
