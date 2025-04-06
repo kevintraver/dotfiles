@@ -1,0 +1,7 @@
+{
+    "^a" = (moveToBeginningOfLine:);
+    "^e" = (moveToEndOfLine:);
+    "^k" = (deleteToEndOfLine:);
+    "^u" = (deleteToBeginningOfLine:);
+    "^w" = (deleteWordBackward:);
+}
