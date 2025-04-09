@@ -49,5 +49,6 @@
     "sound": "off",
     "announcement": "off"
   },
-  "terminal.integrated.enableVisualBell": false
+  "terminal.integrated.enableVisualBell": false,
+  "git.openDiffOnClick": false
 }
