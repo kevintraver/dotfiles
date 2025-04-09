@@ -1,7 +1,10 @@
 {
-    "^a" = (moveToBeginningOfLine:);
-    "^e" = (moveToEndOfLine:);
-    "^k" = (deleteToEndOfLine:);
+    "^b" = (moveWordBackward:);
+    "^e" = (moveWordForward:);
+    "^i" = (moveToBeginningOfLine:);
+    "^l" = (moveToEndOfLine:);
+    "^d" = (deleteToEndOfLine:);
     "^u" = (deleteToBeginningOfLine:);
     "^w" = (deleteWordBackward:);
+    "^h" = (deleteBackward:);
 }
