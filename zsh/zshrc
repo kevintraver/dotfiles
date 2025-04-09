@@ -59,6 +59,9 @@ WORDCHARS=${WORDCHARS/\/}
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
 
+# https://graphite.dev
+source $HOME/.zsh/plugins/gt-completions/completions.zsh
+
 source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
