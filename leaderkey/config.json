@@ -1,0 +1,59 @@
+{
+  "actions": [
+    {
+      "key": "t",
+      "label": "Ghostty",
+      "type": "application",
+      "value": "/Applications/Ghostty.app"
+    },
+    {
+      "key": "e",
+      "label": "Windsurf",
+      "type": "application",
+      "value": "/Applications/Windsurf.app"
+    },
+    {
+      "key": "w",
+      "label": "Windsurf",
+      "type": "application",
+      "value": "/Applications/Windsurf.app"
+    },
+    {
+      "key": "s",
+      "label": "Slack",
+      "type": "application",
+      "value": "/Applications/Slack.app"
+    },
+    {
+      "key": "z",
+      "label": "Zen Browser",
+      "type": "application",
+      "value": "/Applications/Zen Browser.app"
+    },
+    {
+      "key": "b",
+      "label": "Zen Browser",
+      "type": "application",
+      "value": "/Applications/Zen Browser.app"
+    },
+    {
+      "key": "g",
+      "label": "Google Chrome",
+      "type": "application",
+      "value": "/Applications/Google Chrome.app"
+    },
+    {
+      "key": "c",
+      "label": "ChatGPT",
+      "type": "application",
+      "value": "/Applications/ChatGPT.app"
+    },
+    {
+      "key": "l",
+      "label": "Claude",
+      "type": "application",
+      "value": "/Applications/Claude.app"
+    }
+  ],
+  "type": "group"
+}
