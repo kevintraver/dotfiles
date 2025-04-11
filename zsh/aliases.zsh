@@ -110,3 +110,7 @@ copypath() {
     return 1
   fi
 }
+
+# editor
+alias e="$EDITOR"
+alias n="$EDITOR"

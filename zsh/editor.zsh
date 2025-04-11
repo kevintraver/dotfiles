@@ -7,7 +7,3 @@ else
   export VISUAL="nvim"
   export EDITOR="nvim"
 fi
-
-# editor
-alias e="$EDITOR"
-alias n="$EDITOR"
