@@ -11,6 +11,7 @@ unbind d
 unbind D
 
 blacklistadd excalidraw.com
+blacklistadd graphite.dev
 
 unbind g?
 
