@@ -18,6 +18,7 @@ yabai -m rule --add title='Preferences$' manage=off
 yabai -m rule --add title='Settings$' manage=off
 yabai -m rule --add title='General$' manage=off
 
+yabai -m rule --add app='Raycast' title=".*" manage=off
 yabai -m rule --add app='BetterDisplay$' manage=off
 yabai -m rule --add app='Leader Key' title=".*" manage=off
 yabai -m rule --add app='DeskPad$' manage=off
