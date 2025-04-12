@@ -19,6 +19,7 @@ yabai -m rule --add title='Settings$' manage=off
 yabai -m rule --add title='General$' manage=off
 
 yabai -m rule --add app='BetterDisplay$' manage=off
+yabai -m rule --add app='Leader Key' manage=off
 yabai -m rule --add app='DeskPad$' manage=off
 yabai -m rule --add app="superwhisper$" title=".*" manage=off
 yabai -m rule --add app="CleanShot X" title=".*" manage=off
