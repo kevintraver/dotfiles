@@ -147,5 +147,9 @@
     "key": "ctrl+w v",
     "command": "-workbench.action.splitEditorRight",
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
+  },
+  {
+    "key": "ctrl+cmd+space",
+    "command": "workbench.action.showCommands"
   }
 ]
