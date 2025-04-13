@@ -9,20 +9,19 @@ yabai -m config left_padding 10
 yabai -m config right_padding 10
 yabai -m config window_gap 10
 
-yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app=".*" title=".*" manage=off
 
-yabai -m rule --add app="^System Settings$" title=".*" manage=off
-yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^Windsurf$" title=".*" manage=on
+yabai -m rule --add app="^Ghostty$" title=".*" manage=on
 
-yabai -m rule --add title='Preferences$' manage=off
-yabai -m rule --add title='Settings$' manage=off
-yabai -m rule --add title='General$' manage=off
+yabai -m rule --add app="^ChatGPT$" title=".*" manage=on
+yabai -m rule --add app="^Claude$" title=".*" manage=on
 
-yabai -m rule --add app='Raycast' title=".*" manage=off
-yabai -m rule --add app='BetterDisplay$' manage=off
-yabai -m rule --add app='Leader Key' title=".*" manage=off
-yabai -m rule --add app='DeskPad$' manage=off
-yabai -m rule --add app="superwhisper$" title=".*" manage=off
-yabai -m rule --add app="CleanShot X" title=".*" manage=off
+yabai -m rule --add app="^Slack$" title=".*" manage=on
+yabai -m rule --add app="^Mattermost$" title=".*" manage=on
+yabai -m rule --add app="^Discord$" title=".*" manage=on
+
+yabai -m rule --add app="^Zen Browser$" title=".*" manage=on
+yabai -m rule --add app="^Google Chrome$" title=".*" manage=on
 
 yabai -m config debug_output on
