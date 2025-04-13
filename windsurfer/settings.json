@@ -53,5 +53,6 @@
   "git.openDiffOnClick": false,
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
-  }
+  },
+  "gitlens.plusFeatures.enabled": false
 }
