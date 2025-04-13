@@ -21,6 +21,7 @@ yabai -m rule --add app="^Claude$" title=".*" manage=on
 yabai -m rule --add app="^Slack$" title=".*" manage=on
 yabai -m rule --add app="^Mattermost$" title=".*" manage=on
 yabai -m rule --add app="^Discord$" title=".*" manage=on
+yabai -m rule --add app="^Messages$" title=".*" manage=on
 
 yabai -m rule --add app="^Zen Browser$" title=".*" manage=on
 yabai -m rule --add app="^Google Chrome$" title=".*" manage=on
