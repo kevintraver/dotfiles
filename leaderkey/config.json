@@ -59,6 +59,12 @@
       "label" : "Mattermost",
       "type" : "application",
       "value" : "/Applications/Mattermost.app"
+    },
+    {
+      "key" : "d",
+      "label" : "Discord",
+      "type" : "application",
+      "value" : "/Applications/Discord.app"
     }
   ],
   "type" : "group"
