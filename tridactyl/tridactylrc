@@ -33,3 +33,5 @@ bind X tabonly
 unbindurl x.com j
 unbindurl x.com k
 
+unbindurl github.com j
+unbindurl github.com k
