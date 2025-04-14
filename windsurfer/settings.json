@@ -55,5 +55,6 @@
     "editor.defaultFormatter": "sumneko.lua"
   },
   "gitlens.plusFeatures.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false
 }
