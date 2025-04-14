@@ -1,5 +1,13 @@
 asvetliakov.vscode-neovim
+dbaeumer.vscode-eslint
 eamodio.gitlens
+editorconfig.editorconfig
 esbenp.prettier-vscode
+github.vscode-github-actions
+humao.rest-client
+neo4j-extensions.neo4j-for-vscode
 openai.chatgpt
 prisma.prisma
+sumneko.lua
+vercel.turbo-vsc
+yoavbls.pretty-ts-errors
