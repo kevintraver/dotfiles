@@ -6,16 +6,40 @@ hs.allowAppleScript(true)
 hs.window.animationDuration = 0
 
 function MoveWindowWest()
-  local win = hs.window.frontmostWindow()
-  if win then
+  local wins = hs.window.orderedWindows()
+  local win = wins[1]
+  local nextWin = wins[2]
+  if not win then return end
+  local screens = hs.screen.allScreens()
+  if #screens > 1 then
     win:moveOneScreenWest()
+    FillWindow(win)
+  else
+    hs.grid.setGrid('2x1')
+    hs.grid.setMargins({ w = 10, h = 10 })
+    hs.grid.set(win, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
+    if nextWin and nextWin:screen() == win:screen() then
+      hs.grid.set(nextWin, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
+    end
   end
 end
 
 function MoveWindowEast()
-  local win = hs.window.frontmostWindow()
-  if win then
+  local wins = hs.window.orderedWindows()
+  local win = wins[1]
+  local nextWin = wins[2]
+  if not win then return end
+  local screens = hs.screen.allScreens()
+  if #screens > 1 then
     win:moveOneScreenEast()
+    FillWindow(win)
+  else
+    hs.grid.setGrid('2x1')
+    hs.grid.setMargins({ w = 10, h = 10 })
+    hs.grid.set(win, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
+    if nextWin and nextWin:screen() == win:screen() then
+      hs.grid.set(nextWin, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
+    end
   end
 end
 
