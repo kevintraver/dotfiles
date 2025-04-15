@@ -95,20 +95,47 @@ local function focusEast()
   end
 end
 
+local prevFrameSizes = {}
+
 function FillWindow(win)
   win = win or hs.window.frontmostWindow()
-  if not win then
-    return
-  end
+  if not win then return end
+  local pad = 10
   local screen = win:screen()
   local frame = screen:frame()
-  local pad = 10
   win:setFrame({
     x = frame.x + pad,
     y = frame.y + pad,
     w = frame.w - 2 * pad,
     h = frame.h - 2 * pad,
   })
+end
+
+local function toggleFillWindow(win)
+  win = win or hs.window.frontmostWindow()
+  if not win then return end
+  local screens = hs.screen.allScreens()
+  if #screens > 1 then
+    FillWindow(win)
+    return
+  end
+  local id = win:id()
+  local pad = 10
+  local screen = win:screen()
+  local frame = screen:frame()
+  local targetFrame = hs.geometry.copy({
+    x = frame.x + pad,
+    y = frame.y + pad,
+    w = frame.w - 2 * pad,
+    h = frame.h - 2 * pad,
+  })
+  if prevFrameSizes[id] then
+    win:setFrame(prevFrameSizes[id])
+    prevFrameSizes[id] = nil
+  else
+    prevFrameSizes[id] = hs.geometry.copy(win:frame())
+    win:setFrame(targetFrame)
+  end
 end
 
 local function fillAllWindows()
@@ -123,5 +150,5 @@ hs.hotkey.bind({ "ctrl", "cmd" }, "l", focusEast)
 hs.hotkey.bind({ "shift", "cmd" }, "h", MoveWindowWest)
 hs.hotkey.bind({ "shift", "cmd" }, "l", MoveWindowEast)
 
-hs.hotkey.bind({ "shift", "cmd" }, "space", FillWindow)
+hs.hotkey.bind({ "shift", "cmd" }, "space", toggleFillWindow)
 hs.hotkey.bind({ "shift", "alt" }, "space", fillAllWindows)
