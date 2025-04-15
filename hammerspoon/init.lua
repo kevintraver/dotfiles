@@ -71,8 +71,33 @@ local function focusEast()
   end
 end
 
+function FillWindow(win)
+  win = win or hs.window.frontmostWindow()
+  if not win then
+    return
+  end
+  local screen = win:screen()
+  local frame = screen:frame()
+  local pad = 10
+  win:setFrame({
+    x = frame.x + pad,
+    y = frame.y + pad,
+    w = frame.w - 2 * pad,
+    h = frame.h - 2 * pad,
+  })
+end
+
+local function fillAllWindows()
+  for _, win in ipairs(hs.window.allWindows()) do
+    FillWindow(win)
+  end
+end
+
 hs.hotkey.bind({ "ctrl", "cmd" }, "h", focusWest)
 hs.hotkey.bind({ "ctrl", "cmd" }, "l", focusEast)
 
 hs.hotkey.bind({ "shift", "cmd" }, "h", MoveWindowWest)
 hs.hotkey.bind({ "shift", "cmd" }, "l", MoveWindowEast)
+
+hs.hotkey.bind({ "shift", "cmd" }, "space", FillWindow)
+hs.hotkey.bind({ "shift", "alt" }, "space", fillAllWindows)
