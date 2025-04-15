@@ -30,7 +30,12 @@
     "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "eslint.format.enable": true,
 
   "window.newWindowDimensions": "maximized",
