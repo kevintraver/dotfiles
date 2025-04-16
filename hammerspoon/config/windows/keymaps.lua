@@ -1,0 +1,23 @@
+local focus = require('config.windows.focus')
+local movement = require('config.windows.movement')
+local settings = require('config.windows.settings')
+local helpers = require('config.windows.helpers')
+
+local logger = require('config.windows.logger')
+
+hs.hotkey.bind({ "ctrl", "cmd" }, "h", function()
+  focus.focusWest()
+end)
+hs.hotkey.bind({ "ctrl", "cmd" }, "l", function()
+  focus.focusEast()
+end)
+
+hs.hotkey.bind({ "shift", "cmd" }, "h", function()
+  movement.moveWindowWest()
+end)
+hs.hotkey.bind({ "shift", "cmd" }, "l", function()
+  movement.moveWindowEast()
+end)
+hs.hotkey.bind({ "shift", "cmd" }, "space", function()
+  movement.toggleFill()
+end)
