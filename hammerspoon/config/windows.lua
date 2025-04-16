@@ -139,11 +139,41 @@ local function fillAllWindows()
   end
 end
 
-hs.hotkey.bind({ "ctrl", "cmd" }, "h", focusWest)
-hs.hotkey.bind({ "ctrl", "cmd" }, "l", focusEast)
+local function logWindowAction(action, win)
+  win = win or hs.window.frontmostWindow()
+  if not win then
+    hs.console.printStyledtext(action .. ": No window!")
+    return
+  end
+  local f = win:frame()
+  hs.console.printStyledtext(string.format("%s: %s | x=%.0f y=%.0f w=%.0f h=%.0f", action, win:title(), f.x, f.y, f.w,
+    f.h))
+end
 
-hs.hotkey.bind({ "shift", "cmd" }, "h", MoveWindowWest)
-hs.hotkey.bind({ "shift", "cmd" }, "l", MoveWindowEast)
 
-hs.hotkey.bind({ "shift", "cmd" }, "space", toggleFillWindow)
-hs.hotkey.bind({ "shift", "alt" }, "space", fillAllWindows)
+hs.hotkey.bind({ "ctrl", "cmd" }, "h", function()
+  focusWest()
+  logWindowAction("Focus West")
+end)
+hs.hotkey.bind({ "ctrl", "cmd" }, "l", function()
+  focusEast()
+  logWindowAction("Focus East")
+end)
+
+hs.hotkey.bind({ "shift", "cmd" }, "h", function()
+  MoveWindowWest()
+  logWindowAction("Move Window West")
+end)
+hs.hotkey.bind({ "shift", "cmd" }, "l", function()
+  MoveWindowEast()
+  logWindowAction("Move Window East")
+end)
+
+hs.hotkey.bind({ "shift", "cmd" }, "space", function()
+  toggleFillWindow()
+  logWindowAction("Toggle Fill Window")
+end)
+hs.hotkey.bind({ "shift", "alt" }, "space", function()
+  fillAllWindows()
+  logWindowAction("Fill All Windows")
+end)
