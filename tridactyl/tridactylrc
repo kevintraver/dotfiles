@@ -13,6 +13,7 @@ unbind D
 blacklistadd excalidraw.com
 blacklistadd graphite.dev
 blacklistadd chess.com
+blacklistadd proton.me
 
 unbind g?
 
