@@ -106,6 +106,34 @@ function FillWindow(win)
   })
 end
 
+local function isLeftOrRightHalf(frame, screenFrame, pad)
+  local tolerance = 20
+  local halfWidth = (screenFrame.w - 2 * pad) / 2
+  -- Left half
+  if math.abs(frame.x - (screenFrame.x + pad)) < tolerance and
+      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
+      math.abs(frame.w - halfWidth) < tolerance and
+      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
+    return "left"
+  end
+  -- Right half
+  if math.abs(frame.x - (screenFrame.x + pad + halfWidth)) < tolerance and
+      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
+      math.abs(frame.w - halfWidth) < tolerance and
+      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
+    return "right"
+  end
+  return nil
+end
+
+local function isFilled(frame, screenFrame, pad)
+  local tolerance = 20
+  return math.abs(frame.x - (screenFrame.x + pad)) < tolerance and
+      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
+      math.abs(frame.w - (screenFrame.w - 2 * pad)) < tolerance and
+      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance
+end
+
 local function toggleFillWindow(win)
   win = win or hs.window.frontmostWindow()
   if not win then return end
@@ -124,10 +152,47 @@ local function toggleFillWindow(win)
     w = frame.w - 2 * pad,
     h = frame.h - 2 * pad,
   })
-  if prevFrameSizes[id] then
-    win:setFrame(prevFrameSizes[id])
+  local winFrame = win:frame()
+  if isFilled(winFrame, frame, pad) and prevFrameSizes[id] then
+    -- Only restore to half if currently filled and toggling back
+    local prev = prevFrameSizes[id]
+    local side = isLeftOrRightHalf(prev, frame, pad)
+    hs.grid.setGrid('2x1')
+    hs.grid.setMargins({ w = 10, h = 10 })
+    local wins = hs.window.orderedWindows()
+    local winIdx = nil
+    for i, w in ipairs(wins) do
+      if w:id() == id then
+        winIdx = i
+        break
+      end
+    end
+    local nextWin = nil
+    if winIdx and wins[winIdx + 1] then
+      local candidate = wins[winIdx + 1]
+      if candidate:screen() == win:screen() and candidate:isVisible() then
+        nextWin = candidate
+      end
+    end
+    if side == "left" then
+      hs.grid.set(win, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
+      if nextWin then
+        hs.grid.set(nextWin, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
+      end
+    elseif side == "right" then
+      hs.grid.set(win, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
+      if nextWin then
+        hs.grid.set(nextWin, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
+      end
+    else
+      hs.grid.set(win, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
+      if nextWin then
+        hs.grid.set(nextWin, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
+      end
+    end
     prevFrameSizes[id] = nil
   else
+    -- Always fill unless toggling back from filled
     prevFrameSizes[id] = hs.geometry.copy(win:frame())
     win:setFrame(targetFrame)
   end
