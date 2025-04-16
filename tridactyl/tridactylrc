@@ -10,11 +10,12 @@ command archive js javascript:void(open('http://archive.today/?run=1&url='+encod
 unbind d
 unbind D
 
-blacklistadd github.com
-blacklistadd excalidraw.com
-blacklistadd graphite.dev
-blacklistadd chess.com
-blacklistadd proton.me
+autocmd DocStart github.com mode ignore
+autocmd DocStart excalidraw.com mode ignore
+autocmd DocStart graphite.dev mode ignore
+autocmd DocStart chess.com mode ignore
+autocmd DocStart proton.me mode ignore
+autocmd DocStart x.com mode ignore
 
 unbind g?
 
@@ -29,10 +30,16 @@ bind <C-k> tabprev
 bind <C-l> tabnext
 bind <C-h> tabprev
 
+bind --mode=ignore <C-j> tabnext
+bind --mode=ignore <C-k> tabprev
+bind --mode=ignore <C-l> tabnext
+bind --mode=ignore <C-h> tabprev
+
+bind --mode=ignore <C-o> jumpprev
+bind --mode=ignore <C-i> jumpnext
+
+bind --mode=ignore yy clipboard yank
+
 bind t fillcmdline tabopen
 bind x tabclose
 bind X tabonly
-
-unbindurl x.com <Space>
-unbindurl x.com j
-unbindurl x.com k
