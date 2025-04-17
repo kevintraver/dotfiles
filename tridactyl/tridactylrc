@@ -9,15 +9,11 @@ command archive js javascript:void(open('http://archive.today/?run=1&url='+encod
 
 unbind d
 unbind D
-
-autocmd DocStart github.com mode ignore
-autocmd DocStart excalidraw.com mode ignore
-autocmd DocStart graphite.dev mode ignore
-autocmd DocStart chess.com mode ignore
-autocmd DocStart proton.me mode ignore
-autocmd DocStart x.com mode ignore
-
 unbind g?
+
+bind t fillcmdline tabopen
+bind x tabclose
+bind X tabonly
 
 bind J tabnext
 bind K tabprev
@@ -38,8 +34,38 @@ bind --mode=ignore <C-h> tabprev
 bind --mode=ignore <C-o> jumpprev
 bind --mode=ignore <C-i> jumpnext
 
-bind --mode=ignore yy clipboard yank
+autocmd DocStart excalidraw.com mode ignore
+autocmd DocStart graphite.dev mode ignore
+autocmd DocStart chess.com mode ignore
+autocmd DocStart proton.me mode ignore
 
-bind t fillcmdline tabopen
-bind x tabclose
-bind X tabonly
+unbindurl x.com j
+unbindurl x.com k
+unbindurl x.com b
+unbindurl x.com /
+
+bindurl x.com gh js ['g','h'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+
+unbindurl github.com b
+unbindurl github.com c
+unbindurl github.com i
+unbindurl github.com j
+unbindurl github.com k
+unbindurl github.com n
+unbindurl github.com o
+unbindurl github.com p
+unbindurl github.com s
+unbindurl github.com t
+unbindurl github.com w
+unbindurl github.com x
+unbindurl github.com ?
+unbindurl github.com /
+
+bindurl github.com gc js ['g','c'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gi js ['g','i'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gp js ['g','p'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gn js ['g','n'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gb js ['g','b'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gw js ['g','w'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gd js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gh js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
