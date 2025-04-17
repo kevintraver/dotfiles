@@ -2,5 +2,5 @@
 require("config.windows.settings")
 require("config.windows.helpers")
 require("config.windows.focus")
-require("config.windows.movement")
+require("config.windows.manager")
 require("config.windows.keymaps")
