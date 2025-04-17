@@ -62,5 +62,6 @@
   "gitlens.plusFeatures.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
-  "prettier.configPath": "~/.dotfiles/prettier/prettierrc"
+  "prettier.configPath": "~/.dotfiles/prettier/prettierrc",
+  "editor.accessibilitySupport": "off"
 }
