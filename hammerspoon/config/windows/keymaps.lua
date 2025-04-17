@@ -21,3 +21,7 @@ end)
 hs.hotkey.bind({ "shift", "cmd" }, "space", function()
   manager.toggleFill()
 end)
+
+hs.hotkey.bind({ "shift", "alt" }, "space", function()
+  manager.fillAllWindows()
+end)

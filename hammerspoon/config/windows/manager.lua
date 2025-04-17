@@ -131,4 +131,15 @@ function M.fillWindow(win)
   logger.logWindowMove(win, "fillWindow")
 end
 
+function M.fillAllWindows()
+  local frontmost = hs.window.frontmostWindow()
+  if not frontmost then return end
+  local currentScreen = frontmost:screen()
+  for _, win in ipairs(hs.window.allWindows()) do
+    if win:screen() == currentScreen then
+      M.fillWindow(win)
+    end
+  end
+end
+
 return M
