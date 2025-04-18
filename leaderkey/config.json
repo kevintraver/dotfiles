@@ -83,6 +83,12 @@
       "label" : "1Password",
       "type" : "application",
       "value" : "/Applications/1Password.app"
+    },
+    {
+      "key" : "\t",
+      "label" : "Windsurf",
+      "type" : "application",
+      "value" : "/Applications/Windsurf.app"
     }
   ],
   "type" : "group"
