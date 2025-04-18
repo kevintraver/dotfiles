@@ -3,7 +3,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # https://github.com/zsh-users/zsh-completions
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH="$(brew --prefix)/share/zsh/site-functions:$(brew --prefix)/share/zsh-completions:$FPATH"
 autoload -Uz compinit; compinit
 
 export DOTFILES_HOME="$HOME/.dotfiles"
