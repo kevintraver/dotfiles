@@ -71,6 +71,12 @@
       "label" : "Zen Browser",
       "type" : "application",
       "value" : "/Applications/Zen Browser.app"
+    },
+    {
+      "key" : "\r",
+      "label" : "Ghostty",
+      "type" : "application",
+      "value" : "/Applications/Ghostty.app"
     }
   ],
   "type" : "group"
