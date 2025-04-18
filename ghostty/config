@@ -12,3 +12,5 @@ theme = tokyonight
 
 window-width = 213
 window-height = 66
+
+working-directory = "/Users/kevin/.dotfiles"
