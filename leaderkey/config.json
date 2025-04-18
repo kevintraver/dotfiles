@@ -77,6 +77,12 @@
       "label" : "Ghostty",
       "type" : "application",
       "value" : "/Applications/Ghostty.app"
+    },
+    {
+      "key" : "\\",
+      "label" : "1Password",
+      "type" : "application",
+      "value" : "/Applications/1Password.app"
     }
   ],
   "type" : "group"
