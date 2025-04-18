@@ -25,3 +25,7 @@ end)
 hs.hotkey.bind({ "shift", "alt" }, "space", function()
   manager.fillAllWindows()
 end)
+
+hs.hotkey.bind({ "cmd" }, "return", function()
+  focus.toggleFocus()
+end)

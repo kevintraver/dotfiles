@@ -40,4 +40,12 @@ function M.focusEast()
   end
 end
 
+function M.toggleFocus()
+  local ordered = hs.window.orderedWindows()
+  local current = hs.window.frontmostWindow()
+  if #ordered > 1 and ordered[1] == current then
+    ordered[2]:focus()
+  end
+end
+
 return M
