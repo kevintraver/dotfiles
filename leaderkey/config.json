@@ -89,6 +89,12 @@
       "label" : "Windsurf",
       "type" : "application",
       "value" : "/Applications/Windsurf.app"
+    },
+    {
+      "key" : "x",
+      "label" : "x.com",
+      "type" : "url",
+      "value" : "https://x.com"
     }
   ],
   "type" : "group"
