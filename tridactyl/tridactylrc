@@ -43,6 +43,7 @@ unbindurl x.com j
 unbindurl x.com k
 unbindurl x.com b
 unbindurl x.com /
+unbindurl x.com .
 
 bindurl x.com gh js ['g','h'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 
