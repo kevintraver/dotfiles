@@ -11,18 +11,13 @@ unbind d
 unbind D
 unbind g?
 
+unbind J
+unbind K
+
 bind t fillcmdline tabopen
 bind x tabclose
 bind X tabonly
 
-bind J tabnext
-bind K tabprev
-
-bind <M-j> tabnext
-bind <M-k> tabprev
-
-bind <C-j> tabnext
-bind <C-k> tabprev
 bind <C-l> tabnext
 bind <C-h> tabprev
 
