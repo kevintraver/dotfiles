@@ -95,6 +95,12 @@
       "label" : "x.com",
       "type" : "url",
       "value" : "https://x.com"
+    },
+    {
+      "key" : "h",
+      "label" : "Hacker News",
+      "type" : "url",
+      "value" : "https://news.ycombinator.com/"
     }
   ],
   "type" : "group"
