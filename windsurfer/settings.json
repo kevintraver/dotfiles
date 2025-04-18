@@ -55,7 +55,6 @@
     "announcement": "off"
   },
   "terminal.integrated.enableVisualBell": false,
-  "git.openDiffOnClick": false,
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
   },
