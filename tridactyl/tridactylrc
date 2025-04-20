@@ -4,8 +4,9 @@ sanitise tridactyllocal tridactylsync
 
 set modeindicator false
 
-bind ga js javascript:void(open('http://archive.ph/'+encodeURIComponent(document.location)))
 command archive js javascript:void(open('http://archive.ph/'+encodeURIComponent(document.location)))
+bind a archive
+bind ga archive
 
 unbind d
 unbind D
