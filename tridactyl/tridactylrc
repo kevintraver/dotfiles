@@ -38,6 +38,8 @@ autocmd DocStart chess.com mode ignore
 autocmd DocStart proton.me mode ignore
 
 unbindurl x.com j
+unbindurl x.com a
+unbindurl x.com ga
 unbindurl x.com k
 unbindurl x.com b
 unbindurl x.com /
@@ -45,6 +47,7 @@ unbindurl x.com .
 
 bindurl x.com gh js ['g','h'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 
+unbindurl github.com a
 unbindurl github.com b
 unbindurl github.com c
 unbindurl github.com i
@@ -60,6 +63,7 @@ unbindurl github.com x
 unbindurl github.com ?
 unbindurl github.com /
 
+bindurl github.com ga js ['g','a'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gc js ['g','c'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gi js ['g','i'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gp js ['g','p'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
