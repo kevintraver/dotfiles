@@ -21,6 +21,8 @@ bind X tabonly
 
 bind <C-l> tabnext
 bind <C-h> tabprev
+bind <C-j> tabnext
+bind <C-k> tabprev
 
 bind --mode=ignore <C-j> tabnext
 bind --mode=ignore <C-k> tabprev
