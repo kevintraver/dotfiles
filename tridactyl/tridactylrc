@@ -66,4 +66,5 @@ bindurl github.com gp js ['g','p'].forEach(key => document.dispatchEvent(new Key
 bindurl github.com gn js ['g','n'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gb js ['g','b'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gw js ['g','w'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl github.com gd js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
 bindurl github.com gh js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
