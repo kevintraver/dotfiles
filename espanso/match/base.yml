@@ -4,3 +4,10 @@
 matches:
   - trigger: 'kte'
     replace: 'kevintraver@kevintraver.com'
+
+  - trigger: 'lh3'
+    replace: 'http://localhost:3000/'
+  - trigger: 'lh4'
+    replace: 'http://localhost:4000/'
+  - trigger: 'lh8'
+    replace: 'http://localhost:8000/'
