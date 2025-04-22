@@ -45,7 +45,7 @@ unbindurl x.com b
 unbindurl x.com /
 unbindurl x.com .
 
-bindurl x.com gh js ['g','h'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+bindurl x.com gh js history.pushState(null, '', '/home'); window.dispatchEvent(new Event('popstate'));
 
 unbindurl github.com a
 unbindurl github.com b
