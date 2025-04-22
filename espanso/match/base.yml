@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+# https://espanso.org/docs/
+
+matches:
+  - trigger: 'kte'
+    replace: 'kevintraver@kevintraver.com'
