@@ -32,34 +32,9 @@ function M.toggleFill(win)
   win = win or hs.window.frontmostWindow()
   if not win then return end
 
-  if #hs.screen.allScreens() > 1 then
-    M.moveToFill(win)
-    return
-  end
-
-  -- Single-display: toggle between filled and half-screen
-  local id = win:id()
   local screenFrame = helpers.getScreenFrame(win)
   local filledFrame = helpers.getFilledFrame(screenFrame)
-  local pad = 10
-
-  if helpers.isFilled(win) and prevFrameSizes[id] then
-    -- Restore to previous half position if toggling back
-    local prev = prevFrameSizes[id]
-    local side = isLeftOrRightHalf(prev, screenFrame, pad) or "left"
-    hs.grid.setGrid('2x1')
-    hs.grid.setMargins({ w = 10, h = 10 })
-    if side == "right" then
-      hs.grid.set(win, { x = 1, y = 0, w = 1, h = 1 }, win:screen())
-    else
-      hs.grid.set(win, { x = 0, y = 0, w = 1, h = 1 }, win:screen())
-    end
-    prevFrameSizes[id] = nil
-  else
-    -- Fill the window and remember previous frame
-    prevFrameSizes[id] = hs.geometry.copy(win:frame())
-    win:setFrame(filledFrame)
-  end
+  win:setFrame(filledFrame)
   logger.logWindowMove(win, "toggleFill")
 end
 
