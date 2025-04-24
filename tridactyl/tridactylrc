@@ -8,10 +8,10 @@ command archive js javascript:void(window.open('http://archive.ph/'+encodeURICom
 bind a archive
 bind ga archive
 
-command raindrop js javascript:void(window.open('https://app.raindrop.io/add?link='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title),'_blank'))
+command raindrop js javascript:void(window.open('https://app.raindrop.io/add?link='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)))
 bind gr raindrop
 
-command readwise js javascript:void(window.open('https://readwise.io/save?title='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(location.href)))
+command readwise js javascript:void(window.open('https://readwise.io/save?url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)))
 bind gl readwise
 
 bind --mode=ex <C-n> ex.next_completion
