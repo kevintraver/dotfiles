@@ -11,10 +11,11 @@ end
 
 local prevFrameSizes = {}
 
-local function hideOtherWindows(keep)
+local function hideOtherWindows(keep, screen)
   -- keep: table of window IDs to keep visible (as keys)
+  -- screen: only hide windows on this screen
   for _, w in ipairs(hs.window.allWindows()) do
-    if w:screen() == hs.window.frontmostWindow():screen() and not keep[w:id()] then
+    if w:screen() == screen and not keep[w:id()] then
       w:application():hide()
     end
   end
@@ -27,7 +28,6 @@ function M.toggleFill(win)
   local screenFrame = helpers.getScreenFrame(win)
   local filledFrame = helpers.getFilledFrame(screenFrame)
   win:setFrame(filledFrame)
-  hideOtherWindows({ [win:id()] = true })
   logger.logWindowMove(win, "toggleFill")
 end
 
@@ -47,7 +47,6 @@ function M.moveToFill(win)
       helpers.getScreenFrame(win)
     )
   )
-  hideOtherWindows({ [win:id()] = true })
   logger.logWindowMove(win, "moveToFill")
 end
 
@@ -83,7 +82,7 @@ local function moveSplitAndHide(win, side, pairedSide)
   -- Hide all other windows on the same screen
   local keep = { [win:id()] = true }
   if other then keep[other:id()] = true end
-  hideOtherWindows(keep)
+  hideOtherWindows(keep, win:screen())
 end
 
 function M.moveWindowWest()
