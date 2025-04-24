@@ -45,6 +45,7 @@ autocmd DocStart excalidraw.com mode ignore
 autocmd DocStart graphite.dev mode ignore
 autocmd DocStart chess.com mode ignore
 autocmd DocStart proton.me mode ignore
+autocmd DocStart read.readwise.io mode ignore
 
 unbindurl x.com j
 unbindurl x.com a
