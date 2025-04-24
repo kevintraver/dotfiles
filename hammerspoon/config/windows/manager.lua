@@ -11,6 +11,15 @@ end
 
 local prevFrameSizes = {}
 
+local function hideOtherWindows(keep)
+  -- keep: table of window IDs to keep visible (as keys)
+  for _, w in ipairs(hs.window.allWindows()) do
+    if w:screen() == hs.window.frontmostWindow():screen() and not keep[w:id()] then
+      w:application():hide()
+    end
+  end
+end
+
 function M.toggleFill(win)
   win = win or hs.window.frontmostWindow()
   if not win then return end
@@ -18,6 +27,7 @@ function M.toggleFill(win)
   local screenFrame = helpers.getScreenFrame(win)
   local filledFrame = helpers.getFilledFrame(screenFrame)
   win:setFrame(filledFrame)
+  hideOtherWindows({ [win:id()] = true })
   logger.logWindowMove(win, "toggleFill")
 end
 
@@ -37,6 +47,7 @@ function M.moveToFill(win)
       helpers.getScreenFrame(win)
     )
   )
+  hideOtherWindows({ [win:id()] = true })
   logger.logWindowMove(win, "moveToFill")
 end
 
@@ -56,28 +67,43 @@ function M.movePairedWindow(win, side)
   end
 end
 
-function M.moveWindowWest()
+local function moveSplitAndHide(win, side, pairedSide)
   local wins = hs.window.orderedWindows()
-  local win = wins[1]
+  if not win then return end
+  M.moveToHalf(win, side)
+  -- Find paired window
+  local idx, other
+  for i, w in ipairs(wins) do
+    if w:id() == win:id() then
+      idx = i; break
+    end
+  end
+  other = idx and wins[idx + 1]
+  if other then M.moveToHalf(other, pairedSide) end
+  -- Hide all other windows on the same screen
+  local keep = { [win:id()] = true }
+  if other then keep[other:id()] = true end
+  hideOtherWindows(keep)
+end
+
+function M.moveWindowWest()
+  local win = hs.window.orderedWindows()[1]
   if not win then return end
   if #hs.screen.allScreens() > 1 then
     win:moveOneScreenWest(); M.moveToFill(win)
   else
-    M.moveToHalf(win, "left")
-    M.movePairedWindow(win, "right")
+    moveSplitAndHide(win, "left", "right")
   end
   logger.logWindowMove(win, "moveWindowWest")
 end
 
 function M.moveWindowEast()
-  local wins = hs.window.orderedWindows()
-  local win = wins[1]
+  local win = hs.window.orderedWindows()[1]
   if not win then return end
   if #hs.screen.allScreens() > 1 then
     win:moveOneScreenEast(); M.moveToFill(win)
   else
-    M.moveToHalf(win, "right")
-    M.movePairedWindow(win, "left")
+    moveSplitAndHide(win, "right", "left")
   end
   logger.logWindowMove(win, "moveWindowEast")
 end
@@ -86,6 +112,7 @@ function M.fillWindow(win)
   win = win or hs.window.frontmostWindow()
   if not win then return end
   M.moveToFill(win)
+  -- hideOtherWindows is already called in moveToFill
   logger.logWindowMove(win, "fillWindow")
 end
 
