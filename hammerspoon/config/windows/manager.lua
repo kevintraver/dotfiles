@@ -11,23 +11,6 @@ end
 
 local prevFrameSizes = {}
 
-local function isLeftOrRightHalf(frame, screenFrame, pad)
-  local tolerance = 20
-  local halfWidth = (screenFrame.w - 2 * pad) / 2
-  if math.abs(frame.x - (screenFrame.x + pad)) < tolerance and
-      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
-      math.abs(frame.w - halfWidth) < tolerance and
-      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
-    return "left"
-  elseif math.abs(frame.x - (screenFrame.x + pad + halfWidth)) < tolerance and
-      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
-      math.abs(frame.w - halfWidth) < tolerance and
-      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
-    return "right"
-  end
-  return nil
-end
-
 function M.toggleFill(win)
   win = win or hs.window.frontmostWindow()
   if not win then return end

@@ -18,6 +18,23 @@ function H.getFilledFrame(screenFrame)
   }
 end
 
+local function isLeftOrRightHalf(frame, screenFrame, pad)
+  local tolerance = 20
+  local halfWidth = (screenFrame.w - 2 * pad) / 2
+  if math.abs(frame.x - (screenFrame.x + pad)) < tolerance and
+      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
+      math.abs(frame.w - halfWidth) < tolerance and
+      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
+    return "left"
+  elseif math.abs(frame.x - (screenFrame.x + pad + halfWidth)) < tolerance and
+      math.abs(frame.y - (screenFrame.y + pad)) < tolerance and
+      math.abs(frame.w - halfWidth) < tolerance and
+      math.abs(frame.h - (screenFrame.h - 2 * pad)) < tolerance then
+    return "right"
+  end
+  return nil
+end
+
 function H.getHalfFrame(screenFrame, side)
   local halfWidth = (screenFrame.w - 2 * S.PAD) / 2
   if side == "left" then
