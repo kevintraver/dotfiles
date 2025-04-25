@@ -11,3 +11,14 @@ matches:
     replace: 'http://localhost:4000/'
   - trigger: 'lh8'
     replace: 'http://localhost:8000/'
+
+  - trigger: 'lol'
+    replace: "\U0001F606"
+  - trigger: 'LOL'
+    replace: "\U0001F602"
+  - trigger: 'rofl'
+    replace: "\U0001F923"
+  - trigger: ':mf'
+    replace: "\U0001FAE0"
+  - trigger: ':uf'
+    replace: "\U0001F643"
