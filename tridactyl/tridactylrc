@@ -4,14 +4,14 @@ sanitise tridactyllocal tridactylsync
 
 set modeindicator false
 
-command archive js javascript:void(window.open('http://archive.ph/newest/'+encodeURIComponent(location.origin+location.pathname)))
+command archive js tri.excmds.tabopen('http://archive.ph/newest/'+encodeURIComponent(location.origin+location.pathname))
 bind a archive
 bind ga archive
 
-command raindrop js javascript:void(window.open('https://app.raindrop.io/add?link='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title)))
+command raindrop js tri.excmds.tabopen('https://app.raindrop.io/add?link='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
 bind gr raindrop
 
-command readwise js javascript:void(window.open('https://readwise.io/save?url='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title)))
+command readwise js tri.excmds.tabopen('https://readwise.io/save?url='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
 bind gl readwise
 
 bind --mode=ex <C-n> ex.next_completion
