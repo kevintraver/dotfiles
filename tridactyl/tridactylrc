@@ -19,6 +19,9 @@ bind gw wayback
 
 command iina js tri.excmds.tabopen('iina://open?url='+encodeURIComponent(location.href))
 
+command xcancel js if (location.hostname.endsWith('x.com')) { navigator.clipboard.writeText(location.href.replace('x.com','xcancel.com')); }
+bindurl x.com yx xcancel
+
 bind --mode=ex <C-n> ex.next_completion
 bind --mode=ex <C-p> ex.prev_completion
 
