@@ -9,7 +9,7 @@ bind a archive
 bind ga archive
 
 command raindrop js tri.excmds.tabopen('https://app.raindrop.io/add?link='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
-bind gr raindrop
+bind gs raindrop
 
 command readwise js tri.excmds.tabopen('https://readwise.io/save?url='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
 bind gl readwise
