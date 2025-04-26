@@ -14,6 +14,9 @@ bind gr raindrop
 command readwise js tri.excmds.tabopen('https://readwise.io/save?url='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
 bind gl readwise
 
+command wayback js tri.excmds.tabopen('https://web.archive.org/save/'+encodeURIComponent(location.origin+location.pathname))
+bind gw wayback
+
 bind --mode=ex <C-n> ex.next_completion
 bind --mode=ex <C-p> ex.prev_completion
 
