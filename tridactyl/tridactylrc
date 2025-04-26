@@ -67,6 +67,10 @@ unbindurl x.com .
 bindurl x.com gh js history.pushState(null, '', '/home'); window.dispatchEvent(new Event('popstate'));
 
 unbindurl github.com a
+unbindurl github.com gr
+unbindurl github.com ga
+unbindurl github.com gs
+unbindurl github.com gw
 unbindurl github.com b
 unbindurl github.com c
 unbindurl github.com i
