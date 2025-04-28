@@ -5,7 +5,6 @@ sanitise tridactyllocal tridactylsync
 set modeindicator false
 
 command archive js tri.excmds.tabopen('http://archive.ph/newest/'+encodeURIComponent(location.origin+location.pathname))
-bind a archive
 bind ga archive
 
 command raindrop js tri.excmds.tabopen('https://app.raindrop.io/add?link='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
