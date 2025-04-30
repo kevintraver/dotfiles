@@ -24,3 +24,5 @@ matches:
     replace: "\U0001F643"
   - trigger: ':tu'
     replace: "\U0001F44D"
+  - trigger: ':thumbsup'
+    replace: "\U0001F44D"
