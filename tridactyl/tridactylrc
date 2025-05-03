@@ -17,6 +17,7 @@ command wayback js tri.excmds.tabopen('https://web.archive.org/save/'+encodeURIC
 bind gw wayback
 
 command iina js tri.excmds.tabopen('iina://open?url='+encodeURIComponent(location.href))
+bindurl youtube.com gv iina
 
 command xcancel js if (location.hostname.endsWith('x.com')) { navigator.clipboard.writeText(location.href.replace('x.com','xcancel.com')); }
 bindurl x.com yx xcancel
