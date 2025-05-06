@@ -63,5 +63,6 @@
   "gitlens.codeLens.authors.enabled": false,
   "prettier.configPath": "~/.dotfiles/prettier/prettierrc",
   "editor.accessibilitySupport": "off",
-  "security.promptForLocalFileProtocolHandling": false
+  "security.promptForLocalFileProtocolHandling": false,
+  "vscode-just.runInTerminal": true
 }
