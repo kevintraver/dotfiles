@@ -85,3 +85,10 @@ export CURSOR_MCP_CONFIG_PATH="/Users/kevin/.cursor/mcp.json"
 
 # https://pnpm.io/
 export PATH="$HOME/Library/pnpm:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
