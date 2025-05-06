@@ -39,9 +39,6 @@ alias docker-ubuntu="docker run --name ubuntu --rm -i -t ubuntu"
 # ember
 alias ep='ember s --proxy http://localhost:3000'
 
-# nextjs
-alias ns='pnpm run dev'
-
 # clipboard
 alias pbc='pbcopy'
 alias pbp='pbpaste'
@@ -98,9 +95,6 @@ alias ws="windsurf"
 
 # windsurf
 alias w="windsurf"
-
-# pnpm run dev
-alias dev="pnpm run dev"
 
 # Copy absolute path of a file to clipboard
 copypath() {
