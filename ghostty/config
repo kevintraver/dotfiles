@@ -2,7 +2,6 @@ font-family = "Hack"
 
 keybind = "super+w=unbind"
 keybind = "super+q=unbind"
-keybind = "super+d=unbind"
 keybind = "super+e=unbind"
 keybind = "super+a=unbind"
 keybind = "super+m=unbind"
