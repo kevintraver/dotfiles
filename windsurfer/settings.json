@@ -64,5 +64,6 @@
   "prettier.configPath": "~/.dotfiles/prettier/prettierrc",
   "editor.accessibilitySupport": "off",
   "security.promptForLocalFileProtocolHandling": false,
-  "vscode-just.runInTerminal": true
+  "vscode-just.runInTerminal": true,
+  "xstate.nestTypegenFiles": false
 }
