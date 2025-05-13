@@ -83,12 +83,17 @@ export CLAUDE_MCP_CONFIG_PATH="/Users/kevin/Library/Application Support/Claude/c
 export WINDSURF_MCP_CONFIG_PATH="/Users/kevin/.codeium/windsurf/mcp_config.json"
 export CURSOR_MCP_CONFIG_PATH="/Users/kevin/.cursor/mcp.json"
 
-# https://pnpm.io/
-export PATH="$HOME/Library/pnpm:$PATH"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
 [ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/Users/kevin/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
