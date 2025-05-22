@@ -102,6 +102,7 @@ function tmux-yt-dlp() {
 # The aliases ensure noglob is used
 alias ytdl='noglob tmux-yt-dlp'
 alias ytd='noglob tmux-yt-dlp'
+alias ytda='noglob tmux-yt-dlp -x --audio-format mp3'
 
 # tmux
 alias t="tmux attach || tmux new"
