@@ -13,8 +13,8 @@ alias tf='DATE=$(date +%s) && /Applications/Firefox.app/Contents/MacOS/firefox -
 alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications'
 alias tcp='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications --proxy-server="http://localhost:8080"'
 
-alias reset-chrome="rm -rf /Users/kevin/Library/Application\ Support/Google && rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
-alias reset-firefox='rm -rf /Users/kevin/Library/Application\ Support/Firefox && rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist'
+alias reset-chrome="/bin/rm -rf /Users/kevin/Library/Application\ Support/Google && /bin/rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
+alias reset-firefox='/bin/rm -rf /Users/kevin/Library/Application\ Support/Firefox && /bin/rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist'
 
 # trash https://github.com/sindresorhus/trash-cli
 alias rm="trash"
