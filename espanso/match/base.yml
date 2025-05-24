@@ -26,3 +26,11 @@ matches:
     replace: "\U0001F44D"
   - trigger: ':thumbsup'
     replace: "\U0001F44D"
+
+  - trigger: ':ip:'
+    replace: '{{output}}'
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'ipconfig getifaddr en0'
