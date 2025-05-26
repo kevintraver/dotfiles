@@ -34,3 +34,19 @@ matches:
         type: shell
         params:
           cmd: 'ipconfig getifaddr en0'
+
+  - trigger: 'ddate'
+    replace: '{{date}}'
+    vars:
+      - name: date
+        type: date
+        params:
+          format: '%m-%d-%Y'
+
+  - trigger: 'ttime'
+    replace: '{{time}}'
+    vars:
+      - name: time
+        type: date
+        params:
+          format: '%H:%M:%S'
