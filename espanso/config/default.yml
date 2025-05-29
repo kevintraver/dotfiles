@@ -4,3 +4,4 @@
 show_icon: false
 show_notifications: false
 search_shortcut: SHIFT+CMD+E
+toggle_key: LEFT_CTRL
