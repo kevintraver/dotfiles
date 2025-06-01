@@ -54,6 +54,10 @@ autocmd DocStart graphite.dev mode ignore
 autocmd DocStart chess.com mode ignore
 autocmd DocStart proton.me mode ignore
 autocmd DocStart read.readwise.io mode ignore
+autocmd DocStart bolt.new mode ignore
+autocmd DocStart stackblitz.com mode ignore
+autocmd DocStart chef.convex.dev mode ignore
+autocmd DocStart v0.dev mode ignore
 
 unbindurl x.com j
 unbindurl x.com a
