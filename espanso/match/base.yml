@@ -13,19 +13,21 @@ matches:
     replace: 'http://localhost:8000/'
 
   - trigger: 'lol'
-    replace: "\U0001F606"
+    replace: '😆'
   - trigger: 'LOL'
-    replace: "\U0001F602"
+    replace: '😂'
   - trigger: 'rofl'
-    replace: "\U0001F923"
+    replace: '🤣'
   - trigger: ':mf'
-    replace: "\U0001FAE0"
+    replace: '🫠'
   - trigger: ':uf'
-    replace: "\U0001F643"
+    replace: '🙃'
   - trigger: ':tu'
-    replace: "\U0001F44D"
-  - trigger: ':thumbsup'
-    replace: "\U0001F44D"
+    replace: '👍'
+  - trigger: ':td'
+    replace: '👎'
+  - trigger: ':-'
+    replace: '😬'
 
   - trigger: ':ip:'
     replace: '{{output}}'
