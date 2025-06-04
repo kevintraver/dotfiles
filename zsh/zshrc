@@ -97,3 +97,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+alias claude="/Users/kevin/.claude/local/claude"
