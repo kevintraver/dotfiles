@@ -11,4 +11,10 @@
 # @raycast.author kevintraver
 # @raycast.authorURL https://raycast.com/kevintraver
 
-/opt/homebrew/bin/yabai --restart-service
+output=$(/opt/homebrew/bin/yabai --restart-service 2>&1)
+status=$?
+if [ $status -eq 0 ]; then
+  echo "Yabai service restarted successfully"
+else
+  echo "Error restarting yabai service"
+fi
