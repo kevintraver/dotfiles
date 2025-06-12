@@ -28,6 +28,12 @@ matches:
     replace: '👎'
   - trigger: ':-'
     replace: '😬'
+  - trigger: ':oo'
+    replace: '😮'
+  - trigger: ':party:'
+    replace: '🎉'
+  - trigger: ':partyface:'
+    replace: '🥳'
 
   - trigger: ':ip:'
     replace: '{{output}}'
