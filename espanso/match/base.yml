@@ -58,3 +58,11 @@ matches:
         type: date
         params:
           format: '%H:%M:%S'
+
+  - trigger: 'dtime'
+    replace: '{{datetime}}'
+    vars:
+      - name: datetime
+        type: date
+        params:
+          format: '%m-%d-%Y %H:%M:%S'
