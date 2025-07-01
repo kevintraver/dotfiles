@@ -98,3 +98,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 alias claude="/Users/kevin/.claude/local/claude"
+
+export PATH=$PATH:/Users/kevin/.npm-global/bin
