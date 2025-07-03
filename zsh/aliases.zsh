@@ -116,6 +116,9 @@ alias ws="windsurf"
 # windsurf
 alias w="windsurf"
 
+# cursor
+alias c="cursor"
+
 # Copy absolute path of a file to clipboard
 copypath() {
   local filepath=$(realpath "$1" 2>/dev/null)
