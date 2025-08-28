@@ -26,7 +26,7 @@ matches:
     replace: 'http://localhost:8000/'
 
   # Dynamic localhost by port, e.g., 5173lh -> http://localhost:5173
-  - regex: '(?P<port>\\d{1,5})lh'
+  - regex: '(?P<port>\d{1,5})lh'
     replace: 'http://localhost:{{port}}'
 
   # Emoji
