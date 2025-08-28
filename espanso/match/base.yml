@@ -4,6 +4,8 @@
 matches:
   - trigger: 'kte'
     replace: 'kevintraver@kevintraver.com'
+  - trigger: 'kgm'
+    replace: 'kevintraver@gmail.com'
 
   - trigger: 'lh3'
     replace: 'http://localhost:3000/'
