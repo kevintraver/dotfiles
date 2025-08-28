@@ -119,6 +119,15 @@ alias w="windsurf"
 # cursor
 alias c="cursor"
 
+# opencode
+alias oc="opencode"
+
+# claude
+alias cl="claude"
+
+# codex
+alias co="codex"
+
 # Copy absolute path of a file to clipboard
 copypath() {
   local filepath=$(realpath "$1" 2>/dev/null)
