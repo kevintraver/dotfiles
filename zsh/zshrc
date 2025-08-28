@@ -77,13 +77,6 @@ fi
 # https://mise.jdx.dev/
 eval "$(mise activate zsh)"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# bun completions
-[ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
-
 alias claude="/Users/kevin/.claude/local/claude"
 
 export PATH=$PATH:/Users/kevin/.npm-global/bin
