@@ -76,5 +76,3 @@ fi
 
 # https://mise.jdx.dev/
 eval "$(mise activate zsh)"
-
-alias claude="/Users/kevin/.claude/local/claude"
