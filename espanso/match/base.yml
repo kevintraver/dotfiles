@@ -9,8 +9,16 @@ matches:
     replace: 'http://localhost:3000/'
   - trigger: 'lh4'
     replace: 'http://localhost:4111/'
-  - trigger: 'lh8'
+  - trigger: 'lh80'
+    replace: 'http://localhost:8080/'
+  - trigger: 'lh81'
+    replace: 'http://localhost:8081/'
+  - trigger: 'lh8000'
     replace: 'http://localhost:8000/'
+
+  # Dynamic localhost by port, e.g., 5173lh -> http://localhost:5173
+  - regex: '(?P<port>\\d{1,5})lh'
+    replace: 'http://localhost:{{port}}'
 
   - trigger: 'lol'
     replace: '😆'
