@@ -78,5 +78,3 @@ fi
 eval "$(mise activate zsh)"
 
 alias claude="/Users/kevin/.claude/local/claude"
-
-export PATH=$PATH:/Users/kevin/.npm-global/bin
