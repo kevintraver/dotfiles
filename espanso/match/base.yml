@@ -2,19 +2,26 @@
 # https://espanso.org/docs/
 
 matches:
+  # Emails
   - trigger: 'kte'
     replace: 'kevintraver@kevintraver.com'
+
   - trigger: 'kgm'
     replace: 'kevintraver@gmail.com'
 
+  # Localhost shortcuts
   - trigger: 'lh3'
     replace: 'http://localhost:3000/'
+
   - trigger: 'lh4'
     replace: 'http://localhost:4111/'
+
   - trigger: 'lh80'
     replace: 'http://localhost:8080/'
+
   - trigger: 'lh81'
     replace: 'http://localhost:8081/'
+
   - trigger: 'lh8000'
     replace: 'http://localhost:8000/'
 
@@ -22,6 +29,7 @@ matches:
   - regex: '(?P<port>\\d{1,5})lh'
     replace: 'http://localhost:{{port}}'
 
+  # Emoji
   - trigger: 'lol'
     replace: '😆'
   - trigger: 'LOL'
@@ -53,14 +61,7 @@ matches:
   - trigger: ':zzz'
     replace: '😴'
 
-  - trigger: ':ip:'
-    replace: '{{output}}'
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: 'ipconfig getifaddr en0'
-
+  # Dates / Times
   - trigger: ':ddate'
     replace: '{{date}}'
     vars:
@@ -117,6 +118,7 @@ matches:
         params:
           cmd: 'date +%s'
 
+  # Utilities / System
   - trigger: ':uuid'
     replace: '{{uuid}}'
     vars:
@@ -124,3 +126,11 @@ matches:
         type: shell
         params:
           cmd: 'uuidgen'
+
+  - trigger: ':ip:'
+    replace: '{{output}}'
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'ipconfig getifaddr en0'
