@@ -134,3 +134,7 @@ matches:
         type: shell
         params:
           cmd: 'ipconfig getifaddr en0'
+
+  # Git
+  - trigger: ':cc'
+    replace: 'Commit the current changes'
