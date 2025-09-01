@@ -137,4 +137,4 @@ matches:
 
   # Git
   - trigger: ':cc'
-    replace: 'Commit the current changes'
+    replace: 'Commit all the current changes with detailed messages using git commit conventional syntax'
