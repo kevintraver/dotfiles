@@ -71,6 +71,7 @@ alias gl='lazygit'
 # git
 alias gs="git status"
 alias ghb="gh browse"
+alias gca="git add -A && git commit --verbose --no-edit --amend"
 
 # yt-dlp with tmux
 function tmux-yt-dlp() {
