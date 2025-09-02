@@ -139,3 +139,6 @@ copypath() {
 # editor
 alias e="$EDITOR"
 alias n="$EDITOR"
+
+# use ai to git commit with opencode
+alias aic='opencode run "Commit all the current changes with detailed messages using git commit conventional syntax"'
