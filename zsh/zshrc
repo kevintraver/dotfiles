@@ -56,6 +56,11 @@ source $HOME/.zsh/plugins/gt-completions/completions.zsh
 # https://dystroy.org/broot/
 source ~/.config/broot/launcher/bash/br
 
+# bun
+[ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
