@@ -146,6 +146,4 @@ alias n="$EDITOR"
 alias aic='opencode run "Commit all the current changes with detailed messages using git commit conventional syntax"'
 
 # use ai to review changes, create branch, and commit with opencode
-alias aib='opencode run "Review all the uncommitted changes. Then create \
-a new branch with a name based on theses features. Then commit the \
-changes with detailed messages using git commit conventional syntax"'
+alias aib='opencode run "Review all the uncommitted changes. Then create a new branch with a name based on theses features. Then commit the changes with detailed messages using git commit conventional syntax"'
