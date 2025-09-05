@@ -104,7 +104,7 @@ return {
   },
 
   {
-    "kevintraver/nvim-treesitter-textsubjects",
+    "RRethy/nvim-treesitter-textsubjects",
     vscode = true,
     event = "VeryLazy",
     config = function()
