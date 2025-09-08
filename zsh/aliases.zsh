@@ -126,7 +126,7 @@ alias oc="opencode"
 alias cl="claude"
 
 # codex
-alias co="codex"
+alias co="codex --search"
 
 # Copy absolute path of a file to clipboard
 copypath() {
