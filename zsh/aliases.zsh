@@ -119,6 +119,9 @@ alias w="windsurf"
 # cursor
 alias c="cursor"
 
+# cursor-agent
+alias ca="cursor-agent"
+
 # opencode
 alias oc="opencode"
 
