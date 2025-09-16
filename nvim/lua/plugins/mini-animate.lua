@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.animate",
+  "nvim-mini/mini.animate",
   enabled = false,
   opts = {
     cursor = {

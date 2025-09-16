@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.ai",
+  "nvim-mini/mini.ai",
   vscode = true,
   event = "VeryLazy",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
