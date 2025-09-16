@@ -1,8 +1,5 @@
 {
   "editor.minimap.enabled": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   "windsurf.autocompleteSpeed": "default",
   "windsurf.autoExecutionPolicy": "turbo",
   "windsurf.chatFontSize": "default",
