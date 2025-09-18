@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     event = { "LazyFile", "VeryLazy" },
     vscode = true,
     opts = {
@@ -105,18 +106,9 @@ return {
 
   {
     "RRethy/nvim-treesitter-textsubjects",
-    vscode = true,
-    event = "VeryLazy",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        textsubjects = {
-          enable = true,
-          keymaps = {
-            ["."] = "textsubjects-smart",
-          },
-        },
-      })
-    end,
+    enabled = false, -- Plugin not compatible with nvim-treesitter main branch
+    -- The plugin internally uses nvim-treesitter.query which no longer exists
+    -- TODO: Re-enable when plugin is updated for new treesitter API
   },
 
   {
