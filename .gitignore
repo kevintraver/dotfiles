@@ -1,2 +1,3 @@
 nvim/lazy-lock.json
 karabiner/automatic_backups
+.dotter/cache.toml
