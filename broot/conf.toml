@@ -1,3 +1,0 @@
-# Broot configuration for modal mode
-modal = true
-initial_mode = "command"
