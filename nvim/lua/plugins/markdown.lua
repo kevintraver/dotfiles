@@ -1,6 +1,7 @@
 return {
   {
     "tadmccorkle/markdown.nvim",
+    enabled = false,
     ft = "markdown",
     lazy = true,
     config = true,
