@@ -61,5 +61,8 @@
   "editor.accessibilitySupport": "off",
   "security.promptForLocalFileProtocolHandling": false,
   "vscode-just.runInTerminal": true,
-  "xstate.nestTypegenFiles": false
+  "xstate.nestTypegenFiles": false,
+  "amp.url": "https://ampcode.com/",
+  "amp.tab.enabled": true,
+  "editor.wordBasedSuggestions": "off"
 }
