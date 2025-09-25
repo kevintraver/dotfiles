@@ -1,5 +1,7 @@
 font-family = "Hack"
 
+macos-option-as-alt = true
+
 keybind = "super+w=unbind"
 keybind = "super+q=unbind"
 keybind = "super+e=unbind"
