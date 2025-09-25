@@ -141,3 +141,6 @@ matches:
 
   - trigger: ':aib'
     replace: 'Review all the uncommitted changes. Then create a new branch with a name based on theses features. Then commit the changes with detailed messages using git commit conventional syntax'
+
+  - trigger: ':ais'
+    replace: 'Commit all the staged changes with detailed messages using git commit conventional syntax'
