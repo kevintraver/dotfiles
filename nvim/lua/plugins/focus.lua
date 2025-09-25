@@ -15,7 +15,7 @@ return {
   },
   keys = {
     {
-      "<D-d>",
+      "<D-l>",
       function()
         require("focus").split_nicely()
       end,
