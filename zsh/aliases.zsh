@@ -150,8 +150,8 @@ alias n="$EDITOR"
 # use aic to git commit with opencode
 alias aic='opencode run "Commit all the current changes with detailed messages using git commit conventional syntax" -m "opencode/grok-code"'
 
-# use aics to git commit staged changes with opencode
-alias aics='opencode run "Commit all the staged changes with detailed messages using git commit conventional syntax" -m "opencode/grok-code"'
+# use ais to git commit staged changes with opencode
+alias ais='opencode run "Commit all the staged changes with detailed messages using git commit conventional syntax" -m "opencode/grok-code"'
 
 # use aib to review changes, create branch, and commit with opencode
 alias aib='opencode run "Review all the uncommitted changes. Then create a new branch with a name based on theses features. Then commit the changes with detailed messages using git commit conventional syntax" -m "opencode/grok-code"'
