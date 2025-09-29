@@ -73,5 +73,6 @@
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "amp.gpt5": true
 }
