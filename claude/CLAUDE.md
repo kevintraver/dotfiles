@@ -11,3 +11,8 @@
 - When creating CLI/terminal screenshots, use `freeze` (Charm CLI tool)
 - Command pattern: `<command> | freeze -o <output>.png`
 - Example: `glow file.md | freeze -o screenshot.png`
+
+## GitHub Integration
+
+- When working with GitHub repositories, issues, pull requests, or other GitHub operations, prefer GitHub MCP server tools over the `gh` CLI
+- MCP tools provide better integration for common operations like creating issues, PRs, searching repositories, etc.
