@@ -35,7 +35,6 @@
   "eslint.format.enable": true,
 
   "window.newWindowDimensions": "maximized",
-  "gitlens.ai.generateCommitMessage.customInstructions": "Generate a commit message using the Conventional Commits format",
   "extensions.ignoreRecommendations": true,
   "files.exclude": {
     "**/.next": true,
