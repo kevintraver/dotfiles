@@ -106,7 +106,8 @@ return {
 
   {
     "RRethy/nvim-treesitter-textsubjects",
-    enabled = false, -- Plugin not compatible with nvim-treesitter main branch
+    enabled = true, -- Plugin not compatible with nvim-treesitter main branch
+    dev = true,
     -- The plugin internally uses nvim-treesitter.query which no longer exists
     -- TODO: Re-enable when plugin is updated for new treesitter API
   },
