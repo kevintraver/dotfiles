@@ -16,3 +16,13 @@
 
 - When working with GitHub repositories, issues, pull requests, or other GitHub operations, prefer GitHub MCP server tools over the `gh` CLI
 - MCP tools provide better integration for common operations like creating issues, PRs, searching repositories, etc.
+
+## macOS File Type Defaults
+
+- When setting default applications for file types, use `utiluti` (https://github.com/scriptingosx/utiluti)
+- Workflow: First get UTI with `utiluti get-uti <extension>`, then set handler with `utiluti type set <uti> <bundle-id>`
+- Example from the repo:
+  ```bash
+  utiluti get-uti txt  # Returns: public.plain-text
+  utiluti type set public.plain-text com.barebones.bbedit
+  ```
