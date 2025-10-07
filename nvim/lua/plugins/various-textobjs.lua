@@ -72,5 +72,13 @@ return {
       end,
       desc = "Remaining Indentation",
     },
+    {
+      "gG",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").entireBuffer()
+      end,
+      desc = "Entire Buffer",
+    },
   },
 }
