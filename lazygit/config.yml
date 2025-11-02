@@ -3,22 +3,17 @@ os:
   editAtLine: "nvr -s -l +{{line}} {{filename}}"
   editAtLineAndWait: "nvr -s -l --remote-wait +{{line}} {{filename}}"
   editPreset: "nvim"
-
 promptToReturnFromSubprocess: false
-
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
-
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
 keybinding:
   commits:
     moveDownCommit: "J"
     moveUpCommit: "K"
-
 gui:
   scrollHeight: 20
   nerdFontsVersion: "3"
   skipRewordInEditorWarning: true
-
 notARepository: "quit"
