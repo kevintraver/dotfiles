@@ -75,5 +75,6 @@
   },
   "amp.gpt5": true,
   "cursor.agent_layout_browser_beta_setting": true,
-  "cursor.enable_agent_window_setting": true
+  "cursor.enable_agent_window_setting": true,
+  "workbench.colorTheme": "Tokyo Night"
 }
