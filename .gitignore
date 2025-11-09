@@ -2,3 +2,5 @@ nvim/lazy-lock.json
 karabiner/automatic_backups
 .dotter/cache.toml
 espanso/match/packages
+superwhisper/recordings
+superwhisper/models
