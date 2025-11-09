@@ -11,7 +11,6 @@ command raindrop js tri.excmds.tabopen('https://app.raindrop.io/add?link='+encod
 bind gs raindrop
 
 command readwise js tri.excmds.tabopen('https://readwise.io/save?url='+encodeURIComponent(location.origin+location.pathname)+'&title='+encodeURIComponent(document.title))
-bind gl readwise
 
 command wayback js tri.excmds.tabopen('https://web.archive.org/save/'+encodeURIComponent(location.origin+location.pathname))
 bind gw wayback
@@ -62,6 +61,7 @@ autocmd DocStart v0.dev mode ignore
 unbindurl x.com j
 unbindurl x.com a
 unbindurl x.com ga
+unbindurl x.com gi
 unbindurl x.com k
 unbindurl x.com b
 unbindurl x.com o
@@ -69,6 +69,7 @@ unbindurl x.com /
 unbindurl x.com .
 
 bindurl x.com gh js history.pushState(null, '', '/home'); window.dispatchEvent(new Event('popstate'));
+bindurl x.com gl js history.pushState(null, '', '/Scobleizer/lists'); window.dispatchEvent(new Event('popstate'));
 
 unbindurl github.com a
 unbindurl github.com gr
