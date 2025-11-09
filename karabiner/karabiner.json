@@ -31,11 +31,7 @@
                   "key_code": "left_command",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [
-                  {
-                    "key_code": "left_command"
-                  }
-                ],
+                "to": [{ "key_code": "left_command" }],
                 "to_if_alone": [{ "key_code": "f18" }],
                 "type": "basic"
               }
@@ -80,19 +76,6 @@
                     "modifiers": ["control", "shift"]
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Map Left Command + Right Shift to F19",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "right_shift",
-                  "modifiers": { "mandatory": ["left_command"] }
-                },
-                "to": [{ "key_code": "f19" }],
                 "type": "basic"
               }
             ]
