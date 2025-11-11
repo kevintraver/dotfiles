@@ -1,4 +1,5 @@
 {
   "workbench.colorTheme": "Tokyo Night",
-  "security.promptForLocalFileProtocolHandling": false
+  "security.promptForLocalFileProtocolHandling": false,
+  "editor.formatOnSave": true
 }
