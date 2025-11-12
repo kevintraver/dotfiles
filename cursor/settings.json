@@ -2,6 +2,7 @@
   "workbench.colorTheme": "Tokyo Night",
   "security.promptForLocalFileProtocolHandling": false,
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
