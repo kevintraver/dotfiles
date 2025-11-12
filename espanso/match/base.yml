@@ -62,7 +62,7 @@ matches:
     replace: '😴'
 
   # Dates / Times
-  - trigger: ':ddate'
+  - trigger: 'ddate'
     replace: '{{date}}'
     vars:
       - name: date
@@ -70,7 +70,7 @@ matches:
         params:
           format: '%m-%d-%Y'
 
-  - trigger: ':ttime'
+  - trigger: 'ttime'
     replace: '{{time}}'
     vars:
       - name: time
@@ -78,7 +78,7 @@ matches:
         params:
           format: '%H:%M:%S'
 
-  - trigger: ':dtime'
+  - trigger: 'dtime'
     replace: '{{datetime}}'
     vars:
       - name: datetime
@@ -86,7 +86,7 @@ matches:
         params:
           format: '%m-%d-%Y %H:%M:%S'
 
-  - trigger: ':dateiso'
+  - trigger: 'dateiso'
     replace: '{{dateiso}}'
     vars:
       - name: dateiso
