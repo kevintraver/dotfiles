@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     sections = {
+      lualine_x = {},
       lualine_b = {
         {
           "git_prompt_string",
