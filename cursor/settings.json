@@ -1,5 +1,11 @@
 {
   "workbench.colorTheme": "Tokyo Night",
   "security.promptForLocalFileProtocolHandling": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
