@@ -5,7 +5,7 @@
   "activationSites" : [
 
   ],
-  "adjustOutputVolume" : true,
+  "adjustOutputVolume" : false,
   "contextFromActiveApplication" : false,
   "contextFromClipboard" : false,
   "contextFromSelection" : false,

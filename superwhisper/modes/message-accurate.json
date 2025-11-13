@@ -5,7 +5,7 @@
   "activationSites" : [
 
   ],
-  "adjustOutputVolume" : true,
+  "adjustOutputVolume" : false,
   "contextFromActiveApplication" : false,
   "contextFromClipboard" : false,
   "contextFromSelection" : false,
@@ -19,7 +19,7 @@
   "languageModelID" : "sw-claude-4p5-sonnet",
   "literalPunctuation" : false,
   "name" : "Accurate",
-  "pauseMediaPlayback" : true,
+  "pauseMediaPlayback" : false,
   "prompt" : "",
   "promptExamples" : [
 
