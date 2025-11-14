@@ -1,6 +1,15 @@
 return {
   "stevearc/oil.nvim",
   cmd = "Oil",
+  dependencies = {
+    {
+      "maelwalser/oil-copy.nvim",
+      opts = {},
+      config = function()
+        require("oil-copy").setup()
+      end,
+    },
+  },
   event = "VimEnter",
   opts = {
     view_options = {
