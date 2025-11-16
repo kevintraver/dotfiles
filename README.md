@@ -51,9 +51,9 @@ dotter diff
 - **ripgrep/** - Search tool configuration
 - **mitmproxy/** - HTTP/HTTPS proxy tool keybindings
 
-## Neovim Plugins (174 total)
+## Neovim Plugins
 
-This configuration includes 174 carefully curated Neovim plugins covering the complete development workflow:
+This configuration includes carefully curated Neovim plugins covering the complete development workflow:
 
 ### Core Infrastructure
 
