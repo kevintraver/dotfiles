@@ -172,6 +172,77 @@ The setup integrates multiple development tools:
 - Terminal multiplexing with tmux
 - Enhanced CLI tools (ripgrep, fd, bat, etc.) via Homebrew
 
+### Neovim Plugins
+
+The Neovim configuration leverages a comprehensive plugin ecosystem organized into functional categories:
+
+**Core Infrastructure (5 plugins):**
+
+- lazy.nvim, LazyVim, plenary.nvim, promise-async, nvim-nio
+
+**UI/UX & Themes (15 plugins):**
+
+- catppuccin, tokyonight.nvim, lualine.nvim, bufferline.nvim, noice.nvim, dressing.nvim, nvim-notify, nvim-web-devicons, mini.icons, edgy.nvim, snacks.nvim, which-key.nvim, screenkey.nvim, hacker.nvim, smear-cursor.nvim
+
+**File Navigation & Management (16 plugins):**
+
+- neo-tree.nvim, oil.nvim, oil-copy.nvim, telescope.nvim with multiple extensions (fzf-native, fzy-native, project, switch, lazy-plugins, helpgrep, undo), smart-open.nvim, project.nvim, other-nvim, quickfiles.nvim, nvim-file-location
+
+**Git Integration (15 plugins):**
+
+- gitsigns.nvim, neogit, fugit2.nvim, diffview.nvim, git-conflict.nvim, git-blame.nvim, gitlinker.nvim, advanced-git-search.nvim, telescope-git-diffs.nvim, mini-git, nvim-tinygit, git-dev.nvim, git-prompt-string-lualine.nvim, octo.nvim, tardis.nvim
+
+**LSP & Completion (13 plugins):**
+
+- nvim-lspconfig, mason.nvim, mason-lspconfig.nvim, blink.cmp, blink.compat, lazydev.nvim, neoconf.nvim, SchemaStore.nvim, nvim-navic, outline.nvim, trouble.nvim, refjump.nvim
+
+**Code Editing & Text Manipulation (35+ plugins):**
+
+- nvim-treesitter ecosystem (treesitter, context, textobjects, ts-autotag, outer, utils, treewalker.nvim)
+- Text objects and motions (nvim-surround, mini.ai, mini.align, mini.bracketed, mini.operators, nvim-various-textobjs, flash.nvim, nvim-spider, vim-matchup)
+- Editing operations (Comment.nvim, ts-comments.nvim, nvim-autopairs, substitute.nvim, cutlass.nvim, yanky.nvim, dial.nvim, coerce.nvim, toggle-quotes.nvim, sibling-swap.nvim, treesj, sort.nvim, thethethe.nvim, stringbreaker.nvim)
+
+**Formatting & Linting (8 plugins):**
+
+- conform.nvim, mason-conform.nvim, nvim-lint, none-ls.nvim, cspell.nvim, guess-indent.nvim, tabs-vs-spaces.nvim, smartcolumn.nvim
+
+**Testing & Debugging (12 plugins):**
+
+- neotest with adapters (jest, rspec), nvim-dap ecosystem (dap, dap-ui, dap-virtual-text, dap-ruby, mason-nvim-dap.nvim), one-small-step-for-vimkind, nvim-coverage, debugprint.nvim, nvim-chainsaw, overseer.nvim
+
+**Language-Specific Tools:**
+
+- TypeScript/JavaScript: typescript-tools.nvim, typecheck.nvim, ts-error-translator.nvim
+- Rust: rustaceanvim
+- Ruby: nvim-dap-ruby
+- JSON/YAML: jsonfly.nvim, jq.nvim, jq-playground.nvim, nvim-jqx
+- Markdown: markview.nvim, render-markdown.nvim, peek.nvim, markdown-toc, markdown-togglecheck, toc.nvim, md-pdf.nvim
+
+**Visual Enhancements (12 plugins):**
+
+- nvim-colorizer.lua, nvim-highlight-colors, color-picker.nvim, rainbow-delimiters.nvim, vim-illuminate, stcursorword, highlight-undo.nvim, hlargs.nvim, mini.indentscope, visual-whitespace.nvim
+
+**Utilities & Productivity (20+ plugins):**
+
+- better-escape.nvim, before.nvim, bookmarks.nvim, buffer-reopen.nvim, cloak.nvim, hardtime.nvim, precognition.nvim, toggleterm.nvim, numb.nvim, nvim-window-picker, winshift.nvim, focus.nvim, neogen, todo-comments.nvim, jot.lua, coop.nvim, faster.nvim
+
+**Specialized Tools:**
+
+- Undo/Redo: undotree, time-machine.nvim, nvim-fundo
+- Quickfix & Lists: nvim-bqf, nvim-pqf, qf.nvim, quicker.nvim
+- Search & Replace: grug-far.nvim, nvim-rip-substitute
+- HTTP/REST: kulala.nvim, curl.nvim
+- Screenshots & Sharing: nvim-silicon, paperplanes.nvim
+- AI Assistance: codeium.nvim, sidekick.nvim
+
+**Plugin Management Best Practices:**
+
+- Plugins are managed via lazy.nvim with lazy loading enabled for optimal startup time
+- Configuration files are organized in `nvim/lua/plugins/` with per-plugin or grouped configurations
+- Use `nvim --headless "+Lazy sync" +qa` to sync plugins after configuration changes
+- Run `nvim --headless "+checkhealth" +qa` to verify plugin health and dependencies
+- Check `vim-startuptime` plugin output to profile and optimize load times
+
 ## Working with Configurations
 
 ### Making Changes
