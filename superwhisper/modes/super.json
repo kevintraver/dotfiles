@@ -19,7 +19,7 @@
   "languageModelID" : "sw-claude-4p5-sonnet",
   "literalPunctuation" : false,
   "name" : "Super",
-  "pauseMediaPlayback" : false,
+  "pauseMediaPlayback" : true,
   "prompt" : "",
   "promptExamples" : [
 

@@ -19,7 +19,7 @@
   "languageModelID" : "sw-claude-4p5-sonnet",
   "literalPunctuation" : false,
   "name" : "Accurate",
-  "pauseMediaPlayback" : false,
+  "pauseMediaPlayback" : true,
   "prompt" : "",
   "promptExamples" : [
 
