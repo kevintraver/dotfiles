@@ -10,19 +10,19 @@ matches:
     replace: 'kevintraver@gmail.com'
 
   # Localhost shortcuts
-  - trigger: 'lh3'
+  - trigger: 'l3'
     replace: 'http://localhost:3000/'
 
-  - trigger: 'lh4'
+  - trigger: 'l4'
     replace: 'http://localhost:4111/'
 
-  - trigger: 'lh80'
+  - trigger: 'l8080'
     replace: 'http://localhost:8080/'
 
-  - trigger: 'lh81'
+  - trigger: 'l81'
     replace: 'http://localhost:8081/'
 
-  - trigger: 'lh8000'
+  - trigger: 'l8000'
     replace: 'http://localhost:8000/'
 
   # Dynamic localhost by port, e.g., 5173lh -> http://localhost:5173
