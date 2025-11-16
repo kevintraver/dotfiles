@@ -3,5 +3,5 @@
 
 show_icon: false
 show_notifications: false
-search_shortcut: SHIFT+CMD+E
-toggle_key: RIGHT_META
+search_shortcut: OFF
+toggle_key: OFF
