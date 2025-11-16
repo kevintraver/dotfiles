@@ -40,10 +40,10 @@ bind <C-h> tabprev
 bind <C-j> tabnext
 bind <C-k> tabprev
 
-bind --mode=ignore <C-j> tabnext
-bind --mode=ignore <C-k> tabprev
 bind --mode=ignore <C-l> tabnext
 bind --mode=ignore <C-h> tabprev
+bind --mode=ignore <C-j> tabnext
+bind --mode=ignore <C-k> tabprev
 
 bind --mode=ignore <C-o> jumpprev
 bind --mode=ignore <C-i> jumpnext
@@ -54,51 +54,7 @@ autocmd DocStart chess.com mode ignore
 autocmd DocStart proton.me mode ignore
 autocmd DocStart read.readwise.io mode ignore
 autocmd DocStart bolt.new mode ignore
-autocmd DocStart stackblitz.com mode ignore
 autocmd DocStart chef.convex.dev mode ignore
-autocmd DocStart v0.dev mode ignore
-
-unbindurl x.com j
-unbindurl x.com a
-unbindurl x.com ga
-unbindurl x.com gi
-unbindurl x.com k
-unbindurl x.com b
-unbindurl x.com r
-unbindurl x.com s
-unbindurl x.com o
-unbindurl x.com /
-unbindurl x.com .
-
-bindurl x.com gh js history.pushState(null, '', '/home'); window.dispatchEvent(new Event('popstate'));
-bindurl x.com gl js history.pushState(null, '', '/Scobleizer/lists'); window.dispatchEvent(new Event('popstate'));
-
-unbindurl github.com a
-unbindurl github.com gr
-unbindurl github.com ga
-unbindurl github.com gs
-unbindurl github.com gw
-unbindurl github.com b
-unbindurl github.com c
-unbindurl github.com i
-unbindurl github.com j
-unbindurl github.com k
-unbindurl github.com n
-unbindurl github.com o
-unbindurl github.com p
-unbindurl github.com s
-unbindurl github.com t
-unbindurl github.com w
-unbindurl github.com x
-unbindurl github.com ?
-unbindurl github.com /
-
-bindurl github.com ga js ['g','a'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gc js ['g','c'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gi js ['g','i'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gp js ['g','p'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gn js ['g','n'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gb js ['g','b'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gw js ['g','w'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gd js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
-bindurl github.com gh js ['g','d'].forEach(key => document.dispatchEvent(new KeyboardEvent('keydown',{key: key})))
+autocmd DocStart v0.app mode ignore
+autocmd DocStart github.com mode ignore
+autocmd DocStart x.com mode ignore
