@@ -131,6 +131,9 @@ alias oc="opencode"
 # claude
 alias cl="claude"
 
+# gemini
+alias gg="gemini"
+
 # codex
 alias co="codex --search"
 
