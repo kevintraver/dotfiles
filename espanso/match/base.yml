@@ -2,12 +2,6 @@
 # https://espanso.org/docs/
 
 matches:
-  # Emails
-  - trigger: 'kte'
-    replace: 'kevintraver@kevintraver.com'
-
-  - trigger: 'kgm'
-    replace: 'kevintraver@gmail.com'
 
   # Localhost shortcuts
   - trigger: 'l3'
