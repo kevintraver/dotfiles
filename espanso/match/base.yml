@@ -2,6 +2,18 @@
 # https://espanso.org/docs/
 
 matches:
+  # Git
+  - trigger: ';cc'
+    replace: 'Commit these changes using the Conventional Commits format. Include a detailed description of the motivation and impact.'
+
+  - trigger: ';ca'
+    replace: 'Stage all changes and commit them using the Conventional Commits format. Provide a comprehensive commit message.'
+
+  - trigger: ';cu'
+    replace: 'Analyze the code changes, then create a new branch with a descriptive kebab-case name. Finally, commit the changes using the Conventional Commits format.'
+
+  - trigger: ';cs'
+    replace: 'Commit the currently staged changes using the Conventional Commits format. Write a detailed message explaining the updates.'
 
   # Localhost shortcuts
   - trigger: 'l3'
@@ -128,13 +140,3 @@ matches:
         type: shell
         params:
           cmd: 'ipconfig getifaddr en0'
-
-  # Git
-  - trigger: ':aic'
-    replace: 'Commit all the current changes with detailed messages using git commit conventional syntax'
-
-  - trigger: ':aib'
-    replace: 'Review all the uncommitted changes. Then create a new branch with a name based on theses features. Then commit the changes with detailed messages using git commit conventional syntax'
-
-  - trigger: ':ais'
-    replace: 'Commit all the staged changes with detailed messages using git commit conventional syntax'
