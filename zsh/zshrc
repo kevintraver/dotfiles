@@ -82,37 +82,3 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
-
-# A function to launch an ephemeral Firefox instance with custom DNS
-# and a completely clean and silent startup experience.
-#
-# Usage: tfdns
-function tfdns() {
-  local DATE=$(date +%s)
-  local PROFILE_PATH="/tmp/Firefox/$DATE"
-  local PROFILE_NAME="tmp-$DATE"
-
-  /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "$PROFILE_NAME $PROFILE_PATH"
-  
-  cat <<EOF > "$PROFILE_PATH/user.js"
-// --- Custom DNS Settings ---
-user_pref("network.trr.mode", 3);
-user_pref("network.trr.uri", "https://dns.google/dns-query");
-user_pref("network.trr.bootstrapAddress", "8.8.8.8");
-
-// --- Clean Startup Settings ---
-user_pref("browser.startup.didSeeFirstRunPage", true); // <-- The final fix
-user_pref("trailhead.firstrun.didSee", true);
-user_pref("browser.onboarding.enabled", false);
-user_pref("browser.aboutwelcome.enabled", false);
-user_pref("browser.startup.homepage_override.mstone", "ignore");
-user_pref("browser.shell.checkDefaultBrowser", false);
-user_pref("browser.migrate.content-modal.show-on-startup", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
-user_pref("browser.tabs.firefox-view", false);
-user_pref("browser.newtabpage.enabled", false);
-user_pref("browser.startup.page", 0);
-EOF
-
-  /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "$PROFILE_NAME" &!
-}
