@@ -65,6 +65,7 @@ source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
 source "$DOTFILES_HOME/zsh/aliases.zsh"
+source "$DOTFILES_HOME/zsh/functions/git.zsh"
 
 source ~/.zshrc.local
 
