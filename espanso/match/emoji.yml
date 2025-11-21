@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+# https://espanso.org/docs/
+
+matches:
+
+  - trigger: 'lol'
+    replace: '😆'
+  - trigger: 'LOL'
+    replace: '😂'
+  - trigger: 'rofl'
+    replace: '🤣'
+  - trigger: ':mf'
+    replace: '🫠'
+  - trigger: ':angry'
+    replace: '😡'
+  - trigger: ':wink'
+    replace: '😉'
+  - trigger: ':uf'
+    replace: '🙃'
+  - trigger: ':tu'
+    replace: '👍'
+  - trigger: ':td'
+    replace: '👎'
+  - trigger: ':-'
+    replace: '😬'
+  - trigger: ':oo'
+    replace: '😮'
+  - trigger: ':he'
+    replace: '🤯'
+  - trigger: ':party:'
+    replace: '🎉'
+  - trigger: ':partyface:'
+    replace: '🥳'
+  - trigger: ':zzz'
+    replace: '😴'
+

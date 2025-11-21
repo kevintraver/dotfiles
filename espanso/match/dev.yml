@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+# https://espanso.org/docs/
+
+matches:
+
+  - trigger: 'l3'
+    replace: 'http://localhost:3000/'
+
+  - trigger: 'l4'
+    replace: 'http://localhost:4111/'
+
+  - trigger: 'l8080'
+    replace: 'http://localhost:8080/'
+
+  - trigger: 'l81'
+    replace: 'http://localhost:8081/'
+
+  - trigger: 'l8000'
+    replace: 'http://localhost:8000/'
+
+  # Dynamic localhost by port, e.g., 5173lh -> http://localhost:5173
+  - regex: '(?P<port>\d{1,5})lh'
+    replace: 'http://localhost:{{port}}'
+
+  - trigger: ':uuid'
+    replace: '{{uuid}}'
+    vars:
+      - name: uuid
+        type: shell
+        params:
+          cmd: 'uuidgen'
+
+  - trigger: ':ip:'
+    replace: '{{output}}'
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'ipconfig getifaddr en0'
+
