@@ -18,9 +18,9 @@ PROFILE_NAME="tmp-$DATE"
 # Create the Firefox profile
 /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "$PROFILE_NAME $PROFILE_PATH" > /dev/null 2>&1
 
-# Create user.js with custom DNS and startup settings
+# Create user.js with Google DNS and startup settings
 cat <<EOF > "$PROFILE_PATH/user.js"
-// --- Custom DNS Settings ---
+// --- Google DNS Settings ---
 user_pref("network.trr.mode", 3);
 user_pref("network.trr.uri", "https://dns.google/dns-query");
 user_pref("network.trr.bootstrapAddress", "8.8.8.8");
