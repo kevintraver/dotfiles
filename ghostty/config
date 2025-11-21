@@ -19,7 +19,6 @@ keybind = "ctrl+l=goto_split:right"
 keybind = "ctrl+k=goto_split:up"
 keybind = "ctrl+j=goto_split:down"
 
-window-width = 213
-window-height = 66
+maximize = true
 
 working-directory = "/Users/kevin/.dotfiles"
