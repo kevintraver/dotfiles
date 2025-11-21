@@ -153,14 +153,14 @@ copypath() {
 alias e="$EDITOR"
 alias n="$EDITOR"
 
-# use aic to git commit with claude code
-alias aic='claude -p --verbose "Commit all the current changes with detailed messages using git commit conventional syntax"'
+# use aic to git commit with cursor composer-1
+alias aic='cursor-agent -p "Commit all the current changes with detailed messages using git commit conventional syntax" --model composer-1'
 
-# use ais to git commit staged changes with claude code
-alias ais='claude -p --verbose "Commit all the staged changes with detailed messages using git commit conventional syntax"'
+# use ais to git commit staged changes with cursor composer-1
+alias ais='cursor-agent -p "Commit all the staged changes with detailed messages using git commit conventional syntax" --model composer-1'
 
-# use aib to review changes, create branch, and commit with claude code
-alias aib='claude -p --verbose "Review all the uncommitted changes. Then create a new branch with a name based on these features. Then commit the changes with detailed messages using git commit conventional syntax"'
+# use aib to review changes, create branch, and commit with cursor composer-1
+alias aib='cursor-agent -p "Review all the uncommitted changes. Then create a new branch with a name based on these features. Then commit the changes with detailed messages using git commit conventional syntax" --model composer-1'
 
 # update homebrew packages
 alias bu='brew update && brew upgrade'
