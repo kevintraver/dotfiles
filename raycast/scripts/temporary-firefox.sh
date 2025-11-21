@@ -46,6 +46,10 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", 
 user_pref("browser.tabs.firefox-view", false);
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.startup.page", 0);
+
+// Disable quit confirmation dialog
+user_pref("browser.warnOnQuitShortcut", false);
+
 EOF
 
 # Open Firefox with the temporary profile in a new instance
