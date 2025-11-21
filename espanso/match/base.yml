@@ -2,21 +2,6 @@
 # https://espanso.org/docs/
 
 matches:
-  # Git
-  - trigger: ';cd'
-    replace: 'Commit these changes using the Conventional Commits format. Include a detailed description of the motivation and impact.'
-
-  - trigger: ';cc'
-    replace: 'Commit these changes using the Conventional Commits format. Include a short description of the changes.'
-
-  - trigger: ';cb'
-    replace: 'Analyze the code changes, then create a new branch with a descriptive kebab-case name. Finally, commit the changes using the Conventional Commits format.'
-
-  - trigger: ';ca'
-    replace: 'Stage all changes and commit them using the Conventional Commits format. Provide a comprehensive commit message.'
-
-  - trigger: ';cs'
-    replace: 'Commit the currently staged changes using the Conventional Commits format. Write a detailed message explaining the updates.'
 
   # Localhost shortcuts
   - trigger: 'l3'
