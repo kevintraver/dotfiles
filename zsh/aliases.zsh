@@ -153,14 +153,14 @@ copypath() {
 alias e="$EDITOR"
 alias n="$EDITOR"
 
-# use aic to git commit with opencode using claude sonnet 4.5
-alias aic='opencode run "Commit all the current changes with detailed messages using git commit conventional syntax" -m "anthropic/claude-sonnet-4-5"'
+# use aic to git commit with claude code
+alias aic='claude -p --verbose "Commit all the current changes with detailed messages using git commit conventional syntax"'
 
-# use ais to git commit staged changes with opencode using claude sonnet 4.5
-alias ais='opencode run "Commit all the staged changes with detailed messages using git commit conventional syntax" -m "anthropic/claude-sonnet-4-5"'
+# use ais to git commit staged changes with claude code
+alias ais='claude -p --verbose "Commit all the staged changes with detailed messages using git commit conventional syntax"'
 
-# use aib to review changes, create branch, and commit with opencode using claude sonnet 4.5
-alias aib='opencode run "Review all the uncommitted changes. Then create a new branch with a name based on theses features. Then commit the changes with detailed messages using git commit conventional syntax" -m "anthropic/claude-sonnet-4-5"'
+# use aib to review changes, create branch, and commit with claude code
+alias aib='claude -p --verbose "Review all the uncommitted changes. Then create a new branch with a name based on these features. Then commit the changes with detailed messages using git commit conventional syntax"'
 
 # update homebrew packages
 alias bu='brew update && brew upgrade'
