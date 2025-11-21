@@ -2,7 +2,7 @@ font-family = "Hack"
 
 macos-option-as-alt = true
 
-keybind = "super+w=unbind"
+keybind = "super+w=text:\x1bw"
 keybind = "super+q=unbind"
 keybind = "super+e=unbind"
 keybind = "super+a=unbind"
