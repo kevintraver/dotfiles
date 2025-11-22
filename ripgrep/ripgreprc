@@ -2,5 +2,6 @@
 --hidden
 --smart-case
 --glob=!.git/
+--glob=!node_modules/
 --max-columns=80
 --max-columns-preview
