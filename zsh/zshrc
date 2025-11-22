@@ -26,6 +26,7 @@ export RIPGREP_CONFIG_PATH="$DOTFILES_HOME/ripgrep/ripgreprc"
 
 # https://github.com/MenkeTechnologies/zsh-expand
 source $HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh
+export ZPWR_CORRECT=false
 
 # https://github.com/junegunn/fzf
 export FZF_DEFAULT_OPTS="
