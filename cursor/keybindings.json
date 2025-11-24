@@ -161,5 +161,24 @@
     "key": "cmd+.",
     "command": "-composer.openModeMenu",
     "when": "chatModeMenuFocused && !editorTextFocus || composerFocused && !editorTextFocus || !editorTextFocus && activeEditor == 'workbench.editor.composer' || !editorTextFocus && focusedView =~ /^workbench.panel.aichat.view/"
+  },
+  {
+    "key": "cmd+b",
+    "command": "composer.toggleBrowserTab"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.closeSidebar",
+    "when": "explorerViewletVisible"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "!explorerViewletVisible"
   }
 ]
