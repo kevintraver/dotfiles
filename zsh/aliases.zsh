@@ -153,14 +153,27 @@ copypath() {
 alias e="$EDITOR"
 alias n="$EDITOR"
 
-# use aic to git commit with cursor composer-1
-alias aic='cursor-agent -p "Commit all the current changes with detailed messages using git commit conventional syntax" --model composer-1'
+# Unalias oh-my-zsh git plugin aliases to use for AI commits
+unalias gca 2>/dev/null
+unalias gcb 2>/dev/null
+unalias gcc 2>/dev/null
+unalias gcd 2>/dev/null
+unalias gcs 2>/dev/null
 
-# use ais to git commit staged changes with cursor composer-1
-alias ais='cursor-agent -p "Commit all the staged changes with detailed messages using git commit conventional syntax" --model composer-1'
+# use gca to git commit all changes with cursor composer-1
+alias gca='cursor-agent -p "$(get_prompt git_commit_all)" --model composer-1'
 
-# use aib to review changes, create branch, and commit with cursor composer-1
-alias aib='cursor-agent -p "Review all the uncommitted changes. Then create a new branch with a name based on these features. Then commit the changes with detailed messages using git commit conventional syntax" --model composer-1'
+# use gcb to review changes, create branch, and commit with cursor composer-1
+alias gcb='cursor-agent -p "$(get_prompt git_commit_branch)" --model composer-1'
+
+# use gcc to git commit with short description with cursor composer-1
+alias gcc='cursor-agent -p "$(get_prompt git_commit_short)" --model composer-1'
+
+# use gcd to git commit with detailed description with cursor composer-1
+alias gcd='cursor-agent -p "$(get_prompt git_commit_detailed)" --model composer-1'
+
+# use gcs to git commit staged changes with cursor composer-1
+alias gcs='cursor-agent -p "$(get_prompt git_commit_staged)" --model composer-1'
 
 # update homebrew packages
 alias bu='brew update && brew upgrade'

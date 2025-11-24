@@ -1,0 +1,22 @@
+# Git commit prompts for cursor-agent and Espanso
+
+git_commit_detailed: >
+  Commit these changes using the Conventional Commits format.
+  Include a detailed description of the motivation and impact.
+
+git_commit_short: >
+  Commit these changes using the Conventional Commits format.
+  Include a short description of the changes.
+
+git_commit_branch: >
+  Analyze the code changes, then create a new branch with a descriptive
+  kebab-case name. Finally, commit the changes using the Conventional
+  Commits format.
+
+git_commit_all: >
+  Stage all changes and commit them using the Conventional Commits format.
+  Provide a comprehensive commit message.
+
+git_commit_staged: >
+  Commit the currently staged changes using the Conventional Commits format.
+  Write a detailed message explaining the updates.
