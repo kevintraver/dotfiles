@@ -57,6 +57,26 @@ return {
       desc = "Flash Treesitter",
     },
     {
+      "ir",
+      mode = { "o", "x" },
+      function()
+        require("flash").textobject({
+          around = false,
+        })
+      end,
+      desc = "Flash Textobject",
+    },
+    {
+      "ar",
+      mode = { "o", "x" },
+      function()
+        require("flash").textobject({
+          around = true,
+        })
+      end,
+      desc = "Flash Textobject",
+    },
+    {
       "S",
       mode = { "n", "o", "x" },
       function()
