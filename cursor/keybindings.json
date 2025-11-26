@@ -50,13 +50,53 @@
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.navigateRight",
-    "when": "neovim.mode != 'insert'"
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus && neovim.mode != 'insert' && multipleEditorGroups"
   },
   {
     "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft",
-    "when": "neovim.mode != 'insert'"
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus && neovim.mode != 'insert' && multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "editorFocus && neovim.mode != 'insert' && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "editorFocus && neovim.mode != 'insert' && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "!editorFocus && !auxiliaryBarFocus && !terminalFocus && sideBarVisible"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "auxiliaryBarFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusPanel",
+    "when": "editorFocus && neovim.mode != 'insert'"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "panelFocus && !terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+w -",
