@@ -108,6 +108,9 @@ alias oc="opencode"
 # claude
 alias cl="claude"
 
+# claude
+alias cc="claude"
+
 # gemini
 alias gg="gemini"
 
