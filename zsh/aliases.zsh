@@ -1,20 +1,7 @@
-# osx apps
-
-# brave
-alias brave='open -na /Applications/Brave\ Browser.app --args "--user-data-dir=/tmp/Brave/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments'
-
-# chromium
-alias tmpchromium='open -na /Applications/Chromium.app --args "--user-data-dir=/tmp/Chromium/`date +%s`"'
-
-# firefox
-alias tf='DATE=$(date +%s) && /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "tmp-$DATE /tmp/Firefox/$DATE" && /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "tmp-$DATE" &!'
-
-# chrome
-alias tc='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications'
-alias tcp='open -na /Applications/Google\ Chrome.app --args "--user-data-dir=/tmp/Chrome/`date +%s`" --no-default-browser-check --no-first-run --enable-devtools-experiments --disable-notifications --proxy-server="http://localhost:8080"'
-
-alias reset-chrome="/bin/rm -rf /Users/kevin/Library/Application\ Support/Google && /bin/rm -rf /Users/kevin/Library/Preferences/com.google.Chrome.plist"
-alias reset-firefox='/bin/rm -rf /Users/kevin/Library/Application\ Support/Firefox && /bin/rm -rf /Users/kevin/Library/Preferences/org.mozilla.firefox.plist'
+# temporary browsers profiles functions
+alias tc='temp-google-chrome'
+alias tcp='temp-google-chrome-proxy'
+alias tf='temp-firefox'
 
 # trash https://github.com/sindresorhus/trash-cli
 alias rm="trash"

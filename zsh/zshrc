@@ -68,6 +68,7 @@ source "$DOTFILES_HOME/zsh/history/history.zsh"
 source "$DOTFILES_HOME/zsh/aliases.zsh"
 source "$DOTFILES_HOME/zsh/functions/git.zsh"
 source "$DOTFILES_HOME/zsh/functions/prompts.zsh"
+source "$DOTFILES_HOME/zsh/functions/browsers.zsh"
 
 source ~/.zshrc.local
 
