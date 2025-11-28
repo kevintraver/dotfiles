@@ -193,7 +193,7 @@
     "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
   },
   {
-    "key": "cmd+m",
+    "key": "tab",
     "command": "composer.openModeMenu",
     "when": "chatModeMenuFocused && !editorTextFocus || composerFocused && !editorTextFocus || !editorTextFocus && activeEditor == 'workbench.editor.composer' || !editorTextFocus && focusedView =~ /^workbench.panel.aichat.view/"
   },
@@ -222,7 +222,7 @@
     "when": "!explorerViewletVisible"
   },
   {
-    "key": "shift+cmd+m",
+    "key": "cmd+m",
     "command": "composer.openModelToggle",
     "when": "composerFocused && !editorTextFocus"
   }
