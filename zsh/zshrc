@@ -65,18 +65,16 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
-source "$DOTFILES_HOME/zsh/aliases/browsers.zsh"
-source "$DOTFILES_HOME/zsh/aliases/filesystem.zsh"
-source "$DOTFILES_HOME/zsh/aliases/git.zsh"
-source "$DOTFILES_HOME/zsh/aliases/networking.zsh"
-source "$DOTFILES_HOME/zsh/aliases/docker.zsh"
-source "$DOTFILES_HOME/zsh/aliases/development.zsh"
-source "$DOTFILES_HOME/zsh/aliases/clipboard.zsh"
-source "$DOTFILES_HOME/zsh/aliases/tools.zsh"
-source "$DOTFILES_HOME/zsh/aliases/homebrew.zsh"
-source "$DOTFILES_HOME/zsh/functions/git.zsh"
-source "$DOTFILES_HOME/zsh/functions/prompts.zsh"
-source "$DOTFILES_HOME/zsh/functions/browsers.zsh"
+
+# Source all alias files
+for alias_file in "$DOTFILES_HOME/zsh/aliases"/*.zsh; do
+  [ -f "$alias_file" ] && source "$alias_file"
+done
+
+# Source all function files
+for function_file in "$DOTFILES_HOME/zsh/functions"/*.zsh; do
+  [ -f "$function_file" ] && source "$function_file"
+done
 
 source ~/.zshrc.local
 
