@@ -16,7 +16,7 @@
   "key" : "super",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-claude-4p5-sonnet",
+  "languageModelID" : "sw-gpt-5.1",
   "literalPunctuation" : false,
   "name" : "Super",
   "pauseMediaPlayback" : true,

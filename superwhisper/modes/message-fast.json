@@ -16,7 +16,7 @@
   "key" : "message-fast",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-claude-4p5-haiku",
+  "languageModelID" : "sw-gpt-5.1",
   "literalPunctuation" : false,
   "name" : "Fast",
   "pauseMediaPlayback" : true,

@@ -16,7 +16,7 @@
   "key" : "message-accurate",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-claude-4p5-sonnet",
+  "languageModelID" : "sw-gpt-5.1",
   "literalPunctuation" : false,
   "name" : "Accurate",
   "pauseMediaPlayback" : true,
