@@ -33,4 +33,8 @@ matches:
     replace: '🥳'
   - trigger: ':zzz'
     replace: '😴'
+  - trigger: ':siren'
+    replace: '🚨'
+  - trigger: ':alert'
+    replace: '🚨'
 
