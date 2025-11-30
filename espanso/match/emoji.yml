@@ -37,4 +37,6 @@ matches:
     replace: '🚨'
   - trigger: ':alert'
     replace: '🚨'
+  - trigger: ':redalert'
+    replace: '🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨'
 
