@@ -6,6 +6,9 @@ matches:
   - trigger: 'l3'
     replace: 'http://localhost:3000/'
 
+  - trigger: 'lh3'
+    replace: 'http://localhost:3000/'
+
   - trigger: 'l4'
     replace: 'http://localhost:4111/'
 
