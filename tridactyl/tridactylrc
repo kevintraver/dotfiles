@@ -60,5 +60,6 @@ autocmd DocStart github.com mode ignore
 autocmd DocStart x.com mode ignore
 autocmd DocStart aistudio.google.com mode ignore
 autocmd DocStart grok.com mode ignore
+autocmd DocStart raindrop.io mode ignore
 autocmd DocStart chatgpt.com mode ignore
 autocmd DocStart claude.ai mode ignore
