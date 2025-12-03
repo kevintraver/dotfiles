@@ -184,10 +184,6 @@
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
   },
   {
-    "key": "ctrl+cmd+space",
-    "command": "workbench.action.showCommands"
-  },
-  {
     "key": "ctrl+g",
     "command": "git.stageSelectedRanges",
     "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
