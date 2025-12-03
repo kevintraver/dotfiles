@@ -184,11 +184,6 @@
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'"
   },
   {
-    "key": "ctrl+g",
-    "command": "git.stageSelectedRanges",
-    "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
-  },
-  {
     "key": "cmd+b",
     "command": "composer.toggleBrowserTab"
   },
