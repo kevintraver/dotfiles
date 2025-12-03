@@ -193,11 +193,6 @@
     "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
   },
   {
-    "key": "tab",
-    "command": "composer.openModeMenu",
-    "when": "chatModeMenuFocused && !editorTextFocus || composerFocused && !editorTextFocus || !editorTextFocus && activeEditor == 'workbench.editor.composer' || !editorTextFocus && focusedView =~ /^workbench.panel.aichat.view/"
-  },
-  {
     "key": "cmd+.",
     "command": "-composer.openModeMenu",
     "when": "chatModeMenuFocused && !editorTextFocus || composerFocused && !editorTextFocus || !editorTextFocus && activeEditor == 'workbench.editor.composer' || !editorTextFocus && focusedView =~ /^workbench.panel.aichat.view/"
