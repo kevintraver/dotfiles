@@ -19,7 +19,7 @@ vim.keymap.set({ "n", "i", "o" }, "<D-s>", function()
 end, { desc = "Save File" })
 
 -- close
-vim.keymap.set({ "n", "i", "x" }, "<D-w>", function()
+vim.keymap.set({ "n", "i", "x" }, "<M-w>", function()
   vim.cmd.stopinsert()
   vim.cmd.close()
 end, { desc = "Close Window" })
