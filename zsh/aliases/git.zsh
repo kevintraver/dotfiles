@@ -10,18 +10,18 @@ unalias gcc 2>/dev/null
 unalias gcd 2>/dev/null
 unalias gcs 2>/dev/null
 
-# use gca to git commit all changes with cursor composer-1
-alias gca='cursor-agent -p "$(get_prompt gca)" --model composer-1'
+# use gca to git commit all changes with opencode and claude
+alias gca='opencode run "$(get_prompt gca)" -m "anthropic/claude-opus-4-5"'
 
-# use gcb to review changes, create branch, and commit with cursor composer-1
-alias gcb='cursor-agent -p "$(get_prompt gcb)" --model composer-1'
+# use gcb to review changes, create branch, and commit with opencode and claude
+alias gcb='opencode run "$(get_prompt gcb)" -m "anthropic/claude-opus-4-5"'
 
-# use gcc to git commit with short description with cursor composer-1
-alias gcc='cursor-agent -p "$(get_prompt gcc)" --model composer-1'
+# use gcc to git commit with short description with opencode and claude
+alias gcc='opencode run "$(get_prompt gcc)" -m "anthropic/claude-opus-4-5"'
 
-# use gcd to git commit with detailed description with cursor composer-1
-alias gcd='cursor-agent -p "$(get_prompt gcd)" --model composer-1'
+# use gcd to git commit with detailed description with opencode and claude
+alias gcd='opencode run "$(get_prompt gcd)" -m "anthropic/claude-opus-4-5"'
 
-# use gcs to git commit staged changes with cursor composer-1
-alias gcs='cursor-agent -p "$(get_prompt gcs)" --model composer-1'
+# use gcs to git commit staged changes with opencode and claude
+alias gcs='opencode run "$(get_prompt gcs)" -m "anthropic/claude-opus-4-5"'
 
