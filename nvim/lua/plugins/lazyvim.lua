@@ -19,7 +19,7 @@ return {
     {
       "<leader>lu",
       function()
-        require("lazy").update()
+        require("lazy.manage").update()
       end,
       desc = "Lazy Update",
     },
