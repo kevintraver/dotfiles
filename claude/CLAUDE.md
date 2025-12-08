@@ -17,3 +17,7 @@
 - Never use dynamic imports (e.g., `await import(...)`) unless explicitly requested
 - Never cast to `any` type
 - Do not add extra defensive checks or try/catch blocks
+
+## Development Servers
+
+- Only start development servers when explicitly requested by the user.
