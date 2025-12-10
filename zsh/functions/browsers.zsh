@@ -15,6 +15,21 @@ temp-google-chrome() {
     --disable-notifications
 }
 
+# Open Google Chrome with a custom profile path
+temp-google-chrome-path() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: temp-google-chrome-path <profile-path>" >&2
+    return 1
+  fi
+  local profile_path="${~1}"
+  open -na "/Applications/Google Chrome.app" --args \
+    "--user-data-dir=$profile_path" \
+    --no-default-browser-check \
+    --no-first-run \
+    --enable-devtools-experiments \
+    --disable-notifications
+}
+
 # Open Google Chrome with a new temporary profile and mitmproxy
 temp-google-chrome-proxy() {
   local profile_path="/tmp/Chrome/$(date +%s)"
