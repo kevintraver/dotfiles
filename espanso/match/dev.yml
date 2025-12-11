@@ -3,22 +3,13 @@
 
 matches:
 
-  - trigger: 'l3'
-    replace: 'http://localhost:3000/'
-
   - trigger: 'lh3'
     replace: 'http://localhost:3000/'
 
-  - trigger: 'l4'
+  - trigger: 'lh4'
     replace: 'http://localhost:4111/'
 
-  - trigger: 'l8080'
-    replace: 'http://localhost:8080/'
-
-  - trigger: 'l81'
-    replace: 'http://localhost:8081/'
-
-  - trigger: 'l8000'
+  - trigger: 'lh8000'
     replace: 'http://localhost:8000/'
 
   # Dynamic localhost by port, e.g., 5173lh -> http://localhost:5173
