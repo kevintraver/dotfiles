@@ -40,6 +40,9 @@ bind <C-h> tabprev
 bind <C-j> tabnext
 bind <C-k> tabprev
 
+bind <l> tabnext
+bind <h> tabprev
+
 bind --mode=ignore <C-l> tabnext
 bind --mode=ignore <C-h> tabprev
 bind --mode=ignore <C-j> tabnext
