@@ -15,13 +15,6 @@ export DOTFILES_HOME="$HOME/.dotfiles"
 # https://github.com/zdharma-continuum/fast-syntax-highlighting
 source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-# https://zsh.sourceforge.io/Doc/Release/Completion-System.html
-zstyle ':completion:*' matcher-list '' \
-  'm:{a-z\-}={A-Z\_}' \
-  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
-  'r:|?=** m:{a-z\-}={A-Z\_}' \
-  'm:{a-zA-Z}={A-Za-z}'
-
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
 
@@ -42,9 +35,6 @@ export FZF_DEFAULT_OPTS="
 source $HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
-# https://help.cloud66.com/docs/toolbelt/toolbelt
-export PATH="/opt/cloud66/bin:${PATH}"
-
 # https://github.com/cantino/mcfly
 export MCFLY_RESULTS_SORT=LAST_RUN
 eval "$(mcfly init zsh)"
@@ -61,12 +51,8 @@ source $HOME/.zsh/plugins/gt-completions/completions.zsh
 # https://dystroy.org/broot/
 source ~/.config/broot/launcher/bash/br
 
-# bun
-[ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 source "$DOTFILES_HOME/zsh/editor.zsh"
+source "$DOTFILES_HOME/zsh/completion.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
 
@@ -82,20 +68,12 @@ done
 
 source ~/.zshrc.local
 
-if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
-  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
-fi
-
 # https://mise.jdx.dev/
 eval "$(mise activate zsh)"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
