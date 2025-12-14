@@ -8,7 +8,18 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # https://github.com/zsh-users/zsh-completions
 FPATH="/opt/homebrew/share/zsh/site-functions:/opt/homebrew/share/zsh-completions:$FPATH"
-autoload -Uz compinit; compinit
+autoload -Uz compinit
+
+# Speed up completion initialization:
+# - Use an XDG cache location for compdump/cache
+# - Skip compaudit on every startup (-C). If you want the security check back,
+#   remove `-C` (startup may be slower).
+_zsh_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+command mkdir -p "$_zsh_cache_dir" 2>/dev/null
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$_zsh_cache_dir/zcompcache"
+compinit -C -d "$_zsh_cache_dir/zcompdump-${ZSH_VERSION}"
+unset _zsh_cache_dir
 
 export DOTFILES_HOME="$HOME/.dotfiles"
 
