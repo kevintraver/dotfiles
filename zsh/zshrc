@@ -3,11 +3,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Only run the rest for interactive shells.
+[[ -o interactive ]] || return 0
+
 # https://github.com/romkatv/powerlevel10k
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+elif [[ -r /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 # https://github.com/zsh-users/zsh-completions
-FPATH="/opt/homebrew/share/zsh/site-functions:/opt/homebrew/share/zsh-completions:$FPATH"
+for _zsh_fpath_dir in \
+  /opt/homebrew/share/zsh/site-functions \
+  /opt/homebrew/share/zsh-completions \
+  /usr/local/share/zsh/site-functions \
+  /usr/local/share/zsh-completions; do
+  [[ -d "$_zsh_fpath_dir" ]] && fpath=("$_zsh_fpath_dir" $fpath)
+done
+unset _zsh_fpath_dir
 autoload -Uz compinit
 
 # Speed up completion initialization:
@@ -24,16 +38,16 @@ unset _zsh_cache_dir
 export DOTFILES_HOME="$HOME/.dotfiles"
 
 # https://github.com/zdharma-continuum/fast-syntax-highlighting
-source $HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+[[ -r "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
 # https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 # https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
 export RIPGREP_CONFIG_PATH="$DOTFILES_HOME/ripgrep/ripgreprc"
 
 # https://github.com/MenkeTechnologies/zsh-expand
-source $HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh
+[[ -r "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh" ]] && source "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh"
 export ZPWR_CORRECT=false
 
 # https://github.com/junegunn/fzf
@@ -43,29 +57,34 @@ export FZF_DEFAULT_OPTS="
 --bind 'tab:accept'"
 
 # https://github.com/Aloxaf/fzf-tab
-source $HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+[[ -r "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
 # https://github.com/cantino/mcfly
 export MCFLY_RESULTS_SORT=LAST_RUN
-eval "$(mcfly init zsh)"
+(( $+commands[mcfly] )) && eval "$(mcfly init zsh)"
 
 # https://zsh.sourceforge.io/Guide/zshguide04.html
 WORDCHARS=${WORDCHARS/\/}
 
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
 # Lazy load on first git command for faster startup
-_load_git_plugin() {
-  unfunction _load_git_plugin git 2>/dev/null
-  source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
+git() {
+  unfunction git 2>/dev/null
+  local plugin="$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
+  [[ -r "$plugin" ]] && source "$plugin"
+  command git "$@"
 }
-git() { _load_git_plugin; git "$@" }
 
 # https://graphite.dev
-source $HOME/.zsh/plugins/gt-completions/completions.zsh
+[[ -r "$HOME/.zsh/plugins/gt-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/gt-completions/completions.zsh"
 
 # https://dystroy.org/broot/
-source ~/.config/broot/launcher/bash/br
+if [[ -r "$HOME/.config/broot/launcher/zsh/br" ]]; then
+  source "$HOME/.config/broot/launcher/zsh/br"
+elif [[ -r "$HOME/.config/broot/launcher/bash/br" ]]; then
+  source "$HOME/.config/broot/launcher/bash/br"
+fi
 
 source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/completion.zsh"
@@ -73,24 +92,28 @@ source "$DOTFILES_HOME/zsh/keymaps.zsh"
 source "$DOTFILES_HOME/zsh/history/history.zsh"
 
 # Source all alias files
-for alias_file in "$DOTFILES_HOME/zsh/aliases"/*.zsh; do
-  [ -f "$alias_file" ] && source "$alias_file"
+for alias_file in "$DOTFILES_HOME/zsh/aliases"/*.zsh(N); do
+  source "$alias_file"
 done
 
 # Source all function files
-for function_file in "$DOTFILES_HOME/zsh/functions"/*.zsh; do
-  [ -f "$function_file" ] && source "$function_file"
+for function_file in "$DOTFILES_HOME/zsh/functions"/*.zsh(N); do
+  source "$function_file"
 done
 
-source ~/.zshrc.local
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
 # https://mise.jdx.dev/
 # Using --shims for faster startup (avoids hook on every prompt)
-eval "$(mise activate zsh --shims)"
+(( $+commands[mise] )) && eval "$(mise activate zsh --shims)"
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+[[ -d "$ANDROID_HOME/emulator" ]] && path+=("$ANDROID_HOME/emulator")
+[[ -d "$ANDROID_HOME/platform-tools" ]] && path+=("$ANDROID_HOME/platform-tools")
+typeset -U path
+export PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if (( $+functions[p10k] )) && [[ -r "$HOME/.p10k.zsh" ]]; then
+  source "$HOME/.p10k.zsh"
+fi
