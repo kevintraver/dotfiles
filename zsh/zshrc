@@ -80,7 +80,8 @@ done
 source ~/.zshrc.local
 
 # https://mise.jdx.dev/
-eval "$(mise activate zsh)"
+# Using --shims for faster startup (avoids hook on every prompt)
+eval "$(mise activate zsh --shims)"
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
