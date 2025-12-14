@@ -1,4 +1,5 @@
 return {
   "y3owk1n/time-machine.nvim",
-  opts = true,
+  cmd = { "TimeMachineToggle", "TimeMachinePurgeBuffer", "TimeMachinePurgeAll", "TimeMachineLogShow", "TimeMachineLogClear" },
+  opts = {},
 }
