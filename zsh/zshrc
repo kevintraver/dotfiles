@@ -6,6 +6,11 @@ fi
 # Only run the rest for interactive shells.
 [[ -o interactive ]] || return 0
 
+# Some plugins can call `compdef` before `compinit` has run. If `_comps` isn't an
+# associative array yet, those calls can fail with:
+#   _comps: assignment to invalid subscript range
+typeset -g -A _comps _services _patcomps _postpatcomps
+
 # https://github.com/romkatv/powerlevel10k
 if [[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
@@ -32,7 +37,12 @@ _zsh_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 command mkdir -p "$_zsh_cache_dir" 2>/dev/null
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$_zsh_cache_dir/zcompcache"
-compinit -C -d "$_zsh_cache_dir/zcompdump-${ZSH_VERSION}"
+_zsh_compdump="$_zsh_cache_dir/zcompdump-${ZSH_VERSION}"
+if ! compinit -C -d "$_zsh_compdump" 2>/dev/null; then
+  command rm -f "$_zsh_compdump" "${_zsh_compdump}.zwc" 2>/dev/null
+  compinit -i -d "$_zsh_compdump"
+fi
+unset _zsh_compdump
 unset _zsh_cache_dir
 
 export DOTFILES_HOME="$HOME/.dotfiles"
