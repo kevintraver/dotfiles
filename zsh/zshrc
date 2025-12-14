@@ -54,7 +54,12 @@ eval "$(mcfly init zsh)"
 WORDCHARS=${WORDCHARS/\/}
 
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
+# Lazy load on first git command for faster startup
+_load_git_plugin() {
+  unfunction _load_git_plugin git 2>/dev/null
+  source $HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh
+}
+git() { _load_git_plugin; git "$@" }
 
 # https://graphite.dev
 source $HOME/.zsh/plugins/gt-completions/completions.zsh
