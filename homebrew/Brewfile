@@ -171,6 +171,7 @@ brew "pkg-config"
 brew "poppler"
 brew "poppler-qt5"
 brew "postgresql@14"
+brew "powerlevel10k"
 brew "pure"
 brew "pyenv"
 brew "pygments", link: false
