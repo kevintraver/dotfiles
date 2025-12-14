@@ -4,10 +4,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # https://github.com/romkatv/powerlevel10k
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # https://github.com/zsh-users/zsh-completions
-FPATH="$(brew --prefix)/share/zsh/site-functions:$(brew --prefix)/share/zsh-completions:$FPATH"
+FPATH="/opt/homebrew/share/zsh/site-functions:/opt/homebrew/share/zsh-completions:$FPATH"
 autoload -Uz compinit; compinit
 
 export DOTFILES_HOME="$HOME/.dotfiles"
