@@ -12,11 +12,8 @@ This repository uses [Dotter](https://github.com/SuperCuber/dotter) for managing
 # Deploy all configurations
 dotter deploy default
 
-# Check what would be deployed (dry run)
+# Preview what would be deployed (dry run)
 dotter deploy --dry-run
-
-# Preview changes before committing
-dotter diff
 ```
 
 ## Configuration Categories

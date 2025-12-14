@@ -19,7 +19,7 @@ This file provides guidance to AI coding assistants (e.g., Cursor, Claude Code) 
 2. Inspect only the relevant files; prefer fast search tools like `rg` and keep repository context in mind.
 3. Outline a short plan for any non-trivial task, then update it as work progresses.
 4. Make minimal, high-signal changes that respect existing formatting, tooling, and symlinked deployment paths.
-5. Validate changes with the commands in this guide (e.g., `dotter diff`, targeted tooling checks) whenever feasible.
+5. Validate changes with the commands in this guide (e.g., `dotter deploy --dry-run`, targeted tooling checks) whenever feasible.
 6. Summarize results clearly, referencing touched files and noting follow-up steps or verification gaps.
 
 ## Repository Overview
@@ -84,11 +84,8 @@ This is Kevin Traver's personal dotfiles repository, containing configurations f
 # Deploy all configurations
 dotter deploy default
 
-# Check what would be deployed (dry run)
+# Preview what would be deployed (dry run)
 dotter deploy --dry-run
-
-# Preview changes before committing
-dotter diff
 
 # Undeploy configurations
 dotter undeploy
@@ -126,7 +123,7 @@ nvim --headless "+checkhealth" +qa
 
 ### Testing Guidelines
 
-- Run `dotter diff` to verify the deployment plan stays clean
+- Run `dotter deploy --dry-run` to verify the deployment plan stays clean
 - For Neovim changes, execute `nvim --headless "+checkhealth" +qa` to catch missing dependencies
 - Include any follow-up package additions in the Brewfile
 - Manually relaunch affected apps (e.g., Kitty, tmux) to confirm new bindings or themes
@@ -250,14 +247,14 @@ The Neovim configuration leverages a comprehensive plugin ecosystem organized in
 1. Edit configurations directly in this repository
 2. Changes take effect immediately due to symbolic linking
 3. For new files/packages, update `.dotter/global.toml` and run `dotter deploy`
-4. Run `dotter diff` before committing to ensure the deployment plan stays clean
+4. Run `dotter deploy --dry-run` before committing to ensure the deployment plan stays clean
 
 ### Adding New Configurations
 
 1. Create directory/file in repository
 2. Add mapping in `.dotter/global.toml` under `[default.files]`
 3. Run `dotter deploy` to create symbolic links
-4. Confirm the resulting plan with `dotter diff`
+4. Confirm the resulting plan with `dotter deploy --dry-run`
 
 ### Backup Strategy
 
