@@ -78,13 +78,7 @@ export MCFLY_RESULTS_SORT=LAST_RUN
 WORDCHARS=${WORDCHARS/\/}
 
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-# Lazy load on first git command for faster startup
-git() {
-  unfunction git 2>/dev/null
-  local plugin="$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
-  [[ -r "$plugin" ]] && source "$plugin"
-  command git "$@"
-}
+[[ -r "$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh" ]] && source "$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
 
 # https://graphite.dev
 [[ -r "$HOME/.zsh/plugins/gt-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/gt-completions/completions.zsh"
