@@ -6,72 +6,50 @@ depends = []
 [default.files]
 # Neovim
 "nvim" = { target = "~/.config/nvim", type = "symbolic", recurse = false }
-
 # Kitty
 "kitty/kitty.conf" = "~/.config/kitty/kitty.conf"
-
 # Lazygit
 "lazygit/config.yml" = "~/.config/lazygit/config.yml"
-
 # Hammerspoon
 "hammerspoon" = { target = "~/.hammerspoon", type = "symbolic", recurse = false }
-
 # Homebrew
 "homebrew/Brewfile" = "~/.Brewfile"
-
 # macOS
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
-
 # Zsh
 "zsh/zshrc" = "~/.zshrc"
-
 # Git
 "git/gitconfig" = "~/.gitconfig"
-
 # Tmux
 "tmux/tmux.conf" = "~/.tmux.conf"
-
 # Prettier
 "prettier/prettierrc" = "~/.prettierrc"
-
 # Raycast
 "raycast" = { target = "~/.raycast", type = "symbolic", recurse = false }
-
 # Skhd
 "skhd/skhdrc" = "~/.skhdrc"
-
 # Tridactyl
 "tridactyl/tridactylrc" = "~/.tridactylrc"
-
 # Yabai
 "yabai/yabairc" = "~/.yabairc"
-
 # Espanso
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
-
 # Karabiner
 "karabiner" = { target = "~/.config/karabiner", type = "symbolic", recurse = false }
-
 # Ghostty
 "ghostty/config" = "~/.config/ghostty/config"
-
 # Ripgrep
 "ripgrep/ripgreprc" = "~/.ripgreprc"
-
 # MitmProxy
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
-
 # Cursor
 "cursor/settings.json" = "~/Library/Application Support/Cursor/User/settings.json"
 "cursor/keybindings.json" = "~/Library/Application Support/Cursor/User/keybindings.json"
-
 # EditorConfig
 "editorconfig/editorconfig" = "~/.editorconfig"
-
 # Claude
 "claude/CLAUDE.md" = "~/.claude/CLAUDE.md"
 "claude/skills" = { target = "~/.claude/skills", type = "symbolic", recurse = false }
-
 # Superwhisper
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
 "superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
