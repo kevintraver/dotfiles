@@ -35,6 +35,9 @@ bind t fillcmdline tabopen
 bind x tabclose
 bind X tabonly
 
+bind <CM-t> tabdetach
+bind --mode=ignore <CM-t> tabdetach
+
 bind <C-l> tabnext
 bind <C-h> tabprev
 bind <C-j> tabnext
