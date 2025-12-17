@@ -49,7 +49,7 @@ depends = []
 "editorconfig/editorconfig" = "~/.editorconfig"
 # Claude
 "claude/CLAUDE.md" = "~/.claude/CLAUDE.md"
-"claude/skills" = { target = "~/.claude/skills", type = "symbolic", recurse = false }
+"claude/skills/file-type-defaults" = { target = "~/.claude/skills/file-type-defaults", type = "symbolic", recurse = false }
 # Superwhisper
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
 "superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
