@@ -32,6 +32,8 @@ depends = []
 "tridactyl/tridactylrc" = "~/.tridactylrc"
 # Yabai
 "yabai/yabairc" = "~/.yabairc"
+# Atuin
+"atuin/config.toml" = "~/.config/atuin/config.toml"
 # Espanso
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 # Karabiner

@@ -121,3 +121,4 @@ export PATH
 if (( $+functions[p10k] )) && [[ -r "$HOME/.p10k.zsh" ]]; then
   source "$HOME/.p10k.zsh"
 fi
+eval "$(atuin init zsh)"
