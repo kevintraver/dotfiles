@@ -13,6 +13,10 @@ invert = true
 ## Press tab to return to the shell and edit
 enter_accept = true
 
+## Prevent scrolling past the end from exiting search
+[keys]
+scroll_exits = false
+
 [sync]
 ## Enable sync v2 by default
 records = true
