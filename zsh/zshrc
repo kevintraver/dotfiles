@@ -70,10 +70,6 @@ export FZF_DEFAULT_OPTS="
 [[ -r "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
-# https://github.com/cantino/mcfly
-export MCFLY_RESULTS_SORT=LAST_RUN
-(( $+commands[mcfly] )) && eval "$(mcfly init zsh)"
-
 # https://zsh.sourceforge.io/Guide/zshguide04.html
 WORDCHARS=${WORDCHARS/\/}
 
