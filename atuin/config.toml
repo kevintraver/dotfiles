@@ -7,11 +7,14 @@ style = "compact"
 inline_height = 40
 
 ## Invert the UI - put the search bar at the top
-invert = true
+invert = false
 
 ## If enabled, upon hitting enter Atuin will immediately execute the command
 ## Press tab to return to the shell and edit
 enter_accept = true
+
+## Use Ctrl+0-9 for number shortcuts instead of Alt (better for macOS)
+ctrl_n_shortcuts = true
 
 ## Prevent scrolling past the end from exiting search
 [keys]

@@ -119,4 +119,6 @@ if (( $+functions[p10k] )) && [[ -r "$HOME/.p10k.zsh" ]]; then
 fi
 
 # https://atuin.sh/
-eval "$(atuin init zsh)"
+# Disable up arrow binding, use Ctrl+P instead
+eval "$(atuin init zsh --disable-up-arrow)"
+bindkey '^p' _atuin_search_widget
