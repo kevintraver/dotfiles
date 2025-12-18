@@ -52,7 +52,8 @@ depends = []
 "editorconfig/editorconfig" = "~/.editorconfig"
 # Claude
 "claude/CLAUDE.md" = "~/.claude/CLAUDE.md"
-"claude/skills/file-type-defaults" = { target = "~/.claude/skills/file-type-defaults", type = "symbolic", recurse = false }
+# Agent Skills (general, not Claude-specific)
+"agent-skills" = { target = "~/.agent-skills", type = "symbolic", recurse = false }
 # Superwhisper
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
 "superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
