@@ -107,10 +107,6 @@ done
 
 [[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
-# https://mise.jdx.dev/
-# Using --shims for faster startup (avoids hook on every prompt)
-(( $+commands[mise] )) && eval "$(mise activate zsh --shims)"
-
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 [[ -d "$ANDROID_HOME/emulator" ]] && path+=("$ANDROID_HOME/emulator")
 [[ -d "$ANDROID_HOME/platform-tools" ]] && path+=("$ANDROID_HOME/platform-tools")

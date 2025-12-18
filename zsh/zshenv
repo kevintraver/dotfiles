@@ -1,0 +1,6 @@
+# Environment variables for all shell types (interactive and non-interactive)
+
+# https://mise.jdx.dev/
+# Using --shims for faster startup (avoids hook on every prompt)
+# Loaded here so non-interactive shells (e.g., Claude Code) have access to mise-managed tools
+(( $+commands[mise] )) && eval "$(mise activate zsh --shims)"

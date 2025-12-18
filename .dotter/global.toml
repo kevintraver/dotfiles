@@ -18,6 +18,7 @@ depends = []
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
 # Zsh
 "zsh/zshrc" = "~/.zshrc"
+"zsh/zshenv" = "~/.zshenv"
 # Git
 "git/gitconfig" = "~/.gitconfig"
 # Tmux
