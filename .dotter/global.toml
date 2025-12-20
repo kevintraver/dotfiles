@@ -52,6 +52,7 @@ depends = []
 "editorconfig/editorconfig" = "~/.editorconfig"
 # Claude
 "claude/CLAUDE.md" = "~/.claude/CLAUDE.md"
+"claude-skills" = { target = "~/.claude/skills", type = "symbolic", recurse = false }
 # Agent Skills (general, not Claude-specific)
 "agent-skills" = { target = "~/.agent-skills", type = "symbolic", recurse = false }
 # Superwhisper
