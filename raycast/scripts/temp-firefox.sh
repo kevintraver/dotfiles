@@ -11,5 +11,5 @@
 # @raycast.authorURL https://raycast.com/kevintraver
 # @raycast.icon /Applications/Firefox.app/Contents/Resources/firefox.icns
 
-source ~/.dotfiles/zsh/functions/browsers.zsh
+source ~/.dotfiles/zsh/functions/browsers/firefox.zsh
 temp-firefox

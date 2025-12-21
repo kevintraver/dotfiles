@@ -11,5 +11,5 @@
 # @raycast.authorURL https://raycast.com/kevintraver
 # @raycast.icon /Applications/Google Chrome.app/Contents/Resources/app.icns
 
-source ~/.dotfiles/zsh/functions/browsers.zsh
+source ~/.dotfiles/zsh/functions/browsers/chrome.zsh
 reset-google-chrome
