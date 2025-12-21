@@ -1,10 +1,10 @@
 # Zen Browser Functions
 
 # Open URL in Zen browser, or focus existing tab if already open
-zen-focus() {
+zen-focus-tab() {
   if [[ -z "$1" ]]; then
-    echo "Usage: zen-focus <url>" >&2
-    echo "Example: zen-focus https://meet.google.com" >&2
+    echo "Usage: zen-focus-tab <url>" >&2
+    echo "Example: zen-focus-tab https://meet.google.com" >&2
     return 1
   fi
 
