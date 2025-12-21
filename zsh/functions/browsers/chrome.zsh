@@ -12,7 +12,7 @@ temp-google-chrome() {
 }
 
 # Open Google Chrome with a custom profile path
-temp-google-chrome-path() {
+google-chrome-path() {
   if [[ -z "$1" ]]; then
     echo "Usage: temp-google-chrome-path <profile-path>" >&2
     return 1
