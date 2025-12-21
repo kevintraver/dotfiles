@@ -97,7 +97,7 @@ for alias_file in "$DOTFILES_HOME/zsh/aliases"/*.zsh(N); do
 done
 
 # Source all function files
-for function_file in "$DOTFILES_HOME/zsh/functions"/*.zsh(N); do
+for function_file in "$DOTFILES_HOME/zsh/functions"/**/*.zsh(N); do
   source "$function_file"
 done
 
