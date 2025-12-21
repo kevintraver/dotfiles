@@ -33,7 +33,7 @@ huddle_id=$(find_window_id "Slack" "Huddle")
 # 2. Google Meet
 # Matches standard browser tabs AND Chrome App mode (--app="https://meet.google.com")
 # Chrome App mode usually has title "Google Meet" or specific meeting name
-meet_id=$(find_window_id "^(Google Chrome|Brave Browser|Zen Browser|Arc|Firefox|Chromium)$" "(Meet|Google Meet)")
+meet_id=$(find_window_id "Google Meet")
 
 # 3. Zoom Meeting
 # First try to find an actual meeting window
