@@ -19,7 +19,7 @@
   "languageModelID" : "sw-gpt-5.1",
   "literalPunctuation" : false,
   "name" : "Accurate",
-  "pauseMediaPlayback" : true,
+  "pauseMediaPlayback" : false,
   "prompt" : "",
   "promptExamples" : [
 
