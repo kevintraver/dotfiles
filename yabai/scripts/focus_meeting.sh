@@ -39,11 +39,6 @@ meet_id=$(find_window_id "Google Meet")
 # First try to find an actual meeting window
 zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
 
-# If no active meeting window, fall back to ANY Zoom window (like Login, Home, etc.)
-if [[ "$zoom_id" == "null" || -z "$zoom_id" ]]; then
-    zoom_id=$(find_window_id "zoom.us" ".*")
-fi
-
 # Helper to check if ID is valid and visible
 is_visible() {
     local id=$1
