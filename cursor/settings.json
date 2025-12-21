@@ -3,5 +3,6 @@
   "security.promptForLocalFileProtocolHandling": false,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "coderabbit.autoReviewMode": "disabled"
 }
