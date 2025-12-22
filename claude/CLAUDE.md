@@ -1,5 +1,13 @@
 # Global Claude Instructions
 
+## System Tools
+
+- Use `rg` (ripgrep) instead of `grep` for searching files and content
+- Use `fd` instead of `find` for finding files and directories
+- Use `eza` instead of `ls` for listing files and directories
+- Use `bat` instead of `cat` for displaying file contents
+- Use `sd` instead of `sed` for find and replace
+
 ## Markdown Rendering
 
 - When rendering markdown files on the CLI, use `glow` (Charm CLI tool)
