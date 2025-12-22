@@ -1,0 +1,42 @@
+#!/bin/zsh
+# Focus the application currently playing audio
+
+BT="/Users/kevin/.local/bin/bt"
+
+# Get power assertions
+assertions=$(LC_ALL=C pmset -g assertions)
+
+# Method 1: Direct audio assertion (e.g., Zen Browser)
+line=$(echo "$assertions" | grep -i "NoIdleSleepAssertion" | grep -i "audio" | head -n1)
+if [[ -n "$line" && "$line" =~ 'pid [0-9]+\(([^)]+)\)' ]]; then
+  app_name="${match[1]}"
+fi
+
+# Method 2: coreaudiod assertion on behalf of another process (e.g., Spotify)
+if [[ -z "$app_name" ]]; then
+  pid_line=$(echo "$assertions" | grep -A1 'coreaudiod.*audio' | grep 'Created for PID' | head -n1)
+  if [[ -n "$pid_line" ]]; then
+    pid=${${pid_line##*Created for PID: }%%.*}
+
+    if [[ -n "$pid" ]]; then
+      app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
+      if [[ "$app_path" == *".app/"* ]]; then
+        app_name="${${app_path%.app/*}##*/}"
+      else
+        app_name="${app_path##*/}"
+      fi
+    fi
+  fi
+fi
+
+[[ -z "$app_name" ]] && exit 0
+
+# If it's Zen Browser, focus the specific audible tab via brotab first
+if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
+  tab_id=$($BT query +audible 2>/dev/null | head -1 | awk '{print $1}')
+  [[ -n "$tab_id" ]] && $BT activate "$tab_id" 2>/dev/null
+  app_name="Zen Browser"
+fi
+
+# Activate the app
+open -a "$app_name" 2>/dev/null

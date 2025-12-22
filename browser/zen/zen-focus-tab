@@ -1,0 +1,23 @@
+#!/bin/zsh
+# Focus or open a URL in Zen Browser
+
+if [[ -z "$1" ]]; then
+  echo "Usage: zen-focus-tab <url>" >&2
+  exit 1
+fi
+
+url="$1"
+BT="/Users/kevin/.local/bin/bt"
+
+# Search for existing tab with this URL
+tab_line=$($BT list | grep -F "$url" | head -1)
+
+if [[ -n "$tab_line" ]]; then
+  tab_id=$(echo "$tab_line" | awk '{print $1}')
+  $BT activate "$tab_id"
+  open -a "Zen Browser"
+else
+  # Add https:// if not present
+  [[ ! "$url" =~ ^https?:// ]] && url="https://$url"
+  open -a "Zen Browser" "$url"
+fi
