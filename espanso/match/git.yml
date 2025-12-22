@@ -4,16 +4,27 @@
 matches:
 
   - trigger: ';gca'
-    replace: 'Stage all changes and commit them using the Conventional Commits format. Provide a comprehensive commit message.'
+    replace: >-
+      Stage all changes and commit them using the Conventional Commits format.
+      Provide a comprehensive commit message.
 
   - trigger: ';gcb'
-    replace: 'Analyze the code changes, then create a new branch with a descriptive kebab-case name. Finally, commit the changes using the Conventional Commits format.'
+    replace: >-
+      Review the relevant code changes, then create a new branch with a descriptive kebab-case name.
+      Finally, commit the changes using the Conventional Commits format.
 
   - trigger: ';gcc'
-    replace: 'Commit these changes using the Conventional Commits format. Include a short description of the changes.'
+    replace: >-
+      Review the changes and then commit using the Conventional Commits format.
+      Include a short description of the changes.
 
   - trigger: ';gcd'
-    replace: 'Commit these changes using the Conventional Commits format. Include a detailed description of the motivation and impact.'
+    replace: >-
+      Review and analyze the current changes.
+      Then commit these changes using the Conventional Commits format.
+      Include a detailed description of the motivation and impact.
 
   - trigger: ';gcs'
-    replace: 'Commit the currently staged changes using the Conventional Commits format. Write a detailed message explaining the updates.'
+    replace: >-
+      Commit the currently staged changes using the Conventional Commits format.
+      Write a detailed message explaining the updates.
