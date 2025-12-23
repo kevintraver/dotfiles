@@ -60,5 +60,7 @@ temp-firefox-simple() {
 reset-firefox() {
   /bin/rm -rf "$HOME/Library/Application Support/Firefox"
   /bin/rm -rf "$HOME/Library/Preferences/org.mozilla.firefox.plist"
+  /bin/rm -rf "$HOME/Library/Caches/Firefox"
+  /bin/rm -rf "$HOME/Library/Caches/Mozilla"
   echo "Firefox has been reset"
 }

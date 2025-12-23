@@ -66,6 +66,7 @@ temp-google-chrome-resume() {
 reset-google-chrome() {
   /bin/rm -rf "$HOME/Library/Application Support/Google"
   /bin/rm -rf "$HOME/Library/Preferences/com.google.Chrome.plist"
+  /bin/rm -rf "$HOME/Library/Caches/Google"
   echo "Google Chrome has been reset"
 }
 
