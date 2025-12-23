@@ -3,6 +3,9 @@
 # User scripts
 export PATH="$HOME/.local/bin:$PATH"
 
+# Bun
+export PATH="$HOME/.bun/bin:$PATH"
+
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
