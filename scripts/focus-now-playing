@@ -2,19 +2,20 @@
 # Focus the application currently playing audio
 
 BT="/Users/kevin/.local/bin/bt"
+RG="/opt/homebrew/bin/rg"
 
 # Get power assertions
 assertions=$(LC_ALL=C pmset -g assertions)
 
 # Method 1: Direct audio assertion (e.g., Zen Browser)
-line=$(echo "$assertions" | grep -i "NoIdleSleepAssertion" | grep -i "audio" | head -n1)
+line=$(echo "$assertions" | $RG -i "NoIdleSleepAssertion" | $RG -i "audio" | head -n1)
 if [[ -n "$line" && "$line" =~ 'pid [0-9]+\(([^)]+)\)' ]]; then
   app_name="${match[1]}"
 fi
 
 # Method 2: coreaudiod assertion on behalf of another process (e.g., Spotify)
 if [[ -z "$app_name" ]]; then
-  pid_line=$(echo "$assertions" | grep -A1 'coreaudiod.*audio' | grep 'Created for PID' | head -n1)
+  pid_line=$(echo "$assertions" | $RG -A1 -i 'coreaudiod.*audio' | $RG 'Created for PID' | head -n1)
   if [[ -n "$pid_line" ]]; then
     pid=${${pid_line##*Created for PID: }%%.*}
 
