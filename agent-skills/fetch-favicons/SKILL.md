@@ -7,12 +7,17 @@ description: Fetch favicons for any website using multiple fallback sources (Goo
 
 Retrieve favicons for any domain using multiple sources with automatic fallback.
 
+## Requirements
+
+- Python 3.6+
+- `requests` library: `pip install requests`
+
 ## Quick Usage
 
 ```bash
-python scripts/fetch_favicon.py example.com
-python scripts/fetch_favicon.py example.com --output ./icons/
-python scripts/fetch_favicon.py example.com --size 128
+python3 scripts/fetch_favicon.py example.com
+python3 scripts/fetch_favicon.py example.com --output ./icons/
+python3 scripts/fetch_favicon.py example.com --size 128
 ```
 
 ## Sources (in order of preference)
@@ -39,16 +44,16 @@ python scripts/fetch_favicon.py example.com --size 128
 
 ```bash
 # Single domain
-python scripts/fetch_favicon.py github.com
+python3 scripts/fetch_favicon.py github.com
 
 # From full URL (domain extracted automatically)
-python scripts/fetch_favicon.py "https://docs.github.com/en/pages"
+python3 scripts/fetch_favicon.py "https://docs.github.com/en/pages"
 
 # Custom size and output
-python scripts/fetch_favicon.py twitter.com --size 256 --output ~/icons/
+python3 scripts/fetch_favicon.py twitter.com --size 256 --output ~/icons/
 
 # Batch fetch (one per line in file)
-cat domains.txt | xargs -I {} python scripts/fetch_favicon.py {} --output ./favicons/
+cat domains.txt | xargs -I {} python3 scripts/fetch_favicon.py {} --output ./favicons/
 ```
 
 ## Rate Limiting
@@ -57,7 +62,7 @@ Google's API may rate-limit after ~55 consecutive requests. Add delays for batch
 
 ```bash
 cat domains.txt | while read domain; do
-  python scripts/fetch_favicon.py "$domain" --output ./favicons/
+  python3 scripts/fetch_favicon.py "$domain" --output ./favicons/
   sleep 0.5
 done
 ```

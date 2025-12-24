@@ -13,6 +13,10 @@ import os
 import sys
 from urllib.parse import urlparse
 
+if sys.version_info < (3, 6):
+    print("Error: Python 3.6+ is required", file=sys.stderr)
+    sys.exit(1)
+
 import requests
 
 
