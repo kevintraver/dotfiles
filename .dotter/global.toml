@@ -32,7 +32,10 @@ depends = []
 # AI
 "claude-skills" = { target = "~/.claude/skills", type = "symbolic", recurse = false }
 "agent-skills" = { target = "~/.agent-skills", type = "symbolic", recurse = false }
-"agents/AGENTS.md" = "~/.claude/CLAUDE.md"
+# Manual symlinks:
+# ln -s ~/.dotfiles/agents/AGENTS.md ~/.claude/CLAUDE.md
+# ln -s ~/.dotfiles/agents/AGENTS.md ~/.config/opencode/AGENTS.md
+# ln -s ~/.dotfiles/agent-skills ~/.opencode/skill
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
