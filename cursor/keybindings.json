@@ -4,6 +4,14 @@
     "command": "workbench.action.quickOpen"
   },
   {
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.splitEditor"
+  },
+  {
     "key": "ctrl+l",
     "command": "workbench.action.focusNextGroup",
     "when": "editorFocus && neovim.mode != 'insert' && multipleEditorGroups"
