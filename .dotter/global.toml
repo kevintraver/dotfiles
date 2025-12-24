@@ -26,7 +26,6 @@ depends = []
 "karabiner" = { target = "~/.config/karabiner", type = "symbolic", recurse = false }
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
 # CLI Utilities
-"homebrew/Brewfile" = "~/.Brewfile"
 "ripgrep/ripgreprc" = "~/.ripgreprc"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "tridactyl/tridactylrc" = "~/.tridactylrc"
