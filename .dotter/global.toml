@@ -35,7 +35,6 @@ depends = []
 "agent-skills" = { target = "~/.agent-skills", type = "symbolic", recurse = false }
 "agents/AGENTS.md" = "~/.claude/CLAUDE.md"
 # Productivity Tools
-"raycast" = { target = "~/.raycast", type = "symbolic", recurse = false }
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
 "superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
