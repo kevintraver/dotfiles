@@ -22,9 +22,11 @@ When a user has moved or renamed a directory:
 
 2. **Convert paths to Claude's session folder format**
    - Replace forward slashes with hyphens
+   - **Replace spaces with hyphens** (IMPORTANT: spaces become hyphens, not literal spaces)
    - Remove the leading slash
    - Add a leading hyphen
    - Example: `/home/user/project` becomes `-home-user-project`
+   - Example: `/Users/kevin/My Project` becomes `-Users-kevin-My-Project`
 
 3. **Check if the old session folder exists**
    ```bash
@@ -68,12 +70,25 @@ Command:
 cd ~/.claude/projects/ && mv -- -home-user-old-name -home-user-new-name
 ```
 
+### Example 3: Path with Spaces
+```
+Old path: /Users/kevin/Downloads
+New path: /Users/kevin/Documents/My Project
+
+Old session: -Users-kevin-Downloads
+New session: -Users-kevin-Documents-My-Project  (NOTE: space becomes hyphen!)
+
+Command:
+cd ~/.claude/projects/ && mv -- -Users-kevin-Downloads -Users-kevin-Documents-My-Project
+```
+
 ## Edge Cases
 
 - **Session doesn't exist**: Inform the user no session was found at the old path
 - **New session already exists**: Ask user if they want to merge or replace
 - **Multiple sessions**: List available sessions and ask which one to migrate
 - **Invalid paths**: Validate that paths look correct before migration
+- **Paths with spaces**: Remember that spaces in directory names become hyphens in the encoded path. Double-check your encoding!
 
 ## Best Practices
 
