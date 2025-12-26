@@ -16,7 +16,7 @@
   "key" : "message-fast",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-gpt-5.1",
+  "languageModelID" : "sw-groq-llama-3-8b",
   "literalPunctuation" : false,
   "name" : "Fast",
   "pauseMediaPlayback" : false,
