@@ -2,6 +2,7 @@
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^[e' edit-command-line
+bindkey '^g' edit-command-line
 
 #exit
 exit_zsh() { exit 0 }
