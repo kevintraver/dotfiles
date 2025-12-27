@@ -27,8 +27,6 @@ matches:
     replace: '😮'
   - trigger: ':coffee'
     replace: '☕'
-  - trigger: ':he'
-    replace: '🤯'
   - trigger: ':party'
     replace: '🎉'
   - trigger: ':partyface'
