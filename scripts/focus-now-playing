@@ -14,18 +14,21 @@ if [[ -n "$line" && "$line" =~ 'pid [0-9]+\(([^)]+)\)' ]]; then
 fi
 
 # Method 2: coreaudiod assertion on behalf of another process (e.g., Spotify)
+# Pick the youngest assertion (smallest time = most recently started playing)
 if [[ -z "$app_name" ]]; then
-  pid_line=$(echo "$assertions" | $RG -A1 -i 'coreaudiod.*audio' | $RG 'Created for PID' | head -n1)
-  if [[ -n "$pid_line" ]]; then
-    pid=${${pid_line##*Created for PID: }%%.*}
+  # Parse coreaudiod audio assertions, pick youngest by time
+  pid=$(echo "$assertions" | awk '
+    /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
+      time = substr($0, RSTART, RLENGTH)
+      getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
+    }' | sort -t: -k1,1n -k2,2n -k3,3n | head -n1 | cut -d' ' -f2)
 
-    if [[ -n "$pid" ]]; then
-      app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
-      if [[ "$app_path" == *".app/"* ]]; then
-        app_name="${${app_path%.app/*}##*/}"
-      else
-        app_name="${app_path##*/}"
-      fi
+  if [[ -n "$pid" ]]; then
+    app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
+    if [[ "$app_path" == *".app/"* ]]; then
+      app_name="${${app_path%.app/*}##*/}"
+    else
+      app_name="${app_path##*/}"
     fi
   fi
 fi
