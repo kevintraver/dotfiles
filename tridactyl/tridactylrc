@@ -28,6 +28,8 @@ unbind d
 unbind D
 unbind g?
 
+bind g? cheatsheet
+
 unbind J
 unbind K
 
