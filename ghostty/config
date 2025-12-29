@@ -20,5 +20,6 @@ keybind = "ctrl+k=goto_split:up"
 keybind = "ctrl+j=goto_split:down"
 
 maximize = true
+mouse-hide-while-typing = true
 
 working-directory = "/Users/kevin/.dotfiles"
