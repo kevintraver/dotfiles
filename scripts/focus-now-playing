@@ -7,22 +7,32 @@ RG="/opt/homebrew/bin/rg"
 # Get power assertions
 assertions=$(LC_ALL=C pmset -g assertions)
 
-# Method 1: Direct audio assertion (e.g., Zen Browser)
-line=$(echo "$assertions" | $RG -i "NoIdleSleepAssertion" | $RG -i "audio" | head -n1)
-if [[ -n "$line" && "$line" =~ 'pid [0-9]+\(([^)]+)\)' ]]; then
-  app_name="${match[1]}"
-fi
+# Get all PIDs with coreaudiod audio assertions
+audio_pids=$(echo "$assertions" | awk '
+  /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
+    time = substr($0, RSTART, RLENGTH)
+    getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
+  }' | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
-# Method 2: coreaudiod assertion on behalf of another process (e.g., Spotify)
-# Pick the youngest assertion (smallest time = most recently started playing)
+# Method 1: Prefer apps with direct playback assertions (e.g., Spotify's "Video Wake Lock")
+for pid in ${(f)audio_pids}; do
+  app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
+  [[ -z "$app_path" ]] && continue
+  if [[ "$app_path" == *".app/"* ]]; then
+    check_name="${${app_path%.app/*}##*/}"
+  else
+    check_name="${app_path##*/}"
+  fi
+  # Check if this app has its own playback assertion (not just coreaudiod)
+  if echo "$assertions" | $RG -q "pid [0-9]+\($check_name\):.*(NoDisplaySleepAssertion|NoIdleSleepAssertion)"; then
+    app_name="$check_name"
+    break
+  fi
+done
+
+# Method 2: Fall back to youngest coreaudiod assertion
 if [[ -z "$app_name" ]]; then
-  # Parse coreaudiod audio assertions, pick youngest by time
-  pid=$(echo "$assertions" | awk '
-    /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
-      time = substr($0, RSTART, RLENGTH)
-      getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
-    }' | sort -t: -k1,1n -k2,2n -k3,3n | head -n1 | cut -d' ' -f2)
-
+  pid=$(echo "$audio_pids" | head -n1)
   if [[ -n "$pid" ]]; then
     app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
     if [[ "$app_path" == *".app/"* ]]; then
