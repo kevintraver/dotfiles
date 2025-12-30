@@ -4,5 +4,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "git.openRepositoryInParentFolders": "always",
-  "coderabbit.autoReviewMode": "disabled"
+  "coderabbit.autoReviewMode": "disabled",
+  "update.releaseTrack": "dev"
 }
