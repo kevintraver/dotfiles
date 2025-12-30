@@ -14,34 +14,20 @@ audio_pids=$(echo "$assertions" | awk '
     getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
   }' | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
-# Method 1: Prefer apps with direct playback assertions (e.g., Spotify's "Video Wake Lock")
+# Only focus apps with direct playback assertions (actively playing)
 for pid in ${(f)audio_pids}; do
-  app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
-  [[ -z "$app_path" ]] && continue
-  if [[ "$app_path" == *".app/"* ]]; then
-    check_name="${${app_path%.app/*}##*/}"
-  else
-    check_name="${app_path##*/}"
-  fi
-  # Check if this app has its own playback assertion (not just coreaudiod)
-  if echo "$assertions" | $RG -q "pid [0-9]+\($check_name\):.*(NoDisplaySleepAssertion|NoIdleSleepAssertion)"; then
-    app_name="$check_name"
-    break
-  fi
-done
-
-# Method 2: Fall back to youngest coreaudiod assertion
-if [[ -z "$app_name" ]]; then
-  pid=$(echo "$audio_pids" | head -n1)
-  if [[ -n "$pid" ]]; then
+  # Check if this PID has its own playback assertion (not just coreaudiod)
+  if echo "$assertions" | $RG -q "pid $pid\([^)]+\):.*(NoDisplaySleepAssertion|NoIdleSleepAssertion)"; then
     app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
+    [[ -z "$app_path" ]] && continue
     if [[ "$app_path" == *".app/"* ]]; then
       app_name="${${app_path%.app/*}##*/}"
     else
       app_name="${app_path##*/}"
     fi
+    break
   fi
-fi
+done
 
 [[ -z "$app_name" ]] && exit 0
 
