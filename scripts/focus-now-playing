@@ -14,20 +14,18 @@ audio_pids=$(echo "$assertions" | awk '
     getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
   }' | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
-# Only focus apps with direct playback assertions (actively playing)
-for pid in ${(f)audio_pids}; do
-  # Check if this PID has its own playback assertion (not just coreaudiod)
-  if echo "$assertions" | $RG -q "pid $pid\([^)]+\):.*(NoDisplaySleepAssertion|NoIdleSleepAssertion)"; then
-    app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
-    [[ -z "$app_path" ]] && continue
+# Use youngest coreaudiod assertion (most recently started playing)
+pid=$(echo "$audio_pids" | head -n1)
+if [[ -n "$pid" ]]; then
+  app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
+  if [[ -n "$app_path" ]]; then
     if [[ "$app_path" == *".app/"* ]]; then
       app_name="${${app_path%.app/*}##*/}"
     else
       app_name="${app_path##*/}"
     fi
-    break
   fi
-done
+fi
 
 [[ -z "$app_name" ]] && exit 0
 
