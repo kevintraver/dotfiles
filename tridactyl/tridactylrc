@@ -71,3 +71,6 @@ autocmd DocStart grok.com mode ignore
 autocmd DocStart raindrop.io mode ignore
 autocmd DocStart chatgpt.com mode ignore
 autocmd DocStart claude.ai mode ignore
+autocmd DocStart t3.chat mode ignore
+autocmd DocStart gemini.google.com mode ignore
+autocmd DocStart chat.z.ai mode ignore
