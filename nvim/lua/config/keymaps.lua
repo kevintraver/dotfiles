@@ -65,3 +65,16 @@ vim.keymap.set({ "n", "x" }, "gJ", "J", { desc = "Join Lines" })
 
 -- Fix to be able to remap tab
 vim.keymap.set("n", "<C-i>", "<C-i>")
+
+-- Open current file in Cursor at the current line
+vim.keymap.set({ "n", "i" }, "<C-g>", function()
+  local file = vim.fn.expand("%:p")
+  local line = vim.fn.line(".")
+
+  if file == "" then
+    file = vim.fn.tempname()
+  end
+  vim.cmd("silent write! " .. vim.fn.fnameescape(file))
+
+  vim.fn.jobstart({ "cursor", "--goto", file .. ":" .. line }, { detach = true })
+end, { desc = "Open in Cursor" })
