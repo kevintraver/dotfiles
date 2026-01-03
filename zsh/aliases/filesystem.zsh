@@ -10,7 +10,6 @@ alias pwd="pwd | tr -d '\n'"
 alias cwd="pwd | tr -d '\n' | pbcopy"
 
 # eza
-alias l='eza -lbF --git'
 alias ls='eza'
 alias ll='eza -lbGF --git'
 alias llm='eza -lbGd --git --sort=modified'
