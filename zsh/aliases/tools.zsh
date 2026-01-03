@@ -29,6 +29,9 @@ alias gg="gemini"
 # codex
 alias co="codex --search"
 
+# lumen
+alias l="lumen"
+
 # editor
 alias e="$EDITOR"
 alias n="$EDITOR"
