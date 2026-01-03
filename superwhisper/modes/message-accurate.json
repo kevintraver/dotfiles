@@ -16,7 +16,7 @@
   "key" : "message-accurate",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-gpt-5.1",
+  "languageModelID" : "sl-1",
   "literalPunctuation" : false,
   "name" : "Accurate",
   "pauseMediaPlayback" : false,

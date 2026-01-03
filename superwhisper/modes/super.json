@@ -16,7 +16,7 @@
   "key" : "super",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-gpt-5.1",
+  "languageModelID" : "sl-1",
   "literalPunctuation" : false,
   "name" : "Super",
   "pauseMediaPlayback" : false,

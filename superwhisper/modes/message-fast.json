@@ -16,7 +16,7 @@
   "key" : "message-fast",
   "language" : "en",
   "languageModelEnabled" : true,
-  "languageModelID" : "sw-groq-llama-3-8b",
+  "languageModelID" : "sl-1",
   "literalPunctuation" : false,
   "name" : "Fast",
   "pauseMediaPlayback" : false,
@@ -31,5 +31,5 @@
   "type" : "message",
   "useSystemAudio" : false,
   "version" : 1,
-  "voiceModelID" : "nvidia_parakeet-v2_476MB"
+  "voiceModelID" : "sv-1"
 }
