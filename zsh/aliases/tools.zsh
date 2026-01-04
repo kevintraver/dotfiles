@@ -36,3 +36,5 @@ alias l="lumen"
 alias e="$EDITOR"
 alias n="$EDITOR"
 
+# yazi
+alias y="yazi"
