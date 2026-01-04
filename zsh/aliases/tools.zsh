@@ -30,7 +30,10 @@ alias gg="gemini"
 alias co="codex --search"
 
 # lumen
-alias l="lumen"
+alias le="lumen explain"
+alias ld="lumen draft"
+alias lh="lumen list"
+alias d="lumen diff"
 
 # editor
 alias e="$EDITOR"
