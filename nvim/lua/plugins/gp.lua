@@ -3,7 +3,9 @@ return {
   keys = {
     {
       "<leader><cr>",
-      "<cmd>GpFixSpellingAndGrammar<cr>",
+      function()
+        vim.cmd("GpFixSpellingAndGrammar")
+      end,
       mode = { "n", "v" },
       desc = "Fix Grammar",
     },
