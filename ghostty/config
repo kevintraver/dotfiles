@@ -23,3 +23,5 @@ maximize = true
 mouse-hide-while-typing = true
 
 working-directory = "/Users/kevin/.dotfiles"
+
+auto-update-channel = tip
