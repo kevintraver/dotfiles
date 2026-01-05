@@ -19,7 +19,12 @@ pid=$(echo "$audio_pids" | head -n1)
 if [[ -n "$pid" ]]; then
   app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
   if [[ -n "$app_path" ]]; then
-    if [[ "$app_path" == *".app/"* ]]; then
+    if [[ "$app_path" == /Applications/*.app/* ]]; then
+      # Extract main app name from /Applications/Foo.app/... paths
+      app_name="${app_path#/Applications/}"
+      app_name="${app_name%%/*}"
+      app_name="${app_name%.app}"
+    elif [[ "$app_path" == *".app/"* ]]; then
       app_name="${${app_path%.app/*}##*/}"
     else
       app_name="${app_path##*/}"
