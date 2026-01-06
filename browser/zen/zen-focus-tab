@@ -8,14 +8,31 @@ fi
 
 url="$1"
 BT="/Users/kevin/.local/bin/bt"
+YABAI="/opt/homebrew/bin/yabai"
+JQ="/opt/homebrew/bin/jq"
 
 # Search for existing tab with this URL
 tab_line=$($BT list | grep -F "$url" | head -1)
 
 if [[ -n "$tab_line" ]]; then
   tab_id=$(echo "$tab_line" | awk '{print $1}')
+  tab_title=$(echo "$tab_line" | cut -f2)
   $BT activate "$tab_id"
-  open -a "Zen Browser"
+
+  # Use first 20 chars of title for fuzzy match (avoids quote encoding issues)
+  title_prefix="${tab_title:0:20}"
+  window_info=$($YABAI -m query --windows | $JQ -r \
+    --arg title "$title_prefix" \
+    '.[] | select(.app == "Zen" and (.title | contains($title))) | "\(.id) \(.["has-focus"])"' | head -1)
+  window_id=$(echo "$window_info" | awk '{print $1}')
+  has_focus=$(echo "$window_info" | awk '{print $2}')
+
+  if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
+    $YABAI -m window "$window_id" --focus
+    $YABAI -m window "$window_id" --raise
+  elif [[ -z "$window_id" ]]; then
+    open -a "Zen Browser"  # fallback
+  fi
 else
   # Add https:// if not present
   [[ ! "$url" =~ ^https?:// ]] && url="https://$url"
