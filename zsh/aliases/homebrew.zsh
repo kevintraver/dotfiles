@@ -1,3 +1,3 @@
 # update homebrew packages
-alias bu='brew update && brew upgrade'
+alias bu='brew update && brew upgrade --greedy'
 
