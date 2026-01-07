@@ -51,23 +51,19 @@ fi
 
 # If it's Zen Browser, focus the specific audible tab and window via yabai
 if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
-  tab_line=$($BT query +audible 2>/dev/null | head -1)
+  read -r tab_line <<< "$($BT query +audible 2>/dev/null)"
   if [[ -n "$tab_line" ]]; then
-    tab_id=$(echo "$tab_line" | awk '{print $1}')
-    tab_title=$(echo "$tab_line" | cut -f2)
+    IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
     $BT activate "$tab_id" 2>/dev/null
 
     # Use first 20 chars of title for fuzzy match
-    title_prefix="${tab_title:0:20}"
     window_info=$($YABAI -m query --windows | $JQ -r \
-      --arg title "$title_prefix" \
-      '.[] | select(.app == "Zen" and (.title | contains($title))) | "\(.id) \(.["has-focus"])"' | head -1)
-    window_id=$(echo "$window_info" | awk '{print $1}')
-    has_focus=$(echo "$window_info" | awk '{print $2}')
+      --arg title "${tab_title:0:20}" \
+      '.[] | select(.app == "Zen" and (.title | contains($title))) | "\(.id) \(.["has-focus"])"')
+    read -r window_id has_focus <<< "$window_info"
 
     if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
-      $YABAI -m window "$window_id" --focus
-      $YABAI -m window "$window_id" --raise
+      $YABAI -m window "$window_id" --focus && $YABAI -m window "$window_id" --raise
     elif [[ -z "$window_id" ]]; then
       open -a "Zen Browser" 2>/dev/null
     fi
