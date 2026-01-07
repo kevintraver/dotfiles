@@ -10,10 +10,12 @@ url="$1"
 BT="/Users/kevin/.local/bin/bt"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
-RG="/opt/homebrew/bin/rg"
 
-# Search for existing tab with this URL
-tab_line=$($BT list | $RG -m1 -IN --no-column -F "$url")
+# Convert to Chrome match pattern: "x.com" → "*://x.com/*"
+[[ "$url" =~ ^https?:// ]] && pattern="${url%/}/*" || pattern="*://$url/*"
+
+# Query browser directly for matching tab
+tab_line=$($BT query -url "$pattern" 2>/dev/null | head -1)
 
 if [[ -n "$tab_line" ]]; then
   IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
