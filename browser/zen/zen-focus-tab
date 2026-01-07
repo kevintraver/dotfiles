@@ -10,9 +10,10 @@ url="$1"
 BT="/Users/kevin/.local/bin/bt"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
+RG="/opt/homebrew/bin/rg"
 
 # Search for existing tab with this URL
-tab_line=$($BT list | grep -F "$url" | head -1)
+tab_line=$($BT list | $RG -F "$url" | head -1)
 
 if [[ -n "$tab_line" ]]; then
   tab_id=$(echo "$tab_line" | awk '{print $1}')

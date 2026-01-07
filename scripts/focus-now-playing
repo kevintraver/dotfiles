@@ -22,7 +22,7 @@ for candidate in ${(f)audio_pids}; do
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
   # Check if it's Zen Browser - only use if it has audible tabs
   if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
-    if $BT query +audible 2>/dev/null | grep -q .; then
+    if $BT query +audible 2>/dev/null | $RG -q .; then
       pid="$candidate"
       break
     fi
