@@ -45,6 +45,7 @@ depends = []
 # Custom Scripts
 "browser/zen/zen-focus-tab" = "~/.local/bin/zen-focus-tab"
 "scripts/focus-now-playing" = "~/.local/bin/focus-now-playing"
+"scripts/yabai-apply-display-rules" = "~/.local/bin/yabai-apply-display-rules"
 
 [default.variables]
 

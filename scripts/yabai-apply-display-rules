@@ -1,0 +1,20 @@
+#!/bin/zsh
+# Move messaging apps to display 2 (reapply display rules)
+
+YABAI="/opt/homebrew/bin/yabai"
+JQ="/opt/homebrew/bin/jq"
+
+# Apps that should be on display 2
+apps=("Signal" "Messages" "Slack")
+
+# Check if display 2 exists
+display_count=$($YABAI -m query --displays | $JQ 'length')
+[[ "$display_count" -lt 2 ]] && exit 0
+
+# Move each app's windows to display 2
+for app in "${apps[@]}"; do
+  window_ids=$($YABAI -m query --windows | $JQ -r ".[] | select(.app == \"$app\" and .display != 2) | .id")
+  for wid in ${(f)window_ids}; do
+    [[ -n "$wid" ]] && $YABAI -m window "$wid" --display 2 2>/dev/null
+  done
+done
