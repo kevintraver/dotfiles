@@ -24,7 +24,7 @@ if [[ -n "$tab_line" ]]; then
   # Use first 20 chars of title for fuzzy match (avoids quote encoding issues)
   window_info=$($YABAI -m query --windows | $JQ -r \
     --arg title "${tab_title:0:20}" \
-    '.[] | select(.app == "Zen" and (.title | contains($title))) | "\(.id) \(.["has-focus"])"')
+    'first(.[] | select(.app == "Zen" and (.title | contains($title)))) | "\(.id) \(.["has-focus"])"')
   read -r window_id has_focus <<< "$window_info"
 
   if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
