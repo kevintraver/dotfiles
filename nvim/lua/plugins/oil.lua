@@ -53,6 +53,13 @@ return {
         end,
         desc = "Open directory in toggle term",
       },
+      ["<C-D-t>"] = {
+        callback = function()
+          local dir = require("oil").get_current_dir()
+          vim.fn.jobstart({ "ghostty", "--working-directory=" .. dir })
+        end,
+        desc = "Open directory in Ghostty",
+      },
       ["<D-p>"] = "actions.preview",
       ["<D-h>"] = "actions.parent",
       ["<D-j>"] = "j",
