@@ -11,11 +11,15 @@ BT="/Users/kevin/.local/bin/bt"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
 
-# Convert to Chrome match pattern: "x.com" → "*://x.com/*"
-[[ "$url" =~ ^https?:// ]] && pattern="${url%/}/*" || pattern="*://$url/*"
+# Convert to Chrome match pattern
+[[ "$url" =~ ^https?:// ]] && base="${url%/}" || base="*://${url%/}"
 
-# Query browser directly for matching tab
-tab_line=$($BT query -url "$pattern" 2>/dev/null | head -1)
+# Try wildcard first, then exact for URLs with paths
+# (bare *://host hangs, but *://host/path is safe)
+tab_line=$($BT query -url "$base/*" 2>/dev/null | head -1)
+if [[ -z "$tab_line" && "${base#*://}" == */* ]]; then
+  tab_line=$($BT query -url "$base" 2>/dev/null | head -1)
+fi
 
 if [[ -n "$tab_line" ]]; then
   IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
