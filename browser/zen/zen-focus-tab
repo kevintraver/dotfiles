@@ -33,8 +33,6 @@ if [[ -n "$tab_line" ]]; then
 
   if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
     $YABAI -m window "$window_id" --focus
-  elif [[ -z "$window_id" ]]; then
-    open -a "Zen Browser"  # fallback
   fi
 else
   # Add https:// if not present
