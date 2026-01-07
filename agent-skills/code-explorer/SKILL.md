@@ -40,7 +40,28 @@ After cloning, use standard exploration:
 3. **Entry points**: Find main files (main.go, index.ts, src/main.rs, etc.)
 4. **Search**: Use Grep/Glob to find relevant code for user's question
 
-### 4. Answer Questions
+### 4. Search Issues (When Relevant)
+
+If the user's question relates to bugs, features, or discussions, search GitHub issues:
+
+```bash
+# Search open issues
+gh search issues --repo owner/repo "search terms"
+
+# Search all issues including closed
+gh search issues --repo owner/repo "search terms" --state all
+
+# View specific issue details
+gh issue view 123 --repo owner/repo
+```
+
+Use issue search when:
+- User asks about known bugs or problems
+- User wants to know if a feature is planned
+- User references an issue number
+- Understanding context around a behavior change
+
+### 5. Answer Questions
 
 Provide specific file paths and line numbers when referencing code.
 Use the Task tool with Explore agent for deeper codebase questions.
@@ -60,4 +81,11 @@ Use the Task tool with Explore agent for deeper codebase questions.
 2. Search for agent-related files
 3. Trace the agent implementation
 4. Explain with code references
+
+**User**: "Is there a bug with streaming in vercel/ai?"
+
+1. Clone to ~/Code/ai (if not present)
+2. Search issues: `gh search issues --repo vercel/ai "streaming"`
+3. Review relevant issues for context
+4. Summarize findings with issue links
 
