@@ -28,7 +28,7 @@ if [[ -n "$tab_line" ]]; then
   read -r window_id has_focus <<< "$window_info"
 
   if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
-    $YABAI -m window "$window_id" --focus && $YABAI -m window "$window_id" --raise
+    $YABAI -m window "$window_id" --focus
   elif [[ -z "$window_id" ]]; then
     open -a "Zen Browser"  # fallback
   fi
