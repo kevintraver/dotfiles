@@ -40,9 +40,9 @@ After cloning, use standard exploration:
 3. **Entry points**: Find main files (main.go, index.ts, src/main.rs, etc.)
 4. **Search**: Use Grep/Glob to find relevant code for user's question
 
-### 4. Search Issues (When Relevant)
+### 4. Search Issues (Fallback or When Relevant)
 
-If the user's question relates to bugs, features, or discussions, search GitHub issues:
+If code search doesn't answer the question, or if the question relates to bugs/features/discussions, search GitHub issues:
 
 ```bash
 # Search open issues
@@ -56,10 +56,12 @@ gh issue view 123 --repo owner/repo
 ```
 
 Use issue search when:
+- Code search didn't find a clear answer
 - User asks about known bugs or problems
 - User wants to know if a feature is planned
 - User references an issue number
 - Understanding context around a behavior change
+- Question involves configuration, setup, or common problems
 
 ### 5. Answer Questions
 
