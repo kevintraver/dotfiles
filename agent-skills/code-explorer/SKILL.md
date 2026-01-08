@@ -1,6 +1,6 @@
 ---
 name: code-explorer
-description: Download and explore GitHub repositories. Use when user asks questions about a GitHub repo (URL or owner/repo format), wants to understand a repo's structure, or needs to explore unfamiliar codebases. Automatically clones repos to ~/Code for local exploration.
+description: Download and explore GitHub repositories. Use when user asks questions (how, where, what, why) about a GitHub repo (URL or owner/repo format), wants to understand a repo's structure, or needs to explore unfamiliar codebases. Use for questions like "where does https://github.com/x/y store Z?", "how does owner/repo handle Y?", "what does github.com/x/y do?". Also triggers on just repo names when user explicitly invokes (e.g., "use code explorer to check spotify-player"). Checks ~/Code first for existing clones. Clones repos to ~/Code for local exploration.
 ---
 
 # Code Explorer
@@ -9,25 +9,25 @@ Clone GitHub repos to ~/Code and explore their structure, architecture, and impl
 
 ## Workflow
 
-### 1. Detect GitHub Reference
+### 1. Detect Repo Reference
 
 Trigger on:
 
 - Full URLs: `https://github.com/owner/repo`
 - Short format: `owner/repo` or `github.com/owner/repo`
-- Questions like "How does X work in [repo]?" or "Explore [repo]"
+- Just repo name: `spotify-player`, `mastra` (when user explicitly invokes skill)
+- Questions containing a repo reference: "Where does [repo] store X?", "How does [repo] handle Y?"
 
 ### 2. Check ~/Code First
 
 Before cloning, check if the repo already exists locally:
 
 ```bash
-# Check if already cloned
-ls ~/Code/repo
+test -d ~/Code/repo && echo "EXISTS" || echo "NOT_FOUND"
 ```
 
-- **If exists**: Use the local copy, optionally `git fetch origin` for latest
-- **If not found**: Clone it with `gh repo clone owner/repo ~/Code/repo`
+- **If EXISTS**: Use the local copy, optionally `git fetch origin` for latest
+- **If NOT_FOUND**: Clone it with `gh repo clone owner/repo ~/Code/repo`
 
 Use the repo name as the directory name (e.g., `~/Code/mastra`).
 
@@ -88,4 +88,18 @@ Use the Task tool with Explore agent for deeper codebase questions.
 2. Search issues: `gh search issues --repo vercel/ai "streaming"`
 3. Review relevant issues for context
 4. Summarize findings with issue links
+
+**User**: "Where does https://github.com/aome510/spotify-player keep the cached credentials?"
+
+1. Clone to ~/Code/spotify-player
+2. Search for credential/cache related files
+3. Find config/storage paths in the code
+4. Explain where credentials are stored with file references
+
+**User**: "Use code explorer and tell me where does spotify-player keep the cached credentials?"
+
+1. Check if ~/Code/spotify-player exists (just repo name given)
+2. If exists, use local copy
+3. Search for credential/cache related files
+4. Explain where credentials are stored with file references
 
