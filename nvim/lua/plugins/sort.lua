@@ -9,5 +9,9 @@ return {
     { "go", mode = "x", desc = "Sort selection" },
     { "gO", mode = "x", desc = "Sort unique selection" },
   },
-  opts = {},
+  opts = {
+    mappings = {
+      unique_operator = "gO", -- opt-in to unique sort operator
+    },
+  },
 }
