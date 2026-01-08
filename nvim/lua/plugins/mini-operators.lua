@@ -7,7 +7,6 @@ return {
     exchange = { prefix = "" },
     multiply = { prefix = "gm" },
     replace = { prefix = "" },
-    sort = { prefix = "go" },
   },
   keys = {
     {
