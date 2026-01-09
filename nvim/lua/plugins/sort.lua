@@ -5,13 +5,12 @@ return {
   dev = true,
   keys = {
     { "go", desc = "Sort operator" },
-    { "gO", desc = "Sort unique operator" },
     { "go", mode = "x", desc = "Sort selection" },
-    { "gO", mode = "x", desc = "Sort unique selection" },
   },
   opts = {
+    unique = true,
     mappings = {
-      unique_operator = "gO", -- opt-in to unique sort operator
+      unique_operator = false,
     },
   },
 }
