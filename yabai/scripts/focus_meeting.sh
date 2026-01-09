@@ -39,6 +39,16 @@ meet_id=$(find_window_id "Google Meet")
 # First try to find an actual meeting window
 zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
 
+# 4. Mattermost
+# Matches Mattermost call windows (the "Calls Widget" window)
+mattermost_id=$(find_window_id "Mattermost" "Calls Widget")
+# Also get the main Mattermost window (title is exactly "Mattermost")
+mattermost_main_id=$(echo "$windows" | jq -r '
+  map(select(.app == "Mattermost" and .title == "Mattermost")) |
+  sort_by(.["is-visible"] | not) |
+  .[0].id
+')
+
 # Helper to check if ID is valid and visible
 is_visible() {
     local id=$1
@@ -51,11 +61,12 @@ declare -A candidates
 candidates[huddle]=$huddle_id
 candidates[meet]=$meet_id
 candidates[zoom]=$zoom_id
+candidates[mattermost]=$mattermost_id
 
 # Priority Order
 # If multiple meeting apps are running, this defines which one takes precedence
 # if both are visible (or both hidden).
-priority=("huddle" "meet" "zoom")
+priority=("huddle" "meet" "zoom" "mattermost")
 
 target_id=""
 
@@ -85,6 +96,10 @@ fi
 
 # Execute Focus
 if [[ -n "$target_id" ]]; then
+    # For Mattermost, also focus the main window first, then the Calls Widget
+    if [[ "$target_id" == "$mattermost_id" && -n "$mattermost_main_id" && "$mattermost_main_id" != "null" ]]; then
+        /opt/homebrew/bin/yabai -m window --focus "$mattermost_main_id" 2>/dev/null
+    fi
     /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
 else
     # Silent exit if no meeting window found
