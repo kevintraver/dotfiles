@@ -4,6 +4,7 @@ history_filter = [
   "^[^ ]+$",   # Ignore all single-word commands (no spaces)
   "^.{1,5}$",  # Ignore commands 5 chars or less (catches "cd ..", "ls -l")
   "^sudo ",    # Ignore sudo with args
+  "^z ",       # Ignore zoxide jumps
 ]
 
 ## which style to use
