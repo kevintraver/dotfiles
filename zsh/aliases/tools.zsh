@@ -13,15 +13,15 @@ alias ws="windsurf"
 alias w="windsurf"
 
 # cursor
-alias c="cursor"
 alias ca="cursor-agent"
 
 # opencode
 alias oc="opencode"
 
 # claude
-alias cl="claude"
-alias cc="claude"
+alias c="claude"
+alias cr="claude --resume"
+alias cc="claude --continue"
 
 # gemini
 alias gg="gemini"
