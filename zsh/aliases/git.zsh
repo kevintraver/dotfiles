@@ -1,14 +1,16 @@
-# git
-alias gs="git status"
-alias ghb="gh browse"
-alias gu="git undo"
-
-# Unalias oh-my-zsh git plugin aliases to use for AI commits
+# Unalias oh-my-zsh git plugin aliases
+unalias g 2>/dev/null
 unalias gca 2>/dev/null
 unalias gcb 2>/dev/null
 unalias gcc 2>/dev/null
 unalias gcd 2>/dev/null
 unalias gcs 2>/dev/null
+
+# git
+alias g="lazygit"
+alias gs="git status"
+alias ghb="gh browse"
+alias gu="git undo"
 
 # use gca to git commit all changes with opencode and claude
 alias gca='opencode run "$(get_prompt gca)" -m "anthropic/claude-opus-4-5"'
