@@ -14,12 +14,14 @@ audio_pids=$(echo "$assertions" | awk '
   /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
     time = substr($0, RSTART, RLENGTH)
     getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
-  }' | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
+  }' 2>/dev/null | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
 # Find first PID that's actually playing (skip browsers without audible tabs)
 pid=""
 for candidate in ${(f)audio_pids}; do
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
+  # Skip XPC services - they aren't launchable apps
+  [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* ]] && continue
   # Check if it's Zen Browser - only use if it has audible tabs
   if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
     if $BT query +audible 2>/dev/null | $RG -q .; then
