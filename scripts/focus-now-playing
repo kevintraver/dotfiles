@@ -20,8 +20,8 @@ audio_pids=$(echo "$assertions" | awk '
 pid=""
 for candidate in ${(f)audio_pids}; do
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
-  # Skip XPC services - they aren't launchable apps
-  [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* ]] && continue
+  # Skip XPC services and helper processes - they aren't launchable apps
+  [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* || "$candidate_path" == *"/Helpers/"* ]] && continue
   # Check if it's Zen Browser - only use if it has audible tabs
   if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
     if $BT query +audible 2>/dev/null | $RG -q .; then
@@ -65,7 +65,8 @@ if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
     read -r window_id has_focus <<< "$window_info"
 
     if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
-      $YABAI -m window "$window_id" --focus && $YABAI -m window "$window_id" --raise
+      $YABAI -m window "$window_id" --focus
+      $YABAI -m window "$window_id" --raise 2>/dev/null || true
     elif [[ -z "$window_id" ]]; then
       open -a "Zen Browser" 2>/dev/null
     fi
