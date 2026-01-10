@@ -8,10 +8,6 @@ alias gl='lazygit'
 # tmux
 alias t="tmux attach || tmux new"
 
-# windsurf
-alias ws="windsurf"
-alias w="windsurf"
-
 # cursor
 alias ca="cursor-agent"
 
