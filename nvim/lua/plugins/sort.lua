@@ -9,8 +9,5 @@ return {
   },
   opts = {
     unique = true,
-    mappings = {
-      unique_operator = false,
-    },
   },
 }
