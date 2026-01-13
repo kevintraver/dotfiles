@@ -87,15 +87,35 @@ return {
       ["<C-A-l>"] = "actions.select",
       ["<C-y>"] = {
         callback = function()
-          require("oil.actions").copy_entry_filename.callback()
+          local oil = require("oil")
+          local entry = oil.get_cursor_entry()
+          local dir = oil.get_current_dir()
+          if not entry or not dir then
+            return
+          end
+          local full_path = dir .. entry.name
+          local cwd = vim.fn.getcwd()
+          local path = full_path:gsub("^" .. vim.pesc(cwd) .. "/", "")
+          vim.fn.setreg("+", path)
+          vim.fn.setreg('"', path)
+          vim.notify("Copied: " .. path, vim.log.levels.INFO, { title = "Oil" })
         end,
-        desc = "Copy filename",
+        desc = "Copy relative file path",
       },
-      ["<C-A-y>"] = {
+      ["<C-D-y>"] = {
         callback = function()
-          require("oil.actions").copy_entry_path.callback()
+          local oil = require("oil")
+          local entry = oil.get_cursor_entry()
+          local dir = oil.get_current_dir()
+          if not entry or not dir then
+            return
+          end
+          local path = dir .. entry.name
+          vim.fn.setreg("+", path)
+          vim.fn.setreg('"', path)
+          vim.notify("Copied: " .. path, vim.log.levels.INFO, { title = "Oil" })
         end,
-        desc = "Copy filepath",
+        desc = "Copy full file path",
       },
       ["<D-s>"] = {
         desc = "Save",

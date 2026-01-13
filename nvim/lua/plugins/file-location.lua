@@ -7,19 +7,38 @@ return {
   },
   keys = {
     {
-      "<leader>yf",
-      desc = "Copy File Location (Relative) to Clipboard",
+      "<C-y>",
+      desc = "Copy relative file path",
       function()
-        require("nvim-file-location").copy_file_location(
-          "workdir",
-          false,
-          false,
-          "*"
-        )
-        require("nvim-file-location").copy_file_location(
+        local path = require("nvim-file-location").get_file_location(
           "workdir",
           false,
           false
+        )
+        vim.fn.setreg("+", path)
+        vim.fn.setreg('"', path)
+        vim.notify(
+          "Copied: " .. path,
+          vim.log.levels.INFO,
+          { title = "File Location" }
+        )
+      end,
+    },
+    {
+      "<C-D-y>",
+      desc = "Copy full file path",
+      function()
+        local path = require("nvim-file-location").get_file_location(
+          "absolute",
+          false,
+          false
+        )
+        vim.fn.setreg("+", path)
+        vim.fn.setreg('"', path)
+        vim.notify(
+          "Copied: " .. path,
+          vim.log.levels.INFO,
+          { title = "File Location" }
         )
       end,
     },
