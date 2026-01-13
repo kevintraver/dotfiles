@@ -240,6 +240,21 @@ The Neovim configuration leverages a comprehensive plugin ecosystem organized in
 - Run `nvim --headless "+checkhealth" +qa` to verify plugin health and dependencies
 - Check `vim-startuptime` plugin output to profile and optimize load times
 
+**Neovim Plugin Source Code Reference:**
+
+When configuring Neovim plugins or answering questions about how they work, consult the plugin source code located at:
+
+```
+~/.local/share/nvim/dev/
+```
+
+This directory contains the full source of installed Neovim plugins. Reading the source is often more reliable than documentation for understanding:
+
+- Available configuration options and their default values
+- Internal APIs and exposed functions
+- Event hooks and autocommand patterns
+- Module structure and require paths
+
 ## Working with Configurations
 
 ### Making Changes
