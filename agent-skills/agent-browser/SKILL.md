@@ -1,3 +1,8 @@
+---
+name: agent-browser
+description: Browser automation CLI optimized for AI agents. Use `npx agent-browser` for all commands. Best for testing websites, verifying UI changes, checking console errors, taking screenshots, and automating form submissions.
+---
+
 # agent-browser
 
 Browser automation CLI optimized for AI agents. Use `npx agent-browser` for all commands.
