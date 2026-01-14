@@ -155,6 +155,13 @@ npx agent-browser --session test1 open site-a.com
 npx agent-browser --session test2 open site-b.com
 ```
 
+## Tips for AI Agents
+
+- **Always snapshot first**: Before clicking or typing, get a fresh snapshot to ensure valid refs
+- **Use `-i` flag by default**: `snapshot -i` filters for interactive elements, dramatically reducing noise
+- **Check output**: The CLI returns JSON or text; read it to confirm actions succeeded
+- **Refs are ephemeral**: After any page change (navigation, click, form submit), take a new snapshot - old refs may be invalid
+
 ## Troubleshooting
 
 **Browser not installed:**
@@ -168,4 +175,5 @@ npx agent-browser install
 ```bash
 npx agent-browser wait 2000                 # Wait 2 seconds
 npx agent-browser wait --load networkidle   # Wait for network idle
+npx agent-browser wait --text "Success"     # Wait for specific text to appear
 ```
