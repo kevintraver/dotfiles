@@ -9,6 +9,12 @@ return {
         require("oil-copy").setup()
       end,
     },
+    {
+      "malewicz1337/oil-git.nvim",
+      opts = {
+        show_ignored_files = true,
+      },
+    },
   },
   event = "VimEnter",
   opts = {
