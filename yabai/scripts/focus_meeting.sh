@@ -42,9 +42,10 @@ zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
 # 4. Mattermost
 # Matches Mattermost call windows (the "Calls Widget" window)
 mattermost_id=$(find_window_id "Mattermost" "Calls Widget")
-# Also get the main Mattermost window (title is exactly "Mattermost")
+# Also get the main call window (title starts with "Call - " for screen share, or exact "Mattermost")
 mattermost_main_id=$(echo "$windows" | jq -r '
-  map(select(.app == "Mattermost" and .title == "Mattermost")) |
+  map(select(.app == "Mattermost" and (.title | test("^Call - "; "i") or . == "Mattermost"))) |
+  sort_by(.title | test("^Call - ") | not) |
   sort_by(.["is-visible"] | not) |
   .[0].id
 ')
@@ -96,11 +97,13 @@ fi
 
 # Execute Focus
 if [[ -n "$target_id" ]]; then
-    # For Mattermost, also focus the main window first, then the Calls Widget
+    # For Mattermost, focus the Calls Widget first, then the main call window
     if [[ "$target_id" == "$mattermost_id" && -n "$mattermost_main_id" && "$mattermost_main_id" != "null" ]]; then
+        /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
         /opt/homebrew/bin/yabai -m window --focus "$mattermost_main_id" 2>/dev/null
+    else
+        /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
     fi
-    /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
 else
     # Silent exit if no meeting window found
     exit 0
