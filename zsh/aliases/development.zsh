@@ -1,5 +1,5 @@
 # turbo dev
-alias dev="dev3000"
+alias dev="dev3000 --no-agent"
 alias mastra="npm run mastra"
 
 # The aliases ensure noglob is used
