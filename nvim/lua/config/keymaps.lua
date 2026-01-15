@@ -5,13 +5,11 @@
 
 vim.keymap.set({ "n", "x" }, ";", ":")
 
--- macOS-like keybindings for insert mode
+-- Standard readline/vim insert mode keybindings
 vim.keymap.set("i", "<C-a>", "<Home>", { desc = "Move To Beginning of Line" })
 vim.keymap.set("i", "<C-e>", "<End>", { desc = "Move To End Of Line" })
+vim.keymap.set("i", "<C-d>", "<Del>", { desc = "Delete Forward" })
 vim.keymap.set("i", "<C-k>", "<C-o>D", { desc = "Delete To End Of Line" })
-vim.keymap.set("i", "<C-u>", "<C-u>", { desc = "Delete To Beginning of Line" })
-vim.keymap.set("i", "<C-w>", "<C-w>", { desc = "Delete Word Backwards" })
-vim.keymap.set("i", "<C-l>", "<Del>", { desc = "Delete Right" })
 
 -- save file
 vim.keymap.set({ "n", "i", "o" }, "<D-s>", function()
