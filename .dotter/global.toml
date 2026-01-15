@@ -29,11 +29,6 @@ depends = []
 "ripgrep/ripgreprc" = "~/.ripgreprc"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "tridactyl/tridactylrc" = "~/.tridactylrc"
-# AI
-"claude-skills" = { target = "~/.claude/skills", type = "symbolic", recurse = false }
-# Manual symlinks:
-# ln -s ~/.dotfiles/agents/AGENTS.md ~/.claude/CLAUDE.md
-# ln -s ~/.dotfiles/agents/AGENTS.md ~/.config/opencode/AGENTS.md
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 "superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
