@@ -16,9 +16,10 @@ JQ="/opt/homebrew/bin/jq"
 
 # Try wildcard first, then exact for URLs with paths
 # (bare *://host hangs, but *://host/path is safe)
-tab_line=$($BT query -url "$base/*" 2>/dev/null | head -1)
+# Sort by lastAccessed (4th col) descending to get most recent tab
+tab_line=$($BT query -url "$base/*" --last-accessed 2>/dev/null | sort -t$'\t' -k4 -nr | head -1)
 if [[ -z "$tab_line" && "${base#*://}" == */* ]]; then
-  tab_line=$($BT query -url "$base" 2>/dev/null | head -1)
+  tab_line=$($BT query -url "$base" --last-accessed 2>/dev/null | sort -t$'\t' -k4 -nr | head -1)
 fi
 
 if [[ -n "$tab_line" ]]; then
