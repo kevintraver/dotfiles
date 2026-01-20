@@ -2,7 +2,6 @@
 # https://espanso.org/docs/
 
 matches:
-
   - trigger: ';gca'
     replace: >-
       Stage all changes and commit them using the Conventional Commits format.
@@ -23,6 +22,11 @@ matches:
       Review and analyze the current changes.
       Then commit these changes using the Conventional Commits format.
       Include a detailed description of the motivation and impact.
+
+  - trigger: ';gci'
+    replace: >-
+      Commit incrementally as you work, using the Conventional Commits format.
+      Break changes into logical, self-contained commits rather than one large commit.
 
   - trigger: ';gcs'
     replace: >-
