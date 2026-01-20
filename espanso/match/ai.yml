@@ -4,3 +4,6 @@
 matches:
   - trigger: ';ask'
     replace: 'AskUserQuestionTool'
+
+  - trigger: ';cc'
+    replace: 'Copy to the clipboard'
