@@ -106,6 +106,9 @@ done
 
 [[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
+# bun
+export PATH="$HOME/.bun/bin:$PATH"
+
 # https://mise.jdx.dev/
 # Full activation with hooks for interactive shells (auto-switches versions on cd)
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
