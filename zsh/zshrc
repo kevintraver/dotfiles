@@ -109,6 +109,9 @@ done
 # bun
 export PATH="$HOME/.bun/bin:$PATH"
 
+# bun completions
+[ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
+
 # https://mise.jdx.dev/
 # Full activation with hooks for interactive shells (auto-switches versions on cd)
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
