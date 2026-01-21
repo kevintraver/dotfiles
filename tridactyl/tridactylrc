@@ -33,6 +33,9 @@ bind g? cheatsheet
 unbind J
 unbind K
 
+unbindurl hn-live-feed.vercel.app j
+unbindurl hn-live-feed.vercel.app k
+
 bind t fillcmdline tabopen
 bind x tabclose
 bind X tabonly
