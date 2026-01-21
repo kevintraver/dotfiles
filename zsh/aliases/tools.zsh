@@ -17,6 +17,7 @@ alias oc="opencode"
 
 # claude
 alias c="claude"
+alias cl="claude"
 alias cr="claude --resume"
 alias cc="claude --continue"
 
