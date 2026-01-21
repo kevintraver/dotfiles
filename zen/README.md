@@ -1,20 +1,25 @@
-# Zen Browser Extensions
+# Zen Browser
 
-## List All Extensions
+## Extensions
 
-To list all installed extensions in Zen Browser:
+To list all installed extensions:
 
 ```bash
 jq '.addons[] | select(.type == "extension") | .defaultLocale.name' ~/Library/Application\ Support/zen/Profiles/*.Default\ \(release\)/extensions.json
 ```
 
-This command:
-- Reads the `extensions.json` file from your Zen Browser profile
-- Filters for items where type is "extension"
-- Extracts just the extension name
-
-## Save Extensions to File
+Save to file:
 
 ```bash
 jq '.addons[] | select(.type == "extension") | .defaultLocale.name' ~/Library/Application\ Support/zen/Profiles/*.Default\ \(release\)/extensions.json > zen/extensions.txt
 ```
+
+## Keyboard Shortcuts
+
+Stored in `zen-keyboard-shortcuts.json` in the profile directory:
+
+```
+~/Library/Application Support/zen/Profiles/<profile-id>/zen-keyboard-shortcuts.json
+```
+
+Note: In the modifiers object, `accel` means Cmd on macOS (Ctrl on Windows/Linux).
