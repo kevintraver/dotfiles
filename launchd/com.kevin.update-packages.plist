@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.kevin.update-packages</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/kevin/.local/bin/update-packages</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/Users/kevin/.bun/bin:/Users/kevin/.local/share/mise/shims:/usr/bin:/bin</string>
+    </dict>
+    <key>StartInterval</key>
+    <integer>14400</integer>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/Users/kevin/.local/log/update-packages.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/kevin/.local/log/update-packages.log</string>
+</dict>
+</plist>

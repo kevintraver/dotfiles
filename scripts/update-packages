@@ -1,0 +1,23 @@
+#!/bin/bash
+# update-packages - Update all package managers
+
+LOG="$HOME/.local/log/update-packages.log"
+mkdir -p "$(dirname "$LOG")"
+
+log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
+
+log "Starting package updates..."
+
+brew update && brew upgrade --greedy && brew cleanup 2>&1 | tee -a "$LOG"
+log "✓ Homebrew packages updated and cleaned"
+
+npm update -g 2>&1 | tee -a "$LOG"
+log "✓ npm global packages updated"
+
+pnpm update -g 2>&1 | tee -a "$LOG"
+log "✓ pnpm global packages updated"
+
+bun update --global 2>&1 | tee -a "$LOG"
+log "✓ bun global packages updated"
+
+log "✓ All package updates complete"
