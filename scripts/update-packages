@@ -20,4 +20,7 @@ log "✓ pnpm global packages updated"
 bun update --global 2>&1 | tee -a "$LOG"
 log "✓ bun global packages updated"
 
+pipx upgrade-all 2>&1 | tee -a "$LOG"
+log "✓ pipx packages updated"
+
 log "✓ All package updates complete"
