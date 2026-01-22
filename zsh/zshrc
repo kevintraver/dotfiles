@@ -106,15 +106,15 @@ done
 
 [[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
-# bun
+# https://mise.jdx.dev/
+# Full activation with hooks for interactive shells (auto-switches versions on cd)
+(( $+commands[mise] )) && eval "$(mise activate zsh)"
+
+# bun (after mise so bun globals take precedence)
 export PATH="$HOME/.bun/bin:$PATH"
 
 # bun completions
 [ -s "/Users/kevin/.bun/_bun" ] && source "/Users/kevin/.bun/_bun"
-
-# https://mise.jdx.dev/
-# Full activation with hooks for interactive shells (auto-switches versions on cd)
-(( $+commands[mise] )) && eval "$(mise activate zsh)"
 
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 [[ -d "$ANDROID_HOME/emulator" ]] && path+=("$ANDROID_HOME/emulator")
