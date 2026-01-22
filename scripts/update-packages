@@ -4,23 +4,25 @@
 LOG="$HOME/.local/log/update-packages.log"
 mkdir -p "$(dirname "$LOG")"
 
-log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG"; }
+exec > >(tee -a "$LOG") 2>&1
+
+log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 
 log "Starting package updates..."
 
-brew update && brew upgrade --greedy && brew cleanup 2>&1 | tee -a "$LOG"
+brew update && brew upgrade --greedy && brew cleanup
 log "✓ Homebrew packages updated and cleaned"
 
-npm update -g 2>&1 | tee -a "$LOG"
+npm update -g
 log "✓ npm global packages updated"
 
-pnpm update -g 2>&1 | tee -a "$LOG"
+pnpm update -g
 log "✓ pnpm global packages updated"
 
-bun update --global 2>&1 | tee -a "$LOG"
+bun update --global
 log "✓ bun global packages updated"
 
-pipx upgrade-all 2>&1 | tee -a "$LOG"
+pipx upgrade-all
 log "✓ pipx packages updated"
 
 log "✓ All package updates complete"
