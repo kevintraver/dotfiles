@@ -17,9 +17,5 @@
     <integer>14400</integer>
     <key>RunAtLoad</key>
     <false/>
-    <key>StandardOutPath</key>
-    <string>/Users/kevin/.local/log/update-packages.log</string>
-    <key>StandardErrorPath</key>
-    <string>/Users/kevin/.local/log/update-packages.log</string>
 </dict>
 </plist>
