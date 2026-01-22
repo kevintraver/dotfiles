@@ -10,7 +10,7 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 
 log "Starting package updates..."
 
-brew update && brew upgrade --greedy && brew cleanup
+brew update && brew upgrade && brew upgrade --cask && brew cleanup
 log "✓ Homebrew packages updated and cleaned"
 
 npm update -g
