@@ -70,8 +70,8 @@ export FZF_DEFAULT_OPTS="
 [[ -r "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 
-# fzf shell integration (enables **<TAB> recursive fuzzy completion)
-[[ -r /opt/homebrew/opt/fzf/shell/completion.zsh ]] && source /opt/homebrew/opt/fzf/shell/completion.zsh
+# skim shell integration (enables **<TAB> recursive fuzzy completion)
+[[ -r /opt/homebrew/opt/sk/share/zsh/site-functions/key-bindings.zsh ]] && source /opt/homebrew/opt/sk/share/zsh/site-functions/key-bindings.zsh
 
 # https://zsh.sourceforge.io/Guide/zshguide04.html
 WORDCHARS=${WORDCHARS/\/}
