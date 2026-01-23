@@ -25,4 +25,10 @@ log "✓ bun global packages updated"
 pipx upgrade-all
 log "✓ pipx packages updated"
 
+nvim --headless "+Lazy! sync" +qa
+log "✓ Neovim plugins updated"
+
+nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
+log "✓ Mason packages updated"
+
 log "✓ All package updates complete"
