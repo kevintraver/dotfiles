@@ -15,7 +15,6 @@ depends = []
 # Terminal & Shell
 "zsh/zshrc" = "~/.zshrc"
 "zsh/zshenv" = "~/.zshenv"
-"kitty/kitty.conf" = "~/.config/kitty/kitty.conf"
 "ghostty/config" = "~/.config/ghostty/config"
 "tmux/tmux.conf" = "~/.tmux.conf"
 "atuin/config.toml" = "~/.config/atuin/config.toml"

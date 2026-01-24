@@ -29,7 +29,6 @@ dotter deploy --dry-run
 ### Terminal & Shell
 
 - **zsh/** - Zsh configuration with modular setup
-- **kitty/** - Kitty terminal emulator configuration
 - **tmux/** - Tmux terminal multiplexer configuration
 - **ghostty/** - Ghostty terminal configuration
 
