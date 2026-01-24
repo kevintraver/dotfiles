@@ -30,5 +30,5 @@ matches:
 
   - trigger: ';gcs'
     replace: >-
-      Commit the currently staged changes using the Conventional Commits format.
-      Write a detailed message explaining the updates.
+      Review the currently staged changes and then commit using the Conventional Commits format.
+      Include a short description of the changes.
