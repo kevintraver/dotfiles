@@ -30,7 +30,6 @@ depends = []
 "tridactyl/tridactylrc" = "~/.tridactylrc"
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
-"superwhisper/settings/settings.json" = "~/superwhisper/settings/settings.json"
 "superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
 "superwhisper/modes/message-fast.json" = "~/superwhisper/modes/message-fast.json"
 "superwhisper/modes/super.json" = "~/superwhisper/modes/super.json"
