@@ -1,0 +1,46 @@
+# macOS
+.DS_Store
+.Trash
+
+# Editors & IDEs
+.cursor
+.vscode
+
+# Agent Skills
+.agents/skills
+.claude/skills
+.codex/skills
+.gemini/skills
+.github/skills
+.opencode/skills
+
+# Claude
+.claude
+CLAUDE.local.md
+
+# Gemini
+.gemini/settings.json
+
+# MCP
+.mcp.json
+
+# Design Tools
+.superdesign
+
+# Environment & Secrets
+.env*
+
+# Temporary Files
+.temp
+.tmp
+tmp
+
+# Logs
+*.log
+
+# Dependencies
+node_modules
+
+# Spelling & Linting
+.cspell.json
+cspell.json

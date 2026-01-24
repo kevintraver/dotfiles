@@ -9,6 +9,7 @@ depends = []
 "cursor/settings.json" = "~/Library/Application Support/Cursor/User/settings.json"
 "cursor/keybindings.json" = "~/Library/Application Support/Cursor/User/keybindings.json"
 "git/gitconfig" = "~/.gitconfig"
+"git/gitignore_global" = "~/.gitignore_global"
 "lazygit/config.yml" = "~/.config/lazygit/config.yml"
 "prettier/prettierrc" = "~/.prettierrc"
 "editorconfig/editorconfig" = "~/.editorconfig"
