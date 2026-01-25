@@ -41,6 +41,7 @@ depends = []
 "scripts/focus-now-playing" = "~/.local/bin/focus-now-playing"
 "scripts/yabai-apply-display-rules" = "~/.local/bin/yabai-apply-display-rules"
 "scripts/update-packages" = "~/.local/bin/update-packages"
+"scripts/claude-sync-permissions" = "~/.local/bin/claude-sync-permissions"
 # LaunchAgents
 "launchd/com.kevin.update-packages.plist" = "~/Library/LaunchAgents/com.kevin.update-packages.plist"
 

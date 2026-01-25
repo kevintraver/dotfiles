@@ -1,0 +1,23 @@
+#!/bin/bash
+# claude-sync-permissions - Merge local Claude permissions into global settings
+
+LOCAL_SETTINGS="./.claude/settings.local.json"
+GLOBAL_SETTINGS="$HOME/.claude/settings.json"
+
+# Check if there are any local permissions to sync
+if [[ ! -f "$LOCAL_SETTINGS" ]] || [[ $(jq -r '.permissions.allow // [] | length' "$LOCAL_SETTINGS") -eq 0 ]]; then
+  echo "No permissions to sync"
+  exit 0
+fi
+
+# Merge, dedupe, sort permissions and update global settings
+jq --slurpfile local "$LOCAL_SETTINGS" '
+  .permissions.allow = (
+    [.permissions.allow, $local[0].permissions.allow // []]
+    | add
+    | unique
+    | sort
+  )
+' "$GLOBAL_SETTINGS" | sponge "$GLOBAL_SETTINGS"
+
+echo "Merged permissions from $LOCAL_SETTINGS into $GLOBAL_SETTINGS"
