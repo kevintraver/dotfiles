@@ -8,3 +8,8 @@ bindkey '^g' edit-command-line
 exit_zsh() { exit 0 }
 zle -N exit_zsh
 bindkey '^[w' exit_zsh
+
+# copy current line to clipboard
+copy-line-to-clipboard() { echo -n "$BUFFER" | pbcopy }
+zle -N copy-line-to-clipboard
+bindkey '^y' copy-line-to-clipboard
