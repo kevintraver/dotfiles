@@ -1,6 +1,14 @@
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "/tmp/zsh*",
   callback = function()
+    vim.keymap.set({ "n", "i" }, "<M-w>", function()
+      vim.cmd.write({ bang = true })
+      vim.cmd.quit()
+    end, { buffer = true })
+    vim.keymap.set({ "n", "i" }, "<D-q>", function()
+      vim.cmd.write({ bang = true })
+      vim.cmd.quit()
+    end, { buffer = true })
     vim.keymap.set({ "n", "i" }, "<D-w>", function()
       vim.cmd.write({ bang = true })
       vim.cmd.bdelete()

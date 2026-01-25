@@ -1,8 +1,15 @@
 # edit-command-line
 autoload -U edit-command-line
 zle -N edit-command-line
-bindkey '^[e' edit-command-line
-bindkey '^g' edit-command-line
+
+# wrapper to move cursor to end after editing
+edit-command-line-end() {
+  zle edit-command-line
+  CURSOR=$#BUFFER
+}
+zle -N edit-command-line-end
+bindkey '^[e' edit-command-line-end
+bindkey '^g' edit-command-line-end
 
 #exit
 exit_zsh() { exit 0 }
