@@ -27,6 +27,7 @@ depends = []
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
 # CLI Utilities
 "ripgrep/ripgreprc" = "~/.ripgreprc"
+"yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "tridactyl/tridactylrc" = "~/.tridactylrc"
 # Productivity Tools
