@@ -12,6 +12,8 @@ keybinding:
   commits:
     moveDownCommit: "J"
     moveUpCommit: "K"
+    renameCommitWithEditor: "r"
+    renameCommit: "R"
 gui:
   scrollHeight: 20
   nerdFontsVersion: "3"
