@@ -1,0 +1,7 @@
+[ui.theme]
+name = "tokyonight"
+mode = "dark"
+
+[ui.syntax]
+theme = "tokyonight"
+mode = "on"

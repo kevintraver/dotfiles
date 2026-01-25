@@ -28,6 +28,7 @@ depends = []
 # CLI Utilities
 "ripgrep/ripgreprc" = "~/.ripgreprc"
 "yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
+"oyo/config.toml" = "~/.config/oyo/config.toml"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "tridactyl/tridactylrc" = "~/.tridactylrc"
 # Productivity Tools
