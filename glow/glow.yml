@@ -1,0 +1,2 @@
+# show files in hidden directories (e.g. ~/.dotfiles)
+all: true

@@ -26,6 +26,7 @@ depends = []
 "karabiner" = { target = "~/.config/karabiner", type = "symbolic", recurse = false }
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
 # CLI Utilities
+"glow/glow.yml" = "~/Library/Preferences/glow/glow.yml"
 "ripgrep/ripgreprc" = "~/.ripgreprc"
 "yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
 "oyo/config.toml" = "~/.config/oyo/config.toml"
