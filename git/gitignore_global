@@ -7,12 +7,12 @@
 .vscode
 
 # Agent Skills
-.agents/skills
-.claude/skills
-.codex/skills
-.gemini/skills
-.github/skills
-.opencode/skills
+**/.agents/skills
+**/.claude/skills
+**/.codex/skills
+**/.gemini/skills
+**/.github/skills
+**/.opencode/skills
 
 # Claude
 .claude
