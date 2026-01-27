@@ -73,5 +73,13 @@ return {
       end,
       desc = "Entire Buffer",
     },
+    {
+      "ib",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").block()
+      end,
+      desc = "Inner Block",
+    },
   },
 }
