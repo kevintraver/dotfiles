@@ -7,3 +7,6 @@ matches:
 
   - trigger: ';cc'
     replace: 'Copy to the clipboard'
+
+  - trigger: ';ob'
+    replace: 'Open in the browser'
