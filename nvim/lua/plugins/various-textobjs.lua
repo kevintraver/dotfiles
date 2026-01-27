@@ -1,6 +1,7 @@
 return {
   "chrisgrieser/nvim-various-textobjs",
   vscode = true,
+  dev = true,
   lazy = true,
   opts = {
     keymaps = {
