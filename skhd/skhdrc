@@ -5,3 +5,6 @@ ctrl + cmd - l: $HOME/.dotfiles/yabai/scripts/primary_right_action.sh
 
 shift + cmd - h: $HOME/.dotfiles/yabai/scripts/secondary_left_action.sh
 shift + cmd - l: $HOME/.dotfiles/yabai/scripts/secondary_right_action.sh
+
+# Cycle through same-app windows on current space
+ctrl + cmd - g : $HOME/.dotfiles/yabai/scripts/cycle_same_app_windows.sh
