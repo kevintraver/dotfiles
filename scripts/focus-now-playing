@@ -5,6 +5,7 @@ BT="/Users/kevin/.local/bin/bt"
 RG="/opt/homebrew/bin/rg"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
+STATE_FILE="$HOME/.local/state/focus-now-playing"
 
 # Get power assertions
 assertions=$(LC_ALL=C pmset -g assertions)
@@ -49,7 +50,16 @@ if [[ -n "$pid" ]]; then
   fi
 fi
 
-[[ -z "$app_name" ]] && exit 0
+# If no app playing, try fallback to last playing app (excluding Zen)
+if [[ -z "$app_name" ]]; then
+  if [[ -f "$STATE_FILE" ]]; then
+    last_app=$(<"$STATE_FILE")
+    if [[ -n "$last_app" ]]; then
+      open -a "$last_app" 2>/dev/null
+    fi
+  fi
+  exit 0
+fi
 
 # If it's Zen Browser, focus the specific audible tab and window via yabai
 if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
@@ -74,6 +84,7 @@ if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
     open -a "Zen Browser" 2>/dev/null
   fi
 else
-  # Activate other apps normally
+  # Activate other apps normally and save as last playing
+  echo "$app_name" > "$STATE_FILE"
   open -a "$app_name" 2>/dev/null
 fi
