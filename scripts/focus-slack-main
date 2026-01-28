@@ -1,0 +1,30 @@
+#!/bin/zsh
+#
+# focus-slack-main
+# Focus the main Slack window (not the Huddle window)
+
+AEROSPACE="/opt/homebrew/bin/aerospace"
+JQ="/opt/homebrew/bin/jq"
+
+# Query all windows and filter for Slack
+slack_windows=$($AEROSPACE list-windows --all --json | $JQ '[.[] | select(."app-name" == "Slack")]')
+
+# Look for the main window - prioritize window with [Main] in title
+main_id=$(echo "$slack_windows" | $JQ -r '
+  [.[] | select(.title | test("\\[Main\\]"))] | first | ."window-id" // empty
+')
+
+# Fallback: find window with " - Slack" pattern (channel/DM view) but not Huddle
+if [[ -z "$main_id" || "$main_id" == "null" ]]; then
+  main_id=$(echo "$slack_windows" | $JQ -r '
+    [.[] | select(.title | test(" - Slack$")) | select(.title | test("Huddle"; "i") | not)] | first | ."window-id" // empty
+  ')
+fi
+
+if [[ -n "$main_id" && "$main_id" != "null" ]]; then
+  # Main window exists, focus it
+  $AEROSPACE focus --window-id "$main_id" 2>/dev/null || open -a "Slack"
+else
+  # No main window found, just activate Slack app
+  open -a "Slack"
+fi

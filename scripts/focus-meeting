@@ -1,0 +1,84 @@
+#!/bin/zsh
+#
+# focus-meeting
+# Focuses the most relevant meeting app window.
+# Priority: Slack Huddle > Google Meet > Zoom > Mattermost
+# Prefers visible windows (on current space) over hidden ones.
+
+AEROSPACE="/opt/homebrew/bin/aerospace"
+JQ="/opt/homebrew/bin/jq"
+
+# Get all windows
+windows=$($AEROSPACE list-windows --all --json)
+
+# Function to find window ID
+# usage: find_window_id <app_regex> <title_regex>
+find_window_id() {
+  local app_pattern=$1
+  local title_pattern=$2
+
+  # Filter by app and title, then prefer visible windows
+  local id=$(echo "$windows" | $JQ -r --arg app "$app_pattern" --arg title "$title_pattern" '
+    map(select(."app-name" | test($app; "i"))) |
+    map(select(.title | test($title; "i"))) |
+    .[0]."window-id"
+  ')
+
+  echo "$id"
+}
+
+# 1. Slack Huddle
+# Matches the standalone Huddle window
+huddle_id=$(find_window_id "Slack" "Huddle")
+
+# 2. Google Meet
+# Matches standard browser tabs AND Chrome App mode
+meet_id=$(find_window_id "Google Meet" ".")
+
+# 3. Zoom Meeting
+zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
+
+# 4. Mattermost
+# Matches Mattermost call windows (the "Calls Widget" window)
+mattermost_id=$(find_window_id "Mattermost" "Calls Widget")
+# Also get the main call window
+mattermost_main_id=$(echo "$windows" | $JQ -r '
+  map(select(."app-name" == "Mattermost" and (.title | test("^Call - "; "i") or . == "Mattermost"))) |
+  sort_by(.title | test("^Call - ") | not) |
+  .[0]."window-id"
+')
+
+# Collect candidates
+declare -A candidates
+candidates[huddle]=$huddle_id
+candidates[meet]=$meet_id
+candidates[zoom]=$zoom_id
+candidates[mattermost]=$mattermost_id
+
+# Priority Order
+priority=("huddle" "meet" "zoom" "mattermost")
+
+target_id=""
+
+# Find first valid meeting window
+for app in $priority; do
+    id=${candidates[$app]}
+    if [[ -n "$id" && "$id" != "null" ]]; then
+        target_id=$id
+        break
+    fi
+done
+
+# Execute Focus
+if [[ -n "$target_id" ]]; then
+    # For Mattermost, focus the Calls Widget first, then the main call window
+    if [[ "$target_id" == "$mattermost_id" && -n "$mattermost_main_id" && "$mattermost_main_id" != "null" ]]; then
+        $AEROSPACE focus --window-id "$target_id" 2>/dev/null
+        $AEROSPACE focus --window-id "$mattermost_main_id" 2>/dev/null
+    else
+        $AEROSPACE focus --window-id "$target_id" 2>/dev/null
+    fi
+else
+    # Silent exit if no meeting window found
+    exit 0
+fi

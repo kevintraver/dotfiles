@@ -3,7 +3,7 @@
 
 BT="/Users/kevin/.local/bin/bt"
 RG="/opt/homebrew/bin/rg"
-YABAI="/opt/homebrew/bin/yabai"
+AEROSPACE="/opt/homebrew/bin/aerospace"
 JQ="/opt/homebrew/bin/jq"
 STATE_FILE="$HOME/.local/state/focus-now-playing"
 
@@ -61,7 +61,7 @@ if [[ -z "$app_name" ]]; then
   exit 0
 fi
 
-# If it's Zen Browser, focus the specific audible tab and window via yabai
+# If it's Zen Browser, focus the specific audible tab and window via aerospace
 if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
   read -r tab_line <<< "$($BT query +audible 2>/dev/null)"
   if [[ -n "$tab_line" ]]; then
@@ -69,15 +69,13 @@ if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
     $BT activate "$tab_id" 2>/dev/null
 
     # Use first 20 chars of title for fuzzy match
-    window_info=$($YABAI -m query --windows | $JQ -r \
+    window_id=$($AEROSPACE list-windows --all --json | $JQ -r \
       --arg title "${tab_title:0:20}" \
-      'first(.[] | select(.app == "Zen" and (.title | contains($title)))) | "\(.id) \(.["has-focus"])"')
-    read -r window_id has_focus <<< "$window_info"
+      'first(.[] | select(."app-name" == "Zen" and (.title | contains($title)))) | ."window-id"')
 
-    if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
-      $YABAI -m window "$window_id" --focus
-      $YABAI -m window "$window_id" --raise 2>/dev/null || true
-    elif [[ -z "$window_id" ]]; then
+    if [[ -n "$window_id" && "$window_id" != "null" ]]; then
+      $AEROSPACE focus --window-id "$window_id" 2>/dev/null
+    else
       open -a "Zen Browser" 2>/dev/null
     fi
   else

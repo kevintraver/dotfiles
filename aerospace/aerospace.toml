@@ -1,0 +1,99 @@
+# AeroSpace window manager configuration
+# Migrated from yabai + skhd
+
+# Layout & Behavior
+default-root-container-layout = 'accordion'  # yabai's "stack" layout
+default-root-container-orientation = 'horizontal'
+accordion-padding = 30
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+# Gaps (yabai: 10px all around)
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.right = 10
+outer.top = 10
+outer.bottom = 10
+
+# Specific apps that should float (not tiled)
+
+# Additional float rules for specific apps
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'Preferences$'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'Settings$'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = '^Raycast$'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = '^Raycast$'
+if.window-title-regex-substring = '^AI Chat$'
+run = 'layout tiling'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'BetterDisplay'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Leader Key'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'DeskPad'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'superwhisper'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'CleanShot'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.window-title-regex-substring = '^Android Emulator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = '^qemu-system-'
+run = 'layout floating'
+
+# Display assignment - messaging apps to workspace M on monitor 2
+[workspace-to-monitor-force-assignment]
+M = 2
+
+[[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace M'
+
+# Keybindings (replaces skhd)
+[mode.main.binding]
+# Cross-monitor focus (replaces primary_left/right_action.sh)
+ctrl-cmd-h = 'focus --boundaries all-monitors-outer-frame left'
+ctrl-cmd-l = 'focus --boundaries all-monitors-outer-frame right'
+
+# Move window to other monitor and follow (replaces secondary_left/right_action.sh)
+shift-cmd-h = 'move-node-to-monitor --focus-follows-window left'
+shift-cmd-l = 'move-node-to-monitor --focus-follows-window right'

@@ -21,8 +21,7 @@ depends = []
 "atuin/config.toml" = "~/.config/atuin/config.toml"
 # Window Management & macOS
 "hammerspoon" = { target = "~/.hammerspoon", type = "symbolic", recurse = false }
-"yabai/yabairc" = "~/.yabairc"
-"skhd/skhdrc" = "~/.skhdrc"
+"aerospace/aerospace.toml" = "~/.aerospace.toml"
 "karabiner" = { target = "~/.config/karabiner", type = "symbolic", recurse = false }
 "macOS/DefaultKeyBinding.dict" = "~/Library/KeyBindings/DefaultKeyBinding.dict"
 # CLI Utilities
@@ -40,7 +39,9 @@ depends = []
 # Custom Scripts
 "browser/zen/zen-focus-tab" = "~/.local/bin/zen-focus-tab"
 "scripts/focus-now-playing" = "~/.local/bin/focus-now-playing"
-"scripts/yabai-apply-display-rules" = "~/.local/bin/yabai-apply-display-rules"
+"scripts/focus-meeting" = "~/.local/bin/focus-meeting"
+"scripts/focus-slack-main" = "~/.local/bin/focus-slack-main"
+"scripts/focus-slack-huddle" = "~/.local/bin/focus-slack-huddle"
 "scripts/update-packages" = "~/.local/bin/update-packages"
 "scripts/claude-sync-permissions" = "~/.local/bin/claude-sync-permissions"
 # LaunchAgents

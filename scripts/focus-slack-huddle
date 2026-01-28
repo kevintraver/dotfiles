@@ -1,0 +1,23 @@
+#!/bin/zsh
+#
+# focus-slack-huddle
+# Focus Slack Huddle window if visible. Do nothing if not found.
+
+AEROSPACE="/opt/homebrew/bin/aerospace"
+JQ="/opt/homebrew/bin/jq"
+
+# Query all windows and filter for Slack
+slack_windows=$($AEROSPACE list-windows --all --json | $JQ '[.[] | select(."app-name" == "Slack")]')
+
+# Look for Huddle window
+huddle_id=$(echo "$slack_windows" | $JQ -r '
+  .[] | select(.title | test("Huddle"; "i")) | ."window-id"
+' | head -n1)
+
+if [[ -n "$huddle_id" && "$huddle_id" != "null" ]]; then
+  # Focus huddle window
+  $AEROSPACE focus --window-id "$huddle_id" 2>/dev/null
+else
+  # Do nothing
+  exit 0
+fi
