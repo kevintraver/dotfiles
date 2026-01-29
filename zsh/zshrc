@@ -82,6 +82,9 @@ WORDCHARS=${WORDCHARS/\/}
 # https://graphite.dev
 [[ -r "$HOME/.zsh/plugins/gt-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/gt-completions/completions.zsh"
 
+# https://opencode.ai
+[[ -r "$HOME/.zsh/plugins/opencode-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/opencode-completions/completions.zsh"
+
 # https://dystroy.org/broot/
 if [[ -r "$HOME/.config/broot/launcher/zsh/br" ]]; then
   source "$HOME/.config/broot/launcher/zsh/br"
