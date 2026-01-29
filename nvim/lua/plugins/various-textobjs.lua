@@ -77,9 +77,17 @@ return {
       "ib",
       mode = { "o", "x" },
       function()
-        require("various-textobjs").block()
+        require("various-textobjs").block("inner")
       end,
       desc = "Inner Block",
+    },
+    {
+      "ab",
+      mode = { "o", "x" },
+      function()
+        require("various-textobjs").block("outer")
+      end,
+      desc = "Around Block",
     },
   },
 }
