@@ -25,7 +25,7 @@ alias cc="claude --continue"
 alias gg="gemini"
 
 # codex
-alias co="codex --search"
+alias co="codex"
 
 # lumen
 alias le="lumen explain"
