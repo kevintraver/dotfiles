@@ -34,7 +34,8 @@
 **/.zencoder/skills
 
 # Claude
-.claude
+.claude/skills
+.claude/settings.local.json
 CLAUDE.local.md
 
 # Gemini
