@@ -34,8 +34,8 @@
 **/.zencoder/skills
 
 # Claude
-.claude/skills
-.claude/settings.local.json
+**/.claude/skills
+**/.claude/settings.local.json
 CLAUDE.local.md
 
 # Codex
