@@ -2,7 +2,6 @@
 # https://espanso.org/docs/
 
 matches:
-
   - trigger: 'lh3'
     replace: 'http://localhost:3000/'
 
@@ -16,7 +15,7 @@ matches:
   - regex: '(?P<port>\d{1,5})lh'
     replace: 'http://localhost:{{port}}'
 
-  - trigger: ':uuid'
+  - trigger: ';uuid'
     replace: '{{uuid}}'
     vars:
       - name: uuid
@@ -24,11 +23,10 @@ matches:
         params:
           cmd: 'uuidgen'
 
-  - trigger: ':ip:'
+  - trigger: ';ip'
     replace: '{{output}}'
     vars:
       - name: output
         type: shell
         params:
           cmd: 'ipconfig getifaddr en0'
-
