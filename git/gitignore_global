@@ -38,6 +38,9 @@
 **/.claude/settings.local.json
 CLAUDE.local.md
 
+# Agents
+AGENTS.local.md
+
 # Codex
 .codex/config.toml
 
