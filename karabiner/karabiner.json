@@ -1,5 +1,8 @@
 {
-    "global": { "show_in_menu_bar": false },
+    "global": {
+        "event_input_source_backend": "cgeventtap",
+        "show_in_menu_bar": false
+    },
     "profiles": [
         {
             "complex_modifications": {
@@ -9,7 +12,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "escape",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
