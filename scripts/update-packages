@@ -25,6 +25,9 @@ log "✓ bun global packages updated"
 pipx upgrade-all
 log "✓ pipx packages updated"
 
+cargo install-update -a
+log "✓ Rust packages updated"
+
 nvim --headless "+Lazy! sync" +qa
 log "✓ Neovim plugins updated"
 
