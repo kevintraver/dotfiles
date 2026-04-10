@@ -71,8 +71,5 @@ node_modules
 .cspell.json
 cspell.json
 
-# Dogfood
-dogfood-output
-
 # Firecrawl
 .firecrawl
