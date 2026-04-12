@@ -73,3 +73,6 @@ cspell.json
 
 # Firecrawl
 .firecrawl
+
+# Code Review Graph
+.code-review-graph/
