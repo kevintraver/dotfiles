@@ -7,7 +7,7 @@
 # @raycast.icon ⬇️
 
 # Documentation:
-# @raycast.description Download video or audio from a YouTube URL into Downloads
+# @raycast.description Download video or audio from a YouTube URL into channel folders in ~/YouTube
 # @raycast.author kevintraver
 # @raycast.authorURL https://raycast.com/kevintraver
 
@@ -18,7 +18,6 @@ URL="$1"
 FORMAT="${2:-video_mp4}"
 
 YTDLP="/opt/homebrew/bin/yt-dlp"
-FFMPEG="/opt/homebrew/bin/ffmpeg"
 
 if [ -z "$URL" ]; then
   echo "Missing URL. Provide a YouTube URL as the first argument." >&2
@@ -26,7 +25,7 @@ if [ -z "$URL" ]; then
 fi
 
 OUTPUT_DIR="$HOME/YouTube"
-TEMPLATE="%(title)s [%(id)s].%(ext)s"
+OUTPUT_TEMPLATE="$OUTPUT_DIR/%(channel,uploader,creator|Unknown Channel)s/%(title)s [%(id)s].%(ext)s"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -40,7 +39,7 @@ case "$FORMAT" in
       --merge-output-format mp4
       --embed-thumbnail
       --add-metadata
-      -o "$OUTPUT_DIR/$TEMPLATE"
+      -o "$OUTPUT_TEMPLATE"
       "$URL"
     )
     ;;
@@ -54,7 +53,7 @@ case "$FORMAT" in
       --audio-quality 0
       --embed-thumbnail
       --add-metadata
-      -o "$OUTPUT_DIR/$TEMPLATE"
+      -o "$OUTPUT_TEMPLATE"
       "$URL"
     )
     ;;
@@ -68,7 +67,7 @@ case "$FORMAT" in
       --audio-quality 0
       --embed-thumbnail
       --add-metadata
-      -o "$OUTPUT_DIR/$TEMPLATE"
+      -o "$OUTPUT_TEMPLATE"
       "$URL"
     )
     ;;
@@ -96,4 +95,3 @@ else
 fi
 
 echo "Attach with: tmux attach -t $session"
-
