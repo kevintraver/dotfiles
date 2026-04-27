@@ -8,8 +8,11 @@ fi
 
 url="$1"
 BT="/Users/kevin/.local/bin/bt"
-YABAI="/opt/homebrew/bin/yabai"
-JQ="/opt/homebrew/bin/jq"
+
+open_url() {
+  [[ ! "$url" =~ ^https?:// ]] && url="https://$url"
+  open -a "Zen Browser" "$url"
+}
 
 # Convert to Chrome match pattern
 [[ "$url" =~ ^https?:// ]] && base="${url%/}" || base="*://${url%/}"
@@ -23,20 +26,12 @@ if [[ -z "$tab_line" && "${base#*://}" == */* ]]; then
 fi
 
 if [[ -n "$tab_line" ]]; then
-  IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
-  $BT activate "$tab_id"
-
-  # Use first 20 chars of title for fuzzy match (avoids quote encoding issues)
-  window_info=$($YABAI -m query --windows | $JQ -r \
-    --arg title "${tab_title:0:20}" \
-    'first(.[] | select(.app == "Zen" and (.title | contains($title)))) | "\(.id) \(.["has-focus"])"')
-  read -r window_id has_focus <<< "$window_info"
-
-  if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
-    $YABAI -m window "$window_id" --focus
+  IFS=$'\t' read -r tab_id _ <<< "$tab_line"
+  if $BT activate --focused "$tab_id" 2>/dev/null; then
+    open -a "Zen Browser" 2>/dev/null
+  else
+    open_url
   fi
 else
-  # Add https:// if not present
-  [[ ! "$url" =~ ^https?:// ]] && url="https://$url"
-  open -a "Zen Browser" "$url"
+  open_url
 fi
