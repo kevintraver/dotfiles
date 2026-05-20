@@ -35,6 +35,7 @@
 
 # Claude
 **/.claude/skills
+**/.claude/agents
 **/.claude/settings.local.json
 CLAUDE.local.md
 
