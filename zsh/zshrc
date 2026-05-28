@@ -134,3 +134,8 @@ fi
 # Disable up arrow binding, use Ctrl+P instead
 eval "$(atuin init zsh --disable-up-arrow)"
 bindkey '^p' _atuin_search_widget
+
+# Grok Build
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
