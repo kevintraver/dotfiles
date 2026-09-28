@@ -27,8 +27,10 @@ find_window_id() {
 }
 
 # 1. Slack Huddle
-# Matches the standalone Huddle window
-huddle_id=$(find_window_id "Slack" "Huddle")
+# Matches the standalone Huddle window. Newer Slack titles it
+# "<channel> - <workspace> - Slack" (no "Huddle"), while the main window
+# carries a "[Main]" suffix, so match any non-main Slack window too.
+huddle_id=$(find_window_id "^Slack$" "Huddle|^(?!.*\\[Main\\]).* - Slack$")
 
 # 2. Google Meet
 # Matches standard browser tabs AND Chrome App mode (--app="https://meet.google.com")
