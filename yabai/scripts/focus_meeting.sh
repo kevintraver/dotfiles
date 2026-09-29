@@ -27,10 +27,13 @@ find_window_id() {
 }
 
 # 1. Slack Huddle
-# Matches the standalone Huddle window. Newer Slack titles it
-# "<channel> - <workspace> - Slack" (no "Huddle"), while the main window
-# carries a "[Main]" suffix, so match any non-main Slack window too.
-huddle_id=$(find_window_id "^Slack$" "Huddle|^(?!.*\\[Main\\]).* - Slack$")
+# Newer Huddles use ordinary Slack titles, paired with a separate [Main] window.
+# Without that companion window, a normal channel or DM must not match.
+huddle_title="Huddle"
+if echo "$windows" | jq -e 'any(.[]; .app == "Slack" and (.title | test("\\[Main\\]"; "i")))' > /dev/null; then
+  huddle_title+='|^(?!.*\[Main\]).* - Slack$'
+fi
+huddle_id=$(find_window_id "^Slack$" "$huddle_title")
 
 # 2. Google Meet
 # Matches standard browser tabs AND Chrome App mode (--app="https://meet.google.com")
