@@ -21,8 +21,8 @@ audio_pids=$(echo "$assertions" | awk '
 pid=""
 for candidate in ${(f)audio_pids}; do
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
-  # Skip XPC services and helper processes - they aren't launchable apps
-  [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* || "$candidate_path" == *"/Helpers/"* ]] && continue
+  # Skip XPC services; browser audio helpers resolve to their owning app below
+  [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* ]] && continue
   # Check if it's Zen Browser - only use if it has audible tabs
   if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
     if $BT query +audible 2>/dev/null | $RG -q .; then
@@ -37,13 +37,10 @@ done
 if [[ -n "$pid" ]]; then
   app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
   if [[ -n "$app_path" ]]; then
-    if [[ "$app_path" == /Applications/*.app/* ]]; then
-      # Extract main app name from /Applications/Foo.app/... paths
-      app_name="${app_path#/Applications/}"
-      app_name="${app_name%%/*}"
-      app_name="${app_name%.app}"
-    elif [[ "$app_path" == *".app/"* ]]; then
-      app_name="${${app_path%.app/*}##*/}"
+    if [[ "$app_path" == *".app/"* ]]; then
+      # Use the outermost app bundle, including for nested browser helpers
+      app_name="${app_path%%.app/*}"
+      app_name="${app_name##*/}"
     else
       app_name="${app_path##*/}"
     fi
