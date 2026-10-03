@@ -2,7 +2,7 @@
 #
 # focus_meeting.sh
 # Focuses the most relevant meeting app window.
-# Priority: Slack Huddle > Google Meet > Zoom
+# Priority: Slack Huddle > Google Meet > Zoom > Mattermost > Discord
 # Prefers visible windows (on current space) over hidden ones.
 
 # Get all windows
@@ -55,6 +55,10 @@ mattermost_main_id=$(echo "$windows" | jq -r '
   .[0].id
 ')
 
+# 5. Discord
+# Match any open Discord window.
+discord_id=$(find_window_id "^Discord$" "")
+
 # Helper to check if ID is valid and visible
 is_visible() {
     local id=$1
@@ -68,11 +72,12 @@ candidates[huddle]=$huddle_id
 candidates[meet]=$meet_id
 candidates[zoom]=$zoom_id
 candidates[mattermost]=$mattermost_id
+candidates[discord]=$discord_id
 
 # Priority Order
 # If multiple meeting apps are running, this defines which one takes precedence
 # if both are visible (or both hidden).
-priority=("huddle" "meet" "zoom" "mattermost")
+priority=("huddle" "meet" "zoom" "mattermost" "discord")
 
 target_id=""
 
