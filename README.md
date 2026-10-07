@@ -42,7 +42,6 @@ dotter deploy --dry-run
 
 ### CLI Utilities & Productivity
 
-- **homebrew/Brewfile** - Package management with extensive tool collection
 - **espanso/** - Text expansion tool configuration
 - **ripgrep/** - Search tool configuration
 - **mitmproxy/** - HTTP/HTTPS proxy tool keybindings
@@ -64,16 +63,6 @@ dotter deploy --dry-run
 
 # Undeploy configurations
 dotter undeploy
-```
-
-### Package Management
-
-```bash
-# Install/update all Homebrew packages
-brew bundle --file=homebrew/Brewfile
-
-# Install missing packages only
-brew bundle check --file=homebrew/Brewfile || brew bundle --file=homebrew/Brewfile
 ```
 
 ### Automatic Package Updates
