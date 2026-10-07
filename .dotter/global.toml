@@ -34,9 +34,6 @@ depends = []
 "tridactyl/tridactylrc" = "~/.tridactylrc"
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
-"superwhisper/modes/message-accurate.json" = "~/superwhisper/modes/message-accurate.json"
-"superwhisper/modes/message-fast.json" = "~/superwhisper/modes/message-fast.json"
-"superwhisper/modes/super.json" = "~/superwhisper/modes/super.json"
 # Custom Scripts
 "browser/zen/zen-focus-tab" = "~/.local/bin/zen-focus-tab"
 "scripts/focus-now-playing" = "~/.local/bin/focus-now-playing"
