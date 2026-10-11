@@ -1,8 +1,7 @@
 #!/bin/zsh
 # Focus the application currently playing audio
 
-BT="/Users/kevin/.local/bin/bt"
-RG="/opt/homebrew/bin/rg"
+BT="$HOME/.local/bin/bt"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
 STATE_FILE="$HOME/.local/state/focus-now-playing"
@@ -18,32 +17,31 @@ audio_pids=$(echo "$assertions" | awk '
   }' 2>/dev/null | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
 # Find first PID that's actually playing (skip browsers without audible tabs)
-pid=""
+app_path=""
+audible_tabs=""
 for candidate in ${(f)audio_pids}; do
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
   # Skip XPC services; browser audio helpers resolve to their owning app below
   [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* ]] && continue
   # Check if it's Zen Browser - only use if it has audible tabs
   if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
-    if $BT query +audible 2>/dev/null | $RG -q .; then
-      pid="$candidate"
+    audible_tabs=$($BT query +audible 2>/dev/null)
+    if [[ -n "$audible_tabs" ]]; then
+      app_path="$candidate_path"
       break
     fi
   else
-    pid="$candidate"
+    app_path="$candidate_path"
     break
   fi
 done
-if [[ -n "$pid" ]]; then
-  app_path=$(ps -p "$pid" -o comm= 2>/dev/null)
-  if [[ -n "$app_path" ]]; then
-    if [[ "$app_path" == *".app/"* ]]; then
-      # Use the outermost app bundle, including for nested browser helpers
-      app_name="${app_path%%.app/*}"
-      app_name="${app_name##*/}"
-    else
-      app_name="${app_path##*/}"
-    fi
+if [[ -n "$app_path" ]]; then
+  if [[ "$app_path" == *".app/"* ]]; then
+    # Use the outermost app bundle, including for nested browser helpers
+    app_name="${app_path%%.app/*}"
+    app_name="${app_name##*/}"
+  else
+    app_name="${app_path##*/}"
   fi
 fi
 
@@ -60,7 +58,7 @@ fi
 
 # If it's Zen Browser, focus the specific audible tab and window via yabai
 if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
-  read -r tab_line <<< "$($BT query +audible 2>/dev/null)"
+  read -r tab_line <<< "$audible_tabs"
   if [[ -n "$tab_line" ]]; then
     IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
     $BT activate "$tab_id" 2>/dev/null
