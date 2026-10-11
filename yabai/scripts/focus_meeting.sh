@@ -5,8 +5,11 @@
 # Priority: Slack Huddle > Google Meet > Zoom > Mattermost > Discord
 # Prefers visible windows (on current space) over hidden ones.
 
+YABAI="/opt/homebrew/bin/yabai"
+JQ="/opt/homebrew/bin/jq"
+
 # Get all windows
-windows=$(/opt/homebrew/bin/yabai -m query --windows)
+windows=$($YABAI -m query --windows)
 
 # Function to find window ID
 # usage: find_window_id <app_regex> <title_regex>
@@ -16,7 +19,7 @@ find_window_id() {
   
   # Yabai returns windows in an order that roughly corresponds to their window server order.
   # We filter by app and title, then prefer visible windows.
-  local id=$(echo "$windows" | jq -r --arg app "$app_pattern" --arg title "$title_pattern" '
+  local id=$(echo "$windows" | $JQ -r --arg app "$app_pattern" --arg title "$title_pattern" '
     map(select(.app | test($app; "i"))) | 
     map(select(.title | test($title; "i"))) | 
     sort_by(.["is-visible"] | not) | 
@@ -30,7 +33,7 @@ find_window_id() {
 # Newer Huddles use ordinary Slack titles, paired with a separate [Main] window.
 # Without that companion window, a normal channel or DM must not match.
 huddle_title="Huddle"
-if echo "$windows" | jq -e 'any(.[]; .app == "Slack" and (.title | test("\\[Main\\]"; "i")))' > /dev/null; then
+if echo "$windows" | $JQ -e 'any(.[]; .app == "Slack" and (.title | test("\\[Main\\]"; "i")))' > /dev/null; then
   huddle_title+='|^(?!.*\[Main\]).* - Slack$'
 fi
 huddle_id=$(find_window_id "^Slack$" "$huddle_title")
@@ -48,7 +51,7 @@ zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
 # Matches Mattermost call windows (the "Calls Widget" window)
 mattermost_id=$(find_window_id "Mattermost" "Calls Widget")
 # Also get the main call window (title starts with "Call - " for screen share, or exact "Mattermost")
-mattermost_main_id=$(echo "$windows" | jq -r '
+mattermost_main_id=$(echo "$windows" | $JQ -r '
   map(select(.app == "Mattermost" and (.title | test("^Call - "; "i") or . == "Mattermost"))) |
   sort_by(.title | test("^Call - ") | not) |
   sort_by(.["is-visible"] | not) |
@@ -63,7 +66,7 @@ discord_id=$(find_window_id "^Discord$" "")
 is_visible() {
     local id=$1
     if [[ "$id" == "null" || -z "$id" ]]; then echo "false"; return; fi
-    echo "$windows" | jq -r --arg id "$id" '.[] | select(.id == ($id|tonumber)) | .["is-visible"]'
+    echo "$windows" | $JQ -r --arg id "$id" '.[] | select(.id == ($id|tonumber)) | .["is-visible"]'
 }
 
 # Collect candidates
@@ -109,10 +112,10 @@ fi
 if [[ -n "$target_id" ]]; then
     # For Mattermost, focus the Calls Widget first, then the main call window
     if [[ "$target_id" == "$mattermost_id" && -n "$mattermost_main_id" && "$mattermost_main_id" != "null" ]]; then
-        /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
-        /opt/homebrew/bin/yabai -m window --focus "$mattermost_main_id" 2>/dev/null
+        $YABAI -m window --focus "$target_id" 2>/dev/null
+        $YABAI -m window --focus "$mattermost_main_id" 2>/dev/null
     else
-        /opt/homebrew/bin/yabai -m window --focus "$target_id" 2>/dev/null
+        $YABAI -m window --focus "$target_id" 2>/dev/null
     fi
 else
     # Silent exit if no meeting window found
