@@ -4,37 +4,37 @@
 LOG="$HOME/.local/log/update-packages.log"
 mkdir -p "$(dirname "$LOG")"
 
+# Keep only the most recent output
+[[ -f "$LOG" ]] && tail -n 5000 "$LOG" > "$LOG.tmp" && mv "$LOG.tmp" "$LOG"
+
 exec > >(tee -a "$LOG") 2>&1
 
 log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 
+# usage: step <label> <command...>
+step() {
+  local label=$1
+  shift
+  "$@"
+  local status=$?
+  if ((status == 0)); then
+    log "✓ $label"
+  else
+    log "✗ $label (exit $status)"
+  fi
+}
+
+brew_update() { brew update && brew upgrade && brew cleanup; }
+lazy_sync() { nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1; }
+
 log "Starting package updates..."
 
-brew update && brew upgrade && brew upgrade --cask && brew cleanup
-log "✓ Homebrew packages updated and cleaned"
+step "Homebrew packages" brew_update
+step "npm global packages" npm update -g
+step "bun global packages" bun update --global
+step "pipx packages" pipx upgrade-all
+step "Rust packages" cargo install-update -a
+step "Neovim plugins" lazy_sync
+step "Mason packages" nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 
-npm update -g
-log "✓ npm global packages updated"
-
-pnpm update -g
-log "✓ pnpm global packages updated"
-
-bun update --global
-log "✓ bun global packages updated"
-
-pip3 list --outdated --format=json | python3 -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))" | xargs -n1 pip3 install -U --break-system-packages
-log "✓ pip packages updated"
-
-pipx upgrade-all
-log "✓ pipx packages updated"
-
-cargo install-update -a
-log "✓ Rust packages updated"
-
-nvim --headless "+Lazy! sync" +qa
-log "✓ Neovim plugins updated"
-
-nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
-log "✓ Mason packages updated"
-
-log "✓ All package updates complete"
+log "All package updates complete"
