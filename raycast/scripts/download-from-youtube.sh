@@ -29,53 +29,26 @@ OUTPUT_TEMPLATE="$OUTPUT_DIR/%(channel,uploader,creator|Unknown Channel)s/%(titl
 
 mkdir -p "$OUTPUT_DIR"
 
-args=( )
 case "$FORMAT" in
   video_mp4)
     echo "Queueing best MP4 video download to $OUTPUT_DIR..."
-    args=(
-      "$YTDLP"
-      -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b"
-      --merge-output-format mp4
-      --embed-thumbnail
-      --add-metadata
-      -o "$OUTPUT_TEMPLATE"
-      "$URL"
-    )
+    format_args=(-f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b" --merge-output-format mp4)
     ;;
   audio_mp3)
     echo "Queueing best audio as MP3 to $OUTPUT_DIR..."
-    args=(
-      "$YTDLP"
-      -f "ba/b"
-      --extract-audio
-      --audio-format mp3
-      --audio-quality 0
-      --embed-thumbnail
-      --add-metadata
-      -o "$OUTPUT_TEMPLATE"
-      "$URL"
-    )
+    format_args=(-f "ba/b" --extract-audio --audio-format mp3 --audio-quality 0)
     ;;
   audio_m4a)
     echo "Queueing best audio as M4A to $OUTPUT_DIR..."
-    args=(
-      "$YTDLP"
-      -f "ba/b"
-      --extract-audio
-      --audio-format m4a
-      --audio-quality 0
-      --embed-thumbnail
-      --add-metadata
-      -o "$OUTPUT_TEMPLATE"
-      "$URL"
-    )
+    format_args=(-f "ba/b" --extract-audio --audio-format m4a --audio-quality 0)
     ;;
   *)
     echo "Unknown format: $FORMAT" >&2
     exit 2
     ;;
 esac
+
+args=("$YTDLP" "${format_args[@]}" --embed-thumbnail --add-metadata -o "$OUTPUT_TEMPLATE" "$URL")
 
 # Safely quote args for execution inside tmux shell
 escaped=( )
