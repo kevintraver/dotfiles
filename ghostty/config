@@ -26,3 +26,6 @@ mouse-hide-while-typing = true
 working-directory = "/Users/kevin/.dotfiles"
 
 auto-update-channel = tip
+
+# Send TERM=xterm-256color over SSH so remote hosts without Ghostty terminfo work
+shell-integration-features = ssh-env
