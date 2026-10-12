@@ -67,7 +67,7 @@ dotter undeploy
 
 ### Automatic Package Updates
 
-A launchd job runs `update-packages` every 4 hours to update brew, npm, bun, pipx, Rust crates, and Neovim plugins (Lazy + Mason). After deploying with dotter, load the job:
+A launchd job runs `update-packages` every 4 hours to update brew (including self-updating casks), mise tools (node and npm CLIs), bun, pipx, Rust crates, and Neovim plugins (Lazy + Mason). After deploying with dotter, load the job:
 
 ```bash
 launchctl load ~/Library/LaunchAgents/com.kevin.update-packages.plist

@@ -24,17 +24,17 @@ step() {
   fi
 }
 
-brew_update() { brew update && brew upgrade && brew cleanup; }
-lazy_sync() { nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1; }
+brew_update() { brew update && brew upgrade --greedy && brew cleanup; }
+lazy_sync() { timeout 600 nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1; }
 
 log "Starting package updates..."
 
 step "Homebrew packages" brew_update
-step "npm global packages" npm update -g
+step "mise tools" mise upgrade
 step "bun global packages" bun update --global
 step "pipx packages" pipx upgrade-all
 step "Rust packages" cargo install-update -a
 step "Neovim plugins" lazy_sync
-step "Mason packages" nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
+step "Mason packages" timeout 600 nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 
 log "All package updates complete"
