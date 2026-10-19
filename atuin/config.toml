@@ -32,3 +32,7 @@ scroll_exits = false
 [sync]
 ## Enable sync v2 by default
 records = true
+
+[ui]
+## Hide the duration column; show how long ago and the command
+columns = ["time", "command"]
