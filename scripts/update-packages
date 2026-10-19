@@ -26,6 +26,11 @@ step() {
 
 brew_update() { brew update && brew upgrade --greedy-auto-updates && brew cleanup; }
 lazy_sync() { timeout 600 nvim --headless "+Lazy! sync" +qa >/dev/null 2>&1; }
+# Keep agent-browser on its own Chrome for Testing so headless runs don't hijack the real Chrome
+agent_browser_install() {
+  agent-browser install || return
+  ls -d "$HOME"/.agent-browser/browsers/chrome-* | sort -V | sed '$d' | xargs -r rm -rf
+}
 
 log "Starting package updates..."
 
@@ -34,6 +39,7 @@ step "mise tools" mise upgrade
 step "bun global packages" bun update --global
 step "pipx packages" pipx upgrade-all
 step "Rust packages" cargo install-update -a
+step "agent-browser Chrome" agent_browser_install
 step "Neovim plugins" lazy_sync
 step "Mason packages" timeout 600 nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 
