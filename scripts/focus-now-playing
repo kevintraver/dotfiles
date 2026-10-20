@@ -10,10 +10,13 @@ STATE_FILE="$HOME/.local/state/focus-now-playing"
 assertions=$(LC_ALL=C pmset -g assertions)
 
 # Get all PIDs with coreaudiod audio assertions (youngest first)
+# Skip assertions that use the mic (e.g. superwhisper ducking audio while dictating)
 audio_pids=$(echo "$assertions" | awk '
   /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
     time = substr($0, RSTART, RLENGTH)
-    getline; if (/Created for PID:/ && match($0, /[0-9]+/)) print time, substr($0, RSTART, RLENGTH)
+    getline; if (!/Created for PID:/ || !match($0, /[0-9]+/)) next
+    pid = substr($0, RSTART, RLENGTH)
+    getline; if (!/audio-in/) print time, pid
   }' 2>/dev/null | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
 
 # Find first PID that's actually playing (skip browsers without audible tabs)
