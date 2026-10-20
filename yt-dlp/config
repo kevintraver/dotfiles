@@ -1,0 +1,9 @@
+# Save downloads into per-channel folders under ~/YouTube
+-P ~/YouTube
+-o "%(channel,uploader,creator|Unknown Channel)s/%(title)s [%(id)s].%(ext)s"
+
+# Download just the video when a watch URL also carries a playlist
+--no-playlist
+
+--embed-metadata
+--embed-thumbnail
