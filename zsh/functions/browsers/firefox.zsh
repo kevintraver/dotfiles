@@ -4,10 +4,9 @@
 temp-firefox() {
   local timestamp=$(date +%s)
   local profile_path="/tmp/Firefox/$timestamp"
-  local profile_name="tmp-$timestamp"
 
-  # Create the Firefox profile
-  /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "$profile_name $profile_path" > /dev/null 2>&1
+  # Use a bare profile directory instead of registering it in profiles.ini
+  mkdir -p "$profile_path"
 
   # Create user.js with Google DNS and startup settings
   cat <<'EOF' > "$profile_path/user.js"
@@ -43,17 +42,16 @@ user_pref("browser.warnOnQuitShortcut", false);
 EOF
 
   # Open Firefox with the temporary profile
-  open -na /Applications/Firefox.app --args --new-instance -P "$profile_name"
+  open -na /Applications/Firefox.app --args --new-instance --profile "$profile_path"
 }
 
 # Open Firefox with a simple temporary profile (no custom settings)
 temp-firefox-simple() {
   local timestamp=$(date +%s)
   local profile_path="/tmp/Firefox/$timestamp"
-  local profile_name="tmp-$timestamp"
 
-  /Applications/Firefox.app/Contents/MacOS/firefox -CreateProfile "$profile_name $profile_path"
-  /Applications/Firefox.app/Contents/MacOS/firefox --new-instance -P "$profile_name" &!
+  mkdir -p "$profile_path"
+  /Applications/Firefox.app/Contents/MacOS/firefox --new-instance --profile "$profile_path" &!
 }
 
 # Reset Firefox (removes all user data)
