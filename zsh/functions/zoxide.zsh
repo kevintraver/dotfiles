@@ -50,8 +50,9 @@ zi() {
   local start=score prompt='> '
   [[ $ZI_SORT == recent ]] && start=recent prompt='recent> '
 
-  # same fzf flags zoxide uses for zi, minus the preview, plus the sort toggle
-  result=$(fzf --exact --no-sort --cycle --keep-right --border=sharp \
+  # same fzf flags zoxide uses for zi, minus the preview and --exact, plus the
+  # sort toggle
+  result=$(fzf --no-sort --cycle --keep-right --border=sharp \
     --height=45% --info=inline --layout=reverse --tabstop=1 --exit-0 \
     --bind=ctrl-z:ignore,btab:up,tab:down \
     --bind="ctrl-r:transform:[[ \$FZF_PROMPT == 'recent> ' ]] && echo 'change-prompt(> )+reload(cat $tmp/score)' || echo 'change-prompt(recent> )+reload(cat $tmp/recent)'" \
