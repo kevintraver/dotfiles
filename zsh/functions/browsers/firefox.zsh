@@ -1,7 +1,17 @@
 # Firefox Functions
 
-# Open Firefox with a new temporary profile (with Google DNS and clean startup)
+# Open Firefox with a temporary profile (with Google DNS and clean startup).
+# Reuses the newest running temp instance, otherwise creates a new profile.
+# Usage: temp-firefox [url]
 temp-firefox() {
+  local running_pid=$(pgrep -fn 'Firefox.app/Contents/MacOS/firefox .*--profile /tmp/Firefox/')
+  if [[ -n "$running_pid" ]]; then
+    local running_args=$(ps -o args= -p "$running_pid")
+    local running_profile="${${running_args##*--profile }%% *}"
+    open -na /Applications/Firefox.app --args --profile "$running_profile" "$@"
+    return
+  fi
+
   local timestamp=$(date +%s)
   local profile_path="/tmp/Firefox/$timestamp"
 
@@ -42,7 +52,7 @@ user_pref("browser.warnOnQuitShortcut", false);
 EOF
 
   # Open Firefox with the temporary profile
-  open -na /Applications/Firefox.app --args --new-instance --profile "$profile_path"
+  open -na /Applications/Firefox.app --args --new-instance --profile "$profile_path" "$@"
 }
 
 # Open Firefox with a simple temporary profile (no custom settings)
