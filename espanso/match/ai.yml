@@ -10,3 +10,6 @@ matches:
 
   - trigger: ';ob'
     replace: 'Open in the browser'
+
+  - trigger: ';gm'
+    replace: 'Use the grill-me skill'
