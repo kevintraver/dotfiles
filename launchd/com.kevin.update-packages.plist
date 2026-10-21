@@ -7,6 +7,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/Users/kevin/.local/bin/update-packages</string>
+        <string>--if-due</string>
     </array>
     <key>EnvironmentVariables</key>
     <dict>
@@ -14,7 +15,7 @@
         <string>/Users/kevin/.local/share/mise/shims:/opt/homebrew/bin:/Users/kevin/.bun/bin:/usr/bin:/bin</string>
     </dict>
     <key>StartInterval</key>
-    <integer>14400</integer>
+    <integer>900</integer>
     <key>RunAtLoad</key>
     <false/>
 </dict>

@@ -1,5 +1,18 @@
 #!/bin/bash
 # update-packages - Update all package managers
+# With --if-due (launchd), exit silently unless the next run is due and the Mac
+# has been awake for 15 minutes
+
+STATE="$HOME/.local/state/update-packages"
+NEXT_DUE="$STATE/next-due"
+RETRYING="$STATE/retrying"
+
+if [[ $1 == --if-due ]]; then
+  now=$(date +%s)
+  waketime=$(sysctl -n kern.waketime | sed -E 's/^[{] sec = ([0-9]+),.*/\1/')
+  [[ -f "$NEXT_DUE" ]] && ((now < $(<"$NEXT_DUE"))) && exit 0
+  ((now - waketime < 900)) && exit 0
+fi
 
 LOG="$HOME/.local/log/update-packages.log"
 mkdir -p "$(dirname "$LOG")"
@@ -21,6 +34,7 @@ step() {
     log "✓ $label"
   else
     log "✗ $label (exit $status)"
+    failed=1
   fi
 }
 
@@ -43,4 +57,15 @@ step "agent-browser Chrome" agent_browser_install
 step "Neovim plugins" lazy_sync
 step "Mason packages" timeout 600 nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
 
-log "All package updates complete"
+# Retry failures once after an hour, then fall back to the normal 4 hours
+mkdir -p "$STATE"
+if ((failed)) && [[ ! -f "$RETRYING" ]]; then
+  touch "$RETRYING"
+  next=$(($(date +%s) + 3600))
+else
+  rm -f "$RETRYING"
+  next=$(($(date +%s) + 14400))
+fi
+echo "$next" >"$NEXT_DUE"
+
+log "All package updates complete, next run due $(date -r "$next" '+%H:%M')"
