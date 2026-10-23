@@ -44,12 +44,7 @@ return {
     },
     {
       "r",
-      mode = { "o" },
-      false,
-    },
-    {
-      "r",
-      mode = { "o", "x" },
+      mode = "o",
       function()
         require("flash").treesitter_search({
           remote_op = {
