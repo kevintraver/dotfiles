@@ -4,7 +4,7 @@ return {
     {
       "<leader><cr>",
       ":GpFixSpellingAndGrammar<cr>",
-      mode = { "n", "v" },
+      mode = { "n", "x" },
       desc = "Fix Grammar",
     },
   },

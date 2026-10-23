@@ -7,14 +7,14 @@ return {
   keys = {
     {
       "w",
-      mode = { "n", "v", "o" },
+      mode = { "n", "x", "o" },
       function()
         require("spider").motion("w")
       end,
       desc = "Spider-w",
     },
     {
-      mode = { "n", "v", "o" },
+      mode = { "n", "x", "o" },
       "e",
       function()
         require("spider").motion("e")
@@ -22,7 +22,7 @@ return {
       desc = "Spider-e",
     },
     {
-      mode = { "n", "v", "o" },
+      mode = { "n", "x", "o" },
       "b",
       function()
         require("spider").motion("b")
@@ -30,7 +30,7 @@ return {
       desc = "Spider-b",
     },
     {
-      mode = { "n", "v", "o" },
+      mode = { "n", "x", "o" },
       "ge",
       function()
         require("spider").motion("ge")
