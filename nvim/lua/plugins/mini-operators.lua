@@ -13,9 +13,5 @@ return {
       "gm",
       desc = "Multiply",
     },
-    {
-      "go",
-      desc = "Sort",
-    },
   },
 }

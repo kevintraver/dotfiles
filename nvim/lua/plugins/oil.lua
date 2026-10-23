@@ -5,9 +5,6 @@ return {
     {
       "maelwalser/oil-copy.nvim",
       opts = {},
-      config = function()
-        require("oil-copy").setup()
-      end,
     },
     {
       "malewicz1337/oil-git.nvim",
@@ -37,7 +34,7 @@ return {
             toggle = true,
           })
         end,
-        desc = "Open directory in toggle term",
+        desc = "Reveal directory in Neo-tree",
       },
       ["<C-D-t>"] = {
         callback = function()
