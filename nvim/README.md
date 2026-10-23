@@ -19,7 +19,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **bufferline.nvim** - Snazzy buffer line with tabpage integration featuring LSP indicators, sorting, grouping, and aesthetic customization options inspired by GUI editors.
 - **noice.nvim** - Completely replaces the UI for messages, cmdline, and popupmenu with a modern, customizable interface.
 - **mini.icons** - Icon provider for Neovim with support for files, directories, LSP, and more without requiring external fonts.
-- **edgy.nvim** - Easily create and manage predefined window layouts with automatic positioning and sizing for sidebar windows.
 - **snacks.nvim** - Collection of small QoL plugins including animate, dashboard, notifier, terminal, and more utilities.
 - **which-key.nvim** - Shows available keybindings in a popup as you type, helping remember and discover mappings.
 - **smear-cursor.nvim** - Animates the cursor with a smear effect in all terminals inspired by Neovide's cursor animation.
@@ -56,7 +55,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 ## Code Editing & Text Manipulation
 
 - **nvim-treesitter** - Treesitter configurations and abstraction layer providing syntax highlighting, incremental selection, and more.
-- **nvim-treesitter-context** - Shows code context at the top of the window (function/class names) while scrolling.
 - **nvim-treesitter-textobjects** - Syntax-aware textobjects for selecting, moving, and swapping code structures.
 - **nvim-treesitter-textsubjects** - Context-aware Treesitter selection that expands to the smartest surrounding node.
 - **nvim-ts-autotag** - Automatically closes and renames HTML/XML tags using Treesitter.
@@ -98,4 +96,3 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **gp.nvim** - LLM prompts inside Neovim, used here to fix spelling and grammar in the selection.
 - **faster.nvim** - Optimizes Neovim performance by selectively disabling features for large files, based on file size or line count thresholds.
 - **gx.nvim** - Enhanced gx command for opening URLs and file paths under cursor with support for multiple protocols and handlers.
-- **vim-startuptime** - Views startup event timing information to profile and optimize Neovim's load time.

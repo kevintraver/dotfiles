@@ -59,16 +59,4 @@ return {
       { "<leader>fE", false },
     },
   },
-  {
-    "folke/edgy.nvim",
-    optional = true,
-    opts = function(_, opts)
-      for _, v in ipairs(opts.left) do
-        if v.ft == "neo-tree" then
-          v.pinned = false
-          break
-        end
-      end
-    end,
-  },
 }
