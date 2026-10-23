@@ -107,11 +107,19 @@ return {
   {
     -- Fork supports the nvim-treesitter main branch
     "kevintraver/nvim-treesitter-textsubjects",
-    enabled = true, -- Plugin not compatible with nvim-treesitter main branch
     dev = true,
     vscode = true,
-    -- The plugin internally uses nvim-treesitter.query which no longer exists
-    -- TODO: Re-enable when plugin is updated for new treesitter API
+    opts = {
+      -- Default container-outer key is `;`, which shadows `;` -> `:` in visual
+      keymaps = {
+        ["."] = "textsubjects-smart",
+        ["a;"] = "textsubjects-container-outer",
+        ["i;"] = "textsubjects-container-inner",
+      },
+    },
+    config = function(_, opts)
+      require("nvim-treesitter-textsubjects").configure(opts)
+    end,
   },
 
   {
