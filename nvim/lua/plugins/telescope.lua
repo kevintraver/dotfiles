@@ -9,7 +9,7 @@ return {
           ["<D-l>"] = require("telescope.actions").file_vsplit,
           ["<D-o>"] = require("telescope.actions").select_default,
           ["<C-o>"] = require("telescope.actions").select_default,
-          ["<C-u>"] = require("telescope.actions").results_scrolling_up,
+          ["<C-u>"] = false,
           ["<C-d>"] = require("telescope.actions").results_scrolling_down,
           ["<C-Space>"] = require("telescope.actions").to_fuzzy_refine,
         },
