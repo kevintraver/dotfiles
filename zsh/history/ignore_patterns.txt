@@ -18,7 +18,6 @@ lg
 ls
 nvim
 nvim .
-nvr
 pwd
 t
 tc
