@@ -7,15 +7,11 @@ return {
     },
     extensions = {
       "lazy",
-      "toggleterm",
-      "nvim-tree",
       "quickfix",
       "oil",
       "neo-tree",
       "mason",
       "trouble",
-      "overseer",
-      "symbols-outline",
     },
   },
 }

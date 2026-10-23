@@ -6,7 +6,6 @@ return {
     disable_filetype = {
       "TelescopePrompt",
       "grug-far",
-      "rip-substitute",
     },
   },
 }
