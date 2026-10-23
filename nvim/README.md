@@ -99,6 +99,5 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **persistence.nvim** - Automatically saves sessions per directory and restores them on demand.
 - **gp.nvim** - LLM prompts inside Neovim, used here to fix spelling and grammar in the selection.
 - **faster.nvim** - Optimizes Neovim performance by selectively disabling features for large files, based on file size or line count thresholds.
-- **stopinsert.nvim** - Automatically stops insert mode when certain events occur for better modal editing workflow.
 - **gx.nvim** - Enhanced gx command for opening URLs and file paths under cursor with support for multiple protocols and handlers.
 - **vim-startuptime** - Views startup event timing information to profile and optimize Neovim's load time.
