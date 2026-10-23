@@ -121,10 +121,4 @@ return {
       require("nvim-treesitter-textsubjects").configure(opts)
     end,
   },
-
-  {
-    "andersevenrud/nvim_context_vt",
-    enabled = false,
-    config = true,
-  },
 }
