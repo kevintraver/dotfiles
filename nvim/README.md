@@ -61,7 +61,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **nvim-treesitter-textobjects** - Syntax-aware textobjects for selecting, moving, and swapping code structures.
 - **nvim-treesitter-textsubjects** - Context-aware Treesitter selection that expands to the smartest surrounding node.
 - **nvim-ts-autotag** - Automatically closes and renames HTML/XML tags using Treesitter.
-- **treesitter-outer** - Provides motions for jumping to outer nodes in Treesitter for languages without traditional bracket pairs.
 - **nvim-surround** - Add, delete, and change surrounding delimiters with powerful and intuitive keybindings.
 - **ts-comments.nvim** - Enhances native Neovim comments with Treesitter-aware language-specific comment strings.
 - **nvim-autopairs** - Automatically insert and delete paired characters like brackets, quotes, and parentheses.
