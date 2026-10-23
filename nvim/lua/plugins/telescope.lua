@@ -25,6 +25,11 @@ return {
         },
       },
       scroll_strategy = "limit",
+      -- Keep the preview on the right even in narrow windows (default hides
+      -- it below 120 columns)
+      layout_config = {
+        horizontal = { preview_cutoff = 0 },
+      },
     })
   end,
   keys = {
