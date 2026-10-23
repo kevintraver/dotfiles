@@ -29,6 +29,20 @@ return {
   end,
   keys = {
     {
+      "<D-S-f>",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Grep",
+    },
+    {
+      "<D-C-f>",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Grep",
+    },
+    {
       "<D-f>",
       function()
         require("telescope.builtin").current_buffer_fuzzy_find()
