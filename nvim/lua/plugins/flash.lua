@@ -1,5 +1,8 @@
 return {
   "folke/flash.nvim",
+  -- Fork adds flash.textobject(), used by ir/ar below
+  url = "https://github.com/kevintraver/flash.nvim",
+  branch = "feat/textobject",
   event = "VeryLazy",
   vscode = true,
   opts = {

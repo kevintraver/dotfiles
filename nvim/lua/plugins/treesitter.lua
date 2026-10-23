@@ -105,7 +105,8 @@ return {
   },
 
   {
-    "RRethy/nvim-treesitter-textsubjects",
+    -- Fork supports the nvim-treesitter main branch
+    "kevintraver/nvim-treesitter-textsubjects",
     enabled = true, -- Plugin not compatible with nvim-treesitter main branch
     dev = true,
     vscode = true,
