@@ -9,7 +9,6 @@ vim.keymap.set({ "n", "x" }, ";", ":")
 vim.keymap.set("i", "<C-a>", "<Home>", { desc = "Move To Beginning of Line" })
 vim.keymap.set("i", "<C-e>", "<End>", { desc = "Move To End Of Line" })
 vim.keymap.set("i", "<C-d>", "<Del>", { desc = "Delete Forward" })
-vim.keymap.set("i", "<C-k>", "<C-o>D", { desc = "Delete To End Of Line" })
 
 -- save file
 vim.keymap.set({ "n", "i", "x" }, "<D-s>", function()
