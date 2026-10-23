@@ -18,7 +18,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **lualine.nvim** - Blazing fast and highly configurable statusline plugin written in Lua with extensive customization options.
 - **bufferline.nvim** - Snazzy buffer line with tabpage integration featuring LSP indicators, sorting, grouping, and aesthetic customization options inspired by GUI editors.
 - **noice.nvim** - Completely replaces the UI for messages, cmdline, and popupmenu with a modern, customizable interface.
-- **dressing.nvim** - Improves the default Neovim UI interfaces for vim.ui.select and vim.ui.input with better-looking alternatives.
 - **mini.icons** - Icon provider for Neovim with support for files, directories, LSP, and more without requiring external fonts.
 - **edgy.nvim** - Easily create and manage predefined window layouts with automatic positioning and sizing for sidebar windows.
 - **snacks.nvim** - Collection of small QoL plugins including animate, dashboard, notifier, terminal, and more utilities.
