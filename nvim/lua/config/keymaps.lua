@@ -22,18 +22,6 @@ vim.keymap.set({ "n", "i", "x" }, "<M-w>", function()
   vim.cmd.close()
 end, { desc = "Close Window" })
 
--- close
-vim.keymap.set({ "n", "i", "x" }, "<D-C-w>", function()
-  vim.cmd.stopinsert()
-  vim.cmd.bdelete()
-end, { desc = "Close Buffer" })
-
--- close
-vim.keymap.set({ "n", "i", "x" }, "<D-S-w>", function()
-  vim.cmd.stopinsert()
-  vim.cmd.bdelete()
-end, { desc = "Close Buffer" })
-
 -- quitall
 vim.keymap.set({ "n", "i", "x" }, "<D-q>", function()
   vim.cmd.quitall()

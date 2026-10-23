@@ -30,32 +30,6 @@ return {
       desc = "Yanky Put After Filter",
     },
     {
-      "<S-A-p>",
-      mode = { "n" },
-      function()
-        local yanky_wrappers = require("yanky.wrappers")
-        require("yanky").put(
-          "P",
-          false,
-          yanky_wrappers.linewise(yanky_wrappers.change("=="))
-        )
-      end,
-      desc = "Yanky Put Before Filter",
-    },
-    {
-      "<C-A-p>",
-      mode = { "n" },
-      function()
-        local yanky_wrappers = require("yanky.wrappers")
-        require("yanky").put(
-          "P",
-          false,
-          yanky_wrappers.linewise(yanky_wrappers.change("=="))
-        )
-      end,
-      desc = "Yanky Put Before Filter",
-    },
-    {
       "<D-p>",
       mode = { "i" },
       function()
