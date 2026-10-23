@@ -88,16 +88,6 @@ return {
       desc = "Switch Buffer",
     },
     {
-      "<leader>bf",
-      function()
-        require("telescope.builtin").buffers({
-          sort_mru = true,
-          sort_lastused = true,
-        })
-      end,
-      desc = "Switch Buffer",
-    },
-    {
       "<D-j>",
       function()
         require("telescope.builtin").lsp_document_symbols()
@@ -131,16 +121,6 @@ return {
         require("telescope.builtin").resume()
       end,
       desc = "Resume",
-    },
-    {
-      "<leader>fd",
-      function()
-        require("telescope.builtin").find_files({
-          prompt_title = "Find Dotfiles",
-          cwd = "~/.dotfiles",
-        })
-      end,
-      desc = "Find Dotfiles",
     },
     {
       "<leader>gc",

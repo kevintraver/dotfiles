@@ -24,13 +24,6 @@ return {
     },
     keys = {
       {
-        "<Leader>it",
-        function()
-          vim.treesitter.inspect_tree()
-        end,
-        desc = "Inspect Tree",
-      },
-      {
         "<Leader>eq",
         function()
           vim.treesitter.query.edit()
