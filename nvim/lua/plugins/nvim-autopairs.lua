@@ -1,6 +1,5 @@
 return {
   "windwp/nvim-autopairs",
-  vscode = true,
   event = "InsertEnter",
   opts = {
     disable_filetype = {

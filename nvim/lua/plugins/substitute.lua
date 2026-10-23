@@ -1,6 +1,5 @@
 return {
   "gbprod/substitute.nvim",
-  vscode = true,
   lazy = true,
   opts = {
     on_substitute = function()

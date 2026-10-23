@@ -1,7 +1,6 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    vscode = true,
     opts = {
       -- Appended to LazyVim's defaults
       ensure_installed = {
@@ -45,7 +44,6 @@ return {
     -- Fork supports the nvim-treesitter main branch
     "kevintraver/nvim-treesitter-textsubjects",
     dev = true,
-    vscode = true,
     opts = {
       -- Default container-outer key is `;`, which shadows `;` -> `:` in visual
       keymaps = {

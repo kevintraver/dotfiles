@@ -2,7 +2,6 @@ return {
   -- Fork adds the block() textobject, used by ib/ab below
   "kevintraver/nvim-various-textobjs",
   branch = "feat/block-textobj",
-  vscode = true,
   dev = true,
   lazy = true,
   opts = {

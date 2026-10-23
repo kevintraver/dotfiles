@@ -4,7 +4,6 @@ return {
   url = "https://github.com/kevintraver/flash.nvim",
   branch = "feat/textobject",
   event = "VeryLazy",
-  vscode = true,
   opts = {
     modes = {
       search = {

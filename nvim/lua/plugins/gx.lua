@@ -2,7 +2,6 @@ return {
   "chrishrb/gx.nvim",
   lazy = true,
   config = true,
-  vscode = true,
   opts = {
     handlers = {
       search = false,
