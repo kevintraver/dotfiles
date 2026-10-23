@@ -20,3 +20,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.mouse = ""
 
 vim.opt.cursorlineopt = "number"
+
+-- No remote plugins are used, so skip loading the language providers
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
