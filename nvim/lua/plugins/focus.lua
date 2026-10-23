@@ -1,6 +1,6 @@
 return {
   "nvim-focus/focus.nvim",
-  lazy = true,
+  event = "VeryLazy",
   opts = {
     autoresize = {
       minwidth = 20,
