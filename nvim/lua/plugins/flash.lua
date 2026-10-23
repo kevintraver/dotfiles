@@ -97,11 +97,21 @@ return {
           search = {
             mode = "search",
             max_length = 0,
+            multi_window = false,
           },
           label = {
             after = { 0, 0 },
           },
           pattern = "^",
+          jump = {
+            inclusive = false,
+          },
+          action = function(match, state)
+            -- only once a line is picked: force the motion linewise, like `dVj`
+            vim.cmd("normal! V")
+            require("flash.jump").jump(match, state)
+            require("flash.jump").on_jump(state)
+          end,
         })
       end,
       desc = "Flash Jump (Line)",
