@@ -6,8 +6,10 @@ return {
     local gen_spec = require("mini.ai").gen_spec
     return {
       mappings = {
-        around_last = "ap",
-        inside_last = "ip",
+        -- Default al/il clashes with the l (line) textobject below; ap/ip
+        -- would shadow paragraphs. N mirrors an/in like n/N in search.
+        around_last = "aN",
+        inside_last = "iN",
       },
       custom_textobjects = {
         d = { "[%-%.]?%f[%d]%d+" },
