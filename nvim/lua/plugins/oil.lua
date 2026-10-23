@@ -42,7 +42,14 @@ return {
       ["<C-D-t>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
-          vim.fn.jobstart({ "ghostty", "--working-directory=" .. dir })
+          -- The ghostty CLI can't launch windows on macOS
+          vim.fn.jobstart({
+            "open",
+            "-na",
+            "Ghostty.app",
+            "--args",
+            "--working-directory=" .. dir,
+          })
         end,
         desc = "Open directory in Ghostty",
       },
