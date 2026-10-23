@@ -11,6 +11,7 @@ return {
           ["<C-o>"] = require("telescope.actions").select_default,
           ["<C-u>"] = false,
           ["<C-d>"] = false,
+          ["<C-k>"] = false,
           ["<C-Space>"] = require("telescope.actions").to_fuzzy_refine,
         },
         n = {

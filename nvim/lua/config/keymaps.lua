@@ -15,6 +15,10 @@ vim.keymap.set(
 )
 vim.keymap.set({ "i", "c" }, "<C-e>", "<End>", { desc = "Move To End Of Line" })
 vim.keymap.set({ "i", "c" }, "<C-d>", "<Del>", { desc = "Delete Forward" })
+vim.keymap.set("i", "<C-k>", "<C-o>D", { desc = "Delete To End Of Line" })
+vim.keymap.set("c", "<C-k>", function()
+  vim.fn.setcmdline(vim.fn.getcmdline():sub(1, vim.fn.getcmdpos() - 1))
+end, { desc = "Delete To End Of Line" })
 
 -- save file
 vim.keymap.set({ "n", "i", "x" }, "<D-s>", function()
