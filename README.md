@@ -65,6 +65,14 @@ dotter deploy --dry-run
 dotter undeploy
 ```
 
+### macOS Defaults
+
+`macOS/defaults.sh` applies system preferences with `defaults write` (no auto-capitalization, autocorrect, or inline predictive text). It isn't deployed by dotter; run it on a new machine, then log out and back in:
+
+```bash
+~/.dotfiles/macOS/defaults.sh
+```
+
 ### Automatic Package Updates
 
 A launchd job runs `update-packages` every 4 hours to update brew (including self-updating casks), mise tools (node and npm CLIs), bun, pipx, Rust crates, and Neovim plugins (Lazy + Mason). After deploying with dotter, load the job:
