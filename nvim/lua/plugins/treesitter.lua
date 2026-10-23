@@ -1,15 +1,11 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "main",
-    event = { "LazyFile", "VeryLazy" },
     vscode = true,
     opts = {
+      -- Appended to LazyVim's defaults
       ensure_installed = {
-        "bash",
-        "c",
         "css",
-        "diff",
         "git_config",
         "git_rebase",
         "gitattributes",
@@ -19,71 +15,12 @@ return {
         "gomod",
         "gowork",
         "gosum",
-        "html",
-        "http",
         "java",
-        "javascript",
-        "jq",
-        "jsdoc",
-        "json",
         "jsonc",
-        "lua",
-        "luadoc",
-        "luap",
-        "markdown",
-        "markdown_inline",
         "mermaid",
-        "prisma",
-        "python",
-        "query",
-        "regex",
         "ruby",
-        "rust",
         "scss",
         "sql",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
-        "vimdoc",
-        "yaml",
-      },
-      rainbow = {
-        enable = true,
-      },
-      incremental_selection = {
-        enable = false,
-      },
-      textobjects = {
-        swap = {
-          enable = false,
-          swap_next = {
-            ["L"] = {
-              query = {
-                "@parameter.inner",
-                "@assignment.inner",
-              },
-            },
-          },
-          swap_previous = {
-            ["H"] = {
-              query = {
-                "@parameter.inner",
-                "@assignment.inner",
-              },
-            },
-          },
-        },
-        select = {
-          enable = true,
-        },
-        move = {
-          enable = true,
-        },
-      },
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
       },
     },
     keys = {
