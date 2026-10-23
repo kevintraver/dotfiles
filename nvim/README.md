@@ -93,7 +93,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 ## Utilities & Productivity
 
 - **better-escape.nvim** - Maps key sequences like 'jk' or 'jj' to escape insert mode without the typical delay, using a smart detection algorithm that avoids the timeout issues of traditional mappings.
-- **before.nvim** - Tracks edit locations across buffers and allows jumping back to previous edit positions, functioning like Neovim's changelist but working across multiple files.
 - **hardtime.nvim** - Helps break bad Vim habits by discouraging repeated key presses and encouraging more efficient motions.
 - **focus.nvim** - Automatically resize windows to focus on the active buffer with smart split management and layout persistence.
 - **todo-comments.nvim** - Highlights and searches for TODO, HACK, BUG, and other comment annotations.
