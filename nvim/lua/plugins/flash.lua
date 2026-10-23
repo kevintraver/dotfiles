@@ -1,3 +1,30 @@
+-- Operator-pending line jump: labels the lines below (`down`) or above the
+-- cursor, and operates on whole lines up to the picked one, like `dVj`
+---@param down boolean
+local function line_jump(down)
+  require("flash").jump({
+    search = {
+      mode = "search",
+      max_length = 0,
+      multi_window = false,
+    },
+    label = {
+      after = { 0, 0 },
+    },
+    -- line numbers, since flash moves the cursor while it searches
+    pattern = "\\%" .. (down and ">" or "<") .. vim.fn.line(".") .. "l^",
+    jump = {
+      inclusive = false,
+    },
+    action = function(match, state)
+      -- only once a line is picked: force the motion linewise
+      vim.cmd("normal! V")
+      require("flash.jump").jump(match, state)
+      require("flash.jump").on_jump(state)
+    end,
+  })
+end
+
 return {
   "folke/flash.nvim",
   -- Fork adds flash.textobject(), used by ir/ar below
@@ -93,28 +120,17 @@ return {
       "j",
       mode = { "o" },
       function()
-        require("flash").jump({
-          search = {
-            mode = "search",
-            max_length = 0,
-            multi_window = false,
-          },
-          label = {
-            after = { 0, 0 },
-          },
-          pattern = "^",
-          jump = {
-            inclusive = false,
-          },
-          action = function(match, state)
-            -- only once a line is picked: force the motion linewise, like `dVj`
-            vim.cmd("normal! V")
-            require("flash.jump").jump(match, state)
-            require("flash.jump").on_jump(state)
-          end,
-        })
+        line_jump(true)
       end,
-      desc = "Flash Jump (Line)",
+      desc = "Flash Jump (Line Down)",
+    },
+    {
+      "k",
+      mode = { "o" },
+      function()
+        line_jump(false)
+      end,
+      desc = "Flash Jump (Line Up)",
     },
     {
       "<C-s>",
