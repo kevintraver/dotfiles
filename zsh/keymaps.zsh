@@ -1,3 +1,6 @@
+# delete to the start of the line
+bindkey '^u' backward-kill-line
+
 # edit-command-line
 autoload -U edit-command-line
 zle -N edit-command-line
