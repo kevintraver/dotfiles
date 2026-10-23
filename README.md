@@ -67,7 +67,7 @@ dotter undeploy
 
 ### macOS Defaults
 
-`macOS/defaults.sh` applies system preferences with `defaults write` (no auto-capitalization, autocorrect, or inline predictive text). It isn't deployed by dotter; run it on a new machine, then log out and back in:
+`macOS/defaults.sh` applies system preferences
 
 ```bash
 ~/.dotfiles/macOS/defaults.sh
