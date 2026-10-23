@@ -16,10 +16,10 @@ keybind = "shift+enter=text:\x1b\r"
 
 theme = tokyonight
 
-keybind = "ctrl+h=goto_split:left"
-keybind = "ctrl+l=goto_split:right"
-keybind = "ctrl+k=goto_split:up"
-keybind = "ctrl+j=goto_split:down"
+# Splits are only side by side. performable: passes the key through to the
+# terminal app when there's no split in that direction.
+keybind = "performable:ctrl+h=goto_split:left"
+keybind = "performable:ctrl+l=goto_split:right"
 
 maximize = true
 mouse-hide-while-typing = true
