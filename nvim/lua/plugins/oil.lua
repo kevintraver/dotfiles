@@ -28,16 +28,6 @@ return {
       ["g?"] = "actions.show_help",
       ["<CR>"] = "actions.select",
       ["<D-l>"] = "actions.select",
-      ["<C-t>"] = {
-        callback = function()
-          local dir = require("oil").get_current_dir()
-          require("oil").close()
-          require("toggleterm.terminal").Terminal
-            :new({ dir = dir, count = 4, direction = "vertical" })
-            :toggle()
-        end,
-        desc = "Open directory in toggle term",
-      },
       ["<D-e>"] = {
         callback = function()
           local dir = require("oil").get_current_dir()
@@ -46,16 +36,6 @@ return {
             dir = dir,
             toggle = true,
           })
-        end,
-        desc = "Open directory in toggle term",
-      },
-      ["<D-t>"] = {
-        callback = function()
-          local dir = require("oil").get_current_dir()
-          require("oil").close()
-          require("toggleterm.terminal").Terminal
-            :new({ dir = dir, count = 4, direction = "vertical" })
-            :toggle()
         end,
         desc = "Open directory in toggle term",
       },
