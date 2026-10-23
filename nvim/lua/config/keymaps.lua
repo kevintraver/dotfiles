@@ -12,7 +12,7 @@ vim.keymap.set("i", "<C-d>", "<Del>", { desc = "Delete Forward" })
 vim.keymap.set("i", "<C-k>", "<C-o>D", { desc = "Delete To End Of Line" })
 
 -- save file
-vim.keymap.set({ "n", "i", "o" }, "<D-s>", function()
+vim.keymap.set({ "n", "i", "x" }, "<D-s>", function()
   vim.cmd.write()
 end, { desc = "Save File" })
 
