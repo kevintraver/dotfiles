@@ -1,15 +1,25 @@
 # Firefox Functions
 
-# Open Firefox with a temporary profile (with Google DNS and clean startup).
-# Reuses the newest running temp instance, otherwise creates a new profile.
-# Usage: temp-firefox [url]
+# Open Firefox with a temporary profile (with DNS over HTTPS and clean startup).
+# Reuses the newest running temp instance if it uses the same DoH server,
+# otherwise creates a new profile. The DoH server defaults to Google DNS.
+# Usage: temp-firefox [--doh URL] [url]
 temp-firefox() {
+  local doh_url="https://8.8.8.8/dns-query"
+  if [[ "$1" == --doh ]]; then
+    doh_url="$2"
+    shift 2
+  fi
+  local trr_uri_pref="user_pref(\"network.trr.uri\", \"$doh_url\");"
+
   local running_pid=$(pgrep -fn 'Firefox.app/Contents/MacOS/firefox .*--profile /tmp/Firefox/')
   if [[ -n "$running_pid" ]]; then
     local running_args=$(ps -o args= -p "$running_pid")
     local running_profile="${${running_args##*--profile }%% *}"
-    open -na /Applications/Firefox.app --args --profile "$running_profile" "$@"
-    return
+    if grep -qxF "$trr_uri_pref" "$running_profile/user.js"; then
+      open -na /Applications/Firefox.app --args --profile "$running_profile" "$@"
+      return
+    fi
   fi
 
   local timestamp=$(date +%s)
@@ -18,12 +28,13 @@ temp-firefox() {
   # Use a bare profile directory instead of registering it in profiles.ini
   mkdir -p "$profile_path"
 
-  # Create user.js with Google DNS and startup settings
-  cat <<'EOF' > "$profile_path/user.js"
-// --- Google DNS Settings ---
+  # Create user.js with DNS over HTTPS and startup settings
+  cat <<EOF > "$profile_path/user.js"
+// --- DNS over HTTPS only ---
 user_pref("network.trr.mode", 3);
-user_pref("network.trr.uri", "https://dns.google/dns-query");
-user_pref("network.trr.bootstrapAddress", "8.8.8.8");
+$trr_uri_pref
+EOF
+  cat <<'EOF' >> "$profile_path/user.js"
 
 // --- Skip ALL first-run / welcome / ToS / privacy modals ---
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
