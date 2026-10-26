@@ -1,0 +1,36 @@
+#!/bin/bash
+# Move the Sidecar iPad display between the left and right of the MacBook screen
+# Needs MACBOOK_DISPLAY_ID and IPAD_DISPLAY_ID
+
+set -euo pipefail
+
+: "${MACBOOK_DISPLAY_ID:?set it in ~/.zshrc.local}" "${IPAD_DISPLAY_ID:?set it in ~/.zshrc.local}"
+
+DISPLAYPLACER=/opt/homebrew/bin/displayplacer
+
+# The last line of `displayplacer list` is a command that reproduces the current layout
+current=$("$DISPLAYPLACER" list | tail -1)
+
+# Each screen's config from that command: id:<ID> res:WxH hz:N ... origin:(X,Y) degree:N
+screen() { grep -o "\"id:$1 [^\"]*\"" <<<"$current" | tr -d '"'; }
+field() { sed -E "s/.*$1.*/\\1/" <<<"$2"; }
+
+ipad=$(screen "$IPAD_DISPLAY_ID") || {
+	echo "iPad not connected" >&2
+	exit 1
+}
+macbook=$(screen "$MACBOOK_DISPLAY_ID")
+
+ipad_x=$(field 'origin:\((-?[0-9]+),' "$ipad")
+ipad_w=$(field 'res:([0-9]+)x' "$ipad")
+macbook_w=$(field 'res:([0-9]+)x' "$macbook")
+
+if ((ipad_x >= 0)); then
+	echo "Moving iPad to the left..."
+	new_x=$((-ipad_w))
+else
+	echo "Moving iPad to the right..."
+	new_x=$macbook_w
+fi
+
+"$DISPLAYPLACER" "$macbook" "$(sed -E "s/origin:\([^,]+,/origin:($new_x,/" <<<"$ipad")"
