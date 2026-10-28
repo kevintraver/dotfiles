@@ -39,7 +39,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 ## Git Integration
 
 - **gitsigns.nvim** - Git integration showing signs for added, modified, and removed lines with hunk navigation and staging capabilities.
-- **mini-git** - Git integration from mini.nvim providing basic git operations and status information.
 
 ## LSP & Completion
 
