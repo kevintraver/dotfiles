@@ -53,6 +53,10 @@ vim.keymap.del("n", "<leader>fT")
 
 vim.keymap.del("n", "<leader>qq")
 
+-- Native H/L; buffers cycle with <C-A-h>/<C-A-l> (see bufferline.lua)
+vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<S-l>")
+
 vim.keymap.set("n", "q", "<Nop>")
 
 -- join lines
