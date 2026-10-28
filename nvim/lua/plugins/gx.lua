@@ -1,6 +1,5 @@
 return {
   "chrishrb/gx.nvim",
-  lazy = true,
   opts = {
     handlers = {
       search = false,

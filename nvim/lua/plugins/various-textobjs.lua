@@ -3,7 +3,6 @@ return {
   "kevintraver/nvim-various-textobjs",
   branch = "feat/block-textobj",
   dev = true,
-  lazy = true,
   opts = {
     keymaps = {
       useDefaults = false,

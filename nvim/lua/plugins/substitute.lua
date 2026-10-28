@@ -1,6 +1,5 @@
 return {
   "gbprod/substitute.nvim",
-  lazy = true,
   opts = {
     on_substitute = function()
       require("yanky.integration").substitute()

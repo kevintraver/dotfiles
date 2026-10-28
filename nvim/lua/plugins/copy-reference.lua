@@ -21,7 +21,6 @@ end
 
 return {
   "cajames/copy-reference.nvim",
-  lazy = true,
   keys = {
     {
       "<leader>yy",

@@ -1,6 +1,5 @@
 return {
   "nvim-mini/mini.align",
-  lazy = true,
   opts = {
     mappings = {
       start = "gl",
