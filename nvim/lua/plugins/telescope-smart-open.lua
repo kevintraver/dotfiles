@@ -7,8 +7,6 @@ return {
   end,
   dependencies = {
     "kkharji/sqlite.lua",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-    { "nvim-telescope/telescope-fzy-native.nvim" },
   },
   keys = {
     {

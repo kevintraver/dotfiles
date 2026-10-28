@@ -32,7 +32,6 @@ A minimal LazyVim configuration. This lists every plugin it loads, including tho
 - **oil-git.nvim** - Shows git status for files and directories in oil.nvim buffers.
 - **telescope.nvim** - Highly extendable fuzzy finder over lists with pickers for files, buffers, LSP, git, and more.
 - **telescope-fzf-native.nvim** - FZF-based fuzzy sorter for Telescope written in C for maximum performance.
-- **telescope-fzy-native.nvim** - FZY algorithm sorter for Telescope as a compiled binary.
 - **smart-open.nvim** - Telescope extension providing intelligent file suggestions based on frecency and context.
 - **copy-reference.nvim** - Copies the current file path, with the line or selected line range, to the clipboard.
 
