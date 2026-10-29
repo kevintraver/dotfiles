@@ -13,8 +13,14 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/.go"
 export PATH="$HOME/.go/bin:$PATH"
 
-# agent-browser: disable Chrome's Translate and menu bar search icon
+# agent-browser: native mode; disable Chrome's Translate and menu bar search icon
+export AGENT_BROWSER_NATIVE=1
 export AGENT_BROWSER_ARGS="--disable-features=Translate,OmniboxEverywhere"
+
+export NODE_OPTIONS="--no-deprecation"
+
+# https://ai-cli.dev/
+export AI_CLI_IMAGE_MODEL="openai/gpt-image-2.5-sunburst"
 
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
