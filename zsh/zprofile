@@ -1,0 +1,3 @@
+# Login shells only. Runs after /etc/zprofile's path_helper, which would
+# otherwise push Homebrew behind the system paths.
+eval "$(/opt/homebrew/bin/brew shellenv)"
