@@ -1,3 +1,6 @@
+# Use emacs keybindings
+bindkey -e
+
 # delete to the start of the line
 bindkey '^u' backward-kill-line
 

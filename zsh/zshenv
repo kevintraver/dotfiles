@@ -16,9 +16,6 @@ export PATH="$HOME/.go/bin:$PATH"
 # agent-browser: disable Chrome's Translate and menu bar search icon
 export AGENT_BROWSER_ARGS="--disable-features=Translate,OmniboxEverywhere"
 
-# Use emacs keybindings
-[[ -o interactive ]] && bindkey -e
-
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
