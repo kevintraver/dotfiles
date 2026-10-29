@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-: "${MACBOOK_DISPLAY_ID:?set it in ~/.zshrc.local}" "${IPAD_DISPLAY_ID:?set it in ~/.zshrc.local}"
+: "${MACBOOK_DISPLAY_ID:?set it in ~/.zshenv.local}" "${IPAD_DISPLAY_ID:?set it in ~/.zshenv.local}"
 
 DISPLAYPLACER=/opt/homebrew/bin/displayplacer
 

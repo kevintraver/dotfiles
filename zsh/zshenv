@@ -22,6 +22,9 @@ export NODE_OPTIONS="--no-deprecation"
 # https://ai-cli.dev/
 export AI_CLI_IMAGE_MODEL="openai/gpt-image-2.5-sunburst"
 
+# Machine-specific variables, kept out of this public repo
+[[ -r ~/.zshenv.local ]] && source ~/.zshenv.local
+
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
