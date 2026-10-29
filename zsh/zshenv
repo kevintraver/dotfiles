@@ -19,9 +19,6 @@ export AGENT_BROWSER_ARGS="--disable-features=Translate,OmniboxEverywhere"
 
 export NODE_OPTIONS="--no-deprecation"
 
-# https://ai-cli.dev/
-export AI_CLI_IMAGE_MODEL="openai/gpt-image-2.5-sunburst"
-
 # Machine-specific variables, kept out of this public repo
 [[ -r ~/.zshenv.local ]] && source ~/.zshenv.local
 
