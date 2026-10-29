@@ -9,7 +9,10 @@ tmux-yt-dlp() {
     tmux -L ytdl new-window -t ytdl -- "$cmd"
   else
     # If session 'ytdl' does not exist, create a new session.
-    # By removing the '-d' flag, tmux will create AND attach to this new session.
-    tmux -L ytdl new-session -s ytdl -- "$cmd"
+    tmux -L ytdl new-session -d -s ytdl -- "$cmd"
   fi
+
+  # Attach either way: the session is often left detached by Raycast or a closed terminal,
+  # and a download added to it would otherwise run out of sight
+  tmux -L ytdl attach -t ytdl
 }
