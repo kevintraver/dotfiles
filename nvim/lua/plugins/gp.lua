@@ -1,5 +1,5 @@
 return {
-  "Konkord360/gp.nvim",
+  "Robitx/gp.nvim",
   keys = {
     {
       "<leader><cr>",
