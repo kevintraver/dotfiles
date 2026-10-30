@@ -55,7 +55,7 @@ step "pipx packages" pipx upgrade-all
 step "Rust packages" cargo install-update -a
 step "agent-browser Chrome" agent_browser_install
 step "Neovim plugins" lazy_sync
-step "Mason packages" timeout 600 nvim --headless -c 'autocmd User MasonUpdateAllComplete quitall' -c 'MasonUpdateAll'
+step "Mason packages" timeout 600 nvim --headless -c "luafile $(dirname "$(readlink -f "$0")")/update-mason.lua"
 
 # Retry failures once after an hour, then fall back to the normal 4 hours
 mkdir -p "$STATE"
