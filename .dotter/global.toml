@@ -6,8 +6,6 @@ depends = []
 [default.files]
 # Development Tools
 "nvim" = { target = "~/.config/nvim", type = "symbolic", recurse = false }
-"cursor/settings.json" = "~/Library/Application Support/Cursor/User/settings.json"
-"cursor/keybindings.json" = "~/Library/Application Support/Cursor/User/keybindings.json"
 "git/gitconfig" = "~/.gitconfig"
 "git/gitignore_global" = "~/.gitignore_global"
 "lazygit/config.yml" = "~/.config/lazygit/config.yml"

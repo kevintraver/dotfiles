@@ -21,7 +21,6 @@ dotter deploy --dry-run
 ### Development Tools
 
 - **nvim/** - Neovim configuration with LazyVim framework
-- **cursor/** - Cursor editor settings and keybindings
 - **git/** - Git global configuration
 - **lazygit/** - Git TUI configuration
 - **prettier/** - Prettier formatting rules
