@@ -3,7 +3,7 @@
 # Unalias gc if it exists
 unalias gc 2>/dev/null
 
-_ai_tools=("opencode" "cursor" "claude" "codex" "gemini")
+_ai_tools=("opencode" "claude" "codex" "gemini")
 
 _ai_models=(
   "anthropic/claude-sonnet-4-5"
@@ -63,9 +63,6 @@ gc() {
       ;;
     codex)
       codex exec --json "$command"
-      ;;
-    cursor)
-      cursor-agent -p "$command" --model composer-1
       ;;
     opencode)
       model=$(_pick_model) || return

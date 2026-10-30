@@ -8,10 +8,6 @@ alias gl='lazygit'
 # tmux
 alias t="tmux attach || tmux new"
 
-# cursor
-alias cu="cursor"
-alias ca="cursor-agent"
-
 # opencode
 alias oc="opencode"
 
