@@ -41,6 +41,41 @@ vim.keymap.set({ "n", "i", "x" }, "<D-n>", function()
   vim.cmd.tabnew()
 end, { desc = "New Tab" })
 
+-- Copy the file path, relative to its Git root unless absolute. In visual
+-- mode, append the selected lines (path:12 or path:12-18).
+local function copy_path(absolute)
+  local path = vim.fn.expand("%:p")
+  if path == "" then
+    vim.notify("No file to copy", vim.log.levels.WARN)
+    return
+  end
+
+  local root = vim.fs.root(0, ".git")
+  if not absolute and root then
+    path = path:sub(#root + 2)
+  end
+
+  if vim.api.nvim_get_mode().mode:match("^[vV\022]") then
+    local l1, l2 = vim.fn.line("v"), vim.fn.line(".")
+    local start_line, end_line = math.min(l1, l2), math.max(l1, l2)
+    path = path
+      .. ":"
+      .. start_line
+      .. (start_line == end_line and "" or "-" .. end_line)
+    vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
+  end
+
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end
+
+vim.keymap.set({ "n", "x" }, "<leader>yy", function()
+  copy_path(false)
+end, { desc = "Copy relative file path" })
+vim.keymap.set({ "n", "x" }, "<leader>yY", function()
+  copy_path(true)
+end, { desc = "Copy absolute file path" })
+
 -- unmap lazyvim keymaps
 vim.keymap.del("n", "<leader>l")
 vim.keymap.del("n", "<leader>L")
