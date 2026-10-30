@@ -3,10 +3,6 @@ return {
   cmd = "Oil",
   dependencies = {
     {
-      "maelwalser/oil-copy.nvim",
-      opts = {},
-    },
-    {
       "malewicz1337/oil-git.nvim",
       opts = {
         show_ignored_files = true,
