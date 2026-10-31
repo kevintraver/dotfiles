@@ -22,25 +22,11 @@ export NODE_OPTIONS="--no-deprecation"
 # Machine-specific variables, kept out of this public repo
 [[ -r ~/.zshenv.local ]] && source ~/.zshenv.local
 
-# Secrets from the 1Password Environment, served at ~/.env.1password as a named
-# pipe. A pipe hands its contents to one reader, so shells take turns behind a
-# lock, and child shells inherit the values. Lines are exported as literal text,
-# never sourced, so $ and backticks in values stay as they are.
-if [[ -z $ENV_1PASSWORD_LOADED && -p ~/.env.1password ]]; then
-  () {
-    zmodload zsh/system
-    local lock=${TMPDIR:-/tmp}/env-1password.lock fd line
-    : >>$lock
-    zsystem flock -t 10 -f fd $lock || return
-    while IFS= read -r line; do
-      [[ $line == [A-Za-z_]*=* ]] && export "${line%%=*}=${line#*=}"
-    done <~/.env.1password
-    zsystem flock -u $fd
-    export ENV_1PASSWORD_LOADED=1
-  }
-fi
-
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
 (( $+commands[mise] )) && eval "$(mise activate zsh --shims)"
+
+# https://fnox.jdx.dev/
+(( $+commands[fnox] )) && [[ -r ~/.config/fnox/config.toml ]] &&
+  eval "$(fnox -c ~/.config/fnox/config.toml --non-interactive export --format shell)"
