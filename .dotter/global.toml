@@ -31,7 +31,7 @@ depends = []
 "oyo/config.toml" = "~/.config/oyo/config.toml"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "yt-dlp/config" = "~/.config/yt-dlp/config"
-"tridactyl/tridactylrc" = "~/.tridactylrc"
+"tridactyl/tridactylrc" = "~/.config/tridactyl/tridactylrc"
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 # Custom Scripts
