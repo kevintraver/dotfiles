@@ -7,7 +7,7 @@ depends = []
 # Development Tools
 "nvim" = { target = "~/.config/nvim", type = "symbolic", recurse = false }
 "git/gitconfig" = "~/.gitconfig"
-"git/gitignore_global" = "~/.gitignore_global"
+"git/ignore" = "~/.config/git/ignore"
 "lazygit/config.yml" = "~/.config/lazygit/config.yml"
 "prettier/prettierrc" = "~/.prettierrc"
 "editorconfig/editorconfig" = "~/.editorconfig"
