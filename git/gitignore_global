@@ -80,3 +80,6 @@ cspell.json
 
 # Videos
 /videos
+
+# Vercel
+.vercel
