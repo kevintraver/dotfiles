@@ -25,7 +25,7 @@ export NODE_OPTIONS="--no-deprecation"
 # https://mise.jdx.dev/
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
-(( $+commands[mise] )) && eval "$(mise activate zsh --shims)"
+[[ -x /opt/homebrew/bin/mise ]] && eval "$(/opt/homebrew/bin/mise activate zsh --shims)"
 
 # https://fnox.jdx.dev/
 (( $+commands[fnox] )) && [[ -r ~/.config/fnox/config.toml ]] &&
