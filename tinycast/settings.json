@@ -48,6 +48,16 @@
         "alias": "1p",
         "showInLauncher": true
       },
+      "com.anysphere.sand": {
+        "shortcut": null,
+        "alias": "gb",
+        "showInLauncher": true
+      },
+      "com.apple.games": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      },
       "com.mitchellh.ghostty": {
         "shortcut": "ctrl+cmd+j",
         "alias": null,
