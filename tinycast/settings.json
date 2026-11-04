@@ -206,7 +206,7 @@
     "commands": {}
   },
   "clipboard": {
-    "enabled": true,
+    "enabled": false,
     "retentionDays": 90,
     "defaultAction": "paste",
     "disabledApps": [
