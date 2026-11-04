@@ -33,6 +33,7 @@ yabai -m rule --add app="^Shotbase$" manage=off
 yabai -m rule --add app="^Neovim Anywhere$" manage=off
 yabai -m rule --add title="^Android Emulator.*" manage=off
 yabai -m rule --add app="^qemu-system-.*$" manage=off
+yabai -m rule --add app="^Lume$" manage=off
 yabai -m rule --add app="^MirrorAct$" manage=off
 
 yabai -m rule --add app="^Signal$" display=2
