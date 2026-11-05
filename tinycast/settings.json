@@ -11,9 +11,10 @@
   },
   "appearance": {
     "theme": "system",
+    "animations": true,
     "interfaceSize": "standard",
     "compactMode": true,
-    "showFavoritesInCompactMode": true,
+    "compactBarCommands": [],
     "followCursorAcrossDisplays": true,
     "dragToReposition": false
   },
@@ -77,7 +78,13 @@
   },
   "systemSettings": {
     "enabled": true,
-    "panes": {}
+    "panes": {
+      "com.apple.Users-Groups-Settings.extension": {
+        "shortcut": null,
+        "alias": null,
+        "showInLauncher": false
+      }
+    }
   },
   "systemActions": {
     "enabled": true,
@@ -104,6 +111,7 @@
     "enabled": false,
     "webSearch": false,
     "choices": true,
+    "expandsReasoning": false,
     "systemPrompt": "",
     "systemPromptEnabled": true,
     "retentionDays": "forever",
@@ -119,6 +127,7 @@
   "dictation": {
     "mode": "toggle",
     "shortcut": null,
+    "playsSounds": true,
     "model": "redux",
     "microphone": null,
     "destination": "paste",
@@ -141,6 +150,7 @@
     "enabled": false,
     "rendersMarkdown": true,
     "showsFormattingBar": true,
+    "showsInMenuBar": false,
     "folder": null,
     "commands": {}
   },
@@ -160,6 +170,8 @@
     "showInLauncher": true,
     "gap": 0,
     "cycle": "off",
+    "wrapDisplays": true,
+    "keepProportions": true,
     "layoutsShowInLauncher": true,
     "roomsShowInLauncher": true,
     "shortcuts": {
@@ -193,6 +205,10 @@
       "move-right": null,
       "move-up": null,
       "move-down": null,
+      "move-to-left-edge": null,
+      "move-to-right-edge": null,
+      "move-to-top-edge": null,
+      "move-to-bottom-edge": null,
       "next-display": null,
       "previous-display": null,
       "toggle-fullscreen": null,
