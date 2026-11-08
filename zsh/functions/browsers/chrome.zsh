@@ -78,7 +78,7 @@ reset-google-chrome() {
   )
 
   if /usr/bin/pgrep -xq "Google Chrome"; then
-    /usr/bin/osascript -e 'quit app "Google Chrome"'
+    /usr/bin/pkill -x "Google Chrome"
     local i
     for i in {1..50}; do
       /usr/bin/pgrep -xq "Google Chrome" || break
