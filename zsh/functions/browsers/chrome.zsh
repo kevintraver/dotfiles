@@ -63,8 +63,18 @@ temp-google-chrome-resume() {
 }
 
 # Reset Google Chrome (removes all user data except installed extensions)
+# Usage: reset-google-chrome [--all]   (--all removes extensions too)
 reset-google-chrome() {
   local chrome="$HOME/Library/Application Support/Google/Chrome"
+  local profiles=("$chrome"/*/"Secure Preferences"(N:h))
+  case "$1" in
+    "") ;;
+    --all) profiles=() ;;
+    *)
+      echo "Usage: reset-google-chrome [--all]" >&2
+      return 1
+      ;;
+  esac
   local keep=(
     "DNR Extension Rules"
     Extensions
@@ -92,7 +102,7 @@ reset-google-chrome() {
 
   local stash=$(/usr/bin/mktemp -d)
   local profile_dir item
-  for profile_dir in "$chrome"/*/"Secure Preferences"(N:h); do
+  for profile_dir in $profiles; do
     local saved="$stash/${profile_dir:t}"
     mkdir -p "$saved"
     local idb=("$profile_dir"/IndexedDB/chrome-extension_*(N))
@@ -122,8 +132,11 @@ EOF
   /bin/rm -rf "$HOME/Library/Preferences/com.google.Chrome.plist"
   /bin/rm -rf "$HOME/Library/Caches/Google"
 
-  mkdir -p "$chrome"
-  mv "$stash"/*(N) "$chrome"/
+  local saved_profiles=("$stash"/*(N))
+  if (( $#saved_profiles )); then
+    mkdir -p "$chrome"
+    mv $saved_profiles "$chrome"/
+  fi
   /bin/rm -rf "$stash"
   echo "Google Chrome has been reset"
 }
