@@ -62,11 +62,69 @@ temp-google-chrome-resume() {
     --disable-notifications
 }
 
-# Reset Google Chrome (removes all user data)
+# Reset Google Chrome (removes all user data except installed extensions)
 reset-google-chrome() {
+  local chrome="$HOME/Library/Application Support/Google/Chrome"
+  local keep=(
+    "DNR Extension Rules"
+    Extensions
+    "Extension Rules"
+    "Extension Scripts"
+    "Extension State"
+    "Local Extension Settings"
+    "Managed Extension Settings"
+    "Sync Extension Settings"
+    Storage/ext
+  )
+
+  if /usr/bin/pgrep -xq "Google Chrome"; then
+    /usr/bin/osascript -e 'quit app "Google Chrome"'
+    local i
+    for i in {1..50}; do
+      /usr/bin/pgrep -xq "Google Chrome" || break
+      sleep 0.2
+    done
+    if /usr/bin/pgrep -xq "Google Chrome"; then
+      echo "Google Chrome is still running; reset aborted" >&2
+      return 1
+    fi
+  fi
+
+  local stash=$(/usr/bin/mktemp -d)
+  local profile_dir item
+  for profile_dir in "$chrome"/*/"Secure Preferences"(N:h); do
+    local saved="$stash/${profile_dir:t}"
+    mkdir -p "$saved"
+    local idb=("$profile_dir"/IndexedDB/chrome-extension_*(N))
+    for item in $keep IndexedDB/${^idb:t}; do
+      [[ -e "$profile_dir/$item" ]] || continue
+      mkdir -p "$saved/${item:h}"
+      mv "$profile_dir/$item" "$saved/$item"
+    done
+    # Extensions are registered in extensions.settings, whose HMACs live in
+    # protection.macs. Keeping both lets Chrome trust them; every other
+    # protected pref fails its MAC and falls back to its default.
+    /usr/bin/python3 - "$profile_dir" "$saved" <<'EOF'
+import json, os, sys
+src, dst = sys.argv[1:]
+for name, keys in (("Secure Preferences", ("extensions", "protection")), ("Preferences", ("extensions",))):
+    try:
+        with open(os.path.join(src, name)) as f:
+            prefs = json.load(f)
+    except FileNotFoundError:
+        continue
+    with open(os.path.join(dst, name), "w") as f:
+        json.dump({k: prefs[k] for k in keys if k in prefs}, f)
+EOF
+  done
+
   /bin/rm -rf "$HOME/Library/Application Support/Google"
   /bin/rm -rf "$HOME/Library/Preferences/com.google.Chrome.plist"
   /bin/rm -rf "$HOME/Library/Caches/Google"
+
+  mkdir -p "$chrome"
+  mv "$stash"/*(N) "$chrome"/
+  /bin/rm -rf "$stash"
   echo "Google Chrome has been reset"
 }
 
