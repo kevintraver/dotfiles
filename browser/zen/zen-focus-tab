@@ -17,12 +17,26 @@ open_url() {
 # Convert to Chrome match pattern
 [[ "$url" =~ ^https?:// ]] && base="${url%/}" || base="*://${url%/}"
 
+# Match patterns can't include a port, so match on the bare host and
+# keep only tabs whose URL (3rd col) has the requested host:port
+host_port=""
+if [[ "$base" =~ '^([^:]+://[^/:]+):([0-9]+)(.*)$' ]]; then
+  base="${match[1]}${match[3]}"
+  host_port="${match[1]#*://}:${match[2]}"
+fi
+
+# Sort by lastAccessed (4th col) descending to get most recent tab
+query_tab() {
+  $BT query -url "$1" --last-accessed 2>/dev/null |
+    awk -F'\t' -v hp="$host_port" 'hp == "" || index($3 "/", "://" hp "/")' |
+    sort -t$'\t' -k4 -nr | head -1
+}
+
 # Try wildcard first, then exact for URLs with paths
 # (bare *://host hangs, but *://host/path is safe)
-# Sort by lastAccessed (4th col) descending to get most recent tab
-tab_line=$($BT query -url "$base/*" --last-accessed 2>/dev/null | sort -t$'\t' -k4 -nr | head -1)
+tab_line=$(query_tab "$base/*")
 if [[ -z "$tab_line" && "${base#*://}" == */* ]]; then
-  tab_line=$($BT query -url "$base" --last-accessed 2>/dev/null | sort -t$'\t' -k4 -nr | head -1)
+  tab_line=$(query_tab "$base")
 fi
 
 if [[ -n "$tab_line" ]]; then
