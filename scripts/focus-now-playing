@@ -1,51 +1,64 @@
-#!/bin/zsh
+#!/bin/zsh -f
 # Focus the application currently playing audio
 
 BT="$HOME/.local/bin/bt"
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
 STATE_FILE="$HOME/.local/state/focus-now-playing"
+# A notification sound keeps its audio assertion for about 30 seconds
+FRESH_SECS=40
 
 # Get power assertions
 assertions=$(LC_ALL=C pmset -g assertions)
 
-# Get all PIDs with coreaudiod audio assertions (youngest first)
+# List coreaudiod audio assertions as "fresh pid" lines, best candidate first:
+# assertions older than FRESH_SECS before younger ones (which may be a notification
+# sound), then youngest first, then processes holding their own power assertion
+# (e.g. "IINA playback is in progress").
 # Skip assertions that use the mic (e.g. superwhisper ducking audio while dictating)
-audio_pids=$(echo "$assertions" | awk '
+audio=$(echo "$assertions" | awk -v fresh_secs="$FRESH_SECS" '
+  /^ *pid [0-9]+\(/ && !/\(coreaudiod\)/ { split($2, owner, "("); own[owner[1]] = 1 }
   /coreaudiod.*audio/ && match($0, /[0-9]+:[0-9]+:[0-9]+/) {
-    time = substr($0, RSTART, RLENGTH)
+    split(substr($0, RSTART, RLENGTH), t, ":")
+    age = t[1] * 3600 + t[2] * 60 + t[3]
     getline; if (!/Created for PID:/ || !match($0, /[0-9]+/)) next
     pid = substr($0, RSTART, RLENGTH)
-    getline; if (!/audio-in/) print time, pid
-  }' 2>/dev/null | sort -t: -k1,1n -k2,2n -k3,3n | cut -d' ' -f2)
+    getline; if (!/audio-in/) { n++; pids[n] = pid; ages[n] = age }
+  }
+  END {
+    for (i = 1; i <= n; i++) {
+      fresh = (ages[i] < fresh_secs) ? 1 : 0
+      no_own = (pids[i] in own) ? 0 : 1
+      print fresh, ages[i], no_own, pids[i]
+    }
+  }' 2>/dev/null | sort -k1,1n -k2,2n -k3,3n | cut -d' ' -f1,4)
 
-# Find first PID that's actually playing (skip browsers without audible tabs)
+# Find first candidate that's actually playing (skip browsers without audible tabs)
 app_path=""
+app_fresh=""
 audible_tabs=""
-for candidate in ${(f)audio_pids}; do
+for entry in ${(f)audio}; do
+  candidate="${entry#* }"
   candidate_path=$(ps -p "$candidate" -o comm= 2>/dev/null)
+  # Skip exited processes and anything outside an app bundle (e.g. mpv, afplay)
+  [[ "$candidate_path" != *".app/"* ]] && continue
   # Skip XPC services; browser audio helpers resolve to their owning app below
   [[ "$candidate_path" == *"/XPCServices/"* || "$candidate_path" == *".xpc/"* ]] && continue
   # Check if it's Zen Browser - only use if it has audible tabs
-  if [[ "$candidate_path" == *"Zen Browser"* || "$candidate_path" == */zen ]]; then
+  if [[ "$candidate_path" == *"Zen Browser"* ]]; then
     audible_tabs=$($BT query +audible 2>/dev/null)
-    if [[ -n "$audible_tabs" ]]; then
-      app_path="$candidate_path"
-      break
-    fi
-  else
-    app_path="$candidate_path"
-    break
+    # brotab also prints nothing when it can't reach the browser, so only
+    # treat Zen as silent while its mediator is running
+    [[ -z "$audible_tabs" ]] && pgrep -qf bt_mediator && continue
   fi
+  app_path="$candidate_path"
+  app_fresh="${entry% *}"
+  break
 done
 if [[ -n "$app_path" ]]; then
-  if [[ "$app_path" == *".app/"* ]]; then
-    # Use the outermost app bundle, including for nested browser helpers
-    app_name="${app_path%%.app/*}"
-    app_name="${app_name##*/}"
-  else
-    app_name="${app_path##*/}"
-  fi
+  # Use the outermost app bundle, including for nested browser helpers
+  app_name="${app_path%%.app/*}"
+  app_name="${app_name##*/}"
 fi
 
 # If no app playing, try fallback to last playing app (excluding Zen)
@@ -66,10 +79,15 @@ if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
     IFS=$'\t' read -r tab_id tab_title _ <<< "$tab_line"
     $BT activate "$tab_id" 2>/dev/null
 
-    # Use first 20 chars of title for fuzzy match
+    # Match the window on the full tab title; fall back to its first 20 chars
     window_info=$($YABAI -m query --windows | $JQ -r \
-      --arg title "${tab_title:0:20}" \
-      'first(.[] | select(.app == "Zen" and (.title | contains($title)))) | "\(.id) \(.["has-focus"])"')
+      --arg title "$tab_title" \
+      '[.[] | select(.app == "Zen")] as $zen
+      | first(
+          ($zen[] | select(.title == $title)),
+          ($zen[] | select(.title | contains($title))),
+          ($zen[] | select(.title | contains($title[0:20])))
+        ) | "\(.id) \(.["has-focus"])"')
     read -r window_id has_focus <<< "$window_info"
 
     if [[ -n "$window_id" && "$has_focus" != "true" ]]; then
@@ -82,7 +100,8 @@ if [[ "${app_name:l}" == "zen" || "${app_name:l}" == "zen browser" ]]; then
     open -a "Zen Browser" 2>/dev/null
   fi
 else
-  # Activate other apps normally and save as last playing
-  echo "$app_name" > "$STATE_FILE"
+  # Activate other apps normally and save as last playing, unless the
+  # assertion is fresh enough to be a notification sound
+  [[ "$app_fresh" == 0 ]] && echo "$app_name" > "$STATE_FILE"
   open -a "$app_name" 2>/dev/null
 fi
