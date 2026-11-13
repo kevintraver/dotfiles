@@ -4,7 +4,7 @@
 # Focuses the most relevant meeting app window.
 # Priority: Slack Huddle > Google Meet > Zoom
 # Prefers visible windows (on current space) over hidden ones.
-# Falls back to an open Google Meet app or Discord window when no call window is found.
+# Falls back to an open Google Meet app window when no call window is found.
 
 YABAI="/opt/homebrew/bin/yabai"
 JQ="/opt/homebrew/bin/jq"
@@ -43,8 +43,10 @@ fi
 huddle_id=$(find_window_id "^Slack$" "$huddle_title")
 
 # 2. Google Meet
-# Meet app (Chrome PWA): a window titled with more than the bare app name.
-# A bare "Google Meet" title does not show a call, so that window is only a fallback.
+# Meet app (Chrome PWA): Chrome titles a web app's only window with just the
+# app name, so a bare "Google Meet" window can be a live call or the idle
+# landing page. It is the fallback below; removing it would miss real calls.
+# With several Meet app windows, the call is the one with a longer title.
 meet_id=$(find_window_id '^Google Meet$' '^(?!Google Meet$)')
 meet_idle_id=$(find_window_id '^Google Meet$' '^Google Meet$')
 # Browser tab: yabai only sees the active tab, titled "Meet - <code or meeting name>".
@@ -54,11 +56,6 @@ meet_tab_id=$(find_window_id "$browsers" '^Meet [-–] ')
 # 3. Zoom Meeting
 # First try to find an actual meeting window
 zoom_id=$(find_window_id "zoom.us" "Zoom Meeting")
-
-# 4. Discord
-# Match any open Discord window. Its title does not show whether a call is
-# running, so it is only a fallback.
-discord_id=$(find_window_id "^Discord$" "")
 
 # Helper to check if ID is valid and visible
 is_visible() {
@@ -74,16 +71,15 @@ candidates[meet]=$meet_id
 candidates[meet_tab]=$meet_tab_id
 candidates[zoom]=$zoom_id
 candidates[meet_idle]=$meet_idle_id
-candidates[discord]=$discord_id
 
 # Priority Order
 # Windows whose title shows a call. If multiple meeting apps are running, this
 # defines which one takes precedence if both are visible (or both hidden).
 priority=("huddle" "meet" "meet_tab" "zoom")
 
-# Apps that are open but whose title cannot show a call. Used only when nothing
-# in the priority list matched, so they never outrank a real call window.
-fallback=("meet_idle" "discord")
+# The Meet app's only window: possibly a call, possibly idle. Used only when
+# nothing in the priority list matched, so it never outranks a known call.
+fallback=("meet_idle")
 
 # usage: pick_window <candidate>...
 # Prints the first VISIBLE candidate, the one you are likely looking at or just
