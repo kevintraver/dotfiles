@@ -3,9 +3,6 @@
 # User scripts
 export PATH="$HOME/.local/bin:$PATH"
 
-# Bun
-export PATH="$HOME/.bun/bin:$PATH"
-
 # Rust/Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 

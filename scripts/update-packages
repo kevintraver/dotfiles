@@ -50,7 +50,6 @@ log "Starting package updates..."
 
 step "Homebrew packages" brew_update
 step "mise tools" mise upgrade
-step "bun global packages" bun update --global
 step "pipx packages" pipx upgrade-all
 step "Rust packages" cargo install-update -a
 step "agent-browser Chrome" agent_browser_install
