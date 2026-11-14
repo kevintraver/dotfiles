@@ -1,6 +1,6 @@
 # https://ghostty.org/docs/config/reference
 
-font-family = "Hack"
+font-family = "Geist Mono"
 
 macos-option-as-alt = true
 
