@@ -1,14 +1,6 @@
 # Environment variables for all shell types (interactive and non-interactive)
 
-# User scripts
-export PATH="$HOME/.local/bin:$PATH"
-
-# Rust/Cargo
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Go
 export GOPATH="$HOME/.go"
-export PATH="$HOME/.go/bin:$PATH"
 
 # agent-browser: native mode; disable Chrome's Translate and menu bar search icon
 export AGENT_BROWSER_NATIVE=1
@@ -23,6 +15,11 @@ export NODE_OPTIONS="--no-deprecation"
 # Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
 # Interactive shells get full hook support via zshrc
 [[ -x /opt/homebrew/bin/mise ]] && eval "$(/opt/homebrew/bin/mise activate zsh --shims)"
+
+# User scripts, Rust (rustup), and Go. After mise, which puts /opt/homebrew/bin
+# (its own directory) in front, so rustup's cargo wins over Homebrew's rust
+typeset -U path
+path=("$HOME/.go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" $path)
 
 # https://fnox.jdx.dev/
 (( $+commands[fnox] )) && [[ -r ~/.config/fnox/config.toml ]] &&
