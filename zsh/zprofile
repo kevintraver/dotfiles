@@ -1,9 +1,4 @@
-# Login shells only. Runs after /etc/zprofile's path_helper, which would
-# otherwise push Homebrew behind the system paths.
+# Login shells only. /etc/zprofile's path_helper has just moved the system
+# paths in front of everything zshenv added, so restore zshenv's order.
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# path_helper also pushes the user paths that zshenv added behind the system
-# and Homebrew paths, so put them back in front (rustup's cargo and rustc then
-# win over Homebrew's rust, which stays installed as a build dependency)
-typeset -U path
-path=("$HOME/.go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" $path)
+prepend_user_paths

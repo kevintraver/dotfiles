@@ -11,15 +11,20 @@ export NODE_OPTIONS="--no-deprecation"
 # Machine-specific variables, kept out of this public repo
 [[ -r ~/.zshenv.local ]] && source ~/.zshenv.local
 
-# https://mise.jdx.dev/
-# Using --shims for non-interactive shells (e.g., Claude Code) to access mise-managed tools
-# Interactive shells get full hook support via zshrc
-[[ -x /opt/homebrew/bin/mise ]] && eval "$(/opt/homebrew/bin/mise activate zsh --shims)"
-
-# User scripts, Rust (rustup), and Go. After mise, which puts /opt/homebrew/bin
-# (its own directory) in front, so rustup's cargo wins over Homebrew's rust
+# The one place PATH order is decided, for scripts and agent shells too: mise
+# shims (https://mise.jdx.dev/), then user bins, then Homebrew, so rustup's
+# cargo wins over Homebrew's rust. Interactive shells add mise's hooks in zshrc.
+prepend_user_paths() {
+  path=(
+    "$HOME/.local/share/mise/shims"
+    "$HOME/.go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin"
+    /opt/homebrew/bin /opt/homebrew/sbin
+    $path
+  )
+}
 typeset -U path
-path=("$HOME/.go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin" $path)
+export PATH
+prepend_user_paths
 
 # https://fnox.jdx.dev/
 (( $+commands[fnox] )) && [[ -r ~/.config/fnox/config.toml ]] &&
