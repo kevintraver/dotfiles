@@ -12,21 +12,10 @@ fi
 typeset -g -A _comps _services _patcomps _postpatcomps
 
 # https://github.com/romkatv/powerlevel10k
-if [[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-elif [[ -r /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-  source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
-fi
+[[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]] && source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # https://github.com/zsh-users/zsh-completions
-for _zsh_fpath_dir in \
-  /opt/homebrew/share/zsh/site-functions \
-  /opt/homebrew/share/zsh-completions \
-  /usr/local/share/zsh/site-functions \
-  /usr/local/share/zsh-completions; do
-  [[ -d "$_zsh_fpath_dir" ]] && fpath=("$_zsh_fpath_dir" $fpath)
-done
-unset _zsh_fpath_dir
+[[ -d /opt/homebrew/share/zsh-completions ]] && fpath=(/opt/homebrew/share/zsh-completions $fpath)
 autoload -Uz compinit
 
 # Speed up completion initialization:
@@ -90,13 +79,6 @@ WORDCHARS=${WORDCHARS/\/}
 # https://opencode.ai
 [[ -r "$HOME/.zsh/plugins/opencode-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/opencode-completions/completions.zsh"
 
-# https://dystroy.org/broot/
-if [[ -r "$HOME/.config/broot/launcher/zsh/br" ]]; then
-  source "$HOME/.config/broot/launcher/zsh/br"
-elif [[ -r "$HOME/.config/broot/launcher/bash/br" ]]; then
-  source "$HOME/.config/broot/launcher/bash/br"
-fi
-
 source "$DOTFILES_HOME/zsh/editor.zsh"
 source "$DOTFILES_HOME/zsh/completion.zsh"
 source "$DOTFILES_HOME/zsh/keymaps.zsh"
@@ -119,8 +101,6 @@ done
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 [[ -d "$ANDROID_HOME/emulator" ]] && path+=("$ANDROID_HOME/emulator")
 [[ -d "$ANDROID_HOME/platform-tools" ]] && path+=("$ANDROID_HOME/platform-tools")
-typeset -U path
-export PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 if (( $+functions[p10k] )) && [[ -r "$HOME/.p10k.zsh" ]]; then
