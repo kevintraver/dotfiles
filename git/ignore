@@ -86,3 +86,6 @@ cspell.json
 
 # Impeccable
 .impeccable
+
+# skills CLI
+skills-lock.json
