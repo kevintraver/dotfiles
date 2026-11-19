@@ -25,35 +25,46 @@ if [[ $1 == record ]]; then
   exit 0
 fi
 
-# Strip the scheme, "www." and trailing slashes: https://www.Example.com/docs/ -> example.com/docs
-normalize='ascii_downcase | sub("^[a-z]+://"; "") | sub("^www\\."; "") | sub("[?#].*$"; "") | sub("/+$"; "")'
+# Drop the scheme, "www.", query, fragment and trailing slashes, and lowercase
+# only the host (paths are case-sensitive): https://www.Example.com/Docs/ -> example.com/Docs
+normalize='sub("^[a-zA-Z]+://"; "") | sub("[?#].*$"; "") | sub("/+$"; "")
+  | capture("^(?<host>[^/]*)(?<path>.*)$") | (.host | ascii_downcase | sub("^www\\."; "")) + .path'
 
 url=$($JQ -r '.data.url // empty' 2>/dev/null)
 
 # Same host, and the tab's path starts with the link's path
 # (a link to example.com matches any tab on that site; example.com/docs only that page and below).
-# Prefer a tab that's already showing in its window, then pinned tabs.
-# Prints the best match, then the other tabs of its group, if it's in one.
-candidates=($([[ -n $url ]] && $ARDIA tabs --json 2>/dev/null | $JQ -r --arg url "$url" "
+# Prints "match <id> <group>" for each match, best first (showing in its window,
+# then pinned), and "tab <id> <group>" for every tab in a group.
+lines=("${(@f)$([[ -n $url ]] && $ARDIA tabs --json 2>/dev/null | $JQ -r --arg url "$url" "
   (\$url | $normalize) as \$want
   | [.. | objects | select(.type == \"tab\")] as \$all
-  | [\$all[] | select((.url // \"\") != \"\")
-     | select((.url | $normalize) as \$have | \$have == \$want or (\$have | startswith(\$want + \"/\")))]
-  | sort_by([(.active | not), (.pinned | not)]) | first
-  | select(. != null)
-  | . as \$best
-  | \$best.id, (if \$best.group then \$all[] | select(.group == \$best.group and .id != \$best.id) | .id else empty end)"))
+  | ([\$all[] | select((.url // \"\") != \"\")
+      | select((.url | $normalize) as \$have | \$have == \$want or (\$have | startswith(\$want + \"/\")))]
+     | sort_by([(.active | not), (.pinned | not)])[] | \"match \(.id) \(.group // \"-\")\"),
+    (\$all[] | select(.group) | \"tab \(.id) \(.group)\")")}")
 
-if (( ! $#candidates )); then
+# newest <ids…>: the id whose tab you were on last, from the records
+newest() { local -a r; r=($STATE/(${~${(j:|:)@}})(N.om[1])); print -r -- ${r[1]:t}; }
+
+typeset -a matches; typeset -A group_of
+for kind id group in ${=lines}; do
+  [[ $kind == match ]] && matches+=($id)
+  group_of[$id]=$group
+done
+
+if (( ! $#matches )); then
   print '{"open": "tab"}'
   exit 0
 fi
 
-# The group's tab you were on last (newest record), else the match itself.
-tab_id=$candidates[1]
-if (( $#candidates > 1 )); then
-  recent=($STATE/${^candidates}(N.om[1]))
-  (( $#recent )) && tab_id=${recent[1]:t}
+# The matching tab you used last (else the best match); if it's in a group,
+# the tab of that group you used last.
+tab_id=$(newest $matches); tab_id=${tab_id:-$matches[1]}
+group=$group_of[$tab_id]
+if [[ $group != - ]]; then
+  members=(${(k)group_of[(R)$group]})
+  recent=$(newest $members); tab_id=${recent:-$tab_id}
 fi
 
 # Answer first (Ardia only waits 250 ms), then switch tabs in the background:
