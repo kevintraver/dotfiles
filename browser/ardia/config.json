@@ -8,6 +8,8 @@
       "nextTab": "ctrl+j",
       "previousTab": "ctrl+k",
       "toggleSidebar": "cmd+b"
-    }
+    },
+    "sidebarWidth": 230,
+    "sidebarTextSize": "large"
   }
 }
