@@ -31,10 +31,15 @@ fi
 [ -n "$l" ] && yabai -m window "$l" --display "$right"
 [ -n "$r" ] && yabai -m window "$r" --display "$left"
 
+[ "$curr" -eq "$left" ] && mine=$l theirs=$r || mine=$r theirs=$l
+
+# A window moved onto a stacked display lands behind the others, so the swap
+# looks like a cycle. Focusing it raises it to the front of its stack.
+[ -n "$theirs" ] && yabai -m window --focus "$theirs"
+
 # Follow your window. macOS hands focus to another app after a display
 # change, so focus it, then check and retry once. mouse_follows_focus is
 # switched on just for this, so the cursor lands on the window too.
-[ "$curr" -eq "$left" ] && mine=$l || mine=$r
 [ -z "$mine" ] && exit 0
 mff=$(yabai -m config mouse_follows_focus)
 yabai -m config mouse_follows_focus on
