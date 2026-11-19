@@ -32,13 +32,14 @@ depends = []
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "yt-dlp/config" = "~/.config/yt-dlp/config"
 "tridactyl/tridactylrc" = "~/.config/tridactyl/tridactylrc"
+# Browsers
+"ardia/config.json" = "~/.config/ardia/config.json"
+"ardia/hooks.json" = "~/.config/ardia/hooks.json"
+"ardia/ardia-focus-tab" = "~/.local/bin/ardia-focus-tab"
+"zen/zen-focus-tab" = "~/.local/bin/zen-focus-tab"
 # Productivity Tools
 "espanso" = { target = "~/.config/espanso", type = "symbolic", recurse = false }
 # Custom Scripts
-"browser/zen/zen-focus-tab" = "~/.local/bin/zen-focus-tab"
-"browser/ardia/ardia-focus-tab" = "~/.local/bin/ardia-focus-tab"
-"browser/ardia/hooks.json" = "~/.config/ardia/hooks.json"
-"browser/ardia/config.json" = "~/.config/ardia/config.json"
 "scripts/focus-now-playing" = "~/.local/bin/focus-now-playing"
 "scripts/yabai-apply-display-rules" = "~/.local/bin/yabai-apply-display-rules"
 "scripts/update-packages" = "~/.local/bin/update-packages"
