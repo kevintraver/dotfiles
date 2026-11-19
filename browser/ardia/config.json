@@ -6,7 +6,8 @@
       "back": "ctrl+o",
       "forward": "ctrl+i",
       "nextTab": "ctrl+j",
-      "previousTab": "ctrl+k"
+      "previousTab": "ctrl+k",
+      "toggleSidebar": "cmd+b"
     }
   }
 }
