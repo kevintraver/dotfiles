@@ -10,7 +10,7 @@ DOTFILES_HOME="$HOME/.dotfiles"
 # History. Atuin keeps the searchable history; this is zsh's own file.
 HISTSIZE=100000
 SAVEHIST=100000
-HISTORY_IGNORE='(*DB_PASS*|cd|cd ..|cd ~|clear|e|e .|exit|fc|fzf|gl|la|lg|ls|nvim|nvim .|pwd|t|tc|tmux|z)'
+HISTORY_IGNORE='(*DB_PASS*|cd|cd ..|cd ~|clear|e|e .|exit|fc|fzf|gl|la|ls|nvim|nvim .|pwd|t|tc|tmux|z)'
 setopt hist_ignore_space hist_ignore_all_dups share_history
 
 # Emacs keys. Set before plugins bind theirs: VISUAL=nvim would otherwise
