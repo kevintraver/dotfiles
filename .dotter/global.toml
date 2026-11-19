@@ -28,6 +28,7 @@ depends = []
 "glow/glow.yml" = "~/Library/Preferences/glow/glow.yml"
 "ripgrep/ripgreprc" = "~/.ripgreprc"
 "yazi/yazi.toml" = "~/.config/yazi/yazi.toml"
+"mise/config.toml" = "~/.config/mise/config.toml"
 "oyo/config.toml" = "~/.config/oyo/config.toml"
 "mitmproxy/keys.yaml" = "~/.config/mitmproxy/keys.yaml"
 "yt-dlp/config" = "~/.config/yt-dlp/config"

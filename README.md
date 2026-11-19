@@ -24,6 +24,7 @@ dotter deploy --dry-run
 - **git/** - Git global configuration
 - **lazygit/** - Git TUI configuration
 - **prettier/** - Prettier formatting rules
+- **mise/** - Global mise tools (Node, fnox, and npm CLIs)
 
 ### Terminal & Shell
 

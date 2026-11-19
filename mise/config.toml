@@ -1,0 +1,13 @@
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
+
+[tools]
+fnox = { version = "latest", workflow = "release.yml" }
+node = "lts"
+"npm:@opencode/browse" = "latest"
+"npm:agent-browser" = "latest"
+"npm:ai-cli" = "latest"
+"npm:dev3000" = "latest"
+"npm:firecrawl-cli" = "latest"
+"npm:portless" = "latest"
+"npm:yarn" = "latest"
