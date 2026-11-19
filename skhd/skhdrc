@@ -6,5 +6,8 @@ ctrl + cmd - l: $HOME/.dotfiles/yabai/scripts/primary_right_action.sh
 shift + cmd - h: $HOME/.dotfiles/yabai/scripts/secondary_action.sh left
 shift + cmd - l: $HOME/.dotfiles/yabai/scripts/secondary_action.sh right
 
+# Swap the front windows on the left and right displays
+shift + cmd - j: $HOME/.dotfiles/yabai/scripts/swap_displays.sh
+
 # Cycle through same-app windows on current space
 ctrl + cmd - g : $HOME/.dotfiles/yabai/scripts/cycle_same_app_windows.sh
