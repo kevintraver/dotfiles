@@ -1,13 +1,25 @@
 # https://github.com/koekeishiya/yabai/wiki/Commands
+#
+# h j k l in every family:
+#   ctrl + cmd     open common apps (set in Raycast, not here)
+#   shift + cmd    move focus
+#   ctrl + alt     move windows
 
-ctrl + cmd - h: $HOME/.dotfiles/yabai/scripts/primary_left_action.sh
-ctrl + cmd - l: $HOME/.dotfiles/yabai/scripts/primary_right_action.sh
+# Focus: left / right, jumping to the next display at the edge
+shift + cmd - h: $HOME/.dotfiles/yabai/scripts/primary_left_action.sh
+shift + cmd - l: $HOME/.dotfiles/yabai/scripts/primary_right_action.sh
 
-shift + cmd - h: $HOME/.dotfiles/yabai/scripts/secondary_action.sh left
-shift + cmd - l: $HOME/.dotfiles/yabai/scripts/secondary_action.sh right
+# Focus: next / previous window in the current display's stack, wrapping at the ends
+shift + cmd - j: yabai -m window --focus stack.next || yabai -m window --focus stack.first
+shift + cmd - k: yabai -m window --focus stack.prev || yabai -m window --focus stack.last
 
-# Swap the front windows on the left and right displays
-shift + cmd - j: $HOME/.dotfiles/yabai/scripts/swap_displays.sh
+# Focus: cycle through same-app windows on the current space
+shift + cmd - g: $HOME/.dotfiles/yabai/scripts/cycle_same_app_windows.sh
 
-# Cycle through same-app windows on current space
-ctrl + cmd - g : $HOME/.dotfiles/yabai/scripts/cycle_same_app_windows.sh
+# Windows: send the focused window to the left / right display, or pull the
+# other display's window over when you're already there
+ctrl + alt - h: $HOME/.dotfiles/yabai/scripts/secondary_action.sh left
+ctrl + alt - l: $HOME/.dotfiles/yabai/scripts/secondary_action.sh right
+
+# Windows: swap the front windows on the left and right displays
+ctrl + alt - j: $HOME/.dotfiles/yabai/scripts/swap_displays.sh
