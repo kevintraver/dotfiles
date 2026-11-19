@@ -1,0 +1,5 @@
+{
+  "hooks": [
+    { "name": "focus-existing-tab", "on": "link.opening", "run": ["~/.local/bin/ardia-focus-tab"] }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "./config.schema.json",
+  "theme": null,
+  "settings": {
+    "shortcuts": {
+      "back": "ctrl+o",
+      "forward": "ctrl+i",
+      "nextTab": "ctrl+j",
+      "previousTab": "ctrl+k"
+    }
+  }
+}

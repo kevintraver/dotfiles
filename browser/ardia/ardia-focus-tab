@@ -1,0 +1,37 @@
+#!/bin/zsh -f
+# Ardia link.opening hook: when a link arrives from another app, switch to a tab
+# that already shows it instead of opening a new one.
+#
+# Ardia sends {"decide", "event", "deadline", "data": {"url", "source"}} on stdin
+# and reads the answer from stdout:
+#   {"drop": true}    we handled it (switched to an existing tab)
+#   {"open": "tab"}   no match: open it as a normal tab, not in Little Ardia
+
+ARDIA=${ARDIA_BIN:-$HOME/.local/bin/ardia}
+JQ=/opt/homebrew/bin/jq
+
+# Strip the scheme, "www." and trailing slashes: https://www.Example.com/docs/ -> example.com/docs
+normalize='ascii_downcase | sub("^[a-z]+://"; "") | sub("^www\\."; "") | sub("[?#].*$"; "") | sub("/+$"; "")'
+
+url=$($JQ -r '.data.url // empty' 2>/dev/null)
+
+# Same host, and the tab's path starts with the link's path
+# (a link to example.com matches any tab on that site; example.com/docs only that page and below).
+# Prefer a tab that's already showing in its window, then pinned tabs.
+tab_id=$([[ -n $url ]] && $ARDIA tabs --json 2>/dev/null | $JQ -r --arg url "$url" "
+  (\$url | $normalize) as \$want
+  | [.. | objects | select(.type == \"tab\" and (.url // \"\") != \"\")
+     | select((.url | $normalize) as \$have | \$have == \$want or (\$have | startswith(\$want + \"/\")))]
+  | sort_by([(.active | not), (.pinned | not)]) | first | .id // empty")
+
+if [[ -z $tab_id ]]; then
+  print '{"open": "tab"}'
+  exit 0
+fi
+
+# Answer first (Ardia only waits 250 ms), then switch tabs in the background:
+# `ardia tabs activate` takes ~70 ms, and it never brings the window forward,
+# so `open -a Ardia` does that.
+print '{"drop": true}'
+exec >/dev/null 2>&1 </dev/null
+( "$ARDIA" tabs activate "$tab_id"; /usr/bin/open -a Ardia ) &!
