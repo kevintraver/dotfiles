@@ -66,15 +66,6 @@ EOF
   open -na /Applications/Firefox.app --args --new-instance --profile "$profile_path" "$@"
 }
 
-# Open Firefox with a simple temporary profile (no custom settings)
-temp-firefox-simple() {
-  local timestamp=$(date +%s)
-  local profile_path="/tmp/Firefox/$timestamp"
-
-  mkdir -p "$profile_path"
-  /Applications/Firefox.app/Contents/MacOS/firefox --new-instance --profile "$profile_path" &!
-}
-
 # Reset Firefox (removes all user data)
 reset-firefox() {
   /bin/rm -rf "$HOME/Library/Application Support/Firefox"

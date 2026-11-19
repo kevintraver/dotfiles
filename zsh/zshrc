@@ -1,59 +1,47 @@
-# Enable Powerlevel10k instant prompt (should stay at the top of ~/.zshrc)
+# Interactive shells only. Environment and PATH live in zshenv.
+
+# Powerlevel10k instant prompt (should stay at the top of ~/.zshrc)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Only run the rest for interactive shells.
-[[ -o interactive ]] || return 0
+DOTFILES_HOME="$HOME/.dotfiles"
 
-# Some plugins can call `compdef` before `compinit` has run. If `_comps` isn't an
-# associative array yet, those calls can fail with:
-#   _comps: assignment to invalid subscript range
-typeset -g -A _comps _services _patcomps _postpatcomps
+# History. Atuin keeps the searchable history; this is zsh's own file.
+HISTSIZE=100000
+SAVEHIST=100000
+HISTORY_IGNORE='(*DB_PASS*|cd|cd ..|cd ~|clear|e|e .|exit|fc|fzf|gl|la|lg|ls|nvim|nvim .|pwd|t|tc|tmux|z)'
+setopt hist_ignore_space hist_ignore_all_dups share_history
+
+# Emacs keys. Set before plugins bind theirs: VISUAL=nvim would otherwise
+# start zsh in vi mode.
+bindkey -e
+WORDCHARS=${WORDCHARS/\/}
 
 # https://github.com/romkatv/powerlevel10k
 [[ -r /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]] && source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
+# Completion. The dump is rebuilt once a day so new completions get picked up.
 # https://github.com/zsh-users/zsh-completions
 [[ -d /opt/homebrew/share/zsh-completions ]] && fpath=(/opt/homebrew/share/zsh-completions $fpath)
 autoload -Uz compinit
-
-# Speed up completion initialization:
-# - Use an XDG cache location for compdump/cache
-# - Skip compaudit on every startup (-C). If you want the security check back,
-#   remove `-C` (startup may be slower).
-_zsh_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
-command mkdir -p "$_zsh_cache_dir" 2>/dev/null
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$_zsh_cache_dir/zcompcache"
-_zsh_compdump="$_zsh_cache_dir/zcompdump-${ZSH_VERSION}"
-if ! compinit -C -d "$_zsh_compdump" 2>/dev/null; then
-  command rm -f "$_zsh_compdump" "${_zsh_compdump}.zwc" 2>/dev/null
-  compinit -i -d "$_zsh_compdump"
-fi
-unset _zsh_compdump
-unset _zsh_cache_dir
-
-export DOTFILES_HOME="$HOME/.dotfiles"
-
-# https://github.com/zdharma-continuum/fast-syntax-highlighting
-[[ -r "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
-
-# https://github.com/ajeetdsouza/zoxide
-(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
-
-# https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
-export RIPGREP_CONFIG_PATH="$DOTFILES_HOME/ripgrep/ripgreprc"
-
-# https://github.com/MenkeTechnologies/zsh-expand
-[[ -r "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh" ]] && source "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh"
-export ZPWR_CORRECT=false
-
-# https://github.com/junegunn/fzf
-export FZF_DEFAULT_OPTS="
---height=50%
---layout=reverse
---bind 'tab:accept'"
+() {
+  local dir="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+  local dump="$dir/zcompdump-$ZSH_VERSION"
+  mkdir -p "$dir"
+  zstyle ':completion:*' use-cache on
+  zstyle ':completion:*' cache-path "$dir/zcompcache"
+  local -a fresh=($dump(N.mh-24))
+  if (( $#fresh )); then
+    compinit -C -d "$dump"
+  else
+    # compinit reuses an old dump when the file count matches, so remove it
+    command rm -f "$dump" "$dump.zwc"
+    compinit -d "$dump"
+  fi
+}
+# Exact first, then case-insensitive, then partial words around . _ -
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # https://github.com/Aloxaf/fzf-tab, preferring the fork checked out in ~/Code
 if [[ -r "$HOME/Code/fzf-tab/fzf-tab.plugin.zsh" ]]; then
@@ -64,50 +52,45 @@ fi
 zstyle ':fzf-tab:*' fzf-bindings 'tab:accept'
 zstyle ':fzf-tab:complete:cd:*' sort-recent yes
 
+# https://github.com/MenkeTechnologies/zsh-expand
+# It turns on extendedglob and rcquotes globally, which breaks `git show HEAD^`.
+export ZPWR_CORRECT=false
+if [[ -r "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh" ]]; then
+  source "$HOME/.zsh/plugins/zsh-expand/zsh-expand.plugin.zsh"
+  unsetopt extendedglob rcquotes
+fi
+
 # skim shell integration (enables **<TAB> recursive fuzzy completion)
 [[ -r /opt/homebrew/opt/sk/share/zsh/site-functions/key-bindings.zsh ]] && source /opt/homebrew/opt/sk/share/zsh/site-functions/key-bindings.zsh
 
-# https://zsh.sourceforge.io/Guide/zshguide04.html
-WORDCHARS=${WORDCHARS/\/}
-
-# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh
-[[ -r "$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh" ]] && source "$HOME/.zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
-
 # https://graphite.dev
 [[ -r "$HOME/.zsh/plugins/gt-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/gt-completions/completions.zsh"
-
 # https://opencode.ai
 [[ -r "$HOME/.zsh/plugins/opencode-completions/completions.zsh" ]] && source "$HOME/.zsh/plugins/opencode-completions/completions.zsh"
 
-source "$DOTFILES_HOME/zsh/editor.zsh"
-source "$DOTFILES_HOME/zsh/completion.zsh"
-source "$DOTFILES_HOME/zsh/keymaps.zsh"
-source "$DOTFILES_HOME/zsh/history/history.zsh"
+# https://github.com/ajeetdsouza/zoxide
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
-# Source all alias files
-for alias_file in "$DOTFILES_HOME/zsh/aliases"/*.zsh(N); do
-  source "$alias_file"
-done
-
-# Source all function files
-for function_file in "$DOTFILES_HOME/zsh/functions"/**/*.zsh(N); do
-  source "$function_file"
-done
-
-# https://mise.jdx.dev/
-# Full activation with hooks for interactive shells (auto-switches versions on cd)
+# https://mise.jdx.dev/ (hooks switch versions on cd; zshenv only adds shims)
 (( $+commands[mise] )) && eval "$(mise activate zsh)"
 
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-[[ -d "$ANDROID_HOME/emulator" ]] && path+=("$ANDROID_HOME/emulator")
-[[ -d "$ANDROID_HOME/platform-tools" ]] && path+=("$ANDROID_HOME/platform-tools")
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-if (( $+functions[p10k] )) && [[ -r "$HOME/.p10k.zsh" ]]; then
-  source "$HOME/.p10k.zsh"
+# https://atuin.sh/ on Ctrl-R and Ctrl-P, not the up arrow
+if (( $+commands[atuin] )); then
+  eval "$(atuin init zsh --disable-up-arrow)"
+  bindkey '^p' atuin-search
 fi
 
-# https://atuin.sh/
-# Disable up arrow binding, use Ctrl+P instead
-eval "$(atuin init zsh --disable-up-arrow)"
-bindkey '^p' _atuin_search_widget
+source "$DOTFILES_HOME/zsh/keymaps.zsh"
+source "$DOTFILES_HOME/zsh/aliases.zsh"
+() {
+  local file
+  for file in "$DOTFILES_HOME"/zsh/functions/**/*.zsh(N); do
+    source "$file"
+  done
+}
+
+# https://github.com/zdharma-continuum/fast-syntax-highlighting (load last)
+[[ -r "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh" ]] && source "$HOME/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+[[ -r "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"

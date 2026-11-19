@@ -1,14 +1,9 @@
-# Use emacs keybindings
-bindkey -e
-
-# delete to the start of the line
+# Delete to the start of the line
 bindkey '^u' backward-kill-line
 
-# edit-command-line
-autoload -U edit-command-line
+# Edit the command in $EDITOR, then leave the cursor at the end
+autoload -Uz edit-command-line
 zle -N edit-command-line
-
-# wrapper to move cursor to end after editing
 edit-command-line-end() {
   zle edit-command-line
   CURSOR=$#BUFFER
@@ -17,12 +12,12 @@ zle -N edit-command-line-end
 bindkey '^[e' edit-command-line-end
 bindkey '^g' edit-command-line-end
 
-#exit
-exit_zsh() { exit 0 }
-zle -N exit_zsh
-bindkey '^[w' exit_zsh
+# Exit the shell
+exit-zsh() { exit 0 }
+zle -N exit-zsh
+bindkey '^[w' exit-zsh
 
-# copy current line to clipboard
-copy-line-to-clipboard() { echo -n "$BUFFER" | pbcopy }
+# Copy the current line to the clipboard
+copy-line-to-clipboard() { print -rn -- "$BUFFER" | pbcopy }
 zle -N copy-line-to-clipboard
 bindkey '^y' copy-line-to-clipboard

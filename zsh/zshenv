@@ -8,6 +8,11 @@ export AGENT_BROWSER_ARGS="--disable-features=Translate,OmniboxEverywhere"
 
 export NODE_OPTIONS="--no-deprecation"
 
+export EDITOR="nvim" VISUAL="nvim"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export FZF_DEFAULT_OPTS="--height=50% --layout=reverse --bind=tab:accept"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
 # Machine-specific variables, kept out of this public repo
 [[ -r ~/.zshenv.local ]] && source ~/.zshenv.local
 
@@ -20,6 +25,7 @@ prepend_user_paths() {
     "$HOME/.go/bin" "$HOME/.cargo/bin" "$HOME/.local/bin"
     /opt/homebrew/bin /opt/homebrew/sbin
     $path
+    "$ANDROID_HOME/platform-tools"
   )
 }
 typeset -U path
