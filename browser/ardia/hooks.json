@@ -1,5 +1,6 @@
 {
   "hooks": [
-    { "name": "focus-existing-tab", "on": "link.opening", "run": ["~/.local/bin/ardia-focus-tab"] }
+    { "name": "focus-existing-tab", "on": "link.opening", "run": ["~/.local/bin/ardia-focus-tab"] },
+    { "name": "remember-active-tab", "on": ["tab.activated", "tab.closed"], "run": ["~/.local/bin/ardia-focus-tab", "record"], "timeout": 5 }
   ]
 }

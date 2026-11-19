@@ -1,14 +1,29 @@
 #!/bin/zsh -f
 # Ardia link.opening hook: when a link arrives from another app, switch to a tab
-# that already shows it instead of opening a new one.
+# that already shows it instead of opening a new one. If that tab is in a group,
+# switch to the tab in the group you were on last.
 #
 # Ardia sends {"decide", "event", "deadline", "data": {"url", "source"}} on stdin
 # and reads the answer from stdout:
 #   {"drop": true}    we handled it (switched to an existing tab)
 #   {"open": "tab"}   no match: open it as a normal tab, not in Little Ardia
+#
+# `ardia-focus-tab record` is the tab.activated / tab.closed event hook that
+# remembers when each tab was last shown: one empty file per tab, its mtime.
 
 ARDIA=${ARDIA_BIN:-$HOME/.local/bin/ardia}
 JQ=/opt/homebrew/bin/jq
+STATE=${ARDIA_FOCUS_STATE:-$HOME/.local/state/ardia-focus-tab}
+
+if [[ $1 == record ]]; then
+  [[ $ARDIA_TAB_ID =~ '^tab-[A-Za-z0-9-]+$' ]] || exit 0
+  mkdir -p $STATE
+  case $ARDIA_EVENT in
+    tab.activated) touch $STATE/$ARDIA_TAB_ID ;;
+    tab.closed) rm -f $STATE/$ARDIA_TAB_ID ;;
+  esac
+  exit 0
+fi
 
 # Strip the scheme, "www." and trailing slashes: https://www.Example.com/docs/ -> example.com/docs
 normalize='ascii_downcase | sub("^[a-z]+://"; "") | sub("^www\\."; "") | sub("[?#].*$"; "") | sub("/+$"; "")'
@@ -18,15 +33,27 @@ url=$($JQ -r '.data.url // empty' 2>/dev/null)
 # Same host, and the tab's path starts with the link's path
 # (a link to example.com matches any tab on that site; example.com/docs only that page and below).
 # Prefer a tab that's already showing in its window, then pinned tabs.
-tab_id=$([[ -n $url ]] && $ARDIA tabs --json 2>/dev/null | $JQ -r --arg url "$url" "
+# Prints the best match, then the other tabs of its group, if it's in one.
+candidates=($([[ -n $url ]] && $ARDIA tabs --json 2>/dev/null | $JQ -r --arg url "$url" "
   (\$url | $normalize) as \$want
-  | [.. | objects | select(.type == \"tab\" and (.url // \"\") != \"\")
+  | [.. | objects | select(.type == \"tab\")] as \$all
+  | [\$all[] | select((.url // \"\") != \"\")
      | select((.url | $normalize) as \$have | \$have == \$want or (\$have | startswith(\$want + \"/\")))]
-  | sort_by([(.active | not), (.pinned | not)]) | first | .id // empty")
+  | sort_by([(.active | not), (.pinned | not)]) | first
+  | select(. != null)
+  | . as \$best
+  | \$best.id, (if \$best.group then \$all[] | select(.group == \$best.group and .id != \$best.id) | .id else empty end)"))
 
-if [[ -z $tab_id ]]; then
+if (( ! $#candidates )); then
   print '{"open": "tab"}'
   exit 0
+fi
+
+# The group's tab you were on last (newest record), else the match itself.
+tab_id=$candidates[1]
+if (( $#candidates > 1 )); then
+  recent=($STATE/${^candidates}(N.om[1]))
+  (( $#recent )) && tab_id=${recent[1]:t}
 fi
 
 # Answer first (Ardia only waits 250 ms), then switch tabs in the background:
