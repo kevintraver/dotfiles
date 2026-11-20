@@ -7,7 +7,9 @@
       "forward": "ctrl+i",
       "nextTab": "ctrl+j",
       "previousTab": "ctrl+k",
-      "toggleSidebar": "cmd+b"
+      "toggleSidebar": "cmd+b",
+      "bookmarkPage": "",
+      "openSplitPane": "cmd+d"
     },
     "sidebarWidth": 230,
     "sidebarTextSize": "large",
